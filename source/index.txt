@@ -31,6 +31,7 @@ Contents:
    introduction
    basics
    layout
+   label
 
 Indices and tables
 ==================
