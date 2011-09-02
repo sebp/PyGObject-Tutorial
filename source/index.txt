@@ -33,6 +33,7 @@ Contents:
    layout
    label
    entry
+   button_widgets
 
 Indices and tables
 ==================

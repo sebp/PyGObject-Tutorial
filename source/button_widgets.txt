@@ -1,0 +1,170 @@
+Button Widgets
+==============
+
+Button
+------
+
+The Button widget is another commonly used widget. It is generally used to
+attach a function that is called when the button is pressed.
+
+The :class:`Gtk.Button` widget can hold any valid child widget. That is it can
+hold most any other standard :class:`Gtk.Widget`. The most commonly used child
+is the :class:`Gtk.Label`.
+
+Usually, you want to connect to the button's "clicked" signal which is emitted
+when the button has been pressed and released.
+
+Button Objects
+^^^^^^^^^^^^^^
+
+.. class:: Gtk.Button([label[, stock[, use_underline]]])
+
+    If label is not ``None``, creates a new :class:`Gtk.Button` with a
+    :class:`Gtk.Label` child containing the given text.
+
+    If *stock* is not ``None``, creates a new button containing the image and
+    text from a stock item.
+
+    Setting *use_underline* is set to ``True``, an underline  in the text
+    indicates the next character should be used for the mnemonic accelerator key.
+
+    .. method:: set_label(label)
+
+    Sets the text of the label of the button to *label*.
+
+    .. method:: set_use_underline(use_underline)
+
+    If *True*, an underline in the text of the button label indicates the next
+    character should be used for the mnemonic accelerator key. 
+
+Example
+^^^^^^^
+
+.. literalinclude:: ../examples/button_example.py
+    :linenos:
+
+ToggleButton
+------------
+
+A :class:`Gtk.ToggleButton` is very similar to a normal :class:`Gtk.Button`,
+but when clicked they remain activated, or pressed, until clicked again.
+When the state of the button is changed, the "toggled" signal is emitted.
+
+To retrieve the state of the :class:`Gtk.ToggleButton`, you can use the
+:meth:`Gtk.ToggleButton.get_active` method. This returns ``True`` if the button
+is "down". You can also set the toggle button's state, with
+:meth:`Gtk.ToggleButton.set_active`. Note that, if you do this, and the state
+actually changes, it causes the "clicked" signal to be emitted.
+
+ToggleButton Objects
+^^^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.ToggleButton([label[, use_underline]])
+
+    The arguments are the same as for the :class:`Gtk.Button` constructor.
+
+    .. method:: get_active()
+
+    Returns the buttons current state. Returns ``True`` if the toggle button
+    is pressed in and ``False`` if it is raised.
+
+    .. method:: set_active(is_active)
+
+    Sets the status of the toggle button. Set to ``True`` if you want the button
+    to be pressed in, and ``False`` to raise it. This action causes the
+    "toggled" signal to be emitted.
+
+Example
+^^^^^^^
+
+.. literalinclude:: ../examples/togglebutton_example.py
+    :linenos:
+
+CheckButton
+-----------
+:class:`Gtk.CheckButton` inherits from :class:`Gtk.ToggleButton`. The only real
+difference between the two is :class:`Gtk.CheckButton`'s appearance.
+A :class:`Gtk.CheckButton` places a discrete :class:`Gtk.ToggleButton` next to
+a widget, (usually a :class:`Gtk.Label`).
+The "toggled" signal, :meth:`Gtk.ToggleButton.set_active` and
+:meth:`Gtk.ToggleButton.get_active` are inherited.
+
+CheckButton Objects
+^^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.CheckButton([label[, use_underline]])
+
+    Arguments are the same as for :class:`Gtk.ToggleButton`.
+
+RadioButton
+-----------
+Like checkboxes, radio buttons also inherit from :class:`Gtk.ToggleButton`,
+but these work in groups, and only one :class:`Gtk.RadioButton` in a group can
+be selected at any one time. Therefore, a :class:`Gtk.RadioButton` is one way
+of giving the user a choice from many options.
+
+The first radio button in a group will be created passing ``None`` as the argument
+to the :class:`Gtk.RadioButton` constructor. In subsequent calls, the group you
+wish to add this button to should be passed as an argument.
+
+When first run, the first radio button in the group will be active.
+This can be changed by calling :meth:`Gtk.ToggleButton.set_active` with ``True``
+as first argument.
+
+Changing a :class:`Gtk.RadioButton`'s widget group after its creation can be
+achieved by calling :meth:`Gtk.RadioButton.join_group`.
+
+RadioButton Objects
+^^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.RadioButton(group[, label[, use_underline]])
+
+    Creates a new :class:`Gtk.RadioButton`, adding it to the same group as the
+    *group* widget.
+
+    The remaining arguments are the same as for the :class:`Gtk.ToggleButton`
+    constructor.
+
+    .. method:: join_group(group)
+
+    Joins this radio button to the group of another :class:`Gtk.RadioButton` object.
+
+Example
+^^^^^^^
+
+.. literalinclude:: ../examples/radiobutton_example.py
+    :linenos:
+
+LinkButton
+----------
+A :class:`Gtk.LinkButton` is a :class:`Gtk.Button` with a hyperlink, similar
+to the one used by web browsers, which triggers an action when clicked. It is
+useful to show quick links to resources.
+
+The URI bound to a :class:`Gtk.LinkButton` can be set specifically using
+:meth:`Gtk.LinkButton.set_uri`, and retrieved using :meth:`Gtk.LinkButton.get_uri`.
+
+
+LinkButton Objects
+^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.LinkButton(uri [, label])
+
+    *uri* is the address of the website which should be loaded. The label is set
+    as the text which should be displayed. If it is set to ``None`` or omitted,
+    the web address will be displayed instead.
+
+    .. method:: get_uri()
+
+    Retrieves the URI set using :meth:`set_uri`.
+
+    .. method:: set_uri(uri)
+
+    Sets *uri* as the URI where this button points to. As a side-effect this
+    unsets the 'visited' state of the button. 
+
+Example
+^^^^^^^
+
+.. literalinclude:: ../examples/linkbutton_example.py
+    :linenos:
