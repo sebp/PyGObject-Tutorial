@@ -32,6 +32,7 @@ Contents:
    basics
    layout
    label
+   entry
 
 Indices and tables
 ==================
