@@ -81,3 +81,7 @@ which is equivalent to
     label.set_label("Hello World")
     label.set_angle(25)
     label.set_halign(Gtk.Align.END)
+
+Instead of using getters and setters you can also get and set the properties
+with ``widget.get_property("prop-name")`` and ``widget.set_property("prop-name",
+value)``, respectively.
