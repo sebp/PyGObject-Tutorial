@@ -35,6 +35,7 @@ Contents:
    entry
    button_widgets
    progressbar
+   treeview
 
 Indices and tables
 ==================

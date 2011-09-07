@@ -1,0 +1,356 @@
+Tree and List Widgets
+=====================
+
+A :class:`Gtk.TreeView` and its associated widgets are an extremely powerful way
+of displaying data. They are used in conjunction with a :class:`Gtk.ListStore`
+or :class:`Gtk.TreeStore` and provide a way of displaying and manipulating data
+in many ways, including:
+
+    * Automatically updates when data added, removed or edited
+    * Drag and drop support
+    * Sorting of data
+    * Support embedding widgets such as check boxes, progress bars, etc.
+    * Reorderable and resizable columns
+    * Filtering of data
+
+With the power and flexibility of a :class:`Gtk.TreeView` comes complexity. It
+is often difficult for beginner developers to be able to utilize correctly due
+to the number of methods which are required.
+
+The Model
+---------
+Each :class:`Gtk.TreeView` has an associated :class:`Gtk.TreeModel`, which
+contains the data displayed by the TreeView. Each :class:`Gtk.TreeModel` can be
+used by more than one :class:`Gtk.TreeView`. For instance, this allows the same
+underlying data to be displayed and edited in 2 different ways at the same time.
+Or the 2 Views might display different columns from the same Model data, in the
+same way that 2 SQL queries (or "views") might show different fields from the
+same database table.
+
+Although you can theoretically implement your own Model, you will normally use
+either the :class:`Gtk.ListStore` or :class:`Gtk.TreeStore` model classes.
+:class:`Gtk.ListStore` contains simple rows of data, and each row has no children,
+whereas :class:`Gtk.TreeStore` contains rows of data, and each row may have child
+rows.
+
+When constructing a model you have to specify the data types for each column the
+model holds.
+
+.. code-block:: python
+
+    store = Gtk.ListStore(str, str, float)
+
+This creates a list store with three columns, two string columns, and a float
+column.
+
+Adding data to the model is done using :meth:`Gtk.ListStore.append` or
+:meth:`Gtk.TreeStore.append`, depending upon which sort of model was created.
+
+.. code-block:: python
+
+    treeiter = store.append(["The Art of Computer Programming", "Donald E. Knuth", 25.46])
+
+Both methods return a :class:`Gtk.TreeIter` instance, which points to the location
+of the newly inserted row. You can retrieve a :class:`Gtk.TreeIter` by calling
+:meth:`Gtk.TreeModel.get_iter`.
+
+Once, data has been inserted you can retrieve or modify data using the tree iter
+and column index.
+
+.. code-block:: python
+
+    print store[treeiter][2] # Prints value of third column
+    store[treeiter][2] = 42.15
+
+As with Python's built-in :class:`list` object you can use :func:`len` to get the number
+of rows and use slices to retrieve or set values.
+
+.. code-block:: python
+
+    # Print number of columns
+    print len(store)
+    # Print all but first column
+    print store[treeiter][1:]
+    # Print last column
+    print store[treeiter][-1]
+    # Set first two columns
+    store[treeiter][:2] = ["Donald Ervin Knuth", 41.99]
+
+Iterating over all rows of a tree model is very simple as well.
+
+.. code-block:: python
+
+    for row in store:
+        # Print values of all columns
+        print row[:]
+
+Keep in mind, that if you use :class:`Gtk.TreeStore`, the above code will only
+iterate over the rows of the top level, but not the children of the nodes.
+To iterate over all rows and its children, use the ``print_tree_store`` function.
+
+.. code-block:: python
+
+    def print_tree_store(store):
+        rootiter = store.get_iter_first()
+        print_rows(store, rootiter, "")
+
+    def print_rows(store, treeiter, indent):
+        while treeiter != None:
+            print indent + str(store[treeiter][:])
+            if store.iter_has_child(treeiter):
+                childiter = store.iter_children(treeiter)
+                print_rows(store, childiter, indent + "\t")
+            treeiter = store.iter_next(treeiter)
+
+TreeModel Objects
+^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.TreeModel()
+
+    .. method:: get_iter(path)
+
+        Returns a :class:`Gtk.TreeIter` instance pointing to *path*.
+
+        *path* is expected to be a colon separated list of numbers or a tuple. For
+        example, the string "10:4:0" or tuple (10, 4, 0) would create a path of depth
+        3 pointing to the 11th child of the root node, the 5th child of that 11th
+        child, and the 1st child of that 5th child.
+
+    .. method:: iter_next(treeiter)
+
+        Returns a :class:`Gtk.TreeIter` instance pointing the node following
+        *treeiter* at the current level or ``None`` if there is no next iter.
+
+    .. method:: iter_has_child(treeiter)
+
+        Returns ``True`` if *treeiter* has children, ``False`` otherwise.
+
+    .. method:: iter_children(treeiter)
+
+        Returns a :class:`Gtk.TreeIter` instance pointing to the first child of
+        *treeiter* or ``None`` if *treeiter* has no children.
+
+    .. method:: get_iter_first()
+
+        Returns a :class:`Gtk.TreeIter` instance pointing to the first iterator
+        in the tree (the one at the path "0") or ``None`` if the tree is empty.
+
+ListStore Objects
+^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.ListStore(data_type[, ...])
+
+    Creates a new :class:`Gtk.ListStore` with the specified column data types.
+    Each row added to the list store will have an item in each column.
+
+    Supported data types are the standard Python ones and GTK+ types:
+
+    * str, int, float, long, bool, object
+    * GObject.GObject
+
+    .. method:: append([row])
+
+    Appends a new row to this list store.
+
+    *row* is a list of values for each column, i.e. ``len(store) == len(row)``.
+    If *row* is omitted or ``None``, an empty row will be appended.
+
+    Returns a :class:`Gtk.TreeIter` pointing to the appended row.
+
+TreeStore Objects
+^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.TreeStore(data_type[, ...])
+
+    Arguments are the same as for the :class:`Gtk.ListStore` constructor.
+
+    .. method:: append(parent, [row])
+
+    Appends a new row to this tree store. If *parent* is not ``None``, then it
+    will append the new row after the last child of *parent*, otherwise it will
+    append a row to the top level.
+
+    *row* is a list of values for each column, i.e. ``len(store) == len(row)``.
+    If *row* is omitted or ``None``, an empty row will be appended.
+
+    Returns a :class:`Gtk.TreeIter` pointing to the appended row.
+
+The View
+--------
+While there are several different models to choose from, there is only one view
+widget to deal with. It works with either the list or the tree store. Setting up
+a :class:`Gtk.TreeView` is not a difficult matter. It needs a
+:class:`Gtk.TreeModel` to know where to retrieve its data from, either by
+passing it to the :class:`Gtk.TreeView` constructor, or by calling
+:meth:`Gtk.TreeView.set_model`.
+
+.. code-block:: python
+
+    tree = Gtk.TreeView(store)
+
+Once the :class:`Gtk.TreeView` widget has a model, it will need to know how to
+display the model. It does this with columns and cell renderers.
+
+Cell renderers are used to draw the data in the tree model in a way. There are a
+number of cell renderers that come with GTK+, for instance
+:class:`Gtk.CellRendererText`, :class:`Gtk.CellRendererPixbuf` and
+:class:`Gtk.CellRendererToggle`.
+In addition, you can relatively easy write a custom renderer yourself.
+
+A :class:`Gtk.TreeViewColumn` is the object that :class:`Gtk.TreeView` uses to
+organize the vertical columns in the tree view. It needs to know the name of the
+column to label for the user, what type of cell renderer to use, and which piece
+of data to retrieve from the model for a given row.
+
+.. code-block:: python
+
+    renderer = Gtk.CellRendererText()
+    column = Gtk.TreeViewColumn("Title", renderer, text=0)
+    tree.append_column(column)
+
+To render more than one model column in a view column, you need to create a
+:class:`Gtk.TreeViewColumn` instance and use :meth:`Gtk.TreeViewColumn.pack_start`
+to add the model columns to it.
+
+.. code-block:: python
+
+    column = Gtk.TreeViewColumn("Title and Author")
+
+    title = Gtk.CellRendererText()
+    author = Gtk.CellRendererText()
+
+    column.pack_start(title, True)
+    column.pack_start(author, True)
+
+    column.add_attribute(title, "text", 0)
+    column.add_attribute(author, "text", 1)
+
+    tree.append_column(column)
+
+TreeView Objects
+^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.TreeView([treemodel])
+
+    Creates a new :class:`Gtk.TreeView` widget with the model initialized to
+    *treemodel*. *treemodel* must be a class implementing :class:`Gtk.TreeModel`,
+    such as :class:`Gtk.ListStore` or :class:`Gtk.TreeStore`. If *treemodel*
+    is omitted or ``None``, the model remains unset and you have to call
+    :meth:`set_model` later.
+
+    .. method:: set_model(model)
+
+        Sets the model for this tree view. If this tree view already has a model
+        set, it will remove it before setting the new model. If *model* is ``None``,
+        then it will unset the old model.
+
+    .. method:: get_model()
+
+        Returns the model this tree view is based on. Returns ``None`` if the
+        model is unset.
+
+    .. method:: append_column(column)
+
+        Appends *column* to the list of columns.
+
+    .. method:: get_selection()
+
+        Gets the :class:`Gtk.TreeSelection` associated with this tree view.
+
+TreeViewColumn Objects
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.TreeViewColumn(label[, renderer[, **kwargs]])
+
+    Creates a new :class:`Gtk.TreeViewColumn`.
+
+    *renderer* is expected to be a :class:`Gtk.CellRenderer` instance, and
+    *kwargs* key-value pairs specifying the default values of *renderer*'s
+    properties. This is equivalent to calling :meth:`pack_start` and
+    :meth:`add_attribute` for each key-value pair in *kwargs*.
+
+    If *renderer* is omitted, you have to call :meth:`pack_start` or
+    :meth:`pack_end` yourself.
+
+    .. method:: add_attribute(renderer, attribute, value)
+
+        Adds an attribute mapping to this column.
+
+        *attribute* is the parameter on *renderer* to be set from the value.
+        So for example if column 2 of the model contains strings, you could have
+        the "text" attribute of a :class:`Gtk.CellRendererText` get its values
+        from column 2.
+
+    .. method:: pack_start(renderer, expand)
+
+        Packs the *renderer* into the beginning of this column. If expand is
+        ``False``, then the *renderer* is allocated no more space than it needs.
+        Any unused space is divided evenly between cells for which expand is ``True``.
+
+    .. method:: pack_end(renderer, expand)
+
+        Adds the *renderer* to end of this column. If expand is
+        ``False``, then the *renderer* is allocated no more space than it needs.
+        Any unused space is divided evenly between cells for which expand is ``True``.
+
+The Selection
+-------------
+Most applications will need to not only deal with displaying data, but also
+receiving input events from users. To do this, simply get a reference to a
+selection object and connect to the "changed" signal.
+
+.. code-block:: python
+
+    select = tree.get_selection()
+    select.connect("changed", on_tree_selection_changed)
+
+Then to retrieve data for the row selected:
+
+.. code-block:: python
+
+    def on_tree_selection_changed(selection):
+        model, treeiter = selection.get_selected()
+        if treeiter != None:
+            print "You selected", model[treeiter][0]
+
+You can control what selections are allowed by calling
+:meth:`Gtk.TreeSelection.set_mode`.
+:meth:`Gtk.TreeSelection.get_selected` does not work if the selection mode is
+set to :attr:`Gtk.SelectionMode.MULTIPLE`, use
+:meth:`Gtk.TreeSelection.get_selected_rows` instead.
+
+
+TreeSelection Objects
+^^^^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.TreeSelection
+
+    .. method:: set_mode(type)
+
+        Where type is one of
+
+        * :attr:`Gtk.SelectionMode.NONE`: No selection is possible
+        * :attr:`Gtk.SelectionMode.SINGLE`: Zero or one element may be selected
+        * :attr:`Gtk.SelectionMode.BROWSE`: Exactly one element is selected.
+          In some circumstances, such as initially or during a search operation,
+          it's possible for no element to be selected. What is really enforced
+          is that the user can't deselect a currently selected element except by
+          selecting another element. 
+        * :attr:`Gtk.SelectionMode.MULTIPLE`: Any number of elements may be
+          selected. Clicks toggle the state of an item. Any number of elements
+          may be selected. The Ctrl key may be used to enlarge the selection,
+          and Shift key to select between the focus and the child pointed to.
+          Some widgets may also allow Click-drag to select a range of elements.
+
+    .. method:: get_selected()
+
+        Returns a tuple ``(model, treeiter)``, where *model* is the current model
+        and *treeiter* a :class:`Gtk.TreeIter` pointing to the currently selected
+        row. *treeiter* is ``None`` if no rows are selected.
+
+        This function will not work if the mode of this selection is
+        :attr:`Gtk.SelectionMode.MULTIPLE`.
+
+    .. method:: get_selected_rows()
+
+        Returns a list of :class:`Gtk.TreePath` instances of all selected rows.
