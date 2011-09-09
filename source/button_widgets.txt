@@ -59,7 +59,7 @@ actually changes, it causes the "clicked" signal to be emitted.
 ToggleButton Objects
 ^^^^^^^^^^^^^^^^^^^^
 
-.. class:: Gtk.ToggleButton([label[, use_underline]])
+.. class:: Gtk.ToggleButton([label[, stock[,use_underline]]])
 
     The arguments are the same as for the :class:`Gtk.Button` constructor.
 
@@ -92,9 +92,9 @@ The "toggled" signal, :meth:`Gtk.ToggleButton.set_active` and
 CheckButton Objects
 ^^^^^^^^^^^^^^^^^^^
 
-.. class:: Gtk.CheckButton([label[, use_underline]])
+.. class:: Gtk.CheckButton([label[, stock[, use_underline]]])
 
-    Arguments are the same as for :class:`Gtk.ToggleButton`.
+    Arguments are the same as for :class:`Gtk.Button`.
 
 RadioButton
 -----------
@@ -103,8 +103,12 @@ but these work in groups, and only one :class:`Gtk.RadioButton` in a group can
 be selected at any one time. Therefore, a :class:`Gtk.RadioButton` is one way
 of giving the user a choice from many options.
 
-The first radio button in a group will be created passing ``None`` as the argument
-to the :class:`Gtk.RadioButton` constructor. In subsequent calls, the group you
+Radio buttons can be created with one of the static methods
+:meth:`Gtk.RadioButton.new_from_widget`,
+:meth:`Gtk.RadioButton.new_with_label_from_widget` or
+:meth:`Gtk.RadioButton.new_with_mnemonic_from_widget`.
+The first radio button in a group will be created passing ``None`` as the
+*group* argument. In subsequent calls, the group you
 wish to add this button to should be passed as an argument.
 
 When first run, the first radio button in the group will be active.
@@ -117,13 +121,23 @@ achieved by calling :meth:`Gtk.RadioButton.join_group`.
 RadioButton Objects
 ^^^^^^^^^^^^^^^^^^^
 
-.. class:: Gtk.RadioButton(group[, label[, use_underline]])
+.. class:: Gtk.RadioButton
 
-    Creates a new :class:`Gtk.RadioButton`, adding it to the same group as the
-    *group* widget.
+    .. staticmethod:: new_from_widget(group)
 
-    The remaining arguments are the same as for the :class:`Gtk.ToggleButton`
-    constructor.
+        Creates a new :class:`Gtk.RadioButton`, adding it to the same group as
+        the *group* widget. If *group* is ``None``, a new group is created.
+
+    .. staticmethod:: new_with_label_from_widget(group, label)
+
+        Creates a new :class:`Gtk.RadioButton`. The text of the label widget
+        inside the button will be set to *label*. *group* is the same as for
+        :meth:`new_from_widget`.
+
+    .. staticmethod:: new_with_mnemonic_from_widget(group, label)
+
+        Same as :meth:`new_with_label_from_widget`, but underscores in *label*
+        indicate the mnemonic for the button.
 
     .. method:: join_group(group)
 
