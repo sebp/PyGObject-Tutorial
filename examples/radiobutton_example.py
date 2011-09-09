@@ -9,16 +9,16 @@ class RadioButtonWindow(Gtk.Window):
         hbox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 6)
         self.add(hbox)
 
-        button1 = Gtk.RadioButton(None, "Button 1")
+        button1 = Gtk.RadioButton.new_with_label_from_widget(None, "Button 1")
         button1.connect("toggled", self.on_button_toggled, "1")
         hbox.pack_start(button1, False, False, 0)
 
-        button2 = Gtk.RadioButton(button1)
+        button2 = Gtk.RadioButton.new_from_widget(button1)
         button2.set_label("Button 2")
         button2.connect("toggled", self.on_button_toggled, "2")
         hbox.pack_start(button2, False, False, 0)
 
-        button3 = Gtk.RadioButton(button1, "B_utton 3", True)
+        button3 = Gtk.RadioButton.new_with_mnemonic_from_widget(button1, "B_utton 3")
         button3.connect("toggled", self.on_button_toggled, "3")
         hbox.pack_start(button3, False, False, 0)
 
