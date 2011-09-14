@@ -182,3 +182,94 @@ Example
 
 .. literalinclude:: ../examples/linkbutton_example.py
     :linenos:
+
+SpinButton
+----------
+A :class:`Gtk.SpinButton` is an ideal way to allow the user to set the value of
+some attribute. Rather than having to directly type a number into a
+:class:`Gtk.Entry`, :class:`Gtk.SpinButton` allows the user to click on one of
+two arrows to increment or decrement the displayed value. A value can still be
+typed in, with the bonus that it can be checked to ensure it is in a given range. 
+The main properties of a :class:`Gtk.SpinButton` are set through
+:class:`Gtk.Adjustment`.
+
+To change the value that :class:`Gtk.SpinButton` is showing, use
+:meth:`Gtk.SpinButton.set_value`. The value entered can either be an integer or
+float, depending on your requirements, use :meth:`Gtk.SpinButton.get_value` or
+:meth:`Gtk.SpinButton.get_value_as_int`, respectively.
+
+When you allow the displaying of float values in the spin button, you may wish
+to adjust the number of decimal spaces displayed by calling
+:meth:`Gtk.SpinButton.set_digits`.
+
+By default, :class:`Gtk.SpinButton` accepts textual data. If you wish to limit
+this to numerical values only the "numeric" property can be set to ``True`` or
+``False`` with :meth:`Gtk.SpinButton.set_numeric`.
+
+We can also adjust the update policy of :class:`Gtk.SpinButton`. There are two
+options here; by defaul the spin button updates the value even if the data
+entered is invalid. Alternatively, we can set the policy to only update when the
+value entered is valid by calling :meth:`Gtk.SpinButton.set_update_policy`.
+
+SpinButton Objects
+^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.SpinButton()
+
+    .. method:: set_adjustment(adjustment)
+
+        Replaces the :class:`Gtk.Adjustment` associated with this spin button.
+
+    .. method:: set_digits(digits)
+
+        Set the precision to be displayed by this spin button. Up to 20 digit
+        precision is allowed.
+
+    .. method:: set_increments(step, page)
+
+        Sets the step and page increments for this spin button. This affects how
+        quickly the value changes when the spin button's arrows are activated.
+
+    .. method:: set_value(value)
+
+        Sets the value of this spin button.
+
+    .. method:: get_value()
+
+        Get the value of this spin button represented as an float.
+
+    .. method:: get_value_as_int()
+
+        Get the value of this spin button represented as an integer.
+
+    .. method:: set_numeric(numeric)
+
+        If *numeric* is ``False``, non-numeric text can be typed into the
+        spin button, else only numbers can be typed.
+
+    .. method:: set_update_policy(policy)
+
+        Sets the update behavior of a spin button. This determines wether the
+        spin button is always updated or only when a valid value is set.
+        The *policy* argument can either be :attr:`Gtk.SpinButtonUpdatePolicy.ALWAYS`
+        or :attr:`Gtk.SpinButtonUpdatePolicy.IF_VALID`.
+
+Adjustment Objects
+^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.Adjustment(value, lower, upper, step_increment, page_increment, page_size)
+
+    The :class:`Gtk.Adjustment` object represents a value which has an associated
+    lower and upper bound, together with step and page increments, and a page
+    size. It is used within several GTK+ widgets, including :class:`Gtk.SpinButton`,
+    :class:`Gtk.Viewport`, and :class:`Gtk.Range`.
+
+    *value* is the initial value, *lower* the minimum value, *upper* the maximum
+    value, *step_increment* the step increment, *page_increment* the page
+    increment, and *page_size* the page size.
+
+Example
+^^^^^^^
+
+.. literalinclude:: ../examples/spinbutton_example.py
+    :linenos:
