@@ -36,6 +36,7 @@ Contents:
    button_widgets
    progressbar
    treeview
+   cellrenderers
 
 Indices and tables
 ==================
