@@ -9,7 +9,7 @@ The PyGObject Tutorial
 :Release: |version|
 :Date: |today|
 
-This is a tutorial introducing GTK+3 and Python.
+This is a tutorial introducing GTK+ 3 and Python.
 
 Prior to working through this tutorial, it is recommended that you
 have a reasonable grasp of the Python programming language.
@@ -20,6 +20,11 @@ understanding basic interpreter errors, work with strings, integers,
 floats and Boolean values.
 For the more advanced widgets in this tutorial, good knowledge of
 lists and tuples will be needed.
+
+Although, this tutorial describes the most important classes and methods within
+GTK+ 3, this is not supposed to be an API documentation. Please refer to the
+`GTK+ 3 Reference Manual <http://developer.gnome.org/gtk3/stable/>`_ for a
+detailed description of the API.
 
 Contents:
 
