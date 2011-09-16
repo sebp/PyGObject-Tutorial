@@ -3,13 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-The PyGObject Tutorial
-======================
+The Python GTK+ 3 Tutorial
+==========================
 
 :Release: |version|
 :Date: |today|
 
-This is a tutorial introducing GTK+ 3 and Python.
+This tutorial gives an introductin to writing GTK+ 3 applications in Python.
 
 Prior to working through this tutorial, it is recommended that you
 have a reasonable grasp of the Python programming language.

@@ -40,7 +40,7 @@ source_suffix = '.txt'
 master_doc = 'index'
 
 # General information about the project.
-project = u'PyGObject Tutorial'
+project = u'Python GTK+ 3 Tutorial'
 copyright = u'2011, Sebastian Pölsterl'
 
 # The version info for the project you're documenting, acts as replacement for
