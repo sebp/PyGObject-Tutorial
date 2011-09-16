@@ -8,7 +8,7 @@ a picture, a checkbox, or a progress bar.
 :class:`Gtk.ComboBox` is very similar to :class:`Gtk.TreeView`, as both use the
 model-view pattern; the list of valid choices is specified in the form of a tree
 model, and the display of the choices can be adapted to the data in the model by
-using cell renderers.
+using :ref:`cell renderers <cellrenderers>`.
 If the combo box contains a large number of items, it may be better to display
 them in a grid rather than a list. This can be done by calling
 :meth:`Gtk.ComboBox.set_wrap_width`.
