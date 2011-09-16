@@ -9,7 +9,7 @@ The Python GTK+ 3 Tutorial
 :Release: |version|
 :Date: |today|
 
-This tutorial gives an introductin to writing GTK+ 3 applications in Python.
+This tutorial gives an introduction to writing GTK+ 3 applications in Python.
 
 Prior to working through this tutorial, it is recommended that you
 have a reasonable grasp of the Python programming language.
