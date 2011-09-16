@@ -42,6 +42,7 @@ Contents:
    progressbar
    treeview
    cellrenderers
+   combobox
 
 Indices and tables
 ==================
