@@ -209,7 +209,7 @@ Table Objects
 Example
 ^^^^^^^
 
-.. literalinclude:: ../examples/table_example.py
+.. literalinclude:: ../examples/layout_table_example.py
     :linenos:
 
 Grid
