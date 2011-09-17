@@ -214,3 +214,51 @@ Example
 
 Grid
 ----
+:class:`Gtk.Grid` is a container which arranges its child widgets in rows and
+columns, but you do not need to specify the dimensions in the constructor.
+Children are added using :meth:`Gtk.Grid.attach`. They can span multiple rows or
+columns. It is also possible to add a child next to an existing child, using
+:meth:`Gtk.Grid.attach_next_to`.
+
+:class:`Gtk.Grid` can be used like a :class:`Gtk.Box` by just using
+:meth:`Gtk.Grid.add`, which will place children next to each other in the
+direction determined by the "orientation" property (defaults to
+:attr:`Gtk.Orientation.HORIZONTAL`).
+
+Grid Objects
+^^^^^^^^^^^^
+.. class:: Gtk.Grid
+
+    Creates a new grid widget.
+
+    .. method:: attach(child, left, top, width, height)
+
+        Adds *child* to this grid.
+
+        The position of *child* is determined by the index of the cell left to
+        it (*left*) and above of it (*top*). The number of 'cells' that *child*
+        will occupy is determined by *width* and *height*.
+
+    .. method:: attach_next_to(child, sibling, side, width, height)
+
+        Adds *child* to this grid, next to *sibling*. *side* is the side of
+        *sibling* that *child* is positioned next to. It can be one of
+
+        * :attr:`Gtk.PositionType.LEFT`
+        * :attr:`Gtk.PositionType.RIGHT`
+        * :attr:`Gtk.PositionType.TOP`
+        * :attr:`Gtk.PositionType.BOTTOM`
+
+        *width* and *height* determine the number of 'cells' that *child* will
+        occupy.
+
+    .. method:: add(widget)
+
+        Adds *widget* to this grid in the direction determined by the
+        "orientation" property.
+
+Example
+^^^^^^^
+
+.. literalinclude:: ../examples/layout_grid_example.py
+    :linenos:
