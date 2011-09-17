@@ -15,7 +15,7 @@ class ComboBoxWindow(Gtk.Window):
         name_store.append([3, "Rob McRoberts"])
         name_store.append([31, "Xavier McRoberts"])
 
-        vbox = Gtk.Box(Gtk.Orientation.VERTICAL, 6)
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
 
         name_combo = Gtk.ComboBox.new_with_model_and_entry(name_store)
         name_combo.connect("changed", self.on_name_combo_changed)

@@ -39,13 +39,22 @@ the desired effect.
 Box Objects
 ^^^^^^^^^^^
 
-.. class:: Gtk.Box(orientation, spacing)
+.. class:: Gtk.Box([homogenous[, spacing]])
 
     The rectangular area of a :class:`Gtk.Box` is organized into either a
     single row or a single column of child widgets depending upon whether
-    *orientation* is set to :attr:`Gtk.Orientation.HORIZONTAL` or
-    :attr:`Gtk.Orientation.VERTICAL`. *spacing* is the number of pixels to
-    place by default between children.
+    the "orientation" property is set to :attr:`Gtk.Orientation.HORIZONTAL` or
+    :attr:`Gtk.Orientation.VERTICAL`.
+
+    If *homogeneous* is ``True``, all widgets in the box will
+    be the same size, of which the size is determined by the largest
+    child widget. If it is ommitted, *homogeneous* defaults to ``False``.
+
+    *spacing* is the number of pixels to place by default between children.
+    If omitted, no spacing is used, i.e. *spacing* is set to 0.
+
+    By default, child widgets are organized into a single row, i.e. the
+    "orientation" property is set to :attr:`Gtk.Orientation.HORIZONTAL`.
 
     :class:`Gtk.Box` uses a notion of *packing*. Packing refers to adding
     widgets with reference to a particular position in a :class:`Gtk.Container`.
@@ -92,7 +101,7 @@ Box Objects
 
         If *homogeneous* is ``True``, all widgets in the box will
         be the same size, of which the size is determined by the largest
-        child widget. 
+        child widget.
 
 Example
 ^^^^^^^

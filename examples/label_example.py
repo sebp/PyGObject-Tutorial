@@ -5,11 +5,11 @@ class LabelWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Label Example")
         
-        hbox = Gtk.Box(Gtk.Orientation.HORIZONTAL, 10)
+        hbox = Gtk.Box(spacing=10)
         hbox.set_homogeneous(False)
-        vbox_left = Gtk.Box(Gtk.Orientation.VERTICAL, 10)
+        vbox_left = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
         vbox_left.set_homogeneous(False)
-        vbox_right = Gtk.Box(Gtk.Orientation.VERTICAL, 10)
+        vbox_right = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
         vbox_right.set_homogeneous(False)
         
         hbox.pack_start(vbox_left, True, True, 0)

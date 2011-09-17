@@ -6,7 +6,7 @@ class CheckButtonWindow(Gtk.Window):
         Gtk.Window.__init__(self, title="CheckButton Demo")
         self.set_border_width(10)
 
-        hbox = Gtk.Box(Gtk.Orientation.HORIZONTAL, 6)
+        hbox = Gtk.Box(spacing=6)
         self.add(hbox)
 
         button = Gtk.CheckButton("Button 1")

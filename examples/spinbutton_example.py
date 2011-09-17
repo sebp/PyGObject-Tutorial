@@ -6,7 +6,7 @@ class SpinButtonWindow(Gtk.Window):
         Gtk.Window.__init__(self, title="SpinButton Demo")
         self.set_border_width(10)
 
-        hbox = Gtk.Box(Gtk.Orientation.HORIZONTAL, 6)
+        hbox = Gtk.Box(spacing=6)
         self.add(hbox)
 
         adjustment = Gtk.Adjustment(0, 0, 100, 1, 10, 0)

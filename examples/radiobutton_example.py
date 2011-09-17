@@ -6,7 +6,7 @@ class RadioButtonWindow(Gtk.Window):
         Gtk.Window.__init__(self, title="RadioButton Demo")
         self.set_border_width(10)
 
-        hbox = Gtk.Box(Gtk.Orientation.HORIZONTAL, 6)
+        hbox = Gtk.Box(spacing=6)
         self.add(hbox)
 
         button1 = Gtk.RadioButton.new_with_label_from_widget(None, "Button 1")

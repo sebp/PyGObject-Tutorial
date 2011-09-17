@@ -5,7 +5,7 @@ class MyWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Hello World")
 
-        self.box = Gtk.Box(Gtk.Orientation.HORIZONTAL, 6)
+        self.box = Gtk.Box(spacing=6)
         self.add(self.box)
 
         self.button1 = Gtk.Button(label="Hello")
