@@ -8,14 +8,14 @@ class EntryWindow(Gtk.Window):
 
         self.timeout_id = None
 
-        vbox = Gtk.Box.new(Gtk.Orientation.VERTICAL, 6)
+        vbox = Gtk.Box(Gtk.Orientation.VERTICAL, 6)
         self.add(vbox)
 
         self.entry = Gtk.Entry()
         self.entry.set_text("Hello World")
         vbox.pack_start(self.entry, True, True, 0)
 
-        hbox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 6)
+        hbox = Gtk.Box(Gtk.Orientation.HORIZONTAL, 6)
         vbox.pack_start(hbox, True, True, 0)
         
         self.check_editable = Gtk.CheckButton("Editable")

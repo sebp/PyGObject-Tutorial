@@ -6,7 +6,7 @@ class ButtonWindow(Gtk.Window):
         Gtk.Window.__init__(self, title="Button Demo")
         self.set_border_width(10)
 
-        hbox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 6)
+        hbox = Gtk.Box(Gtk.Orientation.HORIZONTAL, 6)
         self.add(hbox)
 
         button = Gtk.Button("Click Me")

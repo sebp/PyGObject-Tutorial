@@ -6,7 +6,7 @@ class ToggleButtonWindow(Gtk.Window):
         Gtk.Window.__init__(self, title="ToggleButton Demo")
         self.set_border_width(10)
 
-        hbox = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 6)
+        hbox = Gtk.Box(Gtk.Orientation.HORIZONTAL, 6)
         self.add(hbox)
 
         button = Gtk.ToggleButton("Button 1")
