@@ -48,7 +48,7 @@ Box Objects
 
     If *homogeneous* is ``True``, all widgets in the box will
     be the same size, of which the size is determined by the largest
-    child widget. If it is ommitted, *homogeneous* defaults to ``False``.
+    child widget. If it is omitted, *homogeneous* defaults to ``False``.
 
     *spacing* is the number of pixels to place by default between children.
     If omitted, no spacing is used, i.e. *spacing* is set to 0.
@@ -84,7 +84,7 @@ Box Objects
         This option affects the other dimension.
 
         *padding* defines extra space in pixels to put between this child and
-        its neighbors, over and above the global amount specified by "spacing"
+        its neighbours, over and above the global amount specified by "spacing"
         property. If *child* is a widget at one of the reference ends of box,
         then padding pixels are also put between *child* and the reference edge
         of this box.
