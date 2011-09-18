@@ -166,9 +166,9 @@ TreeStore Objects
 
     .. method:: append(parent, [row])
 
-    Appends a new row to this tree store. If *parent* is not ``None``, then it
-    will append the new row after the last child of *parent*, otherwise it will
-    append a row to the top level.
+    Appends a new row to this tree store. *parent* must be a valid :class:`Gtk.TreeIter`.
+    If *parent* is not ``None``, then it will append the new row after the last
+    child of *parent*, otherwise it will append a row to the top level.
 
     *row* is a list of values for each column, i.e. ``len(store) == len(row)``.
     If *row* is omitted or ``None``, an empty row will be appended.
