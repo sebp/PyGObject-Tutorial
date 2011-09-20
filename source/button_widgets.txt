@@ -16,7 +16,6 @@ when the button has been pressed and released.
 
 Button Objects
 ^^^^^^^^^^^^^^
-
 .. class:: Gtk.Button([label[, stock[, use_underline]]])
 
     If label is not ``None``, creates a new :class:`Gtk.Button` with a
@@ -25,7 +24,7 @@ Button Objects
     If *stock* is not ``None``, creates a new button containing the image and
     text from a stock item.
 
-    Setting *use_underline* is set to ``True``, an underline  in the text
+    If *use_underline* is set to ``True``, an underline  in the text
     indicates the next character should be used for the mnemonic accelerator key.
 
     .. method:: set_label(label)
@@ -35,7 +34,7 @@ Button Objects
     .. method:: set_use_underline(use_underline)
 
     If *True*, an underline in the text of the button label indicates the next
-    character should be used for the mnemonic accelerator key. 
+    character should be used for the mnemonic accelerator key.
 
 Example
 ^^^^^^^
@@ -54,7 +53,7 @@ To retrieve the state of the :class:`Gtk.ToggleButton`, you can use the
 :meth:`Gtk.ToggleButton.get_active` method. This returns ``True`` if the button
 is "down". You can also set the toggle button's state, with
 :meth:`Gtk.ToggleButton.set_active`. Note that, if you do this, and the state
-actually changes, it causes the "clicked" signal to be emitted.
+actually changes, it causes the "toggled" signal to be emitted.
 
 ToggleButton Objects
 ^^^^^^^^^^^^^^^^^^^^
@@ -203,8 +202,8 @@ to adjust the number of decimal spaces displayed by calling
 :meth:`Gtk.SpinButton.set_digits`.
 
 By default, :class:`Gtk.SpinButton` accepts textual data. If you wish to limit
-this to numerical values only the "numeric" property can be set to ``True`` or
-``False`` with :meth:`Gtk.SpinButton.set_numeric`.
+this to numerical values only, call :meth:`Gtk.SpinButton.set_numeric` with ``True``
+as argument.
 
 We can also adjust the update policy of :class:`Gtk.SpinButton`. There are two
 options here; by defaul the spin button updates the value even if the data
