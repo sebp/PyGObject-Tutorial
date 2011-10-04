@@ -109,6 +109,8 @@ Example
 Let's take a look at a slightly modified version of the extended example with two
 buttons.
 
+.. image:: ../images/layout_box_example.png
+
 .. literalinclude:: ../examples/layout_box_example.py
     :linenos:
 
@@ -218,6 +220,8 @@ Table Objects
 Example
 ^^^^^^^
 
+.. image:: ../images/layout_table_example.png
+
 .. literalinclude:: ../examples/layout_table_example.py
     :linenos:
 
@@ -268,6 +272,8 @@ Grid Objects
 
 Example
 ^^^^^^^
+
+.. image:: ../images/layout_grid_example.png
 
 .. literalinclude:: ../examples/layout_grid_example.py
     :linenos:

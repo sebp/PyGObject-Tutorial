@@ -39,6 +39,8 @@ Button Objects
 Example
 ^^^^^^^
 
+.. image:: ../images/button_example.png
+
 .. literalinclude:: ../examples/button_example.py
     :linenos:
 
@@ -75,6 +77,8 @@ ToggleButton Objects
 
 Example
 ^^^^^^^
+
+.. image:: ../images/togglebutton_example.png
 
 .. literalinclude:: ../examples/togglebutton_example.py
     :linenos:
@@ -145,6 +149,8 @@ RadioButton Objects
 Example
 ^^^^^^^
 
+.. image:: ../images/radiobutton_example.png
+
 .. literalinclude:: ../examples/radiobutton_example.py
     :linenos:
 
@@ -178,6 +184,8 @@ LinkButton Objects
 
 Example
 ^^^^^^^
+
+.. image:: ../images/linkbutton_example.png
 
 .. literalinclude:: ../examples/linkbutton_example.py
     :linenos:
@@ -269,6 +277,8 @@ Adjustment Objects
 
 Example
 ^^^^^^^
+
+.. image:: ../images/spinbutton_example.png
 
 .. literalinclude:: ../examples/spinbutton_example.py
     :linenos:

@@ -50,6 +50,8 @@ CellRendererText Objects
 Example
 ^^^^^^^
 
+.. image:: ../images/cellrenderertext_example.png
+
 .. literalinclude:: ../examples/cellrenderertext_example.py
     :linenos:
 
@@ -93,6 +95,8 @@ CellRendererToggle Objects
 Example
 ^^^^^^^
 
+.. image:: ../images/cellrenderertoggle_example.png
+
 .. literalinclude:: ../examples/cellrenderertoggle_example.py
     :linenos:
 
@@ -115,6 +119,8 @@ CellRendererPixbuf Objects
 
 Example
 ^^^^^^^
+
+.. image:: ../images/cellrendererpixbuf_example.png
 
 .. literalinclude:: ../examples/cellrendererpixbuf_example.py
     :linenos:
@@ -148,6 +154,8 @@ CellRendererCombo Objects
 Example
 ^^^^^^^
 
+.. image:: ../images/cellrenderercombo_example.png
+
 .. literalinclude:: ../examples/cellrenderercombo_example.py
     :linenos:
 
@@ -170,6 +178,8 @@ CellRendererProgress Objects
 
 Example
 ^^^^^^^
+
+.. image:: ../images/cellrendererprogress_example.png
 
 .. literalinclude:: ../examples/cellrendererprogress_example.py
     :linenos:
@@ -197,6 +207,8 @@ CellRendererSpin Objects
 
 Example
 ^^^^^^^
+
+.. image:: ../images/cellrendererspin_example.png
 
 .. literalinclude:: ../examples/cellrendererspin_example.py
     :linenos:

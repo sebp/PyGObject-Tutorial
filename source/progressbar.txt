@@ -76,5 +76,7 @@ ProgressBar Objects
 Example
 -------
 
+.. image:: ../images/progressbar_example.png
+
 .. literalinclude:: ../examples/progressbar_example.py
     :linenos:

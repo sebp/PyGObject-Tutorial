@@ -98,5 +98,7 @@ Entry Objects
 Example
 -------
 
+.. image:: ../images/entry_example.png
+
 .. literalinclude:: ../examples/entry_example.py
     :linenos:

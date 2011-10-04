@@ -109,6 +109,8 @@ Label Objects
 Example
 -------
 
+.. image:: ../images/label_example.png
+
 .. literalinclude:: ../examples/label_example.py
     :linenos:
 

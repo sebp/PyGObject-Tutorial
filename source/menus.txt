@@ -256,5 +256,7 @@ UIManager Objects
 Example
 -------
 
+.. image:: ../images/menu_example.png
+
 .. literalinclude:: ../examples/menu_example.py
     :linenos:

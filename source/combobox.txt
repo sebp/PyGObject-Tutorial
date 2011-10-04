@@ -96,5 +96,7 @@ ComboBoxText objects
 Example
 -------
 
+.. image:: ../images/combobox_example.png
+
 .. literalinclude:: ../examples/combobox_example.py
     :linenos:
