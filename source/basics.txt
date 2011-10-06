@@ -27,7 +27,7 @@ A generic example is:
     handler_id = widget.connect("event", callback, data)
 
 Firstly, *widget* is an instance of a widget we created earlier. Next, the
-event we are interested in. Each widget has its own particularly events which
+event we are interested in. Each widget has its own particular events which
 can occur.
 For instance, if you have a button you usually want to connect to the "clicked"
 event.
