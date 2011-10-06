@@ -13,7 +13,7 @@ This tutorial gives an introduction to writing GTK+ 3 applications in Python.
 
 Prior to working through this tutorial, it is recommended that you
 have a reasonable grasp of the Python programming language.
-GUI programming introduces new problems compares to interacting
+GUI programming introduces new problems compared to interacting
 with the standard output (console / terminal).
 It is necessary for you to know how to create and run Python files,
 understanding basic interpreter errors, work with strings, integers,
