@@ -16,7 +16,7 @@ have a reasonable grasp of the Python programming language.
 GUI programming introduces new problems compares to interacting
 with the standard output (console / terminal).
 It is necessary for you to know how to create and run Python files,
-understanding basic interpreter errors, work with strings, integers,
+understand basic interpreter errors, and work with strings, integers,
 floats and Boolean values.
 For the more advanced widgets in this tutorial, good knowledge of
 lists and tuples will be needed.
