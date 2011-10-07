@@ -38,7 +38,7 @@ Finally, the *data* argument includes any data which should be passed when the
 signal is issued. However, this argument is completely optional and can be left
 out if not required.
 
-The functions returns a number that identifies this particular signal-callback
+The function returns a number that identifies this particular signal-callback
 pair.
 It is required to disconnect from a signal such that the callback function will
 not be called during any future or currently ongoing emissions of the signal it
