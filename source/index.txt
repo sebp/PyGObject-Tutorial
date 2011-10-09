@@ -44,6 +44,7 @@ Contents:
    cellrenderers
    combobox
    menus
+   dialogs
 
 Indices and tables
 ==================
