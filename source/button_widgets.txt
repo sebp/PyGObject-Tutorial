@@ -214,7 +214,7 @@ this to numerical values only, call :meth:`Gtk.SpinButton.set_numeric` with ``Tr
 as argument.
 
 We can also adjust the update policy of :class:`Gtk.SpinButton`. There are two
-options here; by defaul the spin button updates the value even if the data
+options here; by default the spin button updates the value even if the data
 entered is invalid. Alternatively, we can set the policy to only update when the
 value entered is valid by calling :meth:`Gtk.SpinButton.set_update_policy`.
 
