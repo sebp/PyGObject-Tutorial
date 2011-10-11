@@ -55,8 +55,8 @@ enter::
 
 Extended Example
 ----------------
-As the example above does not do anything. We write the first "real" application, the
-ubiquitous "Hello World" program.
+For something a little more useful, here's the PyGObject version of the classic
+"Hello World" program.
 
 .. image:: ../images/extended_example.png
 
