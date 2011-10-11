@@ -1,0 +1,304 @@
+Multiline Text Editor
+=====================
+
+The :class:`Gtk.TextView` widget can be used to display and edit large amounts
+of formatted text. Like the :class:`Gtk.TreeView`, it has a model/view design.
+In this case the :class:`Gtk.TextBuffer` is the model which represents the text
+being edited. This allows two or more :class:`Gtk.TextView` widgets to share the
+same :class:`Gtk.TextBuffer`, and allows those text buffers to be displayed
+slightly differently. Or you could maintain several text buffers and choose to
+display each one at different times in the same :class:`Gtk.TextView` widget.
+
+The View
+--------
+
+The :class:`Gtk.TextView` is the frontend with which the user can add, edit and
+delete textual data. They are commonly used to edit multiple lines of text.
+When creating a :class:`Gtk.TextView` it contains its own default
+:class:`Gtk.TextBuffer`, which you can access via the :meth:`Gtk.TextView.get_buffer`
+method.
+
+By default, text can be added, edited and removed from the :class:`Gtk.TextView`.
+You can disable this by calling :meth:`Gtk.TextView.set_editable`.
+If the text is not editable, you usually want to hide the text cursor with
+:meth:`Gtk.TextView.set_cursor_visible` as well. In some cases it may be useful
+to set the justification of the text with :meth:`Gtk.TextView.set_justification`.
+The text can be displayed at the left edge, (:attr:`Gtk.Justification.LEFT`),
+at the right edge (:attr:`Gtk.Justification.RIGHT`), centered
+(:attr:`Gtk.Justification.CENTER`), or distributed across the complete
+width (:attr:`Gtk.Justification.FILL`).
+
+Another default setting of the :class:`Gtk.TextView` widget is long lines of
+text will continue horizontally until a break is entered. To wrap the text and
+prevent it going off the edges of the screen call :meth:`Gtk.TextView.set_wrap_mode`.
+
+TextView Objects
+^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.TextView
+
+    Creates a new :class:`Gtk.TextView` associated with an empty default
+    :class:`Gtk.TextBuffer`.
+
+    .. method:: get_buffer()
+
+        Returns the :class:`Gtk.TextBuffer` being displayed by this text view.
+
+    .. method:: set_editable(editable)
+
+        Sets the default editability of this :class:`Gtk.TextView`.
+
+    .. method:: set_cursor_visible(visible)
+
+        Toggles whether the insertion point is displayed. A buffer with no
+        editable text probably shouldn't have a visible cursor, so you may want
+        to turn the cursor off. 
+
+    .. method:: set_justification(justification)
+
+        Sets the default justification of text.
+
+        *justification* can be one of the following values:
+
+        * :attr:`Gtk.Justification.LEFT`: Text is placed at the left edge.
+        * :attr:`Gtk.Justification.RIGHT`: Text is placed at the right edge.
+        * :attr:`Gtk.Justification.CENTER`: Text is placed in the center.
+        * :attr:`Gtk.Justification.FILL`: Text is distributed across the
+          complete width.
+
+    .. method:: set_wrap_mode(wrap_mode)
+
+        Sets the line wrapping for the view.
+
+        *wrap_mode* can be one of the following values:
+
+        * :attr:`Gtk.WrapMode.NONE`: Do not wrap lines; just make the text area
+          wider.
+        * :attr:`Gtk.WrapMode.CHAR`: Wrap text, breaking lines anywhere the cursor
+          can appear (between characters, usually).
+        * :attr:`Gtk.WrapMode.WORD`: Wrap text, breaking lines in between words.
+        * :attr:`Gtk.WrapMode.WORD_CHAR`: Wrap text, breaking lines in between
+          words, or if that is not enough, also between `graphemes`_.
+
+The Model
+---------
+
+The :class:`Gtk.TextBuffer` is the core of the :class:`Gtk.TextView` widget, and
+is used to hold whatever text is being displayed in the :class:`Gtk.TextView`.
+Setting and retrieving the contents is possible with :meth:`Gtk.TextBuffer.set_text`
+and :meth:`Gtk.TextBuffer.get_text`.
+However, most text manipulation is accomplished with *iterators*, represented by
+a :class:`Gtk.TextIter`. An iterator represents a position between two characters
+in the text buffer. Iterators are not valid indefinitely; whenever the buffer is
+modified in a way that affects the contents of the buffer, all outstanding
+iterators become invalid.
+
+Because of this, iterators can't be used to preserve positions across buffer
+modifications. To preserve a position, use :class:`Gtk.TextMark`.
+A text buffer contains two built-in marks; an "insert" mark (which is the position
+of the cursor) and the "selection_bound" mark. Both of them can be retrieved using
+:meth:`Gtk.TextBuffer.get_insert` and :meth:`Gtk.TextBuffer.get_selection_bound`,
+respectively. By default, the location of a :class:`Gtk.TextMark` is not shown.
+This can be changed by calling :meth:`Gtk.TextMark.set_visible`.
+
+Many methods exist to retrieve a :class:`Gtk.TextIter`. For instance,
+:meth:`Gtk.TextBuffer.get_start_iter` returns an iterator pointing to the first
+position in the text buffer, whereas :meth:`Gtk.TextBuffer.get_end_iter` returns
+an iterator pointing past the last valid character. Retrieving the bounds of
+the selected text can be achieved by calling
+:meth:`Gtk.TextBuffer.get_selection_bounds`.
+
+To insert text at a specific position use :meth:`Gtk.TextBuffer.insert`.
+Another useful method is :meth:`Gtk.TextBuffer.insert_at_cursor` which inserts
+text wherever the cursor may be currently positioned. To remove portions of
+the text buffer use :meth:`Gtk.TextBuffer.delete`.
+
+In addition, :class:`Gtk.TextIter` can be used to locate textual matches in the
+buffer using :meth:`Gtk.TextIter.forward_search` and
+:meth:`Gtk.TextIter.backward_search`.
+The start and end iters are used as the starting point of the search and move
+forwards/backwards depending on requirements.
+
+TextBuffer Objects
+^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.TextBuffer
+
+    .. method:: set_text(text[, length])
+
+        Deletes current contents of this buffer, and inserts *length* characters
+        of *text* instead. If *length* is -1 or omitted, *text* is inserted
+        completely.
+
+    .. method:: get_text(start_iter, end_iter)
+
+        Returns the text in the range *start_iter* (included) and *end_iter*
+        (excluded). Excludes undisplayed text.
+
+    .. method:: get_insert()
+
+        Returns the :class:`Gtk.TextMark` that represents the cursor (insertion
+        point).
+
+    .. method:: get_selection_bound()
+        
+        Returns the :class:`Gtk.TextMark` that represents the selection bound.
+
+    .. method:: create_mark(mark_name, where[, left_gravity])
+
+        Creates a :class:`Gtk.TextMark` at the position of the :class:`Gtk.TextIter`
+        *where*. If *mark_name* is ``None``, the mark is anonymous; otherwise,
+        the mark can be retrieved by name using :meth:`get_mark`. If a mark has
+        left gravity, and text is inserted at the mark's current location,
+        the mark will be moved to the left of the newly-inserted text.
+        If the mark has right gravity (*left_gravity* is ``False``), the mark will
+        end up on the right of newly-inserted text. The standard left-to-right
+        cursor is a mark with right gravity (when you type, the cursor stays on
+        the right side of the text you're typing).
+
+        If *left_gravity* is omitted, it defaults to ``False``.
+
+    .. method:: get_mark(mark_name)
+
+        Returns the :class:`Gtk.TextMark` named name in this buffer, or ``None``
+        if no such mark exists in the buffer.
+
+    .. method:: get_start_iter()
+
+        Returns a :class:`Gtk.TextIter` pointing to first position in this buffer.
+
+    .. method:: get_end_iter()
+
+        Returns a :class:`Gtk.TextIter` pointing past the last valid character
+        in this buffer.
+
+    .. method:: get_selection_bounds()
+
+        Returns a tuple of two :class:`Gtk.TextIter` objects pointing to the
+        first character of the selection and to the first character after the
+        selection, respectively. If no text is selected an empty tuple is returned.
+
+    .. method:: insert(text_iter, text[, length])
+
+        Inserts *length* characters of *text* at position *text_iter*.
+        If *length* is -1 or omitted, *text* is inserted completely.
+
+    .. method:: insert_at_cursor(text[, length])
+
+        Simply calls :meth:`insert`, using the current cursor position as the
+        insertion point.
+
+    .. method:: delete(start_iter, end_iter)
+
+        Deletes text between *start_iter* and *end_iter*.
+
+    .. method:: create_tag(tag_name, **kwargs)
+
+        Creates a tag and adds it to the tag table of this buffer.
+
+        If *tag_name* is ``None``, the tag is anonymous, otherwise a tag with
+        the same name must not already exist in the tag table of the buffer.
+
+        *kwargs* is an arbitrary number of key-value pairs that represent a list
+        properties to set on the tag, as with ``tag.set_property(prop_name, value)``.
+
+    .. method:: apply_tag(tag, start_iter, end_iter)
+
+        Applies *tag* to the given range.
+
+    .. method:: remove_tag(tag, start_iter, end_iter)
+
+        Removes all occurrences of *tag* from the given range.
+
+    .. method:: remove_all_tags(start_iter, end_iter)
+
+        Removes all tags in the given range.
+
+
+.. class:: Gtk.TextIter
+
+    .. method:: forward_search(needle, flags, limit)
+
+        Searches forward for *needle*. The search will not continue past the
+        :class:`Gtk.TextIter` *limit*.
+
+        *flags* can be set to one of the following, or any combination of it by
+        concatenating them with the bitwise-OR operator ``|``.
+
+        * 0: The match must be exact.
+        * :attr:`Gtk.TextSearchFlags.VISIBLE_ONLY`: The match may have invisible
+          text interspersed in *needle*. i.e. *needle* will be a
+          possibly-noncontiguous subsequence of the matched range.
+        * :attr:`Gtk.TextSearchFlags.TEXT_ONLY`: The match may have pixbufs or
+          child widgets mixed inside the matched range.
+        * :attr:`Gtk.TextSearchFlags.CASE_INSENSITIVE`: The text will be matched
+          regardless of what case it is in.
+
+        Returns a tupel containing a :class:`Gtk.TextIter` pointing to the start
+        and to the first character after the match. If no match was found,
+        ``None`` is returned.
+
+    .. method:: backward_search(needle, flags, limit)
+
+        Same as :meth:`forward_search`, but moves backward.
+
+
+.. class:: Gtk.TextMark
+
+    .. method:: set_visible(visible)
+
+        Sets the visibility of this mark; the insertion point is normally visible,
+        i.e. you can see it as a vertical bar. Also, the text widget uses a
+        visible mark to indicate where a drop will occur when dragging-and-dropping
+        text. Most other marks are not visible. Marks are not visible by default.
+
+Tags
+----
+
+Text in a buffer can be marked with tags. A tag is an attribute that can be
+applied to some range of text. For example, a tag might be called "bold" and make
+the text inside the tag bold. However, the tag concept is more general than that;
+tags don't have to affect appearance. They can instead affect the behaviour of
+mouse and key presses, "lock" a range of text so the user can't edit it, or
+countless other things. A tag is represented by a :class:`Gtk.TextTag` object.
+One :class:`Gtk.TextTag` can be applied to any number of text ranges in any number
+of buffers.
+
+Each tag is stored in a :class:`Gtk.TextTagTable`. A tag table defines a set of
+tags that can be used together. Each buffer has one tag table associated with it;
+only tags from that tag table can be used with the buffer. A single tag table can
+be shared between multiple buffers, however.
+
+To specify that some text in the buffer should have specific formatting, you must
+define a tag to hold that formatting information, and then apply that tag to the
+region of text using :meth:`Gtk.TextBuffer.create_tag`
+and :meth:`Gtk.TextBuffer.apply_tag`::
+
+    tag = textbuffer.create_tag("orange_bg", background="orange")
+    textbuffer.apply_tag(tag, start_iter, end_iter)
+
+The following are some of the common styles applied to text:
+
+    * Background colour ("foreground" property)
+    * Foreground colour ("background" property)
+    * Underline ("underline" property)
+    * Bold ("weight" property)
+    * Italics ("style" property)
+    * Strikethrough ("strikethrough" property)
+    * Justification ("justification" property)
+    * Size ("size" and "size-points" properties)
+    * Text wrapping ("wrap-mode" property)
+
+You can also delete particular tags later using :meth:`Gtk.TextBuffer.remove_tag`
+or delete all tags in a given region by calling :meth:`Gtk.TextBuffer.remove_all_tags`.
+
+Example
+-------
+
+.. image:: ../images/textview_example.png
+
+.. literalinclude:: ../examples/textview_example.py
+    :linenos:
+
+
+.. _graphemes: http://developer.gnome.org/pango/stable/pango-Text-Processing.html#pango-get-log-attrs
