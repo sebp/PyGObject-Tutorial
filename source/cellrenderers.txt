@@ -62,8 +62,8 @@ CellRendererToggle
 drawn as a radio- or checkbutton, depending on the "radio" property. When
 activated, it emits the "toggled" signal.
 
-As a :class:`Gtk.CellRendererToggle` can have to states active and not active,
-you most likely want to you can bind the "active" property on the cell renderer
+As a :class:`Gtk.CellRendererToggle` can have two states, active and not active,
+you most likely want to bind the "active" property on the cell renderer
 to a boolean value in the model, thus causing the check button to reflect the
 state of the model.
 
