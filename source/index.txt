@@ -22,7 +22,7 @@ For the more advanced widgets in this tutorial, good knowledge of
 lists and tuples will be needed.
 
 Although this tutorial describes the most important classes and methods within
-GTK+ 3, it is not supposed serve as an API reference. Please refer to the
+GTK+ 3, it is not supposed to serve as an API reference. Please refer to the
 `GTK+ 3 Reference Manual <http://developer.gnome.org/gtk3/stable/>`_ for a
 detailed description of the API.
 
