@@ -22,7 +22,7 @@ Button Objects
     :class:`Gtk.Label` child containing the given text.
 
     If *stock* is not ``None``, creates a new button containing the image and
-    text from a stock item.
+    text from a :ref:`stock item <stock-items>`.
 
     If *use_underline* is set to ``True``, an underline  in the text
     indicates the next character should be used for the mnemonic accelerator key.

@@ -105,7 +105,7 @@ CellRendererPixbuf
 
 A :class:`Gtk.CellRendererPixbuf` can be used to render an image in a cell. It
 allows to render either a given :class:`Gdk.Pixbuf` (set via the "pixbuf"
-property) or a stock icon (set via the "stock-id" property).
+property) or a :ref:`stock item <stock-items>` (set via the "stock-id" property).
 
 CellRendererPixbuf Objects
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

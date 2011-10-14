@@ -1,3 +1,5 @@
+.. _stock-items:
+
 Stock Items
 ============
 

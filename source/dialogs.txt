@@ -66,9 +66,9 @@ Dialog Objects
     .. method:: add_button(button_text, response_id)
 
         Adds a button with the given text (or a stock button, if *button_text*
-        is a stock ID) and sets things up so that clicking the button will emit
-        the "response" signal with the given *response_id*. The button is appended
-        to the end of the dialog's action area.
+        is a :ref:`stock item <stock-items>`) and sets things up so that clicking
+        the button will emit the "response" signal with the given *response_id*.
+        The button is appended to the end of the dialog's action area.
 
         *response_id* can be any positive integer or one of the predefined
         :class:`Gtk.ResponseType` values:
@@ -92,7 +92,8 @@ Dialog Objects
         Adds several buttons to this dialog using the button data passed as
         arguments to the method. This method is the same as calling
         :meth:`add_button` repeatedly. The button data pairs - button text (or
-        stock ID) and a response ID integer are passed individually. For example::
+        :ref:`stock item <stock-items>`) and a response ID integer are passed
+        individually. For example::
 
             dialog.add_buttons(Gtk.STOCK_OPEN, 42, "Close", Gtk.ResponseType.CLOSE)
 

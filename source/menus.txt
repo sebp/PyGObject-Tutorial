@@ -37,8 +37,8 @@ Different classes representing different types of actions exist:
 Actions represent operations that the user can be perform, along with some
 information how it should be presented in the interface, including its name
 (not for display), its label (for display), an accelerator, whether a label
-indicates a stock ID, a tooltip, as well as the callback that is called when
-the action gets activated.
+indicates a :ref:`stock item <stock-items>`, a tooltip, as well as the callback
+that is called when the action gets activated.
 
 You can create actions by either calling one of the constructors directly and
 adding them to a :class:`Gtk.ActionGroup` by calling
@@ -62,7 +62,8 @@ Action Objects
 
     If *tooltip* is not ``None``, it is used as tooltip for the action.
 
-    If *stock_id* is not ``None``, it is used to lookup the stock icon to display
+    If *stock_id* is not ``None``, it is used to lookup the
+    :ref:`stock item <stock-items>` stock icon to display
     in widgets representing the action.
 
 .. class:: Gtk.ToggleAction(name, label, tooltip, stock_id)
@@ -118,7 +119,7 @@ Action Objects
         items with the following information:
 
         * The name of the action (mandatory)
-        * The stock ID of the action (default: ``None``)
+        * The :ref:`stock item <stock-items>` of the action (default: ``None``)
         * The label for the action (default: ``None``)
         * The accelerator for the action, in the format understood by the
           :func:`Gtk.accelerator_parse` function (default: ``None``)
@@ -140,7 +141,7 @@ Action Objects
         items with the following information:
 
         * The name of the action (mandatory)
-        * The stock ID of the action (default: ``None``)
+        * The :ref:`stock item <stock-items>` of the action (default: ``None``)
         * The label for the action (default: ``None``)
         * The accelerator for the action, in the format understood by the
           :func:`Gtk.accelerator_parse` function (default: ``None``)
@@ -164,7 +165,7 @@ Action Objects
         items with the following information:
 
         * The name of the action (mandatory)
-        * The stock ID of the action (default: ``None``)
+        * The :ref:`stock item <stock-items>` of the action (default: ``None``)
         * The label for the action (default: ``None``)
         * The accelerator for the action, in the format understood by the
           :func:`Gtk.accelerator_parse` function (default: ``None``)
