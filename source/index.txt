@@ -46,6 +46,7 @@ Contents:
    textview
    menus
    dialogs
+   stock
 
 Indices and tables
 ==================
