@@ -63,7 +63,7 @@ Action Objects
     If *tooltip* is not ``None``, it is used as tooltip for the action.
 
     If *stock_id* is not ``None``, it is used to lookup the
-    :ref:`stock item <stock-items>` stock icon to display
+    :ref:`stock item <stock-items>` to display
     in widgets representing the action.
 
 .. class:: Gtk.ToggleAction(name, label, tooltip, stock_id)
