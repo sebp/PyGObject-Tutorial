@@ -67,7 +67,7 @@ of rows and use slices to retrieve or set values.
 
 .. code-block:: python
 
-    # Print number of columns
+    # Print number of rows
     print len(store)
     # Print all but first column
     print store[treeiter][1:]
