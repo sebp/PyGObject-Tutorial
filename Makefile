@@ -6,6 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
+DOCNAME       = PythonGTK3Tutorial
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -81,8 +82,9 @@ devhelp:
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/PyGObjectTutorial"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/PyGObjectTutorial"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/books"
+	@echo "# gunzip $(BUILDDIR)/devhelp/$(DOCNAME).devhelp.gz"
+	@echo "# ln -s `pwd`/$(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/books/$(DOCNAME)"
 	@echo "# devhelp"
 
 epub:
