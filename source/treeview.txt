@@ -257,6 +257,14 @@ TreeView Objects
 
         Gets the :class:`Gtk.TreeSelection` associated with this tree view.
 
+    .. method:: enable_model_drag_source(start_button_mask, targets, actions)
+
+        Arguments are the same as :meth:`Gtk.Widget.drag_source_set`
+
+    .. method:: enable_model_dest_source(targets, actions)
+
+        Arguments are the same as :meth:`Gtk.Widget.drag_dest_set`
+
 TreeViewColumn Objects
 ^^^^^^^^^^^^^^^^^^^^^^
 
