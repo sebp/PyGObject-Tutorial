@@ -11,8 +11,8 @@ property access methods, and signal support.
 This section will introduce some important aspects about the GObject
 implementation in python.
 
-Inherit from GObject.Object
----------------------------
+Inherit from GObject.GObject
+----------------------------
 
 A native GObject is accessible via :class:`GObject.GObject`. It is rarely intanciated
 directly, we generally use inherited class. A :class:`Gtk.Widget` is an inherited class
