@@ -47,8 +47,8 @@ Contents:
    menus
    dialogs
    drag_and_drop
-   stock
    objects
+   stock
 
 Indices and tables
 ==================
