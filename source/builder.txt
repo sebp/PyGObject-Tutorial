@@ -148,8 +148,8 @@ Builder Objects
         Connects the signals to the methods given in the *handler_object*.
         The *handler_object* can be any object which contains keys or attributes that are called like the signal handler names given in the interface description, e.g. a class or a dict.
 
-Example code
-------------
+Example
+-------
 The final code of the example
 
 .. literalinclude:: ../examples/builder_example.py
