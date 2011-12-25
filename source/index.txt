@@ -47,6 +47,7 @@ Contents:
    menus
    dialogs
    drag_and_drop
+   builder
    objects
    stock
 
