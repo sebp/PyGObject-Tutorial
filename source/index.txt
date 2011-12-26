@@ -43,6 +43,7 @@ Contents:
    treeview
    cellrenderers
    combobox
+   iconview
    textview
    menus
    dialogs

@@ -86,16 +86,6 @@ Drag and Drop Methods and Objects
     Add a :class:`Gtk.TargetEntry` to the drag source/destination which contains
     a list of URIs.
 
-.. class:: Gtk.IconView
-
-    .. method:: enable_model_drag_source(start_button_mask, targets, actions)
-
-    Arguments are the same as :meth:`Gtk.Widget.drag_source_set`
-
-    .. method:: enable_model_dest_source(targets, actions)
-
-    Arguments are the same as :meth:`Gtk.Widget.drag_dest_set`
-
 .. class:: Gtk.TargetEntry
 
     .. staticmethod:: new(target, flags, info)
