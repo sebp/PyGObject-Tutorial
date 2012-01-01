@@ -47,6 +47,7 @@ Contents:
    textview
    menus
    dialogs
+   clipboard
    drag_and_drop
    builder
    objects
