@@ -10,11 +10,11 @@ using a :class:`Gtk.MenuItem`, and connecting the functions to
 
 There are multiple clipboard selections for different purposes.
 In most circumstances, the selection named ``CLIPBOARD`` is used for everyday
-copying and pasting.
-``PRIMARY`` is another common selection which stores text selected by the user with the cursor.
+copying and pasting. ``PRIMARY`` is another common selection which stores text
+selected by the user with the cursor.
 
 Clipboard Objects
----------------------------------
+-----------------
 .. class:: Gtk.Clipboard
     
     .. method:: get(selection)
