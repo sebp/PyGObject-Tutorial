@@ -301,6 +301,35 @@ TreeViewColumn Objects
         ``False``, then the *renderer* is allocated no more space than it needs.
         Any unused space is divided evenly between cells for which expand is ``True``.
 
+    .. method:: set_sort_column_id(sort_column_id)
+
+        Sets the column of the model by which this column (of the view) should be
+        sorted. This also makes the columnd header clickable.
+
+    .. method:: get_sort_column_id()
+
+        Gets the column id set by :meth:`Gtk.TreeViewColumn.set_sort_column_id`
+
+    .. method:: set_sort_indicator(setting)
+
+        Sets whether a little arrow is displayed in the column header to in
+
+        *setting* can either be ``True`` (indicator is shown) or ``False``
+
+    .. method:: get_sort_indicator()
+
+        Gets the value set by :meth:`Gtk.TreeViewColumn.set_sort_indicator`
+
+    .. method:: set_sort_order(order)
+
+        Changes the order by which the column is sorted.
+
+        *order* can either be ``Gtk.SortType.ASCENDING`` or ``Gtk.SortType.DESCENDING``.
+
+    .. method:: get_sort_order()
+
+        Gets the sort order set by :meth:`Gtk.TreeViewColumn.set_sort_order`
+
 The Selection
 -------------
 Most applications will need to not only deal with displaying data, but also
@@ -343,7 +372,7 @@ TreeSelection Objects
           In some circumstances, such as initially or during a search operation,
           it's possible for no element to be selected. What is really enforced
           is that the user can't deselect a currently selected element except by
-          selecting another element. 
+          selecting another element.
         * :attr:`Gtk.SelectionMode.MULTIPLE`: Any number of elements may be
           selected. Clicks toggle the state of an item. Any number of elements
           may be selected. The Ctrl key may be used to enlarge the selection,
@@ -362,3 +391,115 @@ TreeSelection Objects
     .. method:: get_selected_rows()
 
         Returns a list of :class:`Gtk.TreePath` instances of all selected rows.
+
+Sorting
+-------
+Sorting is an important feature for tree views and is supported by the standard tree models (:class:`Gtk.TreeStore` and :class:`Gtk.ListStore`), which implement the :class:`Gtk.TreeSortable` interface.
+
+Sorting by clicking on columns
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+A column of a :class:`Gtk.TreeView` can easily made sortable with a call to :meth:`Gtk.TreeViewColumn.set_sort_column_id`.
+Afterwards the column can be sorted by clicking on its header.
+
+First we need a simple :class:`Gtk.TreeView` and a :class:`Gtk.ListStore` as a model.
+
+.. code-block:: python
+
+    model = Gtk.ListStore(str)
+    model.append(["Benjamin"])
+    model.append(["Charles"])
+    model.append(["alfred"])
+    model.append(["Alfred"])
+    model.append(["David"])
+    model.append(["charles"])
+    model.append(["david"])
+    model.append(["benjamin"])
+
+    treeView = Gtk.TreeView(model)
+
+    cellRenderer = Gtk.CellRendererText()
+    column = Gtk.TreeViewColumn("Title", renderer, text=0)
+
+The next step is to enable sorting. Note that the *column_id* (``0`` in the example) refers to the column of the model and **not** to the TreeView's column.
+
+.. code-block:: python
+
+    column.set_sort_column_id(0)
+
+Setting a custom sort function
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+It is also possible to set a custom comparison function in order to change the sorting behaviour.
+As an example we will create a comparison function that sorts case-sensitive.
+In the example above the sorted list looked like::
+
+    alfred
+    Alfred
+    benjamin
+    Benjamin
+    charles
+    Charles
+    david
+    David
+
+The case-sensitive sorted list will look like::
+
+    Alfred
+    Benjamin
+    Charles
+    David
+    alfred
+    benjamin
+    charles
+    david
+
+First of all a comparison function is needed.
+This function gets two rows and has to return a negative integer if the first one should come before the second one, zero if they are equal and a positive integer if the second one should come before the second one.
+
+.. code-block:: python
+
+    def compare(model, row1, row2, user_data):
+        sort_column, _ = model.get_sort_column_id()
+        value1 = model.get_value(row1, sort_column)
+        value2 = model.get_value(row2, sort_column)
+        if value1 < value2:
+            return -1
+        elif value1 == value2:
+            return 0
+        else:
+            return 1
+
+Then the sort function has to be set by :meth:`Gtk.TreeSortable.set_sort_func`.
+
+.. code-block:: python
+
+    model.set_sort_func(0, compare, None)
+
+TreeSortable objects
+^^^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.TreeSortable()
+
+    .. method:: set_sort_column_id(sort_column_id, order)
+
+        Sets the current sort column to *sort_column_id*.
+
+        *order* can either be ``Gtk.SortType.ASCENDING`` or ``Gtk.SortType.DESCENDING``.
+
+    .. method:: get_sort_column_id()
+
+        Returns a tuple consisting of the current sort column and order.
+
+    .. method:: set_sort_func(sort_column_id, sort_func, user_data)
+
+        Sets the comparison function used when sorting by the colum *sort_column_id*.
+
+        *user_data* gets passed to *sort_func*.
+
+        *sort_func* is a function with the signature ``sort_func(model, iter1, iter2, user_data)``
+        and should return a negative integer if *iter1* sorts before *iter2*,
+        zero if they are equal and a positive integer if *iter2* sorts before *iter1*.
+
+    .. method:: set_default_sort_func(sort_func, user_data)
+
+        See :meth:`Gtk.TreeSortable.set_sort_func`. This sets the comparison
+        function that is used when sorting by the default sort column
