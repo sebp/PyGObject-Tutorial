@@ -85,7 +85,7 @@ Dialog Objects
         * :attr:`Gtk.ResponseType.APPLY`
         * :attr:`Gtk.ResponseType.HELP`
 
-        The button widget is returned, but usually you don't need it. 
+        The button widget is returned, but usually you don't need it.
 
     .. method:: add_buttons(button_text, response_id[, ...])
 
@@ -169,7 +169,7 @@ MessageDialog Objects
 
         Note that setting a secondary text makes the primary text (*message_format*
         argument of :class:`Gtk.MessageDialog` constructor) become bold, unless
-        you have provided explicit markup. 
+        you have provided explicit markup.
 
 Example
 ^^^^^^^
@@ -226,7 +226,7 @@ and folders more configurable and accessible.
 
     * :meth:`Gtk.FileChooser.set_local_only`: Only local files can be selected.
     * :meth:`Gtk.FileChooser.show_hidden`: Hidden files and folders are displayed.
-    * :meth:`Gtk.FileChooser.set_do_overwrite_conformation`: If the file chooser
+    * :meth:`Gtk.FileChooser.set_do_overwrite_confirmation`: If the file chooser
       was configured in :attr:`Gtk.FileChooserAction.SAVE` mode, it will present
       a confirmation dialog if the user types a file name that already exists.
 
@@ -250,7 +250,7 @@ FileChooser Objects
     * :attr:`Gtk.FileChooserAction.SAVE`: The file chooser will let the user pick
       an existing file, or type in a new filename.
     * :attr:`Gtk.FileChooserAction.SELECT_FOLDER`: The file chooser will let the
-      user pick an existing folder. 
+      user pick an existing folder.
     * :attr:`Gtk.FileChooserAction.CREATE_FOLDER`:
       The file chooser will let the user name an existing or new folder.
 
@@ -288,7 +288,7 @@ FileChooser Objects
 
         Sets whether to display hidden files and folders.
 
-    .. method:: set_do_overwrite_conformation(do_overwrite_confirmation)
+    .. method:: set_do_overwrite_confirmation(do_overwrite_confirmation)
 
         Sets whether to confirm overwriting in save mode.
 
@@ -318,7 +318,7 @@ FileChooser Objects
 
         Adds the :class:`Gtk.FileFilter` instance *filter* to the list of filters
         that the user can choose from. When a filter is selected, only files that
-        are passed by that filter are displayed. 
+        are passed by that filter are displayed.
 
 .. class:: Gtk.FileFilter
 
