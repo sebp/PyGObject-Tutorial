@@ -35,6 +35,7 @@ Contents:
    install
    introduction
    basics
+   unicode
    layout
    label
    entry
