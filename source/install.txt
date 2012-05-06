@@ -44,7 +44,7 @@ It will print any applications and libraries that are currently missing on your
 system but required for building. You should install those using your distribution's
 package repository. A list of `package names <http://live.gnome.org/JhbuildDependencies>`_
 for different distributions is maintained on the GNOME wiki.
-Run the above command again to ensure the required tools are present.
+Run the command above again to ensure the required tools are present.
 
 Executing the following command will build PyGObject and all its dependencies::
 
