@@ -35,9 +35,16 @@ Once you have installed JHBuild successfully, download the latest configuration 
 [#]_. Copy files with the suffix `.modules` to JHBuild's module directory and the file
 `sample-tarball.jhbuildrc` to `~/.jhbuildrc`.
 
-If you have not done it before, download, build and install the build prerequisites by running::
+If you have not done it before, verify that your build environment is setup correctly
+by running::
 
-    $ jhbuild bootstrap
+    $ jhbuild sanitycheck
+
+It will print any applications and libraries that are currently missing on your
+system but required for building. You should install those using your distribution's
+package repository. A list of `package names <http://live.gnome.org/JhbuildDependencies>`_
+for different distributions is maintained on the GNOME wiki.
+Run the above command again to ensure the required tools are present.
 
 Executing the following command will build PyGObject and all its dependencies::
 
