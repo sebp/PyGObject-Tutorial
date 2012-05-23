@@ -64,9 +64,9 @@ class MessageDialogWindow(Gtk.Window):
             "And this is the secondary text that explains things.")
         response = dialog.run()
         if response == Gtk.ResponseType.YES:
-            print "WARN dialog closed by clicking YES button"
+            print "QUESTION dialog closed by clicking YES button"
         elif response == Gtk.ResponseType.NO:
-            print "WARN dialog closed by clicking NO button"
+            print "QUESTION dialog closed by clicking NO button"
 
         dialog.destroy()
 
