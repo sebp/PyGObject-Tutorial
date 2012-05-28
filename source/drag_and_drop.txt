@@ -61,7 +61,7 @@ Drag and Drop Methods and Objects
 
     Sets the widget to be a drag destination.
 
-    *flags* are a combination of :attr:`Gdk.DestDefaults` masks which configures
+    *flags* are a combination of :attr:`Gtk.DestDefaults` masks which configures
     the processes which occur on a drag site.
     *targets* is a list of :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` which
     describe the data to be passed between source and destination.
