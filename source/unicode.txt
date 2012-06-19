@@ -61,7 +61,7 @@ interprets the string using the given encoding::
 	>>> utf8_string = unicode_string.encode("utf-8")
 	>>> type(utf8_string)
 	<type 'str'>
-	>>> u2 == utf8_string.decode("utf-8")
+	>>> u2 = utf8_string.decode("utf-8")
 	>>> unicode_string == u2
 	True
 
