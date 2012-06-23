@@ -102,6 +102,36 @@ To iterate over all rows and its children, use the ``print_tree_store`` function
                 print_rows(store, childiter, indent + "\t")
             treeiter = store.iter_next(treeiter)
 
+Apart from accessing values stored in a :class:`Gtk.TreeModel` with the list-like
+method mentioned above, it is also possible to
+either use :class:`Gtk.TreeIter` or :class:`Gtk.TreePath` instances. Both reference
+a particular row in a tree model.
+One can convert a path to an iterator by calling :meth:`Gtk.TreeModel.get_iter`.
+As :class:`Gtk.ListStore` contains only one level,
+i.e. nodes do not have any child nodes, a path is essentially the index of the row
+you want to access.
+
+.. code-block:: python
+
+    # Get path pointing to 6th row in list store
+    path = Gtk.TreePath(5)
+    treeiter = liststore.get_iter(path)
+    # Get value at 2nd column
+    value = liststore.get_value(treeiter, 1)
+
+In the case of :class:`Gtk.TreeStore`, a path is a list of indexes or a string.
+The string form is a list of numbers separated by a colon. Each number refers to
+the offset at that level. Thus, the path "0" refers to the root node and the
+path "2:4" refers to the fifth child of the third node.
+
+.. code-block:: python
+
+    # Get path pointing to 5th child of 3rd row in tree store
+    path = Gtk.TreePath([2, 4])
+    treeiter = treestore.get_iter(path)
+    # Get value at 2nd column
+    value = treestore.get_value(treeiter, 1)
+
 TreeModel Objects
 ^^^^^^^^^^^^^^^^^
 
@@ -174,6 +204,22 @@ TreeStore Objects
     If *row* is omitted or ``None``, an empty row will be appended.
 
     Returns a :class:`Gtk.TreeIter` pointing to the appended row.
+
+TreePath Objects
+^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.TreePath(path)
+
+    Construct a :class:`Gtk.TreePath` pointing to the node specified by *path*.
+
+    If *path* is a string it is expected to be a colon separated list of numbers.
+    For example, the string "10:4:0" would create a path of depth 3 pointing to
+    the 11th child of the root node, the 5th child of that 11th child, and the
+    1st child of that 5th child.
+
+    If *path* is a list or a tuple it is expected to contain the indexes of the nodes.
+    Referring to the above mentioned example, the expression ``Gtk.TreePath("10:4:0")``
+    is equivalent to ``Gtk.TreePath([10, 4, 3])``.
 
 The View
 --------
