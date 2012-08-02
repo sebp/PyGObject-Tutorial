@@ -42,6 +42,7 @@ Contents:
    entry
    button_widgets
    progressbar
+   spinner
    treeview
    cellrenderers
    combobox
