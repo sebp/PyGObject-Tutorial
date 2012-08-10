@@ -256,7 +256,7 @@ SpinButton Objects
 
     .. method:: set_update_policy(policy)
 
-        Sets the update behavior of a spin button. This determines wether the
+        Sets the update behavior of a spin button. This determines whether the
         spin button is always updated or only when a valid value is set.
         The *policy* argument can either be :attr:`Gtk.SpinButtonUpdatePolicy.ALWAYS`
         or :attr:`Gtk.SpinButtonUpdatePolicy.IF_VALID`.
