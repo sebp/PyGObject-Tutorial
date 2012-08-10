@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-10 09:47\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/layout.txt:4
+# 6790b36b41b64bd2b442f11b820f4b6b
+msgid "Layout Containers"
+msgstr ""
+
+#: ../source/layout.txt:5
+# 4e4f761594f04552adbde68b9baa9e4e
+msgid "While many GUI toolkits require you to precisely place widgets in a window, using absolute positioning, GTK+ uses a different approach. Rather than specifying the position and size of each widget in the window, you can arrange your widgets in rows, columns, and/or tables. The size of your window can be determined automatically, based on the sizes of the widgets it contains. And the sizes of the widgets are, in turn, determined by the amount of text they contain, or the minimum and maximum sizes that you specify, and/or how you have requested that the available space should be shared between sets of widgets. You can perfect your layout by specifying padding distance and centering values for each of your widgets. GTK+ then uses all this information to resize and reposition everything sensibly and smoothly when the user manipulates the window."
+msgstr ""
+
+#: ../source/layout.txt:19
+# 1c55fa9e0fa5447d91018be2baf7fc09
+msgid "GTK+ arranges widgets hierarchically, using *containers*. They are invisible to the end user and are inserted into a window, or placed within each other to layout components. There are two flavours of containers: single-child containers, which are all descendants of :class:`Gtk.Bin`, and multiple-child containers, which are descendants of :class:`Gtk.Container`. The most commonly used are vertical or horizontal boxes (:class:`Gtk.Box`), tables (:class:`Gtk.Table`) and grids (:class:`Gtk.Grid`)."
+msgstr ""
+
+#: ../source/layout.txt:29
+# 4e670dcedb5f4de69e0c3ab79f6693b9
+msgid "Boxes"
+msgstr ""
+
+#: ../source/layout.txt:31
+# d8670206ab2f447d86339170607f723e
+msgid "Boxes are invisible containers into which we can pack our widgets. When packing widgets into a horizontal box, the objects are inserted horizontally from left to right or right to left depending on whether :meth:`Gtk.Box.pack_start` or :meth:`Gtk.Box.pack_end` is used. In a vertical box, widgets are packed from top to bottom or vice versa. You may use any combination of boxes inside or beside other boxes to create the desired effect."
+msgstr ""
+
+#: ../source/layout.txt:40
+# 48383107e67947fcbfe6699e05a97540
+msgid "Box Objects"
+msgstr ""
+
+#: ../source/layout.txt:44
+# cbfb025ed5b240cf867d5ec95dab7e44
+msgid "The rectangular area of a :class:`Gtk.Box` is organized into either a single row or a single column of child widgets depending upon whether the \"orientation\" property is set to :attr:`Gtk.Orientation.HORIZONTAL` or :attr:`Gtk.Orientation.VERTICAL`."
+msgstr ""
+
+#: ../source/layout.txt:49
+# 5013aa93f43d45febaf6b5038c6efa59
+msgid "If *homogeneous* is ``True``, all widgets in the box will be the same size, of which the size is determined by the largest child widget. If it is omitted, *homogeneous* defaults to ``False``."
+msgstr ""
+
+#: ../source/layout.txt:53
+# 195c65b6d5cf44ea8cbe5f972a2a158b
+msgid "*spacing* is the number of pixels to place by default between children. If omitted, no spacing is used, i.e. *spacing* is set to 0."
+msgstr ""
+
+#: ../source/layout.txt:56
+# f362271f3bca40299be27b2bcd3fc23e
+msgid "By default, child widgets are organized into a single row, i.e. the \"orientation\" property is set to :attr:`Gtk.Orientation.HORIZONTAL`."
+msgstr ""
+
+#: ../source/layout.txt:59
+# 65f1146f3b614c289f56484fb591960e
+msgid ":class:`Gtk.Box` uses a notion of *packing*. Packing refers to adding widgets with reference to a particular position in a :class:`Gtk.Container`. For a :class:`Gtk.Box`, there are two reference positions: the start and the end of the box. If \"orientation\" is :attr:`Gtk.Orientation.VERTICAL`, the start is defined as the top of the box and the end is defined as the bottom. If \"orientation\" is :attr:`Gtk.Orientation.HORIZONTAL`, the start is defined as the left side and the end is defined as the right side."
+msgstr ""
+
+#: ../source/layout.txt:70
+# 66e32d0c381c469b85130237fcd65718
+msgid "Adds *child* to box, packed with reference to the start of box. The *child* is packed after any other child packed with reference to the start of box."
+msgstr ""
+
+#: ../source/layout.txt:74
+# 556f493d20b64a6bbb181225d9f75e28
+msgid "*child* should be a :class:`Gtk.Widget` to be added to this box. The *expand* argument when set to ``True`` allows the *child* widget to take all available space it can. Alternately, if the value is set to ``False``, the box will be shrunken to the same size as the child widget."
+msgstr ""
+
+#: ../source/layout.txt:79
+# 6ed586da5e724bb0bd54b33e0f9fb9ac
+msgid "If the *fill* argument is set to ``True``, the *child* widget takes all available space and is equal to the size of the box. This only has an effect when *expand* is set to ``True``. A child is always allocated the full height of a horizontally oriented and the full width of a vertically oriented box. This option affects the other dimension."
+msgstr ""
+
+#: ../source/layout.txt:86
+# 2c26291eb6a045dfa99f90f036d391f7
+msgid "*padding* defines extra space in pixels to put between this child and its neighbours, over and above the global amount specified by \"spacing\" property. If *child* is a widget at one of the reference ends of box, then padding pixels are also put between *child* and the reference edge of this box."
+msgstr ""
+
+#: ../source/layout.txt:94
+# 0b20e58d96d743519269309f4abc1f35
+msgid "Adds *child* to box, packed with reference to the end of box. The *child* is packed after (away from end of) any other child packed with reference to the end of box."
+msgstr ""
+
+#: ../source/layout.txt:98
+# 7de0ec7503664eac80fab9cc84591052
+msgid "Arguments are the same as for :meth:`pack_start`."
+msgstr ""
+
+#: ../source/layout.txt:102
+# 93b359db6dfe4e2ea2887fb0c5155c21
+msgid "If *homogeneous* is ``True``, all widgets in the box will be the same size, of which the size is determined by the largest child widget."
+msgstr ""
+
+#: ../source/layout.txt:107
+#: ../source/layout.txt:177
+#: ../source/layout.txt:277
+# 87841fa5f8ca4be99599743cd9e67876
+# af00381669114b23ba9cfebe430784d2
+# 4a2c2058555d4ec78725011a8ff9de30
+msgid "Example"
+msgstr ""
+
+#: ../source/layout.txt:109
+# aef48da607954200964c4cedbd36dbe5
+msgid "Let's take a look at a slightly modified version of the extended example with two buttons."
+msgstr ""
+
+#: ../source/layout.txt:117
+# cfb9b4747a3d4e86bf2a0b04ff87c304
+msgid "First, we create a horizontally orientated box container where 6 pixels are placed between children. This box becomes the child of the top-level window."
+msgstr ""
+
+#: ../source/layout.txt:123
+# 031b3c910e1548d984e02c4c38265b61
+msgid "Subsequently, we add two different buttons to the box container."
+msgstr ""
+
+#: ../source/layout.txt:128
+# a875eb8334b6436d97721a4f903f88e1
+msgid "While with :meth:`Gtk.Box.pack_start` widgets are positioned from left to right, :meth:`Gtk.Box.pack_end` positions them from right to left."
+msgstr ""
+
+#: ../source/layout.txt:132
+# 6a93f4e2a37542c5be4f9b3f9c9ebf72
+msgid "Grid"
+msgstr ""
+
+#: ../source/layout.txt:133
+# 935d1744d90f4dcaa262d409ed094373
+msgid ":class:`Gtk.Grid` is a container which arranges its child widgets in rows and columns, but you do not need to specify the dimensions in the constructor. Children are added using :meth:`Gtk.Grid.attach`. They can span multiple rows or columns. It is also possible to add a child next to an existing child, using :meth:`Gtk.Grid.attach_next_to`."
+msgstr ""
+
+#: ../source/layout.txt:139
+# 5b6f1f126f674ffeabcc28909319b91d
+msgid ":class:`Gtk.Grid` can be used like a :class:`Gtk.Box` by just using :meth:`Gtk.Grid.add`, which will place children next to each other in the direction determined by the \"orientation\" property (defaults to :attr:`Gtk.Orientation.HORIZONTAL`)."
+msgstr ""
+
+#: ../source/layout.txt:145
+# d7fd9d2581f24f629f4259d5b079aabe
+msgid "Grid Objects"
+msgstr ""
+
+#: ../source/layout.txt:148
+# 4d4b0460ff7540358aa36975ff569de6
+msgid "Creates a new grid widget."
+msgstr ""
+
+#: ../source/layout.txt:152
+# 8cc213c8a55947aab4215f6ad1076308
+msgid "Adds *child* to this grid."
+msgstr ""
+
+#: ../source/layout.txt:154
+# 7e2f34009fa74fdd8232cf245d71beaa
+msgid "The position of *child* is determined by the index of the cell left to it (*left*) and above of it (*top*). The number of 'cells' that *child* will occupy is determined by *width* and *height*."
+msgstr ""
+
+#: ../source/layout.txt:160
+# ae8e6c5258874fc19cb3cc2f5bb9812f
+msgid "Adds *child* to this grid, next to *sibling*. *side* is the side of *sibling* that *child* is positioned next to. It can be one of"
+msgstr ""
+
+#: ../source/layout.txt:163
+# f7ac482ed70b4c4cb0992ea8ab463fb3
+msgid ":attr:`Gtk.PositionType.LEFT`"
+msgstr ""
+
+#: ../source/layout.txt:164
+# d37cd2f28aa746038119308374e83066
+msgid ":attr:`Gtk.PositionType.RIGHT`"
+msgstr ""
+
+#: ../source/layout.txt:165
+# 782d0dc8b99f4641ba4dda4f5166ec38
+msgid ":attr:`Gtk.PositionType.TOP`"
+msgstr ""
+
+#: ../source/layout.txt:166
+# 9de0135ec6094e5fb1320586f13b37de
+msgid ":attr:`Gtk.PositionType.BOTTOM`"
+msgstr ""
+
+#: ../source/layout.txt:168
+# d4bc9b2584fe462fa067dc8ddb71a529
+msgid "*width* and *height* determine the number of 'cells' that *child* will occupy."
+msgstr ""
+
+#: ../source/layout.txt:173
+# 12284968c06b4b33ba703dc00cbfa3de
+msgid "Adds *widget* to this grid in the direction determined by the \"orientation\" property."
+msgstr ""
+
+#: ../source/layout.txt:185
+# 3a18778c641f47e39d5365664bcbfe63
+msgid "Table"
+msgstr ""
+
+#: ../source/layout.txt:187
+# 5cccf8c102124a3e9dda44c9c786aa98
+msgid "Tables allows us to place widgets in a grid similar to :class:`Gtk.Grid`."
+msgstr ""
+
+#: ../source/layout.txt:189
+# 03e14219e7d24b1ead304274d1d01f9a
+msgid "The grid's dimensions need to be specified in the :class:`Gtk.Table` constructor. To place a widget into a box, use :meth:`Gtk.Table.attach`."
+msgstr ""
+
+#: ../source/layout.txt:192
+# cbca24007e4a46ca9c77a6ef85e47941
+msgid ":meth:`Gtk.Table.set_row_spacing` and :meth:`Gtk.Table.set_col_spacing` set the spacing between the rows at the specified row or column. Note that for columns, the space goes to the right of the column, and for rows, the space goes below the row."
+msgstr ""
+
+#: ../source/layout.txt:197
+# 8b8b3a4b0cff4151ad2c861a29ca981c
+msgid "You can also set a consistent spacing for all rows and/or columns with :meth:`Gtk.Table.set_row_spacings` and :meth:`Gtk.Table.set_col_spacings`. Note that with these calls, the last row and last column do not get any spacing."
+msgstr ""
+
+#: ../source/layout.txt:202
+# d8892e83b2364cdd9ac67827dec291e6
+msgid "Table Objects"
+msgstr ""
+
+#: ../source/layout.txt:209
+# 1d8131f57d304dc88b29f58368dfa4f0
+msgid "The first argument is the number of rows to make in the table, while the second, obviously, is the number of columns. If *homogeneous* is ``True``, the table cells will all be the same size (the size of the largest widget in the table)."
+msgstr ""
+
+#: ../source/layout.txt:216
+# 3f216b56f7584884bec0ff6756aa1620
+msgid "Adds a widget to a table."
+msgstr ""
+
+#: ../source/layout.txt:218
+# b1df8502e48340b39644c28a114dee6c
+msgid "*child* is the widget that should be added to the table. The number of 'cells' that a widget will occupy is specified by *left_attach*, *right_attach*, *top_attach* and *bottom_attach*. These each represent the leftmost, rightmost, uppermost and lowest column and row numbers of the table. (Columns and rows are indexed from zero)."
+msgstr ""
+
+#: ../source/layout.txt:225
+# 1fe303ddcf674880b46aea00cf9e0c2a
+msgid "For example, if you want a button in the lower-right cell of a 2 x 2 table, and want it to occupy that cell only, then the code looks like the following."
+msgstr ""
+
+#: ../source/layout.txt:235
+# 539ed20ce8d7490d888f05d54a0f312b
+msgid "If, on the other hand, you wanted a widget to take up the entire top row of our 2 x 2 table, you'd use"
+msgstr ""
+
+#: ../source/layout.txt:242
+# f121f3e3b86c4a0589cd2fcc5ac7e297
+msgid "*xoptions* and *yoptions* are used to specify packing options and may be bitwise ORed together to allow multiple options. These options are:"
+msgstr ""
+
+#: ../source/layout.txt:245
+# fc925e253ce24224a190e053aff655e5
+msgid ":attr:`Gtk.AttachOptions.EXPAND`: The widget should expand to take up any extra space in its container that has been allocated."
+msgstr ""
+
+#: ../source/layout.txt:247
+# e6d0d50750b84eb1865825c6483acb51
+msgid ":attr:`Gtk.AttachOptions.FILL`: The widget will expand to use all the room available."
+msgstr ""
+
+#: ../source/layout.txt:249
+# ae20ccf085ff45d3a27a63dbe061ca1f
+msgid ":attr:`Gtk.AttachOptions.SHRINK`: Reduce size allocated to the widget to prevent it from moving off screen."
+msgstr ""
+
+#: ../source/layout.txt:252
+# d421cebca1134a939cd9c6751b04ad42
+msgid "If omitted, *xoptions* and *yoptions* defaults to ``Gtk.AttachOptions.EXPAND | Gtk.AttachOptions.FILL``."
+msgstr ""
+
+#: ../source/layout.txt:255
+# c7322048b4404964b32638107cefbfa9
+msgid "Finally, the padding arguments work just as they do for :meth:`Gtk.Box.pack_start`. If omitted, *xpadding* and *ypadding* defaults to ``0``."
+msgstr ""
+
+#: ../source/layout.txt:261
+# e324aa368d9a44b482b9c66258e41b00
+msgid "Changes the space between a given table row and the subsequent row."
+msgstr ""
+
+#: ../source/layout.txt:265
+# 275fa4472caf4f91911f4cccae1c11f1
+msgid "Alters the amount of space between a given table column and the following column."
+msgstr ""
+
+#: ../source/layout.txt:270
+# 4da632e21dda4248a646518a3d21f298
+msgid "Sets the space between every row in this table equal to *spacing*."
+msgstr ""
+
+#: ../source/layout.txt:274
+# 3dfaffce7cdd4f36acc6e4f029631884
+msgid "Sets the space between every column in this table equal to *spacing*."
+msgstr ""
+
