@@ -1,0 +1,127 @@
+# Japanese translation for entry.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-24 13:17\n"
+"PO-Revision-Date: 2012-10-07 08:47+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/entry.txt:2
+# 11237d7502d9473aaf161b36f4e8b15d
+msgid "Entry"
+msgstr "エントリ"
+
+#: ../source/entry.txt:4
+# 18088fe1daf44320b483763d533e00b1
+msgid "Entry widgets allow the user to enter text. You can change the contents with the :meth:`Gtk.Entry.set_text` method, and read the current contents with the :meth:`Gtk.Entry.get_text` method. You can also limit the number of characters the Entry can take by calling :meth:`Gtk.Entry.set_max_length`."
+msgstr "エントリ・ウィジェットを使うと、ユーザは文字列を入力できるようになります。 :meth:`Gtk.Entry.set_text` メソッドを使ってエントリの中にあるデータを変更したり、 :meth:`Gtk.Entry.get_text` メソッドを使って現在のデータを取得できます。さらに、 :meth:`Gtk.Entry.set_max_length` メソッドを使ってエントリに入力できる文字数を制限することも可能です。"
+
+#: ../source/entry.txt:9
+# b8415cbded904689858ca9238e6839f9
+msgid "Occasionally you might want to make an Entry widget read-only. This can be done by passing ``False`` to the :meth:`Gtk.Entry.set_editable` method."
+msgstr "たまにエントリ・ウィジェットを表示専用にしたいと考える時があるかもしれません。このような時は :meth:`Gtk.Entry.set_editable` メソッドの引数を ``FALSE`` にして呼び出せば実現できます。"
+
+#: ../source/entry.txt:12
+# 0b0eb9eece594eeda5e4c058d23e0cdd
+msgid "Entry widgets can also be used to retrieve passwords from the user. It is common practice to hide the characters typed into the entry to prevent revealing the password to a third party. Calling :meth:`Gtk.Entry.set_visibility` with ``False`` will cause the text to be hidden."
+msgstr "さらにユーザからパスワードを受け取るような場面でもエントリ・ウィジェットを利用できます。入力した文字を表示しないようにして、第三者にパスワードが露見しないようにする一般的な手続きを採用しています。 :meth:`Gtk.Entry.set_visibility` メソッドの引数に ``FALSE`` を渡すとエントリの中にある文字列が表示されなくなります。"
+
+#: ../source/entry.txt:17
+# 056bf2e096cd4be59766cdfb8d945cef
+msgid ":class:`Gtk.Entry` has the ability to display progress or activity information behind the text. This is similar to :class:`Gtk.ProgressBar` widget and is commonly found in web browsers to indicate how much of a page download has been completed. To make an entry display such information, use :meth:`Gtk.Entry.set_progress_fraction`, :meth:`Gtk.Entry.set_progress_pulse_step`, or :meth:`Gtk.Entry.progress_pulse`."
+msgstr ":class:`Gtk.Entry` には、入力したデータの背後に処理の進捗や実行状態といった情報を表示する機能があります。この機能は :class:`Gtk.ProgressBar` ウィジェットに似ており、一般的な例としてよくあるのがウェブ・ブラウザの場所バー (エントリ・ウィジェット) の中に入力した URL のコンテンツの読み込み具合を提示するというものがあります。そのような情報をエントリの背後に表示する際は :meth:`Gtk.Entry.set_progress_fraction` や :meth:`Gtk.Entry.set_progress_pulse_step` 、あるいは :meth:`Gtk.Entry.progress_pulse` メソッドを使って下さい。"
+
+#: ../source/entry.txt:24
+# 29660a820c664a6cb1dc21f95eb5490b
+msgid "Additionally, an Entry can show icons at either side of the entry. These icons can be activatable by clicking, can be set up as drag source and can have tooltips. To add an icon, use :meth:`Gtk.Entry.set_icon_from_stock` or one of the various other functions that set an icon from an icon name, a pixbuf, or icon theme. To set a tooltip on an icon, use :meth:`Gtk.Entry.set_icon_tooltip_text` or the corresponding function for markup."
+msgstr "加えて、エントリ・ウィジェットの左右どちらかにアイコンを表示することもできます。このアイコンをクリックしてアクティブにしたり、画像などをドラッグしてアイコンをセットしたり、アイコンにツールチップを表示することが可能です。アイコンを追加する際は :meth:`Gtk.Entry.set_icon_from_stock` か、それに類するメソッドのいずれかを使い、アイコン名や画像データ、あるいはアイコン・テーマからアイコンを指定して下さい。アイコンにツールチップを表示する際は :meth:`Gtk.Entry.set_icon_tooltip_text` か、マークアップに対応したメソッドを使用して下さい。"
+
+#: ../source/entry.txt:32
+# 5bfb07af4ba6454f83a6485d8ee8c59e
+msgid "Entry Objects"
+msgstr "エントリのオブジェクト"
+
+#: ../source/entry.txt:38
+# 92679265382742509831d87136f08214
+msgid "Retrieves the contents of the entry widget."
+msgstr "エントリ・ウィジェットの中にあるコンテンツを取得します。"
+
+#: ../source/entry.txt:42
+# 0245b53c5ee84c86aec2f7ff6d98a4f5
+msgid "Sets the text in the widget to the given value, replacing the current contents."
+msgstr "エントリ・ウィジェットの新しいコンテンツとして *text* をセットします。今までのコンテンツは上書きされます。"
+
+#: ../source/entry.txt:46
+# 5b14556959ab4ff6bb8b4e756f2472cc
+msgid "Sets whether the contents of the entry are visible or not. When *visible* is set to ``False``, characters are displayed as the invisible char, and will also appear that way when the text in the entry widget is copied elsewhere."
+msgstr "エントリ・ウィジェットのコンテンツが表示可能かどうかを指定します。 *visible* を ``False`` にすると、実際の文字の代わりに代替文字が表示されます。これはエントリの中にある文字列をコピーする時を表現する方法です。"
+
+#: ../source/entry.txt:52
+# 5efb68a781d042b1aabef43c797a3c43
+msgid "Sets the maximum allowed length of the contents of the widget. If the current contents are longer than the given length, then they will be truncated to fit."
+msgstr "エントリ・ウィジェットの中に入力できる文字列の最大長を指定します。もし現在のコンテンツが、指定した *max* よりも長い場合は *max* に合わせて縮められます。"
+
+#: ../source/entry.txt:57
+# 0c5f607c4125473b8c53b2424681ce01
+msgid "Determines if the user can edit the text in the editable widget or not. If *is_editable* is ``True``, the user is allowed to edit the text in the widget."
+msgstr "エントリ・ウィジェットの中にあるコンテンツが編集可能かどうかを指定します。 *is_editable* を ``True`` にすると、ユーザはエントリ・ウィジェットのコンテンツを編集できるようになります。"
+
+#: ../source/entry.txt:62
+# 2be822e16f7146f1b72326bfc18b9fdb
+msgid "Causes the entry's progress indicator to \"fill in\" the given fraction of the bar. The fraction should be between 0.0 and 1.0, inclusive."
+msgstr "エントリ・ウィジェットの背後に表示するプログレスバーの進捗率を *fraction* にします (プログレスバーがエントリの中を全て塗りつぶした状態が進捗率 100% であるとします)。 *fraction* には 0.0 〜 1.0 の値を指定します。"
+
+#: ../source/entry.txt:67
+# ccc88bd5bffa46cbbdc635a227a6a1ba
+msgid "Sets the fraction of total entry width to move the progress bouncing block for each call to :meth:`progress_pulse`."
+msgstr ":meth:`progress_pulse` メソッドを呼び出す度に、エントリ・ウィジェットの中で行き来するブロックの幅を指定します。"
+
+#: ../source/entry.txt:72
+# 1c09140edc4f48cbb6e482d9e8c8137e
+msgid "Indicates that some progress is made, but you don't know how much. Causes the entry's progress indicator to enter \"activity mode,\" where a block bounces back and forth. Each call to :meth:`progress_pulse` causes the block to move by a little bit (the amount of movement per pulse is determined by :meth:`set_progress_pulse_step`)."
+msgstr "エントリ・ウィジェットに対して何か進捗があったことを通知します (但し、実際にどれくらいの進捗があったかは不明です)。これにより、エントリ・ウィジェットの中でブロックが前後に行ったり来たりします。このブロックの幅は :meth:`Gtk.Entry.set_progress_pulse_step` メソッドで指定します。"
+
+#: ../source/entry.txt:80
+# 800efcc15d774a8883f43bb19d99ac7a
+msgid "Sets the icon shown in the entry at the specified position from a :ref:`stock item <stock-items>`. If *stock_id* is ``None``, no icon will be shown in the specified position."
+msgstr "エントリ・ウィジェットの指定した場所に表示するアイコンを :ref:`stock item <stock-items>` (ストック・アイテム) から取得します。 *stock_id* を ``None`` にすると、指定した場所にはアイコンは表示されません。"
+
+#: ../source/entry.txt:84
+# 7cf8b6ebbdee4554a8cdc82f31de7d44
+msgid "*icon_pos* specifies the side of the entry at which an icon is placed and can be one of"
+msgstr "*icon_pos* には、どちら側にアイコンを表示するかを表す次のパラメータを指定します::"
+
+#: ../source/entry.txt:87
+# 1e1b15d0dc6948d586bb9d46c78f7187
+msgid ":attr:`Gtk.EntryIconPosition.PRIMARY`: At the beginning of the entry (depending on the text direction)."
+msgstr ":attr:`Gtk.EntryIconPosition.PRIMARY`: エントリの先頭側 (文字を描画する向きに依存します)"
+
+#: ../source/entry.txt:89
+# 180530aaddd34864b079e95f1591076d
+msgid ":attr:`Gtk.EntryIconPosition.SECONDARY`: At the end of the entry (depending on the text direction)."
+msgstr ":attr:`Gtk.EntryIconPosition.SECONDARY`: エントリの末尾側 (文字を描画する向きに依存します)"
+
+#: ../source/entry.txt:94
+# 5b4977fa21e34444b8a4f55e050bd722
+msgid "Sets *tooltip* as the contents of the tooltip for the icon at the specified position. If *tooltip* is ``None``, an existing tooltip is removed."
+msgstr "指定した位置にあるアイコンのツールチップとして *tooltip* をセットします。 *tooltip* を ``None`` にすると、既にセットしてあるツールチップが削除されます。"
+
+#: ../source/entry.txt:97
+# 2228884c5ac84c678376abfd5968eb44
+msgid "For allowed values for *icon_pos* see :meth:`set_icon_from_stock`."
+msgstr "*icon_pos* で指定できる値については :meth:`Gtk.Entry.set_icon_from_stock` メソッドを参照して下さい。"
+
+#: ../source/entry.txt:100
+# 824894d1bb14404ba90f86422b479d2d
+msgid "Example"
+msgstr "例"
+

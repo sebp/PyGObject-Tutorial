@@ -1,0 +1,154 @@
+# Japanese translation for unicode.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-24 13:17\n"
+"PO-Revision-Date: 2012-09-24 19:39+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/unicode.txt:2
+# 8950d56d918f43ba8dfd809d0bbfa0d2
+msgid "How to Deal With Strings"
+msgstr "文字列の取り扱い"
+
+#: ../source/unicode.txt:4
+# 0cb3d5c7c0644f7ebb2e3698ec5a3c2d
+msgid "This section explains how strings are represented in Python 2.x, Python 3.x and GTK+ and discusses common errors that arise when working with strings."
+msgstr "このセクションでは Python の 2 系と 3 系、そして GTK+ における文字列 (型) の表現方法について説明し、文字列を使った処理で遭遇する一般的なエラーについて考察します。"
+
+#: ../source/unicode.txt:8
+# 961231ca66be47849eec33e1bef9c525
+msgid "Definitions"
+msgstr "定義"
+
+#: ../source/unicode.txt:9
+# a2867888190d433291c4f7507d63194f
+msgid "Conceptionally, a string is a list of characters such as 'A', 'B', 'C' or 'É'. **Characters** are abstract representations and their meaning depends on the language and context they are used in. The Unicode standard describes how characters are represented by **code points**. For example the characters above are represented with the code points U+0041, U+0042, U+0043, and U+00C9, respectively. Basically, code points are numbers in the range from 0 to 0x10FFFF."
+msgstr "概念上、一個の文字列は 'A' とか 'B' とか 'C' とか 'É' といった文字の並びです。 **文字** は抽象的な表現で、その意味はその文字を使用する言語と文脈によって決まります。Unicode の標準には **コード・ポイント** (code points) による文字の表し方が記載されています。例えば、先ほどの文字をコード・ポイントで表すとそれぞれ U+0041 とか U+0042 とか U+0043 とか U+00C9 になります。原則的にコード・ポイントは 0 から 0x10FFFF までの数値になります。 "
+
+#: ../source/unicode.txt:17
+# 6278ba605d0747ba8445f7f66971bfe2
+msgid "As mentioned earlier, the representation of a string as a list of code points is abstract. In order to convert this abstract representation into a sequence of bytes the Unicode string must be **encoded**. The simplest from of encoding is ASCII and is performed as follows:"
+msgstr "前述の通り、コード・ポイントの並びによる文字列の表現は難解です。この難解な表現を Unicode 文字列のバイトの並びに変換するには **エンコーディング** (encoding) する必要があります。一番簡単なエンコーディングは ASCII で、次のようになります::"
+
+#: ../source/unicode.txt:22
+# cdfc66a4356240999998a5745b103985
+msgid "If the code point is < 128, each byte is the same as the value of the code point."
+msgstr "変換するコード・ポイントが 128 より小さい場合、それに対応するバイトはコード・ポイントと同じ値にする"
+
+#: ../source/unicode.txt:25
+# 3ef43a9937a14d278bbd5845e94e09ab
+msgid "If the code point is 128 or greater, the Unicode string can't be represented in this encoding.  (Python raises a :exc:`UnicodeEncodeError` exception in this case.)"
+msgstr "変換するコード・ポイントが 128 かまたはそれより大きい場合、Unicode の文字列では表現できない (この際 Python は :exc:`UnicodeEncodeError` という例外を発生させる)"
+
+#: ../source/unicode.txt:29
+# d857cd9e8dde402ea90c5a85ad150cc7
+msgid "Although ASCII encoding is simple to apply it can only encode for 128 different characters which is hardly enough. One of the most commonly used encodings that addresses this problem is UTF-8 (it can handle any Unicode code point). UTF stands for \"Unicode Transformation Format\", and the '8' means that 8-bit numbers are used in the encoding."
+msgstr "ASCII のエンコーディングは簡単ですが、128 個の文字しかエンコーディングできません。これは十分ではありません。この問題に対処するために、最も一般的に使用されているエンコーディングの一つが UTF-8 です (これは Unicode のコード・ポイントを扱うものです)。UTF は \"Unicode Transformation Format\" の略で、'8' はエンコーディングする際に使用する 8 ビットの数値を表しています。"
+
+#: ../source/unicode.txt:37
+# 3c4fa19c5a894c11963659d91bbb95ca
+msgid "Python 2"
+msgstr "Python 2"
+
+#: ../source/unicode.txt:40
+# bba28f96f88949f3adbb3fa054800456
+msgid "Python 2.x’s Unicode Support"
+msgstr "Python 2 系での Unicode のサポート"
+
+#: ../source/unicode.txt:41
+# ed111287ba0244ba92b4bbbcbb53e37b
+msgid "Python 2 comes with two different kinds of objects that can be used to represent strings, :class:`str` and :class:`unicode`. Instances of the latter are used to express Unicode strings, whereas instances of the :class:`str` type are byte representations (the encoded string). Under the hood, Python represents Unicode strings as either 16- or 32-bit integers, depending on how the Python interpreter was compiled. Unicode strings can be converted to 8-bit strings with :meth:`unicode.encode`::"
+msgstr "Python の 2 系では、文字列を表現する際に使用するオブジェクトを二つ提供しています。それは :class:`str` と :class:`unicode` です。後者のインスタンスは Unicode の文字列を表す際に使用するのに対し、前者の str 型のインスタンスはバイト形式のデータ (エンコードした文字列) です。詳細にいうと、Python は Unicode の文字列を、Python のインタプリタのコンパイル方式に応じて 16 ビットないし 32 ビットの整数値として表現します。Unicode の文字列は :meth:`unicode.encode` メソッドを使って 8 ビットの文字列に変換することができます::"
+
+#: ../source/unicode.txt:58
+# c93f0b78edab4287a30d922120530bf9
+msgid "Python’s 8-bit strings have a :meth:`str.decode` method that interprets the string using the given encoding::"
+msgstr "Python の 8 ビットの文字列に対しては :meth:`str.decode` というメソッドで、指定したエンコーディングを用いて文字列を解釈します::"
+
+#: ../source/unicode.txt:68
+# ddedddc9461e417daa2aa8d36b6d712f
+msgid "Unfortunately, Python 2.x allows you to mix :class:`unicode` and :class:`str` if the 8-bit string happened to contain only 7-bit (ASCII) bytes, but would get :exc:`UnicodeDecodeError` if it contained non-ASCII values::"
+msgstr "あいにく、Python の 2 系では 8 ビットの文字列に 7 ビットの文字 (ASCII) しか含まれていない場合、 :class:`unicode` と :class:`str` のオブジェクトを混ぜ合わせることが可能ですが、ASCII 以外の文字が含まれていると :exc:`UnicodeDecodeError` の例外を受け取ります::"
+
+#: ../source/unicode.txt:84
+#: ../source/unicode.txt:146
+# d66c3945fdce4cf990e4f6d2f83e41bd
+# cfeb5152f3d14cc3a2e9d956fc905299
+msgid "Unicode in GTK+"
+msgstr "GTK+ での Unicode のサポート"
+
+#: ../source/unicode.txt:85
+# c1e8a89eb0d74c5e8f73ea0caa6e2646
+msgid "GTK+ uses UTF-8 encoded strings for all text. This means that if you call a method that returns a string you will always obtain an instance of the :class:`str` type. The same applies to methods that expect one or more strings as parameter, they must be UTF-8 encoded. However, for convenience PyGObject will automatically convert any :class:`unicode` instance to :class:`str` if supplied as argument::"
+msgstr "GTK+ は全ての文字列に対し UTF-8 でエンコーディングした文字の並びを使用します。これは、一個の文字列を返すメソッドを呼び出すと、常に :class:`str` 型のインスタンスが得られるという意味です。同様に、一個以上の文字列を引数として受け取るメソッドの場合も、それらの文字列は UTF-8 でエンコーディングされている必要があります。但し、便宜上 PyGObject は引数として扱う場合、自動的に全ての :class:`unicode` のインスタンスを :class:`str` 型に変換するようになっています: "
+
+#: ../source/unicode.txt:102
+# b00282cb9b734f05a792460217c447b4
+msgid "Note the warning at the end. Although we called :meth:`Gtk.Label.set_text` with a :class:`unicode` instance as argument, :meth:`Gtk.Label.get_text` will always return a :class:`str` instance. Accordingly, ``txt`` and ``unicode_string`` are *not* equal."
+msgstr "上の例の最後に警告が表示されている点に注意して下さい。 :meth:`Gtk.Label.set_text` メソッドに :class:`unicode` 型のインスタンスを引数にして呼び出していますが、 :meth:`Gtk.Label.get_text` メソッドは常に :class:`str` 型のインスタンスを返します。そのため ``txt`` と ``unicode_string`` は同じにはなりません。"
+
+#: ../source/unicode.txt:107
+# 3cb35c7d7ae2420b9426e9521a183ab4
+msgid "This is especially important if you want to internationalize your program using `gettext <http://docs.python.org/library/gettext.html>`_. You have to make sure that gettext will return UTF-8 encoded 8-bit strings for all languages. In general it is recommended to not use :class:`unicode` objects in GTK+ applications at all and only use UTF-8 encoded :class:`str` objects since GTK+ does not fully integrate with :class:`unicode` objects. Otherwise, you would have to decode the return values to Unicode strings each time you call a GTK+ method::"
+msgstr "これは、何かプログラムを作成する際に `gettext <http://docs.python.org/library/gettext.html>`_ を使って国際化するような場合は特に重要になってきます。gettext が全ての言語に対して UTF-8 でエンコーディングした 8 ビットの文字列を返すかどうかを確認しておく必要があります。一般的に、GTK+ のアプリケーションで :class:`unicode` 型のオブジェクトの使用は推奨されていません。GTK+ では :class:`unicode` 型のオブジェクトを完全にサポートしていないため、UTF-8 でエンコーディングされた :class:`str` 型のオブジェクトだけを使用することが推奨されています。さもなくば、GTK+ のメソッドを呼び出すたびに返り値を Unicode の文字列にデコーディングしなければならなくなります::"
+
+#: ../source/unicode.txt:120
+# 4d95526f7d404652b051e2822ebe3d17
+msgid "Python 3"
+msgstr "Python 3"
+
+#: ../source/unicode.txt:123
+# 4543f63232c0457d958efd3a9ebad7dc
+msgid "Python 3.x's Unicode support"
+msgstr "Python 3 系での Unicode のサポート"
+
+#: ../source/unicode.txt:124
+# 429d7eaa0ebd41e3831c8d29d39a058f
+msgid "Since Python 3.0, all strings are stored as Unicode in an instance of the :class:`str` type. *Encoded* strings on the other hand are represented as binary data in the form of instances of the :class:`bytes` type. Conceptionally, :class:`str` refers to *text*, whereas :class:`bytes` refers to *data*. Use :meth:`str.encode` to go from :class:`str` to :class:`bytes`, and :meth:`bytes.decode` to go from :class:`bytes` to :class:`str`."
+msgstr "Python 3.0 から、全ての文字列は Unicode として :class:`str` 型のインスタンスの中に格納される用になりました。その一方で、 *エンコーディング* された文字列は :class:`bytes` 型のインスタンスの中にバイナリ・データとして格納されます。概念として :class:`str` 型は *文字列* を参照するのに対し、 :class:`bytes` 型は *データ* を参照します。 :meth:`str.encode` メソッドを使うと、 :class:`str` 型から :class:`bytes` 型に変換できます。またその逆の変換は :meth:`bytes.decode` メソッドを使います。"
+
+#: ../source/unicode.txt:131
+# 621f141c59eb4dec9dac8ed1bd248d90
+msgid "In addition, it is no longer possible to mix Unicode strings with encoded strings, because it will result in a :exc:`TypeError`::"
+msgstr "さらに、エンコーディングした文字列と Unicode の文字列を混在させることができなくなりました。そのような状態になると :exc:`TypeError` という例外が発行されます::"
+
+#: ../source/unicode.txt:147
+# a616ceaab65d4de1bfc034778787a97a
+msgid "As a consequence, things are much cleaner and consistent with Python 3.x, because PyGObject will automatically encode/decode to/from UTF-8 if you pass a string to a method or a method returns a string. Strings, or *text*, will always be represented as instances of :class:`str` only::"
+msgstr "結果として、Python 3 系になってサポートの内容はかなり明確で一貫性のあるものになりました。その理由は、PyGObject がメソッドに引き渡される文字列やメソッドから返される文字列を自動的に UTF-8 でエンコーディングまたはデコーディングするようになったからです。文字列または *文章* といったものは、常に :class:`str` 型でのみ表現されるようになります:"
+
+#: ../source/unicode.txt:163
+# 4abf149be182426b9ee547cb70c69bff
+msgid "References"
+msgstr "参考情報"
+
+#: ../source/unicode.txt:164
+# 9a7344ccb6484528babfb2f5703e45fc
+msgid "`What's new in Python 3.0 <http://docs.python.org/py3k/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit>`_ describes the new concepts that clearly distinguish between text and data."
+msgstr "`Python 3.0 で新しくなったこと <http://docs.python.org/py3k/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit>`_ の項には、文字列とデータを明確に区別する旨の概念が説明されています。"
+
+#: ../source/unicode.txt:167
+# 5a6f3badb01d4ad8a57613994c2342d0
+msgid "The `Unicode HOWTO <http://docs.python.org/howto/unicode.html>`_ discusses Python 2.x’s support for Unicode, and explains various problems that people commonly encounter when trying to work with Unicode."
+msgstr "`Unicode HOWTO <http://docs.python.org/howto/unicode.html>`_ には、Python 2 系での Unicode のサポートに関する情報と、ユーザが Unicode を使って何か処理しようとする際によく遭遇する問題点についていろいろ説明があります。"
+
+#: ../source/unicode.txt:171
+# 868c9fc5a3194c99ab47278dcd622c84
+msgid "The `Unicode HOWTO for Python 3.x <http://docs.python.org/dev/howto/unicode.html>`_ discusses Unicode support in Python 3.x."
+msgstr "`Unicode HOWTO for Python 3.x <http://docs.python.org/dev/howto/unicode.html>`_ には Python 3 系での Unicode のサポートに関する情報があります。"
+
+#: ../source/unicode.txt:174
+# d89af7fd12a14bcb97b0862ba23bfac9
+msgid "`UTF-8 encoding table and Unicode characters <http://www.utf8-chartable.de>`_ contains a list of Unicode code points and their respective UTF-8 encoding."
+msgstr "`UTF-8 encoding table and Unicode characters <http://www.utf8-chartable.de>`_ には Unicode のコード・ポイントとそれらに対応する UTF-8 エンコーディングの一覧があります。"
+

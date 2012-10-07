@@ -43,6 +43,8 @@ master_doc = 'index'
 project = u'Python GTK+ 3 Tutorial'
 copyright = u'GNU Free Documentation License 1.3'
 
+locale_dirs = ["./locale",]
+
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.

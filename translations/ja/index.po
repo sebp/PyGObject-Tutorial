@@ -1,0 +1,65 @@
+# Japanese translation for index.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"PO-Revision-Date: 2012-09-25 10:08+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/index.txt:7
+# 586fe65828da4061a517c0a724bf9a0d
+msgid "The Python GTK+ 3 Tutorial"
+msgstr "Python GTK+ 3 チュートリアル"
+
+#: ../source/index.txt:9
+# f2038ac775e546fc87e6cfa2ea72366f
+msgid "|version|"
+msgstr "|version|"
+
+#: ../source/index.txt:10
+# 7d255eae4d2044d19ca2b086f87c5092
+msgid "|today|"
+msgstr "|today|"
+
+#: ../source/index.txt:11
+# 4604911c512142b58a657c2aff0b6e24
+msgid "GNU Free Documentation License 1.3"
+msgstr "GNU Free Documentation License 1.3"
+
+#: ../source/index.txt:13
+# 60f7ae1f03e94ea98ebd8cde59b31f53
+msgid "This tutorial gives an introduction to writing GTK+ 3 applications in Python."
+msgstr "このチュートリアルは、Python で GTK+ バージョン 3 を使ったアプリケーションのプログラミングを解説する入門書の一つです。"
+
+#: ../source/index.txt:15
+# fba16feb37fb49368d2461dba3e6cbd6
+msgid "Prior to working through this tutorial, it is recommended that you have a reasonable grasp of the Python programming language. GUI programming introduces new problems compared to interacting with the standard output (console / terminal). It is necessary for you to know how to create and run Python files, understand basic interpreter errors, and work with strings, integers, floats and Boolean values. For the more advanced widgets in this tutorial, good knowledge of lists and tuples will be needed."
+msgstr "このチュートリアルを通して作業する前に、まず Python というプログラミング言語についてしっかりと理解しておくことをお勧めします。GUI のプログラミングは標準出力 (コンソールや端末) を使った対話式のプログラミングと比較すると、新しい別の問題を引き込む可能性が高いです。ここで必要なことは、Python の実行ファイルを作成したり実行する方法、そして基本的なインタプリタ系のエラーと文字列、整数値、実数と論理値の動きについて理解しておくことです。さらに、本チュートリアルで紹介する高度なウィジェットを使ったプログラミングでは、リスト型とタプル型をよく理解しておくことが必要になってきます。"
+
+#: ../source/index.txt:25
+# f9d392cce3384440992d311bdc963319
+msgid "Although this tutorial describes the most important classes and methods within GTK+ 3, it is not supposed to serve as an API reference. Please refer to the `GTK+ 3 Reference Manual <http://developer.gnome.org/gtk3/stable/>`_ for a detailed description of the API."
+msgstr "本チュートリアルは GTK+ のバージョン 3 で提供されている最も重要なクラスとメソッドについて説明していますが、一種の API リファレンスを提供することを目的とはしていません。API の詳細については `GTK+ 3 リファレンスマニュアル <http://developer.gnome.org/gtk3/stable/>`_ を参照して下さい。"
+
+#: ../source/index.txt:30
+# c8bc180535ba4371ba3756805ee88a51
+msgid "Contents:"
+msgstr "目次:"
+
+#: ../source/index.txt:60
+# 4b10bdea56964e7f8ff71223a35473b1
+msgid "Indices and tables"
+msgstr "索引と図表"
+
+#: ../source/index.txt:62
+# fe195a890d1945909f399d32d36c9046
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
+

@@ -7,13 +7,15 @@ SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
 DOCNAME       = PythonGTK3Tutorial
+PODIR         = translations/ja
+MODIR         = source/locale/ja/LC_MESSAGES
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest
+.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest updatepo install
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -36,6 +38,13 @@ help:
 
 clean:
 	-rm -rf $(BUILDDIR)/*
+
+updatepo:
+	@for po in $(PODIR)/*.po; do \
+		echo "Converting '$(MODIR)/`basename $$po .po`.mo' from '$$po'" ; \
+		$(if test ! -d $(MODIR), mkdir -p $(MODIR)) ; \
+		msgfmt $$po -o $(MODIR)/`basename $$po .po`.mo ; \
+	done;
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
