@@ -7,8 +7,10 @@ SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
 DOCNAME       = PythonGTK3Tutorial
-PODIR         = translations/ja
-MODIR         = source/locale/ja/LC_MESSAGES
+PODIR         = translations
+LOCALEDIR     = translations/locale
+
+LANGUAGES = ja
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -38,13 +40,14 @@ help:
 
 clean:
 	-rm -rf $(BUILDDIR)/*
+	-rm -rf $(LOCALEDIR)
 
+getmo = $(LOCALEDIR)/$(2)/LC_MESSAGES/$(patsubst %.po,%.mo,$(notdir $(1)))
+genmo = $(shell msgfmt $(1) -o $(call getmo,$(1),$(2)))
+genlang = $(foreach po, $(wildcard $(1)/*.po), $(call genmo,$(po),$(2)))
 updatepo:
-	@for po in $(PODIR)/*.po; do \
-		echo "Converting '$(MODIR)/`basename $$po .po`.mo' from '$$po'" ; \
-		$(if test ! -d $(MODIR), mkdir -p $(MODIR)) ; \
-		msgfmt $$po -o $(MODIR)/`basename $$po .po`.mo ; \
-	done;
+	$(foreach lang, $(LANGUAGES), @mkdir -p $(LOCALEDIR)/$(lang)/LC_MESSAGES)
+	$(foreach lang, $(LANGUAGES), $(call genlang,$(PODIR)/$(lang),$(lang)))
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
