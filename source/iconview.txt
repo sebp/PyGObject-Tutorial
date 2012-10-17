@@ -61,7 +61,7 @@ ________________
 
     .. method:: set_cursor(path, cell, start_editing)
 
-        Sets the current keyboard focus to be at *path*, and selects it. This is useful when you want to focus the user's attention on a particular item. If *cell* is ``None``, then focus is given to the cel specified by it. Additionally, if *start_editing* is True, then editing should be started in the specified cell.
+        Sets the current keyboard focus to be at *path*, and selects it. This is useful when you want to focus the user's attention on a particular item. If *cell* is not ``None``, then focus is given to the cell specified by it. Additionally, if *start_editing* is True, then editing should be started in the specified cell.
 
         This function is often followed by :meth:`grab_focus` in order to give keyboard focus to the widget. Please note that editing can only happen when the widget is realized.
 
