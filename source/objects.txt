@@ -250,7 +250,7 @@ API
         called.
 
         It recommended to use the *with* statement when calling :meth:`freeze_notify`,
-        that way it is ensured that :meth:`that_notify` is called implicitly at
+        that way it is ensured that :meth:`thaw_notify` is called implicitly at
         the end of the block::
 
             with an_object.freeze_notify():
