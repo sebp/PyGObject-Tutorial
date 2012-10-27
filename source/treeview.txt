@@ -132,6 +132,10 @@ path "2:4" refers to the fifth child of the third node.
     # Get value at 2nd column
     value = treestore.get_value(treeiter, 1)
 
+Instances of :class:`Gtk.TreePath` can be accessed like lists, i.e.
+``len(treepath)`` returns the depth of the item ``treepath`` is pointing to,
+and ``treepath[i]`` returns the child's index on the *i*-th level.
+
 TreeModel Objects
 ^^^^^^^^^^^^^^^^^
 
@@ -150,6 +154,11 @@ TreeModel Objects
 
         Returns a :class:`Gtk.TreeIter` instance pointing the node following
         *treeiter* at the current level or ``None`` if there is no next iter.
+
+    .. method:: iter_previous(treeiter)
+
+        Returns a :class:`Gtk.TreeIter` instance pointing the node previous to
+        *treeiter* at the current level or ``None`` if there is no previous iter.
 
     .. method:: iter_has_child(treeiter)
 
