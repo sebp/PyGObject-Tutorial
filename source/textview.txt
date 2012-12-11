@@ -130,10 +130,10 @@ TextBuffer Objects
         of *text* instead. If *length* is -1 or omitted, *text* is inserted
         completely.
 
-    .. method:: get_text(start_iter, end_iter)
+    .. method:: get_text(start_iter, end_iter, include_hidden_chars)
 
         Returns the text in the range *start_iter* (included) and *end_iter*
-        (excluded). Excludes undisplayed text.
+        (excluded). Excludes undisplayed text if *include_hidden_chars* is ``False``.
 
     .. method:: get_insert()
 
