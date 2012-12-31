@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-24 13:17\n"
-"PO-Revision-Date: 2012-09-25 10:14+0900\n"
+"PO-Revision-Date: 2012-10-07 22:15+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -70,7 +70,7 @@ msgstr "PyGObject をソースからインストールする一番簡単な方�
 #
 # [ERROR] Compile error is caused by when set '[#]_' as original
 msgid "Once you have installed JHBuild successfully, download the latest configuration from [#]_. Copy files with the suffix `.modules` to JHBuild's module directory and the file `sample-tarball.jhbuildrc` to `~/.jhbuildrc`."
-msgstr "JHBuild のインストールが完了したら 、 `[1] <#id1>`_ から最新版の設定をダウンロードして下さい。拡張子として .modules が付与されているいくつかのファイルを JHBuild のモジュール・フォルダにコピーして sample-tarball.jhbuildrc というファイルを ~/.jhbuildrc にリネームします。 "
+msgstr "JHBuild のインストールが完了したら、 `[1] <#id1>`_ から最新版の設定をダウンロードして下さい。拡張子として .modules が付与されているいくつかのファイルを JHBuild のモジュール・フォルダにコピーして sample-tarball.jhbuildrc というファイルを ~/.jhbuildrc にリネームします。 "
 
 #: ../source/install.txt:38
 # b3a9233bb5ba492fb0c826d73aa8c20c

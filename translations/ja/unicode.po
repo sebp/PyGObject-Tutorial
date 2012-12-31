@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-24 13:17\n"
-"PO-Revision-Date: 2012-09-24 19:39+0900\n"
+"PO-Revision-Date: 2012-10-07 22:20+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -33,12 +33,12 @@ msgstr "定義"
 #: ../source/unicode.txt:9
 # a2867888190d433291c4f7507d63194f
 msgid "Conceptionally, a string is a list of characters such as 'A', 'B', 'C' or 'É'. **Characters** are abstract representations and their meaning depends on the language and context they are used in. The Unicode standard describes how characters are represented by **code points**. For example the characters above are represented with the code points U+0041, U+0042, U+0043, and U+00C9, respectively. Basically, code points are numbers in the range from 0 to 0x10FFFF."
-msgstr "概念上、一個の文字列は 'A' とか 'B' とか 'C' とか 'É' といった文字の並びです。 **文字** は抽象的な表現で、その意味はその文字を使用する言語と文脈によって決まります。Unicode の標準には **コード・ポイント** (code points) による文字の表し方が記載されています。例えば、先ほどの文字をコード・ポイントで表すとそれぞれ U+0041 とか U+0042 とか U+0043 とか U+00C9 になります。原則的にコード・ポイントは 0 から 0x10FFFF までの数値になります。 "
+msgstr "概念上、一個の文字列は 'A' とか 'B' とか 'C' とか 'É' といった文字の並びです。 ``文字`` は抽象的な表現で、その意味はその文字を使用する言語と文脈によって決まります。Unicode の標準には ``コード・ポイント`` (*code points*) による文字の表し方が記載されています。例えば、先ほどの文字をコード・ポイントで表すとそれぞれ U+0041 とか U+0042 とか U+0043 とか U+00C9 になります。原則的にコード・ポイントは 0 から 0x10FFFF までの数値になります。 "
 
 #: ../source/unicode.txt:17
 # 6278ba605d0747ba8445f7f66971bfe2
 msgid "As mentioned earlier, the representation of a string as a list of code points is abstract. In order to convert this abstract representation into a sequence of bytes the Unicode string must be **encoded**. The simplest from of encoding is ASCII and is performed as follows:"
-msgstr "前述の通り、コード・ポイントの並びによる文字列の表現は難解です。この難解な表現を Unicode 文字列のバイトの並びに変換するには **エンコーディング** (encoding) する必要があります。一番簡単なエンコーディングは ASCII で、次のようになります::"
+msgstr "前述の通り、コード・ポイントの並びによる文字列の表現は難解です。この難解な表現を Unicode 文字列のバイトの並びに変換するには ``エンコーディング`` (*encoding*) する必要があります。一番簡単なエンコーディングは ASCII で、次のようになります:"
 
 #: ../source/unicode.txt:22
 # cdfc66a4356240999998a5745b103985

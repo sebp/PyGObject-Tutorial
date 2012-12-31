@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-24 13:17\n"
-"PO-Revision-Date: 2012-10-07 08:45+0900\n"
+"PO-Revision-Date: 2012-10-12 10:51+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr "*label* が ``None`` でなければ、指定した文字列を格納し
 #: ../source/button_widgets.txt:24
 # f5e026010fb245159e1ca15f6c63ad18
 msgid "If *stock* is not ``None``, creates a new button containing the image and text from a :ref:`stock item <stock-items>`."
-msgstr "*stock* が ``None`` でなければ :ref:`stock item <stock-items>` から取得した画像とラベルを子ウィジェットに持つ新しいボタンを生成します。"
+msgstr "*stock* が ``None`` でなければ :ref:`ストック・アイテム <stock-items>` から取得した画像とラベルを子ウィジェットに持つ新しいボタンを生成します。"
 
 #: ../source/button_widgets.txt:27
 # 2e460ff68cc74d16bc75b347b8eeaa0c

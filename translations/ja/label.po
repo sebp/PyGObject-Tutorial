@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-24 13:17\n"
-"PO-Revision-Date: 2012-10-07 08:46+0900\n"
+"PO-Revision-Date: 2012-10-07 22:19+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgstr ":class:`Gtk.Label` では、例えば文字を太字にしたり、色�
 #: ../source/label.txt:36
 # e25a6fa484e2401bac70b2031d9a3d91
 msgid "Labels may contain *mnemonics*. Mnemonics are underlined characters in the label, used for keyboard navigation. Mnemonics are created by providing a string with an underscore before the mnemonic character, such as \"_File\", to the functions :meth:`Gtk.Label.new_with_mnemonic` or :meth:`Gtk.Label.set_text_with_mnemonic`. Mnemonics automatically activate any activatable widget the label is inside, such as a :class:`Gtk.Button`; if the label is not inside the mnemonic's target widget, you have to tell the label about the target using :meth:`Gtk.Label.set_mnemonic_widget`."
-msgstr "ラベルにいろいろな「ニーモニック」(*mnemonic*) を含める場合があります。ニーモニックはラベルの中では下線が引かれた文字として表示され、キーボードの操作で使用します。ニーモニックは、\"_File\" のようにニーモニックを表す文字の直前に下線を付けた文字列を :meth:`Gtk.Label.new_with_mnemonic` または :meth:`Gtk.Label.set_text_with_mnemonic` メソッドに引き渡すことで生成できます。ニーモニックは、例えば :class:`Gtk.Button` のような、ラベルをコンテンツに持つ全てのウィジェットで自動的に有効になります。もし、そのニーモニックが対象としているウィジェットがラベルの中に存在しなかったら、そのラベルに対して :meth:`Gtk.Label.set_mnemonic_widget` メソッドを使って、対象となるオブジェクトについてラベルに問い合わせる必要があります。"
+msgstr "ラベルにいろいろな ``ニーモニック`` (*mnemonic*) を含める場合があります。ニーモニックはラベルの中では下線が引かれた文字として表示され、キーボードの操作で使用します。ニーモニックは、\"_File\" のようにニーモニックを表す文字の直前に下線を付けた文字列を :meth:`Gtk.Label.new_with_mnemonic` または :meth:`Gtk.Label.set_text_with_mnemonic` メソッドに引き渡すことで生成できます。ニーモニックは、例えば :class:`Gtk.Button` のような、ラベルをコンテンツに持つ全てのウィジェットで自動的に有効になります。もし、そのニーモニックが対象としているウィジェットがラベルの中に存在しなかったら、そのラベルに対して :meth:`Gtk.Label.set_mnemonic_widget` メソッドを使って、対象となるオブジェクトについてラベルに問い合わせる必要があります。"
 
 #: ../source/label.txt:47
 # 46418ab06d0b405d9aacfe0223086f52

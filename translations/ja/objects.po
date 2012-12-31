@@ -1,0 +1,337 @@
+# Japanese translation for objects.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-15 21:36\n"
+"PO-Revision-Date: 2012-12-30 22:11+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/objects.txt:4
+# 3db990f591384900970a3004578b0db9
+msgid "Objects"
+msgstr "オブジェクト"
+
+#: ../source/objects.txt:6
+# 658158ec0e0c4be487c2fcc8b9e17163
+msgid "GObject is the fundamental type providing the common attributes and methods for all object types in GTK+, Pango and other libraries based on GObject. The :class:`GObject.GObject` class provides methods for object construction and destruction, property access methods, and signal support."
+msgstr "GObject は GTK+ にある全てのオブジェクト型に共通な属性とメソッドを提供する基本型であり、Pango とその他のライブラリはこの GObject が基になっています。 :class:`GObject.GObject` というクラスがオブジェクトを生成したり破棄するメソッドやプロパティにアクセスするメソッド、シグナルのサポートを提供しています。"
+
+#: ../source/objects.txt:11
+# 26926408a20f41438e596f3dddee6456
+msgid "This section will introduce some important aspects about the GObject implementation in python."
+msgstr "このセクションでは Python における GObject の実装について重要な部分をいくつか紹介します。"
+
+#: ../source/objects.txt:15
+# ec357baef5a743d78244bf31a773b40f
+msgid "Inherit from GObject.GObject"
+msgstr "GObject.GObject から派生させる"
+
+#: ../source/objects.txt:17
+# cdad83dad84746bbb9743eba14defd2a
+msgid "A native GObject is accessible via :class:`GObject.GObject`. It is rarely intanciated directly, we generally use inherited class. A :class:`Gtk.Widget` is an inherited class of a :class:`GObject.GObject`. It may be interesting to make an inherited class to create a new widget, like a settings dialog."
+msgstr "素の GObject には :class:`GObject.GObject` からアクセスできます。但し、この型から直接インスタンスを生成することはめったになく、一般的にはこの型から派生したクラスを使用します。例えば :class:`Gtk.Widget` は :class:`GObject.GObject` から派生したクラスの一つです。どちらかというとアプリを実装するよりも、設定ダイアログといった新しいウィジェットを生成するような派生クラスを作る方が面白いかもしれません。"
+
+#: ../source/objects.txt:22
+# 8460b87401044b34a25e58b718869807
+msgid "To inherit from :class:`GObject.GObject`, you must call :meth:`GObject.GObject.__init__` in your constructor (if the class inherits from :class:`Gtk.Button`, it must call :func:`Gtk.Button.__init__` for instance), like in the example below:"
+msgstr ":class:`GObject.GObject` から派生させるには、次の例のように、自分のクラスのコンストラクタで :meth:`GObject.GObject.__init__` を呼び出して下さい (もし自分のクラスが :class:`Gtk.Button` といったクラスから派生しているのであれば, :func:`Gtk.Button.__init__` を呼び出して下さい):"
+
+#: ../source/objects.txt:37
+# ffceaa73a26946f6aacb84e79e28a96f
+msgid "Signals"
+msgstr "いろいろなシグナル"
+
+#: ../source/objects.txt:39
+# 0736eb1ffd9546fcb676c46aee5c8bcb
+msgid "Signals connect arbitrary application-specific events with any number of listeners. For example, in GTK+, every user event (keystroke or mouse move) is received from the X server and generates a GTK+ event under the form of a signal emission on a given object instance."
+msgstr "シグナルはアプリケーション専用の任意のイベントに、それを受け取る側の番号を使って接続します。GTK+ の場合、ユーザ・イベント (例えばキー押下やマウスを移動するイベントなど) をＸサーバから受け取る度に、指定したオブジェクトのインスタンス上でシグナル発行規則に従ったGTK+ のイベントを生成します。"
+
+#: ../source/objects.txt:44
+# d84f27e6bded41ca989a64181ff6b571
+msgid "Each signal is registered in the type system together with the type on which it can be emitted: users of the type are said to connect to the signal on a given type instance when they register a function to be invoked upon the signal emission. Users can also emit the signal by themselves or stop the emission of the signal from within one of the functions connected to the signal."
+msgstr "各シグナルは、それを発行することができる型と共に GObject の型システムに登録されます (その型を利用する側では、シグナルが発行されると呼び出されるコールバック関数を登録する時に、指定した型のインスタンスに対して「シグナルを接続する」といいます)。さらに型を利用する側は自分自身でシグナルを発行したり、そのシグナルに接続している関数の中からシグナルの発行を停止することもできます。"
+
+#: ../source/objects.txt:51
+# 5798e3d5373d4c5cb8f67857319aaaa9
+msgid "Receive signals"
+msgstr "シグナルを受信する"
+
+#: ../source/objects.txt:53
+# d4d1a5523be5461ea46c4be8d5cd8390
+msgid "See :ref:`signals`"
+msgstr ":ref:`signals` を参照して下さい。"
+
+#: ../source/objects.txt:56
+# f86be5b95fdb4a0dbca1e2114917ee8f
+msgid "Create new signals"
+msgstr "新しいシグナルを作成する"
+
+#: ../source/objects.txt:58
+# dd43e6716cd7463fa63a6700f1133277
+msgid "New signals can be created by adding them to :attr:`GObject.GObject.__gsignals__`, a dictionary:"
+msgstr "新しいシグナルは、それを :attr:`GObject.GObject.__gsignals__` というディクショナリに追加することで作成できます。"
+
+#: ../source/objects.txt:61
+# f5412431e3e04d1db2ff0bdea6dadb12
+msgid "When a new signal is created, a method handler can also be defined, it will be called each time the signal is emitted. It is called do_signal_name."
+msgstr "新しいシグナルを作成する際は、任意のメソッド・ハンドラも一緒に定義できます (このハンドラはシグナルが発行される度に呼び出されます)。そのハンドラは ``do_シグナル名`` にして下さい:"
+
+#: ../source/objects.txt:75
+# dd29dd011ae94538a14098df6124b651
+msgid ":const:`GObject.SIGNAL_RUN_FIRST` indicates ths signal will invoke the object method handler (:meth:`do_my_signal` here) in the first emission stage. Alternatives are :const:`GObject.SIGNAL_RUN_LAST` (the method handler will be invoked in the third emission stage) and :const:`GObject.SIGNAL_RUN_CLEANUP` (invoke the method handler in the last emission stage)."
+msgstr "ディクショナリの値として最初に渡している :const:`GObject.SIGNAL_RUN_FIRST` は、このシグナル発行の第一ステージにオブジェクトのメソッド・ハンドラ (上の例だと :meth:`do_my_signal`) を呼び出すという意味です。それ以外には, :const:`GObject.SIGNAL_RUN_LAST` (シグナル発行の第三ステージにメソッド・ハンドラを呼び出す) や :const:`GObject.SIGNAL_RUN_CLEANUP` (シグナル発行の最後のステージにメソッド・ハンドラを呼び出す) を指定できます。"
+
+#: ../source/objects.txt:81
+# c2cdda33e9884ba6b685d7498d2531cc
+msgid "The second part, ``None``, indicates the return type of the signal, usually ``None``."
+msgstr "同様に二番目に渡している値の ``None`` はシグナルの返り値の型ですが、通常は ``None`` にして下さい。"
+
+#: ../source/objects.txt:84
+# 110738f539564a00957b85a272baf544
+msgid "``(int,)`` indicates the signal arguments, here, the signal will only take one argument, whose type is int. This argument type list must end with a comma."
+msgstr "同様に最後に渡している値の ``(int,)`` はシグナルが受け取る引数を表しており、上の例だとシグナルは一個だけ引数を受け取り、その型は int になります。ここで渡すことができるいろいろな引数の型はタプルに格納し、その終端はカンマ (,) にして下さい。"
+
+#: ../source/objects.txt:88
+# 7fdb745a3fc442c0803156b91017d365
+msgid "Signals can be emitted using :meth:`GObject.GObject.emit`:"
+msgstr "シグナルは :meth:`GObject.GObject.emit` を使って発行します:"
+
+#: ../source/objects.txt:96
+# 858f4df565ff44b09f52be5d204d82db
+msgid "Properties"
+msgstr "いろいろなプロパティ"
+
+#: ../source/objects.txt:97
+# d3994a1adbcd4065a62d01ede1a5d768
+msgid "One of GObject's nice features is its generic get/set mechanism for object properties. Each class inherited from :class:`GObject.GObject` can define new properties. Each property as a type which never changes (e.g. str, float, int...). For instance, they are used for :class:`Gtk.Button` where there is a \"label\" property which contains the text of the button."
+msgstr "GObject が提供してくれる素晴らしい機能の一つに、オブジェクトが持つプロパティにアクセスするための汎用的な set/get アクセッサのメカニズムがあります。 :class:`GObject.GObject` から派生したクラスはそれぞれ新しいプロパティを定義できます。プロパティの型は変更できません (例: str, float, int...)。 例えば、プロパティの型は (ボタンに表示する文字列を格納した) \"label\" プロパティを持つ :class:`Gtk.Button` で使用されます。"
+
+#: ../source/objects.txt:104
+# b5af4768c8de42f4916df5fb43c98727
+msgid "Use existing properties"
+msgstr "既存のプロパティを使用する"
+
+#: ../source/objects.txt:106
+# c30b47a18cb94150b827b2bbc9ff70aa
+msgid "The class :class:`GObject.GObject` provides several useful functions to manage existing properties, :func:`GObject.GObject.get_property` and :func:`GObject.GObject.set_property`."
+msgstr ":class:`GObject.GObject` クラスは既存のプロパティを管理するための便利なメソッドをいくつか提供しています。例えば :func:`GObject.GObject.get_property` と :func:`GObject.GObject.set_property` です。"
+
+#: ../source/objects.txt:109
+# efeb295dba5249f797cbd75614b23ebe
+msgid "Some properties also have functions dedicated to them, called getter and setter. For the property \"label\" of a button, there are two functions to get and set them, :func:`Gtk.Button.get_label` and :func:`Gtk.Button.set_label`."
+msgstr "さらにプロパティの中には自分自身にアクセスするためのメソッド、すなわち getter と setter 呼ばれる関数を用意しているものもあります。例えばボタンの \"label\" というプロパティには、このラベルのデータを取得したり指定するための関数として :func:`Gtk.Button.get_label` と :func:`Gtk.Button.set_label` があります。"
+
+#: ../source/objects.txt:114
+# b1947cd0255e4418820f97502e73caa6
+msgid "Create new properties"
+msgstr "新しいプロパティを作成する"
+
+#: ../source/objects.txt:116
+# f27cd12e834d41749b975ad76c98b825
+msgid "A property is defined with a name and a type. Even is python itself is dynamically typed, you can't change the type of a property once it is defined. A property can be created using :func:`GObject.property`."
+msgstr "一個のプロパティは一個の名前と一個の型で定義されます。Python 自身が動的な型づけを行っているため、一度プロパティを定義したらその型は変更できません。プロパティは :func:`GObject.property` を使って作成します。"
+
+#: ../source/objects.txt:131
+# a2548e3d5e764845a6f97207f7afb4f5
+msgid "Properties can also be readonly, if you want some properties to be readable but not writable. To do so, you can add some flags to the property definition, to control read/write access. Flags are :const:`GObject.PARAM_READABLE` (only read access for external code), :const:`GObject.PARAM_WRITABLE` (only write access), :const:`GObject.PARAM_READWRITE` (public):"
+msgstr "さらに読み込みは可能だが書き込みできないプロパティが欲しいといった場合、読み込み専用のプロパティにする機能もあります。そのような場合、いくつかのフラグをプロパティの定義に追加して、読み込みまたは書き込みのアクセスを制御できます。指定できるフラグには :const:`GObject.PARAM_READABLE` (外部からのアクセスは読み込みだけ), :const:`GObject.PARAM_WRITABLE` (書き込みだけ), :const:`GObject.PARAM_READWRITE` (読み書き可) があります:"
+
+#: ../source/objects.txt:146
+# 5f3179dbcc4d47dc816dfb52d0492de2
+msgid "You can also define new read-only properties with a new method decorated with :func:`GObject.property`:"
+msgstr "さらに :func:`GObject.property` で修飾された新しいメソッドを使って読み込み専用のプロパティを定義することも可能です:"
+
+#: ../source/objects.txt:162
+# 17a55fcf0c024885b9e7feb4c116646a
+msgid "You can get this property using:"
+msgstr "このプロパティは次のようにして取得します:"
+
+#: ../source/objects.txt:170
+# 3267268c7cbf4cfdaffd420fa4907b1b
+msgid "There is also a way to define minimum and maximum values for numbers, using a more verbose form:"
+msgstr "また、もっと冗長な書式でプロパティの数値の最小値と最大値を定義する方法もあります:"
+
+#: ../source/objects.txt:206
+# 012166283f964d8498670ac626242017
+msgid "Properties must be defined in :attr:`GObject.GObject.__gproperties__`, a dictionary, and handled in do_get_property and do_set_property."
+msgstr "プロパティは :attr:`GObject.GObject.__gproperties__` というディクショナリの中に定義し ``do_get_property()`` と ``do_set_property()`` というメソッドの中で処理するようにして下さい。"
+
+#: ../source/objects.txt:210
+# f518f996bac444dab6c6bd5fce60d3f7
+msgid "Watch properties"
+msgstr "プロパティを監視する"
+
+#: ../source/objects.txt:212
+# 5a85f3cc249f4c55afd1f88ee6a6b0bc
+msgid "When a property is modified, a signal is emitted, whose name is \"notify::property_name\":"
+msgstr "プロパティが変更されると、\"``notify::property_name``\" というシグナルが自動的に発行されます:"
+
+#: ../source/objects.txt:227
+# d7c8dfa879d34508809030da3ccab05c
+msgid "API"
+msgstr "API"
+
+#: ../source/objects.txt:233
+# d65be065d77e4af6a111cf76e71ce94a
+msgid "Retrieves a property value."
+msgstr "プロパティの値を取得します。"
+
+#: ../source/objects.txt:237
+# cff5053caaf348298cfb785b567358a4
+msgid "Set property *property_name* to *value*."
+msgstr "*property_name* の名前を持つプロパティの値を *value* にします。"
+
+#: ../source/objects.txt:241
+# b6b6ce72be674df4952ce6854a109478
+msgid "Emit signal *signal_name*. Signal arguments must follow, e.g. if your signal is of type ``(int,)``, it must be emitted with::"
+msgstr "*signal_name* というシグナルを発行します。シグナルの引数は次の規則に従って下さい: 例えば ``(int,)`` 型の引数を受け取る場合、次のような書式で発行する::"
+
+#: ../source/objects.txt:248
+# 7a8d1b7d0b2a4178b25f4f0f97ef28a3
+msgid "This method freezes all the \"notify::\" signals (which are emitted when any property is changed) until the :meth:`thaw_notify` method is called."
+msgstr "このメソッドは (プロパティが変更されると発行される) \"notify::\" 系のシグナルを :meth:`GObject.GObject.thaw_notify` メソッドが呼び出されるまで全て凍結します。"
+
+#: ../source/objects.txt:252
+# 79f7d3aacb644e42a9294e073ce8665f
+msgid "It recommended to use the *with* statement when calling :meth:`freeze_notify`, that way it is ensured that :meth:`thaw_notify` is called implicitly at the end of the block::"
+msgstr ":meth:`GObject.GObject.freeze_notify` メソッドを呼び出す際に、ブロックの最後で暗黙的に :meth:`GObject.GObject.thaw_notify` を呼び出すようなコードと「一緒に」使用することをお薦めします。"
+
+#: ../source/objects.txt:262
+# 3ef8fe736270474bb17fd24a82bc7cf8
+msgid "Thaw all the \"notify::\" signals which were thawed by :meth:`freeze_notify`."
+msgstr ":meth:`GObject.GObject.freeze_notify` によって発行が凍結されていた全ての \"notify::\" シグナルを再び発行できるようにします。"
+
+#: ../source/objects.txt:264
+# a87e65fb6cc74fe59b5338e5ed2942d9
+msgid "It is recommended to not call :meth:`thaw_notify` explicitly but use :meth:`freeze_notify` together with the *with* statement."
+msgstr "明示的な :meth:`GObject.GObject.thaw_notify` の呼び出しは推奨していませんが、使用する時は :meth:`GObject.GObject.freeze_notify` を呼び出した回数と同じだけ呼び出して下さい。"
+
+#: ../source/objects.txt:269
+# f5676b052cd240a1b4bddfd323ed4d2a
+msgid "Blocks a handler of an instance so it will not be called during any signal emissions unless :meth:`handler_unblock` is called for that *handler_id*. Thus \"blocking\" a signal handler means to temporarily deactivate it, a signal handler has to be unblocked exactly the same amount of times it has been blocked before to become active again."
+msgstr "インスタンス上でシグナル・ハンドラの呼び出しをブロックするので、 :meth:`GObject.GObject.handler_unblock` がその *handler_id* に対して呼び出されるまで、全てのシグナルのハンドラは呼び出されなくなります。このように「ブロック中」のシグナル・ハンドラは一時的にハンドラの呼び出しを無効にするので、再び有効にするにはブロックした回数と同じ回数だけ実際にブロックを解除する必要があります。"
+
+#: ../source/objects.txt:275
+# c43c8bf7670b4434a2b3f2e219cfa2b3
+msgid "It is recommended to use :meth:`handler_block` in conjunction with the *with* statement which will call :meth:`handler_unblock` implicitly at the end of the block::"
+msgstr "ブロックの最後で明示的に :meth:`GObject.GObject.handler_unblock` を呼び出すようなコードと「一緒に」 :meth:`GObject.GObject.handler_block` を呼び出すことを推奨します。"
+
+#: ../source/objects.txt:285
+# 60e53f1ded6b4126b81cebf31c1609c2
+msgid "Undoes the effect of :meth:`handler_block`. A blocked handler is skipped during signal emissions and will not be invoked until it has been unblocked exactly the amount of times it has been blocked before."
+msgstr ":meth:`handler_block` を呼び出す前の状態に戻します。シグナルが発行されている間、ブロックされていたハンドラの呼び出しはスキップされ、ブロックした回数を同じだけブロックを解除するまで呼び出されません。"
+
+#: ../source/objects.txt:289
+# 81e50675cec94468b1f9054d2430136b
+msgid "It is recommended to not call :meth:`handler_unblock` explicitly but use :meth:`handler_block` together with the *with* statement."
+msgstr "明示的な :meth:`GObject.GObject.handler_unblock` の呼び出しは推奨していませんが、使用する時は :meth:`GObject.GObject.handler_block` を呼び出した回数と同じだけ呼び出して下さい。"
+
+#: ../source/objects.txt:294
+# 81869fa7321145479cc48e23b225b0a1
+msgid "A dictionary where inherited class can define new signals."
+msgstr "派生したクラスが新しいシグナルを定義することができるディクショナリです。"
+
+#: ../source/objects.txt:296
+# 92fe9f9bb39d4e91bda0484e2ed54fa7
+msgid "Each element in the dictionary is a new signal. The key is the signal name. The value is a tuple, with the form::"
+msgstr "ディクショナリの要素はそれぞれ新しいシグナルです。ディクショナリのキーがシグナルの名前になります。ディクショナリの値は一個のタプルで、次のような形式になります::"
+
+#: ../source/objects.txt:301
+# 47db2b95e2c14fa098f557e11ae10af0
+msgid ":const:`GObject.SIGNAL_RUN_FIRST` can be replaced with :const:`GObject.SIGNAL_RUN_LAST` or :const:`GObject.SIGNAL_RUN_CLEANUP`. ``None`` is the return type of the signal. ``(int,)`` is the list of the parameters of the signal, it must end with a comma."
+msgstr ":const:`GObject.SIGNAL_RUN_FIRST` は :const:`GObject.SIGNAL_RUN_LAST` または :const:`GObject.SIGNAL_RUN_CLEANUP` で置き換えることが可能です。 ``None`` はシグナルの返り値の型です。 ``(int,)`` はシグナルの引数を要素とするリストで、終端はカンマにして下さい。"
+
+#: ../source/objects.txt:310
+# 8cdea64534694c9bb52009524d58e0df
+msgid "The :attr:`__gproperties__` dictionary is a class property where you define the properties of your object. This is not the recommend way to define new properties, the method written above is much less verbose. The benefits of this method is that a property can be defined with more settings, like the minimum or the maximum for numbers."
+msgstr ":attr:`__gproperties__` というディクショナリは、オブジェクトが持ついろいろなプロパティを格納しているクラス・プロパティです。これは新しいプロパティを定義する方法としては推奨していない方法であり、上記の例はそれほど冗長なものではありません。このメソッドの利点は、プロパティをたくさんの設定値と一緒に定義できることです (例えば数値の最大値や最小値も一緒に定義する場合)。"
+
+#: ../source/objects.txt:316
+# ea680747131e4077a0ef43c69af1091a
+msgid "The key is the name of the property"
+msgstr "このディクショナリのキーはプロパティの名前です。"
+
+#: ../source/objects.txt:318
+# 4df02927da114a28897d9db81b150d85
+msgid "The value is a tuple which describe the property. The number of elements of this tuple depends on its first element but the tuple will always contain at least the following items:"
+msgstr "このディクショナリの値はプロパティの詳細を記述した一個のタプルです。このタプルの要素の数は一番先頭のプロパティに依存しますが、少なくとも次のようなアイテムが常に含まれています:"
+
+#: ../source/objects.txt:322
+# dd65a68d42e94dfe9557f1d7633e77bc
+msgid "The first element is the property's type (e.g. ``int``, ``float``...)."
+msgstr "最初の要素はプロパティの型 (例 ``int``, ``float``...) です。"
+
+#: ../source/objects.txt:324
+# 936e41c9eebb4cc2b05c4c7d2c2d9d4f
+msgid "The second element is the property's nick name, which is a string with a short description of the property. This is generally used by programs with strong introspection capabilities, like the graphical user interface builder `Glade`_."
+msgstr "二番目の要素はプロパティのニックネームで、プロパティの内容を短く説明した文字列です。この要素は通常は強力なイントロスペクションの機能を持ったプログラム (例えばグラフィカル・ユーザ・インタフェース・ビルダの `Glade <http://glade.gnome.org/>`_) が利用します。"
+
+#: ../source/objects.txt:329
+# 760d876ac533479bb2765385e5d0bd07
+msgid "The third one is the property's description or blurb, which is another string with a longer description of the property. Also used by `Glade`_ and similar programs."
+msgstr "三番目の要素はプロパティの説明または内容紹介で、プロパティの内容を長い文字列で記述したものです。これも `Glade  <http://glade.gnome.org/>`_ やそれに類するプログラムが使用します。"
+
+#: ../source/objects.txt:333
+# 6190fa4de2954878bb4b77caaccfec59
+msgid "The last one (which is not necessarily the forth one as we will see later) is the property's flags: :const:`GObject.PARAM_READABLE`, :const:`GObject.PARAM_WRITABLE`, :const:`GObject.PARAM_READWRITE`."
+msgstr "最後の要素はプロパティのフラグです (これ以降の要素は後述します): :const:`GObject.PARAM_READABLE`, :const:`GObject.PARAM_WRITABLE`, :const:`GObject.PARAM_READWRITE`"
+
+#: ../source/objects.txt:337
+# d1ec787d40a84c298528924ce61f3665
+msgid "The absolute length of the tuple depends on the property type (the first element of the tuple). Thus we have the following situations:"
+msgstr "タプルの長さはプロパティの型 (このタプルの先頭の要素) に依存します。そのため次のような状態が考えられます:"
+
+#: ../source/objects.txt:340
+# d7de597a67914d44a2ce61cb9fcc20b1
+msgid "If the type is ``bool`` or ``str``, the forth element is the default value of the property."
+msgstr "プロパティの型が ``bool`` または ``str`` の場合、四番目の要素はプロパティのデフォルト値になります。"
+
+#: ../source/objects.txt:343
+# 95ee2ced6c72422f95ecc4603e1308f6
+msgid "If the type is ``int`` or ``float``, the forth element is the minimum accepted value, the fifth element is the maximum accepted value and the sixth element is the default value."
+msgstr "プロパティの型が ``int`` または ``float`` の場合、四番目の要素は最小値を、五番目の要素は最大値を、そして六番目の要素はデフォルト値をそれぞれ表します。"
+
+#: ../source/objects.txt:347
+# 1013c4f5be17400bbcda058136a246b6
+msgid "If the type is not one of these, there is no extra element."
+msgstr "プロパティの型がそれ以外の場合、追加の要素はありません。"
+
+#: ../source/objects.txt:352
+# 16957ef9f54a4a74a032c26df4990725
+msgid "Invoke the object method handler in the first emission stage."
+msgstr "一番最初のシグナル発行ステージでハンドラを呼び出します。"
+
+#: ../source/objects.txt:356
+# 332fa8022b4b4b9c969b25428e9e5eca
+msgid "Invoke the object method handler in the third emission stage."
+msgstr "三番目のシグナル発行ステージでハンドラを呼び出します。"
+
+#: ../source/objects.txt:360
+# 13c3ce9f908d4d17ac9d3db8a549bd06
+msgid "Invoke the object method handler in the last emission stage."
+msgstr "最後のシグナル発行ステージでハンドラを呼び出します。"
+
+#: ../source/objects.txt:364
+# 7a9bae12c7f14d4c9e7a382d454da395
+msgid "The property is readable."
+msgstr "プロパティは読み込み専用です。"
+
+#: ../source/objects.txt:368
+# 0a8a0de30c974197b232c9bb0604687f
+msgid "The property is writable."
+msgstr "プロパティは書き込み専用です。"
+
+#: ../source/objects.txt:372
+# acfdf4463ac5478584ee2144c0f1b2a2
+msgid "The property is readable and writable."
+msgstr "プロパティは読み込みと書き込みが可能です。"
+
