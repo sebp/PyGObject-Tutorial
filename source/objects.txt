@@ -14,7 +14,7 @@ implementation in python.
 Inherit from GObject.GObject
 ----------------------------
 
-A native GObject is accessible via :class:`GObject.GObject`. It is rarely intanciated
+A native GObject is accessible via :class:`GObject.GObject`. It is rarely instanciated
 directly, we generally use inherited class. A :class:`Gtk.Widget` is an inherited class
 of a :class:`GObject.GObject`. It may be interesting to make an inherited class to create
 a new widget, like a settings dialog.
