@@ -14,7 +14,7 @@ implementation in python.
 Inherit from GObject.GObject
 ----------------------------
 
-A native GObject is accessible via :class:`GObject.GObject`. It is rarely intanciated
+A native GObject is accessible via :class:`GObject.GObject`. It is rarely instantiated
 directly, we generally use inherited class. A :class:`Gtk.Widget` is an inherited class
 of a :class:`GObject.GObject`. It may be interesting to make an inherited class to create
 a new widget, like a settings dialog.
@@ -72,7 +72,7 @@ called each time the signal is emitted. It is called do_signal_name.
         def do_my_signal(self, arg):
             print "class method for `my_signal' called with argument", arg
 
-:const:`GObject.SIGNAL_RUN_FIRST` indicates ths signal will invoke the object method
+:const:`GObject.SIGNAL_RUN_FIRST` indicates that this signal will invoke the object method
 handler (:meth:`do_my_signal` here) in the first emission stage. Alternatives are
 :const:`GObject.SIGNAL_RUN_LAST` (the method handler will be invoked in the third
 emission stage) and :const:`GObject.SIGNAL_RUN_CLEANUP` (invoke the method handler in the
@@ -128,7 +128,7 @@ property can be created using :func:`GObject.property`.
         def __init__(self):
             GObject.GObject.__init__(self)
 
-Properties can also be readonly, if you want some properties to be readable but
+Properties can also be read-only, if you want some properties to be readable but
 not writable. To do so, you can add some flags to the property definition, to control read/write access.
 Flags are :const:`GObject.PARAM_READABLE` (only read access for external code),
 :const:`GObject.PARAM_WRITABLE` (only write access),
@@ -157,7 +157,7 @@ You can also define new read-only properties with a new method decorated with
 
         @GObject.property
         def readonly(self):
-            return 'This is readonly.'
+            return 'This is read-only.'
 
 You can get this property using:
 
@@ -178,7 +178,7 @@ There is also a way to define minimum and maximum values for numbers, using a mo
         __gproperties__ = {
             "int-prop": (int, # type
                          "integer prop", # nick
-                         "A porperty that contains an integer", # blurb
+                         "A property that contains an integer", # blurb
                          1, # min
                          5, # max
                          2, # default
