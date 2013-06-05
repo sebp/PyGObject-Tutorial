@@ -18,7 +18,8 @@ class RadioButtonWindow(Gtk.Window):
         button2.connect("toggled", self.on_button_toggled, "2")
         hbox.pack_start(button2, False, False, 0)
 
-        button3 = Gtk.RadioButton.new_with_mnemonic_from_widget(button1, "B_utton 3")
+        button3 = Gtk.RadioButton.new_with_mnemonic_from_widget(button1,
+            "B_utton 3")
         button3.connect("toggled", self.on_button_toggled, "3")
         hbox.pack_start(button3, False, False, 0)
 

@@ -8,7 +8,8 @@ class CellRendererComboWindow(Gtk.Window):
         self.set_default_size(200, 200)
 
         liststore_manufacturers = Gtk.ListStore(str)
-        manufacturers = ["Sony", "LG", "Panasonic", "Toshiba", "Nokia", "Samsung"]
+        manufacturers = ["Sony", "LG",
+            "Panasonic", "Toshiba", "Nokia", "Samsung"]
         for item in manufacturers:
             liststore_manufacturers.append([item])
 

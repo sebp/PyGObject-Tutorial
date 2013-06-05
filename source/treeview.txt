@@ -48,7 +48,8 @@ Adding data to the model is done using :meth:`Gtk.ListStore.append` or
 
 .. code-block:: python
 
-    treeiter = store.append(["The Art of Computer Programming", "Donald E. Knuth", 25.46])
+    treeiter = store.append(["The Art of Computer Programming",
+                             "Donald E. Knuth", 25.46])
 
 Both methods return a :class:`Gtk.TreeIter` instance, which points to the location
 of the newly inserted row. You can retrieve a :class:`Gtk.TreeIter` by calling

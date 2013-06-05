@@ -139,8 +139,8 @@ Flags are :const:`GObject.PARAM_READABLE` (only read access for external code),
 
 .. code-block:: python
 
-    foo = GObject.property(type=str, flags = GObject.PARAM_READABLE) # won't be writable
-    bar = GObject.property(type=str, flags = GObject.PARAM_WRITABLE) # won't be readable
+    foo = GObject.property(type=str, flags = GObject.PARAM_READABLE) # not writable
+    bar = GObject.property(type=str, flags = GObject.PARAM_WRITABLE) # not readable
 
 
 You can also define new read-only properties with a new method decorated with
