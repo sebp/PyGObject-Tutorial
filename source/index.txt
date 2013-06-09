@@ -27,6 +27,8 @@ GTK+ 3, it is not supposed to serve as an API reference. Please refer to the
 `GTK+ 3 Reference Manual <http://developer.gnome.org/gtk3/stable/>`_ for a
 detailed description of the API.
 
+Contents:
+
 .. toctree::
    :numbered:
    :maxdepth: 2
@@ -53,3 +55,8 @@ detailed description of the API.
    builder
    objects
    stock
+
+Indices and tables
+==================
+
+* :ref:`search`
