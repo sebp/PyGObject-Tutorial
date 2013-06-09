@@ -64,7 +64,8 @@ class DragSourceIconView(Gtk.IconView):
         self.add_item("Item 2", "gtk-about")
         self.add_item("Item 3", "edit-copy")
 
-        self.enable_model_drag_source(Gdk.ModifierType.BUTTON1_MASK, [], DRAG_ACTION)
+        self.enable_model_drag_source(Gdk.ModifierType.BUTTON1_MASK, [],
+            DRAG_ACTION)
         self.connect("drag-data-get", self.on_drag_data_get)
 
     def on_drag_data_get(self, widget, drag_context, data, info, time):
@@ -91,7 +92,7 @@ class DropArea(Gtk.Label):
 
         self.connect("drag-data-received", self.on_drag_data_received)
 
-    def on_drag_data_received(self, widget, drag_context, x, y, data, info, time):
+    def on_drag_data_received(self, widget, drag_context, x,y, data,info, time):
         if info == TARGET_ENTRY_TEXT:
             text = data.get_text()
             print "Received text: %s" % text
@@ -101,7 +102,8 @@ class DropArea(Gtk.Label):
             width = pixbuf.get_width()
             height = pixbuf.get_height()
 
-            print "Received pixbuf with width %spx and height %spx" % (width, height)
+            print "Received pixbuf with width %spx and height %spx" % (width,
+                height)
 
 win = DragDropWindow()
 win.connect("delete-event", Gtk.main_quit)

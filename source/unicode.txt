@@ -78,7 +78,8 @@ get :exc:`UnicodeDecodeError` if it contained non-ASCII values::
 	>>> unicode_string + utf8_string
 	Traceback (most recent call last):
 	  File "<stdin>", line 1, in <module>
-	UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 2: ordinal not in range(128)
+	UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 2:
+	ordinal not in range(128)
 
 Unicode in GTK+
 +++++++++++++++
@@ -96,7 +97,8 @@ convert any :class:`unicode` instance to :class:`str` if supplied as argument::
 	>>> type(txt), txt
 	(<type 'str'>, 'Fu\xc3\x9fb\xc3\xa4lle')
 	>>> txt == unicode_string
-	__main__:1: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+	__main__:1: UnicodeWarning: Unicode equal comparison failed to convert
+	both arguments to Unicode - interpreting them as being unequal
 	False
 
 Note the warning at the end. Although we called :meth:`Gtk.Label.set_text` with

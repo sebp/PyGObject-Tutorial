@@ -31,7 +31,8 @@ on the link.
 
 .. code-block:: python
 
-    label.set_markup("Go to <a href=\"http://www.gtk.org\" title=\"Our website\">GTK+ website</a> for more")
+    label.set_markup("Go to <a href=\"http://www.gtk.org\" "
+                     "title=\"Our website\">GTK+ website</a> for more")
 
 Labels may contain *mnemonics*. Mnemonics are underlined characters in the
 label, used for keyboard navigation. Mnemonics are created by providing a

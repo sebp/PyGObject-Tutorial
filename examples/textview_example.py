@@ -46,8 +46,10 @@ class TextViewWindow(Gtk.Window):
         toolbar.insert(button_underline, 2)
 
         button_bold.connect("clicked", self.on_button_clicked, self.tag_bold)
-        button_italic.connect("clicked", self.on_button_clicked, self.tag_italic)
-        button_underline.connect("clicked", self.on_button_clicked, self.tag_underline)
+        button_italic.connect("clicked", self.on_button_clicked,
+            self.tag_italic)
+        button_underline.connect("clicked", self.on_button_clicked,
+            self.tag_underline)
 
         toolbar.insert(Gtk.SeparatorToolItem(), 3)
 
@@ -136,9 +138,12 @@ class TextViewWindow(Gtk.Window):
         self.grid.attach_next_to(radio_wrapword, radio_wrapchar,
             Gtk.PositionType.RIGHT, 1, 1)
 
-        radio_wrapnone.connect("toggled", self.on_wrap_toggled, Gtk.WrapMode.NONE)
-        radio_wrapchar.connect("toggled", self.on_wrap_toggled, Gtk.WrapMode.CHAR)
-        radio_wrapword.connect("toggled", self.on_wrap_toggled, Gtk.WrapMode.WORD)
+        radio_wrapnone.connect("toggled", self.on_wrap_toggled,
+            Gtk.WrapMode.NONE)
+        radio_wrapchar.connect("toggled", self.on_wrap_toggled,
+            Gtk.WrapMode.CHAR)
+        radio_wrapword.connect("toggled", self.on_wrap_toggled,
+            Gtk.WrapMode.WORD)
 
     def on_button_clicked(self, widget, tag):
         bounds = self.textbuffer.get_selection_bounds()

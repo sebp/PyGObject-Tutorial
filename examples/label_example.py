@@ -23,7 +23,8 @@ class LabelWindow(Gtk.Window):
         label.set_justify(Gtk.Justification.LEFT)
         vbox_left.pack_start(label, True, True, 0)
         
-        label = Gtk.Label("This is a right-justified label.\nWith multiple lines.")
+        label = Gtk.Label(
+            "This is a right-justified label.\nWith multiple lines.")
         label.set_justify(Gtk.Justification.RIGHT)
         vbox_left.pack_start(label, True, True, 0)
         
@@ -37,7 +38,7 @@ class LabelWindow(Gtk.Window):
         label.set_line_wrap(True)
         vbox_right.pack_start(label, True, True, 0)
         
-        label = Gtk.Label("This is an example of a line-wrapped, filled label.  "
+        label = Gtk.Label("This is an example of a line-wrapped, filled label. "
                           "It should be taking "
                           "up the entire              width allocated to it.  "
                           "Here is a sentence to prove "
@@ -53,13 +54,14 @@ class LabelWindow(Gtk.Window):
 
         label = Gtk.Label()
         label.set_markup("Text can be <small>small</small>, <big>big</big>, "
-                         "<b>bold</b>, <i>italic</i> and even point to somewhere "
-                         "in the <a href=\"http://www.gtk.org\" "
+                         "<b>bold</b>, <i>italic</i> and even point to "
+                         "somewhere in the <a href=\"http://www.gtk.org\" "
                          "title=\"Click to find out more\">internets</a>.")
         label.set_line_wrap(True)
         vbox_left.pack_start(label, True, True, 0)
 
-        label = Gtk.Label.new_with_mnemonic("_Press Alt + P to select button to the right")
+        label = Gtk.Label.new_with_mnemonic(
+            "_Press Alt + P to select button to the right")
         vbox_left.pack_start(label, True, True, 0)
         label.set_selectable(True)
 

@@ -106,7 +106,8 @@ class MenuExampleWindow(Gtk.Window):
         ])
 
     def add_choices_menu_actions(self, action_group):
-        action_group.add_action(Gtk.Action("ChoicesMenu", "Choices", None, None))
+        action_group.add_action(Gtk.Action("ChoicesMenu", "Choices", None,
+            None))
 
         action_group.add_radio_actions([
             ("ChoiceOne", None, "One", None, None, 1),
