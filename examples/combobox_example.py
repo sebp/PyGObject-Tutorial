@@ -24,7 +24,8 @@ class ComboBoxWindow(Gtk.Window):
 
         country_store = Gtk.ListStore(str)
         countries = ["Austria", "Brazil", "Belgium", "France", "Germany",
-            "Switzerland", "United Kingdom", "United States of America", "Uruguay"]
+            "Switzerland", "United Kingdom", "United States of America",
+            "Uruguay"]
         for country in countries:
             country_store.append([country])
 
