@@ -11,7 +11,7 @@ class MyWindow(Gtk.Window):
         self.add(self.button)
 
     def on_button_clicked(self, widget):
-        print "Hello World"
+        print("Hello World")
 
 win = MyWindow()
 win.connect("delete-event", Gtk.main_quit)
