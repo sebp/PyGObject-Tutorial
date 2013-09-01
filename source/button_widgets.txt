@@ -282,3 +282,37 @@ Example
 
 .. literalinclude:: ../examples/spinbutton_example.py
     :linenos:
+
+Switch
+------
+A :class:`Gtk.Switch` is a widget that has two states: on or off. The user can
+control which state should be active by clicking the empty area, or by dragging
+the handle.
+
+You shouldn't use the "activate" signal on the Gtk.Switch which is an action
+signal and emitting it causes the switch to animate. Applications should never
+connect to this signal, but use the "notify::active" signal, see the example
+here below.
+
+Switch Objects
+^^^^^^^^^^^^^^
+
+.. class:: Gtk.Switch(None)
+
+    .. method:: get_active()
+
+    Gets whether the Switch is in its "on" or "off" state.
+
+    .. method:: set_active(is_active)
+
+    Changes the state of the :class:`Gtk.Switch` to the desired one
+    (True or False)
+
+Example
+^^^^^^^
+
+.. image:: ../images/switch_example.png
+
+.. literalinclude:: ../examples/switch_example.py
+    :linenos:
+
