@@ -2,7 +2,7 @@
 
 Installation
 ============
-The fist step before we start with actual coding consists of setting up
+The first step before we start with actual coding consists of setting up
 `PyGObject`_ and its dependencies. PyGObject is a Python module
 that enables developers to access GObject-based libraries such as GTK+
 within Python.
