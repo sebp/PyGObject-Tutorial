@@ -115,39 +115,6 @@ In our example the last code snippet could be rewritten as:
     :linenos:
     :lines: 3-12
 
-Builder Objects
----------------
-.. class:: Gtk.Builder
-
-    .. method:: add_from_file(filename)
-
-        Loads and parses the given file and merges it with the current contents of builder.
-
-    .. method:: add_from_string(string)
-
-        Parses the given string and merges it with the current contents of builder..
-
-    .. method:: add_objects_from_file(filename, object_ids)
-
-        Same as :meth:`Gtk.Builder.add_from_file`, but loads only the objects with the ids given in the *object_ids* list.
-
-    .. method:: add_objects_from_string(filename, object_ids)
-
-        Same as :meth:`Gtk.Builder.add_from_string`, but loads only the objects with the ids given in the *object_ids* list.
-
-    .. method:: get_object(object_id)
-
-        Retrieves the widget with the id *object_id* from the loaded objects in the builder.
-
-    .. method:: get_objects()
-
-        Returns all loaded objects.
-
-    .. method:: connect_signals(handler_object)
-
-        Connects the signals to the methods given in the *handler_object*.
-        The *handler_object* can be any object which contains keys or attributes that are called like the signal handler names given in the interface description, e.g. a class or a dict.
-
 Example
 -------
 The final code of the example
