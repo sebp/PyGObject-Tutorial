@@ -11,7 +11,7 @@ img_p = re.compile("fileref=\"(.+?)\"")
 define_p = re.compile("\\s+")
 
 def print_item(item, imgs):
-    print ".. attribute:: " + item
+    print "* :obj:`" + item + "`"
     print
     for img in imgs:
         if "-ltr" in img:
