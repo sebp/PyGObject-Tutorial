@@ -53,6 +53,14 @@ has been connected to.
 
     widget.disconnect(handler_id)
 
+If you have lost the "handler_id" for some reason (for example the handlers 
+were installed using :func:`Gtk.Builder.connect_sinals`), you can still 
+disconnect a  specific callback using the function :func:`disconnect_by_func`:
+
+.. code-block:: python
+
+    widget.disconnect_by_func(callback)
+
 Almost all applications will connect to the "delete-event" signal of the
 top-level window. It is emitted if a user requests that a toplevel window is
 closed. The default handler for this signal destroys the window, but does
