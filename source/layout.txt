@@ -280,3 +280,60 @@ Example
 
 .. literalinclude:: ../examples/layout_table_example.py
     :linenos:
+
+ListBox
+-----
+
+A :class:`ListBox` is a vertical container that contains :class:`ListBoxRow`
+children. These rows can by dynamically sorted and filtered, and headers can be
+added dynamically depending on the row content. It also allows keyboard and
+mouse navigation and selection like a typical list.
+
+Using :class:`ListBox` is often an alternative to :class:`TreeView`, especially
+when the list contents has a more complicated layout than what is allowed by a
+:class:`CellRenderer`, or when the contents is interactive (i.e. has a button
+in it).
+
+Although a :class:`ListBox` must have only :class:`ListBoxRow` children you can
+add any kind of widget to it via :meth:`Gtk.Container.add`, and a
+:class:`ListBoxRow` widget will automatically be inserted between the list and
+the widget.
+
+ListBox Objects
+^^^^^^^^^^^^^^^
+
+.. class:: Gtk.ListBox()
+
+    The constructor requires no parameters, it will create an empty
+    :class:`ListBox` container, you can then add :class:`ListBoxRow`
+    with :meth:`Gtk.Container.add`
+
+    .. method:: add(child)
+
+        Insert a new :class:`ListBoxRow`.
+
+        *child* is the :class:`ListBoxRow` that should be added to
+        the :class:`ListBox`
+
+ListBoxRow Objects
+^^^^^^^^^^^^^^^^^^
+
+.. class:: Gtk.ListBoxRow()
+
+    The constructor requires no parameters, it will create an empty
+    :class:`ListBoxRow` container, you can then add any :class:`Widget`
+    with :meth:`Gtk.Container.add`
+
+    .. method:: add(child)
+
+        Insert a new :class:`Widget`.
+
+        *child* is the widget that should be added to the :class:`ListBoxRow`
+
+Example
+^^^^^^^
+
+.. image:: ../images/listbox_example.png
+
+.. literalinclude:: ../examples/listbox_example.py
+    :linenos:

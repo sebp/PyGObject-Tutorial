@@ -1,4 +1,5 @@
 build
 *~
 *.py[co]
+.idea
 source/locale
