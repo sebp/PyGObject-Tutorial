@@ -2,3 +2,4 @@ build
 *~
 *.py[co]
 source/locale
+.idea
