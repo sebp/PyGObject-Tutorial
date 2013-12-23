@@ -130,5 +130,5 @@ Example
 
 .. image:: ../images/listbox_example.png
 
-.. literalinclude:: ../examples/listbox_example.py
+.. literalinclude:: ../examples/layout_listbox_example.py
     :linenos:
