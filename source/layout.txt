@@ -110,19 +110,19 @@ Example
 ListBox
 -------
 
-A :class:`ListBox` is a vertical container that contains :class:`ListBoxRow`
+A :class:`Gtk.ListBox` is a vertical container that contains :class:`Gtk.ListBoxRow`
 children. These rows can by dynamically sorted and filtered, and headers can be
 added dynamically depending on the row content. It also allows keyboard and
 mouse navigation and selection like a typical list.
 
-Using :class:`ListBox` is often an alternative to :class:`TreeView`, especially
+Using :class:`Gtk.ListBox` is often an alternative to :class:`Gtk.TreeView`, especially
 when the list contents has a more complicated layout than what is allowed by a
-:class:`CellRenderer`, or when the contents is interactive (i.e. has a button
+:class:`Gtk.CellRenderer`, or when the contents is interactive (i.e. has a button
 in it).
 
-Although a :class:`ListBox` must have only :class:`ListBoxRow` children you can
+Although a :class:`Gtk.ListBox` must have only :class:`Gtk.ListBoxRow` children you can
 add any kind of widget to it via :meth:`Gtk.Container.add`, and a
-:class:`ListBoxRow` widget will automatically be inserted between the list and
+:class:`Gtk.ListBoxRow` widget will automatically be inserted between the list and
 the widget.
 
 Example
