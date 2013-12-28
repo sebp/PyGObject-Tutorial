@@ -24,7 +24,7 @@ class SwitcherWindow(Gtk.Window):
             state = "on"
         else:
             state = "off"
-        print "Switch was turned", state
+        print("Switch was turned", state)
 
 win = SwitcherWindow()
 win.connect("delete-event", Gtk.main_quit)

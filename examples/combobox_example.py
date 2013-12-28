@@ -53,22 +53,22 @@ class ComboBoxWindow(Gtk.Window):
         if tree_iter != None:
             model = combo.get_model()
             row_id, name = model[tree_iter][:2]
-            print "Selected: ID=%d, name=%s" % (row_id, name)
+            print("Selected: ID=%d, name=%s" % (row_id, name))
         else:
             entry = combo.get_child()
-            print "Entered: %s" % entry.get_text()
+            print("Entered: %s" % entry.get_text())
 
     def on_country_combo_changed(self, combo):
         tree_iter = combo.get_active_iter()
         if tree_iter != None:
             model = combo.get_model()
             country = model[tree_iter][0]
-            print "Selected: country=%s" % country
+            print("Selected: country=%s" % country)
 
     def on_currency_combo_changed(self, combo):
         text = combo.get_active_text()
         if text != None:
-            print "Selected: currency=%s" % text
+            print("Selected: currency=%s" % text)
 
 win = ComboBoxWindow()
 win.connect("delete-event", Gtk.main_quit)

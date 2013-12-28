@@ -38,13 +38,13 @@ class ClipboardWindow(Gtk.Window):
         if text != None:
             self.entry.set_text(text)
         else:
-            print "No text on the clipboard."
+            print("No text on the clipboard.")
 
     def copy_image(self, widget):
         if self.image.get_storage_type() == Gtk.ImageType.PIXBUF:
             self.clipboard.set_image(self.image.get_pixbuf())
         else:
-            print "No image has been pasted yet."
+            print("No image has been pasted yet.")
 
     def paste_image(self, widget):
         image = self.clipboard.wait_for_image()

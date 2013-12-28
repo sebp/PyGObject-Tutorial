@@ -23,7 +23,7 @@ class CheckButtonWindow(Gtk.Window):
             state = "on"
         else:
             state = "off"
-        print "Button", name, "was turned", state
+        print("Button", name, "was turned", state)
 
 win = CheckButtonWindow()
 win.connect("delete-event", Gtk.main_quit)

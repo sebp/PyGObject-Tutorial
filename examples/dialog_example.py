@@ -32,9 +32,9 @@ class DialogWindow(Gtk.Window):
         response = dialog.run()
 
         if response == Gtk.ResponseType.OK:
-            print "The OK button was clicked"
+            print("The OK button was clicked")
         elif response == Gtk.ResponseType.CANCEL:
-            print "The Cancel button was clicked"
+            print("The Cancel button was clicked")
 
         dialog.destroy()
 
