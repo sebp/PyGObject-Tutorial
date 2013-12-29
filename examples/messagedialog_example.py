@@ -30,7 +30,7 @@ class MessageDialogWindow(Gtk.Window):
         dialog.format_secondary_text(
             "And this is the secondary text that explains things.")
         dialog.run()
-        print "INFO dialog closed"
+        print("INFO dialog closed")
 
         dialog.destroy()
 
@@ -40,7 +40,7 @@ class MessageDialogWindow(Gtk.Window):
         dialog.format_secondary_text(
             "And this is the secondary text that explains things.")
         dialog.run()
-        print "ERROR dialog closed"
+        print("ERROR dialog closed")
 
         dialog.destroy()
 
@@ -51,9 +51,9 @@ class MessageDialogWindow(Gtk.Window):
             "And this is the secondary text that explains things.")
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
-            print "WARN dialog closed by clicking OK button"
+            print("WARN dialog closed by clicking OK button")
         elif response == Gtk.ResponseType.CANCEL:
-            print "WARN dialog closed by clicking CANCEL button"
+            print("WARN dialog closed by clicking CANCEL button")
 
         dialog.destroy()
 
@@ -64,9 +64,9 @@ class MessageDialogWindow(Gtk.Window):
             "And this is the secondary text that explains things.")
         response = dialog.run()
         if response == Gtk.ResponseType.YES:
-            print "QUESTION dialog closed by clicking YES button"
+            print("QUESTION dialog closed by clicking YES button")
         elif response == Gtk.ResponseType.NO:
-            print "QUESTION dialog closed by clicking NO button"
+            print("QUESTION dialog closed by clicking NO button")
 
         dialog.destroy()
 

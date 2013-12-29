@@ -5,7 +5,7 @@ class Handler:
         Gtk.main_quit(*args)
 
     def onButtonPressed(self, button):
-        print "Hello World!"
+        print("Hello World!")
 
 builder = Gtk.Builder()
 builder.add_from_file("builder_example.glade")

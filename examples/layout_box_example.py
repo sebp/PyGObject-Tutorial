@@ -17,10 +17,10 @@ class MyWindow(Gtk.Window):
         self.box.pack_start(self.button2, True, True, 0)
 
     def on_button1_clicked(self, widget):
-        print "Hello"
+        print("Hello")
 
     def on_button2_clicked(self, widget):
-        print "Goodbye"
+        print("Goodbye")
 
 win = MyWindow()
 win.connect("delete-event", Gtk.main_quit)
