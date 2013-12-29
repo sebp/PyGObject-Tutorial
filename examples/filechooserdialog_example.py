@@ -26,10 +26,10 @@ class FileChooserWindow(Gtk.Window):
 
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
-            print "Open clicked"
-            print "File selected: " + dialog.get_filename()
+            print("Open clicked")
+            print("File selected: " + dialog.get_filename())
         elif response == Gtk.ResponseType.CANCEL:
-            print "Cancel clicked"
+            print("Cancel clicked")
 
         dialog.destroy()
 
@@ -58,10 +58,10 @@ class FileChooserWindow(Gtk.Window):
 
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
-            print "Select clicked"
-            print "Folder selected: " + dialog.get_filename()
+            print("Select clicked")
+            print("Folder selected: " + dialog.get_filename())
         elif response == Gtk.ResponseType.CANCEL:
-            print "Cancel clicked"
+            print("Cancel clicked")
 
         dialog.destroy()
 

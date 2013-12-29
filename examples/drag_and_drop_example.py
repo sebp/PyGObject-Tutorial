@@ -95,15 +95,15 @@ class DropArea(Gtk.Label):
     def on_drag_data_received(self, widget, drag_context, x,y, data,info, time):
         if info == TARGET_ENTRY_TEXT:
             text = data.get_text()
-            print "Received text: %s" % text
+            print("Received text: %s" % text)
 
         elif info == TARGET_ENTRY_PIXBUF:
             pixbuf = data.get_pixbuf()
             width = pixbuf.get_width()
             height = pixbuf.get_height()
 
-            print "Received pixbuf with width %spx and height %spx" % (width,
-                height)
+            print("Received pixbuf with width %spx and height %spx" % (width,
+                height))
 
 win = DragDropWindow()
 win.connect("delete-event", Gtk.main_quit)

@@ -22,13 +22,13 @@ class ButtonWindow(Gtk.Window):
         hbox.pack_start(button, True, True, 0)
 
     def on_click_me_clicked(self, button):
-        print "\"Click me\" button was clicked"
+        print("\"Click me\" button was clicked")
 
     def on_open_clicked(self, button):
-        print "\"Open\" button was clicked"
+        print("\"Open\" button was clicked")
 
     def on_close_clicked(self, button):
-        print "Closing application"
+        print("Closing application")
         Gtk.main_quit()
 
 win = ButtonWindow()
