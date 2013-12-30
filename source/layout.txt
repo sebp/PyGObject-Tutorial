@@ -132,3 +132,36 @@ Example
 
 .. literalinclude:: ../examples/layout_listbox_example.py
     :linenos:
+
+Stack and StackSwitcher
+-----------------------
+
+A :class:`Gtk.Stack` is a container which only shows one of its children at a
+time. In contrast to :class:`Gtk.Notebook`, :class:`Gtk.Stack` does not provide
+a means for users to change the visible child. Instead, the
+:class:`Gtk.StackSwitcher` widget can be used with :class:`Gtk.Stack` to
+provide this functionality.
+
+Transitions between pages can be animated as slides or fades. This can be
+controlled with :meth:`Gtk.Stack.set_transition_type`. These animations respect
+the "gtk-enable-animations" setting.
+
+Transition speed can be adjusted with :meth:`Gtk.Stack.set_transition_duration`
+
+The :class:`Gtk.StackSwitcher` widget acts as a controller for a
+:class:`Gtk.Stack`; it shows a row of buttons to switch between the various
+pages of the associated stack widget.
+
+All the content for the buttons comes from the child properties of the
+:class:`Gtk.Stack`.
+
+It is possible to associate multiple :class:`Gtk.StackSwitcher` widgets with
+the same :class:`Gtk.Stack` widget.
+
+Example
+^^^^^^^
+
+.. image:: ../images/stack_example.png
+
+.. literalinclude:: ../examples/layout_stack_example.py
+    :linenos:
