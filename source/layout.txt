@@ -165,3 +165,27 @@ Example
 
 .. literalinclude:: ../examples/layout_stack_example.py
     :linenos:
+
+HeaderBar
+---------
+
+A :class:`Gtk.HeaderBar` is similar to a horizontal :class:`Gtk.Box`, it allows
+to place children at the start or the end. In addition, it allows a title to be
+displayed. The title will be centered with respect to the width of the box,
+even if the children at either side take up different amounts of space.
+
+Since GTK+ now supports Client Side Decoration, a :class:`Gtk.HeaderBar` can
+be used in place of the title bar (which is rendered by the Window Manager).
+
+A :class:`Gtk.HeaderBar` is usually located across the top of a window and
+should contain commonly used controls which affect the content below. They also
+provide access to window controls, including the close window button and window
+menu.
+
+Example
+^^^^^^^
+
+.. image:: ../images/headerbar_example.png
+
+.. literalinclude:: ../examples/layout_headerbar_example.py
+    :linenos:
