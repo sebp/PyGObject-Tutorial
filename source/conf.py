@@ -27,7 +27,12 @@ import sys, os
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.todo', 'sphinx.ext.intersphinx']
 
-intersphinx_mapping = {'gi': ('http://lazka.github.io/pgi-docs', None)}
+intersphinx_mapping = {
+    'glib': ('http://lazka.github.io/pgi-docs/GLib-2.0', None),
+    'gobject': ('http://lazka.github.io/pgi-docs/GObject-2.0', None),
+    'gio': ('http://lazka.github.io/pgi-docs/Gio-2.0', None),
+    'gtk': ('http://lazka.github.io/pgi-docs/Gtk-3.0', None),
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
