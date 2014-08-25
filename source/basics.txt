@@ -54,7 +54,7 @@ has been connected to.
     widget.disconnect(handler_id)
 
 If you have lost the "handler_id" for some reason (for example the handlers 
-were installed using :func:`Gtk.Builder.connect_sinals`), you can still 
+were installed using :func:`Gtk.Builder.connect_signals`), you can still 
 disconnect a  specific callback using the function :func:`disconnect_by_func`:
 
 .. code-block:: python
