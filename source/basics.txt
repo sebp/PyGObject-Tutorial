@@ -98,3 +98,12 @@ which is equivalent to
 Instead of using getters and setters you can also get and set the properties
 with ``widget.get_property("prop-name")`` and ``widget.set_property("prop-name",
 value)``, respectively.
+
+To see which properties are available for a widget in the running version of GTK you can "dir" the "props" property:
+
+.. code-block:: python
+
+    widget = Gtk.Box()
+    print(dir(widget.props))
+
+This will print in the cosole the list of properties a Gtk.Box has.
