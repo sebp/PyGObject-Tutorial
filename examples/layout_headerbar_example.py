@@ -8,7 +8,7 @@ class HeaderBarWindow(Gtk.Window):
         self.set_default_size(400, 200)
 
         hb = Gtk.HeaderBar()
-        hb.props.set_show_close_button(True)
+        hb.set_show_close_button(True)
         hb.props.title = "HeaderBar example"
         self.set_titlebar(hb)
 
