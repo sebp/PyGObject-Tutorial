@@ -189,3 +189,33 @@ Example
 
 .. literalinclude:: ../examples/layout_headerbar_example.py
     :linenos:
+
+FlowBox
+-------
+
+A :class:`Gtk.FlowBox` is a container that positions child widgets in sequence
+according to its orientation.
+
+For instance, with the horizontal orientation, the widgets will be arranged
+from left to right, starting a new row under the previous row when necessary.
+Reducing the width in this case will require more rows, so a larger height
+will be requested.
+
+Likewise, with the vertical orientation, the widgets will be arranged from top
+to bottom, starting a new column to the right when necessary. Reducing the
+height will require more columns, so a larger width will be requested.
+
+The children of a :class:`Gtk.FlowBox` can be dynamically sorted and filtered.
+
+Although a :class:`Gtk.FlowBox` must have only :class:`Gtk.FlowBoxChild`
+children, you can add any kind of widget to it via :meth:`Gtk.Container.add`,
+and a :class:`Gtk.FlowBoxChild` widget will automatically be inserted between
+the box and the widget.
+
+Example
+^^^^^^^
+
+.. image:: ../images/flowbox_example.png
+
+.. literalinclude:: ../examples/layout_flowbox_example.py
+    :linenos:
