@@ -113,7 +113,7 @@ them, :func:`Gtk.Button.get_label` and :func:`Gtk.Button.set_label`.
 Create new properties
 ^^^^^^^^^^^^^^^^^^^^^
 
-A property is defined with a name and a type. Even is python itself is
+A property is defined with a name and a type. Even if python itself is
 dynamically typed, you can't change the type of a property once it is defined. A
 property can be created using :func:`GObject.property`.
 
