@@ -99,6 +99,10 @@ You can also set a consistent spacing for all rows and/or columns with
 :meth:`Gtk.Table.set_row_spacings` and :meth:`Gtk.Table.set_col_spacings`.
 Note that with these calls, the last row and last column do not get any spacing.
 
+The Table layout has been deprecated since Gtk 3.4, though it still works with
+newer Gtk versions.  It is reccomened that you use the :class:`Gtk.Grid` for new
+code.
+
 Example
 ^^^^^^^
 
