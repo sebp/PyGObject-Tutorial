@@ -222,3 +222,24 @@ Example
 
 .. literalinclude:: ../examples/layout_flowbox_example.py
     :linenos:
+
+Notebook
+--------
+
+The :class:`Gtk.Notebook` widget is a :class:`Gtk.Container` whose children are pages that can be switched between using tab labels along one edge.
+
+There are many configuration options for GtkNotebook. Among other things, you
+can choose on which edge the tabs appear (see :meth:`Gtk.Notebook.set_tab_pos`),
+whether, if there are too many tabs to fit the notebook should be made bigger or
+scrolling arrows added (see :meth:`Gtk.Notebook.set_scrollable`, and whether
+there will be a popup menu allowing the users to switch pages (see
+:meth:`Gtk.Notebook.popup_enable`, :meth:`Gtk.Notebook.popup_disable`).
+
+Example
+^^^^^^^
+
+.. image:: ../images/notebook_plain_example.png
+
+.. literalinclude:: ../examples/notebook_plain_example.py
+    :linenos:
+
