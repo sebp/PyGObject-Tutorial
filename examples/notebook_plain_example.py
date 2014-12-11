@@ -18,11 +18,11 @@ class MyWindow(Gtk.Window):
         self.page2.set_border_width(10)
         self.page2.add(Gtk.Label('A page with an image for a Title.'))
         self.notebook.append_page(
-        	self.page2,
-        	Gtk.Image.new_from_icon_name(
-        		Gtk.STOCK_ABOUT,
-        		Gtk.IconSize.MENU
-        	)
+            self.page2,
+            Gtk.Image.new_from_icon_name(
+                Gtk.STOCK_ABOUT,
+                Gtk.IconSize.MENU
+            )
         )
 
 win = MyWindow()
