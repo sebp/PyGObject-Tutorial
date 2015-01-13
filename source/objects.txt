@@ -96,7 +96,7 @@ Properties
 ----------
 One of GObject's nice features is its generic get/set mechanism for object
 properties. Each class inherited from :class:`GObject.GObject` can define new
-properties. Each property as a type which never changes (e.g. str, float,
+properties. Each property has a type which never changes (e.g. str, float,
 int...). For instance, they are used for :class:`Gtk.Button` where there is a
 "label" property which contains the text of the button.
 
