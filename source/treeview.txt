@@ -299,9 +299,14 @@ Then the sort function has to be set by :meth:`Gtk.TreeSortable.set_sort_func`.
 
 Filtering
 -------
-Unlike sorting, filtering is not handled by the two models we previously saw, but by the :class:`Gtk.TreeModelFilter` class. This class, like :class:`Gtk.TreeStore` and :class:`Gtk.ListStore`, is a :class:`Gtk.TreeModel`. It acts as a layer between the "real" model (a :class:`Gtk.TreeStore` or a :class:`Gtk.ListStore`), hiding some elements to the view. In practice, it supplies the :class:`Gtk.TreeView` with a subset of the underlying model.
+Unlike sorting, filtering is not handled by the two models we previously saw, but by the :class:`Gtk.TreeModelFilter` class. This class, like :class:`Gtk.TreeStore` and :class:`Gtk.ListStore`, is a :class:`Gtk.TreeModel`. It acts as a layer between the "real" model (a :class:`Gtk.TreeStore` or a :class:`Gtk.ListStore`), hiding some elements to the view. In practice, it supplies the :class:`Gtk.TreeView` with a subset of the underlying model. Instances of :class:`Gtk.TreeModelFilter` can be stacked one onto another, to use multiple filters on the same model (in the same way you'd use "AND" clauses in a SQL request). They can also be chained with :class:`Gtk.TreeModelSort` instances.
 
 You can create a new instance of a :class:`Gtk.TreeModelFilter` and give it a model to filter, but the easiest way is to spawn it directly from the filtered model, using the :meth:`Gtk.TreeModel.filter_new` method.
+
+.. code-block:: python
+
+    filter = model.filter_new()
+
 In the same way the sorting function works, the :class:`Gtk.TreeModelFilter` needs a "visibility" function, which, given a row from the underlying model, will return a boolean indicating if this row should be filtered out or not. It's set by :meth:`Gtk.TreeSortable.set_visible_func`:
 
 .. code-block:: python
