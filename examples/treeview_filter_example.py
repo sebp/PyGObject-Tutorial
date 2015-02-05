@@ -33,6 +33,7 @@ class TreeViewFilterWindow(Gtk.Window):
 
         #Creating the filter, feeding it with the liststore model
         self.language_filter = self.software_liststore.filter_new()
+        #setting the filter function, note that we're not using the
         self.language_filter.set_visible_func(self.language_filter_func)
 
         #creating the treeview, making it use the filter as a model, and adding the columns
