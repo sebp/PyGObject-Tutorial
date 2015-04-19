@@ -55,7 +55,7 @@ Drag Source Signals
 +--------------------+--------------------------------------------------------------+----------------------------------------------------+
 | drag-data-delete   | When a drag with the action Gdk.DragAction.MOVE is completed | Delete data from the source to complete the 'move' |
 +--------------------+--------------------------------------------------------------+----------------------------------------------------+
-| drag-data-end      | When the drag is complete                                    | Undo anything done in drag-begin                   |
+| drag-end           | When the drag is complete                                    | Undo anything done in drag-begin                   |
 +--------------------+--------------------------------------------------------------+----------------------------------------------------+
 
 Drag Destination Signals
