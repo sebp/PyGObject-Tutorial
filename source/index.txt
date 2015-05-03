@@ -54,7 +54,6 @@ Contents:
    drag_and_drop
    builder
    objects
-   stock
 
 Indices and tables
 ==================

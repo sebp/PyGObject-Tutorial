@@ -8,9 +8,9 @@ class CellRendererPixbufWindow(Gtk.Window):
         self.set_default_size(200, 200)
 
         self.liststore = Gtk.ListStore(str, str)
-        self.liststore.append(["New", Gtk.STOCK_NEW])
-        self.liststore.append(["Open", Gtk.STOCK_OPEN])
-        self.liststore.append(["Save", Gtk.STOCK_SAVE])
+        self.liststore.append(["New", "document-new"])
+        self.liststore.append(["Open", "document-open"])
+        self.liststore.append(["Save", "document-save"])
 
         treeview = Gtk.TreeView(model=self.liststore)
 
@@ -20,7 +20,7 @@ class CellRendererPixbufWindow(Gtk.Window):
 
         renderer_pixbuf = Gtk.CellRendererPixbuf()
 
-        column_pixbuf = Gtk.TreeViewColumn("Image", renderer_pixbuf, stock_id=1)
+        column_pixbuf = Gtk.TreeViewColumn("Image", renderer_pixbuf, icon_name=1)
         treeview.append_column(column_pixbuf)
 
         self.add(treeview)

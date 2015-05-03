@@ -9,7 +9,7 @@ class ClipboardWindow(Gtk.Window):
 
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         self.entry = Gtk.Entry()
-        self.image = Gtk.Image.new_from_stock(Gtk.STOCK_STOP, Gtk.IconSize.MENU)
+        self.image = Gtk.Image.new_from_icon_name("process-stop", Gtk.IconSize.MENU)
 
         button_copy_text = Gtk.Button("Copy Text")
         button_paste_text = Gtk.Button("Paste Text")

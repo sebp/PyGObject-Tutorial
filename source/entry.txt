@@ -23,7 +23,7 @@ or :meth:`Gtk.Entry.progress_pulse`.
 
 Additionally, an Entry can show icons at either side of the entry. These icons
 can be activatable by clicking, can be set up as drag source and can have tooltips.
-To add an icon, use :meth:`Gtk.Entry.set_icon_from_stock`
+To add an icon, use :meth:`Gtk.Entry.set_icon_from_icon_name`
 or one of the various other functions that set an icon from an icon name, a pixbuf,
 or icon theme. To set a tooltip on an icon, use
 :meth:`Gtk.Entry.set_icon_tooltip_text` or the corresponding function for markup. 

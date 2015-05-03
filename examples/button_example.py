@@ -9,15 +9,15 @@ class ButtonWindow(Gtk.Window):
         hbox = Gtk.Box(spacing=6)
         self.add(hbox)
 
-        button = Gtk.Button("Click Me")
+        button = Gtk.Button.new_with_label("Click Me")
         button.connect("clicked", self.on_click_me_clicked)
         hbox.pack_start(button, True, True, 0)
 
-        button = Gtk.Button(stock=Gtk.STOCK_OPEN)
+        button = Gtk.Button.new_with_mnemonic("_Open")
         button.connect("clicked", self.on_open_clicked)
         hbox.pack_start(button, True, True, 0)
 
-        button = Gtk.Button("_Close", use_underline=True)
+        button = Gtk.Button.new_with_mnemonic("_Close")
         button.connect("clicked", self.on_close_clicked)
         hbox.pack_start(button, True, True, 0)
 

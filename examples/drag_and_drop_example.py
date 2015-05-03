@@ -60,8 +60,8 @@ class DragSourceIconView(Gtk.IconView):
 
         model = Gtk.ListStore(str, GdkPixbuf.Pixbuf)
         self.set_model(model)
-        self.add_item("Item 1", "image")
-        self.add_item("Item 2", "gtk-about")
+        self.add_item("Item 1", "image-missing")
+        self.add_item("Item 2", "help-about")
         self.add_item("Item 3", "edit-copy")
 
         self.enable_model_drag_source(Gdk.ModifierType.BUTTON1_MASK, [],
