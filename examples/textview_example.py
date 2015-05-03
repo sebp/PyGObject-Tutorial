@@ -36,13 +36,16 @@ class TextViewWindow(Gtk.Window):
         toolbar = Gtk.Toolbar()
         self.grid.attach(toolbar, 0, 0, 3, 1)
 
-        button_bold = Gtk.ToolButton.new_from_stock(Gtk.STOCK_BOLD)
+        button_bold = Gtk.ToolButton()
+        button_bold.set_icon_name("format-text-bold-symbolic")
         toolbar.insert(button_bold, 0)
 
-        button_italic = Gtk.ToolButton.new_from_stock(Gtk.STOCK_ITALIC)
+        button_italic = Gtk.ToolButton()
+        button_italic.set_icon_name("format-text-italic-symbolic")
         toolbar.insert(button_italic, 1)
 
-        button_underline = Gtk.ToolButton.new_from_stock(Gtk.STOCK_UNDERLINE)
+        button_underline = Gtk.ToolButton()
+        button_underline.set_icon_name("format-text-underline-symbolic")
         toolbar.insert(button_underline, 2)
 
         button_bold.connect("clicked", self.on_button_clicked, self.tag_bold)
@@ -54,19 +57,19 @@ class TextViewWindow(Gtk.Window):
         toolbar.insert(Gtk.SeparatorToolItem(), 3)
 
         radio_justifyleft = Gtk.RadioToolButton()
-        radio_justifyleft.set_stock_id(Gtk.STOCK_JUSTIFY_LEFT)
+        radio_justifyleft.set_icon_name("format-justify-left-symbolic")
         toolbar.insert(radio_justifyleft, 4)
 
-        radio_justifycenter = Gtk.RadioToolButton.new_with_stock_from_widget(
-            radio_justifyleft, Gtk.STOCK_JUSTIFY_CENTER)
+        radio_justifycenter = Gtk.RadioToolButton.new_from_widget(radio_justifyleft)
+        radio_justifycenter.set_icon_name("format-justify-center-symbolic")
         toolbar.insert(radio_justifycenter, 5)
 
-        radio_justifyright = Gtk.RadioToolButton.new_with_stock_from_widget(
-            radio_justifyleft, Gtk.STOCK_JUSTIFY_RIGHT)
+        radio_justifyright = Gtk.RadioToolButton.new_from_widget(radio_justifyleft)
+        radio_justifyright.set_icon_name("format-justify-right-symbolic")
         toolbar.insert(radio_justifyright, 6)
 
-        radio_justifyfill = Gtk.RadioToolButton.new_with_stock_from_widget(
-            radio_justifyleft, Gtk.STOCK_JUSTIFY_FILL)
+        radio_justifyfill = Gtk.RadioToolButton.new_from_widget(radio_justifyleft)
+        radio_justifyfill.set_icon_name("format-justify-fill-symbolic")
         toolbar.insert(radio_justifyfill, 7)
 
         radio_justifyleft.connect("toggled", self.on_justify_toggled,
@@ -80,13 +83,15 @@ class TextViewWindow(Gtk.Window):
 
         toolbar.insert(Gtk.SeparatorToolItem(), 8)
 
-        button_clear = Gtk.ToolButton.new_from_stock(Gtk.STOCK_CLEAR)
+        button_clear = Gtk.ToolButton()
+        button_clear.set_icon_name("edit-clear-symbolic")
         button_clear.connect("clicked", self.on_clear_clicked)
         toolbar.insert(button_clear, 9)
 
         toolbar.insert(Gtk.SeparatorToolItem(), 10)
 
-        button_search = Gtk.ToolButton.new_from_stock(Gtk.STOCK_FIND)
+        button_search = Gtk.ToolButton()
+        button_search.set_icon_name("system-search-symbolic")
         button_search.connect("clicked", self.on_search_clicked)
         toolbar.insert(button_search, 11)
 

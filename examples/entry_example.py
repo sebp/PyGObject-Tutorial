@@ -63,11 +63,11 @@ class EntryWindow(Gtk.Window):
 
     def on_icon_toggled(self, button):
         if button.get_active():
-            stock_id = Gtk.STOCK_FIND
+            icon_name = "system-search-symbolic"
         else:
-            stock_id = None
-        self.entry.set_icon_from_stock(Gtk.EntryIconPosition.PRIMARY,
-            stock_id)
+            icon_name = None
+        self.entry.set_icon_from_icon_name(Gtk.EntryIconPosition.PRIMARY,
+            icon_name)
 
 win = EntryWindow()
 win.connect("delete-event", Gtk.main_quit)
