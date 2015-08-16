@@ -1,7 +1,7 @@
 from gi.repository import Gtk
 from gi.repository.GdkPixbuf import Pixbuf
 
-icons = ["gtk-cut", "gtk-paste", "gtk-copy"]
+icons = ["edit-cut", "edit-paste", "edit-copy"]
 
 class IconViewWindow(Gtk.Window):
 

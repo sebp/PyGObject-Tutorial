@@ -9,5 +9,7 @@ Similarly to :class:`Gtk.TreeView`, :class:`Gtk.IconView` uses a :class:`Gtk.Lis
 Example
 _______
 
+.. image:: ../images/iconview_example.png
+
 .. literalinclude:: ../examples/iconview_example.py
 	:linenos:
