@@ -14,7 +14,7 @@ in many ways, including:
     * Filtering of data
 
 With the power and flexibility of a :class:`Gtk.TreeView` comes complexity. It
-is often difficult for beginner developers to be able to utilize correctly due
+is often difficult for beginner developers to be able to utilize it correctly due
 to the number of methods which are required.
 
 The Model
@@ -55,7 +55,7 @@ Both methods return a :class:`Gtk.TreeIter` instance, which points to the locati
 of the newly inserted row. You can retrieve a :class:`Gtk.TreeIter` by calling
 :meth:`Gtk.TreeModel.get_iter`.
 
-Once, data has been inserted you can retrieve or modify data using the tree iter
+Once data has been inserted, you can retrieve or modify data using the tree iter
 and column index.
 
 .. code-block:: python
