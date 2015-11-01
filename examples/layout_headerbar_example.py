@@ -3,7 +3,7 @@ from gi.repository import Gtk, Gio
 class HeaderBarWindow(Gtk.Window):
 
     def __init__(self):
-        Gtk.Window.__init__(self, title="Stack Demo")
+        Gtk.Window.__init__(self, title="HeaderBar Demo")
         self.set_border_width(10)
         self.set_default_size(400, 200)
 
