@@ -48,12 +48,12 @@ Contents:
    combobox
    iconview
    textview
-   menus
    dialogs
    clipboard
    drag_and_drop
    builder
    objects
+   application
 
 Indices and tables
 ==================
