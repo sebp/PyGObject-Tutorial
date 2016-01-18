@@ -95,9 +95,10 @@ which is equivalent to
     label.set_angle(25)
     label.set_halign(Gtk.Align.END)
 
-Instead of using getters and setters you can also get and set the properties
-with ``widget.get_property("prop-name")`` and ``widget.set_property("prop-name",
-value)``, respectively.
+Instead of using getters and setters you can also get and set the gobject properties
+through the "props" property such as ``widget.props.prop_name = value``.
+This is equivelent to the more verbose ``widget.get_property("prop-name")`` and
+``widget.set_property("prop-name", value)``.
 
 To see which properties are available for a widget in the running version of GTK you can "dir" the "props" property:
 
