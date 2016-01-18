@@ -1,0 +1,19 @@
+Accelerators
+==============
+
+
+AccelGroup
+------
+
+The Gtk.AccelGroup represents a group of keyboard accelerators, typically
+attached to a toplevel :class:`Gtk.Window`.
+
+Accelerators are shortcuts for activating a menu item; they appear alongside
+the menu item they’re a shortcut for. For example “Ctrl+Q” might appear alongside
+the “Quit” menu item. Not to be confused with Mnemonics.
+
+Example
+^^^^^^^
+
+.. literalinclude:: ../examples/accelerator_example.py
+    :linenos:
