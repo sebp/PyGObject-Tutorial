@@ -1,17 +1,23 @@
 from gi.repository import Gtk
 
+class ListBoxRowWithData(Gtk.ListBoxRow):
+    def __init__(self, data):
+        super(Gtk.ListBoxRow, self).__init__()
+        self.data = data
+        self.add(Gtk.Label(data))
+
 class ListBoxWindow(Gtk.Window):
 
     def __init__(self):
         Gtk.Window.__init__(self, title="ListBox Demo")
         self.set_border_width(10)
 
-        hbox = Gtk.Box(spacing=6)
-        self.add(hbox)
+        box_outer = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        self.add(box_outer)
 
         listbox = Gtk.ListBox()
         listbox.set_selection_mode(Gtk.SelectionMode.NONE)
-        hbox.pack_start(listbox, True, True, 0)
+        box_outer.pack_start(listbox, True, True, 0)
 
         row = Gtk.ListBoxRow()
         hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=50)
@@ -52,6 +58,25 @@ class ListBoxWindow(Gtk.Window):
 
         listbox.add(row)
 
+        listbox_2 = Gtk.ListBox()
+        items = 'This is a sorted ListBox Fail'.split()
+
+        for item in items:
+            listbox_2.add(ListBoxRowWithData(item))
+
+        def sort_func(row_1, row_2, data, notify_destroy):
+            return row_1.data.lower() > row_2.data.lower()
+
+        def filter_func(row, data, notify_destroy):
+            return False if row.data == 'Fail' else True
+
+        listbox_2.set_sort_func(sort_func, None, False)
+        listbox_2.set_filter_func(filter_func, None, False)
+
+        listbox_2.connect('row-activated', lambda widget, row: print(row.data))
+        
+        box_outer.pack_start(listbox_2, True, True, 0)
+        listbox_2.show_all()
 
 win = ListBoxWindow()
 win.connect("delete-event", Gtk.main_quit)
