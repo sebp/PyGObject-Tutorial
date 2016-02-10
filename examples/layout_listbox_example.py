@@ -12,12 +12,12 @@ class ListBoxWindow(Gtk.Window):
         Gtk.Window.__init__(self, title="ListBox Demo")
         self.set_border_width(10)
 
-        hbox_outer = Gtk.VBox(spacing=6)
-        self.add(hbox_outer)
+        box_outer = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        self.add(box_outer)
 
         listbox = Gtk.ListBox()
         listbox.set_selection_mode(Gtk.SelectionMode.NONE)
-        hbox_outer.pack_start(listbox, True, True, 0)
+        box_outer.pack_start(listbox, True, True, 0)
 
         row = Gtk.ListBoxRow()
         hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=50)
@@ -75,9 +75,8 @@ class ListBoxWindow(Gtk.Window):
 
         listbox_2.connect('row-activated', lambda widget, row: print(row.data))
         
-        hbox_outer.pack_start(listbox_2, True, True, 0)
+        box_outer.pack_start(listbox_2, True, True, 0)
         listbox_2.show_all()
-
 
 win = ListBoxWindow()
 win.connect("delete-event", Gtk.main_quit)
