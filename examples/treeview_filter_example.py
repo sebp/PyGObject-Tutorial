@@ -1,3 +1,5 @@
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 #list of tuples for each software, containing the software name, initial release, and main programming languages used
