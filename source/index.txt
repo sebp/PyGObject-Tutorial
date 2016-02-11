@@ -48,12 +48,17 @@ Contents:
    combobox
    iconview
    textview
-   menus
    dialogs
    clipboard
    drag_and_drop
    builder
    objects
+   application
+
+.. toctree::
+   :caption: Deprecated
+
+   menus
 
 Indices and tables
 ==================
