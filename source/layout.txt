@@ -23,7 +23,7 @@ There are two flavours of containers: single-child
 containers, which are all descendants of :class:`Gtk.Bin`, and multiple-child
 containers, which are descendants of :class:`Gtk.Container`.
 The most commonly used are vertical or horizontal boxes
-(:class:`Gtk.Box`), tables (:class:`Gtk.Table`) and grids (:class:`Gtk.Grid`).
+(:class:`Gtk.Box`) and grids (:class:`Gtk.Grid`).
 
 Boxes
 -----
@@ -61,6 +61,8 @@ Subsequently, we add two different buttons to the box container.
 While with :meth:`Gtk.Box.pack_start` widgets are positioned from left to right,
 :meth:`Gtk.Box.pack_end` positions them from right to left.
 
+.. _layout-grid:
+
 Grid
 ----
 :class:`Gtk.Grid` is a container which arranges its child widgets in rows and
@@ -80,34 +82,6 @@ Example
 .. image:: ../images/layout_grid_example.png
 
 .. literalinclude:: ../examples/layout_grid_example.py
-    :linenos:
-
-Table
------
-
-Tables allows us to place widgets in a grid similar to :class:`Gtk.Grid`.
-
-The grid's dimensions need to be specified in the :class:`Gtk.Table` constructor.
-To place a widget into a box, use :meth:`Gtk.Table.attach`.
-
-:meth:`Gtk.Table.set_row_spacing` and
-:meth:`Gtk.Table.set_col_spacing` set the spacing between the rows at the
-specified row or column. Note that for columns, the space goes to the right
-of the column, and for rows, the space goes below the row.
-
-You can also set a consistent spacing for all rows and/or columns with
-:meth:`Gtk.Table.set_row_spacings` and :meth:`Gtk.Table.set_col_spacings`.
-Note that with these calls, the last row and last column do not get any spacing.
-
-.. deprecated:: 3.4
-   It is reccomened that you use the :class:`Gtk.Grid` for new code.
-
-Example
-^^^^^^^
-
-.. image:: ../images/layout_table_example.png
-
-.. literalinclude:: ../examples/layout_table_example.py
     :linenos:
 
 ListBox

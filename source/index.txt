@@ -57,8 +57,10 @@ Contents:
 
 .. toctree::
    :caption: Deprecated
+   :maxdepth: 1
 
    menus
+   layout-table
 
 Indices and tables
 ==================

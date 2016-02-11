@@ -1,0 +1,32 @@
+Table
+-----
+
+.. note:: :class:`Gtk.Table`
+  has been deprecated since GTK+ version 3.4 and should not be used in
+  newly-written code. Use the :ref:`layout-grid` class instead.
+
+Tables allows us to place widgets in a grid similar to :class:`Gtk.Grid`.
+
+The grid's dimensions need to be specified in the :class:`Gtk.Table` constructor.
+To place a widget into a box, use :meth:`Gtk.Table.attach`.
+
+:meth:`Gtk.Table.set_row_spacing` and
+:meth:`Gtk.Table.set_col_spacing` set the spacing between the rows at the
+specified row or column. Note that for columns, the space goes to the right
+of the column, and for rows, the space goes below the row.
+
+You can also set a consistent spacing for all rows and/or columns with
+:meth:`Gtk.Table.set_row_spacings` and :meth:`Gtk.Table.set_col_spacings`.
+Note that with these calls, the last row and last column do not get any spacing.
+
+.. deprecated:: 3.4
+   It is reccomened that you use the :class:`Gtk.Grid` for new code.
+
+Example
+^^^^^^^
+
+.. image:: ../images/layout_table_example.png
+
+.. literalinclude:: ../examples/layout_table_example.py
+    :linenos:
+
