@@ -60,7 +60,7 @@ and column index.
 
 .. code-block:: python
 
-    print store[treeiter][2] # Prints value of third column
+    print(store[treeiter][2]) # Prints value of third column
     store[treeiter][2] = 42.15
 
 As with Python's built-in :class:`list` object you can use :func:`len` to get the number
@@ -69,11 +69,11 @@ of rows and use slices to retrieve or set values.
 .. code-block:: python
 
     # Print number of rows
-    print len(store)
+    print(len(store))
     # Print all but first column
-    print store[treeiter][1:]
+    print(store[treeiter][1:])
     # Print last column
-    print store[treeiter][-1]
+    print(store[treeiter][-1])
     # Set first two columns
     store[treeiter][:2] = ["Donald Ervin Knuth", 41.99]
 
@@ -83,7 +83,7 @@ Iterating over all rows of a tree model is very simple as well.
 
     for row in store:
         # Print values of all columns
-        print row[:]
+        print(row[:])
 
 Keep in mind, that if you use :class:`Gtk.TreeStore`, the above code will only
 iterate over the rows of the top level, but not the children of the nodes.
@@ -97,7 +97,7 @@ To iterate over all rows and its children, use the ``print_tree_store`` function
 
     def print_rows(store, treeiter, indent):
         while treeiter != None:
-            print indent + str(store[treeiter][:])
+            print(indent + str(store[treeiter][:]))
             if store.iter_has_child(treeiter):
                 childiter = store.iter_children(treeiter)
                 print_rows(store, childiter, indent + "\t")
@@ -207,7 +207,7 @@ Then to retrieve data for the row selected:
     def on_tree_selection_changed(selection):
         model, treeiter = selection.get_selected()
         if treeiter != None:
-            print "You selected", model[treeiter][0]
+            print("You selected", model[treeiter][0])
 
 You can control what selections are allowed by calling
 :meth:`Gtk.TreeSelection.set_mode`.

@@ -95,7 +95,7 @@ When the button is pressed we would like to print the string "Hello World!", so 
 .. code-block:: python
 
     def hello(button):
-        print "Hello World!"
+        print("Hello World!")
 
 Next, we have to connect the signals and the handler functions.
 The easiest way to do this is to define a *dict* with a mapping from the names to the handlers and then pass it to the :meth:`Gtk.Builder.connect_signals` method.

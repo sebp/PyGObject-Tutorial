@@ -70,7 +70,7 @@ called each time the signal is emitted. It is called do_signal_name.
         }
 
         def do_my_signal(self, arg):
-            print "class method for `my_signal' called with argument", arg
+            print("class method for `my_signal' called with argument", arg)
 
 :const:`GObject.SIGNAL_RUN_FIRST` indicates that this signal will invoke the object method
 handler (:meth:`do_my_signal` here) in the first emission stage. Alternatives are
@@ -164,8 +164,8 @@ You can get this property using:
 .. code-block:: python
 
     my_object = MyObject()
-    print my_object.readonly
-    print my_object.get_property("readonly")
+    print(my_object.readonly)
+    print(my_object.get_property("readonly"))
 
 There is also a way to define minimum and maximum values for numbers, using a more verbose form:
 
@@ -217,7 +217,7 @@ When a property is modified, a signal is emitted, whose name is
     my_object = MyObject()
 
     def on_notify_foo(obj, gparamstring):
-        print "foo changed"
+        print("foo changed")
 
     my_object.connect("notify::foo", on_notify_foo)
 
