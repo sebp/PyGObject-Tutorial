@@ -70,4 +70,5 @@ See Also
 
 - https://wiki.gnome.org/HowDoI/GtkApplication
 - https://wiki.gnome.org/HowDoI/GAction
+- https://wiki.gnome.org/HowDoI/ApplicationMenu
 - https://wiki.gnome.org/HowDoI/GMenu
