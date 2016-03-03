@@ -60,6 +60,8 @@ unless you use `NON_UNIQUE` to allow multiple instances.
 Example
 -------
 
+.. image:: ../images/application_example.png
+
 .. literalinclude:: ../examples/application_example.py
     :linenos:
 
