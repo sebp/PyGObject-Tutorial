@@ -17,36 +17,36 @@ This program will create an empty 200 x 200 pixel window.
 We will now explain each line of the example.
 
 .. literalinclude:: ../examples/simple_example.py
-    :lines: 1
+    :lines: 1-3
 
-The first line of all Python programs should start with ``#!`` followed
-by the path to the Python interpreter you want to invoke.
+In the beginning, we have to import the Gtk module to be able to
+access GTK+'s classes and functions.
+Since a user's system can have multiple versions of GTK+ installed at the same,
+we want to make sure that we when we import Gtk that it referrs to GTK+ 3
+and not any other version of the library, which is the purpose
+of statement ``gi.require_version('Gtk', '3.0')``.
 
-.. literalinclude:: ../examples/simple_example.py
-    :lines: 2
-
-In order to access GTK+ classes and functions we first must import the Gtk module.
 The next line creates an empty window.
 
 .. literalinclude:: ../examples/simple_example.py
-    :lines: 4
+    :lines: 5
 
 Followed by connecting to the window's delete event to ensure that the
 application is terminated if we click on the *x* to close the window.
 
 .. literalinclude:: ../examples/simple_example.py
-    :lines: 5
+    :lines: 6
 
 In the next step we display the window.
 
 .. literalinclude:: ../examples/simple_example.py
-    :lines: 6
+    :lines: 7
 
 Finally, we start the GTK+ processing loop which we quit when the window is
 closed (see line 5).
 
 .. literalinclude:: ../examples/simple_example.py
-    :lines: 7
+    :lines: 8
 
 To run the program, open a terminal, change to the directory of the file, and
 enter::
@@ -67,24 +67,24 @@ This example differs from the simple example as we sub-class :class:`Gtk.Window`
 :class:`MyWindow` class.
 
 .. literalinclude:: ../examples/extended_example.py
-    :lines: 4
+    :lines: 5
 
 In the class's constructor we have to call the constructor of the super class. In addition,
 we tell it to set the value of the property `title` to `Hello World`.
 
 .. literalinclude:: ../examples/extended_example.py
-    :lines: 7
+    :lines: 8
 
 The next three lines are used to create a button widget, connect to its `clicked` signal and
 add it as child to the top-level window.
 
 .. literalinclude:: ../examples/extended_example.py
-    :lines: 9-12
+    :lines: 10-12
 
 Accordingly, the method :meth:`on_button_clicked` will be called if you click on the button.
 
 .. literalinclude:: ../examples/extended_example.py
-    :lines: 13-15
+    :lines: 14-15
 
 The last block, outside of the class, is very similar to the simple example above,
 but instead of creating an instance of the generic :class:`Gtk.Window` class, we create
