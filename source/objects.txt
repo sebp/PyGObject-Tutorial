@@ -115,7 +115,7 @@ Create new properties
 
 A property is defined with a name and a type. Even if python itself is
 dynamically typed, you can't change the type of a property once it is defined. A
-property can be created using :func:`GObject.property`.
+property can be created using :class:`GObject.Property`.
 
 .. code-block:: python
 
@@ -123,8 +123,8 @@ property can be created using :func:`GObject.property`.
 
     class MyObject(GObject.GObject):
 
-        foo = GObject.property(type=str, default='bar')
-        property_float = GObject.property(type=float)
+        foo = GObject.Property(type=str, default='bar')
+        property_float = GObject.Property(type=float)
         def __init__(self):
             GObject.GObject.__init__(self)
 
@@ -139,12 +139,12 @@ Flags are :const:`GObject.PARAM_READABLE` (only read access for external code),
 
 .. code-block:: python
 
-    foo = GObject.property(type=str, flags = GObject.PARAM_READABLE) # not writable
-    bar = GObject.property(type=str, flags = GObject.PARAM_WRITABLE) # not readable
+    foo = GObject.Property(type=str, flags = GObject.PARAM_READABLE) # not writable
+    bar = GObject.Property(type=str, flags = GObject.PARAM_WRITABLE) # not readable
 
 
 You can also define new read-only properties with a new method decorated with
-:func:`GObject.property`:
+:class:`GObject.Property`:
 
 .. code-block:: python
 
@@ -155,7 +155,7 @@ You can also define new read-only properties with a new method decorated with
         def __init__(self):
             GObject.GObject.__init__(self)
 
-        @GObject.property
+        @GObject.Property
         def readonly(self):
             return 'This is read-only.'
 
@@ -166,6 +166,27 @@ You can get this property using:
     my_object = MyObject()
     print(my_object.readonly)
     print(my_object.get_property("readonly"))
+
+The API of :class:`GObject.Property` is similar to the builtin :py:func:`property`. You can create property setter in a way similar to Python property:
+
+.. code-block:: python
+
+    class AnotherObject(GObject.Object):
+        value = 0
+
+        @GObject.Property
+        def prop(self):
+            'Read only property.'
+            return 1
+
+        @GObject.Property(type=int)
+        def propInt(self):
+            'Read-write integer property.'
+            return self.value
+
+        @propInt.setter
+        def propInt(self, value):
+            self.value = value
 
 There is also a way to define minimum and maximum values for numbers, using a more verbose form:
 
