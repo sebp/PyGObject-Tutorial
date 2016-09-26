@@ -9,7 +9,7 @@ The :class:`GObject.GObject` class provides methods for object construction and 
 property access methods, and signal support.
 
 This section will introduce some important aspects about the GObject
-implementation in python.
+implementation in Python.
 
 Inherit from GObject.GObject
 ----------------------------
@@ -113,7 +113,7 @@ them, :func:`Gtk.Button.get_label` and :func:`Gtk.Button.set_label`.
 Create new properties
 ^^^^^^^^^^^^^^^^^^^^^
 
-A property is defined with a name and a type. Even if python itself is
+A property is defined with a name and a type. Even if Python itself is
 dynamically typed, you can't change the type of a property once it is defined. A
 property can be created using :class:`GObject.Property`.
 
@@ -135,7 +135,7 @@ Flags are :const:`GObject.PARAM_READABLE` (only read access for external code),
 :const:`GObject.PARAM_READWRITE` (public):
 
 .. there is also construct things, but they
-.. doesn't seem to be functional in python
+.. doesn't seem to be functional in Python
 
 .. code-block:: python
 
@@ -246,7 +246,7 @@ When a property is modified, a signal is emitted, whose name is
 
 
 Note that you have to use the canonical property name when connecting to the notify signals, as explained in
-:func:`GObject.Object.signals.notify`. For instance, for a python property `foo_bar_baz` you would connect to
+:func:`GObject.Object.signals.notify`. For instance, for a Python property `foo_bar_baz` you would connect to
 the signal `notify::foo-bar-baz` using
 
 .. code-block:: python
