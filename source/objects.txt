@@ -210,7 +210,7 @@ Watch properties
 ^^^^^^^^^^^^^^^^
 
 When a property is modified, a signal is emitted, whose name is
-"notify::property_name":
+"notify::property-name":
 
 .. code-block:: python
 
@@ -222,6 +222,21 @@ When a property is modified, a signal is emitted, whose name is
     my_object.connect("notify::foo", on_notify_foo)
 
     my_object.set_property("foo", "bar") # on_notify_foo will be called
+
+
+Note that you have to use the canonical property name when connecting to the notify signals, as explained in
+:func:`GObject.Object.signals.notify`. For instance, for a python property `foo_bar_baz` you would connect to
+the signal `notify::foo-bar-baz` using
+
+.. code-block:: python
+
+    my_object = MyObject()
+
+    def on_notify_foo_bar_baz(obj, gparamstring):
+        print("foo_bar_baz changed")
+
+    my_object.connect("notify::foo-bar-baz", on_notify_foo_bar_baz)
+
 
 API
 ---
