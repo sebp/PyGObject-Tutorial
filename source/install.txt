@@ -42,7 +42,7 @@ by running::
 
 It will print any applications and libraries that are currently missing on your
 system but required for building. You should install those using your distribution's
-package repository. A list of `package names <http://live.gnome.org/JhbuildDependencies>`_
+package repository. A list of `package names <https://wiki.gnome.org/action/show/Projects/Jhbuild/Dependencies>`_
 for different distributions is maintained on the GNOME wiki.
 Run the command above again to ensure the required tools are present.
 
@@ -58,9 +58,9 @@ To start a shell with the same environment as used by JHBuild, run::
 
     $ jhbuild shell
 
-.. _PyGObject: https://live.gnome.org/PyGObject
+.. _PyGObject: https://wiki.gnome.org/action/show/Projects/PyGObject
 .. _PyGTK: http://www.pygtk.org
-.. _JHBuild: https://live.gnome.org/Jhbuild
-.. _JHBuild manual: http://library.gnome.org/devel/jhbuild/unstable/
+.. _JHBuild: https://wiki.gnome.org/action/show/Projects/Jhbuild
+.. _JHBuild manual: https://developer.gnome.org/jhbuild/unstable/
 
-.. [#] http://download.gnome.org/teams/releng/
+.. [#] https://download.gnome.org/teams/releng/

@@ -28,10 +28,10 @@ import sys, os
 extensions = ['sphinx.ext.todo', 'sphinx.ext.intersphinx']
 
 intersphinx_mapping = {
-    'glib': ('http://lazka.github.io/pgi-docs/GLib-2.0', None),
-    'gobject': ('http://lazka.github.io/pgi-docs/GObject-2.0', None),
-    'gio': ('http://lazka.github.io/pgi-docs/Gio-2.0', None),
-    'gtk': ('http://lazka.github.io/pgi-docs/Gtk-3.0', None),
+    'glib': ('https://lazka.github.io/pgi-docs/GLib-2.0', None),
+    'gobject': ('https://lazka.github.io/pgi-docs/GObject-2.0', None),
+    'gio': ('https://lazka.github.io/pgi-docs/Gio-2.0', None),
+    'gtk': ('https://lazka.github.io/pgi-docs/Gtk-3.0', None),
 }
 
 # Add any paths that contain templates here, relative to this directory.
