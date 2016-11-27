@@ -52,7 +52,7 @@ Executing the following command will build PyGObject and all its dependencies::
 
 Finally, you might want to install GTK+ from source as well::
 
-    $ jhbuild build gtk+
+    $ jhbuild build gtk+-3
 
 To start a shell with the same environment as used by JHBuild, run::
 
