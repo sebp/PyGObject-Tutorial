@@ -113,7 +113,7 @@ In our example the last code snippet could be rewritten as:
 
 .. literalinclude:: ../examples/builder_example.py
     :linenos:
-    :lines: 3-12
+    :lines: 3-11,14
 
 Example
 -------
