@@ -1,0 +1,298 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-10 09:47\n"
+"PO-Revision-Date: 2017-01-05 11:29+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 0eb0e59dc379423e813ec35a3e2af963
+#: ../source/drag_and_drop.txt:2
+msgid "Drag and Drop"
+msgstr ""
+
+# 35375cd0e73c415a9f4751cd99baf221
+#: ../source/drag_and_drop.txt:4
+msgid "Versions of PyGObject < 3.0.3 contain a bug which does not allow drag and drop to function correctly. Therefore a version of PyGObject >= 3.0.3 is required for the following examples to work."
+msgstr ""
+
+# d639de0df31647549360facff0766424
+#: ../source/drag_and_drop.txt:8
+msgid "Setting up drag and drop between widgets consists of selecting a drag source (the widget which the user starts the drag from) with the :meth:`Gtk.Widget.drag_source_set` method, selecting a drag destination (the widget which the user drops onto) with the :meth:`Gtk.Widget.drag_dest_set` method and then handling the relevant signals on both widgets."
+msgstr ""
+
+# 73df05c2477744d38c0382195be41280
+#: ../source/drag_and_drop.txt:14
+msgid "Instead of using :meth:`Gtk.Widget.drag_source_set` and :meth:`Gtk.Widget.drag_dest_set` some specialised widgets require the use of specific functions (such as :class:`Gtk.TreeView` and :class:`Gtk.IconView`)."
+msgstr ""
+
+# 0fbec61e952d4c19b0b4b7040c0cf790
+#: ../source/drag_and_drop.txt:18
+msgid "A basic drag and drop only requires the source to connect to the \"drag-data-get\" signal and the destination to connect to the \"drag-data-received\" signal. More complex things such as specific drop areas and custom drag icons will require you to connect to :ref:`additional signals <drag-signals>` and interact with the :class:`Gdk.DragContext` object it supplies."
+msgstr ""
+
+# 0e102a85c2164407a00f72c4235d81cb
+#: ../source/drag_and_drop.txt:24
+msgid "In order to transfer data between the source and destination, you must interact with the :class:`Gtk.SelectionData` variable supplied in the :ref:`\"drag-data-get\" <drag-signals>` and :ref:`\"drag-data-received\" <drag-signals>` signals using the :class:`Gtk.SelectionData` get and set methods."
+msgstr ""
+
+# c60d7d4382dc4e8ab7edf41c158384d5
+#: ../source/drag_and_drop.txt:30
+msgid "Target Entries"
+msgstr ""
+
+# 2343c81413904a96ac08aba236e45e6e
+#: ../source/drag_and_drop.txt:31
+msgid "To allow the drag source and destination to know what data they are receiving and sending, a common list of :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` are required. A :class:`Gtk.TargetEntry` describes a piece of data that will be sent by the drag source and received by the drag destination."
+msgstr ""
+
+# db53c619d48a49249668ad592d23aff8
+#: ../source/drag_and_drop.txt:36
+msgid "There are two ways of adding :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` to a source and destination. If the drag and drop is simple and each target entry is of a different type, you can use the group of methods :meth:`mentioned here <Gtk.Widget.drag_source_add_text_targets>`."
+msgstr ""
+
+# d26ecefd1afc48bfb86fc4ec50f94248
+#: ../source/drag_and_drop.txt:41
+msgid "If you require more than one type of data or wish to do more complex things with the data, you will need to create the :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` using the :meth:`Gtk.TargetEntry.new` method."
+msgstr ""
+
+# 2dd99d8e52dd41ceadc788fd82e5bd22
+#: ../source/drag_and_drop.txt:46
+msgid "Drag and Drop Methods and Objects"
+msgstr ""
+
+# 3f250ff19916476fadbb09c6dd075735
+#: ../source/drag_and_drop.txt:51
+msgid "Sets the widget to be a drag source."
+msgstr ""
+
+# b809fb2db2cb42ebb39927f48ce60b13
+#: ../source/drag_and_drop.txt:53
+msgid "*start_button_mask* are a combination of :attr:`Gdk.ModifierType` masks which sets which buttons must be pressed for a drag to occur. *targets* is a list of :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` which describe the data to be passed between source and destination. *actions* are a combination :attr:`Gdk.DragAction` masks to show possible drag actions."
+msgstr ""
+
+# e8358cb62e894f4c99b733a303868c8c
+#: ../source/drag_and_drop.txt:62
+msgid "Sets the widget to be a drag destination."
+msgstr ""
+
+# db9b48ffeb724abe98bc8b4d03622f8f
+#: ../source/drag_and_drop.txt:64
+msgid "*flags* are a combination of :attr:`Gtk.DestDefaults` masks which configures the processes which occur on a drag site. *targets* is a list of :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` which describe the data to be passed between source and destination. *actions* are a combination :attr:`Gdk.DragAction` masks to show possible drag actions."
+msgstr ""
+
+# 318ffdc5f32d4291a227a10e80ecc8ab
+#: ../source/drag_and_drop.txt:74
+msgid "Add a :class:`Gtk.TargetEntry` to the drag source/destination which contains a piece of text."
+msgstr ""
+
+# a5dad67948db41f99007f66708a58482
+#: ../source/drag_and_drop.txt:80
+msgid "Add a :class:`Gtk.TargetEntry` to the drag source/destination which contains a :class:`GdkPixbuf.Pixbuf`."
+msgstr ""
+
+# 1588279020a147338319d5d13abf0da0
+#: ../source/drag_and_drop.txt:86
+msgid "Add a :class:`Gtk.TargetEntry` to the drag source/destination which contains a list of URIs."
+msgstr ""
+
+# c7ac2577f9ab4bc9992cc261eb5afebb
+#: ../source/drag_and_drop.txt:93
+msgid "Creates a new target entry."
+msgstr ""
+
+# ffa7549c9777463cbdc62eb76c03ba14
+#: ../source/drag_and_drop.txt:95
+msgid "*target* is a string describing the type of data the target entry describes."
+msgstr ""
+
+# 27eceeced3a34c0db81cf25992884a2a
+#: ../source/drag_and_drop.txt:97
+msgid "*flags* controls under which conditions will the data be transferred in a drag and drop and is a combination of the :attr:`Gtk.TargetFlags` values:"
+msgstr ""
+
+# b762c9177c8a433bbb04c8024457599f
+#: ../source/drag_and_drop.txt:100
+msgid ":attr:`Gtk.TargetFlags.SAME_APP` - Only transferred in the same application"
+msgstr ""
+
+# aeb96dc28f1a4ae3be0f9373a0a5fd36
+#: ../source/drag_and_drop.txt:101
+msgid ":attr:`Gtk.TargetFlags.SAME_WIDGET` - Only transferred within the same widget"
+msgstr ""
+
+# e7f3d2219558489782ffac1f5167e380
+#: ../source/drag_and_drop.txt:102
+msgid ":attr:`Gtk.TargetFlags.OTHER_APP` - Only transferred in a different application"
+msgstr ""
+
+# 0b0bb3099301431bbc8c718ba6d05ebe
+#: ../source/drag_and_drop.txt:103
+msgid ":attr:`Gtk.TargetFlags.OTHER_WIDGET` - Only transferred within a different widget"
+msgstr ""
+
+# 903629d01d9b4e67a01f798368645a97
+#: ../source/drag_and_drop.txt:105
+msgid "*info* is an ID which the application can use to determine between different pieces of data contained in a drag and drop operation."
+msgstr ""
+
+# 10f2e566cc6c4474b05b3c9aee185b97
+#: ../source/drag_and_drop.txt:112
+msgid "Returns the contents of the text contained in selection data"
+msgstr ""
+
+# 3c244011c192487ea296d34f3f8455c0
+#: ../source/drag_and_drop.txt:116
+msgid "Sets the contents of the text contained in selection data to *text*"
+msgstr ""
+
+# 5e9db5f70e5a47dd8a62c8b16471c9f9
+#: ../source/drag_and_drop.txt:120
+msgid "Returns the pixbuf contained in selection data"
+msgstr ""
+
+# 30b45a431248419eb26f8c1823ae3895
+#: ../source/drag_and_drop.txt:124
+msgid "Sets the pixbuf contained in selection data to *pixbuf*"
+msgstr ""
+
+# 8ccf56999a0444f7820395273174de01
+#: ../source/drag_and_drop.txt:129
+msgid "Drag Source Signals"
+msgstr ""
+
+# c588aefe09354313acc30250e3f96477
+# 11feaee5d4fe4f7c8d440001adaf9b88
+#: ../source/drag_and_drop.txt:131 ../source/drag_and_drop.txt:145
+msgid "Name"
+msgstr ""
+
+# f67ed99e753f43588397fec637550672
+# 38bb7f49dbc14be893711db324453106
+#: ../source/drag_and_drop.txt:131 ../source/drag_and_drop.txt:145
+msgid "When it is emitted"
+msgstr ""
+
+# 3f1d01328f38466b81aaadd5404517f5
+# e21e096a9bdf426aa0dda49adfab8955
+#: ../source/drag_and_drop.txt:131 ../source/drag_and_drop.txt:145
+msgid "Common Purpose"
+msgstr ""
+
+# 986b4bbb0b304cb5834a9e8d155a1c5e
+#: ../source/drag_and_drop.txt:133
+msgid "drag-begin"
+msgstr ""
+
+# 84cc69f08fa2477abf19ae20efce883d
+#: ../source/drag_and_drop.txt:133
+msgid "User starts a drag"
+msgstr ""
+
+# e4dd1b49e1ff4ac99f2b0e29795964f8
+#: ../source/drag_and_drop.txt:133
+msgid "Set-up drag icon"
+msgstr ""
+
+# e3c7499d1d664e4884546943341bd326
+#: ../source/drag_and_drop.txt:135
+msgid "drag-data-get"
+msgstr ""
+
+# e7f2203f560e441684a7d102b353e386
+#: ../source/drag_and_drop.txt:135
+msgid "When drag data is requested by the destination"
+msgstr ""
+
+# da73ba7372ce44219e7cfc46b9858d7d
+# 17c2903e616b4d36a60ad8ede8f71fe6
+#: ../source/drag_and_drop.txt:135 ../source/drag_and_drop.txt:151
+msgid "Transfer drag data from source to destination"
+msgstr ""
+
+# ffd2cde73cd449718785e21e8a3768e1
+#: ../source/drag_and_drop.txt:137
+msgid "drag-data-delete"
+msgstr ""
+
+# 1e8c48902c2b4883a41593cb8c1b8b37
+#: ../source/drag_and_drop.txt:137
+msgid "When a drag with the action Gdk.DragAction.MOVE is completed"
+msgstr ""
+
+# bfc8bb164adf4f089f599895a51a9425
+#: ../source/drag_and_drop.txt:137
+msgid "Delete data from the source to complete the 'move'"
+msgstr ""
+
+# f02b62c1be824375be8719ca95dc31be
+#: ../source/drag_and_drop.txt:139
+msgid "drag-data-end"
+msgstr ""
+
+# 2c49740c2437425ead0c3a660fb585fa
+#: ../source/drag_and_drop.txt:139
+msgid "When the drag is complete"
+msgstr ""
+
+# 3cd47aec75174469a5749ea41f4b3765
+#: ../source/drag_and_drop.txt:139
+msgid "Undo anything done in drag-begin"
+msgstr ""
+
+# 823717cf355e4a329bacf103c38da5aa
+#: ../source/drag_and_drop.txt:143
+msgid "Drag Destination Signals"
+msgstr ""
+
+# 7b9c0b13d9da454185471727a4f0a00c
+#: ../source/drag_and_drop.txt:147
+msgid "drag-motion"
+msgstr ""
+
+# aaad7b70ae4a4b05bf383b46a7955ac0
+#: ../source/drag_and_drop.txt:147
+msgid "Drag icon moves over a drop area"
+msgstr ""
+
+# 9714404bcecd4f55a8aaa1b6cd25dbc7
+# e651552f59674cfab8f9bc71e3d25d29
+#: ../source/drag_and_drop.txt:147 ../source/drag_and_drop.txt:149
+msgid "Allow only certain areas to be dropped onto"
+msgstr ""
+
+# 78ba06c8175d4b3dbe35be97f2b8e8e4
+#: ../source/drag_and_drop.txt:149
+msgid "drag-drop"
+msgstr ""
+
+# e7706e0210384f498da77cf0855419b1
+#: ../source/drag_and_drop.txt:149
+msgid "Icon is dropped onto a drag area"
+msgstr ""
+
+# 3cd39c106d4a485dad7f38326fa89cbe
+#: ../source/drag_and_drop.txt:151
+msgid "drag-data-received"
+msgstr ""
+
+# 1862ed16967343459ab2fb5be5b0a87e
+#: ../source/drag_and_drop.txt:151
+msgid "When drag data is received by the destination"
+msgstr ""
+
+# ab0b20518bf1417bb8eb9d9e1cd4a995
+#: ../source/drag_and_drop.txt:155
+msgid "Example"
+msgstr "Esempio"

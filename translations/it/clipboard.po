@@ -1,0 +1,108 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-10 09:47\n"
+"PO-Revision-Date: 2017-01-05 11:27+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 6f6688529248440cb1fcde0c3e1d04af
+#: ../source/clipboard.txt:2
+msgid "Clipboard"
+msgstr ""
+
+# f3e597b3abc34f0c8e5d688d37454ee2
+#: ../source/clipboard.txt:4
+msgid ":class:`Gtk.Clipboard` provides a storage area for a variety of data, including text and images. Using a clipboard allows this data to be shared between applications through actions such as copying, cutting, and pasting. These actions are usually done in three ways: using keyboard shortcuts, using a :class:`Gtk.MenuItem`, and connecting the functions to :class:`Gtk.Button` widgets."
+msgstr ""
+
+# 18c1caa6448a4dbc9feb875bfb7af6a1
+#: ../source/clipboard.txt:11
+msgid "There are multiple clipboard selections for different purposes. In most circumstances, the selection named ``CLIPBOARD`` is used for everyday copying and pasting. ``PRIMARY`` is another common selection which stores text selected by the user with the cursor."
+msgstr ""
+
+# 3024ecffac054756a64e6ce7fc156e49
+#: ../source/clipboard.txt:17
+msgid "Clipboard Objects"
+msgstr ""
+
+# e545f37faa194f68a1ffa7d01e1ddbf0
+#: ../source/clipboard.txt:22
+msgid "Obtains the :class:`Gtk.Clipboard` for the given selection."
+msgstr ""
+
+# f6bf3b7a3bde48a09b5619812bbd721b
+#: ../source/clipboard.txt:24
+msgid "*selection* is a :class:`Gdk.Atom` describing which clipboard to use. Predefined values include:"
+msgstr ""
+
+# 8aae4e93554544e9ac92680ea44071ae
+#: ../source/clipboard.txt:27
+msgid "``Gdk.SELECTION_CLIPBOARD``"
+msgstr ""
+
+# 4ff55f0bbd39432fbaf62cb9f2288441
+#: ../source/clipboard.txt:28
+msgid "``Gdk.SELECTION_PRIMARY``"
+msgstr ""
+
+# 5cc488fd4b254c6a80b866eaaeae704a
+#: ../source/clipboard.txt:32
+msgid "Sets the contents of the clipboard to the given text."
+msgstr ""
+
+# 65b5793befb84158bcd1a0b25032e486
+#: ../source/clipboard.txt:34
+msgid "*text* is the string to put in the clipboard."
+msgstr ""
+
+# 02ef0b148cc04934b0a2f7db79ead590
+#: ../source/clipboard.txt:36
+msgid "*length* is the number of characters to store. It may be omitted to store the entire string."
+msgstr ""
+
+# 1a47812a4b46437984e8ea88ff9c8837
+#: ../source/clipboard.txt:41
+msgid "Sets the contents of the clipboard to the given image."
+msgstr ""
+
+# 0374f5a2b4e5446ea1a5235217da2330
+#: ../source/clipboard.txt:43
+msgid "*image* must be a :class:`Gdk.Pixbuf`. To retrieve one from a :class:`Gdk.Image`, use ``image.get_pixbuf()``."
+msgstr ""
+
+# 20ec8dfbf5114b8185fa013aab9faed6
+#: ../source/clipboard.txt:48
+msgid "Returns the clipboard's content as a string, or returns ``None`` if the clipboard is empty or not currently holding text."
+msgstr ""
+
+# 52b777f442eb45a0b58577d358c6b781
+#: ../source/clipboard.txt:53
+msgid "Returns the clipboard's content as a :class:`Gtk.Pixbuf`, or returns ``None`` if the clipboard is empty or not currently holding an image."
+msgstr ""
+
+# f0fd75b8c38141a6a03c011617e5ce33
+#: ../source/clipboard.txt:59
+msgid "Stores the clipboard's data outside the application. Otherwise, data copied to the clipboard may be lost when the application exits."
+msgstr ""
+
+# 8347a78c216a4815a4c9f75658faa357
+#: ../source/clipboard.txt:64
+msgid "Clears the contents of the clipboard. Use with caution; this may clear data from another application."
+msgstr ""
+
+# 3564e2e0fe404c9c8592a030362d26e0
+#: ../source/clipboard.txt:68
+msgid "Example"
+msgstr "Esempio"

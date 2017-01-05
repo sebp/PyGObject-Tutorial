@@ -1,0 +1,88 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-10 09:47\n"
+"PO-Revision-Date: 2017-01-05 11:22+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 24b2f9d48b8e45bd859945b0860953ff
+#: ../source/basics.txt:4
+msgid "Basics"
+msgstr "Basi"
+
+# 9db7f5bec09a41f384f19c77be527e38
+#: ../source/basics.txt:5
+msgid "This section will introduce some of the most important aspects of GTK+."
+msgstr "Questa sezione introdurrà alcuni principali aspetti di GTK+."
+
+# 6554ff54acd24984a89a55e5f009b8df
+#: ../source/basics.txt:12
+msgid "Main loop and Signals"
+msgstr "Loop principale e Segnali"
+
+# 798f7a779c44413caca68c8a81d13ad3
+#: ../source/basics.txt:13
+msgid "Like most GUI toolkits, GTK+ uses an event-driven programming model. When the user is doing nothing, GTK+ sits in the main loop and waits for input. If the user performs some action - say, a mouse click - then the main loop \"wakes up\" and delivers an event to GTK+."
+msgstr "Come molti toolkit GUI, GTK+ utilizza un modello di programmazione event-driven. Quando l'utente non fa nulla, GTK+ resta nel loop principale e attente che qualcosa accada. Se l'utente esegue alcune azioni - tipo, un clic con il mouse - allora il loop principale \"si sveglia\" e consegna un evento a GTK+."
+
+# b0cde78dd2054458ba6fb7a48d3d48e6
+#: ../source/basics.txt:18
+msgid "When widgets receive an event, they frequently emit one or more signals. Signals notify your program that \"something interesting happened\" by invoking functions you've connected to the signal. Such functions are commonly known as *callbacks*. When your callbacks are invoked, you would typically take some action - for example, when an Open button is clicked you might display a file chooser dialog. After a callback finishes, GTK+ will return to the main loop and await more user input."
+msgstr ""
+
+# f4cbd7ea24ba48c598d555447174c9fb
+#: ../source/basics.txt:28
+msgid "A generic example is:"
+msgstr "Un esempio generico è:"
+
+# 972f44f8e7b8421980087239922b3322
+#: ../source/basics.txt:34
+msgid "Firstly, *widget* is an instance of a widget we created earlier. Next, the event we are interested in. Each widget has its own particular events which can occur. For instance, if you have a button you usually want to connect to the \"clicked\" event. This means that when the button is clicked, the signal is issued. Thirdly, the *callback* argument is the name of the callback function. It contains the code which runs when signals of the specified type are issued. Finally, the *data* argument includes any data which should be passed when the signal is issued. However, this argument is completely optional and can be left out if not required."
+msgstr ""
+
+# 267da506661044239ff7a68a0d6ce2b6
+#: ../source/basics.txt:46
+msgid "The function returns a number that identifies this particular signal-callback pair. It is required to disconnect from a signal such that the callback function will not be called during any future or currently ongoing emissions of the signal it has been connected to."
+msgstr ""
+
+# 70d627ed3a8d4fccb205b1182be57641
+#: ../source/basics.txt:56
+msgid "Almost all applications will connect to the \"delete-event\" signal of the top-level window. It is emitted if a user requests that a toplevel window is closed. The default handler for this signal destroys the window, but does not terminate the application. Connecting the \"delete-event\" signal to the function :func:`Gtk.main_quit` will result in the desired behaviour."
+msgstr ""
+
+# 72755f64dedf4e4abff5358fc148d04c
+#: ../source/basics.txt:66
+msgid "Calling :func:`Gtk.main_quit` makes the main loop inside of :func:`Gtk.main` return."
+msgstr "Chiamando :func:`Gtk.main_quit` fa proseguire il loop principale contenuto in :func:`Gtk.main`."
+
+# 8bd75530e6cc4e7ba47d6035a5a19513
+#: ../source/basics.txt:69
+msgid "Properties"
+msgstr "Proprietà"
+
+# cd07ae732a92407dbd541935ad23c64c
+#: ../source/basics.txt:70
+msgid "Properties describe the configuration and state of widgets. As for signals, each widget has its own particular set of properties. For example, a button has the property \"label\" which contains the text of the label widget inside the button. You can specify the name and value of any number of properties as keyword arguments when creating an instance of a widget. To create a label aligned to the right with the text \"Hello World\" and an angle of 25 degrees, use:"
+msgstr "Le proprietà descrivono la configurazione e lo stato dei widget. Così come per i segnali, ogni widget ha il proprio particolare insieme di proprietà. Per esempio, un pulsante ha la proprietà \"label\" la quale contiene il testo del widget etichetta dentro il pulsante. Puoi specificiare il nome e il valore di qualsivoglia proprietà come argomento chiave quando si crea un'istanza di un widget. Per creare un'etichetta allineata a destra con il testo \"Hello Worl\" e un angolo di 25 gradi, utilizza:"
+
+# 388e665c8a7b44678d9b42d0621939a7
+#: ../source/basics.txt:81
+msgid "which is equivalent to"
+msgstr "il quale è equivalente a"
+
+# 4f4a608797b74529bc040cef30c4f00e
+#: ../source/basics.txt:90
+msgid "Instead of using getters and setters you can also get and set the properties with ``widget.get_property(\"prop-name\")`` and ``widget.set_property(\"prop-name\", value)``, respectively."
+msgstr "Invece di utilizzare getters e setters si possono configurare le proprietà anche con ``widget.get_property(\"prop-name\")`` e ``widget.set_property(\"prop-name\", value)``, rispettivamente."
