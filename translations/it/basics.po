@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-10 09:47\n"
-"PO-Revision-Date: 2017-01-05 11:22+0100\n"
+"PO-Revision-Date: 2017-01-06 17:34+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +20,7 @@ msgstr ""
 # 24b2f9d48b8e45bd859945b0860953ff
 #: ../source/basics.txt:4
 msgid "Basics"
-msgstr "Basi"
+msgstr "Elementi base"
 
 # 9db7f5bec09a41f384f19c77be527e38
 #: ../source/basics.txt:5
@@ -40,7 +40,7 @@ msgstr "Come molti toolkit GUI, GTK+ utilizza un modello di programmazione event
 # b0cde78dd2054458ba6fb7a48d3d48e6
 #: ../source/basics.txt:18
 msgid "When widgets receive an event, they frequently emit one or more signals. Signals notify your program that \"something interesting happened\" by invoking functions you've connected to the signal. Such functions are commonly known as *callbacks*. When your callbacks are invoked, you would typically take some action - for example, when an Open button is clicked you might display a file chooser dialog. After a callback finishes, GTK+ will return to the main loop and await more user input."
-msgstr ""
+msgstr "Quando i widget ricevono un evento, emettono uno o più segnali. I segnali notificano al tuo programma che \"qualcosa di interessante è successo\" invocando le funzioni che erano state precedentemente collegate ai segnali. Queste funzioni sono comunemente conosciute come *callback*. Quando le callback vengono invocate, si eseguono azioni - per esempio, quando si fa clic su un pulsante Apri per aprire una finestra di dialogo. Dopo che la callback è terminata, GTK+ torna al loop principale e aspetta altri input dell'utente."
 
 # f4cbd7ea24ba48c598d555447174c9fb
 #: ../source/basics.txt:28
@@ -50,17 +50,17 @@ msgstr "Un esempio generico è:"
 # 972f44f8e7b8421980087239922b3322
 #: ../source/basics.txt:34
 msgid "Firstly, *widget* is an instance of a widget we created earlier. Next, the event we are interested in. Each widget has its own particular events which can occur. For instance, if you have a button you usually want to connect to the \"clicked\" event. This means that when the button is clicked, the signal is issued. Thirdly, the *callback* argument is the name of the callback function. It contains the code which runs when signals of the specified type are issued. Finally, the *data* argument includes any data which should be passed when the signal is issued. However, this argument is completely optional and can be left out if not required."
-msgstr ""
+msgstr "Primo, un *widget* è un'istanza di un widget che abbiamo creato in precedenza. Poi, l'evento che ci interessa. Ogni widget ha i propri particolari eventi che possono occorrere. Per istanza, se abbiamo un pulsante che vogliamo collegare all'evento \"clicked\". Questo significa che quando il pulsante è cliccato, il segnale viene emesso. Terzo, l'argomento della *callback* è il nome della funzione callback. Esso contiene il codice che sarà eseguito quando il segnale del tipo indicato verrà emesso. Per ultimo, l'argomento *data* include qualsiasi dato che vogliamo sia passato quando il segnale viene emesso. Comunque, questo argomento è completamente opzionale e può essere omesso se non necessario."
 
 # 267da506661044239ff7a68a0d6ce2b6
 #: ../source/basics.txt:46
 msgid "The function returns a number that identifies this particular signal-callback pair. It is required to disconnect from a signal such that the callback function will not be called during any future or currently ongoing emissions of the signal it has been connected to."
-msgstr ""
+msgstr "La funzione restituisce un numero che indentifica questa particolare coppia segnale-callback. E' richiesto disconnettersi da un segnale affinché la funzione callback non sarà chiamata durante qualsiasi emissione futura o corrente del segnale al quale era stata collegata."
 
 # 70d627ed3a8d4fccb205b1182be57641
 #: ../source/basics.txt:56
 msgid "Almost all applications will connect to the \"delete-event\" signal of the top-level window. It is emitted if a user requests that a toplevel window is closed. The default handler for this signal destroys the window, but does not terminate the application. Connecting the \"delete-event\" signal to the function :func:`Gtk.main_quit` will result in the desired behaviour."
-msgstr ""
+msgstr "Quasi tutte le applicazioni si collegheranno al segnale \"delete-event\" della finestra top-level. Viene emesso se un utente richiede che la finestra toplevel venga chiusa. Il gestore predefinito per questo segnale distrugge la finestra, ma non termina l'applicazione. Collegando il segnale \"delete-event\" alla funzione :func:`Gtk.main_quit` si avrà il comportamento desiderato."
 
 # 72755f64dedf4e4abff5358fc148d04c
 #: ../source/basics.txt:66
