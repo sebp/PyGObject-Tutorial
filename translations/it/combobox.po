@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-10 09:47\n"
-"PO-Revision-Date: 2017-01-05 11:27+0100\n"
+"PO-Revision-Date: 2017-01-08 19:37+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,97 +20,97 @@ msgstr ""
 # 834681fcccd147d3bbe7cc351b2b89a6
 #: ../source/combobox.txt:2
 msgid "ComboBox"
-msgstr ""
+msgstr "ComboBox"
 
 # 64954155d6694c9eb829d14363f205b6
 #: ../source/combobox.txt:3
 msgid "A :class:`Gtk.ComboBox` allows for the selection of an item from a dropdown menu. They are preferable to having many radio buttons on screen as they take up less room. If appropriate, it can show extra information about each item, such as text, a picture, a checkbox, or a progress bar."
-msgstr ""
+msgstr "Un :class:`Gtk.ComboBox` permette la selezione di una voce da un menu. Sono preferiti anziché avere molti pulsanti opzione su schermo perché occupano meno spazio. Se del caso, può mostrare informazioni aggiuntive su ciascun elemento, ad esempio testo, un'immagine, una casella di controllo, o di una barra di avanzamento."
 
 # b2cd9ec13b034b5197f581d2dcf395ca
 #: ../source/combobox.txt:8
 msgid ":class:`Gtk.ComboBox` is very similar to :class:`Gtk.TreeView`, as both use the model-view pattern; the list of valid choices is specified in the form of a tree model, and the display of the choices can be adapted to the data in the model by using :ref:`cell renderers <cellrenderers>`. If the combo box contains a large number of items, it may be better to display them in a grid rather than a list. This can be done by calling :meth:`Gtk.ComboBox.set_wrap_width`."
-msgstr ""
+msgstr ":class:`Gtk.ComboBox` è molto simile a :class:`Gtk.TreeView`, in quanto entrambi utilizzano il pattern model-view; l'elenco delle scelte valide è specificata nella forma di un modello di albero, e la visualizzazione delle scelte può essere adattata ai dati nel modello utilizzando il :ref:`renderer delle celle <cellRenderer>`. Se la casella combinata contiene un gran numero di elementi, è meglio visualizzarli in una griglia piuttosto che una lista. Questo può essere fatto chiamando il metodo :meth:`Gtk.ComboBox.set_wrap_width`."
 
 # 332fe7c2093a4458985ce09edbbe0eff
 #: ../source/combobox.txt:16
 msgid "The :class:`Gtk.ComboBox` widget usually restricts the user to the available choices, but it can optionally have an :class:`Gtk.Entry`, allowing the user to enter arbitrary text if none of the available choices are suitable. To do this, use one of the static methods :meth:`Gtk.ComboBox.new_with_entry` or :meth:`Gtk.ComboBox.new_with_model_and_entry` to create an :class:`Gtk.ComboBox` instance."
-msgstr ""
+msgstr "Il widget :class:`Gtk.ComboBox` di solito limita l'utente alle scelte disponibili, ma può opzionalmente avere un :class:`Gtk.Entry`, permettendo all'utente di inserire testo arbitrario se nessuna delle scelte disponibili risulta adeguata. Per fare questo, utilizzate uno dei metodi statici :meth:`Gtk.ComboBox.new_with_entry` o :meth:`Gtk.ComboBox.new_with_model_and_entry` per creare un'istanza di :class:`Gtk.ComboBox`."
 
 # 77db86d6e2fc45c1a1a526e2af7b2a94
 #: ../source/combobox.txt:23
 msgid "For a simple list of textual choices, the model-view API of :class:`Gtk.ComboBox` can be a bit overwhelming. In this case, :class:`Gtk.ComboBoxText` offers a simple alternative. Both :class:`Gtk.ComboBox` and :class:`Gtk.ComboBoxText` can contain an entry."
-msgstr ""
+msgstr "Per un semplice elenco di scelte testuali, l'API model-view di :class:`Gtk.ComboBox` può essere un po' opprimente. In questo caso, :class:`Gtk.ComboBoxText` offre una semplice alternativa. Entrambi le classi :class:`Gtk.ComboBox` e :class:`Gtk.ComboBoxText` possono contenere una voce."
 
 # dc09e41ac04e4feaba845d49160af18a
 #: ../source/combobox.txt:29
 msgid "ComboBox objects"
-msgstr ""
+msgstr "Oggetti ComboBox"
 
 # 981cebce9252494c98cb8564c6be3402
 #: ../source/combobox.txt:35
 msgid "Creates a new empty :class:`Gtk.ComboBox` with an entry."
-msgstr ""
+msgstr "Crea un nuovo :class:`Gtk.ComboBox` vuto con una voce."
 
 # 18787459ac4548bfa23451b22dfb5fba
 #: ../source/combobox.txt:39
 msgid "Creates a new :class:`Gtk.ComboBox` with the model initialized to *model*."
-msgstr ""
+msgstr "Crea un nuovo :class:`Gtk.ComboBox` con il modello inizializzato da *model*."
 
 # caef6cad55964de0b881d9ab082204be
 #: ../source/combobox.txt:43
 msgid "Creates a new :class:`Gtk.ComboBox` with an entry and the model initialized to *model*."
-msgstr ""
+msgstr "Crea un nuovo :class:`Gtk.ComboBox` con una voce e il modello inizializzato da*model*."
 
 # dd8e2f65f38a4ecabb6c707fca50e5f0
 #: ../source/combobox.txt:48
 msgid "Returns a :class:`Gtk.TreeIter` pointing to the current active item. If no active item exists, ``None`` is returned."
-msgstr ""
+msgstr "Restituisce un :class:`Gtk.TreeIter` con riferimento all'elemento correntemente attivo. Se non esiste alcune elemento attivo, viene restituito \"None\"."
 
 # 852ff1bdcd16412b801665c16964df17
 #: ../source/combobox.txt:53
 msgid "Sets the model used by this combo box to be *model*. Will unset a previously set model (if applicable). If model is ``None``, then it will unset the model. Note that this function does not clear the cell renderers."
-msgstr ""
+msgstr "Imposta il modello utilizzato da questa casella combinata al valore *model*. Sarà ripristinato il modello precedentemente impostato (se applicabile). Se il modello è ``None``, allora sarà cancellato il modello. Si noti che questa funzione non pulisce i renderer delle celle."
 
 # 09f47401707a4232b607c5f0d495a4af
 #: ../source/combobox.txt:59
 msgid "Returns the :class:`Gtk.TreeModel` which is acting as data source for this combo box."
-msgstr ""
+msgstr "Restituisce :class:`Gtk.TreeModel` il quale funge da sorgente dati per questa casella combinata."
 
 # da4ca3b88e524a9ab634be7f032e7b79
 #: ../source/combobox.txt:64
 msgid "Sets the model column which this combo box should use to get strings from to be *text_column*. The column *text_column* in the model of this combo box must be of type ``str``."
-msgstr ""
+msgstr "Imposta la colonna modello che questa casella combinata dovrebbe usare per essere * text_column *. La colonna *text_column* nel modello di questa casella combinata deve essere di tipo ``str``."
 
 # 9db2ebbfb0b547b6a157a6ef66d9eb7b
 #: ../source/combobox.txt:68
 msgid "This is only relevant if this combo box has been created with the \"has-entry\" property set to ``True``."
-msgstr ""
+msgstr "Questo è rilevante se questa casella combinata è stata creata con la proprietà \"has-entry\" impostata a ``True``."
 
 # cdce356e5c394e31a755729d35347f1f
 #: ../source/combobox.txt:73
 msgid "Sets the wrap width of this combo box to be *width*. The wrap width is basically the preferred number of columns when you want the popup to be layed out in a grid."
-msgstr ""
+msgstr "Imposta la larghezza dell'area di questa casella combinata a *width*. La larghezza dell'area è sostanzialmente il numero preferito di colonne quando si desidera che il popup sia mostrato in una griglia."
 
 # 3996c8e8856c44999516c236ce191a88
 #: ../source/combobox.txt:78
 msgid "ComboBoxText objects"
-msgstr ""
+msgstr "Oggetti ComboBoxText"
 
 # ef5efa26a2124d3f83965eaac51b8a19
 #: ../source/combobox.txt:84
 msgid "Creates a new empty :class:`Gtk.ComboBoxText` with an entry."
-msgstr ""
+msgstr "Crea un nuovo :class:`Gtk.ComboBoxText` vuoto per una voce."
 
 # bde61a25a0ae44879c3b7ab704903b1c
 #: ../source/combobox.txt:88
 msgid "Appends *text* to the list of strings stored in this combo box."
-msgstr ""
+msgstr "Aggiunge *text* alla lista di stringhe memorizate in questa casella combinata."
 
 # ad27da16905149ceb50fc1047f17cd13
 #: ../source/combobox.txt:92
 msgid "Returns the currently active string in this combo box, or ``None`` if none is selected. If this combo box contains an entry, this function will return its contents (which will not necessarily be an item from the list)."
-msgstr ""
+msgstr "Restituisce la stringa attualmente attiva in questa casella combinata, o ``None`` se non esiste selezione. Se questa casella combinata contiene una voce, questa funzione restituirà il suo contenuto (che non sarà necessariamente un elemento dalla lista)."
 
 # 3e7ae94ebdf14bb885be9da268dfab69
 #: ../source/combobox.txt:97
