@@ -1,0 +1,53 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-10 09:47\n"
+"PO-Revision-Date: 2017-01-09 22:27+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 2ea1a5ce63324d13b960905b21d11794
+#: ../source/spinner.txt:2
+msgid "Spinner"
+msgstr "Spinner"
+
+# e12b744752944f3983f6743167a49e13
+#: ../source/spinner.txt:4
+msgid "The :class:`Gtk.Spinner` displays an icon-size spinning animation. It is often used as an alternative to a :class:`GtkProgressBar` for displaying indefinite activity, instead of actual progress."
+msgstr "Con :class:`Gtk.Spinner` si visualizza un'animazione della dimensione di un'icona. Viene utilizzata spesso come un'alternativa a :class:`GtkProgressBar` per visualizzare attività indefinite, anziché un avanzamento in corso."
+
+# b11aa90df1a74ed1a2997297bc1e5a35
+#: ../source/spinner.txt:8
+msgid "To start the animation, use :meth:`Gtk.Spinner.start`, to stop it use :meth:`Gtk.Spinner.stop`."
+msgstr "Per avviare l'animazione, utilizzate :meth:`Gtk.Spinner.start`, per fermarla :meth:`Gtk.Spinner.stop`."
+
+# 97f8069daeec46a0b4fb7d9fec0ad245
+#: ../source/spinner.txt:12
+msgid "Spinner Objects"
+msgstr "Oggetti Spinner"
+
+# 99f335c2ea124b06af02f7083f05d31a
+#: ../source/spinner.txt:18
+msgid "Starts the animation of the spinner."
+msgstr "Avvia l'animazione dello spinner."
+
+# 15db3084c7f542418bfcc3bac2e14a3a
+#: ../source/spinner.txt:22
+msgid "Stops the animation of the spinner."
+msgstr "Ferma l'animazione dello spinner."
+
+# b225f6219c7c4cbbb174b821a067ec4d
+#: ../source/spinner.txt:25
+msgid "Example"
+msgstr "Esempio"

@@ -1,0 +1,68 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-10 09:47\n"
+"PO-Revision-Date: 2017-01-09 21:17+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 102ec7dfdcbc4e42858d40a6e09d47ee
+#: ../source/index.txt:7
+msgid "The Python GTK+ 3 Tutorial"
+msgstr "Tutorial per Python GTK+ 3"
+
+# c191ef607b864faba8177009d579c4ea
+#: ../source/index.txt:9
+msgid "|version|"
+msgstr "|version|"
+
+# 9f8eb89f140046d985d5f6d893af700a
+#: ../source/index.txt:10
+msgid "|today|"
+msgstr "|today|"
+
+# 83bfdc6414f64cb6b4d230a94671c701
+#: ../source/index.txt:11
+msgid "GNU Free Documentation License 1.3"
+msgstr "GNU Free Documentation License 1.3"
+
+# b11544922e794db3a39e49c7b4e1d44e
+#: ../source/index.txt:13
+msgid "This tutorial gives an introduction to writing GTK+ 3 applications in Python."
+msgstr "Questo tutorial offre un'introduzione per scrivere applicazioni GTK+ 3 in Python."
+
+# adac4f9c0d0a402487cc040ec2a3db1a
+#: ../source/index.txt:15
+msgid "Prior to working through this tutorial, it is recommended that you have a reasonable grasp of the Python programming language. GUI programming introduces new problems compared to interacting with the standard output (console / terminal). It is necessary for you to know how to create and run Python files, understand basic interpreter errors, and work with strings, integers, floats and Boolean values. For the more advanced widgets in this tutorial, good knowledge of lists and tuples will be needed."
+msgstr "Prima di lavorare con questo tutorial, si consiglia di avere una discreta conoscenza del linguaggio di programmazione Python. La programmazione GUI introduce nuovi problemi rispetto a quelli che si affrontano in standard output (console / terminale). E' necessario sapere come creare ed eseguire file Python, capire gli errori di base dell'interprete e lavorare con le stringhe, gli interi, i numeri in virgola mobile e i valori booleani. Per i widget più avanzati di questo tutorial, sarà necessaria una buona conoscenza delle liste e delle tuple."
+
+# 30c23c6e13954f668db985bb30dfbb98
+#: ../source/index.txt:25
+msgid "Although this tutorial describes the most important classes and methods within GTK+ 3, it is not supposed to serve as an API reference. Please refer to the `GTK+ 3 Reference Manual <http://developer.gnome.org/gtk3/stable/>`_ for a detailed description of the API."
+msgstr "Anche se questo tutorial descrive le classi e i metodi più importanti all'interno di GTK+ 3, non dovrebbe fungere da API di riferimento. Si consiglia il `manuale di GTK+ 3 <http://developer.gnome.org/gtk3/stable/>`_ per una descrizione dettagliata dell'API."
+
+# 52320d81403046fdb8e7fcbb05c34ef0
+#: ../source/index.txt:30
+msgid "Contents:"
+msgstr "Contenuti:"
+
+# bfb291b0e5aa45c6818a4411d80038cc
+#: ../source/index.txt:60
+msgid "Indices and tables"
+msgstr "Indici e tabelle"
+
+# bcd17d3d6a984e99aef1ffc26b515154
+#: ../source/index.txt:62
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
