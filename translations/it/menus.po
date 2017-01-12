@@ -1,0 +1,358 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-10 09:47\n"
+"PO-Revision-Date: 2017-01-11 12:26+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# dd4281ad55f14a32b881945c4bc2f984
+#: ../source/menus.txt:2
+msgid "Menus"
+msgstr "I menu"
+
+# bad49849b2634f21b312e1e91c5e00ff
+#: ../source/menus.txt:4
+msgid "GTK+ comes with two different types of menus, :class:`Gtk.MenuBar` and :class:`Gtk.Toolbar`. :class:`Gtk.MenuBar` is a standard menu bar which contains one or more :class:`Gtk.MenuItem` instances or one of its subclasses. :class:`Gtk.Toolbar` widgets are used for quick accessibility to commonly used functions of an application. Examples include creating a new document, printing a page or undoing an operation. It contains one or more instances of :class:`Gtk.ToolItem` or one of its subclasses."
+msgstr "GTK + è dotato di due diversi tipi di menu, :class:`Gtk.MenuBar` e :class:`Gtk.Toolbar`. Il primo è una barra menu standard che contiene una o più istanze di :class:`Gtk.MenuItem` o una delle sue sottoclassi. I widget :class:`Gtk.Toolbar` sono utilizzati per accedere rapidamente alle funzioni d'uso comune di un'applicazione. Gli esempi includono la creazione di un nuovo documento, la stampa di una pagina o l'annullamento di un'operazione. Contiene una o più istanze di :class:`Gtk.ToolItem` o una delle sue sottoclassi."
+
+# b52d47e3b3334fe6a857e440c94dc3e5
+#: ../source/menus.txt:13
+msgid "Actions"
+msgstr "Azioni"
+
+# 7ec9f7724080493eace56d4b8ff4b01f
+#: ../source/menus.txt:15
+msgid "Although, there are specific APIs to create menus and toolbars, you should use :class:`Gtk.UIManager` and create :class:`Gtk.Action` instances. Actions are organised into groups. A :class:`Gtk.ActionGroup` is essentially a map from names to :class:`Gtk.Action` objects. All actions that would make sense to use in a particular context should be in a single group. Multiple action groups may be used for a particular user interface. In fact, it is expected that most non-trivial applications will make use of multiple groups. For example, in an application that can edit multiple documents, one group holding global actions (e.g. quit, about, new), and one group per document holding actions that act on that document (eg. save, cut/copy/paste, etc). Each window's menus would be constructed from a combination of two action groups."
+msgstr "Anche se ci sono specifiche API per creare menu e barre degli strumenti, è necessario utilizzate :class:`Gtk.UIManager` e creare istanze :class:`Gtk.Action`. Le azioni sono organizzate in gruppi. :class:`Gtk.ActionGroup` è essenzialmente una mappa da nomi a :class:`Gtk.Action`. Tutte le azioni che avrebbe senso utilizzare in un particolare contesto dovrebbe essere in un unico gruppo. Diversi gruppi di azione possono essere utilizzati per una particolare interfaccia utente. Infatti, si prevede che la maggior parte delle applicazioni non banali faranno uso di più gruppi. Per esempio, in un'applicazione che modifica più documenti, un gruppo che detiene azioni globali (es. Esci, Informazioni, Nuovo) e un gruppo per-documento con azioni specifiche allo stesso (es. Salva, Taglia / Copia / Incolla, ecc ). Ogni menu della finestra dovrebbe essere costruito da una combinazione di due gruppi di azioni."
+
+# d3cae5b0b5c04f769034d37d8959de3e
+#: ../source/menus.txt:27
+msgid "Different classes representing different types of actions exist:"
+msgstr "Esistono varie classi che rappresentano differenti tipi di azioni:"
+
+# 8cd8b2ab683d4e43994fa016f58bc7e3
+#: ../source/menus.txt:29
+msgid ":class:`Gtk.Action`: An action which can be triggered by a menu or toolbar item"
+msgstr ":class:`Gtk.Action`: Un'azione che può essere innescata da una voce di menu o della barra degli strumenti"
+
+# cd1f3c83f01442739ede1fadd2f79691
+#: ../source/menus.txt:31
+msgid ":class:`Gtk.ToggleAction`: An action which can be toggled between two states"
+msgstr ":class:`Gtk.ToggleAction`: Un'azione che può essere commutata tra due stati"
+
+# e1de19ef93414c68ae60c92c62a79d3b
+#: ../source/menus.txt:32
+msgid ":class:`Gtk.RadioAction`: An action of which only one in a group can be active"
+msgstr ":class:`Gtk.RadioAction`: Un'azione unicamente attivabile tra quelle disponibili in un gruppo"
+
+# b095907da2034ba3ac1c8769cb3998e5
+#: ../source/menus.txt:34
+msgid ":class:`Gtk.RecentAction`: An action of which represents a list of recently used files"
+msgstr ":class:`Gtk.RecentAction`: Un'azione che rappresenta un elenco di file recentemente utilizzati"
+
+# db1fe5bf9b6e4d9fb02a6e4b05ab73d2
+#: ../source/menus.txt:37
+msgid "Actions represent operations that the user can be perform, along with some information how it should be presented in the interface, including its name (not for display), its label (for display), an accelerator, whether a label indicates a :ref:`stock item <stock-items>`, a tooltip, as well as the callback that is called when the action gets activated."
+msgstr "Le azioni rappresentano operazioni che l'utente può eseguire, insieme ad alcune informazioni sulle modalità di presentazione dell'interfaccia, compreso il suo nome (non per essere visto), l'etichetta (da visualizzare), un acceleratore, se una etichetta indica un :ref:`articolo stock <stock-items>`, un suggerimento, così come una callback che viene chiamata attivando l'azione."
+
+# fbaaff8720e74aa5b9b50659a8979827
+#: ../source/menus.txt:43
+msgid "You can create actions by either calling one of the constructors directly and adding them to a :class:`Gtk.ActionGroup` by calling :meth:`Gtk.ActionGroup.add_action` or :meth:`Gtk.ActionGroup.add_action_with_accel`, or by calling one of the convenience functions:"
+msgstr "È possibile creare azioni sia chiamando direttamente uno dei costruttori e aggiungendoli a un :class:`Gtk.ActionGroup` con :meth:`Gtk.ActionGroup.add_action`, :meth:`Gtk.ActionGroup.add_action_with_accel` o una delle seguenti convenienti funzioni:"
+
+# d61ca47d55c2487e98968c31b181d6f4
+#: ../source/menus.txt:48
+msgid ":meth:`Gtk.ActionGroup.add_actions`,"
+msgstr ":meth:`Gtk.ActionGroup.add_actions`,"
+
+# 64a8f61728a449408b43917eec85a8c9
+#: ../source/menus.txt:49
+msgid ":meth:`Gtk.ActionGroup.add_toggle_actions`"
+msgstr ":meth:`Gtk.ActionGroup.add_toggle_actions`"
+
+# 1211c50566754f97a2a53e7f92370ee1
+#: ../source/menus.txt:50
+msgid ":meth:`Gtk.ActionGroup.add_radio_actions`."
+msgstr ":meth:`Gtk.ActionGroup.add_radio_actions`."
+
+# 039d1106249944918190e4dae917785b
+#: ../source/menus.txt:52
+msgid "Note that you must specify actions for sub menus as well as menu items."
+msgstr "Si noti che è necessario specificare le azioni dei sotto menu e delle voci degli stessi."
+
+# 830e95cebc934ee0b89eeb5ceaaaa652
+#: ../source/menus.txt:55
+msgid "Action Objects"
+msgstr "Oggetti Action"
+
+# 4d9ee62df1d04e1ba4badc5d5a9cea52
+#: ../source/menus.txt:59
+msgid "*name* must be a unique name of the action."
+msgstr "*name* deve essere un nome univoco dell'azione"
+
+# 407f4403b3e84715b90090c6e3c925fa
+#: ../source/menus.txt:61
+msgid "If *label* is not ``None``, it is displayed in menu items and on buttons."
+msgstr "Se *label* non è ``None``, viene mostrato negli elementi del menu e sui pulsanti."
+
+# ad1066c6c4854327a126339d2822ac8c
+#: ../source/menus.txt:63
+msgid "If *tooltip* is not ``None``, it is used as tooltip for the action."
+msgstr "Se *tooltip* non è ``None``, viene usato come suggerimento per l'azione."
+
+# 8784897e83b54da4a66653295914e976
+#: ../source/menus.txt:65
+msgid "If *stock_id* is not ``None``, it is used to lookup the :ref:`stock item <stock-items>` to display in widgets representing the action."
+msgstr "Se *stock_id* non è ``None``, viene usata per cercare un :ref:`elemento stock <stock-items>` da mostrare nei widget per rappresentare l'azione."
+
+# 8059dc91fbd84d41983c205f7389f639
+#: ../source/menus.txt:71
+msgid "The arguments are the same as for the :class:`Gtk.Action` constructor."
+msgstr "Gli argomenti sono gli stessi del costruttore :class:`Gtk.Action`."
+
+# 171dfca2f4c24b459dc1d678c6923448
+#: ../source/menus.txt:75
+msgid "The first four arguments are the same as for the :class:`Gtk.Action` constructor."
+msgstr "I primi quattro argomenti sono gli stessi del costruttore :class:`Gtk.Action`."
+
+# c8b0026374384a4699e0395b4624a8e6
+#: ../source/menus.txt:77
+msgid "*value* indicates the value which :meth:`get_current_value` should return if this action is selected."
+msgstr "*value* indica il valore che :meth:`get_current_value` dodvrebbe restituire se questa azione è selezionata."
+
+# 20e78f2508c64cb2aefc5d4653d5250a
+#: ../source/menus.txt:82
+msgid "Obtains the \"value\" property of the currently active member of the group to which this action belongs."
+msgstr "Ottiene la proprietà \"value\" dell'attuale membro attivo del gruppo a cui appartiene questa azione."
+
+# 77fa2b37b0e64b01b51bd8dd9b8d52d2
+#: ../source/menus.txt:87
+msgid "Joins this radio action object to the group of the *group_source* radio action object."
+msgstr "Unisce questo oggetto azione (radio action) al gruppo indicato in *group_source*."
+
+# 607d7c494a564248954ef8b5d6a71115
+#: ../source/menus.txt:90
+msgid "*group_source* must be a radio action object whose group we are joining, or ``None`` to remove the radio action from its group."
+msgstr "*group_source* deve essere un oggetto azione di scelta (radio action) che stiamo unendo in un gruppo, o ``None`` per rimuoverlo dal gruppo."
+
+# 6dd4b9d0b706487abd0f425f162ca901
+#: ../source/menus.txt:95
+msgid "Creates a new :class:`Gtk.ActionGroup` instance. The name of the action group is used when associating keybindings with the actions."
+msgstr "Crea una nuova istanza :class:`Gtk.ActionGroup`. Il nome del gruppo di azione viene utilizzato associandolo a combinazioni di tasti con le azioni."
+
+# 55eab286f1ee43edb88c9f6dc6b99d76
+#: ../source/menus.txt:100
+msgid "Adds an :class:`Gtk.Action` object to the action group."
+msgstr "Aggiunge un oggetto :class:`Gtk.Action` al gruppo di azione."
+
+# df18f751e4cd4c55814754bb53a47e77
+#: ../source/menus.txt:102
+msgid "Note that this method does not set up the accelerator path of the action, use :meth:`add_action_with_accel` instead."
+msgstr "Si noti che questo metodo non imposta il percorso acceleratore dell'azione, piuttosto va usato :meth:`add_action_with_accel`."
+
+# 064c1349e9204c2ab62aef8d9391848e
+#: ../source/menus.txt:107
+msgid "Adds an :class:`Gtk.Action` object to the action group and sets up the accelerator."
+msgstr "Aggiunge un oggetto :class:`Gtk.Action` al gruppo di azione e imposta l'acceleratore."
+
+# b58e0101512148ceaffb62381b6035ce
+#: ../source/menus.txt:110
+msgid "*accelerator* must be in the format understood by :func:`Gtk.accelerator_parse`, or ``\"\"`` for no accelerator, or ``None`` to use the stock accelerator."
+msgstr "*accelerator* deve essere in un formato comprensibile da :func:`Gtk.accelerator_parse`, o ``\" \"``per non avere alcun acceleratore, o ``None`` per usare un acceleratore di stock."
+
+# 1e507ae126564c909138c38730b5b206
+#: ../source/menus.txt:115
+msgid "This is a convenience function to create a number of :class:`Gtk.Action` objects and add them to this action group."
+msgstr "Si tratta di una funzione di convenienza per creare un numero di oggetti :class:`oggetti Gtk.Action` da aggiungere a questo gruppo."
+
+# 6acf66caf6c747a1a96f9795245a0199
+# 9cd0f954a881414488fe9483dc558f1f
+#: ../source/menus.txt:118 ../source/menus.txt:164
+msgid "*entries* is a list of tuples which can vary in size from one to six items with the following information:"
+msgstr "*entries* è una lista di tuple che può variare nella dimensione da uno a sei elementi con le seguenti informazioni:"
+
+# a3545632a55c4d3b9c402fa4aaeab7ac
+# 5896138913af4d798d828d3096987489
+# 0868d68d497e46d5bcb553c3b163ad34
+#: ../source/menus.txt:121 ../source/menus.txt:143 ../source/menus.txt:167
+msgid "The name of the action (mandatory)"
+msgstr "Il nome dell'azione (obbligatorio)"
+
+# bc635457d9884fe287f830946d8971fb
+# fc45c1b182b946b6a3ec203275a15ba7
+# c80783e4bb724e6287781e1a9d8e04ed
+#: ../source/menus.txt:122 ../source/menus.txt:144 ../source/menus.txt:168
+msgid "The :ref:`stock item <stock-items>` of the action (default: ``None``)"
+msgstr "L':ref:`elemento stock <stock-items>` dell'azione (predefinito: ``None``)"
+
+# 841cb5ae1cf347c2b193550c2098ecae
+# 75eccc09715745abb05aa538b16f1029
+# 215451f1601744e5aa54bc42d702c9ca
+#: ../source/menus.txt:123 ../source/menus.txt:145 ../source/menus.txt:169
+msgid "The label for the action (default: ``None``)"
+msgstr "L'etichetta per l'azione (predefinito: ``None``)"
+
+# 545dddad0fab4cbbb87d8b4e496e3287
+# c7900d5a17be4b169d4b2bb7db13dd15
+# 040cb67c339e4fa78fa7a6a2d4baf9e1
+#: ../source/menus.txt:124 ../source/menus.txt:146 ../source/menus.txt:170
+msgid "The accelerator for the action, in the format understood by the :func:`Gtk.accelerator_parse` function (default: ``None``)"
+msgstr "L'acceleratore per l'azione, in un formato comprensibile dalla funzione :func:`Gtk.accelerator_parse` (predefinito: ``None``)"
+
+# d91fa9486fc64e91af90457944db1bb2
+# 4c8c400a4c7947659afe2b4cb5a7021f
+# cde97b5d4dc645ac8ec9abe07acd6cf4
+#: ../source/menus.txt:126 ../source/menus.txt:148 ../source/menus.txt:172
+msgid "The tooltip of the action (default: ``None``)"
+msgstr "Il suggerimento per l'azione (predefinito: ``None``)"
+
+# e7031114f57b4885bbc5e4ccd30f30a3
+# 0593b38a452d4639b366f9b51b196343
+#: ../source/menus.txt:127 ../source/menus.txt:149
+msgid "The callback function invoked when the action is activated (default: ``None``)"
+msgstr "La funzione callback invocata quando l'azione è attivata (predefinito: ``None``)"
+
+# a9897d3eea8c4dc0851dba44f37186fc
+# ed84fa94d0ce4bbcaa20281ca0cd6be0
+#: ../source/menus.txt:130 ../source/menus.txt:154
+msgid "The \"activate\" signals of the actions are connected to the callbacks."
+msgstr "Il segnale \"activate\" delle azioni sono collegate alle callbacks."
+
+# 576f2e1da92748be809616e776e1daa3
+# b47d37f7e3cd42a5a793b34c256c1208
+# 98d99232ab2a4ea68043f9a2c32f762e
+#: ../source/menus.txt:132 ../source/menus.txt:156 ../source/menus.txt:180
+msgid "If *user_data* is not ``None``, it is passed to the callback function (if specified)."
+msgstr "Se *user_data* non è ``None``, è passata alla funzione callback (se specificata)."
+
+# 824dd01bcf3e48e5954e6b3a84ec20ed
+#: ../source/menus.txt:137
+msgid "This is a convenience function to create a number of :class:`Gtk.ToggleAction` objects and add them to this action group."
+msgstr "Questa è una funzione conveniente per creare un numero di oggetti :class:`Gtk.ToggleAction` e aggiungeri a questo gruppo."
+
+# c5be60a9e88c41c3bb143bf92a5d4a7d
+#: ../source/menus.txt:140
+msgid "*entries* is a list of tuples which can vary in size from one to seven items with the following information:"
+msgstr "*entries* è una lista di tuple variabile nella dimensione da uno a sette elementi con le seguenti informazioni:"
+
+# be7ac49bc442413eaebb06a4c1682851
+#: ../source/menus.txt:151
+msgid "A Boolean indicating whether the toggle action is active (default: ``False``)"
+msgstr "Un valore booleano che indica se l'interruttore dell'azione è attivo (predefinito: ``False``)"
+
+# 75b2920758b84bb39673d8f86180ece1
+#: ../source/menus.txt:161
+msgid "This is a convenience routine to create a group of :class:`Gtk.RadioAction` objects and add them to this action group."
+msgstr "Questo è una routine conveniente per creare un gruppo di oggetti :class:`Gtk.RadioAction` da aggiungere a questo gruppo."
+
+# aadce477b2b74e9395a395a8e8f26395
+#: ../source/menus.txt:173
+msgid "The value to set on the radio action (default: 0)"
+msgstr "Il valore da impostare in un'azione con scelta (predefinito: 0)"
+
+# fc863d6d3f3741459ae9c24ef87c6570
+#: ../source/menus.txt:175
+msgid "*value* specifies the radio action that should be set active."
+msgstr "*value* specifica l'azione a scelta che dovrebbe essere attiva."
+
+# 1c71eb073a5c48bab0044b2c34598b15
+#: ../source/menus.txt:177
+msgid "The \"changed\" signal of the first radio action is connected to the *on_change* callback  (if specified)."
+msgstr "Il segnale \"changed\" della prima azione di scelta è collegato alla callback *on_change* (se indicato)."
+
+# 4abbc6fe00d04a88bca9cef39fbaa1e9
+#: ../source/menus.txt:185
+msgid "Parses a string representing an accelerator. The format looks like \"<Control>a\" or \"<Shift><Alt>F1\" or \"<Release>z\" (the last one is for key release). The parser is fairly liberal and allows lower or upper case, and also abbreviations such as \"<Ctl>\" and \"<Ctrl>\". For character keys the name is not the symbol, but the lowercase name, e.g. one would use \"<Ctrl>minus\" instead of \"<Ctrl>-\"."
+msgstr "Analizza una stringa che rappresenta un acceleratore. Il formato si presenta come \"<Control> a\" o \"<Shift><Alt>F1\" o \"<Release>z\" (l'ultimo è per il rilascio del tasto). Il parser non è case sensitive, non tiene conto delle maiuscole o minuscole, e neppure delle abbreviazioni come \"<Ctl>\" e \"<Ctrl>\". Per tasti caratteri il nome non è il simbolo, ma il nome minuscolo, ad esempio si potrebbe usare \"<Ctrl>minus\" invece di \"<Ctrl>-\"."
+
+# 4ec467e4ac714dd799fc87d0b8743aa3
+#: ../source/menus.txt:192
+msgid "Returns a tuple ``(accelerator_key, accelerator_mods)``, where the latter represents the accelerator modifier mask and the first the accelerator keyval. Both values will be set to 0 (zero) if parsing failed."
+msgstr "Restituisce una tupla ``(accelerator_key, accelerator_mods) ``, dove quest'ultimo rappresenta l'acceleratore modificatore e il primo l'acceleratore della chiave. Entrambi i valori verranno impostati a 0 (zero) se l'analisi fallisce."
+
+# 37bc5658814f44e285d118c81fcddc41
+#: ../source/menus.txt:197
+msgid "UI Manager"
+msgstr "UI manager"
+
+# 7f18a1ad3c104860a8e3b8593906a921
+#: ../source/menus.txt:199
+msgid ":class:`Gtk.UIManager` provides an easy way of creating menus and toolbars using an `XML-like description <http://developer.gnome.org/gtk3/stable/GtkUIManager.html#XML-UI>`_."
+msgstr ":class:`Gtk.UIManager` offre un modo semplice per creare menu e barre degli strumenti utilizzando una `descrizione XML-like <http://developer.gnome.org/gtk3/stable/GtkUIManager.html#XML-UI>`_."
+
+# 61d9624f4a2c4d38b62066efd152b9e6
+#: ../source/menus.txt:202
+msgid "First of all, you should add the :class:`Gtk.ActionGroup` to the UI Manager with :meth:`Gtk.UIManager.insert_action_group`. At this point is also a good idea to tell the parent window to respond to the specified keyboard shortcuts, by using :meth:`Gtk.UIManager.get_accel_group` and :meth:`Gtk.Window.add_accel_group`."
+msgstr "Prima di tutto, è necessario aggiungere :class:`Gtk.ActionGroup` al nostro UI Manager con :meth:`Gtk.UIManager.insert_action_group`. A questo punto è anche una buona idea indicare la finestra genitore che dovrà rispondere alle scorciatoie da tastiera, usando :meth:`Gtk.UIManager.get_accel_group` e :meth:`Gtk.Window.add_accel_group`."
+
+# 852148e946c54ea49d3d438e0d59db48
+#: ../source/menus.txt:207
+msgid "Then, you can define the actual visible layout of the menus and toolbars, and add the UI layout. This \"ui string\" uses an XML format, in which you should mention the names of the actions that you have already created. Remember that these names are just the identifiers that we used when creating the actions. They are not the text that the user will see in the menus and toolbars. We provided those human-readable names when we created the actions."
+msgstr "Quindi, è possibile definire il layout visibile attuale dei menu e delle barre degli strumenti, e aggiungere il layout UI (dell'interfaccia utente). Questa stringa UI utilizza un formato XML, nel quale formato si dovrebbero citare i nomi delle azioni che avete già creato. Ricordate che questi nomi sono solo gli identificatori che abbiamo utilizzato durante la creazione di azioni. Essi non sono il testo che l'utente vedrà nei menu e nelle barre degli strumenti. Abbiamo fornito i nomi leggibili quando abbiamo creato le azioni."
+
+# 2be3f15dbad3424098e49eaa4c34dfc4
+#: ../source/menus.txt:214
+msgid "Finally, you retrieve the root widget with :meth:`Gtk.UIManager.get_widget` and add the widget to a container such as :class:`Gtk.Box`."
+msgstr "Infine, si recupera il root widget con :meth:`Gtk.UIManager.get_widget` e lo si aggiunge ad un contenitore come :class:`Gtk.Box`."
+
+# e96cab0011c840fab1f19a9546cbbafc
+#: ../source/menus.txt:218
+msgid "UIManager Objects"
+msgstr "Oggetti UIManager"
+
+# 85966c2b87f54f169e4a6884354818b2
+#: ../source/menus.txt:224
+msgid "Inserts an action group into the list of action groups associated with this manager. Actions in earlier groups hide actions with the same name in later groups."
+msgstr "Inserisce un gruppo di azione nella lista dei gruppi di azione associati a questo manager. Le azioni nei gruppi precedenti nascondono azioni con lo stesso nome per gruppi successivi."
+
+# d4ab7bc0284d424f9357c8dd06804467
+#: ../source/menus.txt:228
+msgid "*pos* is the position at which the group will be inserted. If omitted, it will be appended."
+msgstr "*pos* è la posizione in cui verrà inserito il gruppo. Se omesso, esso verrà accodato."
+
+# d4242044d2da4af08a29ac9a15e7b150
+#: ../source/menus.txt:233
+msgid "Returns the group of global keyboard accelerators associated with this manager."
+msgstr "Restituisce il gruppo di tasti di scelta rapida globali associati a questo manager."
+
+# d9f446a24b804719b6e914a65469869b
+#: ../source/menus.txt:238
+msgid "Looks up a widget by following a path. The path consists of the names specified in the XML description of the UI. separated by '/'. Elements which don't have a name or action attribute in the XML (e.g. <popup>) can be addressed by their XML element name (e.g. \"popup\"). The root element (\"/ui\") can be omitted in the path."
+msgstr "Sembra un widget che segue un percorso. Il percorso è costituito dai nomi specificati nella descrizione XML dell'interfaccia utente, divisi da '/'. Gli elementi che non hanno un nome o un attributo azione nel XML (ad esempio <popup>) possono essere affrontati con il loro XML nome di un elemento (per esempio, \"pop-up\"). L'elemento root (\"/ui\") può essere omesso nel percorso."
+
+# 67cc01cdf5f146779167903b9b54bceb
+#: ../source/menus.txt:244
+msgid "Returns the widget found by following the *path*, or ``None`` if no widget was found."
+msgstr "Restituisce il widget trovato seguendo *path*, o ``None`` se nessun widget è stato trovato."
+
+# f9afbf8d038d456fa37dca57bdfbfa24
+#: ../source/menus.txt:249
+msgid "Parses *text* containing a `UI definition <http://developer.gnome.org/gtk3/stable/GtkUIManager.html#XML-UI>`_ and merges it with the current contents of manager. An enclosing <ui> element is added if it is missing."
+msgstr "Analizza *text* contenente una `definizione UI <http://developer.gnome.org/gtk3/stable/GtkUIManager.html#XML-UI>`_ e la unisce con il contenuto corrente del manager. Un elemento <ui> di chiusura è aggiunto se assente."
+
+# 73508c1767ea4e508662eff95226c730
+#: ../source/menus.txt:253
+msgid "Returns the merge id for the merged UI."
+msgstr "Restituisce l'id unito per la risultante UI."
+
+# e53b877aea19440a850df00f3149e76c
+#: ../source/menus.txt:255
+msgid "Throws an exception if an error occurred."
+msgstr "Genera un'eccezione se si è verificato un errore."
+
+# 43e2be5a49e24951a74b8baef1ce1199
+#: ../source/menus.txt:258
+msgid "Example"
+msgstr "Esempio"
