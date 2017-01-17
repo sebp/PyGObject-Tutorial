@@ -1,0 +1,481 @@
+# Japanese translation for dialogs.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-08 08:12\n"
+"PO-Revision-Date: 2012-12-03 23:23+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/dialogs.txt:2
+# 122d55390bd34955a862970999fd002f
+msgid "Dialogs"
+msgstr "ダイアログ"
+
+#: ../source/dialogs.txt:4
+# cd189b96a4124c259840b19ef014058b
+msgid "Dialog windows are very similar to standard windows, and are used to provide or retrieve information from the user. They are often used to provide a preferences window, for example. The major difference a dialog has is some prepacked widgets which layout the dialog automatically. From there, we can simply add labels, buttons, check buttons, etc. Another big difference is the handling of responses to control how the application should behave after the dialog has been interacted with."
+msgstr "ダイアログ・ウィンドウは標準的なウィンドウにとてもよく似ており、ユーザに情報を提供したり、ユーザから情報を得ることに使用されます。例えば、設定ダイアログとしてよく利用されます。両ウィンドウの主な違いは、ダイアログはそれを構成するいろいろなウィジェットが事前にパッキングされて自動的に配置される点です。さらに、そのような状態からいろいろなラベルやボタン等を追加することもできます。その他の違いとして、ダイアログに対応した後に、アプリケーションをどのように扱うかを制御するための応答を処理することがあります。"
+
+#: ../source/dialogs.txt:12
+# 96dd01fe750440139d73cbc1d90c3117
+msgid "There are several derived Dialog classes which you might find useful. :class:`Gtk.MessageDialog` is used for most simple notifications. But at other times you might need to derive your own dialog class to provide more complex functionality."
+msgstr "ダイアログにはたくさんの便利な派生クラスがあります。 :class:`Gtk.MessageDialog` は簡単な通知を行う際によく使用します。それ以外には独自にダイアログを派生させて、さらに複雑な機能を提供する必要が出てくるかもしれません。"
+
+#: ../source/dialogs.txt:18
+# 9166d297a354496f9d06beea4386e19e
+msgid "Custom Dialogs"
+msgstr "独自のダイアログ"
+
+#: ../source/dialogs.txt:20
+# b73ace49790943559f06c18f7b6d8592
+msgid "To pack widgets into a custom dialog, you should pack them into the :class:`Gtk.Box`, available via :meth:`Gtk.Dialog.get_content_area`. To just add a :class:`Gtk.Button` to the bottom of the dialog, you could use the :meth:`Gtk.Dialog.add_button` method."
+msgstr "いろいろなウィジェットを独自のダイアログにパッキングするには、ウィジェットを :class:`Gtk.Box` の中にパッキングしてから :meth:`Gtk.Dialog.get_content_area` メソッドを使ってそのウィジェットを利用します。単に :class:`Gtk.Button` をダイアログのボタンとして追加したいのであれば :meth:`Gtk.Dialog.add_button` メソッドを使うことになります。"
+
+#: ../source/dialogs.txt:25
+# 989235514ba54434a855ace6e892414b
+msgid "A 'modal' dialog (that is, one which freezes the rest of the application from user input), can be created by calling :class:`Gtk.Dialog.set_modal` on the dialog or set the ``flags`` argument of the :class:`Gtk.Dialog` constructor to include the :attr:`Gtk.DialogFlags.MODAL` flag."
+msgstr "「モーダル」なダイアログ (ユーザからの入力中はアプリケーションへの操作が凍結されるモードのダイアログ) は、 :meth:`Gtk.Dialog.set_modal` を呼び出すか、または :class:`Gtk.Dialog` のコンストラクタを呼び出す際に ``flags`` という引数に :attr:`Gtk.DialogFlags.MODAL` というフラグを含めることで生成できます。"
+
+#: ../source/dialogs.txt:30
+# 436e079906234e2896a3790e1d4d2bea
+msgid "Clicking a button will emit a signal called \"response\". If you want to block waiting for a dialog to return before returning control flow to your code, you can call :meth:`Gtk.Dialog.run`. This method returns an int which may be a value from the :class:`Gtk.ResponseType` or it could be the custom response value that you specified in the :class:`Gtk.Dialog` constructor or :meth:`Gtk.Dialog.add_button`."
+msgstr "ボタンをクリックすると \"response\" というシグナルが発行されます。もし制御をプログラム側に戻す前にダイアログで待ちが発生しないようにしたいのであれば :meth:`Gtk.Dialog.run` メソッドを呼び出して下さい。このメソッドは、 :class:`Gtk.ResponseType` が表す int 型の値、または :class:`Gtk.Dialog` のコンストラクタや :meth:`Gtk.Dialog.add_button` で指定した独自の応答値を返すようにします。"
+
+#: ../source/dialogs.txt:36
+# fa61bc92b963469ba9ce2329ab45545b
+msgid "Finally, there are two ways to remove a dialog. The :meth:`Gtk.Widget.hide` method removes the dialog from view, however keeps it stored in memory. This is useful to prevent having to construct the dialog again if it needs to be accessed at a later time. Alternatively, the :meth:`Gtk.Widget.destroy` method can be used to delete the dialog from memory once it is no longer needed. It should be noted that if the dialog needs to be accessed after it has been destroyed, it will need to be constructed again otherwise the dialog window will be empty."
+msgstr "最後に、ダイアログを削除する方法が二つあります。まず :meth:`Gtk.Widget.hide` メソッドはダイアログをビューから削除しますが、メモリ上にはまだリソースが残ったままです。これは、後でダイアログにアクセスする必要がある時に便利です (再びダイアログを生成する必要はありません)。もう一つは :meth:`Gtk.Widget.destroy` メソッドで、これはもう必要のないダイアログをメモリ上から削除する時に使用します。ダイアログを破棄した後に再びアクセスする必要がある場合はダイアログをもう一度生成する必要があるので注意して下さい (さもなくば、空のダイアログになってしまいます)。"
+
+#: ../source/dialogs.txt:46
+# b3466f53a20848188da54550526dee91
+msgid "Dialog Objects"
+msgstr "ダイアログのオブジェクト"
+
+#: ../source/dialogs.txt:50
+# ea7cc4bcbe184801ace5726d077c8610
+msgid "Creates a new :class:`Gtk.Dialog` with title *title* and transient parent *parent*. The *flags* argument can be used to make the dialog model (:attr:`Gtk.DialogFlags.MODAL`) and/or to have it destroyed along with its transient parent (:attr:`Gtk.DialogFlags.DESTROY_WITH_PARENT`)."
+msgstr "*title* というタイトルを付きで *parent* を一時的な親とする新しい :class:`Gtk.Dialog` を生成します。引数の *flags* を使ってダイアログのモード (:attr:`Gtk.DialogFlags.MODAL`) を指定したり、一時的な親と共にダイアログを破棄するモード (:attr:`Gtk.DialogFlags.DESTROY_WITH_PARENT`) を指定できます。"
+
+#: ../source/dialogs.txt:55
+# c94fd289298849698ae12ab990fed405
+msgid "*buttons* is a tuple of buttons which can be set to provide a range of different buttons and responses. See the :meth:`add_button` method for details."
+msgstr "*buttons* はボタンに関する情報を要素とするタプルで、その情報はボタンの種類とその応答 ID とをペアで指定します。詳細は :meth:`Gtk.Dialog.add_button` メソッドを参照して下さい。"
+
+#: ../source/dialogs.txt:59
+#: ../source/dialogs.txt:163
+# f399bfcf0dd34d75a9eb786807e0395d
+# 201a7d216cfd4ebc994351baf7f0c07b
+msgid "All arguments are optional and can be referred to as key-word arguments as well."
+msgstr "全ての引数はオプション扱いで、キーワードの引数も同様に扱われます。"
+
+#: ../source/dialogs.txt:64
+# 9b4ba84f5b1545159f82bf2a965cdad6
+msgid "Return the content area of of this dialog."
+msgstr "このダイアログが持つコンテンツ領域 (ボタンやボックスなどを含む領域) を返します。"
+
+#: ../source/dialogs.txt:68
+# 2cba0855d00441868982e8c47d2efc2d
+msgid "Adds a button with the given text (or a stock button, if *button_text* is a :ref:`stock item <stock-items>`) and sets things up so that clicking the button will emit the \"response\" signal with the given *response_id*. The button is appended to the end of the dialog's action area."
+msgstr "指定した文字列 (または *button_text* が :ref:`ストック・アイテム <stock-items>` ならばアイコン) を持つボタンを追加設定するので、ボタンをクリックすると指定した応答 ID の *response_id* を持つ \"response\" シグナルを発行できます。新しいボタンはダイアログのアクション領域 (ボタンを配置する領域) の一番最後に追加されます。"
+
+#: ../source/dialogs.txt:73
+# 3826768e48884717a4aa2fd85e221771
+msgid "*response_id* can be any positive integer or one of the predefined :class:`Gtk.ResponseType` values:"
+msgstr "応答 ID の *response_id* には正の整数値、または事前に定義されている次の :class:`Gtk.ResponseType` 型の値を指定して下さい:"
+
+#: ../source/dialogs.txt:76
+# 58811e5b0e4f4d2d869e5cc8fec7e82c
+msgid ":attr:`Gtk.ResponseType.NONE`"
+msgstr ":attr:`Gtk.ResponseType.NONE`"
+
+#: ../source/dialogs.txt:77
+# 53d335f295774f1c96ec4e175b6a09f9
+msgid ":attr:`Gtk.ResponseType.REJECT`"
+msgstr ":attr:`Gtk.ResponseType.REJECT`"
+
+#: ../source/dialogs.txt:78
+#: ../source/dialogs.txt:209
+# a2d4b58ca53643d4ba28279fe83d5395
+# ca38c8c95e6e4d2baf3eaea270c60a14
+msgid ":attr:`Gtk.ResponseType.ACCEPT`"
+msgstr ":attr:`Gtk.ResponseType.ACCEPT`"
+
+#: ../source/dialogs.txt:79
+# f5915e7f40204cfb93a6e7cf901d7fcc
+msgid ":attr:`Gtk.ResponseType.DELETE_EVENT`"
+msgstr ":attr:`Gtk.ResponseType.DELETE_EVENT`"
+
+#: ../source/dialogs.txt:80
+#: ../source/dialogs.txt:210
+# cda53cf4b9fd4ea09f6197e76c4002af
+# 7a903727b7d74ba1a7e9e6d104ecb904
+msgid ":attr:`Gtk.ResponseType.OK`"
+msgstr ":attr:`Gtk.ResponseType.OK`"
+
+#: ../source/dialogs.txt:81
+# 6feea1196a3147d099cd315ed3ab140d
+msgid ":attr:`Gtk.ResponseType.CANCEL`"
+msgstr ":attr:`Gtk.ResponseType.CANCEL`"
+
+#: ../source/dialogs.txt:82
+# 075aec1df44c4db3a6231b950ffb4584
+msgid ":attr:`Gtk.ResponseType.CLOSE`"
+msgstr ":attr:`Gtk.ResponseType.CLOSE`"
+
+#: ../source/dialogs.txt:83
+#: ../source/dialogs.txt:211
+# 88cb4577681b4edc9509abbae3cb2c4e
+# 80e7c3c3a1c147e9ae1d45c375737674
+msgid ":attr:`Gtk.ResponseType.YES`"
+msgstr ":attr:`Gtk.ResponseType.YES`"
+
+#: ../source/dialogs.txt:84
+# cfb88210a1a0423486796ff1f3a88eca
+msgid ":attr:`Gtk.ResponseType.NO`"
+msgstr ":attr:`Gtk.ResponseType.NO`"
+
+#: ../source/dialogs.txt:85
+#: ../source/dialogs.txt:212
+# fd9c847b8c9c490a8a72b3d6de8623f2
+# cd44ba621b9f4902ba4163b19dfd6c95
+msgid ":attr:`Gtk.ResponseType.APPLY`"
+msgstr ":attr:`Gtk.ResponseType.APPLY`"
+
+#: ../source/dialogs.txt:86
+# 49641c8de2a44ab3a5ae130013932a48
+msgid ":attr:`Gtk.ResponseType.HELP`"
+msgstr ":attr:`Gtk.ResponseType.HELP`"
+
+#: ../source/dialogs.txt:88
+# 988d3b35149d4e3b8366db305671e8d7
+msgid "The button widget is returned, but usually you don't need it."
+msgstr "このメソッドはボタン・ウィジェットを返しますが、通常は使用することはありません。"
+
+#: ../source/dialogs.txt:92
+# da4e4a21c59b46f4ac4eae4f07bf9de0
+msgid "Adds several buttons to this dialog using the button data passed as arguments to the method. This method is the same as calling :meth:`add_button` repeatedly. The button data pairs - button text (or :ref:`stock item <stock-items>`) and a response ID integer are passed individually. For example::"
+msgstr "引数として渡されたデータを使って、このダイアログにボタンをいくつか追加します。このメソッドは、複数のボタンに対して :meth:`Gtk.Dialog.add_button` メソッドをそれぞれ呼び出すことと等価です。ボタンのデータはペアで指定して下さい ー ボタンのラベルを表す *button_text* (または :ref:`ストック・アイテム <stock-items>`) と応答 ID を表す整数値の *response_id* のペアをボタンの数だけそれぞれ渡して下さい。例えば::"
+
+#: ../source/dialogs.txt:102
+# 694d9479eabb41aca090445deec23095
+msgid "Sets a dialog modal or non-modal. Modal dialogs prevent interaction with other windows in the same application."
+msgstr "このダイアログをモーダルまたは非モーダルにします。モーダルなダイアログは同一アプリケーション内の他のウィンドウへアクセスできないようにします。"
+
+#: ../source/dialogs.txt:107
+# 5dde047e0d804af297646cdf62c9635e
+msgid "Blocks in a recursive main loop until the dialog either emits the \"response\" signal, or is destroyed. If the dialog is destroyed during the call to :meth:`run`, :meth:`run` returns :attr:`Gtk.ResponseType.NONE`. Otherwise, it returns the response ID from the \"response\" signal emission."
+msgstr "このダイアログが \"response\" シグナルを発行するか、または破棄されるまで再帰的にメイン・ループの中で他のイベントをブロックします。この :meth:`Gtk.Dialog.run` を呼び出している最中にダイアログが破棄されたら、このメソッドは :attr:`Gtk.ResponseType.NONE` を返します。それ以外は \"response\" シグナルが発行したら応答 ID を返します。"
+
+#: ../source/dialogs.txt:113
+#: ../source/dialogs.txt:175
+#: ../source/dialogs.txt:340
+# 4f11f2bc88424808954e0e741d5b1a6c
+# 8f557e29deb64b8fafc75f8297e2655e
+# 65e7e07d91364561a40ae896b5b6d1a7
+msgid "Example"
+msgstr "例"
+
+#: ../source/dialogs.txt:120
+# 6bf0ecb7fabd4ccc9116be321e8a8ce4
+msgid "MessageDialog"
+msgstr "MessageDialog"
+
+#: ../source/dialogs.txt:122
+# 909eaa0ada8b484aaebcde9eb000a308
+msgid ":class:`Gtk.MessageDialog` is a convenience class, used to create simple, standard message dialogs, with a message, an icon, and buttons for user response You can specify the type of message and the text in the :class:`Gtk.MessageDialog` constructor, as well as specifying standard buttons."
+msgstr ":class:`Gtk.MessageDialog` はオールインワンで便利なクラスで、メッセージやアイコンや応答 ID を返すボタンといった簡素な構成を持つ、標準的なメッセージ・ダイアログを生成する際に使用します。 :class:`Gtk.MessageDialog` のコンストラクタには標準的なボタンを指定する他に、メッセージの種類とその文字列を引き渡せます。"
+
+#: ../source/dialogs.txt:127
+# 8915e46d195a44fcacae6fd51f7eda47
+msgid "In some dialogs which require some further explanation of what has happened, a secondary text can be added. In this case, the primary message entered when creating the message dialog is made bigger and set to bold text. The secondary message can be set by calling :meth:`Gtk.MessageDialog.format_secondary_text`."
+msgstr "ダイアログの中で更に詳細な情報を提示する必要がある場合、二番目のメッセージを追加することができます。その際はメッセージ・ダイアログを生成する際に指定した一番目のメッセージが大きく太字で表示されます。二番目のメッセージは :meth:`Gtk.MessageDialog.format_secondary_text` メソッドを使って指定できます。"
+
+#: ../source/dialogs.txt:133
+# ae0a6eb9b0cb45868acef639bf451f15
+msgid "MessageDialog Objects"
+msgstr "MessageDialog のオブジェクト"
+
+#: ../source/dialogs.txt:137
+# 3a822dacfc0047aba6b9dca4e048f2aa
+msgid "Creates a new :class:`Gtk.MessageDialog` with transient parent *parent*. The *flags* argument can be used to make the dialog model (:attr:`Gtk.DialogFlags.MODAL`) and/or to have it destroyed along with its transient parent (:attr:`Gtk.DialogFlags.DESTROY_WITH_PARENT`)."
+msgstr "一時的な親として *parent* を持つ新しい :class:`Gtk.MessageDialog` を生成します。引数の *flags* を指定してダイアログのモード (:attr:`Gtk.DialogFlags.MODAL`) を指定したり、その一時的な親と共に破棄させる属性 (:attr:`Gtk.DialogFlags.DESTROY_WITH_PARENT`) を有効にできます。"
+
+#: ../source/dialogs.txt:142
+# 9498a5b4d79f4f26a19011de9fe2fdec
+msgid "*message_type* can be set to one of the following values:"
+msgstr "*message_type* には次のいずれかの値を指定できます:"
+
+#: ../source/dialogs.txt:144
+# f15ca6e1fb8c49a580154542bb390cc9
+msgid ":attr:`Gtk.MessageType.INFO`: Informational message"
+msgstr ":attr:`Gtk.MessageType.INFO`: 一般的な情報 (Informational) のメッセージ"
+
+#: ../source/dialogs.txt:145
+# 4f102e3f41074564a03821afde14a824
+msgid ":attr:`Gtk.MessageType.WARNING`: Non-fatal warning message"
+msgstr ":attr:`Gtk.MessageType.WARNING`: 致命的ではない警告 (Warning) のメッセージ"
+
+#: ../source/dialogs.txt:146
+# b40b84d76a114f519a68b4bbe73d4c49
+msgid ":attr:`Gtk.MessageType.QUESTION`: Question requiring a choice"
+msgstr ":attr:`Gtk.MessageType.QUESTION`: 選択が必要となる質問/問い合わせ (Question) のメッセージ"
+
+#: ../source/dialogs.txt:147
+# 9bfddbf1f16d45ae84a59b18219bea63
+msgid ":attr:`Gtk.MessageType.ERROR`: Fatal error message"
+msgstr ":attr:`Gtk.MessageType.ERROR`: 致命的なエラー (Error) のメッセージ"
+
+#: ../source/dialogs.txt:148
+# ce62bc00389148a08c50fd86a075a1c8
+msgid ":attr:`Gtk.MessageType.OTHER`: None of the above, doesn't get an icon"
+msgstr ":attr:`Gtk.MessageType.OTHER`: 上記以外 (アイコンなし)"
+
+#: ../source/dialogs.txt:150
+# 7127d46910de476b9a199740bbe90b3b
+msgid "It is also possible to set a variety of buttons on the message dialog, to retrieve different responses from the user. One of the following values can be used:"
+msgstr "更にメッセージ・ダイアログにはいろいろな種類のボタンを指定して、ユーザからいろいろな応答を受け取ることができます。引数の *buttons* には次のいずれかの値を指定できます:"
+
+#: ../source/dialogs.txt:154
+# ac77f173e141404ebb6d030d91e76db4
+msgid ":attr:`Gtk.ButtonsType.NONE`: no buttons at all"
+msgstr ":attr:`Gtk.ButtonsType.NONE`: ボタンなし"
+
+#: ../source/dialogs.txt:155
+# 02223a9c5b0444e4aecea68bdab77341
+msgid ":attr:`Gtk.ButtonsType.OK`: an OK button"
+msgstr ":attr:`Gtk.ButtonsType.OK`: [OK] ボタン"
+
+#: ../source/dialogs.txt:156
+# 0bdc930035fa41e0b4577372b4b0711d
+msgid ":attr:`Gtk.ButtonsType.CLOSE`: a Close button"
+msgstr ":attr:`Gtk.ButtonsType.CLOSE`: [閉じる] ボタン"
+
+#: ../source/dialogs.txt:157
+# 463ed75cfcd441d6bf58542d6ebebf62
+msgid ":attr:`Gtk.ButtonsType.CANCEL`: a Cancel button"
+msgstr ":attr:`Gtk.ButtonsType.CANCEL`: [キャンセル] ボタン"
+
+#: ../source/dialogs.txt:158
+# 538664b779114ab7b80d5d32286fd9a6
+msgid ":attr:`Gtk.ButtonsType.YES_NO`: Yes and No buttons"
+msgstr ":attr:`Gtk.ButtonsType.YES_NO`: [はい] と [いいえ] ボタン"
+
+#: ../source/dialogs.txt:159
+# 46e66c1d3ddd4c0cb11951de990f4639
+msgid ":attr:`Gtk.ButtonsType.OK_CANCEL`: OK and Cancel buttons"
+msgstr ":attr:`Gtk.ButtonsType.OK_CANCEL`: [OK] と [キャンセル] ボタン"
+
+#: ../source/dialogs.txt:161
+# 68140d8e3e5f48208061cf5f6869d757
+msgid "Finally, *message_format* is some text that the user may want to see."
+msgstr "引数の *message_format* にはユーザに通知したい文字列を指定します。"
+
+#: ../source/dialogs.txt:168
+# 4ac1c1cd643148749b14fc8afe65ec3a
+msgid "Sets the secondary text of the message dialog to be *message_format*."
+msgstr "*message_format* にメッセージ・ダイアログの二番目のメッセージを指定します。"
+
+#: ../source/dialogs.txt:170
+# f967b4b8acec4fecb25e430f4afff9c8
+msgid "Note that setting a secondary text makes the primary text (*message_format* argument of :class:`Gtk.MessageDialog` constructor) become bold, unless you have provided explicit markup."
+msgstr "二番目のメッセージを指定すると、一番目のメッセージ (:class:`Gtk.MessageDialog` のコンストラクタに引き渡した *message_format*) の書式を明示的に指定しない限り、自動的に太字になるので注意して下さい。"
+
+#: ../source/dialogs.txt:183
+# 521383e079c64b23b691aefc074f06ce
+msgid "FileChooserDialog"
+msgstr "FileChooserDialog"
+
+#: ../source/dialogs.txt:185
+# f70a9fc9092f40fcb65a57adda4cfcdd
+msgid "The :class:`Gtk.FileChooserDialog` is suitable for use with \"File/Open\" or \"File/Save\" menu items. You can use all of the :class:`Gtk.FileChooser` methods on the file chooser dialog as well as those for :class:`Gtk.Dialog`."
+msgstr ":class:`Gtk.FileChooserDialog` は \"ファイル/開く\" や \"ファイル/保存\" といったメニュー項目と一緒に利用するのに適したダイアログです。ファイル選択ダイアログでは :class:`Gtk.FileChooser` が提供する全てのメソッドの他に :class:`Gtk.Dialog` のメソッドも利用できます。"
+
+#: ../source/dialogs.txt:189
+# ee929ba5b56345ea9ba07a1c293dcc43
+msgid "When creating a :class:`Gtk.FileChooserDialog` you have to define the dialog's purpose:"
+msgstr ":class:`Gtk.FileChooserDialog` を生成する際にダイアログの使途を指定する必要があります:"
+
+#: ../source/dialogs.txt:192
+# e778c6e73b49406e9d65a81c54568ddc
+msgid "To select a file for opening, as for a File/Open command, use :attr:`Gtk.FileChooserAction.OPEN`"
+msgstr "\"ファイル/開く\" のようにオープンするファイルを選択する場合は :attr:`Gtk.FileChooserAction.OPEN` を指定する"
+
+#: ../source/dialogs.txt:194
+# 018db105c1c74861b57291836f8a644b
+msgid "To save a file for the first time, as for a File/Save command, use :attr:`Gtk.FileChooserAction.SAVE`, and suggest a name such as \"Untitled\" with :meth:`Gtk.FileChooser.set_current_name`."
+msgstr "\"ファイル/保存\" のように初めてファイルを保存する場合は :attr:`Gtk.FileChooserAction.SAVE` を指定し, :meth:`Gtk.FileChooser.set_current_name` メソッドを使って \"名前なし\" のようなデフォルトのファイル名を提示する"
+
+#: ../source/dialogs.txt:197
+# a862e5091aa645ddbcc2a03fc72d635f
+msgid "To save a file under a different name, as for a File/Save As command, use :attr:`Gtk.FileChooserAction.SAVE`, and set the existing filename with :meth:`Gtk.FileChooser.set_filename`."
+msgstr "\"ファイル/別名で保存\" のように別の名前でファイルを保存する場合は :attr:`Gtk.FileChooserAction.SAVE` を指定し, :meth:`Gtk.FileChooser.set_filename` メソッドを使って既存のファイル名をセットする"
+
+#: ../source/dialogs.txt:200
+# ea2e73a1a2b146c2a6f995fa544bc6b4
+msgid "To choose a folder instead of a file, use :attr:`Gtk.FileChooserAction.SELECT_FOLDER`."
+msgstr "ファイルの代わりにフォルダを選択する場合は :attr:`Gtk.FileChooserAction.SELECT_FOLDER` を指定する"
+
+#: ../source/dialogs.txt:202
+# 3ae94505693c462a87f6496562396af2
+msgid ":class:`Gtk.FileChooserDialog` inherits from :class:`Gtk.Dialog`, so buttons have response IDs such as :attr:`Gtk.ResponseType.ACCEPT` and :attr:`Gtk.ResponseType.CANCEL` which can be specified in the :class:`Gtk.FileChooserDialog` constructor. In contrast to :class:`Gtk.Dialog`, you can not use custom response codes with :class:`Gtk.FileChooserDialog`. It expects that at least one button will have of the following response IDs:"
+msgstr ":class:`Gtk.FileChooserDialog` は :class:`Gtk.Dialog` クラスから派生しているので、そのダイアログにあるボタンは :attr:`Gtk.ResponseType.ACCEPT` や :attr:`Gtk.ResponseType.CANCEL` といった応答 ID を持ちます。これらは :class:`Gtk.FileChooserDialog` クラスのコンストラクタの中で指定できます。 :class:`Gtk.Dialog` クラスとは対照的に、この :class:`Gtk.FileChooserDialog` では独自に応答 ID を定義できません。いくつかあるボタンのうち少なくとも一つは次の応答 ID を持っているものとみなされます:"
+
+#: ../source/dialogs.txt:214
+# 9bf3f088cd0c436b99370ed5fe425439
+msgid "When the user is finished selecting files, your program can get the selected names either as filenames (:meth:`Gtk.FileChooser.get_filename`) or as URIs (:meth:`Gtk.FileChooser.get_uri`)."
+msgstr "ユーザによるファイルの選択が完了したら、選択されたファイル名 (:meth:`Gtk.FileChooser.get_filename`) または URI (:meth:`Gtk.FileChooser.get_uri`) を取得できます。"
+
+#: ../source/dialogs.txt:218
+# d598c9c5382a4c77abaa109a37d34c6e
+msgid "By default, :class:`Gtk.FileChooser` only allows a single file to be selected at a time. To enable multiple files to be selected, use :meth:`Gtk.FileChooser.set_select_multiple`. Retrieving a list of selected files is possible with either :meth:`Gtk.FileChooser.get_filenames` or :meth:`Gtk.FileChooser.get_uris`."
+msgstr "デフォルトで :class:`Gtk.FileChooser` は一度に一個のファイルだけしか選択できません。複数のファイルを選択できるようにするには :meth:`Gtk.FileChooser.set_select_multiple` メソッドを使用します。選択した複数のファイルのリストを取得するには :meth:`Gtk.FileChooser.get_filenames` または :meth:`Gtk.FileChooser.get_uris` メソッドを使用します。"
+
+#: ../source/dialogs.txt:224
+# 49b9edb07bf840839ff1e642153d1510
+msgid ":class:`Gtk.FileChooser` also supports a variety of options which make the files and folders more configurable and accessible."
+msgstr "さらに :class:`Gtk.FileChooser` では、いろいろなファイルやフォルダを設定したりアクセスするためのオプションをサポートしています。"
+
+#: ../source/dialogs.txt:227
+# 4171e81ea18c4655a0686f7ec84ee934
+msgid ":meth:`Gtk.FileChooser.set_local_only`: Only local files can be selected."
+msgstr ":meth:`Gtk.FileChooser.set_local_only`: ローカルにあるファイルのみ選択できる"
+
+#: ../source/dialogs.txt:228
+# 7452af3f9f674606b1730dbccb9548c3
+msgid ":meth:`Gtk.FileChooser.show_hidden`: Hidden files and folders are displayed."
+msgstr ":meth:`Gtk.FileChooser.show_hidden`: 隠しファイルやフォルダを表示する"
+
+#: ../source/dialogs.txt:229
+# 83aa559fc1dd406cb93645ba07b55544
+msgid ":meth:`Gtk.FileChooser.set_do_overwrite_confirmation`: If the file chooser was configured in :attr:`Gtk.FileChooserAction.SAVE` mode, it will present a confirmation dialog if the user types a file name that already exists."
+msgstr ":meth:`Gtk.FileChooser.set_do_overwrite_confirmation`: ファイル選択ダイアログを :attr:`Gtk.FileChooserAction.SAVE` モードで使用するような場合、ユーザが既に存在するファイル名を入力したら上書きする旨の確認ダイアログを表示する"
+
+#: ../source/dialogs.txt:233
+# 4b131891a4a34949b975dce477fb3365
+msgid "Furthermore, you can specify which kind of files are displayed by creating :class:`Gtk.FileFilter` objects and calling :meth:`Gtk.FileChooser.add_filter`. The user can then select one of the added filters from a combo box at the bottom of the file chooser."
+msgstr "さらに :class:`Gtk.FileFilter` のオブジェクトを生成して :meth:`Gtk.FileChooser.add_filter` を呼び出すことで表示するファイルの種類をフィルタリングできます。すると、ユーザはファイル選択ダイアログの下にあるコンボボックスに追加されたフィルタの中から一つ選択できるようになります。"
+
+#: ../source/dialogs.txt:239
+# a262ce49648646ce91417780f6bea287
+msgid "FileChooser Objects"
+msgstr "FileChooser のオブジェクト"
+
+#: ../source/dialogs.txt:243
+# 406512cebd6f462c844b0c24c35f1532
+msgid "Creates a new :class:`Gtk.FileChooserDialog` with title *title and transient parent *parent*."
+msgstr "タイトルが *title* で *parent* を親とする新しい :class:`Gtk.FileChooserDialog` を生成します。"
+
+#: ../source/dialogs.txt:246
+# c0349b70d8254b68b7f269000ded368e
+msgid "*action* can be one of the following:"
+msgstr "*action* には次のいずれかの値を指定できます:"
+
+#: ../source/dialogs.txt:248
+# ffed0b072e784ef2aa26331760796bff
+msgid ":attr:`Gtk.FileChooserAction.OPEN`: The file chooser will only let the user pick an existing file."
+msgstr ":attr:`Gtk.FileChooserAction.OPEN`: ユーザは既存のファイルを一つだけ選択できる"
+
+#: ../source/dialogs.txt:250
+# 1844e05abe9449518c4d27d2f7c86bc0
+msgid ":attr:`Gtk.FileChooserAction.SAVE`: The file chooser will let the user pick an existing file, or type in a new filename."
+msgstr ":attr:`Gtk.FileChooserAction.SAVE`: ユーザは既存のファイルを一つだけ選択するか、新しいファイル名を入力できる"
+
+#: ../source/dialogs.txt:252
+# 1b937b60cdfd48dc8826ba3b4c2fc60c
+msgid ":attr:`Gtk.FileChooserAction.SELECT_FOLDER`: The file chooser will let the user pick an existing folder."
+msgstr ":attr:`Gtk.FileChooserAction.SELECT_FOLDER`: ユーザは既存フォルダを一つだけ選択できる"
+
+#: ../source/dialogs.txt:254
+# b6c78fb00146446f9d375a0e2042fe05
+msgid ":attr:`Gtk.FileChooserAction.CREATE_FOLDER`: The file chooser will let the user name an existing or new folder."
+msgstr ":attr:`Gtk.FileChooserAction.CREATE_FOLDER`: ユーザは既存のフォルダまたは新しいフォルダに名前を付けることができる"
+
+#: ../source/dialogs.txt:257
+# 17b4b69786c24588846f8effca830cad
+msgid "The *buttons* argument has the same format as for the :class:`Gtk.Dialog` constructor."
+msgstr "引数の *buttons* は :class:`Gtk.Dialog` クラスのコンストラクタと同じ書式で指定します。"
+
+#: ../source/dialogs.txt:264
+# da6b76a03922413299b7f7a666ebafe6
+msgid "Sets the current name in the file selector, as if entered by the user."
+msgstr "あたかもユーザが入力したかのように、ファイル選択ダイアログで現在の名前をセットします。"
+
+#: ../source/dialogs.txt:268
+# 8dd997d8a849471e93fb33b922491a72
+msgid "Sets *filename* as the current filename for the file chooser, by changing to the file's parent folder and actually selecting the file in list; all other files will be unselected. If the chooser is in :attr:`Gtk.FileChooserAction.SAVE` mode, the file's base name will also appear in the dialog's file name entry."
+msgstr "ファイル選択ダイアログでファイルの親フォルダに変更することで現在のファイル名を *filename* にし、ファイルの一覧で選択状態にします (すなわち、他のファイルを全て選択解除します)。もしファイル選択ダイアログのモードが :attr:`Gtk.FileChooserAction.SAVE` の場合は、ファイルの基底名もダイアログでファイル名を入力するエントリ・フィールドに表示されます。"
+
+#: ../source/dialogs.txt:274
+# 5bbd5db3ba5449148ca574b5802fe0ac
+msgid "Note that the file must exist, or nothing will be done except for the directory change."
+msgstr "ここで選択するファイルは必ず存在しているか、またはフォルダの変更以外に何も操作しないようにして下さい。"
+
+#: ../source/dialogs.txt:279
+# c80649e6ad7343efbd0f9a61f0cba313
+msgid "Sets whether multiple files can be selected. This is only relevant if the mode is :attr:`Gtk.FileChooserAction.OPEN` or :attr:`Gtk.FileChooserAction.SELECT_FOLDER`."
+msgstr "複数のファイルを選択できるかどうかを指定します。これは、ファイル選択ダイアログのモードが :attr:`Gtk.FileChooserAction.OPEN` または :attr:`Gtk.FileChooserAction.SELECT_FOLDER` の時にだけ有効になります。"
+
+#: ../source/dialogs.txt:285
+# e56ffd09594f4bd8ab1fc62245ea2313
+msgid "Sets whether only local files can be selected."
+msgstr "ローカルのディスクにあるファイルだけ選択できるかどうかを指定します。"
+
+#: ../source/dialogs.txt:289
+# d9e2e94c12da4d0090f5072670d5935f
+msgid "Sets whether to display hidden files and folders."
+msgstr "隠しファイルやフォルダを表示するかどうかを指定します。"
+
+#: ../source/dialogs.txt:293
+# b81663c3b89943bdb5ed78ce344706cc
+msgid "Sets whether to confirm overwriting in save mode."
+msgstr "ファイルを保存する際に上書きを確認するかどうかを指定します。"
+
+#: ../source/dialogs.txt:297
+# bb461b4337784e4fa08125b4b02a786c
+msgid "Returns the filename for the currently selected file in the file selector. If multiple files are selected, use :meth:`get_filenames` instead."
+msgstr "ファイル選択ダイアログの中で現在選択中のファイルの名前を返します。もし複数のファイルを選択しているのであれば代わりに :meth:`Gtk.FileChooser.get_filenames` メソッドを使用して下さい。"
+
+#: ../source/dialogs.txt:302
+# e2da3e5f0fe34c8788676a0ed9a53fd1
+msgid "Returns a list of all the selected files and subfolders in the current folder. The returned names are full absolute paths. If files in the current folder cannot be represented as local filenames they will be ignored. Use :meth:`get_uris` instead."
+msgstr "現在のフォルダの中で選択している全てのファイルやサブフォルダを要素とするリストを返します。ここで返される名前は完全な絶対パス名です。現在のフォルダにあるファイルがローカルのファイル名として表現できない場合は無視されます。そのような場合は代わりに :meth:`Gtk.FileChooser.get_uris` メソッドを使用して下さい。"
+
+#: ../source/dialogs.txt:309
+# cfd212e6826b4bb59518ad3455ee7a39
+msgid "Returns the URI for the currently selected file in the file selector. If multiple files are selected, use :meth:`get_uris` instead."
+msgstr "ファイル選択ダイアログの中で現在選択中のファイルの URI を返します。もし複数のファイルを選択しているのであれば代わりに :meth:`Gtk.FileChooser.get_uris` メソッドを使用して下さい。"
+
+#: ../source/dialogs.txt:314
+# 949a42d5e77a478ca0a1f65f3769f2a6
+msgid "Returns a list of all the selected files and subfolders in the current folder. The returned names are full absolute URIs."
+msgstr "現在のフォルダの中で選択している全てのファイルやサブフォルダの URI (完全な絶対パスからなる URI) を要素とするリストを返します。"
+
+#: ../source/dialogs.txt:319
+# 92933c27e4c042ee81e3d81acbf1522e
+msgid "Adds the :class:`Gtk.FileFilter` instance *filter* to the list of filters that the user can choose from. When a filter is selected, only files that are passed by that filter are displayed."
+msgstr ":class:`Gtk.FileFilter` クラスのインスタンスである *filter* をファイル選択ダイアログでユーザがファイルの選択で利用するフィルタのリストに追加します。そのフィルタを選択すると、そのフィルタにマッチするファイルだけが一覧の中に表示されます。"
+
+#: ../source/dialogs.txt:327
+# 9178523999ee4c1a898d0e1a3900edd8
+msgid "Sets the human-readable name of the filter; this is the string that will be displayed in the file selector user interface if there is a selectable list of filters."
+msgstr "フィルタに対して可読な名前を指定します。すなわち、これは選択可能なフィルタのリストがファイル選択ダイアログの付いている場合、そのリストに表示される文字列です。"
+
+#: ../source/dialogs.txt:333
+# 123e24c7c4d34b5790eb078fd3a2442f
+msgid "Adds a rule allowing a given mime type to filter."
+msgstr "フィルタに指定できる MIME 型のルールを追加します。"
+
+#: ../source/dialogs.txt:337
+# bd20bb4f796a418cb2cdc71961d6f53a
+msgid "Adds a rule allowing a shell style glob to a filter."
+msgstr "フィルタに Shell スタイルの `Glob <http://mikeforce.net/documents/glib-2.18.x-refs/glib/html/glib-Glob-style-pattern-matching.html>`_ のルールを追加します。"
+

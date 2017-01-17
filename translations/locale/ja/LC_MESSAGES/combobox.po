@@ -1,0 +1,117 @@
+# Japanese translation for combobox.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-24 13:17\n"
+"PO-Revision-Date: 2012-10-17 08:44+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/combobox.txt:2
+# d79ee1b077414bf384a191eccb16f133
+msgid "ComboBox"
+msgstr "コンボ・ボックス"
+
+#: ../source/combobox.txt:3
+# cfac9411004648d18ad14021f07ef55d
+msgid "A :class:`Gtk.ComboBox` allows for the selection of an item from a dropdown menu. They are preferable to having many radio buttons on screen as they take up less room. If appropriate, it can show extra information about each item, such as text, a picture, a checkbox, or a progress bar."
+msgstr ":class:`Gtk.ComboBox` を使うとドロップダウン式のメニューからアイテムを選択できます。このクラスでは画面にたくさんのラジオボタンを持つようなケースでの対応を想定しています (コンボ・ボックスなら場所をとらなくて済むため)。さらに必要であれば、各アイテムに追加の情報 (文字列や画像、チェックボックス、あるいはプログレスバーなど) を表示させることも可能です。"
+
+#: ../source/combobox.txt:8
+# 709a18bb54f14f56bb1bcd533691b9ed
+msgid ":class:`Gtk.ComboBox` is very similar to :class:`Gtk.TreeView`, as both use the model-view pattern; the list of valid choices is specified in the form of a tree model, and the display of the choices can be adapted to the data in the model by using :ref:`cell renderers <cellrenderers>`. If the combo box contains a large number of items, it may be better to display them in a grid rather than a list. This can be done by calling :meth:`Gtk.ComboBox.set_wrap_width`."
+msgstr ":class:`Gtk.ComboBox` は :class:`Gtk.TreeView` クラスにとてもよく似ています。これらのクラスは共に ``モデルとビュー`` の設計思想を採用しているからです。すなわち、実際に選択が可能なアイテムのリストをツリー・モデルの形で指定し、選択が可能なアイテムは :ref:`セル・レンダラ <cellrenderers>` を使ってモデルの中にあるデータの種類に応じて描画するというものです。コンボ・ボックスにたくさんのアイテムが含まれている場合は、リスト状に並べるよりは格子状に並べて表示する方がよいかもしれません。これは :meth:`Gtk.ComboBox.set_wrap_width` メソッドで指定できます。"
+
+#: ../source/combobox.txt:16
+# 16d8ce848973460089dc88bf4689c7bf
+msgid "The :class:`Gtk.ComboBox` widget usually restricts the user to the available choices, but it can optionally have an :class:`Gtk.Entry`, allowing the user to enter arbitrary text if none of the available choices are suitable. To do this, use one of the static methods :meth:`Gtk.ComboBox.new_with_entry` or :meth:`Gtk.ComboBox.new_with_model_and_entry` to create an :class:`Gtk.ComboBox` instance."
+msgstr "通常 :class:`Gtk.ComboBox` クラスのウィジェットはユーザに対して選択できるアイテムを制限することになりますが、オプションで :class:`Gtk.Entry` を持たせることで、選択肢にないものを任意の文字列として入力できるようになります。これはスタティック・メソッドである :meth:`Gtk.ComboBox.new_with_entry` かまたは :meth:`Gtk.ComboBox.new_with_model_and_entry` といったいずれかのメソッドを使って :class:`Gtk.ComboBox` クラスのインスタンスを生成します。"
+
+#: ../source/combobox.txt:23
+# 38c2bf3b9d3d49df9ef9080856abeecc
+msgid "For a simple list of textual choices, the model-view API of :class:`Gtk.ComboBox` can be a bit overwhelming. In this case, :class:`Gtk.ComboBoxText` offers a simple alternative. Both :class:`Gtk.ComboBox` and :class:`Gtk.ComboBoxText` can contain an entry."
+msgstr "選択肢が文字列からなる簡単なリストの場合だと :class:`Gtk.ComboBox` クラスのモデル・ビュー API は少々大げさに思える場合があります。そのような場合に向けて :class:`Gtk.ComboBoxText` クラスという簡易版が用意されています。 :class:`Gtk.ComboBox` と :class:`Gtk.ComboBoxText` クラスは共に一個のエントリを含めることが可能です。"
+
+#: ../source/combobox.txt:29
+# a4dee5fb33ed49f79bd984d8c7840189
+msgid "ComboBox objects"
+msgstr "コンボ・ボックスのオブジェクト"
+
+#: ../source/combobox.txt:35
+# 40044de710dc437bbae556d939270639
+msgid "Creates a new empty :class:`Gtk.ComboBox` with an entry."
+msgstr "エントリを一つ持つ新しい空の :class:`Gtk.ComboBox` を生成します。"
+
+#: ../source/combobox.txt:39
+# 8511745ad2a245728a012f1961703659
+msgid "Creates a new :class:`Gtk.ComboBox` with the model initialized to *model*."
+msgstr "*model* で初期化されたモデルを持つ新しい :class:`Gtk.ComboBox` を生成します。"
+
+#: ../source/combobox.txt:43
+# 10b552e08e5a4f04bbaf52e59c72f858
+msgid "Creates a new :class:`Gtk.ComboBox` with an entry and the model initialized to *model*."
+msgstr "*model* で初期化されたモデルと一つのエントリを持つ新しい :class:`Gtk.ComboBox` を生成します。"
+
+#: ../source/combobox.txt:48
+# 17e255b6898f4d0aba7b7e43669bfa55
+msgid "Returns a :class:`Gtk.TreeIter` pointing to the current active item. If no active item exists, ``None`` is returned."
+msgstr "現在、選択しているアイテムの :class:`Gtk.TreeIter` を返します。もしそのようなアイテムが無ければ ``None`` を返します。"
+
+#: ../source/combobox.txt:53
+# 191732e9b9ad466d9f3ede70c889a93c
+msgid "Sets the model used by this combo box to be *model*. Will unset a previously set model (if applicable). If model is ``None``, then it will unset the model. Note that this function does not clear the cell renderers."
+msgstr "*model* をこのコンボ・ボックスが使用するモデルにセットします。セットする前に既にモデルが存在していた場合は、先にその古いモデルを解除します。 *model* を ``None`` にすると、セットされているモデルを解除します。このメソッドはセル・レンダラをクリアすることはありません。"
+
+#: ../source/combobox.txt:59
+# 8b465db7097b4a7caf4b3bc49fd4f90e
+msgid "Returns the :class:`Gtk.TreeModel` which is acting as data source for this combo box."
+msgstr "このコンボ・ボックスのデータ・ソースとして機能している :class:`Gtk.TreeModel` を返します。"
+
+#: ../source/combobox.txt:64
+# b27c94202ac94cebaa90f704baf0a492
+msgid "Sets the model column which this combo box should use to get strings from to be *text_column*. The column *text_column* in the model of this combo box must be of type ``str``."
+msgstr "*text_column* を、文字列を持つ項目 (``カラム``) に指定します。但し、モデルの中にある *text_column* という項目は ``str`` 型でなければなりません。"
+
+#: ../source/combobox.txt:68
+# a86e0691c3254449ad08cb6e694853ea
+msgid "This is only relevant if this combo box has been created with the \"has-entry\" property set to ``True``."
+msgstr "これは、\"has-entry\" というプロパティが ``True`` としてコンボ・ボックスが生成されている場合にのみ有効です。"
+
+#: ../source/combobox.txt:73
+# 162f1698e99f4211a7d43ddfb922b6d2
+msgid "Sets the wrap width of this combo box to be *width*. The wrap width is basically the preferred number of columns when you want the popup to be layed out in a grid."
+msgstr "コンボ・ボックスのラップ幅を *width* にします。基本的にラップ幅は、ポップアップを配置したい位置を表す格子上の列番号に相当します。"
+
+#: ../source/combobox.txt:78
+# 7078b7ae8c4f41a389bb78f261a30183
+msgid "ComboBoxText objects"
+msgstr "ComboBoxText のオブジェクト"
+
+#: ../source/combobox.txt:84
+# 5f75181b19e341b5930313e581a9f7f8
+msgid "Creates a new empty :class:`Gtk.ComboBoxText` with an entry."
+msgstr "エントリを一つ持つ新しい空の :class:`Gtk.ComboBoxText` を生成します。"
+
+#: ../source/combobox.txt:88
+# 5ae8975765cd46c79e0b9d7aeeb637e3
+msgid "Appends *text* to the list of strings stored in this combo box."
+msgstr "このコンボ・ボックスの中に格納されている文字列のリストに *text* を追加します。"
+
+#: ../source/combobox.txt:92
+# e980d2ec0035448991c19760b3149438
+msgid "Returns the currently active string in this combo box, or ``None`` if none is selected. If this combo box contains an entry, this function will return its contents (which will not necessarily be an item from the list)."
+msgstr "このコンボ・ボックスの中で現在、選択されている文字列を返します。あるいは、何も選択されていない場合は ``None`` を返します。また、このコンボ・ボックスがエントリ付きで生成されている場合、そのエントリの中にある文字列を返します (この文字列はコンボ・ボックスが持つ文字列のリストの要素である必要はありません)。"
+
+#: ../source/combobox.txt:97
+# 35c829cf41d24d488937dea706eb3be8
+msgid "Example"
+msgstr "例"
+

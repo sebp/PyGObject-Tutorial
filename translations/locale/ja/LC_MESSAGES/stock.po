@@ -1,0 +1,97 @@
+# Japanese translation for stock.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-24 13:17\n"
+"PO-Revision-Date: 2012-10-11 18:22+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/stock.txt:4
+# bf3a6dc9beb2451987559f38785f3577
+msgid "Stock Items"
+msgstr "ストック・アイテム"
+
+#: ../source/stock.txt:6
+# ba0ccb4f7f9a446a993309c3ba1f32e2
+msgid "Stock items represent commonly-used menu or toolbar items such as \"Open\" or \"Exit\". Each stock item is identified by a stock ID; stock IDs are just strings, but constants such as :attr:`Gtk.STOCK_OPEN` are provided to avoid typing mistakes in the strings."
+msgstr "ストック・アイテムは \"開く\" とか \"終了\" といった一般的に使用するメニューやツールバーのアイテムを表します。ストック・アイテムはそれぞれ ``ストック ID`` (*Stock ID*) という識別子を持っています。ストック ID は単なる文字列の集合ですが、文字列の綴り間違いなどを未然に防ぐ目的で :attr:`Gtk.STOCK_OPEN` のような定数として提供されています。"
+
+#: ../source/stock.txt:141
+#: ../source/stock.txt:151
+#: ../source/stock.txt:165
+#: ../source/stock.txt:179
+#: ../source/stock.txt:209
+#: ../source/stock.txt:227
+#: ../source/stock.txt:261
+#: ../source/stock.txt:271
+#: ../source/stock.txt:285
+#: ../source/stock.txt:295
+#: ../source/stock.txt:309
+#: ../source/stock.txt:403
+#: ../source/stock.txt:421
+#: ../source/stock.txt:471
+#: ../source/stock.txt:485
+#: ../source/stock.txt:495
+# 8f975303397c4d77b020f5794e5e9187
+# 5942e9cbbc0a491e9e966137af0db9d2
+# 8cab4d65a3a246e5a13417c0cf42dd02
+# c399ad167bf04651bcffbb959599e953
+# f5488de0de624cee9df96df4313980c3
+# 9584875fa5e4431da70f74d4326d321d
+# bad24de2b65e431bb26c2bfffd29fe52
+# e78628793a7b4edfb9473a060ed74c84
+# cb52290aaf934241bb17c80a9fd9d165
+# 156839a82c5a4e23a77ed0a90ca4c72c
+# 4e99f721c3854d04b2ee887ae92f444b
+# 85a7ad36c0bb4ae7b554eaecf594a790
+# 3b667533093d4c228b048866f9d4b2e5
+# 8372b28acef0441ba1953c7edb6f3c18
+# 83f98b9b5ff7458ba58502f671d61d6d
+# 5c5e4944dfd742ccabc05d449bd6e1b0
+msgid "LTR variant:"
+msgstr "LTR (左から右へ描画する) 系:"
+
+#: ../source/stock.txt:145
+#: ../source/stock.txt:155
+#: ../source/stock.txt:169
+#: ../source/stock.txt:183
+#: ../source/stock.txt:213
+#: ../source/stock.txt:231
+#: ../source/stock.txt:265
+#: ../source/stock.txt:275
+#: ../source/stock.txt:289
+#: ../source/stock.txt:299
+#: ../source/stock.txt:313
+#: ../source/stock.txt:407
+#: ../source/stock.txt:425
+#: ../source/stock.txt:475
+#: ../source/stock.txt:489
+#: ../source/stock.txt:499
+# e631980546014100aab24c5bf447d3e5
+# 2368f205ed264296a301e1c02eef6a88
+# 63886cfdf1f34519a9cba98e74376b35
+# f2565ef43071471d8d21c118d734567c
+# e4226a1d665e43cfbebc5ebf8e4ac378
+# ee5a9e8b544b4e38bf8621a29c81089a
+# edac34b69d3c46788cfb6aa5a392f869
+# dc0d2b46a6c14a3dad33691cd699a1c4
+# 271fcdf1dcce4b2ab53046105f0a655c
+# e59e05096789435081de41a62e562098
+# 69d5036a4709468880490a4efc93fa02
+# bc84390a535c49f4a8020dbcd1b83066
+# bab8c2c466214916854982c2a7156766
+# a4cc966ea1ee447fbaba19f6c1ef152b
+# eec4a7989fd74c85a2657ae21bc424fa
+# d3960a9a86654d2e879ad0b6c5f55a08
+msgid "RTL variant:"
+msgstr "RTL (右から左へ描画する) 系:"
+

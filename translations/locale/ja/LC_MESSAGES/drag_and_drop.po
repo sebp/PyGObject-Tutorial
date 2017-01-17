@@ -1,0 +1,304 @@
+# Japanese translation for drag_and_drop.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-08 08:12\n"
+"PO-Revision-Date: 2012-12-16 16:36+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/drag_and_drop.txt:2
+# e52c75849aa5433195b5fa7158ec04a1
+msgid "Drag and Drop"
+msgstr "ドラッグ＆ドロップ"
+
+#: ../source/drag_and_drop.txt:4
+# 8e4059c6a281467c9f38526514301891
+msgid "Versions of PyGObject < 3.0.3 contain a bug which does not allow drag and drop to function correctly. Therefore a version of PyGObject >= 3.0.3 is required for the following examples to work."
+msgstr "PyGObject < 3.0.3 には正しく機能しないドラッグ＆ドロップの実装が含まれています。そのためここで紹介する例を動作させるには PyGObject >= 3.0.3 が必要になります。"
+
+#: ../source/drag_and_drop.txt:8
+# 730f6952b91e46b18ffab522fdeb95bd
+msgid "Setting up drag and drop between widgets consists of selecting a drag source (the widget which the user starts the drag from) with the :meth:`Gtk.Widget.drag_source_set` method, selecting a drag destination (the widget which the user drops onto) with the :meth:`Gtk.Widget.drag_dest_set` method and then handling the relevant signals on both widgets."
+msgstr ":meth:`Gtk.Widget.drag_source_set` メソッドを使って選択した ``ドラッグ元``  (ユーザがドラッグを開始するウィジェット) と, :meth:`Gtk.Widget.drag_dest_set` メソッドを使って選択した ``ドラッグ先`` (ユーザがドロップする先のウィジェット) のペアの間でドラッグ＆ドロップを設定し、双方のウィジェットで適切なシグナルを処理します。"
+
+#: ../source/drag_and_drop.txt:14
+# 1e5fff83838e430d9469614c195c075b
+msgid "Instead of using :meth:`Gtk.Widget.drag_source_set` and :meth:`Gtk.Widget.drag_dest_set` some specialised widgets require the use of specific functions (such as :class:`Gtk.TreeView` and :class:`Gtk.IconView`)."
+msgstr "(:class:`Gtk.TreeView` や :class:`Gtk.IconView` といった) 特別なウィジェットの場合は :meth:`Gtk.Widget.drag_source_set` と :meth:`Gtk.Widget.drag_dest_set` といったメソッドではなく、特定のメソッド必要になってきます。"
+
+#: ../source/drag_and_drop.txt:18
+# 38fac742837a4f468244dcb1fd24728b
+msgid "A basic drag and drop only requires the source to connect to the \"drag-data-get\" signal and the destination to connect to the \"drag-data-received\" signal. More complex things such as specific drop areas and custom drag icons will require you to connect to :ref:`additional signals <drag-signals>` and interact with the :class:`Gdk.DragContext` object it supplies."
+msgstr "基本的なドラッグ＆ドロップ処理ならばドラッグ元を \"drag-data-get\" シグナルに接続し、ドラッグ先を \"drag-data-received\" シグナルに接続するだけです。そうではなくもっと複雑なこと、例えばドロップする領域を指定したり独自にドラッグ用アイコンを指定するような場合は :ref:`その他のシグナル <drag-signals>` に接続し、あらかじめ指定しておいた :class:`Gdk.DragContext` 型のオブジェクトを利用して処理する必要があります。"
+
+#: ../source/drag_and_drop.txt:24
+# afcdb0f676874d308c730d32f5777c80
+msgid "In order to transfer data between the source and destination, you must interact with the :class:`Gtk.SelectionData` variable supplied in the :ref:`\"drag-data-get\" <drag-signals>` and :ref:`\"drag-data-received\" <drag-signals>` signals using the :class:`Gtk.SelectionData` get and set methods."
+msgstr "ドラッグ元からドラッグ先へデータを転送するために, :class:`Gtk.SelectionData` 型の変数を :class:`Gtk.SelectionData` の getter/setter を使って :ref:`\"drag-data-get\" <drag-signals>` と :ref:`\"drag-data-received\" <drag-signals>` のシグナルに引き渡す必要があります。"
+
+#: ../source/drag_and_drop.txt:30
+# 70575951f30349a682625ca6039b9523
+msgid "Target Entries"
+msgstr "ターゲット・エントリ"
+
+#: ../source/drag_and_drop.txt:31
+# ba3c81dec8604a3493d4554f187e42bf
+msgid "To allow the drag source and destination to know what data they are receiving and sending, a common list of :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` are required. A :class:`Gtk.TargetEntry` describes a piece of data that will be sent by the drag source and received by the drag destination."
+msgstr "ドラッグ元とドラッグ先でどんな種類のデータを送ったり受け取ることができるかを知るには :class:`Gtk.TargetEntry <Gtk.TargetEntry>` を要素とする共通リストが必要になります。この :class:`Gtk.TargetEntry` にはドラッグ元が送信し、ドラッグ先で受け取るデータの一部が記載されています。"
+
+#: ../source/drag_and_drop.txt:36
+# 9b3bf49dc2ab4431a046fb4c9924d7de
+msgid "There are two ways of adding :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` to a source and destination. If the drag and drop is simple and each target entry is of a different type, you can use the group of methods :meth:`mentioned here <Gtk.Widget.drag_source_add_text_targets>`."
+msgstr "複数の :class:`Gtk.TargetEntry <Gtk.TargetEntry>` をドラッグ元とドラッグ先に追加する方法は二つあります。もし簡単なドラッグ＆ドロップとしてターゲット・エントリがそれぞれ異なる種類であるならば, :meth:`rag_source_add_text_targets <Gtk.Widget.drag_source_add_text_targets>` 系のメソッドを利用できます。"
+
+#: ../source/drag_and_drop.txt:41
+# 258821ad12374d799cad0409779def1c
+msgid "If you require more than one type of data or wish to do more complex things with the data, you will need to create the :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` using the :meth:`Gtk.TargetEntry.new` method."
+msgstr "もし二種類以上のデータをやりとりしたり、データを使ってもっと複雑なことをしたいのであれば :meth:`Gtk.TargetEntry.new` メソッドを使って :class:`Gtk.TargetEntry <Gtk.TargetEntry>` をいくつか生成する必要があります。"
+
+#: ../source/drag_and_drop.txt:46
+# 188fc9c0906849938041f9abf171a66c
+msgid "Drag and Drop Methods and Objects"
+msgstr "ドラッグ＆ドロップのメソッドとオブジェクト"
+
+#: ../source/drag_and_drop.txt:51
+# 303f9faa49104fd7a3cf89c63c0988c6
+msgid "Sets the widget to be a drag source."
+msgstr "このウィジェットをドラッグ元にします。"
+
+#: ../source/drag_and_drop.txt:53
+# 277ab51c45f24b2cba62ff8f137351c1
+msgid "*start_button_mask* are a combination of :attr:`Gdk.ModifierType` masks which sets which buttons must be pressed for a drag to occur. *targets* is a list of :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` which describe the data to be passed between source and destination. *actions* are a combination :attr:`Gdk.DragAction` masks to show possible drag actions."
+msgstr "*start_button_mask* には :attr:`Gdk.ModifierType` 型のマスク (ドラッグを開始する際に押下するのボタン) をいくつか組み合わせて指定します。 *targets* には :class:`Gtk.TargetEntry <Gtk.TargetEntry>` (ドラッグ元とドラッグ先との間で転送されるデータの種類を記述したもの) を要素とするリストを指定します。 *actions* には :attr:`Gdk.DragAction` 型のマスク (ドラッグで実施可能なアクションの種類) を組み合わせて指定します。"
+
+#: ../source/drag_and_drop.txt:62
+# ad1320052540486aac5f0bdcd32b7835
+msgid "Sets the widget to be a drag destination."
+msgstr "このウィジェットをドラッグ先にします。"
+
+#: ../source/drag_and_drop.txt:64
+# ccb2f645a6734159a574a81c6a6f04ca
+msgid "*flags* are a combination of :attr:`Gtk.DestDefaults` masks which configures the processes which occur on a drag site. *targets* is a list of :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` which describe the data to be passed between source and destination. *actions* are a combination :attr:`Gdk.DragAction` masks to show possible drag actions."
+msgstr ""
+"*flags* には :attr:`Gtk.DestDefaults` 型のマスク (ドラッグ先で処理するアクション) をいくつか組み合わせて指定します。 *targets* には\n"
+":class:`Gtk.TargetEntry <Gtk.TargetEntry>` (ドラッグ元とドラッグ先との間で転送されるデータの種類を記述したもの) を要素とするリストを指定します。 *actions* には :attr:`Gdk.DragAction` 型のマスク (ドラッグ先で実施可能なアクション) をいくつか組み合わせて指定します。"
+
+#: ../source/drag_and_drop.txt:74
+# ceeb95893c524bcd9ae8a5648f363448
+msgid "Add a :class:`Gtk.TargetEntry` to the drag source/destination which contains a piece of text."
+msgstr ":class:`Gtk.TargetEntry` を文字列を含むドラッグ元/先へ一つ追加します。"
+
+#: ../source/drag_and_drop.txt:80
+# a9cdd6075e384d739b1eb16a3b87990a
+msgid "Add a :class:`Gtk.TargetEntry` to the drag source/destination which contains a :class:`GdkPixbuf.Pixbuf`."
+msgstr ":class:`Gtk.TargetEntry` を :class:`GdkPixbuf.Pixbuf` を持つドラッグ元/先へ一つ追加します。"
+
+#: ../source/drag_and_drop.txt:86
+# a8109ca9869b4cc4b795af8b2d91b567
+msgid "Add a :class:`Gtk.TargetEntry` to the drag source/destination which contains a list of URIs."
+msgstr ":class:`Gtk.TargetEntry` を URI を要素とするリストを持つドラッグ元/先へ一つ追加します。"
+
+#: ../source/drag_and_drop.txt:93
+# fbcfa422c049453c8c04153a6351cf8a
+msgid "Creates a new target entry."
+msgstr "新しいターゲット・エントリを生成します。"
+
+#: ../source/drag_and_drop.txt:95
+# 7daf72f11df84f63958cdc50b53c0149
+msgid "*target* is a string describing the type of data the target entry describes."
+msgstr "*target* にはターゲット・エントリに記載するデータの種類 (文字列) を指定します。"
+
+#: ../source/drag_and_drop.txt:97
+# e1f65e755cde4b9ba39a8ff985d9c9c4
+msgid "*flags* controls under which conditions will the data be transferred in a drag and drop and is a combination of the :attr:`Gtk.TargetFlags` values:"
+msgstr "*flags* はドラッグ＆ドロップでデータを転送する条件を表し、次の :attr:`Gtk.TargetFlags` 型の値を組み合わせて指定します:"
+
+#: ../source/drag_and_drop.txt:100
+# daf2ff4c129d40a2bf1b27cdc4145b6e
+msgid ":attr:`Gtk.TargetFlags.SAME_APP` - Only transferred in the same application"
+msgstr ":attr:`Gtk.TargetFlags.SAME_APP` - 同じアプリケーションの中でのみ転送する"
+
+#: ../source/drag_and_drop.txt:101
+# c8608bfcad274eabaa9730dba24e219a
+msgid ":attr:`Gtk.TargetFlags.SAME_WIDGET` - Only transferred within the same widget"
+msgstr ":attr:`Gtk.TargetFlags.SAME_WIDGET` - 同じウィジェットの中でのみ転送する"
+
+#: ../source/drag_and_drop.txt:102
+# 9f6e62745615411ebeb8bd75a1e3f455
+msgid ":attr:`Gtk.TargetFlags.OTHER_APP` - Only transferred in a different application"
+msgstr ":attr:`Gtk.TargetFlags.OTHER_APP` - 異なるアプリケーションの間でのみ転送する"
+
+#: ../source/drag_and_drop.txt:103
+# de78d435a33047c1a39ef899bc5df84c
+msgid ":attr:`Gtk.TargetFlags.OTHER_WIDGET` - Only transferred within a different widget"
+msgstr ":attr:`Gtk.TargetFlags.OTHER_WIDGET` - 異なるウィジェットの間でのみ転送する"
+
+#: ../source/drag_and_drop.txt:105
+# de729c46c9e048a586110e2605567bcf
+msgid "*info* is an ID which the application can use to determine between different pieces of data contained in a drag and drop operation."
+msgstr "*info* は、ドラッグ＆ドロップの操作に含まれているデータの種類を確定する際にアプリケーションが利用できる識別子です。"
+
+#: ../source/drag_and_drop.txt:112
+# 88e10bedb97c4c1d8263b1c794cbd746
+msgid "Returns the contents of the text contained in selection data"
+msgstr "``セレクション`` の中に含まれるデータから文字列を返します。"
+
+#: ../source/drag_and_drop.txt:116
+# 0a6a1b56f1574d3f96681608f959e01a
+msgid "Sets the contents of the text contained in selection data to *text*"
+msgstr "``セレクション`` の中に含めるデータに *text* を格納します。"
+
+#: ../source/drag_and_drop.txt:120
+# 6cde736dd7de4d5796323c7f02e817a8
+msgid "Returns the pixbuf contained in selection data"
+msgstr "``セレクション`` の中に含まれるデータから Pixbuf を返します。"
+
+#: ../source/drag_and_drop.txt:124
+# 1d732eb2d13b4dd09288eda176f372c9
+msgid "Sets the pixbuf contained in selection data to *pixbuf*"
+msgstr "``セレクション`` の中に含めるデータに *pixbuf* を格納します。"
+
+#: ../source/drag_and_drop.txt:129
+# 00295244c86d47dc9e178e774b5fe7f3
+msgid "Drag Source Signals"
+msgstr "ドラッグ元のシグナル"
+
+#: ../source/drag_and_drop.txt:131
+#: ../source/drag_and_drop.txt:145
+# d344c48fec3b4dad851a0f29fcda6eea
+# 7e210b1d7a654e6da8788518585a0d7e
+msgid "Name"
+msgstr "シグナルの名前"
+
+#: ../source/drag_and_drop.txt:131
+#: ../source/drag_and_drop.txt:145
+# 4a6094bad8fc4600bff4012168953ee5
+# 67c32bafef2047e6a6d84c1e5d9af41c
+msgid "When it is emitted"
+msgstr "発行されるタイミング"
+
+#: ../source/drag_and_drop.txt:131
+#: ../source/drag_and_drop.txt:145
+# 7479867a4d5d4fc3af8554a04c4377df
+# 362beeeff9084aa382803be9a88aecff
+msgid "Common Purpose"
+msgstr "主な目的"
+
+#: ../source/drag_and_drop.txt:133
+# a470107f17734ffbb1712d2b16933f69
+msgid "drag-begin"
+msgstr "drag-begin"
+
+#: ../source/drag_and_drop.txt:133
+# 4c7cdc204f0944c0af4ce66511cea19f
+msgid "User starts a drag"
+msgstr "ユーザがドラッグを開始した時"
+
+#: ../source/drag_and_drop.txt:133
+# 7d70582b6bac480cacae906b14eb7269
+msgid "Set-up drag icon"
+msgstr "ドラッグ中のアイコンをセットする"
+
+#: ../source/drag_and_drop.txt:135
+# a8c88e71355846b0a0b9371bf05067e0
+msgid "drag-data-get"
+msgstr "drag-data-get"
+
+#: ../source/drag_and_drop.txt:135
+# 01af826196a3419398c1440614e622b7
+msgid "When drag data is requested by the destination"
+msgstr "ドラッグ先からデータの要求があった時"
+
+#: ../source/drag_and_drop.txt:135
+#: ../source/drag_and_drop.txt:151
+# 60fa4001e5084b7b93a612fac00d3881
+# b793053772eb4d72827091f76eb39165
+msgid "Transfer drag data from source to destination"
+msgstr "ドラッグ元からドラッグ先へデータを転送する"
+
+#: ../source/drag_and_drop.txt:137
+# 27251ae678824cb5aeb5d571f2d600e2
+msgid "drag-data-delete"
+msgstr "drag-data-delete"
+
+#: ../source/drag_and_drop.txt:137
+# 5490f1115bee4b7c88ac32e99af4c7f6
+msgid "When a drag with the action Gdk.DragAction.MOVE is completed"
+msgstr "Gdk.DragAction.MOVE のアクションを持つドラッグが完了した時"
+
+#: ../source/drag_and_drop.txt:137
+# 636afa0179af402aac748ce0c77156e6
+msgid "Delete data from the source to complete the 'move'"
+msgstr "ドラッグ元のデータを削除して「移動」を完了する"
+
+#: ../source/drag_and_drop.txt:139
+# 09de934d1f0a4b0d8756bc4dec46a300
+msgid "drag-data-end"
+msgstr "drag-data-end"
+
+#: ../source/drag_and_drop.txt:139
+# acac8e51708a4e73aa22df6acbf04fa9
+msgid "When the drag is complete"
+msgstr "ドラッグが完了した時"
+
+#: ../source/drag_and_drop.txt:139
+# e6458f6081224e29966e37289c896bd2
+msgid "Undo anything done in drag-begin"
+msgstr "drag-begin で実施した状態に戻す"
+
+#: ../source/drag_and_drop.txt:143
+# 790bb27b8f5b4549bf5f27dd34404617
+msgid "Drag Destination Signals"
+msgstr "ドラッグ先のシグナル"
+
+#: ../source/drag_and_drop.txt:147
+# 2a9657e0643e4e6a8893a462afd6330d
+msgid "drag-motion"
+msgstr "drag-motion"
+
+#: ../source/drag_and_drop.txt:147
+# 1a03fbb8e6de4c62b5841a5a06b4aa0d
+msgid "Drag icon moves over a drop area"
+msgstr "ドラッグ中のアイコンがドロップ領域の上に移動した時"
+
+#: ../source/drag_and_drop.txt:147
+#: ../source/drag_and_drop.txt:149
+# 4681010393294453acba8964997a244d
+# 45b992f96c4a479094893430a1d6f948
+msgid "Allow only certain areas to be dropped onto"
+msgstr "決められた領域だけドロップできる"
+
+#: ../source/drag_and_drop.txt:149
+# c7dacb98fa9d41d0b16609e03a32f4e9
+msgid "drag-drop"
+msgstr "drag-drop"
+
+#: ../source/drag_and_drop.txt:149
+# b56649e376874b37b51a0be57011d481
+msgid "Icon is dropped onto a drag area"
+msgstr "アイコンがドロップ領域の上でドロップされた時"
+
+#: ../source/drag_and_drop.txt:151
+# a3e6a72948284fd3a2cafdaf62fca75b
+msgid "drag-data-received"
+msgstr "drag-data-received"
+
+#: ../source/drag_and_drop.txt:151
+# bd71e5db15064669bd7193eedb43c865
+msgid "When drag data is received by the destination"
+msgstr "ドラッグ先がデータを受け取った時"
+
+#: ../source/drag_and_drop.txt:155
+# 202a33cfa4a94649a8ce3022820241f1
+msgid "Example"
+msgstr "例"
+

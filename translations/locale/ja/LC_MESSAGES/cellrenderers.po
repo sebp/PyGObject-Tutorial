@@ -1,0 +1,257 @@
+# Japanese translation for treeview.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-24 13:17\n"
+"PO-Revision-Date: 2012-10-16 09:34+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/cellrenderers.txt:4
+# dc5d6be0641649b2816a8c9aa8bfb2ca
+msgid "CellRenderers"
+msgstr "セル・レンダラ"
+
+#: ../source/cellrenderers.txt:6
+# 6a24d6b784ea4c33ab79e5ee537d7bf0
+msgid ":class:`Gtk.CellRenderer` widgets are used to display information within widgets such as the :class:`Gtk.TreeView` or :class:`Gtk.ComboBox`. They work closely with the associated widgets and are very powerful, with lots of configuration options for displaying a large amount of data in different ways. There are seven :class:`Gtk.CellRenderer` widgets which can be used for different purposes:"
+msgstr ":class:`Gtk.CellRenderer` は :class:`Gtk.TreeView` や :class:`Gtk.ComboBox` のようなウィジェットの中に何かデータを表示するために使用するウィジェットです。このウィジェットは関連するウィジェットと連携し、とても強力で、いろいろな方法でたくさんのデータを表示するための設定オプションが用意されています。この :class:`Gtk.CellRenderer` クラスのウィジェットはいろいろな用途に利用できます::"
+
+#: ../source/cellrenderers.txt:12
+# e70498c7146442889f5270ea8926a091
+msgid ":class:`Gtk.CellRendererText`"
+msgstr ":class:`Gtk.CellRendererText`"
+
+#: ../source/cellrenderers.txt:13
+# ed745ed5ab5f4b03b362f00f1061fac8
+msgid ":class:`Gtk.CellRendererToggle`"
+msgstr ":class:`Gtk.CellRendererToggle`"
+
+#: ../source/cellrenderers.txt:14
+# ca0e392b0ff740a0b693c2f745af6f96
+msgid ":class:`Gtk.CellRendererPixbuf`"
+msgstr ":class:`Gtk.CellRendererPixbuf`"
+
+#: ../source/cellrenderers.txt:15
+# 188450b69c7d4495a2c18ce0ba67f9b9
+msgid ":class:`Gtk.CellRendererCombo`"
+msgstr ":class:`Gtk.CellRendererCombo`"
+
+#: ../source/cellrenderers.txt:16
+# 5d088776ca9a40dcb3df68b183a6963e
+msgid ":class:`Gtk.CellRendererProgress`"
+msgstr ":class:`Gtk.CellRendererProgress`"
+
+#: ../source/cellrenderers.txt:17
+# c5fa948aad0d430d9c0d5dbfa1094e37
+msgid ":class:`Gtk.CellRendererSpinner`"
+msgstr ":class:`Gtk.CellRendererSpinner`"
+
+#: ../source/cellrenderers.txt:18
+# 180ab82a3ab64a809fe4bbdfa3220f63
+msgid ":class:`Gtk.CellRendererSpin`"
+msgstr ":class:`Gtk.CellRendererSpin`"
+
+#: ../source/cellrenderers.txt:19
+# 638cf3b96d5d457da31c8bf6debd7419
+msgid ":class:`Gtk.CellRendererAccel`"
+msgstr ":class:`Gtk.CellRendererAccel`"
+
+#: ../source/cellrenderers.txt:22
+# d6b020f6f08f4f42bac1068a0b9db273
+msgid "CellRendererText"
+msgstr "CellRendererText"
+
+#: ../source/cellrenderers.txt:24
+# aadf3477f71e49bca12a9266c46df336
+msgid "A :class:`Gtk.CellRendererText` renders a given text in its cell, using the font, color and style information provided by its properties. The text will be ellipsized if it is too long and the \"ellipsize\" property allows it."
+msgstr ":class:`Gtk.CellRendererText` クラスはセル (項目の中にはセルをいくつか描画でき、セルが一個の場合は項目と同じ扱いになります) の中に、プロパティとして指定したフォントや色、スタイルの情報を使って文字列を描画します。文字列が長く、\"ellipsize\" プロパティが有効になっている場合は省略表記 (\"文字列...\") になります。"
+
+#: ../source/cellrenderers.txt:28
+# eab29354f2ff4b6cb67de6a2735ffc54
+msgid "By default, text in :class:`Gtk.CellRendererText` widgets is not editable. This can be changed by setting the value of the \"editable\" property to ``True``:"
+msgstr "デフォルトで :class:`Gtk.CellRendererText` クラスの文字列は編集不可です。これは、次のように \"editable\" プロパティを ``True`` にすることで変更できます::"
+
+#: ../source/cellrenderers.txt:35
+# a61ce8b364544f4c829e7e394ab5dfc2
+msgid "You can then connect to the \"edited\" signal and update your :class:`Gtk.TreeModel` accordingly."
+msgstr "それから \"edited\" シグナルを接続して :class:`Gtk.TreeModel` クラスをそれぞれ更新していきます。"
+
+#: ../source/cellrenderers.txt:39
+# 582c8186590d4363b1575b2c5b7ecc82
+msgid "CellRendererText Objects"
+msgstr "CellRendererText のオブジェクト"
+
+#: ../source/cellrenderers.txt:43
+# 1de8a99bc9ed454881867dd509b1ed39
+msgid "Creates a new :class:`Gtk.CellRendererText` instance. Adjust how text is drawn using object properties. Also, with :class:`Gtk.TreeViewColumn`, you can bind a property to a value in a :class:`GtkTreeModel`. For example, you can bind the \"text\" property on the cell renderer to a string value in the model, thus rendering a different string in each row of the :class:`Gtk.TreeView`."
+msgstr "新しい :class:`Gtk.CellRendererText` クラスのインスタンスを生成します。このオブジェクトのプロパティを使って、どのように文字列を描画するかを決定します。さらに :class:`Gtk.TreeViewColumn` クラスを使って :class:`Gtk.TreeModel` にあるデータのプロパティと連動させることも可能です。例えば、セル・レンダラの \"text\" プロパティをモデルの中にある文字列に関連づけることで :class:`Gtk.TreeView` の各項目の中にいろいろな文字列を描画することができます。"
+
+#: ../source/cellrenderers.txt:51
+#: ../source/cellrenderers.txt:96
+#: ../source/cellrenderers.txt:121
+#: ../source/cellrenderers.txt:155
+#: ../source/cellrenderers.txt:180
+#: ../source/cellrenderers.txt:209
+# 8ee612ac4caf48c5b488853754bf5501
+# b95112e6d4c147dfa61288aeba65de4a
+# 85ebd98e736f4ea6a7c44b6fa62d2659
+# e1a0e801471843bcbd4e18a29aa93430
+# 93068da6f30b423984f47f7b71d729db
+# b6fb319b9e6d4bec93d645f6bd9db7db
+msgid "Example"
+msgstr "例"
+
+#: ../source/cellrenderers.txt:59
+# 9bd10de1a6934930b96bb10dc6409b9a
+msgid "CellRendererToggle"
+msgstr "CellRendererToggle"
+
+#: ../source/cellrenderers.txt:61
+# 8125070d424047fe9072f6437e6bdfe1
+msgid ":class:`Gtk.CellRendererToggle` renders a toggle button in a cell. The button is drawn as a radio- or checkbutton, depending on the \"radio\" property. When activated, it emits the \"toggled\" signal."
+msgstr ":class:`Gtk.CellRendererToggle` クラスはセル (項目の中にはセルをいくつか描画でき、セルが一個の場合は項目と同じ扱いになります) の中にトグル・ボタンを描画します。このボタンは \"radio\" というプロパティに応じて、ラジオ型またはチェック型のトグルとして描画されます。このボタンが押下されると \"toggled\" というシグナルが発行されます。"
+
+#: ../source/cellrenderers.txt:65
+# 86445b772f7d4deca00be464fa5f55c8
+msgid "As a :class:`Gtk.CellRendererToggle` can have two states, active and not active, you most likely want to bind the \"active\" property on the cell renderer to a boolean value in the model, thus causing the check button to reflect the state of the model."
+msgstr "この :class:`Gtk.CellRendererToggle` クラスは二つの状態 (押下されているかどうか) を保持できるので、セル・レンダラの \"active\" プロパティをモデルの中の論理値に相当するデータに関連づけるといった扱いがもっとも一般的です。その場合だと、例えばチェックボタンを押下したらモデルの状態にその結果が反映されるようになります。"
+
+#: ../source/cellrenderers.txt:71
+# debc4a86107043d881a4ee2f614bd435
+msgid "CellRendererToggle Objects"
+msgstr "CellRendererToggle のオブジェクト"
+
+#: ../source/cellrenderers.txt:75
+# 577a57c0b5f54cb6881562958d18d211
+msgid "Creates a new :class:`Gtk.CellRendererToggle` instance."
+msgstr "新しい :class:`Gtk.CellRendererToggle` クラスのインスタンスを生成します。"
+
+#: ../source/cellrenderers.txt:79
+# 52991316424649068604e0d544b76322
+msgid "Activates or deactivates a cell renderer."
+msgstr "セル・レンダラが保持する状態を有効にしたり無効にします。"
+
+#: ../source/cellrenderers.txt:83
+# d740008ac8c248feb3aa9562acad2787
+msgid "Returns whether the cell renderer is active."
+msgstr "セル・レンダラが保持する状態を取得します。"
+
+#: ../source/cellrenderers.txt:87
+# b848217a91cd4524af3e7f1e04cf9ca3
+msgid "If *radio* is ``True``, the cell renderer renders a radio toggle (i.e. a toggle in a group of mutually-exclusive toggles). If ``False``, it renders a check toggle (a standalone boolean option)."
+msgstr "*radio* を ``True`` にすると、セル・レンダラはラジオ型のトグルを描画します (つまりトグルがいくつかあるグループの中で一つだけ有効になる排他的なタイプです)。 ``False`` にすると、チェック型のトグルを描画します (いわゆる単体のオプションを表現するタイプです)。"
+
+#: ../source/cellrenderers.txt:93
+# f258f40b1b234e8d8614300db2ce3607
+msgid "Returns whether we're rendering radio toggles rather than checkboxes."
+msgstr "このセル・レンダラがチェック型のトグルではなくラジオ型のトグルを描画しているかを返します。"
+
+#: ../source/cellrenderers.txt:104
+# d6167371c4d54512ae66fbc3ec6681b8
+msgid "CellRendererPixbuf"
+msgstr "CellRendererPixbuf"
+
+#: ../source/cellrenderers.txt:106
+# 71f2b104eeb549579b2aa13c9ec8000b
+msgid "A :class:`Gtk.CellRendererPixbuf` can be used to render an image in a cell. It allows to render either a given :class:`Gdk.Pixbuf` (set via the \"pixbuf\" property) or a :ref:`stock item <stock-items>` (set via the \"stock-id\" property)."
+msgstr ":class:`Gtk.CellRendererPixbuf` クラスのインスタンスはセル (項目の中にはセルをいくつか描画でき、セルが一個の場合は項目と同じ扱いになります) の中に一個の画像を描画する際に利用できます。このセル・レンダラを使うと :class:`Gtk.Pixbuf` (\"pixbuf\" プロパティに指定したもの) か、または :ref:`ストック・アイテム <stock-items>` (\"stock-id\" プロパティに指定したもの) のいずれかを描画できます。"
+
+#: ../source/cellrenderers.txt:111
+# a355150af070492998bc9f26f55e39c4
+msgid "CellRendererPixbuf Objects"
+msgstr "CellRendererPixbuf のオブジェクト"
+
+#: ../source/cellrenderers.txt:115
+# ff385fb4ee264e8f88170eafaee2d956
+msgid "Creates a new :class:`Gtk.CellRendererPixbuf`. Adjust rendering parameters using object properties. For example, you can bind the \"pixbuf\" or \"stock-id\" property on the cell renderer to a pixbuf value in the model, thus rendering a different image in each row of the :class:`Gtk.TreeView`."
+msgstr "新しい :class:`Gtk.CellRendererPixbuf` クラスのインスタンスを生成します。このオブジェクトのプロパティを使って、描画パラメータを調整します。例えば、セル・レンダラの \"pixbuf\" または \"stock-id\" プロパティをモデルの中にある :class:`Gtk.Pixbuf` 型の画像データに関連づけることで、 :class:`Gtk.TreeView` の各項目にいろいろな種類の画像を表示できます。"
+
+#: ../source/cellrenderers.txt:129
+# abad9386a9a84968980d41055e041a6e
+msgid "CellRendererCombo"
+msgstr "CellRendererCombo"
+
+#: ../source/cellrenderers.txt:131
+# c57170fdfe954f6d9bc66e5059748bdb
+msgid ":class:`Gtk.CellRendererCombo` renders text in a cell like :class:`Gtk.CellRendererText` from which it is derived. But while the latter offers a simple entry to edit the text, :class:`Gtk.CellRendererCombo` offers a :class:`Gtk.ComboBox` widget to edit the text. The values to display in the combo box are taken from the :class:`Gtk.TreeModel` specified in the \"model\" property."
+msgstr ":class:`Gtk.CellRendererCombo` クラスは、(このクラスから継承した) :class:`Gtk.CellRendererText` のようなセルの中に文字列を描画します。但し、後者のクラスが文字列を編集するための簡単なエントリを提供するのに対し、 :class:`Gtk.CellRendererCombo` クラスは :class:`Gtk.ComboBox` (コンボ・ボックス) を使って文字列を編集します。コンボ・ボックスの中に入力候補として表示する一連の値は、\"model\" プロパティの中で指定した :class:`Gtk.TreeModel` から取得します。"
+
+#: ../source/cellrenderers.txt:137
+# 3866d1e47bea411483fafbe0cbe61e1e
+msgid "The combo cell renderer takes care of adding a text cell renderer to the combo box and sets it to display the column specified by its \"text-column\" property."
+msgstr "コンボのセル・レンダラは文字列を描画するセル・レンダラをコンボ・ボックスに追加する処理の面倒をみます。そして、追加した文字列を \"text-column\" プロパティで指定したカラムに表示します。"
+
+#: ../source/cellrenderers.txt:140
+# d8dffa800c3c488ebb8ff5f490fe05c5
+msgid "A :class:`Gtk.CellRendererCombo` can operate in two modes. It can be used with and without an associated :class:`Gtk.Entry` widget, depending on the value of the \"has-entry\" property."
+msgstr ":class:`Gtk.CellRendererCombo` は二つのモードで操作できます。それは :class:`Gtk.Entry` ウィジェットとの連携の有無です (このモードの切り替えは \"has-entry\" プロパティで指定します)。"
+
+#: ../source/cellrenderers.txt:145
+# a7c35851b9784a44b0e269d5da182514
+msgid "CellRendererCombo Objects"
+msgstr "CellRendererCombo のオブジェクト"
+
+#: ../source/cellrenderers.txt:149
+# 030282c8778a4ad3a54f1ffea35628df
+msgid "Creates a new :class:`Gtk.CellRendererCombo`. Adjust how text is drawn using object properties. For example, you can bind the \"text\" property on the cell renderer to a string value in the model, thus rendering a different string in each row of the :class:`Gtk.TreeView`."
+msgstr "新しい :class:`Gtk.CellRendererCombo` クラスのインスタンスを生成します。このオブジェクトのプロパティを使って文字列の描画方法を調整します。例えば、セル・レンダラの \"text\" プロパティをモデルの中に格納した任意の文字列と関連づけることで :class:`Gtk.TreeView` の各行にいろいろ異なる文字列を描画することができるようになります。"
+
+#: ../source/cellrenderers.txt:163
+# 7b6bc79d4bca4fdb93b8a06b26880116
+msgid "CellRendererProgress"
+msgstr "CellRendererProgress"
+
+#: ../source/cellrenderers.txt:165
+# 4eca225849a64fb884752b09043ef909
+msgid ":class:`Gtk.CellRendererProgress` renders a numeric value as a progress bar in a cell. Additionally, it can display a text on top of the progress bar."
+msgstr ":class:`Gtk.CellRendererProgress` クラスはセル (項目の中にはセルをいくつか描画でき、セルが一個の場合は項目と同じ扱いになります) の中にプログレスバーを描画します。また、そのプログレスバーの上に文字列を表示することもできます。"
+
+#: ../source/cellrenderers.txt:168
+# bb6bac3e62de4980ad120e1d01ced270
+msgid "The percentage value of the progress bar can be modified by changing the \"value\" property. Similar to :class:`Gtk.ProgressBar`, you can enable the *activity mode* by incrementing the \"pulse\" property instead of the \"value\" property."
+msgstr "プログレスバーが持つ百分率の値はその \"value\" プロパティ経由で変更できます。 :class:`Gtk.ProgressBar` と同様に、\"value\" プロパティではなく \"pulse\" プロパティの値を増分することで ``アクティビティ・モード`` を利用することもできます。"
+
+#: ../source/cellrenderers.txt:173
+# fb040bda97a94a4985c0ec83c712c81a
+msgid "CellRendererProgress Objects"
+msgstr "CellRendererProgress のオブジェクト"
+
+#: ../source/cellrenderers.txt:177
+# 5f056a8e3b884805b1e21e1b367105ec
+msgid "Creates a new :class:`Gtk.CellRendererProgress`."
+msgstr "新しい :class:`Gtk.CellRendererProgress` クラスのインスタンスを生成します。"
+
+#: ../source/cellrenderers.txt:188
+# 941c656ab65c40f5a008850c1b57befe
+msgid "CellRendererSpin"
+msgstr "CellRendererSpin"
+
+#: ../source/cellrenderers.txt:190
+# ba51e7627665419ab7ca0e4664f163d5
+msgid ":class:`Gtk.CellRendererSpin` renders text in a cell like :class:`Gtk.CellRendererText` from which it is derived. But while the latter offers a simple entry to edit the text, :class:`Gtk.CellRendererSpin` offers a :class:`Gtk.SpinButton` widget. Of course, that means that the text has to be parseable as a floating point number."
+msgstr ":class:`Gtk.CellRendererSpin` はそのクラスの派生元の :class:`Gtk.CellRendererText` クラスのようなセル (項目の中にはセルをいくつか描画でき、セルが一個の場合は項目と同じ扱いになります) の中に文字列を描画します。但し、後者の暮らすが文字列を編集するために簡単なエントリを提供しているのに対し、 :class:`Gtk.CellRendererSpin` クラスは :class:`Gtk.SpinButton` クラスのウィジェットを提供します。もちろん、それは浮動小数点型の実数として文字列を解析できることを意味しています。"
+
+#: ../source/cellrenderers.txt:196
+# d926297980d540c9955fc42c420104d9
+msgid "The range of the spinbutton is taken from the adjustment property of the cell renderer, which can be set explicitly or mapped to a column in the tree model, like all properties of cell renders. :class:`Gtk.CellRendererSpin` also has properties for the climb rate and the number of digits to display."
+msgstr "スピンボタンで指定可能な範囲はセル・レンダラの \"adjustment\" プロパティから受け取ります。これはセル・レンダラの他のプロパティ同様に、明示的に指定するか、もしくはツリーモデルの中の任意の項目に直接マップして指定できます。さらに :class:`Gtk.CellRendererSpin` クラスには climb レート (矢印をクリックした時にスピン・ボタンが変化する量) や表示する桁数のプロパティがたくさんあります。"
+
+#: ../source/cellrenderers.txt:202
+# 5dcbf3e4a5c14843aefafdec02421931
+msgid "CellRendererSpin Objects"
+msgstr "CellRendererSpin のオブジェクト"
+
+#: ../source/cellrenderers.txt:206
+# b0d739a925234c0cab77ff8f9d2db594
+msgid "Creates a new :class:`Gtk.CellRendererSpin`."
+msgstr "新しい :class:`Gtk.CellRendererSpin` クラスのインスタンスを生成します。"
+

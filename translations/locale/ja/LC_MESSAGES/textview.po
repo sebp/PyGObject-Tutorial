@@ -1,0 +1,674 @@
+# Japanese translation for textview.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-15 21:36\n"
+"PO-Revision-Date: 2012-12-15 21:40+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# cea0fc9dcc17484981b47407e7b1f227
+#: ../source/textview.txt:2
+msgid "Multiline Text Editor"
+msgstr "複数行のテキスト・エディタ"
+
+# f895464a6a8741e796803cda72a222cc
+#: ../source/textview.txt:4
+msgid ""
+"The :class:`Gtk.TextView` widget can be used to display and edit large "
+"amounts of formatted text. Like the :class:`Gtk.TreeView`, it has a model/"
+"view design. In this case the :class:`Gtk.TextBuffer` is the model which "
+"represents the text being edited. This allows two or more :class:`Gtk."
+"TextView` widgets to share the same :class:`Gtk.TextBuffer`, and allows "
+"those text buffers to be displayed slightly differently. Or you could "
+"maintain several text buffers and choose to display each one at different "
+"times in the same :class:`Gtk.TextView` widget."
+msgstr ""
+":class:`Gtk.TextView` (``テキスト・ビュー``) ウィジェットは大量の整形された文"
+"章を表示したり編集する際に使用することができます。 :class:`Gtk.TreeView` のよ"
+"うに、このウィジェットも「モデル/ビュー設計」を採用しています。このウィジェッ"
+"トでは :class:`Gtk.TextBuffer` (``テキスト・バッファ``) がモデルに相当し、編"
+"集される文章や文字列を表します。これにより、複数の :class:`Gtk.TextView` ウィ"
+"ジェットが同じ :class:`Gtk.TextBuffer` を共有することができ、それらのテキス"
+"ト・バッファで少しだけ異なる内容を表示できるようになります。あるいは、複数の"
+"テキスト・バッファを管理し、同じ :class:`Gtk.TextView` ウィジェットの中にどち"
+"らか一つ表示するといったことも可能です。"
+
+# 4ec8e00496394b4696cadc2de0c099dc
+#: ../source/textview.txt:13
+msgid "The View"
+msgstr "ビュー"
+
+# 696645945af04aadb79820acc2022ae6
+#: ../source/textview.txt:15
+msgid ""
+"The :class:`Gtk.TextView` is the frontend with which the user can add, edit "
+"and delete textual data. They are commonly used to edit multiple lines of "
+"text. When creating a :class:`Gtk.TextView` it contains its own default :"
+"class:`Gtk.TextBuffer`, which you can access via the :meth:`Gtk.TextView."
+"get_buffer` method."
+msgstr ""
+":class:`Gtk.TextView` ウィジェットは、ユーザが文字列からなるデータを追加した"
+"り、編集したり、削除することができる機能を持ったフロントエンドです。これらの"
+"機能は一般的に複数行からなる文字列 (いわゆる文章) の編集に使用されます。 :"
+"class:`Gtk.TextView` ウィジェットを一つ生成すると、その中にデフォルトの :"
+"class:`Gtk.TextBuffer` が収容されます。このバッファには :meth:`Gtk.TextView."
+"get_buffer` メソッドを使ってアクセスできます。"
+
+# 186e6cea73b34fff92316340425a9ded
+#: ../source/textview.txt:21
+msgid ""
+"By default, text can be added, edited and removed from the :class:`Gtk."
+"TextView`. You can disable this by calling :meth:`Gtk.TextView."
+"set_editable`. If the text is not editable, you usually want to hide the "
+"text cursor with :meth:`Gtk.TextView.set_cursor_visible` as well. In some "
+"cases it may be useful to set the justification of the text with :meth:`Gtk."
+"TextView.set_justification`. The text can be displayed at the left edge, (:"
+"attr:`Gtk.Justification.LEFT`), at the right edge (:attr:`Gtk.Justification."
+"RIGHT`), centered (:attr:`Gtk.Justification.CENTER`), or distributed across "
+"the complete width (:attr:`Gtk.Justification.FILL`)."
+msgstr ""
+"デフォルトで :class:`Gtk.TextView` ウィジェットから文字列を追加したり編集した"
+"り削除できるようになっています。これは, :meth:`Gtk.TextView.set_editable` メ"
+"ソッドを呼び出して無効にできます。もし文字列を編集できないようにしたいのであ"
+"れば、通常は :meth:`Gtk.TextView.set_cursor_visible` メソッドを使ってカーソル"
+"自身を隠してしまえます。また、ある時は :meth:`Gtk.TextView."
+"set_justification` メソッドで文字列の行端を揃えることもできます。このメソッド"
+"を使って文字列を左端に寄せたり (:attr:`Gtk.Justification.LEFT`)、右端に寄せた"
+"り (:attr:`Gtk.Justification.RIGHT`)、左右均等に寄せたり (:attr:`Gtk."
+"Justification.CENTER`)、表示する幅に対して均等に配置していくことができます (:"
+"attr:`Gtk.Justification.FILL`)。"
+
+# 06da32f28db94e11abfd6957cd42ca81
+#: ../source/textview.txt:31
+msgid ""
+"Another default setting of the :class:`Gtk.TextView` widget is long lines of "
+"text will continue horizontally until a break is entered. To wrap the text "
+"and prevent it going off the edges of the screen call :meth:`Gtk.TextView."
+"set_wrap_mode`."
+msgstr ""
+":class:`Gtk.TextView` ウィジェットにはもう一つ、長い文字列の行は改行文字が出"
+"現するまで水平方向に続けていくというデフォルトの設定があります。そうではな"
+"く、文字列を画面の端で折り返して表示させたい場合は :meth:`Gtk.TextView."
+"set_wrap_mode` メソッドを使用します。"
+
+# b1bee722c21e4d95ab5de433fce9774d
+#: ../source/textview.txt:36
+msgid "TextView Objects"
+msgstr "TextView のオブジェクト"
+
+# aced29f5fa7d42b89bf5c81d953b9e3f
+#: ../source/textview.txt:40
+msgid ""
+"Creates a new :class:`Gtk.TextView` associated with an empty default :class:"
+"`Gtk.TextBuffer`."
+msgstr ""
+"新しい :class:`Gtk.TextView` を生成し、空の :class:`Gtk.TextBuffer` をデフォ"
+"ルトとして関連付けます。"
+
+# 19e6b77c39754195abc13f1dbb161ca3
+#: ../source/textview.txt:45
+msgid "Returns the :class:`Gtk.TextBuffer` being displayed by this text view."
+msgstr ""
+"このテキスト・ビューが表示している :class:`Gtk.TextBuffer` を返します。"
+
+# 6bff581ef74f4b209528fa1cb56c4bca
+#: ../source/textview.txt:49
+msgid "Sets the default editability of this :class:`Gtk.TextView`."
+msgstr "このテキスト・ビューに対するデフォルトの編集可否を指定します。"
+
+# a55e1137b7aa4a74af89647175a674d6
+#: ../source/textview.txt:53
+msgid ""
+"Toggles whether the insertion point is displayed. A buffer with no editable "
+"text probably shouldn't have a visible cursor, so you may want to turn the "
+"cursor off."
+msgstr ""
+"文章の挿入位置をカーソルで表示するかどうかを切り替えます。編集不可の文字列を"
+"持つテキスト・バッファの場合はカーソルを表示すべきではないので、このメソッド"
+"を使ってカーソルを表示しないようにします。"
+
+# 2872256d02bc498bb95596e62c021113
+#: ../source/textview.txt:59
+msgid "Sets the default justification of text."
+msgstr "文字列のデフォルトの両端揃えを指定します。"
+
+# fb6c287749c04925b43e9f9084f442b4
+#: ../source/textview.txt:61
+msgid "*justification* can be one of the following values:"
+msgstr "*justification* には次のいずれかの値を指定できます::"
+
+# d9ba5bbd6d764cf9bded47cfe8ad67ed
+#: ../source/textview.txt:63
+msgid ":attr:`Gtk.Justification.LEFT`: Text is placed at the left edge."
+msgstr ":attr:`Gtk.Justification.LEFT`: 文字列を左詰めで配置する"
+
+# 21f4c5a685bb4e598c2f625db2790dc4
+#: ../source/textview.txt:64
+msgid ":attr:`Gtk.Justification.RIGHT`: Text is placed at the right edge."
+msgstr ":attr:`Gtk.Justification.RIGHT`: 文字列を右詰めで配置する"
+
+# a5041125cb9841baa24c7f67157cb542
+#: ../source/textview.txt:65
+msgid ":attr:`Gtk.Justification.CENTER`: Text is placed in the center."
+msgstr ":attr:`Gtk.Justification.CENTER`: 文字列を中央に配置する"
+
+# eb333c1afe434113b2f8753af3258a25
+#: ../source/textview.txt:66
+msgid ""
+":attr:`Gtk.Justification.FILL`: Text is distributed across the complete "
+"width."
+msgstr ""
+":attr:`Gtk.Justification.FILL`: 文字列をラベルの幅に対して均等に配置する"
+
+# 752c657945c84044944ab5721a5d2c9b
+#: ../source/textview.txt:71
+msgid "Sets the line wrapping for the view."
+msgstr "このテキスト・ビューで行を折り返す際のポリシーを指定します。"
+
+# 03ff023dfbc249a7987e680f83be65c6
+#: ../source/textview.txt:73
+msgid "*wrap_mode* can be one of the following values:"
+msgstr "*wrap_mode* には次のいずれかの値を指定できます::"
+
+# 0e31cd3aae414c53a1edacca6210431a
+#: ../source/textview.txt:75
+msgid ""
+":attr:`Gtk.WrapMode.NONE`: Do not wrap lines; just make the text area wider."
+msgstr ""
+":attr:`Gtk.WrapMode.NONE`: 行を折り返さない (単に文字列の範囲を広くするだけ) "
+
+# 12e03ffb1eb4403bae76f71009153f24
+#: ../source/textview.txt:77
+msgid ""
+":attr:`Gtk.WrapMode.CHAR`: Wrap text, breaking lines anywhere the cursor can "
+"appear (between characters, usually)."
+msgstr ""
+":attr:`Gtk.WrapMode.CHAR`: カーソルを表示できる場所ならどこでも行を折り返す "
+"(一般的には文字と文字の間で折り返す)"
+
+# 98b739552c584203b6c3b6ccdda2231d
+#: ../source/textview.txt:79
+msgid ":attr:`Gtk.WrapMode.WORD`: Wrap text, breaking lines in between words."
+msgstr ":attr:`Gtk.WrapMode.WORD`: 単語と単語の間で行を折り返す"
+
+# 9242932ef6bd4a82aeb146b15a12fc04
+#: ../source/textview.txt:80
+msgid ""
+":attr:`Gtk.WrapMode.WORD_CHAR`: Wrap text, breaking lines in between words, "
+"or if that is not enough, also between `graphemes`_."
+msgstr ""
+":attr:`Gtk.WrapMode.WORD_CHAR`: 単語の境界、または単語の境界が十分でない場合"
+"は文字の境界である `graphemes <http://mikeforce.net/documents/pango-1.22.x-"
+"refs/html/pango-Text-Processing.html#pango-get-log-attrs>`_ で行を折り返す"
+
+# 049dcf092b4c4e6184452856f10f3a14
+#: ../source/textview.txt:84
+msgid "The Model"
+msgstr "モデル"
+
+# c90ae655cc7a47e4a44df32c623a0f5c
+#: ../source/textview.txt:86
+msgid ""
+"The :class:`Gtk.TextBuffer` is the core of the :class:`Gtk.TextView` widget, "
+"and is used to hold whatever text is being displayed in the :class:`Gtk."
+"TextView`. Setting and retrieving the contents is possible with :meth:`Gtk."
+"TextBuffer.set_text` and :meth:`Gtk.TextBuffer.get_text`. However, most text "
+"manipulation is accomplished with *iterators*, represented by a :class:`Gtk."
+"TextIter`. An iterator represents a position between two characters in the "
+"text buffer. Iterators are not valid indefinitely; whenever the buffer is "
+"modified in a way that affects the contents of the buffer, all outstanding "
+"iterators become invalid."
+msgstr ""
+":class:`Gtk.TextBuffer` (``テキスト・バッファ``) クラスは :class:`Gtk."
+"TextView` ウィジェットの中心となる重要なオブジェクトで、そのテキスト・ビュー"
+"の中に表示する全ての文字列データを格納しておくのに使用します。それのデータの"
+"セットや取得は、それぞれ :meth:`Gtk.TextBuffer.set_text` と :meth:`Gtk."
+"TextBuffer.get_text` メソッドを使います。但し、文字列の操作の大部分は :class:"
+"`Gtk.TextIter` 型の *iterators* (``イテレータ``) を使って実現します。一個のイ"
+"テレータはテキスト・バッファの中にある二つの文字の間の位置を指すポインタの一"
+"種です。数個あるイテレータは「常に」妥当な値を指している訳ではありません。テ"
+"キスト・バッファの中にある文字列データの文字数に影響を与えるような操作を行う"
+"たびに、全てのイテレータが不正になります。"
+
+# 2b9d04acf0c241458a0e4f01e352619e
+#: ../source/textview.txt:96
+msgid ""
+"Because of this, iterators can't be used to preserve positions across buffer "
+"modifications. To preserve a position, use :class:`Gtk.TextMark`. A text "
+"buffer contains two built-in marks; an \"insert\" mark (which is the "
+"position of the cursor) and the \"selection_bound\" mark. Both of them can "
+"be retrieved using :meth:`Gtk.TextBuffer.get_insert` and :meth:`Gtk."
+"TextBuffer.get_selection_bound`, respectively. By default, the location of "
+"a :class:`Gtk.TextMark` is not shown. This can be changed by calling :meth:"
+"`Gtk.TextMark.set_visible`."
+msgstr ""
+"そのため、複数個の修正箇所に対してそれぞれ文字の位置を保存するために複数個の"
+"イテレータを用意することはできません。文字の位置を保存する際は :class:`Gtk."
+"TextMark` 型のオブジェクト (``マーク``) を使います。テキスト・バッファにはデ"
+"フォルトで二つのマークが用意されています。\"insert\" (カーソルの位置を表す) "
+"と \"selection_bound\" というマークです。それぞれ :meth:`Gtk.TextBuffer."
+"get_insert` と :meth:`Gtk.TextBuffer.get_selection_bound` メソッドで取得でき"
+"ます。デフォルトでは :class:`Gtk.TextMark` が指す場所は表示されません。これ"
+"は :meth:`Gtk.TextMark.set_visible` メソッドで変更できます。"
+
+# b961cbd9656647d49b4f4add85cbc564
+#: ../source/textview.txt:104
+msgid ""
+"Many methods exist to retrieve a :class:`Gtk.TextIter`. For instance, :meth:"
+"`Gtk.TextBuffer.get_start_iter` returns an iterator pointing to the first "
+"position in the text buffer, whereas :meth:`Gtk.TextBuffer.get_end_iter` "
+"returns an iterator pointing past the last valid character. Retrieving the "
+"bounds of the selected text can be achieved by calling :meth:`Gtk.TextBuffer."
+"get_selection_bounds`."
+msgstr ""
+":class:`Gtk.TextIter` を取得するメソッドがたくさん用意されています。例えば :"
+"meth:`Gtk.TextBuffer.get_start_iter` はテキスト・バッファの先頭を指すイテレー"
+"タを返します。それに対し :meth:`Gtk.TextBuffer.get_end_iter` はテキスト・バッ"
+"ファの末尾にある妥当な文字を指すイテレータを返します。選択した文字列のかたま"
+"りを取得する際は :meth:`Gtk.TextBuffer.get_selection_bounds` メソッドを使いま"
+"す。"
+
+# 3da97f10f1014e7bb45b4b3ad3655ec7
+#: ../source/textview.txt:111
+msgid ""
+"To insert text at a specific position use :meth:`Gtk.TextBuffer.insert`. "
+"Another useful method is :meth:`Gtk.TextBuffer.insert_at_cursor` which "
+"inserts text wherever the cursor may be currently positioned. To remove "
+"portions of the text buffer use :meth:`Gtk.TextBuffer.delete`."
+msgstr ""
+"特定の場所に文字列を挿入する際は :meth:`Gtk.TextBuffer.insert` メソッドを使用"
+"します。もう一つ便利なメソッドとして :meth:`Gtk.TextBuffer.insert_at_cursor` "
+"が用意されており、これは現在カーソルが指している場所に文字列を挿入します。テ"
+"キスト・バッファから文字列の一部を削除する際は :meth:`Gtk.TextBuffer.delete` "
+"メソッドそ使用します。"
+
+# 2a3753a772eb4ca3bb50d73c1d51c1af
+#: ../source/textview.txt:116
+msgid ""
+"In addition, :class:`Gtk.TextIter` can be used to locate textual matches in "
+"the buffer using :meth:`Gtk.TextIter.forward_search` and :meth:`Gtk.TextIter."
+"backward_search`. The start and end iters are used as the starting point of "
+"the search and move forwards/backwards depending on requirements."
+msgstr ""
+"さらに :class:`Gtk.TextIter` は :meth:`Gtk.TextIter.forward_search` や :meth:"
+"`Gtk.TextIter.backward_search` といったメソッドを使ったバッファ内で文字列を検"
+"索する際にも使用できます。先頭と終端のイテレータを使って検索を開始する位置を"
+"指定し、条件に応じてバッファの前方または後方に移動させます。"
+
+# 867645e83f5540378a122170df1b8a88
+#: ../source/textview.txt:123
+msgid "TextBuffer Objects"
+msgstr "TextBuffer のオブジェクト"
+
+# 198bd831150b48cd9520aeae3e4258a2
+#: ../source/textview.txt:129
+msgid ""
+"Deletes current contents of this buffer, and inserts *length* characters of "
+"*text* instead. If *length* is -1 or omitted, *text* is inserted completely."
+msgstr ""
+"このテキスト・バッファの現在の内容を削除して、代わりに *text* の *length* 分"
+"の文字を挿入します。もし *length* に -1 を指定するか、指定を省略した場合は "
+"*text* がそのまま挿入されます。"
+
+# 515240c160544c869571e1a4b1ac2cf9
+#: ../source/textview.txt:135
+msgid ""
+"Returns the text in the range *start_iter* (included) and *end_iter* "
+"(excluded). Excludes undisplayed text if *include_hidden_chars* is ``False``."
+msgstr "始点の *start_iter* から終点の *end_iter* にある文字列を返します (但し始点の文字は含まれますが、終点の文字は含まれません)。さらに *include_hidden_chars* に ``False`` を指定すると、表示されない文字 (制御文字など) が除かれます。"
+
+# 5e215e74ce2e40a4a5574fb85b6decfb
+#: ../source/textview.txt:140
+msgid ""
+"Returns the :class:`Gtk.TextMark` that represents the cursor (insertion "
+"point)."
+msgstr ""
+"現在のカーソル位置 (挿入位置) を表す :class:`Gtk.TextMark` を返します。"
+
+# 0c78f12fd9de4fdeb3b081a34b6f7e92
+#: ../source/textview.txt:145
+msgid "Returns the :class:`Gtk.TextMark` that represents the selection bound."
+msgstr "選択範囲を表す :class:`Gtk.TextMark` を返します。"
+
+# f9ac7723949a4289af91af8675a2fd4e
+#: ../source/textview.txt:149
+msgid ""
+"Creates a :class:`Gtk.TextMark` at the position of the :class:`Gtk.TextIter` "
+"*where*. If *mark_name* is ``None``, the mark is anonymous; otherwise, the "
+"mark can be retrieved by name using :meth:`get_mark`. If a mark has left "
+"gravity, and text is inserted at the mark's current location, the mark will "
+"be moved to the left of the newly-inserted text. If the mark has right "
+"gravity (*left_gravity* is ``False``), the mark will end up on the right of "
+"newly-inserted text. The standard left-to-right cursor is a mark with right "
+"gravity (when you type, the cursor stays on the right side of the text "
+"you're typing)."
+msgstr ""
+":class:`Gtk.TextIter` 型の *where* が指している場所に :class:`Gtk.TextMark` "
+"を生成します。もし *mark_name* に ``None`` を指定した場合、生成したマークは匿"
+"名になります。それ以外は :meth:`Gtk.TextBuffer.get_mark` メソッドを使い名前で"
+"マークを取得できます。左グラビティを持ったマークの現在位置に文字列を挿入する"
+"と、マークは挿入した文字列の左端に移動します。右グラビティを持ったマーク "
+"(*left_gravity* が ``False`` の場合) の現在位置に文字列を挿入するとマークは挿"
+"入した文字列の右端に移動します。標準的な左から右へ移動するカーソルの場合、"
+"マークは右グラビティです (すなわち、文字を入力すると常に入力した文字の右側に"
+"カーソルが表示されるようになっているはずです)。"
+
+# 7feff1f5de464dfc893c1f762001c21b
+#: ../source/textview.txt:159
+msgid "If *left_gravity* is omitted, it defaults to ``False``."
+msgstr "*left_gravity* を省略した場合、デフォルトは ``False`` です。"
+
+# 0d5be08705014bc78a50646e44dcbb6d
+#: ../source/textview.txt:163
+msgid ""
+"Returns the :class:`Gtk.TextMark` named name in this buffer, or ``None`` if "
+"no such mark exists in the buffer."
+msgstr ""
+"このテキスト・バッファの中で *mark_name* という名前を持つマークを返します。ま"
+"たは *mark_name* というマークが存在しない場合は ``None`` を返します。 "
+
+# 5826f70116f44d949dc9389176d62f4b
+#: ../source/textview.txt:168
+msgid ""
+"Returns a :class:`Gtk.TextIter` pointing to first position in this buffer."
+msgstr ""
+"このテキスト・バッファの先頭位置を指すよう初期化した :class:`Gtk.TextIter` を"
+"返します。"
+
+# 2dd96c33b5f74442bc892a9e93809411
+#: ../source/textview.txt:172
+msgid ""
+"Returns a :class:`Gtk.TextIter` pointing past the last valid character in "
+"this buffer."
+msgstr ""
+"このテキスト・バッファの末尾にある妥当な文字を指す :class:`Gtk.TextIter` を返"
+"します。"
+
+# d9f95f4ba98b44f1af2a2688a803fddc
+#: ../source/textview.txt:177
+msgid ""
+"Returns a tuple of two :class:`Gtk.TextIter` objects pointing to the first "
+"character of the selection and to the first character after the selection, "
+"respectively. If no text is selected an empty tuple is returned."
+msgstr ""
+"選択範囲の先頭文字と選択範囲の後にある最初の文字をそれぞれ指す :class:`Gtk."
+"TextIter` のタプルを返します。もし文字列が選択されていなければ、空のタプルを"
+"返します。"
+
+# 16873da1164c4975be908ac556bc690b
+#: ../source/textview.txt:183
+msgid ""
+"Inserts *length* characters of *text* at position *text_iter*. If *length* "
+"is -1 or omitted, *text* is inserted completely."
+msgstr ""
+"*text* の *length* 分の文字を *text_iter* が指す位置に挿入します。もし "
+"*length* に -1 を指定するか、指定を省略した場合は *text* がそのまま挿入されま"
+"す。"
+
+# 9c5c1be0547e491f9d4fe6812df803e5
+#: ../source/textview.txt:188
+msgid ""
+"Simply calls :meth:`insert`, using the current cursor position as the "
+"insertion point."
+msgstr ""
+"文字を挿入する位置として現在カーソルがある位置を指定して :meth:`Gtk."
+"TextBuffer.insert` メソッドを呼び出すだけです。"
+
+# a756abb6df8746b2b86dc0de43a58a30
+#: ../source/textview.txt:193
+msgid "Deletes text between *start_iter* and *end_iter*."
+msgstr "*start_iter* から *end_iter* の間にある文字列を削除します。"
+
+# 1693788a86e740f1b04739c499ecc04a
+#: ../source/textview.txt:197
+msgid "Creates a tag and adds it to the tag table of this buffer."
+msgstr "タグを一つ生成し、このテキスト・バッファのタグ・テーブルに登録します。"
+
+# ac6d7e2838fe4b62b84a7a0a4c1f7181
+#: ../source/textview.txt:199
+msgid ""
+"If *tag_name* is ``None``, the tag is anonymous, otherwise a tag with the "
+"same name must not already exist in the tag table of the buffer."
+msgstr ""
+"もし *tag_name* に ``None``  を指定した場合、タグは匿名になり、それ以外は未だ"
+"このテキスト・バッファのタグ・テーブルには登録されていない名前を指定して下さ"
+"い。"
+
+# 4512018a4b06469882b483c726f0ee10
+#: ../source/textview.txt:202
+msgid ""
+"*kwargs* is an arbitrary number of key-value pairs that represent a list "
+"properties to set on the tag, as with ``tag.set_property(prop_name, value)``."
+msgstr ""
+"*kwargs* には, ``tag.set_property(prop_name, value)`` のようにタグにセットす"
+"るプロパティの並びを表すキーと値のペアの総数を指定します。"
+
+# 9c943a30c3204bc38974437b26a236e4
+#: ../source/textview.txt:207
+msgid "Applies *tag* to the given range."
+msgstr "指定した範囲に *tag* を適用します。"
+
+# 787859029738449f9be6bac38693351a
+#: ../source/textview.txt:211
+msgid "Removes all occurrences of *tag* from the given range."
+msgstr "指定した範囲から *tag* が適用されている文字列を全て削除します。"
+
+# 6e48856bb03f4a79afd78b2413f9b9a2
+#: ../source/textview.txt:215
+msgid "Removes all tags in the given range."
+msgstr "指定した範囲から全てのタグを削除します。"
+
+# 878d215ae57e4c178020c6c93643baca
+#: ../source/textview.txt:222
+msgid ""
+"Searches forward for *needle*. The search will not continue past the :class:"
+"`Gtk.TextIter` *limit*."
+msgstr ""
+"このイテレータを先に進めながら *needle* を探します。この検索は :class:`Gtk."
+"TextIter` が *limit* を越えたら終了します。"
+
+# fcca9a6da8a64ac5a24fb21295aee05e
+#: ../source/textview.txt:225
+msgid ""
+"*flags* can be set to one of the following, or any combination of it by "
+"concatenating them with the bitwise-OR operator ``|``."
+msgstr ""
+"*flags* には次のいずれか、もしくはそれらの組み合わせ (ビットの論理和を表す "
+"``|`` 演算子を使って連結する) を指定できます::"
+
+# 21c17577236f4414b0ae18438c70bd10
+#: ../source/textview.txt:228
+msgid "0: The match must be exact."
+msgstr "0: 完全に一致するもの"
+
+# f7af899e12a8405d989cb5749938a243
+#: ../source/textview.txt:229
+msgid ""
+":attr:`Gtk.TextSearchFlags.VISIBLE_ONLY`: The match may have invisible text "
+"interspersed in *needle*. i.e. *needle* will be a possibly-noncontiguous "
+"subsequence of the matched range."
+msgstr ""
+":attr:`Gtk.TextSearchFlags.VISIBLE_ONLY`: *needle* の中に含まれている文字のう"
+"ち表示できる文字だけを対象にする (すなわち文字列が断片的に *needle* の中に存"
+"在している可能性があるということ)。"
+
+# 688a58d738774a4faf6bef36809dcbfd
+#: ../source/textview.txt:232
+msgid ""
+":attr:`Gtk.TextSearchFlags.TEXT_ONLY`: The match may have pixbufs or child "
+"widgets mixed inside the matched range."
+msgstr ""
+":attr:`Gtk.TextSearchFlags.TEXT_ONLY`: 検索範囲に Pixbuf 画像や子ウィジェット"
+"が混ざっている場合でも文字だけを対象にする"
+
+# d471d6acb3f14f54a5d131a858e515d7
+#: ../source/textview.txt:234
+msgid ""
+":attr:`Gtk.TextSearchFlags.CASE_INSENSITIVE`: The text will be matched "
+"regardless of what case it is in."
+msgstr ""
+":attr:`Gtk.TextSearchFlags.CASE_INSENSITIVE`: 大文字/小文字を無視して検索する"
+
+# 440e5b80b6394a019f685d460d1bb39c
+#: ../source/textview.txt:237
+msgid ""
+"Returns a tupel containing a :class:`Gtk.TextIter` pointing to the start and "
+"to the first character after the match. If no match was found, ``None`` is "
+"returned."
+msgstr ""
+"検索結果の先頭とその結果の後の文字をそれぞれ指す :class:`Gtk.TextIter` のタプ"
+"ルを返します。もし一致する文字列が見つからなかった場合は ``None`` を返しま"
+"す。"
+
+# 8dbb1164e1b04b21abc6e425843bdbd0
+#: ../source/textview.txt:243
+msgid "Same as :meth:`forward_search`, but moves backward."
+msgstr ""
+":meth:`Gtk.TextIter.forward_search` と同じですが、イテレータが移動する向きが"
+"後方になります。"
+
+# f0d1ef5d7dfa411c84e0b315ac7cd9f1
+#: ../source/textview.txt:250
+msgid ""
+"Sets the visibility of this mark; the insertion point is normally visible, i."
+"e. you can see it as a vertical bar. Also, the text widget uses a visible "
+"mark to indicate where a drop will occur when dragging-and-dropping text. "
+"Most other marks are not visible. Marks are not visible by default."
+msgstr ""
+"このマークの表示可否を指定します。基本的に、挿入位置は表示可能として指定され"
+"ています (垂直バーのようなカーソルで表現されます)。さらに、テキスト・ウィ"
+"ジェットでは、文字列をドラッグ＆ドロップする場所をマークを使って指し示すよう"
+"になっています。その他のマークのほとんどは表示されません。デフォルトで、マー"
+"クは表示されないようになっています。"
+
+# 4842bf5ce15943b3b905f60511494f95
+#: ../source/textview.txt:256
+msgid "Tags"
+msgstr "タグ"
+
+# 039831345f914aaeaafa5d1473c72cb0
+#: ../source/textview.txt:258
+msgid ""
+"Text in a buffer can be marked with tags. A tag is an attribute that can be "
+"applied to some range of text. For example, a tag might be called \"bold\" "
+"and make the text inside the tag bold. However, the tag concept is more "
+"general than that; tags don't have to affect appearance. They can instead "
+"affect the behaviour of mouse and key presses, \"lock\" a range of text so "
+"the user can't edit it, or countless other things. A tag is represented by "
+"a :class:`Gtk.TextTag` object. One :class:`Gtk.TextTag` can be applied to "
+"any number of text ranges in any number of buffers."
+msgstr ""
+"テキスト・バッファの中にある文字列にはタグで印を付けておくことができます。こ"
+"のタグは文字列の任意の範囲に適用する属性値です。例えば、\"bold\" というタグで"
+"囲まれた文字は太字になります。但し、タグの概念はそのようなことよりもさらに汎"
+"用的なことを目指しています。すなわち、タグは文字の見え方に影響するものであっ"
+"てはならないということです。その代わり、タグはマウスやキー押下の動きに影響を"
+"与えることができるとします。タグを付与すると適当な範囲の文字列を「ロックす"
+"る」ことになるので、ユーザはその部分の文字列を編集などができなくなります。タ"
+"グは :class:`Gtk.TextTag` 型のオブジェクトを使って表現します。一個の :class:"
+"`Gtk.TextTag` でいろいろなバッファの中にある文字列のいろいろな範囲に適用する"
+"ことが可能です。"
+
+# fa5ae48892ae42bbab38b2b77e174886
+#: ../source/textview.txt:267
+msgid ""
+"Each tag is stored in a :class:`Gtk.TextTagTable`. A tag table defines a set "
+"of tags that can be used together. Each buffer has one tag table associated "
+"with it; only tags from that tag table can be used with the buffer. A single "
+"tag table can be shared between multiple buffers, however."
+msgstr ""
+"タグは :class:`Gtk.TextTagTable` 型のオブジェクト (いわゆる、タグ・テーブル) "
+"の中に格納されます。このテーブルは一緒に利用できるいろいろなタグの集まりを定"
+"義しています。一個のキスト・バッファには一個のタグ・テーブルが割り当てられま"
+"す。すなわち、テキスト・バッファは割り当てられたタグ・テーブルの中にあるタグ"
+"しか利用できません。但し、一個のタグ・テーブルを複数のバッファで共有すること"
+"は可能です。 "
+
+# 4c9249063eca4ff984f65553d6e1dba4
+#: ../source/textview.txt:272
+msgid ""
+"To specify that some text in the buffer should have specific formatting, you "
+"must define a tag to hold that formatting information, and then apply that "
+"tag to the region of text using :meth:`Gtk.TextBuffer.create_tag` and :meth:"
+"`Gtk.TextBuffer.apply_tag`::"
+msgstr ""
+"テキスト・バッファの中にある任意の文字列に適用する書式を指定する際は、その書"
+"式の情報を保持するタグを :meth:`Gtk.TextBuffer.create_tag` メソッドを使って一"
+"つ定義する必要があります。それから :meth:`Gtk.TextBuffer.apply_tag` メソッド"
+"を使って、そのタグを文字列の特定の範囲に適用します::"
+
+# 7ca8a2c896404f448dd82db6e48439f4
+#: ../source/textview.txt:280
+msgid "The following are some of the common styles applied to text:"
+msgstr "次は、文字列に適用できる一般的なスタイルの一部です:"
+
+# 931034e43eb64985a64a50824ac6e9e3
+#: ../source/textview.txt:282
+msgid "Background colour (\"foreground\" property)"
+msgstr "背景色 (\"foreground\" プロパティ)"
+
+# e6e762c3ef284ef2b2b2d9db14e3ec90
+#: ../source/textview.txt:283
+msgid "Foreground colour (\"background\" property)"
+msgstr "前景色 (\"background\" プロパティ)"
+
+# 577aa3fa3a684c2e92450cccde3fc51a
+#: ../source/textview.txt:284
+msgid "Underline (\"underline\" property)"
+msgstr "下線 (\"underline\" プロパティ)"
+
+# 4352355c02e640c2be51e7e922d5c1f8
+#: ../source/textview.txt:285
+msgid "Bold (\"weight\" property)"
+msgstr "フォントの太さ (\"weight\" プロパティ)"
+
+# 9b970a8ad94b42628d866dda58b04463
+#: ../source/textview.txt:286
+msgid "Italics (\"style\" property)"
+msgstr "斜体 (\"style\" プロパティ)"
+
+# 0b630bbad1904dd09d745548ab1c1984
+#: ../source/textview.txt:287
+msgid "Strikethrough (\"strikethrough\" property)"
+msgstr "打ち消し線 (\"strikethrough\" プロパティ)"
+
+# 1edd6a32729247e88fbd12a5ba65a0c1
+#: ../source/textview.txt:288
+msgid "Justification (\"justification\" property)"
+msgstr "行端揃え (\"justification\" プロパティ)"
+
+# 87942a2a92184baba83d416432083e36
+#: ../source/textview.txt:289
+msgid "Size (\"size\" and \"size-points\" properties)"
+msgstr "フォントの大きさ (\"size\" や \"size-points\" プロパティ)"
+
+# f1983f7bea9d46bb9bab5f20702cfef9
+#: ../source/textview.txt:290
+msgid "Text wrapping (\"wrap-mode\" property)"
+msgstr "行の折り返し方 (\"wrap-mode\" プロパティ)"
+
+# 8d4f46479ae44295b888715a08d080df
+#: ../source/textview.txt:292
+msgid ""
+"You can also delete particular tags later using :meth:`Gtk.TextBuffer."
+"remove_tag` or delete all tags in a given region by calling :meth:`Gtk."
+"TextBuffer.remove_all_tags`."
+msgstr ""
+"さらに、あとから :meth:`Gtk.TextBuffer.remove_tag` メソッドを使って特定のタグ"
+"を削除したり、もしくは :meth:`Gtk.TextBuffer.remove_all_tags` メソッドを使っ"
+"て指定した範囲にある全てのタグを削除することも可能です。"
+
+# 4b14b39b638b4ee2bdc32b15435f9a63
+#: ../source/textview.txt:296
+msgid "Example"
+msgstr "例"

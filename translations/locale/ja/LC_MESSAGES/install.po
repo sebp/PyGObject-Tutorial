@@ -1,0 +1,104 @@
+# Japanese translation for install.txt in PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-24 13:17\n"
+"PO-Revision-Date: 2012-10-07 22:15+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install.txt:4
+# 2ac1be3574e04362a489c1172c0aca6c
+msgid "Installation"
+msgstr "インストール"
+
+#: ../source/install.txt:5
+# 404fdbb7f6374c87aa635e3f8971bcaf
+msgid "The fist step before we start with actual coding consists of setting up `PyGObject`_ and its dependencies. PyGObject is a Python module that enables developers to access GObject-based libraries such as GTK+ within Python. It exclusively supports GTK+ version 3 or later. If you want to use GTK+ 2 in your application, use `PyGTK`_, instead."
+msgstr "実際のコーディングを始める前の第一ステップは `PyGObject <https://live.gnome.org/PyGObject>`_ とそれに依存するパッケージの設定です。PyGObject は Python のモジュールの一つで、開発者が Python の中から GTK+ といった GObject ベースのいろいろなライブラリにアクセスできるようにするものです。GTK+ のバージョン 3 以降のみサポートしています。もし Python から GTK+ のバージョン 2 を使いたいのであれば、PyGObject の代わりに `PyGTK <http://www.pygtk.org/>`_ の方を設定して下さい。"
+
+#: ../source/install.txt:13
+# 325496c5a1ce4fec965ecd67a2bdcaa9
+msgid "Dependencies"
+msgstr "いろいろな依存関係"
+
+#: ../source/install.txt:15
+# 9755c21c74f548ba807af0167f3478c7
+msgid "GTK+3"
+msgstr "GTK+ バージョン 3"
+
+#: ../source/install.txt:17
+# e88a5620cd0c4df4b0b509e58eb8a382
+msgid "Python 2 (2.6 or later) or Python 3 (3.1 or later)"
+msgstr "Python 2 (バージョン 2.6 以上) または Python 3 (3.1 以上)"
+
+#: ../source/install.txt:19
+# 5b192092a7304196b06d9c446d8efda1
+msgid "gobject-introspection"
+msgstr "gobject-introspection"
+
+#: ../source/install.txt:22
+# 66df1f7e7a9947e285a4da6090e161e9
+msgid "Prebuilt Packages"
+msgstr "バイナリ・パッケージ"
+
+#: ../source/install.txt:23
+# 628e583aa3cd4c9da18c82e542e84d56
+msgid "Recent versions of PyGObject and its dependencies are packaged by nearly all major Linux distributions. So, if you use Linux, you can probably get started by installing the package from the official repository for your distribution."
+msgstr "現在のバージョンの PyGObject とそれに依存するパッケージのほとんど全てが、主要な Linux ディストリビューションから提供されています。そのため Linux をお使いならば、対応するディストリビューションの公式リポジトリからパッケージをインストールするところから始めることができるでしょう。"
+
+#: ../source/install.txt:29
+# 6bfa5307029e47a1b4d8ddab6606037c
+msgid "Installing From Source"
+msgstr "ソースからインストールする"
+
+#: ../source/install.txt:30
+# a8f35d6bbb834c3cb68bd644ecd6aa41
+msgid "The easiest way to install PyGObject from source is using `JHBuild`_. It is designed to easily build source packages and discover what dependencies need to be build and in what order. To setup JHBuild, please follow the `JHBuild manual`_."
+msgstr "PyGObject をソースからインストールする一番簡単な方法は `JHBuild <https://live.gnome.org/Jhbuild>`_ を利用することです。これはソース・パッケージのビルドと、それに必要な依存関係の解決を簡単にしてくれる設計がされています。この JHBuild の設定については、 `JHBuild のマニュアル <http://library.gnome.org/devel/jhbuild/unstable/>`_ に従ってみて下さい。"
+
+#: ../source/install.txt:34
+# ec6b6b5e65c5476181fecc82fde3a8d9
+#
+# [ERROR] Compile error is caused by when set '[#]_' as original
+msgid "Once you have installed JHBuild successfully, download the latest configuration from [#]_. Copy files with the suffix `.modules` to JHBuild's module directory and the file `sample-tarball.jhbuildrc` to `~/.jhbuildrc`."
+msgstr "JHBuild のインストールが完了したら、 `[1] <#id1>`_ から最新版の設定をダウンロードして下さい。拡張子として .modules が付与されているいくつかのファイルを JHBuild のモジュール・フォルダにコピーして sample-tarball.jhbuildrc というファイルを ~/.jhbuildrc にリネームします。 "
+
+#: ../source/install.txt:38
+# b3a9233bb5ba492fb0c826d73aa8c20c
+msgid "If you have not done it before, verify that your build environment is setup correctly by running::"
+msgstr "ここまでを完了できなかった場合、次のコマンドを使ってお使いの環境が正しく設定されているかどうかをチェックしてみて下さい::"
+
+#: ../source/install.txt:43
+# 473e5060d24d464fad34736f9655bca5
+msgid "It will print any applications and libraries that are currently missing on your system but required for building. You should install those using your distribution's package repository. A list of `package names <http://live.gnome.org/JhbuildDependencies>`_ for different distributions is maintained on the GNOME wiki. Run the command above again to ensure the required tools are present."
+msgstr "お使いのシステムでビルドするのに必要であるものの、現在は不足しているアプリケーションやライブラリの名前が表示される場合があります。そのような場合はディストリビューションのパッケージ・リポジトリからインストールして下さい。GNOME の Wiki ページにはディストリビューション別に `パッケージ名 <http://live.gnome.org/JhbuildDependencies>`_ が一覧としてまとめられています。それから、もう一度、上のコマンドを実行して必要なツールが揃っているかどうかをしっかりと確認して下さい。"
+
+#: ../source/install.txt:49
+# d0f06586d2cb483f8981227295bcf8eb
+msgid "Executing the following command will build PyGObject and all its dependencies::"
+msgstr "次のコマンドを実行して PyGObject とその他の必要なものをビルドして下さい::"
+
+#: ../source/install.txt:53
+# 508391276d6545e6a829c25e66539d1b
+msgid "Finally, you might want to install GTK+ from source as well::"
+msgstr "最後に、GTK+ も同じようにしてビルド・インストールして下さい::"
+
+#: ../source/install.txt:57
+# 9fe85dcaaf6142998a35fcd8b78cab3d
+msgid "To start a shell with the same environment as used by JHBuild, run::"
+msgstr "JHBuild が使用している環境と同じシェルを起動するには、次のようにします::"
+
+#: ../source/install.txt:66
+# bd34f657eb1c45a89ab036792c9bb264
+msgid "http://download.gnome.org/teams/releng/"
+msgstr "http://download.gnome.org/teams/releng/"
+
