@@ -25,7 +25,7 @@ Install sphinx-intl and run:
 
 ```
 make gettext
-sphinx-intl update -p build/gettext/ -l it
+sphinx-intl update -p ./translations/templates/ -l it
 make -e SPHINXOPTS="-D language='it'" html
 ```
 
