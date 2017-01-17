@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-10 09:47\n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,140 +16,112 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../source/unicode.txt:2
-# 9809cf7615bd45c0bb645aa9106a56d7
+#: ../../source/unicode.txt:2
 msgid "How to Deal With Strings"
 msgstr ""
 
-#: ../source/unicode.txt:4
-# f2d16386846a46e98ffa00253553da47
+#: ../../source/unicode.txt:4
 msgid "This section explains how strings are represented in Python 2.x, Python 3.x and GTK+ and discusses common errors that arise when working with strings."
 msgstr ""
 
-#: ../source/unicode.txt:8
-# e2dede016a10489193f6d69bd4c25699
+#: ../../source/unicode.txt:8
 msgid "Definitions"
 msgstr ""
 
-#: ../source/unicode.txt:9
-# 2691478223384e71a5aaec49e652d766
+#: ../../source/unicode.txt:9
 msgid "Conceptionally, a string is a list of characters such as 'A', 'B', 'C' or 'É'. **Characters** are abstract representations and their meaning depends on the language and context they are used in. The Unicode standard describes how characters are represented by **code points**. For example the characters above are represented with the code points U+0041, U+0042, U+0043, and U+00C9, respectively. Basically, code points are numbers in the range from 0 to 0x10FFFF."
 msgstr ""
 
-#: ../source/unicode.txt:17
-# 2d23c5309caf4de082b848a5789af984
-msgid "As mentioned earlier, the representation of a string as a list of code points is abstract. In order to convert this abstract representation into a sequence of bytes the Unicode string must be **encoded**. The simplest from of encoding is ASCII and is performed as follows:"
+#: ../../source/unicode.txt:17
+msgid "As mentioned earlier, the representation of a string as a list of code points is abstract. In order to convert this abstract representation into a sequence of bytes the Unicode string must be **encoded**. The simplest form of encoding is ASCII and is performed as follows:"
 msgstr ""
 
-#: ../source/unicode.txt:22
-# 0a8f2e94bc5a4dd78ad456a93281a3b2
+#: ../../source/unicode.txt:22
 msgid "If the code point is < 128, each byte is the same as the value of the code point."
 msgstr ""
 
-#: ../source/unicode.txt:25
-# 16334e13413d45e7a7c93a1bab90f208
+#: ../../source/unicode.txt:25
 msgid "If the code point is 128 or greater, the Unicode string can't be represented in this encoding.  (Python raises a :exc:`UnicodeEncodeError` exception in this case.)"
 msgstr ""
 
-#: ../source/unicode.txt:29
-# 7bfc5ae72ce44caba7c1bfe75b1b9d01
+#: ../../source/unicode.txt:29
 msgid "Although ASCII encoding is simple to apply it can only encode for 128 different characters which is hardly enough. One of the most commonly used encodings that addresses this problem is UTF-8 (it can handle any Unicode code point). UTF stands for \"Unicode Transformation Format\", and the '8' means that 8-bit numbers are used in the encoding."
 msgstr ""
 
-#: ../source/unicode.txt:37
-# cdc5123217114ec781dd2410678b1c34
+#: ../../source/unicode.txt:37
 msgid "Python 2"
 msgstr ""
 
-#: ../source/unicode.txt:40
-# e03bd35515c94783b753502860d60aa7
+#: ../../source/unicode.txt:40
 msgid "Python 2.x’s Unicode Support"
 msgstr ""
 
-#: ../source/unicode.txt:41
-# b124d2e0ad814b1fbaab543f33a7bbfe
+#: ../../source/unicode.txt:41
 msgid "Python 2 comes with two different kinds of objects that can be used to represent strings, :class:`str` and :class:`unicode`. Instances of the latter are used to express Unicode strings, whereas instances of the :class:`str` type are byte representations (the encoded string). Under the hood, Python represents Unicode strings as either 16- or 32-bit integers, depending on how the Python interpreter was compiled. Unicode strings can be converted to 8-bit strings with :meth:`unicode.encode`::"
 msgstr ""
 
-#: ../source/unicode.txt:58
-# bd13eea2fa0741e9876db7711ffe7431
+#: ../../source/unicode.txt:58
 msgid "Python’s 8-bit strings have a :meth:`str.decode` method that interprets the string using the given encoding::"
 msgstr ""
 
-#: ../source/unicode.txt:68
-# 57feae3870084f8d9c5e8486dcc7204d
+#: ../../source/unicode.txt:68
 msgid "Unfortunately, Python 2.x allows you to mix :class:`unicode` and :class:`str` if the 8-bit string happened to contain only 7-bit (ASCII) bytes, but would get :exc:`UnicodeDecodeError` if it contained non-ASCII values::"
 msgstr ""
 
-#: ../source/unicode.txt:84
-#: ../source/unicode.txt:146
-# 8d01bbc1bda34388a8aa32ae4841087c
-# aa539bf22ae04daeaf1e7ed3dfdcb2ef
+#: ../../source/unicode.txt:85
+#: ../../source/unicode.txt:148
 msgid "Unicode in GTK+"
 msgstr ""
 
-#: ../source/unicode.txt:85
-# 61c4e37a1e054280b39513c0141f6466
+#: ../../source/unicode.txt:86
 msgid "GTK+ uses UTF-8 encoded strings for all text. This means that if you call a method that returns a string you will always obtain an instance of the :class:`str` type. The same applies to methods that expect one or more strings as parameter, they must be UTF-8 encoded. However, for convenience PyGObject will automatically convert any :class:`unicode` instance to :class:`str` if supplied as argument::"
 msgstr ""
 
-#: ../source/unicode.txt:102
-# 8da4c72b23904e3f9a0681d1fcb4cf42
+#: ../../source/unicode.txt:104
 msgid "Note the warning at the end. Although we called :meth:`Gtk.Label.set_text` with a :class:`unicode` instance as argument, :meth:`Gtk.Label.get_text` will always return a :class:`str` instance. Accordingly, ``txt`` and ``unicode_string`` are *not* equal."
 msgstr ""
 
-#: ../source/unicode.txt:107
-# e5cf7d82ce0a4694b7e79dcc11570f25
-msgid "This is especially important if you want to internationalize your program using `gettext <http://docs.python.org/library/gettext.html>`_. You have to make sure that gettext will return UTF-8 encoded 8-bit strings for all languages. In general it is recommended to not use :class:`unicode` objects in GTK+ applications at all and only use UTF-8 encoded :class:`str` objects since GTK+ does not fully integrate with :class:`unicode` objects. Otherwise, you would have to decode the return values to Unicode strings each time you call a GTK+ method::"
+#: ../../source/unicode.txt:109
+msgid "This is especially important if you want to internationalize your program using `gettext <https://docs.python.org/library/gettext.html>`_. You have to make sure that gettext will return UTF-8 encoded 8-bit strings for all languages. In general it is recommended to not use :class:`unicode` objects in GTK+ applications at all and only use UTF-8 encoded :class:`str` objects since GTK+ does not fully integrate with :class:`unicode` objects. Otherwise, you would have to decode the return values to Unicode strings each time you call a GTK+ method::"
 msgstr ""
 
-#: ../source/unicode.txt:120
-# f699228e4f724d468ba137aa95cce2ac
+#: ../../source/unicode.txt:122
 msgid "Python 3"
 msgstr ""
 
-#: ../source/unicode.txt:123
-# 36dea2d034ba47739fcbc70159e1f507
+#: ../../source/unicode.txt:125
 msgid "Python 3.x's Unicode support"
 msgstr ""
 
-#: ../source/unicode.txt:124
-# 0089b245210d4def97f7a89941d64378
+#: ../../source/unicode.txt:126
 msgid "Since Python 3.0, all strings are stored as Unicode in an instance of the :class:`str` type. *Encoded* strings on the other hand are represented as binary data in the form of instances of the :class:`bytes` type. Conceptionally, :class:`str` refers to *text*, whereas :class:`bytes` refers to *data*. Use :meth:`str.encode` to go from :class:`str` to :class:`bytes`, and :meth:`bytes.decode` to go from :class:`bytes` to :class:`str`."
 msgstr ""
 
-#: ../source/unicode.txt:131
-# b6602283d69145acb1362b240f1f2af8
+#: ../../source/unicode.txt:133
 msgid "In addition, it is no longer possible to mix Unicode strings with encoded strings, because it will result in a :exc:`TypeError`::"
 msgstr ""
 
-#: ../source/unicode.txt:147
-# 3cddec65eec74c06939f42f7c2e98c40
+#: ../../source/unicode.txt:149
 msgid "As a consequence, things are much cleaner and consistent with Python 3.x, because PyGObject will automatically encode/decode to/from UTF-8 if you pass a string to a method or a method returns a string. Strings, or *text*, will always be represented as instances of :class:`str` only::"
 msgstr ""
 
-#: ../source/unicode.txt:163
-# 2645c75cc87e4a26a04073f8e94e647d
+#: ../../source/unicode.txt:165
 msgid "References"
 msgstr ""
 
-#: ../source/unicode.txt:164
-# d5aa2e7b68b744b98226b7f57d0b52cf
-msgid "`What's new in Python 3.0 <http://docs.python.org/py3k/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit>`_ describes the new concepts that clearly distinguish between text and data."
+#: ../../source/unicode.txt:166
+msgid "`What's new in Python 3.0 <https://docs.python.org/py3k/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit>`_ describes the new concepts that clearly distinguish between text and data."
 msgstr ""
 
-#: ../source/unicode.txt:167
-# b5f5c4fad9f8498e9a48a844d936684c
-msgid "The `Unicode HOWTO <http://docs.python.org/howto/unicode.html>`_ discusses Python 2.x’s support for Unicode, and explains various problems that people commonly encounter when trying to work with Unicode."
+#: ../../source/unicode.txt:169
+msgid "The `Unicode HOWTO <https://docs.python.org/howto/unicode.html>`_ discusses Python 2.x’s support for Unicode, and explains various problems that people commonly encounter when trying to work with Unicode."
 msgstr ""
 
-#: ../source/unicode.txt:171
-# 8de0ed991ab2410f8941b1bd2753fa72
-msgid "The `Unicode HOWTO for Python 3.x <http://docs.python.org/dev/howto/unicode.html>`_ discusses Unicode support in Python 3.x."
+#: ../../source/unicode.txt:173
+msgid "The `Unicode HOWTO for Python 3.x <https://docs.python.org/dev/howto/unicode.html>`_ discusses Unicode support in Python 3.x."
 msgstr ""
 
-#: ../source/unicode.txt:174
-# 9ac015d7fa8543e4967271f447b3606d
+#: ../../source/unicode.txt:176
 msgid "`UTF-8 encoding table and Unicode characters <http://www.utf8-chartable.de>`_ contains a list of Unicode code points and their respective UTF-8 encoding."
 msgstr ""
 

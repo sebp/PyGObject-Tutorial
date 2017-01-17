@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/application.txt:4
+msgid "Application"
+msgstr ""
+
+#: ../../source/application.txt:6
+msgid ":class:`Gtk.Application` encompeses many repetitive tasks that a modern application needs such as handling multiple instances, D-Bus activation, opening files, command line parsing, startup/shutdown, menu management, window management, and more."
+msgstr ""
+
+#: ../../source/application.txt:12
+msgid "Actions"
+msgstr ""
+
+#: ../../source/application.txt:14
+msgid ":class:`Gio.Action` is a way to expose any single task your application or widget does by a name. These actions can be disabled/enabled at runtime and they can either be activated or have a state changed (if they contain state)."
+msgstr ""
+
+#: ../../source/application.txt:18
+msgid "The reason to use actions is to separate out the logic from the UI. For example this allows using a menubar on OSX and a gear menu on GNOME both simply referencing the name of an action. The main implementation of this you will be using is :class:`Gio.SimpleAction` which will be showed off later."
+msgstr ""
+
+#: ../../source/application.txt:23
+msgid "Many classes such as :class:`Gio.MenuItem` and :class:`Gtk.ModelButton` support properties to set an action name."
+msgstr ""
+
+#: ../../source/application.txt:26
+msgid "These actions can be grouped together into a :class:`Gio.ActionGroup` and when these groups are added to a widget with :meth:`Gtk.Widget.insert_action_group()` they will gain a prefix. Such as \"win\" when added to a :class:`Gtk.ApplicationWindow`. You will use the full action name when referencing it such as \"app.about\" but when you create the action it will just be \"about\" until added to the application."
+msgstr ""
+
+#: ../../source/application.txt:32
+msgid "You can also very easily make keybindings for actions by setting the `accel` property in the :class:`Gio.Menu` file or by using :meth:`Gtk.Application.add_accelerator()`."
+msgstr ""
+
+#: ../../source/application.txt:36
+msgid "Menus"
+msgstr ""
+
+#: ../../source/application.txt:38
+msgid "Your menus should be defined in XML using :class:`Gio.Menu` and would reference the previously mentioned actions you defined. :class:`Gtk.Application` allows you to set a menu either via :meth:`Gtk.Application.set_app_menu()` or :meth:`Gtk.Application.set_menubar()`. If you make use of :class:`Gio.Resource` this can automatically use the correct menu based on platform, otherwise you can set them manually. A detailed example is shown below."
+msgstr ""
+
+#: ../../source/application.txt:46
+msgid "Command Line"
+msgstr ""
+
+#: ../../source/application.txt:48
+msgid "When creating your application it takes a flag property of :class:`Gio.ApplicationFlags`. Using this you can let it handle everything itself or have more custom behavior."
+msgstr ""
+
+#: ../../source/application.txt:51
+msgid "You can use `HANDLES_COMMAND_LINE` to allow custom behavior in :meth:`Gio.Application.do_command_line()`. In combination with :meth:`Gio.Application.add_main_option()` to add custom options."
+msgstr ""
+
+#: ../../source/application.txt:54
+msgid "Using `HANDLES_OPEN` will do the work of simply taking file arguments for you and let you handle it in :meth:`Gio.Application.do_open()`."
+msgstr ""
+
+#: ../../source/application.txt:57
+msgid "If your application is already open these will all be sent to the existing instance unless you use `NON_UNIQUE` to allow multiple instances."
+msgstr ""
+
+#: ../../source/application.txt:61
+msgid "Example"
+msgstr ""
+
+#: ../../source/application.txt:69
+msgid "See Also"
+msgstr ""
+
+#: ../../source/application.txt:71
+msgid "https://wiki.gnome.org/HowDoI/GtkApplication"
+msgstr ""
+
+#: ../../source/application.txt:72
+msgid "https://wiki.gnome.org/HowDoI/GAction"
+msgstr ""
+
+#: ../../source/application.txt:73
+msgid "https://wiki.gnome.org/HowDoI/ApplicationMenu"
+msgstr ""
+
+#: ../../source/application.txt:74
+msgid "https://wiki.gnome.org/HowDoI/GMenu"
+msgstr ""
+
