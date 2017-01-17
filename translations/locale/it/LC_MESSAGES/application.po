@@ -1,0 +1,187 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: 2017-01-16 20:58+0100\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.11\n"
+
+#: ../../source/application.txt:4
+msgid "Application"
+msgstr "Il widget Application"
+
+#: ../../source/application.txt:6
+msgid ""
+":class:`Gtk.Application` encompeses many repetitive tasks that a modern "
+"application needs such as handling multiple instances, D-Bus activation, "
+"opening files, command line parsing, startup/shutdown, menu management, "
+"window management, and more."
+msgstr ""
+":class:`Gtk.Application` evita molti compiti ripetitivi che un'applicazione "
+"moderna richiede come la gestione di più istanze, l'attivazione D-Bus, "
+"l'apertura dei file, il parsing da linea di comando, l'avvio/arresto, la "
+"gestione dei menu, la gestione delle finestre, e altro ancora."
+
+#: ../../source/application.txt:12
+msgid "Actions"
+msgstr "Azioni"
+
+#: ../../source/application.txt:14
+msgid ""
+":class:`Gio.Action` is a way to expose any single task your application or "
+"widget does by a name. These actions can be disabled/enabled at runtime and "
+"they can either be activated or have a state changed (if they contain state)."
+msgstr ""
+":class:`Gio.Action` è un modo per esporre ogni singolo task che la vostra "
+"applicazione o widget compiono da un nome. Queste azioni possono essere "
+"disabilitate/abilitate in fase di esecuzione e possono sia essere attivate o "
+"avere uno stato cambiato (se contengono uno stato)."
+
+#: ../../source/application.txt:18
+msgid ""
+"The reason to use actions is to separate out the logic from the UI. For "
+"example this allows using a menubar on OSX and a gear menu on GNOME both "
+"simply referencing the name of an action. The main implementation of this "
+"you will be using is :class:`Gio.SimpleAction` which will be showed off "
+"later."
+msgstr ""
+"Il motivo per utilizzare le azioni è quello di separare la logica "
+"dall'interfaccia utente. Per esempio, vi permette di utilizzare sia una "
+"barra dei menu su OSX e un menu su GNOME riferendosi semplicemente al nome "
+"di un'azione. L'implementazione principale che userete è :class:`Gio."
+"SimpleAction`, mostrato successivamente."
+
+#: ../../source/application.txt:23
+msgid ""
+"Many classes such as :class:`Gio.MenuItem` and :class:`Gtk.ModelButton` "
+"support properties to set an action name."
+msgstr ""
+"Esistono molte classi, come :class:`Gio.MenuItem` e :class:`Gtk."
+"ModelButton`, che supportano le proprietà per impostare un nome di azione."
+
+#: ../../source/application.txt:26
+msgid ""
+"These actions can be grouped together into a :class:`Gio.ActionGroup` and "
+"when these groups are added to a widget with :meth:`Gtk.Widget."
+"insert_action_group()` they will gain a prefix. Such as \"win\" when added "
+"to a :class:`Gtk.ApplicationWindow`. You will use the full action name when "
+"referencing it such as \"app.about\" but when you create the action it will "
+"just be \"about\" until added to the application."
+msgstr ""
+"Queste azioni possono essere raggruppate in un :class:`Gio.ActionGroup` e "
+"quando questi gruppi sono aggiunti ad un widget con :meth:`Gtk.Widget."
+"insert_action_group()` guadagneranno un prefisso. Come \"win\" quando è "
+"aggiunto ad un :class:`Gtk.ApplicationWindow`. Si utilizzerà il nome pieno "
+"dell'azione quando si fa riferimento ad essa, ad esempio \"app.about\", ma "
+"quando si crea l'azione sarà solo \"about\" finché non la sia aggiunge "
+"all'applicazione."
+
+#: ../../source/application.txt:32
+msgid ""
+"You can also very easily make keybindings for actions by setting the `accel` "
+"property in the :class:`Gio.Menu` file or by using :meth:`Gtk.Application."
+"add_accelerator()`."
+msgstr ""
+"Si può anche facilmente creare combinazioni di tasti per le azioni "
+"impostando la proprietà `accel` nei file :class:`Gio.Menu` o utilizzando :"
+"meth:`Gtk.Application.add_accelerator()`."
+
+#: ../../source/application.txt:36
+msgid "Menus"
+msgstr "Menu"
+
+#: ../../source/application.txt:38
+msgid ""
+"Your menus should be defined in XML using :class:`Gio.Menu` and would "
+"reference the previously mentioned actions you defined. :class:`Gtk."
+"Application` allows you to set a menu either via :meth:`Gtk.Application."
+"set_app_menu()` or :meth:`Gtk.Application.set_menubar()`. If you make use "
+"of :class:`Gio.Resource` this can automatically use the correct menu based "
+"on platform, otherwise you can set them manually. A detailed example is "
+"shown below."
+msgstr ""
+"I vostri menu dovrebbero essere definiti in XML utilizzando :class:`Gio."
+"Menu` e dovrebbero riferirsi alle azioni definite e citate in precedenza. :"
+"class:`Gtk.Application` consente di impostare un menu sia con :meth:`Gtk."
+"Application.set_app_menu()` o con :meth:`Gtk.Application.set_menubar()`. Se "
+"si fa uso di :class:`Gio.Resource` questo può utilizzare automaticamente il "
+"menu corretto in base alla piattaforma, altrimenti si possono impostare "
+"manualmente. Un esempio dettagliato è mostrato di seguito."
+
+#: ../../source/application.txt:46
+msgid "Command Line"
+msgstr "Linea di comando"
+
+#: ../../source/application.txt:48
+msgid ""
+"When creating your application it takes a flag property of :class:`Gio."
+"ApplicationFlags`. Using this you can let it handle everything itself or "
+"have more custom behavior."
+msgstr ""
+"Creando la vostra applicazione ci vuole una proprietà flag di :class:`Gio."
+"ApplicationFlags`. Usando questo si lascia la gestione di tutto o avere un "
+"comportamento personalizzato."
+
+#: ../../source/application.txt:51
+msgid ""
+"You can use `HANDLES_COMMAND_LINE` to allow custom behavior in :meth:`Gio."
+"Application.do_command_line()`. In combination with :meth:`Gio.Application."
+"add_main_option()` to add custom options."
+msgstr ""
+"È possibile utilizzare `HANDLES_COMMAND_LINE` per consentire un "
+"comportamento personalizzato in :meth:`Gio.Application.do_command_line()`. "
+"In combinazione con :meth:`Gio.Application.add_main_option()` per aggiungere "
+"opzioni personalizzate."
+
+#: ../../source/application.txt:54
+msgid ""
+"Using `HANDLES_OPEN` will do the work of simply taking file arguments for "
+"you and let you handle it in :meth:`Gio.Application.do_open()`."
+msgstr ""
+"Usando `HANDLES_OPEN` si farà il lavoro prendendo file come argomenti e "
+"lasciare la gestione degli stessi in :meth:`Gio.Application.do_open()`."
+
+#: ../../source/application.txt:57
+msgid ""
+"If your application is already open these will all be sent to the existing "
+"instance unless you use `NON_UNIQUE` to allow multiple instances."
+msgstr ""
+"Se l'applicazione è già aperta questi saranno tutti inviati all'istanza "
+"esistente a meno che non si utilizzi `NON_UNIQUE` per consentire istanze "
+"multiple."
+
+#: ../../source/application.txt:61
+msgid "Example"
+msgstr "Esempio"
+
+#: ../../source/application.txt:69
+msgid "See Also"
+msgstr "Ulteriori riferimenti"
+
+#: ../../source/application.txt:71
+msgid "https://wiki.gnome.org/HowDoI/GtkApplication"
+msgstr "https://wiki.gnome.org/HowDoI/GtkApplication"
+
+#: ../../source/application.txt:72
+msgid "https://wiki.gnome.org/HowDoI/GAction"
+msgstr "https://wiki.gnome.org/HowDoI/GAction"
+
+#: ../../source/application.txt:73
+msgid "https://wiki.gnome.org/HowDoI/ApplicationMenu"
+msgstr "https://wiki.gnome.org/HowDoI/ApplicationMenu"
+
+#: ../../source/application.txt:74
+msgid "https://wiki.gnome.org/HowDoI/GMenu"
+msgstr "https://wiki.gnome.org/HowDoI/GMenu"

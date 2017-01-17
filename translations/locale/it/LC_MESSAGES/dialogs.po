@@ -1,0 +1,762 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: 2017-01-16 19:07+0100\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 1dd5ea16b1404a67bcd28d7af7753c3d
+#: ../../source/dialogs.txt:2
+msgid "Dialogs"
+msgstr "Le finestre di dialogo"
+
+# b9062d1089ff4621bf28e82787f2c47a
+#: ../../source/dialogs.txt:4
+msgid ""
+"Dialog windows are very similar to standard windows, and are used to provide "
+"or retrieve information from the user. They are often used to provide a "
+"preferences window, for example. The major difference a dialog has is some "
+"prepacked widgets which layout the dialog automatically. From there, we can "
+"simply add labels, buttons, check buttons, etc. Another big difference is "
+"the handling of responses to control how the application should behave after "
+"the dialog has been interacted with."
+msgstr ""
+"Le finestre di dialogo sono molto simili a finestre standard, e sono "
+"utilizzate per fornire o recuperare informazioni dall'utente. Sono spesso "
+"utilizzate per fornire una finestra per le preferenze, per esempio. La "
+"differenza principale che una finestra di dialogo ha è essere fondata su "
+"alcuni widget per la propria visualizzazione automatica. Da lì, possiamo "
+"semplicemente aggiungere etichette, pulsanti, caselle di spunta, ecc.. "
+"Un'altra grande differenza è la gestione delle risposte per controllare come "
+"l'applicazione deve comportarsi dopo che si è interagito con la finestra di "
+"dialogo."
+
+# 7bf5f0e53f504d4baaeddaef90730236
+#: ../../source/dialogs.txt:12
+msgid ""
+"There are several derived Dialog classes which you might find useful. :class:"
+"`Gtk.MessageDialog` is used for most simple notifications. But at other "
+"times you might need to derive your own dialog class to provide more complex "
+"functionality."
+msgstr ""
+"Ci sono diverse classi derivate per le finestra di dialogo che potreste "
+"trovare utili. :class:`Gtk.MessageDialog` viene utilizzata per le notifiche "
+"più semplici. Altre volte potrebbe essere necessario derivare la propria "
+"classe per le finestra di dialogo al fine di fornire funzionalità più "
+"complesse."
+
+# 7c42349595a04c80ae3b32123584ffaa
+#: ../../source/dialogs.txt:18
+msgid "Custom Dialogs"
+msgstr "Finestre di dialogo personalizzate"
+
+# 79aeb3e99f044622883b727c57998a66
+#: ../../source/dialogs.txt:20
+msgid ""
+"To pack widgets into a custom dialog, you should pack them into the :class:"
+"`Gtk.Box`, available via :meth:`Gtk.Dialog.get_content_area`. To just add a :"
+"class:`Gtk.Button` to the bottom of the dialog, you could use the :meth:`Gtk."
+"Dialog.add_button` method."
+msgstr ""
+"Per raccogliere widget in una finestra di dialogo personalizzata, "
+"bisognerebbe raccoglierli in :class:`Gtk.Box`, tramite :meth:`Gtk.Dialog."
+"get_content_area`. Per aggiungere solo un :class:`Gtk.Button` alla parte "
+"inferiore della finestra di dialogo, è possibile utilizzare il metodo :meth:"
+"`Gtk.Dialog.add_button`."
+
+# 0e6944251bb0499e86b914e24a661c07
+#: ../../source/dialogs.txt:25
+msgid ""
+"A 'modal' dialog (that is, one which freezes the rest of the application "
+"from user input), can be created by calling :class:`Gtk.Dialog.set_modal` on "
+"the dialog or set the ``flags`` argument of the :class:`Gtk.Dialog` "
+"constructor to include the :attr:`Gtk.DialogFlags.MODAL` flag."
+msgstr ""
+"Una finestra di dialogo 'modale' (vale a dire, quello che blocca il resto "
+"dell'applicazione da input dell'utente), può essere creata con :class:`Gtk."
+"Dialog.set_modal` nella finestra di dialogo o impostando l'argomento "
+"``flags`` del costruttore :class:`Gtk.Dialog` per includere il flag :attr:"
+"`Gtk.DialogFlags.MODAL`."
+
+# 46f04f710ca64529b28419f1c74a750a
+#: ../../source/dialogs.txt:30
+msgid ""
+"Clicking a button will emit a signal called \"response\". If you want to "
+"block waiting for a dialog to return before returning control flow to your "
+"code, you can call :meth:`Gtk.Dialog.run`. This method returns an int which "
+"may be a value from the :class:`Gtk.ResponseType` or it could be the custom "
+"response value that you specified in the :class:`Gtk.Dialog` constructor or :"
+"meth:`Gtk.Dialog.add_button`."
+msgstr ""
+"Facendo clic su un pulsante si emetterà un segnale chiamato \"response"
+"\" (risposta). Se si desidera mettere un blocco d'attesa su una finestra di "
+"dialogo, prima di restituire il flusso di controllo al proprio codice, lo si "
+"può fare con :meth:`Gtk.Dialog.run`. Questo metodo restituisce un int che "
+"può essere un valore di :class:`Gtk.ResponseType` o un valore di risposta "
+"personalizzata indicata nel costruttore :class:`Gtk.Dialog`  o :meth:`Gtk."
+"Dialog .add_button`."
+
+# 5a9193d46e084e44985bf546dce39b79
+#: ../../source/dialogs.txt:36
+msgid ""
+"Finally, there are two ways to remove a dialog. The :meth:`Gtk.Widget.hide` "
+"method removes the dialog from view, however keeps it stored in memory. This "
+"is useful to prevent having to construct the dialog again if it needs to be "
+"accessed at a later time. Alternatively, the :meth:`Gtk.Widget.destroy` "
+"method can be used to delete the dialog from memory once it is no longer "
+"needed. It should be noted that if the dialog needs to be accessed after it "
+"has been destroyed, it will need to be constructed again otherwise the "
+"dialog window will be empty."
+msgstr ""
+"Infine, ci sono due modi per rimuovere una finestra. Il metodo :meth:`Gtk."
+"Widget.hide` rimuove la finestra di dialogo dalla vista, tuttavia la "
+"mantiene memorizzata. Risulta utile per evitare di dover costruire "
+"nuovamente la finestra e riprenderla in un secondo momento. In alternativa, "
+"il metodo :meth:`Gtk.Widget.destroy` può essere utilizzato per eliminare la "
+"finestra di dialogo dalla memoria una volta che non è più necessaria. Si "
+"noti che se la finestra di dialogo richiede di essere aperta dopo che è "
+"stata distrutta, dovrà essere costruita nuovamente o sarà vuota."
+
+# 6e4acf32aa6845eaa31386cd1573edcd
+# 58de7ace08544443a4a18c11d8c21f73
+# ac08ff8b9e434649bfd227bbaf4e7d68
+#: ../../source/dialogs.txt:46 ../../source/dialogs.txt:66
+#: ../../source/dialogs.txt:130
+msgid "Example"
+msgstr "Esempio"
+
+# 3ad2406451584374a89c15af4628afef
+#: ../../source/dialogs.txt:53
+msgid "MessageDialog"
+msgstr "La classe MessageDialog"
+
+# 760053b8a6be40d2859e4d7d7899a1dd
+#: ../../source/dialogs.txt:55
+msgid ""
+":class:`Gtk.MessageDialog` is a convenience class, used to create simple, "
+"standard message dialogs, with a message, an icon, and buttons for user "
+"response You can specify the type of message and the text in the :class:`Gtk."
+"MessageDialog` constructor, as well as specifying standard buttons."
+msgstr ""
+":class:`Gtk.MessageDialog` è una classe di convenienza, utilizzata per "
+"creare semplici finestre di dialogo, messaggi standard, con un messaggio, "
+"una icona e pulsanti per la risposta degli utenti. È possibile specificare "
+"il tipo di messaggio e il testo nel costruttore :class:`Gtk.MessageDialog`, "
+"così come specificare pulsanti standard."
+
+# afee1506a6f54a4ca179869cfe5ce5bc
+#: ../../source/dialogs.txt:60
+msgid ""
+"In some dialogs which require some further explanation of what has happened, "
+"a secondary text can be added. In this case, the primary message entered "
+"when creating the message dialog is made bigger and set to bold text. The "
+"secondary message can be set by calling :meth:`Gtk.MessageDialog."
+"format_secondary_text`."
+msgstr ""
+"In alcune finestre di dialogo che richiedono ulteriori spiegazioni, si può "
+"aggiungere un testo secondario. In questo caso, il messaggio principale "
+"inserito durante la creazione della finestra del messaggio è reso più grande "
+"e impostato in grassetto. Il messaggio secondario può essere impostato "
+"chiamando :meth:`Gtk.MessageDialog.format_secondary_text`."
+
+# 3f1cbeffaf2547c4b36c28507aed65ad
+#: ../../source/dialogs.txt:74
+msgid "FileChooserDialog"
+msgstr "La classe FileChooserDialog"
+
+# 1b54f2ef6da24559a9845b5738e80e71
+#: ../../source/dialogs.txt:76
+msgid ""
+"The :class:`Gtk.FileChooserDialog` is suitable for use with \"File/Open\" or "
+"\"File/Save\" menu items. You can use all of the :class:`Gtk.FileChooser` "
+"methods on the file chooser dialog as well as those for :class:`Gtk.Dialog`."
+msgstr ""
+"Il :class:`Gtk.FileChooserDialog` è adatto per l'uso con \"File/Apri\" o le "
+"voci di menu \"File/Salva\". È possibile utilizzare tutti i metodi di :class:"
+"`Gtk.FileChooser` nella finestra di selezione del file così come quelli per :"
+"class:`Gtk.Dialog`."
+
+# efb5f39184cb4a63a82c1e4abf9e8319
+#: ../../source/dialogs.txt:80
+msgid ""
+"When creating a :class:`Gtk.FileChooserDialog` you have to define the "
+"dialog's purpose:"
+msgstr ""
+"Quando si crea un :class:`Gtk.FileChooserDialog` è necessario definire lo "
+"scopo della finestra di dialogo:"
+
+# 748411dae64840428f21582b157383a3
+#: ../../source/dialogs.txt:83
+msgid ""
+"To select a file for opening, as for a File/Open command, use :attr:`Gtk."
+"FileChooserAction.OPEN`"
+msgstr ""
+"Per selezionare un file da aprire, come per un comando File/Apri, usate :"
+"attr:`Gtk.FileChooserAction.OPEN`"
+
+# 563f70ff5f7d4843a10cdfb77ec5384a
+#: ../../source/dialogs.txt:85
+msgid ""
+"To save a file for the first time, as for a File/Save command, use :attr:"
+"`Gtk.FileChooserAction.SAVE`, and suggest a name such as \"Untitled\" with :"
+"meth:`Gtk.FileChooser.set_current_name`."
+msgstr ""
+"Per salvare un file la prima volta, come con un comando File/Salva, "
+"utilizzate :attr:`Gtk.FileChooserAction.SAVE` ed indicate un nome come "
+"\"Senza nome\" con :meth:`Gtk.FileChooser.set_current_name`."
+
+# bab308797e704551aa893e33852b24b7
+#: ../../source/dialogs.txt:88
+msgid ""
+"To save a file under a different name, as for a File/Save As command, use :"
+"attr:`Gtk.FileChooserAction.SAVE`, and set the existing filename with :meth:"
+"`Gtk.FileChooser.set_filename`."
+msgstr ""
+"Per salvare un file con un nome diverso, come con un comando File/Salva "
+"come, usate :attr:`Gtk.FileChooserAction.SAVE` e impostate il nome del file "
+"esistente con :meth:`Gtk.FileChooser.set_filename`."
+
+# e4c681be340347d99574d58e72ea4f06
+#: ../../source/dialogs.txt:91
+msgid ""
+"To choose a folder instead of a file, use :attr:`Gtk.FileChooserAction."
+"SELECT_FOLDER`."
+msgstr ""
+"Per scegliere una cartella invece di un file, utilizzate :attr:`Gtk."
+"FileChooserAction.SELECT_FOLDER`."
+
+# 03173c9188774bb5abb968dce2971d67
+#: ../../source/dialogs.txt:93
+msgid ""
+":class:`Gtk.FileChooserDialog` inherits from :class:`Gtk.Dialog`, so buttons "
+"have response IDs such as :attr:`Gtk.ResponseType.ACCEPT` and :attr:`Gtk."
+"ResponseType.CANCEL` which can be specified in the :class:`Gtk."
+"FileChooserDialog` constructor. In contrast to :class:`Gtk.Dialog`, you can "
+"not use custom response codes with :class:`Gtk.FileChooserDialog`. It "
+"expects that at least one button will have of the following response IDs:"
+msgstr ""
+":class:`Gtk.FileChooserDialog` eredita da :class:`Gtk.Dialog`, così i "
+"pulsanti hanno ID risposte come, per esempio, :attr:`Gtk.ResponseType."
+"ACCEPT` e :attr:`Gtk.ResponseType.CANCEL` i quali si possono indicare nel "
+"costruttore :class:`Gtk.FileChooserDialog`. In contrasto a :class:`Gtk."
+"Dialog`, non è possibile utilizzare codici di risposta personalizzati con :"
+"class:`Gtk.FileChooserDialog`. Si aspetta che almeno un pulsante abbia degli "
+"ID di risposta tra i seguenti:"
+
+# 6abad6c9533c4b2f9a7f09600ac0ea98
+# 405882b092bb4586bbde36c3ad726822
+#: ../../source/dialogs.txt:100
+msgid ":attr:`Gtk.ResponseType.ACCEPT`"
+msgstr ":attr:`Gtk.ResponseType.ACCEPT`"
+
+# 96d5049083ff42fea71f815166d718cc
+# e1f618f73fe949d099a1e27e20fe160b
+#: ../../source/dialogs.txt:101
+msgid ":attr:`Gtk.ResponseType.OK`"
+msgstr ":attr:`Gtk.ResponseType.OK`"
+
+# 4078546696f6490cae891cadb070d8cd
+# c37dbd7a8813483caa5488625299c83b
+#: ../../source/dialogs.txt:102
+msgid ":attr:`Gtk.ResponseType.YES`"
+msgstr ":attr:`Gtk.ResponseType.YES`"
+
+# 6caf6c34adc34296b929af6cee9b7563
+# b72cfeef84584fbab4f9c77ff6fd1d01
+#: ../../source/dialogs.txt:103
+msgid ":attr:`Gtk.ResponseType.APPLY`"
+msgstr ":attr:`Gtk.ResponseType.APPLY`"
+
+# 6ec6d1a5daf9471f9deb38f9c550c775
+#: ../../source/dialogs.txt:105
+msgid ""
+"When the user is finished selecting files, your program can get the selected "
+"names either as filenames (:meth:`Gtk.FileChooser.get_filename`) or as URIs "
+"(:meth:`Gtk.FileChooser.get_uri`)."
+msgstr ""
+"Quando l'utente ha terminato la selezione dei file, il programma può "
+"ottenere i nomi selezionati sia come nomi file (:meth:`Gtk.FileChooser."
+"get_filename`) o come URI (:meth:`Gtk.FileChooser.get_uri`)."
+
+# 40b996c33e8e4d1da1af8e97d1bb8f8b
+#: ../../source/dialogs.txt:109
+msgid ""
+"By default, :class:`Gtk.FileChooser` only allows a single file to be "
+"selected at a time. To enable multiple files to be selected, use :meth:`Gtk."
+"FileChooser.set_select_multiple`. Retrieving a list of selected files is "
+"possible with either :meth:`Gtk.FileChooser.get_filenames` or :meth:`Gtk."
+"FileChooser.get_uris`."
+msgstr ""
+"In maniera predefinita, :class:`Gtk.FileChooser` consente la selezione di un "
+"solo file per volta. Per consentire la selezione di più file utilizzate :"
+"meth:`Gtk.FileChooser.set_select_multiple`. Estrarre un elenco di file "
+"selezionati è possibile con :meth:`Gtk.FileChooser.get_filenames` o: meth:"
+"`Gtk.FileChooser.get_uris`."
+
+# 918638a13fe845cb8978a2af218b8f7e
+#: ../../source/dialogs.txt:115
+msgid ""
+":class:`Gtk.FileChooser` also supports a variety of options which make the "
+"files and folders more configurable and accessible."
+msgstr ""
+":class:`Gtk.FileChooser` supporta anche una varietà di opzioni che rendono i "
+"file e le cartelle maggiormente configurabili e accessibili."
+
+# ebde2f9e612d4199ba63060ac2e5369c
+#: ../../source/dialogs.txt:118
+msgid ""
+":meth:`Gtk.FileChooser.set_local_only`: Only local files can be selected."
+msgstr ""
+":meth:`Gtk.FileChooser.set_local_only`: Solo i file locali possono essere "
+"visualizzati."
+
+# ee2c6b6d778a4d9aba406dd6b274a1f6
+#: ../../source/dialogs.txt:119
+msgid ""
+":meth:`Gtk.FileChooser.show_hidden`: Hidden files and folders are displayed."
+msgstr ""
+":meth:`Gtk.FileChooser.show_hidden`: Sono mostrati i file e le cartelle "
+"nascoste."
+
+# 00e8780a6a244dd8b38f4d1c570b56df
+#: ../../source/dialogs.txt:120
+msgid ""
+":meth:`Gtk.FileChooser.set_do_overwrite_confirmation`: If the file chooser "
+"was configured in :attr:`Gtk.FileChooserAction.SAVE` mode, it will present a "
+"confirmation dialog if the user types a file name that already exists."
+msgstr ""
+":meth:`Gtk.FileChooser.set_do_overwrite_confirmation`: Se il selettore di "
+"file è stato configurato in modalità :attr:`Gtk.FileChooserAction.SAVE`, si "
+"presenterà una finestra di conferma se il nome file digitato esiste già."
+
+# 09c28df190b2471ab8db44079442677e
+#: ../../source/dialogs.txt:124
+msgid ""
+"Furthermore, you can specify which kind of files are displayed by creating :"
+"class:`Gtk.FileFilter` objects and calling :meth:`Gtk.FileChooser."
+"add_filter`. The user can then select one of the added filters from a combo "
+"box at the bottom of the file chooser."
+msgstr ""
+"Inoltre, è possibile specificare quali tipi di file vengono visualizzati "
+"mediante la creazione degli oggetti :class:`Gtk.FileFilter` e chiamando :"
+"meth:`Gtk.FileChooser.add_filter`. L'utente può selezionare uno dei filtri "
+"aggiunti da un menu nella parte inferiore del selettore file."
+
+# 942af61eae774a53a1b3bd2adfc9177a
+#~ msgid "Dialog Objects"
+#~ msgstr "Oggetti Dialog"
+
+# a8ec8359f9a34d339116eeeabb7d9bad
+#~ msgid ""
+#~ "Creates a new :class:`Gtk.Dialog` with title *title* and transient parent "
+#~ "*parent*. The *flags* argument can be used to make the dialog model (:"
+#~ "attr:`Gtk.DialogFlags.MODAL`) and/or to have it destroyed along with its "
+#~ "transient parent (:attr:`Gtk.DialogFlags.DESTROY_WITH_PARENT`)."
+#~ msgstr ""
+#~ "Crea una nuova :class:`Gtk.Dialog` con titolo *title* e genitore "
+#~ "transitorio *parent*. L'argomento *flags* può essere utilizzato per il "
+#~ "modello della finestra di dialogo (:attr:`Gtk.DialogFlags.MODAL`) e/o per "
+#~ "distruggerla insieme al suo genitore transitorio (:attr:`Gtk.DialogFlags."
+#~ "DESTROY_WITH_PARENT`)."
+
+# 7eb85ad9c99c49059f54a15a51b1e927
+#~ msgid ""
+#~ "*buttons* is a tuple of buttons which can be set to provide a range of "
+#~ "different buttons and responses. See the :meth:`add_button` method for "
+#~ "details."
+#~ msgstr ""
+#~ "*buttons* è una tupla di tasti che può essere impostata per fornire una "
+#~ "gamma di diversi pulsanti e risposte. Vedere il metodo :meth:"
+#~ "`add_button`  per i dettagli."
+
+# dc48cbe9d59841c890990db357220c66
+# ecea65580b5c477ba6f64a6717051a45
+#~ msgid ""
+#~ "All arguments are optional and can be referred to as key-word arguments "
+#~ "as well."
+#~ msgstr ""
+#~ "Tutti gli argomenti sono opzionali e possono essere indicati come "
+#~ "argomenti chiave-parola."
+
+# de7b9331e8d240bba14374f745d1e661
+#~ msgid "Return the content area of of this dialog."
+#~ msgstr "Restituisce il contenuto di questa finestra di dialogo."
+
+# d37defa6e52a4e748fcc0fc7ea69ef21
+#~ msgid ""
+#~ "Adds a button with the given text (or a stock button, if *button_text* is "
+#~ "a :ref:`stock item <stock-items>`) and sets things up so that clicking "
+#~ "the button will emit the \"response\" signal with the given "
+#~ "*response_id*. The button is appended to the end of the dialog's action "
+#~ "area."
+#~ msgstr ""
+#~ "Aggiunge un pulsante con il testo indicato (o un pulsante stock, se "
+#~ "*button_text* è un :ref:`elemento stock <stock-items>`) e imposta le cose "
+#~ "in modo che facendo clic sul pulsante si emetta il segnale \"response\" "
+#~ "con il rispettivo *response_id*. Il pulsante è aggiunto alla fine della "
+#~ "zona di azione della finestra di dialogo."
+
+# 7b6e98b1220245cd903f1475eeef5d03
+#~ msgid ""
+#~ "*response_id* can be any positive integer or one of the predefined :class:"
+#~ "`Gtk.ResponseType` values:"
+#~ msgstr ""
+#~ "*response_id* può essere un qualsiasi numero intero positivo o uno dei "
+#~ "valori predefiniti in :class:`Gtk.ResponseType`:"
+
+# 6da12ecf1b2742f1b85193995afd9be5
+#~ msgid ":attr:`Gtk.ResponseType.NONE`"
+#~ msgstr ":attr:`Gtk.ResponseType.NONE`"
+
+# 3bbc64b7eaee41309fdbffcacf1f7be9
+#~ msgid ":attr:`Gtk.ResponseType.REJECT`"
+#~ msgstr ":attr:`Gtk.ResponseType.REJECT`"
+
+# 9bb819ca56284c0d8347f063d0e9a747
+#~ msgid ":attr:`Gtk.ResponseType.DELETE_EVENT`"
+#~ msgstr ":attr:`Gtk.ResponseType.DELETE_EVENT`"
+
+# 2bd6bba0a24e4cd087e34a8399dfbaec
+#~ msgid ":attr:`Gtk.ResponseType.CANCEL`"
+#~ msgstr ":attr:`Gtk.ResponseType.CANCEL`"
+
+# 362ff9b6d7e04901ad34efa29c750ddc
+#~ msgid ":attr:`Gtk.ResponseType.CLOSE`"
+#~ msgstr ":attr:`Gtk.ResponseType.CLOSE`"
+
+# 8ad1fbecebaf4871837f122c85e5a756
+#~ msgid ":attr:`Gtk.ResponseType.NO`"
+#~ msgstr ":attr:`Gtk.ResponseType.NO`"
+
+# d8ef09af76e1451e86573224cbfbcaeb
+#~ msgid ":attr:`Gtk.ResponseType.HELP`"
+#~ msgstr ":attr:`Gtk.ResponseType.HELP`"
+
+# 76992253b75845cc9d54a165b9825746
+#~ msgid "The button widget is returned, but usually you don't need it."
+#~ msgstr "Il pulsante widget viene restituito, ma di solito non è necessario."
+
+# acc5c72eab1047e492b021eda58045b7
+#~ msgid ""
+#~ "Adds several buttons to this dialog using the button data passed as "
+#~ "arguments to the method. This method is the same as calling :meth:"
+#~ "`add_button` repeatedly. The button data pairs - button text (or :ref:"
+#~ "`stock item <stock-items>`) and a response ID integer are passed "
+#~ "individually. For example::"
+#~ msgstr ""
+#~ "Aggiunge diversi pulsanti a questa finestra di dialogo utilizzando i dati "
+#~ "dei pulsanti passati come argomenti al metodo. Questo metodo agisce come "
+#~ "chiamare :meth:`add_button` ripetutamente. Le coppie dei dati pulsante - "
+#~ "testo del pulsante (o :ref:`elementi stock <stock-items>`) e un intero ID "
+#~ "di risposta - sono passati singolarmente. Per esempio::"
+
+# d08eb91272614383934c66ce07cf27a5
+#~ msgid ""
+#~ "Sets a dialog modal or non-modal. Modal dialogs prevent interaction with "
+#~ "other windows in the same application."
+#~ msgstr ""
+#~ "Imposta una finestra di dialogo come modale o non modale. Le finestre di "
+#~ "dialogo modali evitano l'interazione con altre finestre della stessa "
+#~ "applicazione."
+
+# abd078ab2a0c4345ba3f3849afc90ef1
+#~ msgid ""
+#~ "Blocks in a recursive main loop until the dialog either emits the "
+#~ "\"response\" signal, or is destroyed. If the dialog is destroyed during "
+#~ "the call to :meth:`run`, :meth:`run` returns :attr:`Gtk.ResponseType."
+#~ "NONE`. Otherwise, it returns the response ID from the \"response\" signal "
+#~ "emission."
+#~ msgstr ""
+#~ "I blocchi in un ciclo principale ricorsivo durano fino a quando la "
+#~ "finestra di dialogo emette il segnale di \"response\" o viene distrutta. "
+#~ "Se la finestra di dialogo viene distrutta durante la chiamata a :meth:"
+#~ "`run`, :meth:`run` restituisce :attr:`Gtk.ResponseType.NONE`. In caso "
+#~ "contrario, restituisce l'ID risposta dal emissione di segnale \"response"
+#~ "\"."
+
+# 6b04c0a0c1c4446a97f799a8817420ce
+#~ msgid "MessageDialog Objects"
+#~ msgstr "Oggetti MessageDialog"
+
+# 4a512b3977a048c8a4201077bf434be7
+#~ msgid ""
+#~ "Creates a new :class:`Gtk.MessageDialog` with transient parent *parent*. "
+#~ "The *flags* argument can be used to make the dialog model (:attr:`Gtk."
+#~ "DialogFlags.MODAL`) and/or to have it destroyed along with its transient "
+#~ "parent (:attr:`Gtk.DialogFlags.DESTROY_WITH_PARENT`)."
+#~ msgstr ""
+#~ "Crea una nuova :class:`Gtk.MessageDialog` con genitore transitorio "
+#~ "*parent*. Gli argomenti *flags* possono essere utilizzati per creare il "
+#~ "modello della finestra di dialogo (:attr:`Gtk.DialogFlags.MODAL`) e/o "
+#~ "distruggerlo insieme al suo genitore transitorio (:attr:`Gtk.DialogFlags."
+#~ "DESTROY_WITH_PARENT`)."
+
+# 131b9b5c129040fd90604f159ddd9178
+#~ msgid "*message_type* can be set to one of the following values:"
+#~ msgstr "*message_type* può essere impostato con uno dei seguenti valori:"
+
+# 97818df00f944d839ae8c068a689ef0e
+#~ msgid ":attr:`Gtk.MessageType.INFO`: Informational message"
+#~ msgstr ":attr:`Gtk.MessageType.INFO`: Messaggio informativo"
+
+# 80a4d727e96e4430b15570ca8d029d29
+#~ msgid ":attr:`Gtk.MessageType.WARNING`: Non-fatal warning message"
+#~ msgstr ":attr:`Gtk.MessageType.WARNING`: Messaggio di avviso non fatale"
+
+# 1f38fff82c20430f88677e5d53a52735
+#~ msgid ":attr:`Gtk.MessageType.QUESTION`: Question requiring a choice"
+#~ msgstr ":attr:`Gtk.MessageType.QUESTION`: Domanda che richiede una scelta"
+
+# 93591aead3094bb59237984b7efdd89a
+#~ msgid ":attr:`Gtk.MessageType.ERROR`: Fatal error message"
+#~ msgstr ":attr:`Gtk.MessageType.ERROR`: Messaggio  di avviso fatale"
+
+# e816bfe23d7f4e2f8a22c0a0e323c41b
+#~ msgid ""
+#~ ":attr:`Gtk.MessageType.OTHER`: None of the above, doesn't get an icon"
+#~ msgstr ""
+#~ ":attr:`Gtk.MessageType.OTHER`: Nessuna delle precedenti, senza un'icona"
+
+# c8ab1d1eebf24cdc9e4466b559300d13
+#~ msgid ""
+#~ "It is also possible to set a variety of buttons on the message dialog, to "
+#~ "retrieve different responses from the user. One of the following values "
+#~ "can be used:"
+#~ msgstr ""
+#~ "È anche possibile impostare una serie di pulsanti sulla finestra del "
+#~ "messaggio, per recuperare risposte diverse da parte dell'utente. Uno dei "
+#~ "seguenti valori può essere utilizzato:"
+
+# a0d870ccc7dd4078957308ddd8c0ca8a
+#~ msgid ":attr:`Gtk.ButtonsType.NONE`: no buttons at all"
+#~ msgstr ":attr:`Gtk.ButtonsType.NONE`: nessun pulsante"
+
+# 3407902610884015bdf3520b605ba016
+#~ msgid ":attr:`Gtk.ButtonsType.OK`: an OK button"
+#~ msgstr ":attr:`Gtk.ButtonsType.OK`: un pulsante Ok"
+
+# ead6f4f401ce40f5a2cac526b04c3a25
+#~ msgid ":attr:`Gtk.ButtonsType.CLOSE`: a Close button"
+#~ msgstr ":attr:`Gtk.ButtonsType.CLOSE`: un pulsante Chiudi"
+
+# ebcd490fce464a83a67ca7ec8e071ebf
+#~ msgid ":attr:`Gtk.ButtonsType.CANCEL`: a Cancel button"
+#~ msgstr ":attr:`Gtk.ButtonsType.CANCEL`: un pulsante Cancella"
+
+# aa49f4c9e4bf45f78adb79d9b2e85943
+#~ msgid ":attr:`Gtk.ButtonsType.YES_NO`: Yes and No buttons"
+#~ msgstr ":attr:`Gtk.ButtonsType.YES_NO`: i pulsanti Sì e No"
+
+# 2916d8642fb8444d940282b1d146940c
+#~ msgid ":attr:`Gtk.ButtonsType.OK_CANCEL`: OK and Cancel buttons"
+#~ msgstr ":attr:`Gtk.ButtonsType.OK_CANCEL`: i pulsanti Ok e Cancella"
+
+# ed16eb8b9f7c4cc784297f6ea1d96da0
+#~ msgid ""
+#~ "Finally, *message_format* is some text that the user may want to see."
+#~ msgstr ""
+#~ "Infine, *message_format* è un testo che l'utente potrebbe voler vedere."
+
+# 5f238278cef146e2967d826600fc89ef
+#~ msgid ""
+#~ "Sets the secondary text of the message dialog to be *message_format*."
+#~ msgstr ""
+#~ "Imposta il testo secondario della finestra di dialogo per essere "
+#~ "*message_format*."
+
+# 78628273f5f5432cbf3fa3edc5ca0282
+#~ msgid ""
+#~ "Note that setting a secondary text makes the primary text "
+#~ "(*message_format* argument of :class:`Gtk.MessageDialog` constructor) "
+#~ "become bold, unless you have provided explicit markup."
+#~ msgstr ""
+#~ "Si noti che l'impostazione di un testo secondario rende il testo primario "
+#~ "(argomento *message_format* del costruttore :class:`Gtk.MessageDialog`) "
+#~ "in grassetto, a meno che non si passi un markup esplicito."
+
+# ca7cb4691e0046b98c0838044bf098c7
+#~ msgid "FileChooser Objects"
+#~ msgstr "Oggetti FileChooser"
+
+# 36017c96af094822b5f714c9983a900a
+#~ msgid ""
+#~ "Creates a new :class:`Gtk.FileChooserDialog` with title *title and "
+#~ "transient parent *parent*."
+#~ msgstr ""
+#~ "Crea una nuovo :class:`Gtk.FileChooserDialog` con il titolo *title* e un "
+#~ "genitore transitorio *parent*."
+
+# 8cd2faf882a949db926c01813c8302f6
+#~ msgid "*action* can be one of the following:"
+#~ msgstr "*action* può essere una delle seguenti:"
+
+# 6fa75eea73d546818e5bed33897d729c
+#~ msgid ""
+#~ ":attr:`Gtk.FileChooserAction.OPEN`: The file chooser will only let the "
+#~ "user pick an existing file."
+#~ msgstr ""
+#~ ":attr:`Gtk.FileChooserAction.OPEN`: La finestra di selezione consente "
+#~ "all'utente di indicare un file esistente."
+
+# 0d968286140741bb9501222ac3af15b1
+#~ msgid ""
+#~ ":attr:`Gtk.FileChooserAction.SAVE`: The file chooser will let the user "
+#~ "pick an existing file, or type in a new filename."
+#~ msgstr ""
+#~ ":attr:`Gtk.FileChooserAction.SAVE`: La finestra di selezione consente "
+#~ "all'utente di indicare un file esistente o digitare un nuovo nome file."
+
+# 9f3230f7122e486393b8a7b2b4d9acac
+#~ msgid ""
+#~ ":attr:`Gtk.FileChooserAction.SELECT_FOLDER`: The file chooser will let "
+#~ "the user pick an existing folder."
+#~ msgstr ""
+#~ ":attr:`Gtk.FileChooserAction.SELECT_FOLDER`: La finestra di selezione "
+#~ "consente all'utente di indicare una cartella esistente."
+
+# e7143d73aeea4598930d2e84e6ad0baf
+#~ msgid ""
+#~ ":attr:`Gtk.FileChooserAction.CREATE_FOLDER`: The file chooser will let "
+#~ "the user name an existing or new folder."
+#~ msgstr ""
+#~ ":attr:`Gtk.FileChooserAction.CREATE_FOLDER`: La finestar di selezione "
+#~ "consente all'utente di rinominare o creare una cartella."
+
+# 6f4bcb89739647948b252bb1f134e9e7
+#~ msgid ""
+#~ "The *buttons* argument has the same format as for the :class:`Gtk.Dialog` "
+#~ "constructor."
+#~ msgstr ""
+#~ "L'argomento *buttons* ha lo stesso formato del costruttore :class:`Gtk."
+#~ "Dialog`."
+
+# fe743682444642058aaedcb2c8780792
+#~ msgid ""
+#~ "Sets the current name in the file selector, as if entered by the user."
+#~ msgstr ""
+#~ "Imposta il nome attuale nel selettore di file, come se inserito "
+#~ "dall'utente."
+
+# cff1fc4fe2b44d2e820bbb891037206e
+#~ msgid ""
+#~ "Sets *filename* as the current filename for the file chooser, by changing "
+#~ "to the file's parent folder and actually selecting the file in list; all "
+#~ "other files will be unselected. If the chooser is in :attr:`Gtk."
+#~ "FileChooserAction.SAVE` mode, the file's base name will also appear in "
+#~ "the dialog's file name entry."
+#~ msgstr ""
+#~ "Imposta il *filename* come il nome file corrente per il selettore, "
+#~ "passando alla cartella superiore e selezionando il file nella lista; "
+#~ "tutti gli altri file saranno deselezionati. Se il selettore si trova in "
+#~ "modalità :attr:`Gtk.FileChooserAction.SAVE`, il nome base del file "
+#~ "apparirà anche come nome file nella finestra di dialogo."
+
+# 512d0b2ec0d14fe7beb05919598cd4e5
+#~ msgid ""
+#~ "Note that the file must exist, or nothing will be done except for the "
+#~ "directory change."
+#~ msgstr ""
+#~ "Si noti che il file deve esistere, o nulla sarà fatto ad eccezione del "
+#~ "cambio di directory."
+
+# b46613799bb345f5bb9bba4c818ee637
+#~ msgid ""
+#~ "Sets whether multiple files can be selected. This is only relevant if the "
+#~ "mode is :attr:`Gtk.FileChooserAction.OPEN` or :attr:`Gtk."
+#~ "FileChooserAction.SELECT_FOLDER`."
+#~ msgstr ""
+#~ "Imposta se più file possono essere selezionati. Questo è rilevante solo "
+#~ "se la modalità è :attr:`Gtk.FileChooserAction.OPEN` o :attr:`Gtk."
+#~ "FileChooserAction.SELECT_FOLDER`."
+
+# dac2248392f74da990fa125dcd84769e
+#~ msgid "Sets whether only local files can be selected."
+#~ msgstr "Imposta se solo i file locali possono essere selezionati."
+
+# d6c3f5abd0a44200838bbd5a2273eeba
+#~ msgid "Sets whether to display hidden files and folders."
+#~ msgstr "Imposta se mostrare i file e le cartelle nascoste."
+
+# 9a738e74bb074dd1ad54a345ed48098e
+#~ msgid "Sets whether to confirm overwriting in save mode."
+#~ msgstr "Imposta se confermare la sovrascrittura in modalità provvisoria."
+
+# 3b546c6d1a864f4fa129791f73479a0d
+#~ msgid ""
+#~ "Returns the filename for the currently selected file in the file "
+#~ "selector. If multiple files are selected, use :meth:`get_filenames` "
+#~ "instead."
+#~ msgstr ""
+#~ "Restituisce il nome del file attualmente selezionato nel selettore. Se "
+#~ "sono selezionati più file, utilizzate in alternativa :meth:"
+#~ "`get_filenames`."
+
+# cbdede1881e741bc8a8abc0f3a5888c5
+#~ msgid ""
+#~ "Returns a list of all the selected files and subfolders in the current "
+#~ "folder. The returned names are full absolute paths. If files in the "
+#~ "current folder cannot be represented as local filenames they will be "
+#~ "ignored. Use :meth:`get_uris` instead."
+#~ msgstr ""
+#~ "Restituisce un elenco di tutti i file selezionati e sottocartelle nella "
+#~ "cartella corrente. I nomi restituiti sono percorsi assoluti completi. Se "
+#~ "i file nella cartella corrente non possono essere rappresentati con nomi "
+#~ "di file locali saranno ignorati. Utilizzate in alternativa :meth:"
+#~ "`get_uris`."
+
+# 42c4f79bff734210810aebb4aa3f3a2a
+#~ msgid ""
+#~ "Returns the URI for the currently selected file in the file selector. If "
+#~ "multiple files are selected, use :meth:`get_uris` instead."
+#~ msgstr ""
+#~ "Restituisce un URI per il file selezionato nel selettore. Se sono "
+#~ "selezionati più file, utilizzate in alternativa :meth:`get_uris`."
+
+# cb379c81d8334836b53c609d11e2680c
+#~ msgid ""
+#~ "Returns a list of all the selected files and subfolders in the current "
+#~ "folder. The returned names are full absolute URIs."
+#~ msgstr ""
+#~ "Restituisce un elenco di tutti i file selezionati e le sottocartelle "
+#~ "nella cartella corrente. I nomi restituiti sono URI assoluti."
+
+# e245b596e4ce47e2a5a5aad7cda29c19
+#~ msgid ""
+#~ "Adds the :class:`Gtk.FileFilter` instance *filter* to the list of filters "
+#~ "that the user can choose from. When a filter is selected, only files that "
+#~ "are passed by that filter are displayed."
+#~ msgstr ""
+#~ "Aggiunge il *filter* dell'istanza :class:`Gtk.FileFilter` all'elenco di "
+#~ "quelli disponibili all'utente per la scelta. Quando si seleziona un "
+#~ "filtro, vengono visualizzati solo i file che sono conformi a quel filtro."
+
+# 0981376cd7ca436fba567cb9125aedb5
+#~ msgid ""
+#~ "Sets the human-readable name of the filter; this is the string that will "
+#~ "be displayed in the file selector user interface if there is a selectable "
+#~ "list of filters."
+#~ msgstr ""
+#~ "Imposta il nome leggibile del filtro; questa è la stringa che verrà "
+#~ "visualizzata nel selettore file se vi è un elenco di filtri selezionabili."
+
+# f0e5296d77c949f0b8b71265cdf9124c
+#~ msgid "Adds a rule allowing a given mime type to filter."
+#~ msgstr ""
+#~ "Aggiunge una regola che consenta un determinato tipo MIME da filtrare."
+
+# ad387a1a2a1d4314ab0d366f4f7adbfa
+#~ msgid "Adds a rule allowing a shell style glob to a filter."
+#~ msgstr ""
+#~ "Aggiunge una regola che consenta un glob in stile shell per un filtro."

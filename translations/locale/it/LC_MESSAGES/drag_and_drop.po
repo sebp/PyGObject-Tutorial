@@ -1,0 +1,413 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: 2017-01-16 19:23+0100\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 0eb0e59dc379423e813ec35a3e2af963
+#: ../../source/drag_and_drop.txt:2
+msgid "Drag and Drop"
+msgstr "Drag and Drop"
+
+# 35375cd0e73c415a9f4751cd99baf221
+#: ../../source/drag_and_drop.txt:4
+msgid ""
+"Versions of PyGObject < 3.0.3 contain a bug which does not allow drag and "
+"drop to function correctly. Therefore a version of PyGObject >= 3.0.3 is "
+"required for the following examples to work."
+msgstr ""
+"Le versioni di PyGObject <3.0.3 contengono un bug che non permette il "
+"funzionamento corretto del drag and drop. Pertanto è necessaria una versione "
+"di PyGObject >= 3.0.3 affinché si possa lavorare con i seguenti esempi."
+
+# d639de0df31647549360facff0766424
+#: ../../source/drag_and_drop.txt:8
+msgid ""
+"Setting up drag and drop between widgets consists of selecting a drag source "
+"(the widget which the user starts the drag from) with the :meth:`Gtk.Widget."
+"drag_source_set` method, selecting a drag destination (the widget which the "
+"user drops onto) with the :meth:`Gtk.Widget.drag_dest_set` method and then "
+"handling the relevant signals on both widgets."
+msgstr ""
+"La configurazione del drag and drop tra widget consiste nel selezionare una "
+"sorgente di trascinamento (il widget dal quale l'utente inizia il "
+"trascinamento) con il metodo :meth:`Gtk.Widget.drag_source_set`, "
+"selezionando una destinazione (il widget sul quale l'utente arriverà a "
+"destinazione) con il metodo :meth:`Gtk.Widget.drag_dest_set` e poi gestire i "
+"segnali rilevanti in entrambi i widget."
+
+# 73df05c2477744d38c0382195be41280
+#: ../../source/drag_and_drop.txt:14
+msgid ""
+"Instead of using :meth:`Gtk.Widget.drag_source_set` and :meth:`Gtk.Widget."
+"drag_dest_set` some specialised widgets require the use of specific "
+"functions (such as :class:`Gtk.TreeView` and :class:`Gtk.IconView`)."
+msgstr ""
+"Anziché usare :meth:`Gtk.Widget.drag_source_set` e :meth:`Gtk.Widget."
+"drag_dest_set` alcuni widget specializzati richiedono l'uso di determinate "
+"funzioni (come :class:`Gtk.TreeView` e :class:`Gtk.IconView`)."
+
+# 0fbec61e952d4c19b0b4b7040c0cf790
+#: ../../source/drag_and_drop.txt:18
+msgid ""
+"A basic drag and drop only requires the source to connect to the \"drag-data-"
+"get\" signal and the destination to connect to the \"drag-data-received\" "
+"signal. More complex things such as specific drop areas and custom drag "
+"icons will require you to connect to :ref:`additional signals <drag-"
+"signals>` and interact with the :class:`Gdk.DragContext` object it supplies."
+msgstr ""
+"Un semplice drag and drop richiede solo la sorgente da collegare al segnale "
+"\"drag-data-get\" e la destinazione da collegare al segnale \"drag-data-"
+"received\". Le cose più complesse, come una specifica area di rilascio e le "
+"icone di trascinamento personalizzate, richiedono di collegarsi ai :ref:"
+"`segnali aggiuntivi <drag-segnali>` e interagire con l'oggetto :class:`Gdk."
+"DragContext`."
+
+# 0e102a85c2164407a00f72c4235d81cb
+#: ../../source/drag_and_drop.txt:24
+msgid ""
+"In order to transfer data between the source and destination, you must "
+"interact with the :class:`Gtk.SelectionData` variable supplied in the :ref:`"
+"\"drag-data-get\" <drag-signals>` and :ref:`\"drag-data-received\" <drag-"
+"signals>` signals using the :class:`Gtk.SelectionData` get and set methods."
+msgstr ""
+"Per trasferire i dati dalla sorgente alla destinazione, è necessario "
+"interagire con la variabile :class:`Gtk.SelectionData` indicata nei segnali :"
+"ref:`drag-data-get <drag-signals>` e :ref:`drag-data-received <drag-"
+"signals>` e usare i metodi get e set di :class:`Gtk.SelectionData`."
+
+# c60d7d4382dc4e8ab7edf41c158384d5
+#: ../../source/drag_and_drop.txt:30
+msgid "Target Entries"
+msgstr "Voci destinazione"
+
+# 2343c81413904a96ac08aba236e45e6e
+#: ../../source/drag_and_drop.txt:31
+msgid ""
+"To allow the drag source and destination to know what data they are "
+"receiving and sending, a common list of :class:`Gtk.TargetEntry's <Gtk."
+"TargetEntry>` are required. A :class:`Gtk.TargetEntry` describes a piece of "
+"data that will be sent by the drag source and received by the drag "
+"destination."
+msgstr ""
+"Per informare l'origine del trascinamento e la destinazione sul tipo di dati "
+"che si stanno inviando e ricevendo, è necessaria una lista comune di <Gtk."
+"TargetEntry> del widget :class:`Gtk.TargetEntry`. Quest'ultimo descrive un "
+"pezzo dei dati che saranno inviati dalla sorgente di trascinamento  e "
+"ricevuti dalla destinazione."
+
+# db53c619d48a49249668ad592d23aff8
+#: ../../source/drag_and_drop.txt:36
+msgid ""
+"There are two ways of adding :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` to "
+"a source and destination. If the drag and drop is simple and each target "
+"entry is of a different type, you can use the group of methods :meth:"
+"`mentioned here <Gtk.Widget.drag_source_add_text_targets>`."
+msgstr ""
+"Ci sono due modi di aggiungere <Gtk.TargetEntry> della classe :class:`Gtk."
+"TargetEntry` ad una sorgente e destinazione. Se il drag and drop è semplice "
+"e ogni voce di destinazione è di tipo diverso, è possibile utilizzare il "
+"gruppo di metodi :meth:`menzionati qui  <Gtk.Widget."
+"drag_source_add_text_targets>`."
+
+# d26ecefd1afc48bfb86fc4ec50f94248
+#: ../../source/drag_and_drop.txt:41
+msgid ""
+"If you require more than one type of data or wish to do more complex things "
+"with the data, you will need to create the :class:`Gtk.TargetEntry's <Gtk."
+"TargetEntry>` using the :meth:`Gtk.TargetEntry.new` method."
+msgstr ""
+"Se avete bisogno di più tipi di dati o si desidera fare cose più complesse "
+"con i dati, è necessario creare il <Gtk.TargetEntry> di :class:`Gtk."
+"TargetEntry` con il metodo :meth:`Gtk.TargetEntry.new `."
+
+# 8ccf56999a0444f7820395273174de01
+#: ../../source/drag_and_drop.txt:48
+msgid "Drag Source Signals"
+msgstr "Segnali della sorgente di trascinamento"
+
+# c588aefe09354313acc30250e3f96477
+# 11feaee5d4fe4f7c8d440001adaf9b88
+#: ../../source/drag_and_drop.txt:50 ../../source/drag_and_drop.txt:64
+msgid "Name"
+msgstr "Nome"
+
+# f67ed99e753f43588397fec637550672
+# 38bb7f49dbc14be893711db324453106
+#: ../../source/drag_and_drop.txt:50 ../../source/drag_and_drop.txt:64
+msgid "When it is emitted"
+msgstr "Quando è emesso"
+
+# 3f1d01328f38466b81aaadd5404517f5
+# e21e096a9bdf426aa0dda49adfab8955
+#: ../../source/drag_and_drop.txt:50 ../../source/drag_and_drop.txt:64
+msgid "Common Purpose"
+msgstr "Scopo comune"
+
+# 986b4bbb0b304cb5834a9e8d155a1c5e
+#: ../../source/drag_and_drop.txt:52
+msgid "drag-begin"
+msgstr "drag-begin"
+
+# 84cc69f08fa2477abf19ae20efce883d
+#: ../../source/drag_and_drop.txt:52
+msgid "User starts a drag"
+msgstr "L'utente inizia a trascinare"
+
+# e4dd1b49e1ff4ac99f2b0e29795964f8
+#: ../../source/drag_and_drop.txt:52
+msgid "Set-up drag icon"
+msgstr "Imposta l'icona di trascinamento"
+
+# e3c7499d1d664e4884546943341bd326
+#: ../../source/drag_and_drop.txt:54
+msgid "drag-data-get"
+msgstr "drag-data-get"
+
+# e7f2203f560e441684a7d102b353e386
+#: ../../source/drag_and_drop.txt:54
+msgid "When drag data is requested by the destination"
+msgstr "Quando i dati trascinati sono richiesti dalla destinazione"
+
+# da73ba7372ce44219e7cfc46b9858d7d
+# 17c2903e616b4d36a60ad8ede8f71fe6
+#: ../../source/drag_and_drop.txt:54 ../../source/drag_and_drop.txt:70
+msgid "Transfer drag data from source to destination"
+msgstr "Trasferisce i dati trascinati dalla sorgente alla destinazione"
+
+# ffd2cde73cd449718785e21e8a3768e1
+#: ../../source/drag_and_drop.txt:56
+msgid "drag-data-delete"
+msgstr "drag-data-delete"
+
+# 1e8c48902c2b4883a41593cb8c1b8b37
+#: ../../source/drag_and_drop.txt:56
+msgid "When a drag with the action Gdk.DragAction.MOVE is completed"
+msgstr "Quando un trascinamento con l'azione Gdk.DragAction.MOVE è completata"
+
+# bfc8bb164adf4f089f599895a51a9425
+#: ../../source/drag_and_drop.txt:56
+msgid "Delete data from the source to complete the 'move'"
+msgstr "Elimina i dati dalla sorgente per completare il 'movimento'"
+
+# 986b4bbb0b304cb5834a9e8d155a1c5e
+#: ../../source/drag_and_drop.txt:58
+msgid "drag-end"
+msgstr "drag-end"
+
+# 2c49740c2437425ead0c3a660fb585fa
+#: ../../source/drag_and_drop.txt:58
+msgid "When the drag is complete"
+msgstr "Quando il trascinamento è completato"
+
+# 3cd47aec75174469a5749ea41f4b3765
+#: ../../source/drag_and_drop.txt:58
+msgid "Undo anything done in drag-begin"
+msgstr "Annulla qualsiasi cosa fatta in drag-begin"
+
+# 823717cf355e4a329bacf103c38da5aa
+#: ../../source/drag_and_drop.txt:62
+msgid "Drag Destination Signals"
+msgstr "Segnali per la destinazione del trascinamento"
+
+# 7b9c0b13d9da454185471727a4f0a00c
+#: ../../source/drag_and_drop.txt:66
+msgid "drag-motion"
+msgstr "drag-motion"
+
+# aaad7b70ae4a4b05bf383b46a7955ac0
+#: ../../source/drag_and_drop.txt:66
+msgid "Drag icon moves over a drop area"
+msgstr "Trascina un'icona muovendola in un'area di ricezione"
+
+# 9714404bcecd4f55a8aaa1b6cd25dbc7
+# e651552f59674cfab8f9bc71e3d25d29
+#: ../../source/drag_and_drop.txt:66 ../../source/drag_and_drop.txt:68
+msgid "Allow only certain areas to be dropped onto"
+msgstr "Si consente solo ad alcune aree di ricevere"
+
+# 78ba06c8175d4b3dbe35be97f2b8e8e4
+#: ../../source/drag_and_drop.txt:68
+msgid "drag-drop"
+msgstr "drag-drop"
+
+# e7706e0210384f498da77cf0855419b1
+#: ../../source/drag_and_drop.txt:68
+msgid "Icon is dropped onto a drag area"
+msgstr "L'icona viene fatto cadere in una zona di trascinamento"
+
+# 3cd39c106d4a485dad7f38326fa89cbe
+#: ../../source/drag_and_drop.txt:70
+msgid "drag-data-received"
+msgstr "drag-data-received"
+
+# 1862ed16967343459ab2fb5be5b0a87e
+#: ../../source/drag_and_drop.txt:70
+msgid "When drag data is received by the destination"
+msgstr "Quando i dati trascinati sono giunti a destinazione"
+
+# ab0b20518bf1417bb8eb9d9e1cd4a995
+#: ../../source/drag_and_drop.txt:74
+msgid "Example"
+msgstr "Esempio"
+
+# 2dd99d8e52dd41ceadc788fd82e5bd22
+#~ msgid "Drag and Drop Methods and Objects"
+#~ msgstr "Oggetti e metodi per il Drag and Drop"
+
+# 3f250ff19916476fadbb09c6dd075735
+#~ msgid "Sets the widget to be a drag source."
+#~ msgstr "Imposta il widget per essere una sorgente di trascinamento."
+
+# b809fb2db2cb42ebb39927f48ce60b13
+#~ msgid ""
+#~ "*start_button_mask* are a combination of :attr:`Gdk.ModifierType` masks "
+#~ "which sets which buttons must be pressed for a drag to occur. *targets* "
+#~ "is a list of :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` which describe "
+#~ "the data to be passed between source and destination. *actions* are a "
+#~ "combination :attr:`Gdk.DragAction` masks to show possible drag actions."
+#~ msgstr ""
+#~ "*start_button_mask* sono una combinazione di maschere :attr:`Gdk."
+#~ "ModifierType` le quali indicano quali tasti devono essere premuti "
+#~ "affinché avvenga un trascinamento. *targets* è una lista di <Gtk."
+#~ "TargetEntry> della classe :class:`Gtk.TargetEntry che descrivono i dati "
+#~ "da passare tra sorgente e destinazione. *actions* sono una combinazione "
+#~ "di maschere :attr:`Gdk.DragAction` per mostrare possibili azioni di "
+#~ "trascinamento."
+
+# e8358cb62e894f4c99b733a303868c8c
+#~ msgid "Sets the widget to be a drag destination."
+#~ msgstr "Imposta il widget per essere una destinazione di trascinamento."
+
+# db9b48ffeb724abe98bc8b4d03622f8f
+#~ msgid ""
+#~ "*flags* are a combination of :attr:`Gtk.DestDefaults` masks which "
+#~ "configures the processes which occur on a drag site. *targets* is a list "
+#~ "of :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` which describe the data "
+#~ "to be passed between source and destination. *actions* are a combination :"
+#~ "attr:`Gdk.DragAction` masks to show possible drag actions."
+#~ msgstr ""
+#~ "*flags* sono una combinazione di maschere :attr:`Gtk.DestDefaults` che "
+#~ "configurano i processi che si verificano in una destinazione di "
+#~ "trascinamento. *targets* è un elenco di <Gtk.TargetEntry> della classe :"
+#~ "class:`Gtk.TargetEntry` che descrivono i dati da passare tra sorgente e "
+#~ "destinazione. *actions* sono una combinazione di maschere :attr:`Gdk."
+#~ "DragAction` per mostrare possibili azioni di trascinamento."
+
+# 318ffdc5f32d4291a227a10e80ecc8ab
+#~ msgid ""
+#~ "Add a :class:`Gtk.TargetEntry` to the drag source/destination which "
+#~ "contains a piece of text."
+#~ msgstr ""
+#~ "Aggiunge un :class:`Gtk.TargetEntry` alla sorgente di trascinamento e "
+#~ "destinazione contenente una porzione di testo."
+
+# a5dad67948db41f99007f66708a58482
+#~ msgid ""
+#~ "Add a :class:`Gtk.TargetEntry` to the drag source/destination which "
+#~ "contains a :class:`GdkPixbuf.Pixbuf`."
+#~ msgstr ""
+#~ "Aggiunge un :class:`Gtk.TargetEntry` alla sorgente di trascinamento e "
+#~ "destinazione contentente un :class:`GdkPixbuf.Pixbuf`."
+
+# 1588279020a147338319d5d13abf0da0
+#~ msgid ""
+#~ "Add a :class:`Gtk.TargetEntry` to the drag source/destination which "
+#~ "contains a list of URIs."
+#~ msgstr ""
+#~ "Aggiunge un :class:`Gtk.TargetEntry` alla sorgente di trascinamento e "
+#~ "destinazione contenente un elenco di URI."
+
+# c7ac2577f9ab4bc9992cc261eb5afebb
+#~ msgid "Creates a new target entry."
+#~ msgstr "Crea una nuova destinazione."
+
+# ffa7549c9777463cbdc62eb76c03ba14
+#~ msgid ""
+#~ "*target* is a string describing the type of data the target entry "
+#~ "describes."
+#~ msgstr ""
+#~ "*target* è una stringa che descrive il tipo di dati che la voce di "
+#~ "destinazione descrive."
+
+# 27eceeced3a34c0db81cf25992884a2a
+#~ msgid ""
+#~ "*flags* controls under which conditions will the data be transferred in a "
+#~ "drag and drop and is a combination of the :attr:`Gtk.TargetFlags` values:"
+#~ msgstr ""
+#~ "*flags* controlla in quali condizioni i dati saranno trasferiti in un "
+#~ "drag and drop ed è una combinazione di valori :attr:`Gtk.TargetFlags`:"
+
+# b762c9177c8a433bbb04c8024457599f
+#~ msgid ""
+#~ ":attr:`Gtk.TargetFlags.SAME_APP` - Only transferred in the same "
+#~ "application"
+#~ msgstr ""
+#~ ":attr:`Gtk.TargetFlags.SAME_APP` - Trasferito unicamente nella medesima "
+#~ "applicazione"
+
+# aeb96dc28f1a4ae3be0f9373a0a5fd36
+#~ msgid ""
+#~ ":attr:`Gtk.TargetFlags.SAME_WIDGET` - Only transferred within the same "
+#~ "widget"
+#~ msgstr ""
+#~ ":attr:`Gtk.TargetFlags.SAME_WIDGET` - Trasferito unicamente all'interno "
+#~ "dello stesso widget"
+
+# e7f3d2219558489782ffac1f5167e380
+#~ msgid ""
+#~ ":attr:`Gtk.TargetFlags.OTHER_APP` - Only transferred in a different "
+#~ "application"
+#~ msgstr ""
+#~ ":attr:`Gtk.TargetFlags.OTHER_APP` - Trasferito unicamente in un'altra "
+#~ "applicazione"
+
+# 0b0bb3099301431bbc8c718ba6d05ebe
+#~ msgid ""
+#~ ":attr:`Gtk.TargetFlags.OTHER_WIDGET` - Only transferred within a "
+#~ "different widget"
+#~ msgstr ""
+#~ ":attr:`Gtk.TargetFlags.OTHER_WIDGET` - Trasferito unicamente all'interno "
+#~ "di un widget diverso"
+
+# 903629d01d9b4e67a01f798368645a97
+#~ msgid ""
+#~ "*info* is an ID which the application can use to determine between "
+#~ "different pieces of data contained in a drag and drop operation."
+#~ msgstr ""
+#~ "*info* è un ID che l'applicazione può utilizzare per determinare tra "
+#~ "diversi parti di dati contenuti in una operazione di drag and drop."
+
+# 10f2e566cc6c4474b05b3c9aee185b97
+#~ msgid "Returns the contents of the text contained in selection data"
+#~ msgstr "Restituisce i contenuti del testo nei dati selezionati"
+
+# 3c244011c192487ea296d34f3f8455c0
+#~ msgid "Sets the contents of the text contained in selection data to *text*"
+#~ msgstr ""
+#~ "Imposta i contenuti del testo contenuti nei dati selezionati a *text*"
+
+# 5e9db5f70e5a47dd8a62c8b16471c9f9
+#~ msgid "Returns the pixbuf contained in selection data"
+#~ msgstr "Restituisce il pixbuf contenuto nei dati selezionati"
+
+# 30b45a431248419eb26f8c1823ae3895
+#~ msgid "Sets the pixbuf contained in selection data to *pixbuf*"
+#~ msgstr "Imposta il pixbuf contenuto dai dati selezionati a *pixbuf*"
+
+# f02b62c1be824375be8719ca95dc31be
+#~ msgid "drag-data-end"
+#~ msgstr "drag-data-end"

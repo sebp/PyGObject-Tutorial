@@ -1,0 +1,242 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: 2017-01-16 14:02+0100\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# f7e4365740e24cbcb20e04b1b0cd2b9b
+#: ../../source/label.txt:2
+msgid "Label"
+msgstr "Etichetta"
+
+# e8c4aa3a51ea4906963046de1c257996
+#: ../../source/label.txt:4
+msgid ""
+"Labels are the main method of placing non-editable text in windows, for "
+"instance to place a title next to a :class:`Gtk.Entry` widget. You can "
+"specify the text in the constructor, or later with the :meth:`Gtk.Label."
+"set_text` or :meth:`Gtk.Label.set_markup` methods."
+msgstr ""
+"Le etichette sono il metodo principale per collocare testo non modificabile "
+"nelle finestre, ad esempio per inserire un titolo accanto a un widget :class:"
+"`Gtk.Entry`. È possibile specificare il testo nel costruttore, o "
+"successivamente con il metodo :meth:`Gtk.Label.set_text` o :meth:`Gtk.Label."
+"set_markup`."
+
+# 3f49dc82cfa44fecb9b45cd7ffc8bd9c
+#: ../../source/label.txt:9
+msgid ""
+"The width of the label will be adjusted automatically. You can produce multi-"
+"line labels by putting line breaks (\"\\\\n\") in the label string."
+msgstr ""
+"La larghezza dell'etichetta viene regolata automaticamente. È possibile "
+"produrre etichette su più linee mettendo interruzioni di riga (\"\\\\n\") "
+"nella stringa dell'etichetta."
+
+# e8ba196d2de345e695353bae17a350eb
+#: ../../source/label.txt:12
+msgid ""
+"Labels can be made selectable with :meth:`Gtk.Label.set_selectable`. "
+"Selectable labels allow the user to copy the label contents to the "
+"clipboard. Only labels that contain useful-to-copy information — such as "
+"error messages — should be made selectable."
+msgstr ""
+"Le etichette possono essere selezionabili con :meth:`Gtk.Label."
+"set_selectable`. Le etichette selezionabili permettono all'utente di copiare "
+"il contenuto negli appunti. Solo quelle che contengono informazioni utili da "
+"copiare - i messaggi di errore -dovrebbero essere selezionabili."
+
+# e7320b1c825444e18854d66afde2a0b0
+#: ../../source/label.txt:17
+msgid ""
+"The label text can be justified using the :meth:`Gtk.Label.set_justify` "
+"method. The widget is also capable of word-wrapping, which can be activated "
+"with :meth:`Gtk.Label.set_line_wrap`."
+msgstr ""
+"Il testo dell'etichetta può essere giustificato con il metodo :meth:`Gtk."
+"Label.set_justify`. Il widget è anche in grado di impaginare il testo, "
+"attivando :meth:`Gtk.Label.set_line_wrap`."
+
+# 369dd877f81e4cb7b2cf4ae2e700c75c
+#: ../../source/label.txt:21
+msgid ""
+":class:`Gtk.Label` support some simple formatting, for instance allowing you "
+"to make some text bold, colored, or larger. You can do this by providing a "
+"string to :meth:`Gtk.Label.set_markup`, using the Pango Markup syntax "
+"[#pango]_. For instance, ``<b>bold text</b> and <s>strikethrough text</s>``. "
+"In addition, :class:`Gtk.Label` supports clickable hyperlinks. The markup "
+"for links is borrowed from HTML, using the a with href and title attributes. "
+"GTK+ renders links similar to the way they appear in web browsers, with "
+"colored, underlined text. The title attribute is displayed as a tooltip on "
+"the link."
+msgstr ""
+":class:`Gtk.Label` supporta qualche semplice formattazione, per esempio, "
+"rendere il testo in grassetto, colorato, o più grande. È possibile farlo "
+"fornendo una stringa a :meth:`Gtk.Label.set_markup`, utilizzando la sintassi "
+"dei marcatori di Pango [#pango]_. Per esempio, ``<b>grassetto</ b> e "
+"<s>testo barrato</ s>``. Inoltre, :class:`Gtk.Label` supporta i collegamenti "
+"ipertestuali cliccabili. Il marcatore per i collegamenti è preso in prestito "
+"dal linguaggio HTML, utilizzando la \"a\" con gli attributi \"href\" e "
+"\"title\". GTK+ rende i collegamenti simili al modo in cui appaiono nel "
+"browser web, con colore e testo sottolineato. L'attributo del titolo viene "
+"visualizzato come suggerimento sul collegamento."
+
+# db8272b9842242d69534bb098111643f
+#: ../../source/label.txt:37
+msgid ""
+"Labels may contain *mnemonics*. Mnemonics are underlined characters in the "
+"label, used for keyboard navigation. Mnemonics are created by providing a "
+"string with an underscore before the mnemonic character, such as \"_File\", "
+"to the functions :meth:`Gtk.Label.new_with_mnemonic` or :meth:`Gtk.Label."
+"set_text_with_mnemonic`. Mnemonics automatically activate any activatable "
+"widget the label is inside, such as a :class:`Gtk.Button`; if the label is "
+"not inside the mnemonic's target widget, you have to tell the label about "
+"the target using :meth:`Gtk.Label.set_mnemonic_widget`."
+msgstr ""
+"Le etichette possono contenere *mnemonics*. I mnemonics sono caratteri "
+"sottolineati nell'etichetta, utilizzati per la navigazione da tastiera. I "
+"mnemonics sono creati fornendo una stringa con un carattere underscore (\"_"
+"\") prima del carattere mnemonics, come ad esempio \"_File\", alle funzioni :"
+"meth:`Gtk.Label.new_with_mnemonic` o :meth:`Gtk.Label."
+"set_text_with_mnemonic`. I mnemonics avviano automaticamente qualsiasi "
+"oggetto attivabile dov'è stata collocata l'etichetta, per esempio :class:"
+"`Gtk.Button`; se l'etichetta non è all'interno del widget di destinazione "
+"del mnemonics, va indicato con :meth:`Gtk.Label.set_mnemonic_widget`."
+
+# ec1a254e1b324d7e82589e26ea19d126
+#: ../../source/label.txt:48
+msgid "Example"
+msgstr "Esempio"
+
+# 663400048fad4ef5b9d78bf45d553115
+#: ../../source/label.txt:55
+msgid ""
+"Pango Markup Syntax, http://developer.gnome.org/pango/stable/"
+"PangoMarkupFormat.html"
+msgstr ""
+"Pango Markup Syntax, http://developer.gnome.org/pango/stable/"
+"PangoMarkupFormat.html"
+
+# 836b73e3032f43e48fdc18a413110509
+#~ msgid "Label Objects"
+#~ msgstr "Oggetti Label"
+
+# 93b5d558752a43b88588ec05a23466f0
+#~ msgid ""
+#~ "Creates a new label with the given *text* inside it. If *text* is "
+#~ "omitted, an empty label is created."
+#~ msgstr ""
+#~ "Crea una nuova etichetta con il dato *text\" al suo interno. Se sono "
+#~ "omessi valori, viene creata un'etichetta vuota."
+
+# bcaaf3effb1d4d27bcabeabbdb5ca7be
+#~ msgid "Creates a new label with *text* inside it."
+#~ msgstr "Crea una nuova etichetta con del testo al suo interno."
+
+# 84e386dd8fe24f1bba75a213d27f3239
+#~ msgid ""
+#~ "If characters in *text* are preceded by an underscore, they are "
+#~ "underlined. If you need a literal underscore character in a label, use "
+#~ "'__' (two underscores). The first underlined character represents a "
+#~ "keyboard accelerator called a mnemonic. The mnemonic key can be used to "
+#~ "activate another widget, chosen automatically, or explicitly using :meth:"
+#~ "`Gtk.Label.set_mnemonic_widget`."
+#~ msgstr ""
+#~ "Se i caratteri in *text* sono preceduti da un carattere underscore (\"_"
+#~ "\") sono sottolineati. Se si necessita di una sottolineatura letterale "
+#~ "nell'etichetta, usate '__' (due underscore). Il primo carattere "
+#~ "sottolineato rappresenta un acceleratore di tastiera chiamato mnemonics. "
+#~ "La chiave mnemonics può essere utilizzata per attivare un altro widget, "
+#~ "scelto automaticamente, o in modo esplicito utilizzando :meth:`Gtk.Label."
+#~ "set_mnemonic_widget`."
+
+# eb57a91d49724f099286fbcb82c3e199
+#~ msgid ""
+#~ "If :meth:`Gtk.Label.set_mnemonic_widget` is not called, then the first "
+#~ "activatable ancestor of the :class:`Gtk.Label` will be chosen as the "
+#~ "mnemonic widget. For instance, if the label is inside a button or menu "
+#~ "item, the button or menu item will automatically become the mnemonic "
+#~ "widget and be activated by the mnemonic."
+#~ msgstr ""
+#~ "Se :meth:`Gtk.Label.set_mnemonic_widget` non viene chiamato, il primo "
+#~ "widget superiore attivabile della :class:`Gtk.Label` sarà scelto come il "
+#~ "widget mnemonics. Per esempio, se l'etichetta è all'interno di un "
+#~ "pulsante o una voce di menu, questi ultimi due diventeranno "
+#~ "automaticamente i widget mnemonics ad essere attivati."
+
+# 09f54012dd8c4a09a2598ff45badda88
+#~ msgid ""
+#~ "Sets the alignment of the lines in the text of the label relative to each "
+#~ "other. *justification* can be one of :attr:`Gtk.Justification.LEFT`, :"
+#~ "attr:`Gtk.Justification.RIGHT`, :attr:`Gtk.Justification.CENTER`, :attr:"
+#~ "`Gtk.Justification.FILL`. This method has no effect on labels containing "
+#~ "only a single line."
+#~ msgstr ""
+#~ "Imposta l'allineamento delle linee di testo nell'etichetta in base alle "
+#~ "altre. *justification* può essere :attr:`Gtk.Justification.LEFT`, :attr:"
+#~ "`Gtk.Justification.RIGHT`, :attr:`Gtk.Justification.CENTER`, :attr:`Gtk."
+#~ "Justification.FILL`. Questo metodo non ha effetto sulle etichette che "
+#~ "contengono solo una singola linea."
+
+# 7f83df46ec89435ea259f619b5d6521a
+#~ msgid ""
+#~ "If *wrap* is ``True``, lines will be broken if text exceeds the widget's "
+#~ "size. If *wrap* is ``False``, text will be cut off by the edge of the "
+#~ "widget if it exceeds the widget size."
+#~ msgstr ""
+#~ "Se *wrap* è ``True``, le linee saranno interrotte se il testo supera la "
+#~ "dimensione del widget. Se *wrap* è ``False``, il testo andrà a capo "
+#~ "quando raggiungerà la dimensione del widget."
+
+# 2d03999a750f45d190a180d83152bd05
+#~ msgid ""
+#~ "Parses *markup* which is marked up with the Pango text markup language "
+#~ "[#pango]_, setting the label's text accordingly. The markup passed must "
+#~ "be valid; for example literal <, >, & characters must be escaped as &lt; "
+#~ "&gt; and &amp."
+#~ msgstr ""
+#~ "Valuta *markup* con il linguaggio a marcatori di Pango [#pango] _, "
+#~ "impostando il testo dell'etichetta di conseguenza. I marcatori passati "
+#~ "devono essere validi; per esempio, i caratteri < > & devono essere nella "
+#~ "forma &lt; &Gt; e &amp."
+
+# 538a240b87f440169f7347a2d928c9e9
+#~ msgid ""
+#~ "If the label has been set so that it has an mnemonic key, the label can "
+#~ "be associated with a widget that is the target of the mnemonic."
+#~ msgstr ""
+#~ "Se l'etichetta è stata impostata in modo che abbia una chiave mnemonics, "
+#~ "l'etichetta può essere associata a un widget che è la destinazione del "
+#~ "mnemonics."
+
+# e7fa3823420241618d0fc0585409a7de
+#~ msgid ""
+#~ "Selectable labels allow the user to select text from the label, for copy-"
+#~ "and-paste."
+#~ msgstr ""
+#~ "Le etichette selezionabili consentono all'utente di selezionare testo "
+#~ "dall'etichetta, per la copia e incolla."
+
+# 3fe286453114411d99a70eee98d2776a
+#~ msgid ""
+#~ "Sets the text within this widget. It overwrites any text that was there "
+#~ "before."
+#~ msgstr ""
+#~ "Imposta il testo dentro il widget. Sovrascrive il contenuto esistente."
+
+# 1acbaec9184349dcad602f4d5946d0e0
+#~ msgid "See :meth:`new_with_mnemonic`."
+#~ msgstr "Vedere :meth:`new_with_mnemonic`."

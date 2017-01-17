@@ -1,0 +1,609 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: 2017-01-16 20:28+0100\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# c33e314c5589485cb99c1fd9ee5a0a2f
+#: ../../source/objects.txt:4
+msgid "Objects"
+msgstr "Gli oggetti"
+
+# c6e01f8d0a634b5eaad87f6125994cc3
+#: ../../source/objects.txt:6
+msgid ""
+"GObject is the fundamental type providing the common attributes and methods "
+"for all object types in GTK+, Pango and other libraries based on GObject. "
+"The :class:`GObject.GObject` class provides methods for object construction "
+"and destruction, property access methods, and signal support."
+msgstr ""
+"GObject è il tipo fondamentale che fornisce gli attributi e i metodi comuni "
+"per tutti i tipi di oggetto in GTK+, Pango e le altre librerie basate su "
+"GObject. La classe :class:`GObject.GObject` fornisce i metodi per la "
+"costruzione di un oggetto e la relativa distruzione, metodi di accesso alle "
+"proprietà e il supporto al segnale."
+
+# acfaea8b3da34228b790e7f7221aab70
+#: ../../source/objects.txt:11
+msgid ""
+"This section will introduce some important aspects about the GObject "
+"implementation in Python."
+msgstr ""
+"Questa sezione introdurrà alcuni aspetti importanti relativi "
+"all'implementazione di GObject in Python."
+
+# ce95a43d71224fc2be23140a71bf3268
+#: ../../source/objects.txt:15
+msgid "Inherit from GObject.GObject"
+msgstr "Ereditare da GObject.GObject"
+
+# d871b799d7da461badbee1387a1df448
+#: ../../source/objects.txt:17
+msgid ""
+"A native GObject is accessible via :class:`GObject.GObject`. It is rarely "
+"instantiated directly, we generally use inherited class. A :class:`Gtk."
+"Widget` is an inherited class of a :class:`GObject.GObject`. It may be "
+"interesting to make an inherited class to create a new widget, like a "
+"settings dialog."
+msgstr ""
+"Un GObject nativo è accessibile tramite :class:`GObject.GObject`. Viene "
+"raramente istanziato direttamente, di solito si usa una classe ereditata. :"
+"classe:`Gtk.Widget` è una classe ereditata di :class:`GObject.GObject`. Può "
+"essere interessante realizzare una classe ereditata per creare un nuovo "
+"widget, come una finestra delle impostazioni."
+
+# fbc71e67bb1e458eb08ddb9abf6792d4
+#: ../../source/objects.txt:22
+msgid ""
+"To inherit from :class:`GObject.GObject`, you must call :meth:`GObject."
+"GObject.__init__` in your constructor (if the class inherits from :class:"
+"`Gtk.Button`, it must call :func:`Gtk.Button.__init__` for instance), like "
+"in the example below:"
+msgstr ""
+"Per ereditare da un :class:`GObject.GObject`, è necessario chiamare :meth:"
+"`GObject.GObject .__ init__` nel costruttore (se la classe eredita da :class:"
+"`Gtk.Button` si deve chiamare :func:`Gtk.Button .__ init__`) ,come mostrato "
+"di seguito:"
+
+# 699a2798533340e0b1a7af5d8944f8c0
+#: ../../source/objects.txt:37
+msgid "Signals"
+msgstr "Segnali"
+
+# 755c891c03874ece880e1304019843af
+#: ../../source/objects.txt:39
+msgid ""
+"Signals connect arbitrary application-specific events with any number of "
+"listeners. For example, in GTK+, every user event (keystroke or mouse move) "
+"is received from the X server and generates a GTK+ event under the form of a "
+"signal emission on a given object instance."
+msgstr ""
+"I segnali collegano arbitrari eventi specifici per l'applicazione con un "
+"indefinito numero di ascoltatori. Per esempio, in GTK+, ogni evento generato "
+"da un utente (tasto o movimento del mouse) viene ricevuto dal server X e "
+"genera un evento GTK+ sotto forma di una emissione di segnale su una "
+"determinata istanza di oggetto."
+
+# 2a79b656408b4bba80ce0d5e57069e58
+#: ../../source/objects.txt:44
+msgid ""
+"Each signal is registered in the type system together with the type on which "
+"it can be emitted: users of the type are said to connect to the signal on a "
+"given type instance when they register a function to be invoked upon the "
+"signal emission. Users can also emit the signal by themselves or stop the "
+"emission of the signal from within one of the functions connected to the "
+"signal."
+msgstr ""
+"Ogni segnale è registrato nel sistema insieme al tipo dal quale può essere "
+"emesso: gli utenti del tipo si collegano al segnale su una determinata "
+"istanza del tipo quando registrano una funzione da richiamare con "
+"l'emissione del segnale. Gli utenti possono anche emettere il segnale da "
+"soli o interrompere l'emissione del segnale all'interno di una delle "
+"funzioni connesse allo stesso."
+
+# 2a7230c27527480f9fe15a7e6f9d8494
+#: ../../source/objects.txt:51
+msgid "Receive signals"
+msgstr "Ricevere segnali"
+
+# 0e83856aff9f46c296c7fa817ff7f5e6
+#: ../../source/objects.txt:53
+msgid "See :ref:`signals`"
+msgstr "Vedi :ref:`segnali`"
+
+# ccea105dc73b4f0eaaeb13dc2d107e70
+#: ../../source/objects.txt:56
+msgid "Create new signals"
+msgstr "Creare nuovi segnali"
+
+# 93b183efe5dc45c8888269b74ada9aca
+#: ../../source/objects.txt:58
+msgid ""
+"New signals can be created by adding them to :attr:`GObject.GObject."
+"__gsignals__`, a dictionary:"
+msgstr ""
+"Nuovi segnali possono essere creati aggiungendoli a :attr:`GObject.GObject ."
+"__ gsignals__`, un dizionario:"
+
+# d101f4599add4b52a7e45fb5080bdff0
+#: ../../source/objects.txt:61
+msgid ""
+"When a new signal is created, a method handler can also be defined, it will "
+"be called each time the signal is emitted. It is called do_signal_name."
+msgstr ""
+"Quando un nuovo segnale è creato - anche un gestore di metodo può essere "
+"definito - verrà chiamato ogni volta che il segnale sarà emesso. Si chiamerà "
+"do_signal_name."
+
+# e7766028e9dd4980afe758bd09055dcb
+#: ../../source/objects.txt:75
+msgid ""
+":const:`GObject.SIGNAL_RUN_FIRST` indicates that this signal will invoke the "
+"object method handler (:meth:`do_my_signal` here) in the first emission "
+"stage. Alternatives are :const:`GObject.SIGNAL_RUN_LAST` (the method handler "
+"will be invoked in the third emission stage) and :const:`GObject."
+"SIGNAL_RUN_CLEANUP` (invoke the method handler in the last emission stage)."
+msgstr ""
+":const:`GObject.SIGNAL_RUN_FIRST` indica un segnale che invocherà il gestore "
+"del metodo per l'oggetto (:meth:`do_my_signal` qui) nella prima fase di "
+"emissione. Le alternative sono :const:`GObject.SIGNAL_RUN_LAST` (il gestore "
+"del metodo verrà richiamato nella terza fase di emissione) e :const:`GObject."
+"SIGNAL_RUN_CLEANUP` (richiamare il gestore del metodo nella fase ultima di "
+"emissione)."
+
+# 4d01d2d6604a40e6bdc9dbeea1c030d8
+#: ../../source/objects.txt:81
+msgid ""
+"The second part, ``None``, indicates the return type of the signal, usually "
+"``None``."
+msgstr ""
+"La seconda parte, ``None``, indica il tipo restituito dal segnale, di solito "
+"``None``."
+
+# fac872a2e57548b08b6188148bd65159
+#: ../../source/objects.txt:84
+msgid ""
+"``(int,)`` indicates the signal arguments, here, the signal will only take "
+"one argument, whose type is int. This argument type list must end with a "
+"comma."
+msgstr ""
+"``(int,)`` indica gli argomenti del segnale, qui, il segnale prenderà solo "
+"un argomento, il cui tipo è int. Questo elenco di tipi relativi agli "
+"argomenti deve terminare con una virgola."
+
+# 891e08857e73406795d89d9635709b41
+#: ../../source/objects.txt:88
+msgid "Signals can be emitted using :meth:`GObject.GObject.emit`:"
+msgstr "I segnali possono essere emessi usando :meth:`GObject.GObject.emit`:"
+
+# 8d49e5bef3d849f797e30f8571be8484
+#: ../../source/objects.txt:96
+msgid "Properties"
+msgstr "Proprietà"
+
+# 79fc74093c0c486cbd58542a98b5b924
+#: ../../source/objects.txt:97
+msgid ""
+"One of GObject's nice features is its generic get/set mechanism for object "
+"properties. Each class inherited from :class:`GObject.GObject` can define "
+"new properties. Each property has a type which never changes (e.g. str, "
+"float, int...). For instance, they are used for :class:`Gtk.Button` where "
+"there is a \"label\" property which contains the text of the button."
+msgstr ""
+"Una delle caratteristiche interessanti di GObject è il suo meccanismo di get/"
+"set per la proprietà dell'oggetto. Ogni classe ereditata da :class:`GObject."
+"GObject` può definire nuove proprietà. Ogni proprietà ha un tipo che non "
+"cambierà mai (es. str, float, int ...). Per esempio, sono usate con :class:"
+"`Gtk.Button` dove c'è una proprietà \"label\" che contiene il testo del "
+"pulsante."
+
+# 3868bb9d3f9c4c5dbd9c1388e9632b23
+#: ../../source/objects.txt:104
+msgid "Use existing properties"
+msgstr "Utilizzare le proprietà esistenti"
+
+# 74a085bdbe3d49ac9f5ffb348cbe4363
+#: ../../source/objects.txt:106
+msgid ""
+"The class :class:`GObject.GObject` provides several useful functions to "
+"manage existing properties, :func:`GObject.GObject.get_property` and :func:"
+"`GObject.GObject.set_property`."
+msgstr ""
+"La classe :class:`GObject.GObject` fornisce diverse funzioni utili per "
+"gestire le proprietà esistenti, :func:`GObject.GObject.get_property` e :func:"
+"`GObject.GObject.set_property`."
+
+# 5c369137a9a14ac4b27069bad039945e
+#: ../../source/objects.txt:109
+msgid ""
+"Some properties also have functions dedicated to them, called getter and "
+"setter. For the property \"label\" of a button, there are two functions to "
+"get and set them, :func:`Gtk.Button.get_label` and :func:`Gtk.Button."
+"set_label`."
+msgstr ""
+"Alcune proprietà hanno anche funzioni dedicate a loro, chiamati getter e "
+"setter. Per la proprietà \"label\" di un pulsante, ci sono due funzioni per "
+"ottenere e impostare, :func:`Gtk.Button.get_label` e :func:`Gtk.Button."
+"set_label`."
+
+# 76d61761fae34eb3abddd999d7544161
+#: ../../source/objects.txt:114
+msgid "Create new properties"
+msgstr "Crea nuove proprietà"
+
+# 37782769ad0348238d8f1f6b03b82e76
+#: ../../source/objects.txt:116
+msgid ""
+"A property is defined with a name and a type. Even if Python itself is "
+"dynamically typed, you can't change the type of a property once it is "
+"defined. A property can be created using :class:`GObject.Property`."
+msgstr ""
+"Una proprietà è definita con un nome e un tipo. Anche se lo stesso Python è "
+"tipizzato dinamicamente, non è possibile modificare il tipo di una proprietà "
+"una volta definito. Una proprietà può essere creata utilizzando :func:"
+"`GObject.property`."
+
+# 1f65a07ba001442895588aec464f46f9
+#: ../../source/objects.txt:131
+msgid ""
+"Properties can also be read-only, if you want some properties to be readable "
+"but not writable. To do so, you can add some flags to the property "
+"definition, to control read/write access. Flags are :const:`GObject."
+"PARAM_READABLE` (only read access for external code), :const:`GObject."
+"PARAM_WRITABLE` (only write access), :const:`GObject.PARAM_READWRITE` "
+"(public):"
+msgstr ""
+"Le proprietà possono anche essere di sola lettura, se si desidera che alcuni "
+"oggetti siano leggibili ma non modificabili. Per fare ciò, è possibile "
+"aggiungere alcuni flag alla definizione di proprietà, per controllare "
+"l'accesso in lettura / scrittura. I flag sono :const:`GObject."
+"PARAM_READABLE` (accesso in sola lettura per il codice esterno), :const:"
+"`GObject.PARAM_WRITABLE` (solo accesso in scrittura), :const:`GObject."
+"PARAM_READWRITE` (pubblico):"
+
+# 1c3cc41512cf47f7872b8caa037b424a
+#: ../../source/objects.txt:146
+msgid ""
+"You can also define new read-only properties with a new method decorated "
+"with :class:`GObject.Property`:"
+msgstr ""
+"È inoltre possibile definire nuove proprietà in sola lettura con un nuovo "
+"metodo e :func:`GObject.property`:"
+
+# 965229a40097422f99e17a9685b4de5a
+#: ../../source/objects.txt:162
+msgid "You can get this property using:"
+msgstr "È possibile ottenere questo struttura tramite:"
+
+#: ../../source/objects.txt:170
+msgid ""
+"The API of :class:`GObject.Property` is similar to the builtin :py:func:"
+"`property`. You can create property setter in a way similar to Python "
+"property:"
+msgstr ""
+"L'API di :class:`GObject.Property` è simile alla proprietà interna :py:func:"
+"`. È possibile creare un setter di proprietà in un modo simile a Python:"
+
+# a0cf1fba2b6f4b88a684256ec031f5f9
+#: ../../source/objects.txt:191
+msgid ""
+"There is also a way to define minimum and maximum values for numbers, using "
+"a more verbose form:"
+msgstr ""
+"Vi è anche un modo per definire i valori minimi e massimi per i numeri, "
+"utilizzando una forma più dettagliata:"
+
+# 06424e87e44940a7ae7d70dab3575e74
+#: ../../source/objects.txt:227
+msgid ""
+"Properties must be defined in :attr:`GObject.GObject.__gproperties__`, a "
+"dictionary, and handled in do_get_property and do_set_property."
+msgstr ""
+"Le proprietà devono essere definite in :attr:`GObject.GObject .__ "
+"gproperties__`, un dizionario gestito in do_get_property e do_set_property."
+
+# ffad6a737582450abd7cda05ff9ab1c6
+#: ../../source/objects.txt:231
+msgid "Watch properties"
+msgstr "Proprietà Watch"
+
+# ea1d7e813fce4057a2d28bed9390b9a4
+#: ../../source/objects.txt:233
+msgid ""
+"When a property is modified, a signal is emitted, whose name is \"notify::"
+"property-name\":"
+msgstr ""
+"Quando una proprietà viene modificata, si emette un segnale il cui nome sarà "
+"\"notify::property_name\":"
+
+#: ../../source/objects.txt:248
+msgid ""
+"Note that you have to use the canonical property name when connecting to the "
+"notify signals, as explained in :func:`GObject.Object.signals.notify`. For "
+"instance, for a Python property `foo_bar_baz` you would connect to the "
+"signal `notify::foo-bar-baz` using"
+msgstr ""
+"Si noti che è necessario utilizzare il nome della proprietà durante il "
+"collegamento ai segnali di notifica, come spiegato in :func:`GObject.Object."
+"signals.notify`. Per esempio, per una proprietà Python `foo_bar_baz` ci si "
+"può collegare al segnale `notify::foo-bar-baz` usando"
+
+# 0868cbc612cc41379124b693904c11ea
+#: ../../source/objects.txt:263
+msgid "API"
+msgstr "API"
+
+# ac20e76df1314c75a7281989f62e4566
+#: ../../source/objects.txt:269
+msgid "Retrieves a property value."
+msgstr "Estrae un valore dalla proprietà."
+
+# d1513ef24a9142b88e13837e03de4793
+#: ../../source/objects.txt:273
+msgid "Set property *property_name* to *value*."
+msgstr "Imposta *property_name* a *value*."
+
+# 21f54462dbff4fe19d1d7dbfdcc3edfa
+#: ../../source/objects.txt:277
+msgid ""
+"Emit signal *signal_name*. Signal arguments must follow, e.g. if your signal "
+"is of type ``(int,)``, it must be emitted with::"
+msgstr ""
+"Emette il segnale *signal_name*. Gli argomenti del segnale devono seguire, "
+"es. se il segnale è di tipo ``(int,)``, dev'essere emesso con::"
+
+# e5ec3cdba7004fa593ba458a9dd45049
+#: ../../source/objects.txt:284
+msgid ""
+"This method freezes all the \"notify::\" signals (which are emitted when any "
+"property is changed) until the :meth:`thaw_notify` method is called."
+msgstr ""
+"Questo metodo blocca tutti i segnali \"notify::\" segnali (che vengono "
+"emessi quando ogni proprietà viene modificata) finché il metodo :meth:"
+"`thaw_notify` viene chiamato."
+
+#: ../../source/objects.txt:288
+msgid ""
+"It recommended to use the *with* statement when calling :meth:"
+"`freeze_notify`, that way it is ensured that :meth:`thaw_notify` is called "
+"implicitly at the end of the block::"
+msgstr ""
+"Si consiglia di utilizzare lo statement *with* quando si chiama :meth:"
+"`freeze_notify`, in questo modo si garantisce che :meth:`thaw_notify` è "
+"chiamato implicitamente alla fine del blocco::"
+
+# 2ec9f637fbf74be98a9c09e48b6b18ce
+#: ../../source/objects.txt:298
+msgid ""
+"Thaw all the \"notify::\" signals which were thawed by :meth:`freeze_notify`."
+msgstr ""
+"Sblocca tutti i segnali \"notify::\" che erano stati bloccati da :meth:"
+"`freeze_notify`."
+
+#: ../../source/objects.txt:300
+msgid ""
+"It is recommended to not call :meth:`thaw_notify` explicitly but use :meth:"
+"`freeze_notify` together with the *with* statement."
+msgstr ""
+"Si raccomanda di non chiamare :meth:`thaw_notify` esplicitamente ma usare :"
+"meth:`freeze_notify` insieme allo statement *with*."
+
+#: ../../source/objects.txt:305
+msgid ""
+"Blocks a handler of an instance so it will not be called during any signal "
+"emissions unless :meth:`handler_unblock` is called for that *handler_id*. "
+"Thus \"blocking\" a signal handler means to temporarily deactivate it, a "
+"signal handler has to be unblocked exactly the same amount of times it has "
+"been blocked before to become active again."
+msgstr ""
+"Bloccare un gestore di una istanza così non sarà chiamato durante qualsiasi "
+"emissione di segnale finché :meth:`handler_unblock` è chiamato per quel "
+"*handler_id*. Così \"bloccando\" un gestore di segnale significa "
+"temporaneamente disattivarlo, un gestore di segnale deve essere sbloccato "
+"esattamente tante volte quanti sono i blocchi per riattivarlo nuovamente."
+
+#: ../../source/objects.txt:311
+msgid ""
+"It is recommended to use :meth:`handler_block` in conjunction with the "
+"*with* statement which will call :meth:`handler_unblock` implicitly at the "
+"end of the block::"
+msgstr ""
+"Si raccomanda di usare :meth:`handler_block` in congiunzione con lo "
+"statement *with* che chiamerà :meth:`handler_unblock` implicitamente alla "
+"fine del blocco::"
+
+#: ../../source/objects.txt:321
+msgid ""
+"Undoes the effect of :meth:`handler_block`. A blocked handler is skipped "
+"during signal emissions and will not be invoked until it has been unblocked "
+"exactly the amount of times it has been blocked before."
+msgstr ""
+"Annulla l'effetto di :meth:`handler_block`. Un gestore bloccato viene "
+"saltato durante le emissioni di segnale e non verrà richiamato fino a quando "
+"non è stato sbloccato esattamente quante volte è stato bloccato prima."
+
+#: ../../source/objects.txt:325
+msgid ""
+"It is recommended to not call :meth:`handler_unblock` explicitly but use :"
+"meth:`handler_block` together with the *with* statement."
+msgstr ""
+"Si raccomanda di non chiamare :meth:`handler_unblock` esplicitamente ma "
+"usare :meth:`handler_block` insieme allo statement *with*."
+
+# 3f72e522977943d086539d861daf3e1f
+#: ../../source/objects.txt:330
+msgid "A dictionary where inherited class can define new signals."
+msgstr "Un dizionario dove la classe ereditata può definire nuovi segnali."
+
+# 91b17aa521f345c6ae424c3380edc5e2
+#: ../../source/objects.txt:332
+msgid ""
+"Each element in the dictionary is a new signal. The key is the signal name. "
+"The value is a tuple, with the form::"
+msgstr ""
+"Ogni elemento nel dizionario è un nuovo segnale. La chiave è il nome del "
+"segnale. Il valore è una tupla con la forma ::"
+
+# 0da90038663c4054b0ab4069f29e102a
+#: ../../source/objects.txt:337
+msgid ""
+":const:`GObject.SIGNAL_RUN_FIRST` can be replaced with :const:`GObject."
+"SIGNAL_RUN_LAST` or :const:`GObject.SIGNAL_RUN_CLEANUP`. ``None`` is the "
+"return type of the signal. ``(int,)`` is the list of the parameters of the "
+"signal, it must end with a comma."
+msgstr ""
+":const:`GObject.SIGNAL_RUN_FIRST` può essere sostituito con :const:`GObject."
+"SIGNAL_RUN_LAST` o :const:`GObject.SIGNAL_RUN_CLEANUP`. ``None`` è il tipo "
+"restituito dal segnale. ``(int,) `` è la lista dei parametri del segnale e "
+"deve terminare con una virgola."
+
+# 1b2421552b474926a922337e052fd6b6
+#: ../../source/objects.txt:346
+msgid ""
+"The :attr:`__gproperties__` dictionary is a class property where you define "
+"the properties of your object. This is not the recommend way to define new "
+"properties, the method written above is much less verbose. The benefits of "
+"this method is that a property can be defined with more settings, like the "
+"minimum or the maximum for numbers."
+msgstr ""
+"Il dizionario :attr:`__gproperties__` è una proprietà di classe in cui si "
+"definiscono le proprietà del vostro oggetto. Questo non è il modo "
+"raccomandato per definire nuove proprietà, il metodo scritto sopra è molto "
+"meno dettagliato. I vantaggi di quest'ultimo sono che una proprietà può "
+"essere definita con più impostazioni, come il minimo o il massimo per i "
+"numeri."
+
+# 327e328112ff43faaf652e562ce88794
+#: ../../source/objects.txt:352
+msgid "The key is the name of the property"
+msgstr "La chiave è il nome della proprietà"
+
+# 2365322375fb4ce09a1a51293dbb9031
+#: ../../source/objects.txt:354
+msgid ""
+"The value is a tuple which describe the property. The number of elements of "
+"this tuple depends on its first element but the tuple will always contain at "
+"least the following items:"
+msgstr ""
+"Il valore è una tupla che descrive la proprietà. Il numero di elementi di "
+"questa tupla dipende dal suo primo elemento, ma la tupla conterrà sempre "
+"almeno i seguenti elementi:"
+
+# 204c582c83c447af85e90f18cbccdc7f
+#: ../../source/objects.txt:358
+msgid "The first element is the property's type (e.g. ``int``, ``float``...)."
+msgstr "Il primo elemento è il tipo di proprietà (es. ``int``, ``float``...)."
+
+# 30ec7eeb1b494225acc3d502d932a8ca
+#: ../../source/objects.txt:360
+msgid ""
+"The second element is the property's nick name, which is a string with a "
+"short description of the property. This is generally used by programs with "
+"strong introspection capabilities, like the graphical user interface builder "
+"`Glade`_."
+msgstr ""
+"Il secondo elemento è il nome nick della proprietà, che è una stringa con "
+"una breve descrizione della stessa. Questo è generalmente utilizzato da "
+"programmi con forti capacità di introspezione, come il costruttore di "
+"interfacce grafiche `Glade`_."
+
+# 5d29f0bf6fc64e1890828fa67daf9152
+#: ../../source/objects.txt:365
+msgid ""
+"The third one is the property's description or blurb, which is another "
+"string with a longer description of the property. Also used by `Glade`_ and "
+"similar programs."
+msgstr ""
+"Il terzo è la descrizione della proprietà o blurb, che è un'altra stringa "
+"con una descrizione più lunga della proprietà. Anch'esso usato da `Glade`_ e "
+"programmi simili."
+
+# 4df0d0df15754a12aaded79253e8d7d7
+#: ../../source/objects.txt:369
+msgid ""
+"The last one (which is not necessarily the forth one as we will see later) "
+"is the property's flags: :const:`GObject.PARAM_READABLE`, :const:`GObject."
+"PARAM_WRITABLE`, :const:`GObject.PARAM_READWRITE`."
+msgstr ""
+"L'ultimo (che non è necessariamente il quarto come vedremo in seguito) è il "
+"flag della proprietà: :const:`GObject.PARAM_READABLE`, :const:`GObject."
+"PARAM_WRITABLE`, :const:`GObject.PARAM_READWRITE`."
+
+# 669ac8ec3bb94cfd88f306ed31cdc266
+#: ../../source/objects.txt:373
+msgid ""
+"The absolute length of the tuple depends on the property type (the first "
+"element of the tuple). Thus we have the following situations:"
+msgstr ""
+"La lunghezza assoluta della tupla dipende dal tipo di proprietà (il primo "
+"elemento della tupla). Così abbiamo le seguenti situazioni:"
+
+# fe4f215a3e4c4b0f9daadf929ced3464
+#: ../../source/objects.txt:376
+msgid ""
+"If the type is ``bool`` or ``str``, the forth element is the default value "
+"of the property."
+msgstr ""
+"Se il tipo è ``bool`` o ``str``, il quarto elemento è il valore predefinito "
+"della proprietà."
+
+# eb4bf97c53c7483ea2098ae5b2ec838b
+#: ../../source/objects.txt:379
+msgid ""
+"If the type is ``int`` or ``float``, the forth element is the minimum "
+"accepted value, the fifth element is the maximum accepted value and the "
+"sixth element is the default value."
+msgstr ""
+"Se il tipo è ``int`` o ``float``, il quarto elemento è il valore minimo "
+"accettato, il quinto elemento è il valore massimo accettato e il sesto "
+"elemento è il valore predefinito."
+
+# 4ccbe177c7d746bfabab3a5280634d72
+#: ../../source/objects.txt:383
+msgid "If the type is not one of these, there is no extra element."
+msgstr "Se il tipo non è uno di questi, non c'è alcun elemento aggiuntivo."
+
+# 50e1ae84ecfd4619b3ce19db0a9d7916
+#: ../../source/objects.txt:388
+msgid "Invoke the object method handler in the first emission stage."
+msgstr ""
+"Richiama il gestore del metodo per l'oggetto nella prima fase di emissione."
+
+# 4c799a13f01940fa8e97367fde3abb07
+#: ../../source/objects.txt:392
+msgid "Invoke the object method handler in the third emission stage."
+msgstr ""
+"Richiama il gestore del metodo per l'oggetto nella terza fase di emissione."
+
+# cf5cbf25387448319a90acb1f9523de3
+#: ../../source/objects.txt:396
+msgid "Invoke the object method handler in the last emission stage."
+msgstr "Richiama il gestore del metodo oggetto nell'ultima fase di emissione."
+
+# aa7d38dcdd1844ad93dc0dbafb9d3088
+#: ../../source/objects.txt:400
+msgid "The property is readable."
+msgstr "La proprietà è leggibile."
+
+# e6068e485b5042c8822972db935127fa
+#: ../../source/objects.txt:404
+msgid "The property is writable."
+msgstr "La proprietà è modificabile."
+
+# 99af7d5acc51492fa4ec0df041bda9b3
+#: ../../source/objects.txt:408
+msgid "The property is readable and writable."
+msgstr "La proprietà è leggibile e modificabile."
