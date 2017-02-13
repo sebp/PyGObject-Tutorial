@@ -3,7 +3,7 @@
 Application
 ===========
 
-:class:`Gtk.Application` encompeses many repetitive tasks that a modern
+:class:`Gtk.Application` encompasses many repetitive tasks that a modern
 application needs such as handling multiple instances, D-Bus activation,
 opening files, command line parsing, startup/shutdown, menu management,
 window management, and more.
