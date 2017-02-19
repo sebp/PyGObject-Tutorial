@@ -22,9 +22,9 @@ We will now explain each line of the example.
 In the beginning, we have to import the Gtk module to be able to
 access GTK+'s classes and functions.
 Since a user's system can have multiple versions of GTK+ installed at the same,
-we want to make sure that we when we import Gtk that it referrs to GTK+ 3
+we want to make sure that when we import Gtk that it refers to GTK+ 3
 and not any other version of the library, which is the purpose
-of statement ``gi.require_version('Gtk', '3.0')``.
+of the statement ``gi.require_version('Gtk', '3.0')``.
 
 The next line creates an empty window.
 
