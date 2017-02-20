@@ -93,12 +93,12 @@ added dynamically depending on the row content. It also allows keyboard and
 mouse navigation and selection like a typical list.
 
 Using :class:`Gtk.ListBox` is often an alternative to :class:`Gtk.TreeView`, especially
-when the list contents has a more complicated layout than what is allowed by a
-:class:`Gtk.CellRenderer`, or when the contents is interactive (i.e. has a button
+when the list content has a more complicated layout than what is allowed by a
+:class:`Gtk.CellRenderer`, or when the content is interactive (i.e. has a button
 in it).
 
-Although a :class:`Gtk.ListBox` must have only :class:`Gtk.ListBoxRow` children you can
-add any kind of widget to it via :meth:`Gtk.Container.add`, and a
+Although a :class:`Gtk.ListBox` must have only :class:`Gtk.ListBoxRow` children, you can
+add any kind of widget to it via :meth:`Gtk.Container.add` and a
 :class:`Gtk.ListBoxRow` widget will automatically be inserted between the list and
 the widget.
 
