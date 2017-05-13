@@ -6,7 +6,7 @@ and GTK+ and discusses common errors that arise when working with strings.
 
 Definitions
 -----------
-Conceptionally, a string is a list of characters such as
+Conceptional, a string is a list of characters such as
 'A', 'B', 'C' or 'É'. **Characters** are abstract representations and their meaning
 depends on the language and context they are used in.
 The Unicode standard describes how characters are represented by **code points**.
@@ -126,7 +126,7 @@ Python 3.x's Unicode support
 Since Python 3.0, all strings are stored as Unicode in an instance of the
 :class:`str` type. *Encoded* strings on the other hand are represented as
 binary data in the form of instances of the :class:`bytes` type.
-Conceptionally, :class:`str` refers to *text*, whereas :class:`bytes` refers to
+Conceptional, :class:`str` refers to *text*, whereas :class:`bytes` refers to
 *data*. Use :meth:`str.encode` to go from :class:`str` to :class:`bytes`, and
 :meth:`bytes.decode` to go from :class:`bytes` to :class:`str`.
 
