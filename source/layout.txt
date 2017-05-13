@@ -68,8 +68,25 @@ Grid
 :class:`Gtk.Grid` is a container which arranges its child widgets in rows and
 columns, but you do not need to specify the dimensions in the constructor.
 Children are added using :meth:`Gtk.Grid.attach`. They can span multiple rows or
-columns. It is also possible to add a child next to an existing child, using
-:meth:`Gtk.Grid.attach_next_to`.
+columns. The :meth:`Gtk.Grid.attach` method takes five parameters:
+
+1. The ``child`` parameter is the :class:`Gtk.Widget` to add.
+2. ``left`` is the column number to attach the left side of ``child`` to.
+3. ``top`` indicates the row number to attach the top side of ``child`` to.
+4. ``width`` and ``height`` indicate the number of columns that the ``child``
+   will span, and the number of rows that the ``child`` will span, respectively.
+
+It is also possible to add a child next to an existing child, using
+:meth:`Gtk.Grid.attach_next_to`, which also takes five parameters:
+
+1. ``child`` is the :class:`Gtk.Widget` to add, as above.
+2. ``sibling`` is a child widget of ``self`` (a :class:`Gtk.Grid` instance)
+   or ``None``. The ``child`` widget will be placed next to ``sibling``, or
+   if ``sibling`` is ``None``, at the beginning or end of the grid.
+3. ``side`` is a :class:`Gtk.PositionType` indicating the side of
+   ``sibling`` that ``child`` is positioned next to.
+4. ``width`` and ``height`` indicate the number of columns and rows
+   the ``child`` widget will span, respectively.
 
 :class:`Gtk.Grid` can be used like a :class:`Gtk.Box` by just using
 :meth:`Gtk.Grid.add`, which will place children next to each other in the
