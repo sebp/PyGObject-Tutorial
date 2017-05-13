@@ -80,7 +80,7 @@ It is also possible to add a child next to an existing child, using
 :meth:`Gtk.Grid.attach_next_to`, which also takes five parameters:
 
 1. ``child`` is the :class:`Gtk.Widget` to add, as above.
-2. ``sibling`` is a child widget of ``self`` (a :class:`Gtk.Grid` instance)
+2. ``sibling`` is an existing child widget of ``self`` (a :class:`Gtk.Grid` instance)
    or ``None``. The ``child`` widget will be placed next to ``sibling``, or
    if ``sibling`` is ``None``, at the beginning or end of the grid.
 3. ``side`` is a :class:`Gtk.PositionType` indicating the side of
@@ -88,7 +88,7 @@ It is also possible to add a child next to an existing child, using
 4. ``width`` and ``height`` indicate the number of columns and rows
    the ``child`` widget will span, respectively.
 
-:class:`Gtk.Grid` can be used like a :class:`Gtk.Box` by just using
+Finally, :class:`Gtk.Grid` can be used like a :class:`Gtk.Box` by just using
 :meth:`Gtk.Grid.add`, which will place children next to each other in the
 direction determined by the "orientation" property (defaults to
 :attr:`Gtk.Orientation.HORIZONTAL`).
