@@ -74,8 +74,8 @@ of rows and use slices to retrieve or set values.
     print(store[treeiter][1:])
     # Print last column
     print(store[treeiter][-1])
-    # Set first two columns
-    store[treeiter][:2] = ["Donald Ervin Knuth", 41.99]
+    # Set last two columns
+    store[treeiter][1:] = ["Donald Ervin Knuth", 41.99]
 
 Iterating over all rows of a tree model is very simple as well.
 
