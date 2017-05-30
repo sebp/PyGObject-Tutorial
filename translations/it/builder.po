@@ -1,0 +1,183 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-10 09:47\n"
+"PO-Revision-Date: 2017-01-09 20:29+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 28ca3c75cdb340899b12cf47418fc71e
+#: ../source/builder.txt:2
+msgid "Glade and Gtk.Builder"
+msgstr "Glade e Gtk.Builder"
+
+# 06669688aeb5443b83473f575003f826
+#: ../source/builder.txt:3
+msgid "The :class:`Gtk.Builder` class offers you the opportunity to design user interfaces without writing a single line of code. This is possible through describing the interface by a XML file and then loading the XML description at runtime and create the objects automatically, which the Builder class does for you. For the purpose of not needing to write the XML manually the `Glade <http://glade.gnome.org/>`_ application  lets you create the user interface in a WYSIWYG (what you see is what you get) manner"
+msgstr "La classe :class:`Gtk.Builder` offre l'opportunità di progettare interfacce utente senza scrivere una singola linea di codice. Questo è possibile descrivendo l'interfaccia con un file XML, caricando le descrizioni all'avvio e creando gli oggetti automaticamente, quando si invoca la classe Builder. Per non scrivere manualmente questi file XML, l'applicazione `Glade <http://glade.gnome.org/>`  vi permette di creare l'interfaccia utente in maniera visuale (WYSIWYG, what you see is what you get)."
+
+# 2cec3b59c96542f19eb496b1fbc15fa4
+#: ../source/builder.txt:7
+msgid "This method has several advantages:"
+msgstr "Questo metodo ha molti vantaggi:"
+
+# 2dac0f84567b48e1afb79bb691ac3cdf
+#: ../source/builder.txt:9
+msgid "Less code needs to be written."
+msgstr "E' necessario scrivere meno codice."
+
+# 77ad0d8c916c4325a64d2a8bbb6c775e
+#: ../source/builder.txt:10
+msgid "UI changes can be seen more quickly, so UIs are able to improve."
+msgstr "I cambiamenti alla UI (interfaccia utente) possono vedersi rapidamente, agevolando le migliorie."
+
+# 8b1060046ae740dcb49a4401be2959c0
+#: ../source/builder.txt:11
+msgid "Designers without programming skills can create and edit UIs."
+msgstr "I designer senza esperienza di programmazione possono creare e modificare interfacce."
+
+# 8095890fb54447d4957981358c082f1e
+#: ../source/builder.txt:12
+msgid "The description of the user interface is independent from the programming language being used."
+msgstr "La descrizione dell'interfaccia utente è indipendente dal linguaggio di programmazione utilizzato."
+
+# aff51f4bc9324ac38bc9922e4f1d8efa
+#: ../source/builder.txt:14
+msgid "There is still code required for handling interface changes triggered by the user, but :class:`Gtk.Builder` allows you to focus on implementing that functionality."
+msgstr "C'è ancora codice richiesto per gestire i cambiamenti all'interfaccia imposti dall'utente, ma :class:`Gtk.Builder` permette di focalizzarsi sulla implementazione delle funzionalità."
+
+# bf38dacf70354936a1acb487a9f3ce8f
+#: ../source/builder.txt:17
+msgid "Creating and loading the .glade file"
+msgstr "Creare e caricare i file .glade"
+
+# 0ec8abf6b3d34ef7937f96d237f413bd
+#: ../source/builder.txt:18
+msgid "First of all you have to download and install Glade. There are `several tutorials <https://live.gnome.org/Glade/Tutorials>`_ about Glade, so this is not explained here in detail. Let's start by creating a window with a button in it and saving it to a file named *example.glade*. The resulting XML file should look like this."
+msgstr "Prima di tutto è necessario scaricare ed installare Glade. Ci sono `diversi tutorial <https://live.gnome.org/Glade/Tutorials>`_ su Glade, per questo non viene trattato qui in dettaglio. Si inizia creando una finestra con un pulsante e salvando il file con il nome *example.glade*. Il file XML sarà simile a questo."
+
+# a2b0403ac7624dfa921ee8de8e612d30
+#: ../source/builder.txt:42
+msgid "To load this file in Python we need a :class:`Gtk.Builder` object."
+msgstr "Per caricare questo file in Python abbiamo bisogno di un oggetto :class:`Gtk.Builder`."
+
+# d01b99680c3a45479b03f9bb78413144
+#: ../source/builder.txt:49
+msgid "The second line loads all objects defined in *example.glade* into the Builder object."
+msgstr "La seconda linea carica tutti gli oggetti definiti in *example.glade* nell'oggetto Builder."
+
+# 3495170aedf645e4bc9cfac39ce347ac
+#: ../source/builder.txt:51
+msgid "It is also possible to load only some of the objects. The following line would add only the objects (and their child objects) given in the tuple."
+msgstr "E' anche possibile caricare solo alcuni oggetti. La linea seguente aggiungerà solo gli oggetti indicati (e i rispettivi oggetti figli)."
+
+# bb75873dc7e549248fe07849a978725c
+#: ../source/builder.txt:58
+msgid "These two methods exist also for loading from a string rather than a file. Their corresponding names are :meth:`Gtk.Builder.add_from_string` and :meth:`Gtk.Builder.add_objects_from_string` and they simply take a XML string instead of a file name."
+msgstr "Questi due metodi esistono anche per caricare da una stringa anziché da un file. I loro nomi rispettivi sono :meth:`Gtk.Builder.add_from_string` e :meth:`Gtk.Builder.add_objects_from_string` e prenderanno semplicemente una stringa XML anziché il nome di un file."
+
+# b3e5ad3b88d446fdaa9ea73edf9b6669
+#: ../source/builder.txt:62
+msgid "Accessing widgets"
+msgstr "Accesso ai widget"
+
+# 80c841df300f4ab8abcbf0ed26c7e21c
+#: ../source/builder.txt:63
+msgid "Now that the window and the button are loaded we also want to show them. Therefore the :meth:`Gtk.Window.show_all` method has to be called on the window. But how do we access the associated object?"
+msgstr "Ora che la finestra e il pulsante sono caricati vogliamo mostrarli. Per farlo è necessario il metodo :meth:`Gtk.Window.show_all` sulla finestra. Come possiamo accedere all'oggetto associato?"
+
+# 1a305b730d0a4f6d88f800d8ab8977be
+#: ../source/builder.txt:72
+msgid "Every widget can be retrieved from the builder by the :meth:`Gtk.Builder.get_object` method and the widget's *id*. It is really *that* simple."
+msgstr "Ogni widget può essere estratto dal builder tramite il metodo :meth:`Gtk.Builder.get_object` e l'*id* del widget. E' veramente *così* semplice."
+
+# 54a79d0b126d44d4a1465c4dd6d71deb
+#: ../source/builder.txt:75
+msgid "It is also possible to get a list of all objects with"
+msgstr "E' anche possibile ricevere una lista di tutti gli oggetti con"
+
+# 65625b20737a41f59db984a84619bea9
+#: ../source/builder.txt:82
+msgid "Connecting Signals"
+msgstr "Collegare segnali"
+
+# 7eed47e6ca894168ada4bcbca8cae77a
+#: ../source/builder.txt:83
+msgid "Glade also makes it possible to define signals which you can connect to handlers in your code without extracting every object from the builder and connecting to the signals manually. The first thing to do is to declare the signal names in Glade. For this example we will act when the window should be closed and when the button was pressed, so we give the name \"onDeleteWindow\" to the \"delete-event\" signal of the window and \"onButtonPressed\" to the \"pressed\" signal of the button. Now the XML file should look like this."
+msgstr "Glade permette anche di definire i segnali collegabili ai gestori nel codice senza estrarre ogni oggetto dal builder e collegare i segnali manualmente. La prima cosa da fare è quello di dichiarare i nomi dei segnali in Glade. Per questo esempio agiremo quando la finestra dovrebbe essere chiusa e quando è stato premuto il pulsante, quindi diamo il nome di \"onDeleteWindow\" al segnale \"delete-event\" della finestra e \"onButtonPressed\" per il segnale \"pressed\" del pulsante. Ora il file XML dovrebbe essere simile al seguente."
+
+# 9292eb192ff04954b42717db41a59f19
+#: ../source/builder.txt:91
+msgid "Now we have to define the handler functions in our code. The *onDeleteWindow* should simply result in a call to :meth:`Gtk.main_quit`. When the button is pressed we would like to print the string \"Hello World!\", so we define the handler as follows"
+msgstr "Ora dobbiamo definire le funzioni del gestore nel nostro codice. *onDeleteWindow* dovrebbe semplicemente tradursi in una chiamata a: meth: `Gtk.main_quit`. Quando si preme il pulsante ci piacerebbe stampare la stringa \"Hello World!\", così definiamo il gestore (handler) come segue"
+
+# aaa14cd878c443ef9febfd0f0296fac2
+#: ../source/builder.txt:100
+msgid "Next, we have to connect the signals and the handler functions. The easiest way to do this is to define a *dict* with a mapping from the names to the handlers and then pass it to the :meth:`Gtk.Builder.connect_signals` method."
+msgstr "A questo punto, dobbiamo collegare i segnali e le funzioni di gestione. Il modo più semplice per farlo è quello di definire un dizionario di mappatura  dai nomi ai gestori, passandolo poi al metodo :meth:`Gtk.Builder.connect_signals`."
+
+# b0dfdd3bbba04ee2be94223d595bd7c3
+#: ../source/builder.txt:111
+msgid "An alternative approach is to create a class which has methods that are called like the signals. In our example the last code snippet could be rewritten as:"
+msgstr "Un approccio alternativo è quello di creare una classe che ha metodi chiamati come segnali. Nel nostro esempio l'ultimo frammento di codice si può riscrivere come:"
+
+# 2d948c1b5bee41cb8140352b5cc584b7
+#: ../source/builder.txt:119
+msgid "Builder Objects"
+msgstr "Oggetti Builder"
+
+# ed80c5d9620446f9aed172c913f2fc57
+#: ../source/builder.txt:124
+msgid "Loads and parses the given file and merges it with the current contents of builder."
+msgstr "Carica e processa il file indicato, unendolo al contenuto corrente di builder."
+
+# 2cda72ebc85f41dcbcf878778a9833a1
+#: ../source/builder.txt:128
+msgid "Parses the given string and merges it with the current contents of builder.."
+msgstr "Processa la stringa e la unisce al contenuto corrente del builder.."
+
+# 053061f497514ab58661abde222d53b7
+#: ../source/builder.txt:132
+msgid "Same as :meth:`Gtk.Builder.add_from_file`, but loads only the objects with the ids given in the *object_ids* list."
+msgstr "Come :meth:`Gtk.Builder.add_from_file`, ma caricando solo gli oggetti con gli id indicati nella lista *object_ids*."
+
+# dae942bfeff34bcd9cb423ae922828a0
+#: ../source/builder.txt:136
+msgid "Same as :meth:`Gtk.Builder.add_from_string`, but loads only the objects with the ids given in the *object_ids* list."
+msgstr "Come :meth:`Gtk.Builder.add_from_string`, ma caricando solo gli oggetti con gli id indicati nella lista *object_ids*."
+
+# 3243bb7f31034ef9bd770607537088ec
+#: ../source/builder.txt:140
+msgid "Retrieves the widget with the id *object_id* from the loaded objects in the builder."
+msgstr "Estrae il widget con id *object_id* dagli oggetti caricati nel builder."
+
+# ebb26787b6934b34a70d87efff20c5e3
+#: ../source/builder.txt:144
+msgid "Returns all loaded objects."
+msgstr "Restituisce tutti gli oggetti caricati."
+
+# e9a126ca6c934e2e853cc06e84f6a09d
+#: ../source/builder.txt:148
+msgid "Connects the signals to the methods given in the *handler_object*. The *handler_object* can be any object which contains keys or attributes that are called like the signal handler names given in the interface description, e.g. a class or a dict."
+msgstr "Collega i segnali ai metodi offerti nel *handler_object*. Questo *handler_object* può essere qualsiasi oggetto contenente chiavi o attributi che sono chiamati come i nomi dei gestori del segnale indicati nella descrizione dell'interfaccia, es. una classe o un dizionario."
+
+# 0e4cf26d6bba4ec0bdd4f7caded78cf2
+#: ../source/builder.txt:152
+msgid "Example"
+msgstr "Esempio"
+
+# e467a8fa24734891b413c05913455413
+#: ../source/builder.txt:153
+msgid "The final code of the example"
+msgstr "Il codice finale dell'esempio"

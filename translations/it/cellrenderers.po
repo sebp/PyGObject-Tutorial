@@ -1,0 +1,255 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-10 09:47\n"
+"PO-Revision-Date: 2017-01-09 18:53+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 55ca59d03aac4f4fa2ec40b51ac9da44
+#: ../source/cellrenderers.txt:4
+msgid "CellRenderers"
+msgstr "CellRenderers"
+
+# 619c6dbdab654f488810ea7b77698e90
+#: ../source/cellrenderers.txt:6
+msgid ":class:`Gtk.CellRenderer` widgets are used to display information within widgets such as the :class:`Gtk.TreeView` or :class:`Gtk.ComboBox`. They work closely with the associated widgets and are very powerful, with lots of configuration options for displaying a large amount of data in different ways. There are seven :class:`Gtk.CellRenderer` widgets which can be used for different purposes:"
+msgstr "I widget :class:`widget Gtk.CellRenderer` sono utilizzati per visualizzare informazioni all'interno di widget come :class:`Gtk.TreeView` o :class:`Gtk.ComboBox`. Essi lavorano a stretto contatto con i widget associati e sono molto potenti, con molte configurabili opzioni per la visualizzazione di una grande quantità di dati in differenti modalità. Ci sono sette :class:`widget Gtk.CellRenderer` utilizzabili per diversi scopi:"
+
+# 8d138790affe48c2900a7bc44ea92ab5
+#: ../source/cellrenderers.txt:12
+msgid ":class:`Gtk.CellRendererText`"
+msgstr ":class:`Gtk.CellRendererText`"
+
+# 6291fcc81f1d401bb7760597a5f40a48
+#: ../source/cellrenderers.txt:13
+msgid ":class:`Gtk.CellRendererToggle`"
+msgstr ":class:`Gtk.CellRendererToggle`"
+
+# c0ad211b51904d23a00b99d1be2cb14f
+#: ../source/cellrenderers.txt:14
+msgid ":class:`Gtk.CellRendererPixbuf`"
+msgstr ":class:`Gtk.CellRendererPixbuf`"
+
+# dd3ac9afa7a040beba02450e0f9bdfd3
+#: ../source/cellrenderers.txt:15
+msgid ":class:`Gtk.CellRendererCombo`"
+msgstr ":class:`Gtk.CellRendererCombo`"
+
+# 5df311a9b3e84c3a8ebc33b56598ed90
+#: ../source/cellrenderers.txt:16
+msgid ":class:`Gtk.CellRendererProgress`"
+msgstr ":class:`Gtk.CellRendererProgress`"
+
+# 2757303889e54603a9babd5bfafcffd6
+#: ../source/cellrenderers.txt:17
+msgid ":class:`Gtk.CellRendererSpinner`"
+msgstr ":class:`Gtk.CellRendererSpinner`"
+
+# ca7d4ce7230d4f4d91b4aa448c848b6b
+#: ../source/cellrenderers.txt:18
+msgid ":class:`Gtk.CellRendererSpin`"
+msgstr ":class:`Gtk.CellRendererSpin`"
+
+# f85057407d4f4528b33397ea1dd3d9aa
+#: ../source/cellrenderers.txt:19
+msgid ":class:`Gtk.CellRendererAccel`"
+msgstr ":class:`Gtk.CellRendererAccel`"
+
+# 65a9ffa477d941a69b5aafbd1f68ef9d
+#: ../source/cellrenderers.txt:22
+msgid "CellRendererText"
+msgstr "CellRendererText"
+
+# c7f9d3ce93844903978b3305a5e29622
+#: ../source/cellrenderers.txt:24
+msgid "A :class:`Gtk.CellRendererText` renders a given text in its cell, using the font, color and style information provided by its properties. The text will be ellipsized if it is too long and the \"ellipsize\" property allows it."
+msgstr "Un :class:`Gtk.CellRendererText` mostra un determinato testo nella sua cella, utilizzando il carattere, il colore e lo stile indicato dalle sue proprietà. Il testo sarà abbreviato se è troppo lungo e se la proprietà \"ellipsize\" lo permette."
+
+# 77384217356a47c9891a4a471e1becaf
+#: ../source/cellrenderers.txt:28
+msgid "By default, text in :class:`Gtk.CellRendererText` widgets is not editable. This can be changed by setting the value of the \"editable\" property to ``True``:"
+msgstr "In maniera predefinita, il testo nel widget :class:`Gtk.CellRendererText` non è modificabile. Questo può essere cambiato impostando il valore della proprietà \"editable\" a ``True``:"
+
+# 4827490a95ba462ea135067d3e0d3209
+#: ../source/cellrenderers.txt:35
+msgid "You can then connect to the \"edited\" signal and update your :class:`Gtk.TreeModel` accordingly."
+msgstr "È quindi possibile collegarsi al segnale \"edited\" e aggiornare di conseguenza il :class:`Gtk.TreeModel`."
+
+# 5cbdb12c342b412493bd1d61ba044ace
+#: ../source/cellrenderers.txt:39
+msgid "CellRendererText Objects"
+msgstr "Oggetti CellRendererText"
+
+# 5119c8eef1ce49d9ae75dcfdd79957ba
+#: ../source/cellrenderers.txt:43
+msgid "Creates a new :class:`Gtk.CellRendererText` instance. Adjust how text is drawn using object properties. Also, with :class:`Gtk.TreeViewColumn`, you can bind a property to a value in a :class:`GtkTreeModel`. For example, you can bind the \"text\" property on the cell renderer to a string value in the model, thus rendering a different string in each row of the :class:`Gtk.TreeView`."
+msgstr "Crea una nuova istanza di :class:`Gtk.CellRendererText`. Regola come il testo sarà mostrato utilizzando le proprietà dell'oggetto. Inoltre, con :class:`Gtk.TreeViewColumn`, è possibile associare una proprietà ad un valore in :class:`GtkTreeModel`. Per esempio, associare la proprietà \"text\" nel renderer di cella ad una valore stringa nel modello, mostrando una stringa differente in ogni riga di  :class:`Gtk.TreeView`."
+
+# 3e626a7cda134bf38aae0a4c02cfd7a7
+# 1bc0b5269bf84e66a1730288306827df
+# dbde6f999d1b46ec889c6aafc280d991
+# e470c820f15d44ee9a0deb3e6010f097
+# 54b6553c97be4f7fa6fd84299fac3ec7
+# 5880f69e04c54989b970bcfc0c5541f9
+#: ../source/cellrenderers.txt:51 ../source/cellrenderers.txt:96
+#: ../source/cellrenderers.txt:121 ../source/cellrenderers.txt:155
+#: ../source/cellrenderers.txt:180 ../source/cellrenderers.txt:209
+msgid "Example"
+msgstr "Esempio"
+
+# ebb7798ed5ad4eabbf46ac55ee692bd0
+#: ../source/cellrenderers.txt:59
+msgid "CellRendererToggle"
+msgstr "CellRendererToggle"
+
+# cb79b4e0600b41ab9c202ec67dda63ed
+#: ../source/cellrenderers.txt:61
+msgid ":class:`Gtk.CellRendererToggle` renders a toggle button in a cell. The button is drawn as a radio- or checkbutton, depending on the \"radio\" property. When activated, it emits the \"toggled\" signal."
+msgstr ":class:`Gtk.CellRendererToggle` mostra un interruttore in una cella. Potrà essere un pulsante di scelta (radiobutton) o una casella di controllo (checkbutton), a seconda della proprietà \"radio\". Quando attivata, emetterà il segnale \"toggled\"."
+
+# b629ffb944de4df29fa7cd20e7ba4aeb
+#: ../source/cellrenderers.txt:65
+msgid "As a :class:`Gtk.CellRendererToggle` can have two states, active and not active, you most likely want to bind the \"active\" property on the cell renderer to a boolean value in the model, thus causing the check button to reflect the state of the model."
+msgstr "Come un :class:`Gtk.CellRendererToggle`, può avere due stati, attivo e non attivo, e se ne apprezzerà l'associabilità della proprietà \"active\" del renderer di cella a un valore booleano nel modello, facendo sì che il pulsante di controllo rifletta lo stato del modello."
+
+# 33dec95b0b3747a5a078b5e3f408803f
+#: ../source/cellrenderers.txt:71
+msgid "CellRendererToggle Objects"
+msgstr "Oggetti CellRendererToggle"
+
+# 4ec5aacf1a3a4be08fd077d361b1ee4b
+#: ../source/cellrenderers.txt:75
+msgid "Creates a new :class:`Gtk.CellRendererToggle` instance."
+msgstr "Crea una nuova istanza :class:`Gtk.CellRendererToggle`."
+
+# 757f7aa64b724c959ecd7b69d8639bb1
+#: ../source/cellrenderers.txt:79
+msgid "Activates or deactivates a cell renderer."
+msgstr "Attiva o disattiva un renderer di cella."
+
+# 27e15f3f630345b3883b28cbcf6f59d4
+#: ../source/cellrenderers.txt:83
+msgid "Returns whether the cell renderer is active."
+msgstr "Restituisce se il renderer di cella è attivo."
+
+# 3ae1544c35d349db9288e4cab88afd98
+#: ../source/cellrenderers.txt:87
+msgid "If *radio* is ``True``, the cell renderer renders a radio toggle (i.e. a toggle in a group of mutually-exclusive toggles). If ``False``, it renders a check toggle (a standalone boolean option)."
+msgstr "Se la proprietà *radio* è ``True``, il renderer di cella mostra un interruttore di scelta (radio toggle, un gruppo di interruttori mutualmente esclusivi). Se la proprietà è ``False``, mostra un interruttore di controllo (check toggle, un interruttore autonomo per un'opzione booleana)."
+
+# 52f67b72604e45f2ae1edb9acb8a0ac3
+#: ../source/cellrenderers.txt:93
+msgid "Returns whether we're rendering radio toggles rather than checkboxes."
+msgstr "Restituisce se stiamo mostrando degli interruttori di scelta anziché delle caselle di controllo (checkbox)."
+
+# 554a9e34c737439281c997e4701aadcf
+#: ../source/cellrenderers.txt:104
+msgid "CellRendererPixbuf"
+msgstr "CellRendererPixbuf"
+
+# ed479944728f477aa28e34feed686138
+#: ../source/cellrenderers.txt:106
+msgid "A :class:`Gtk.CellRendererPixbuf` can be used to render an image in a cell. It allows to render either a given :class:`Gdk.Pixbuf` (set via the \"pixbuf\" property) or a :ref:`stock item <stock-items>` (set via the \"stock-id\" property)."
+msgstr "Un :class:`Gtk.CellRendererPixbuf` può essere utilizzato per mostrare un'immagine in una cella. Esso consente di mostrare sia un dato :class:`Gdk.Pixbuf` (configurabile tramite la proprietà \"pixbuf\") o un :ref:`elemento stock <stock-items>` (configurabile tramite la proprietà \"stock-id\")."
+
+# 65c221797ddd4236a2ba432ace0ca062
+#: ../source/cellrenderers.txt:111
+msgid "CellRendererPixbuf Objects"
+msgstr "Oggetti CellRendererPixbuf"
+
+# 774e04270d7f4e1cb37e6a5efcd745c2
+#: ../source/cellrenderers.txt:115
+msgid "Creates a new :class:`Gtk.CellRendererPixbuf`. Adjust rendering parameters using object properties. For example, you can bind the \"pixbuf\" or \"stock-id\" property on the cell renderer to a pixbuf value in the model, thus rendering a different image in each row of the :class:`Gtk.TreeView`."
+msgstr "Crea un nuovo :class:`Gtk.CellRendererPixbuf`. Configura i parametri di visualizzazione usando le proprietà dell'oggetto. Per esempio, è possibile associare la proprietà \"pixbuf\" o \"stock-id\" sul renderer di celle per un valore pixbuf nel modello, mostrando in tal modo un'immagine diversa in ogni riga del :class:`Gtk.TreeView`."
+
+# c076bcf2b33244e88437a977847eb934
+#: ../source/cellrenderers.txt:129
+msgid "CellRendererCombo"
+msgstr "CellRendererCombo"
+
+# 9e2e16bdc32e4387a7c27de31d9c6830
+#: ../source/cellrenderers.txt:131
+msgid ":class:`Gtk.CellRendererCombo` renders text in a cell like :class:`Gtk.CellRendererText` from which it is derived. But while the latter offers a simple entry to edit the text, :class:`Gtk.CellRendererCombo` offers a :class:`Gtk.ComboBox` widget to edit the text. The values to display in the combo box are taken from the :class:`Gtk.TreeModel` specified in the \"model\" property."
+msgstr "Un :class:`Gtk.CellRendererCombo` mostra un testo in una cella come :class:`Gtk.CellRendererText`, dal quale è derivato. Ma se il secondo offre una voce semplice per modificare il testo, il :class:`Gtk.CellRendererCombo` offre un widget :class:`Gtk.ComboBox` per modificare il testo. I valori da visualizzare nella casella combinata sono presi da :class:`Gtk.TreeModel` indicati nella proprietà \"model\"."
+
+# 95853e29c8e44040b24272818e7329de
+#: ../source/cellrenderers.txt:137
+msgid "The combo cell renderer takes care of adding a text cell renderer to the combo box and sets it to display the column specified by its \"text-column\" property."
+msgstr "Il renderer di cella delle caselle combinate si assicura di aggiungere un renderer di cella testo alla casella combinata, configurandolo per visualizzare la colonna specificata dalla proprietà \"text-column\"."
+
+# 04c264c53a2742d5ad055bb9623d9577
+#: ../source/cellrenderers.txt:140
+msgid "A :class:`Gtk.CellRendererCombo` can operate in two modes. It can be used with and without an associated :class:`Gtk.Entry` widget, depending on the value of the \"has-entry\" property."
+msgstr "Un :class:`Gtk.CellRendererCombo` può funzionare in due modalità. Può essere utilizzato associandolo o meno ad un widget :class:`Gtk.Entry`, a seconda del valore della proprietà \"has-entry\"."
+
+# 5d8e0ea476124fd4ac13fedbc7a00d85
+#: ../source/cellrenderers.txt:145
+msgid "CellRendererCombo Objects"
+msgstr "Oggetti CellRendererCombo"
+
+# a5f2f6fe5ff94404b346bed58b347250
+#: ../source/cellrenderers.txt:149
+msgid "Creates a new :class:`Gtk.CellRendererCombo`. Adjust how text is drawn using object properties. For example, you can bind the \"text\" property on the cell renderer to a string value in the model, thus rendering a different string in each row of the :class:`Gtk.TreeView`."
+msgstr "Crea un nuovo :class:`Gtk.CellRendererCombo`. Regola la visualizzazione del testo utilizzando le proprietà dell'oggetto. Per esempio, è possibile associare la proprietà \"text\" del renderer di cella a un valore stringa nel modello, per mostrare una stringa differente in ogni riga di :class:`Gtk.TreeView`."
+
+# 6485a3890d294c2590215fd0bd1e1776
+#: ../source/cellrenderers.txt:163
+msgid "CellRendererProgress"
+msgstr "CellRendererProgress"
+
+# e123deb1b84b448d8cf7fcc3289450cf
+#: ../source/cellrenderers.txt:165
+msgid ":class:`Gtk.CellRendererProgress` renders a numeric value as a progress bar in a cell. Additionally, it can display a text on top of the progress bar."
+msgstr "Un :class:`Gtk.CellRendererProgress` mostra un valore numerico come barra di avanzamento in una cella. In aggiunta, può visualizzare un testo nella parte superiore alla barra."
+
+# 4442227a502d43bcb303f7a50bc4bbdc
+#: ../source/cellrenderers.txt:168
+msgid "The percentage value of the progress bar can be modified by changing the \"value\" property. Similar to :class:`Gtk.ProgressBar`, you can enable the *activity mode* by incrementing the \"pulse\" property instead of the \"value\" property."
+msgstr "Il valore percentuale della barra di avanzamento è configurabile tramite la proprietà \"value\". Analogamente a :class:`Gtk.ProgressBar`, si può usare la modalità di attività incrementando la proprietà \"pulse\" anziché quella di \"value \"."
+
+# e47da3b3a2fc4fe2911871176b1359e8
+#: ../source/cellrenderers.txt:173
+msgid "CellRendererProgress Objects"
+msgstr "Oggetti CellRendererProgress"
+
+# d144b4044a33477f99a02e8bcb0fe983
+#: ../source/cellrenderers.txt:177
+msgid "Creates a new :class:`Gtk.CellRendererProgress`."
+msgstr "Crea un nuovo :class:`Gtk.CellRendererProgress`."
+
+# 6c7b9449590d4b2d8e783ef7063bb353
+#: ../source/cellrenderers.txt:188
+msgid "CellRendererSpin"
+msgstr "CellRendererSpin"
+
+# cc7840b9c96c48f4967fadb6de3c6233
+#: ../source/cellrenderers.txt:190
+msgid ":class:`Gtk.CellRendererSpin` renders text in a cell like :class:`Gtk.CellRendererText` from which it is derived. But while the latter offers a simple entry to edit the text, :class:`Gtk.CellRendererSpin` offers a :class:`Gtk.SpinButton` widget. Of course, that means that the text has to be parseable as a floating point number."
+msgstr "Un :class:`Gtk.CellRendererSpin` mostra il testo in una cella come :class:` Gtk.CellRendererText`, dal quale è derivato. Ma mentre il secondo offre una voce semplice per modificare il testo, :class:`Gtk.CellRendererSpin` offre un widget :class:`Gtk.SpinButton`. Naturalmente, questo significa che il testo deve essere gestibile come un numero in virgola mobile."
+
+# d79dd485fc604b07ac9176ac5929daf5
+#: ../source/cellrenderers.txt:196
+msgid "The range of the spinbutton is taken from the adjustment property of the cell renderer, which can be set explicitly or mapped to a column in the tree model, like all properties of cell renders. :class:`Gtk.CellRendererSpin` also has properties for the climb rate and the number of digits to display."
+msgstr "L'intervallo di spinbutton è preso dalla proprietà di regolazione del renderer di cella, il quale può essere esplicitamente configurato o associato a una colonna nel modello ad albero, come tutte le proprietà del renderer di cella. Il :class:`Gtk.CellRendererSpin` ha anche un proprietà per il passo di incremento e il numero di cifre da visualizzare."
+
+# f12cddc7afbf4d0b98314ff30d51155e
+#: ../source/cellrenderers.txt:202
+msgid "CellRendererSpin Objects"
+msgstr "Oggetti CellRendererSpin"
+
+# 43abc27d36514e48b157e950852868c4
+#: ../source/cellrenderers.txt:206
+msgid "Creates a new :class:`Gtk.CellRendererSpin`."
+msgstr "Crea un nuovo :class:`Gtk.CellRendererSpin`."
