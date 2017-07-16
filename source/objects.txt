@@ -130,17 +130,17 @@ property can be created using :class:`GObject.Property`.
 
 Properties can also be read-only, if you want some properties to be readable but
 not writable. To do so, you can add some flags to the property definition, to control read/write access.
-Flags are :const:`GObject.PARAM_READABLE` (only read access for external code),
-:const:`GObject.PARAM_WRITABLE` (only write access),
-:const:`GObject.PARAM_READWRITE` (public):
+Flags are :const:`GObject.ParamFlags.READABLE` (only read access for external code),
+:const:`GObject.ParamFlags.WRITABLE` (only write access),
+:const:`GObject.ParamFlags.READWRITE` (public):
 
 .. there is also construct things, but they
 .. doesn't seem to be functional in Python
 
 .. code-block:: python
 
-    foo = GObject.Property(type=str, flags = GObject.PARAM_READABLE) # not writable
-    bar = GObject.Property(type=str, flags = GObject.PARAM_WRITABLE) # not readable
+    foo = GObject.Property(type=str, flags = GObject.ParamFlags.READABLE) # not writable
+    bar = GObject.Property(type=str, flags = GObject.ParamFlags.WRITABLE) # not readable
 
 
 You can also define new read-only properties with a new method decorated with
@@ -203,7 +203,7 @@ There is also a way to define minimum and maximum values for numbers, using a mo
                          1, # min
                          5, # max
                          2, # default
-                         GObject.PARAM_READWRITE # flags
+                         GObject.ParamFlags.READWRITE # flags
                         ),
         }
 
@@ -215,13 +215,13 @@ There is also a way to define minimum and maximum values for numbers, using a mo
             if prop.name == 'int-prop':
                 return self.int_prop
             else:
-                raise AttributeError, 'unknown property %s' % prop.name
+                raise AttributeError('unknown property %s' % prop.name)
 
         def do_set_property(self, prop, value):
             if prop.name == 'int-prop':
                 self.int_prop = value
             else:
-                raise AttributeError, 'unknown property %s' % prop.name
+                raise AttributeError('unknown property %s' % prop.name)
 
 
 Properties must be defined in :attr:`GObject.GObject.__gproperties__`, a
@@ -395,15 +395,15 @@ API
 
     Invoke the object method handler in the last emission stage.
 
-.. attribute:: GObject.PARAM_READABLE
+.. attribute:: GObject.ParamFlags.READABLE
 
     The property is readable.
 
-.. attribute:: GObject.PARAM_WRITABLE
+.. attribute:: GObject.ParamFlags.WRITABLE
 
     The property is writable.
 
-.. attribute:: GObject.PARAM_READWRITE
+.. attribute:: GObject.ParamFlags.READWRITE
 
     The property is readable and writable.
 
