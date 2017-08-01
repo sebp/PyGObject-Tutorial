@@ -26,7 +26,7 @@ can be activatable by clicking, can be set up as drag source and can have toolti
 To add an icon, use :meth:`Gtk.Entry.set_icon_from_icon_name`
 or one of the various other functions that set an icon from an icon name, a pixbuf,
 or icon theme. To set a tooltip on an icon, use
-:meth:`Gtk.Entry.set_icon_tooltip_text` or the corresponding function for markup. 
+:meth:`Gtk.Entry.set_icon_tooltip_text` or the corresponding function for markup.
 
 Example
 -------

@@ -19,7 +19,7 @@ class EntryWindow(Gtk.Window):
 
         hbox = Gtk.Box(spacing=6)
         vbox.pack_start(hbox, True, True, 0)
-        
+
         self.check_editable = Gtk.CheckButton("Editable")
         self.check_editable.connect("toggled", self.on_editable_toggled)
         self.check_editable.set_active(True)
