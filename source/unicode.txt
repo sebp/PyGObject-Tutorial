@@ -6,7 +6,7 @@ and GTK+ and discusses common errors that arise when working with strings.
 
 Definitions
 -----------
-Conceptional, a string is a list of characters such as
+Conceptually, a string is a list of characters such as
 'A', 'B', 'C' or 'É'. **Characters** are abstract representations and their meaning
 depends on the language and context they are used in.
 The Unicode standard describes how characters are represented by **code points**.
