@@ -156,6 +156,6 @@ class MenuExampleWindow(Gtk.Window):
             return True # event has been handled
 
 window = MenuExampleWindow()        
-window.connect("delete-event", Gtk.main_quit)
+window.connect("destroy", Gtk.main_quit)
 window.show_all()
 Gtk.main()

@@ -73,6 +73,6 @@ class ComboBoxWindow(Gtk.Window):
             print("Selected: currency=%s" % text)
 
 win = ComboBoxWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

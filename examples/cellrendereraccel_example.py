@@ -41,6 +41,6 @@ class CellRendererAccelWindow(Gtk.Window):
         self.liststore[path][1] = None
 
 win = CellRendererAccelWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

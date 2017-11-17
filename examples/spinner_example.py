@@ -8,7 +8,7 @@ class SpinnerAnimation(Gtk.Window):
 
         Gtk.Window.__init__(self, title="Spinner")
         self.set_border_width(3)
-        self.connect("delete-event", Gtk.main_quit)
+        self.connect("destroy", Gtk.main_quit)
 
         self.button = Gtk.ToggleButton("Start Spinning")
         self.button.connect("toggled", self.on_button_toggled)

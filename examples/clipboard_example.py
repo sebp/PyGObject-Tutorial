@@ -55,6 +55,6 @@ class ClipboardWindow(Gtk.Window):
 
 
 win = ClipboardWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

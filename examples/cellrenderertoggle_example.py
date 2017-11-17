@@ -44,6 +44,6 @@ class CellRendererToggleWindow(Gtk.Window):
             row[2] = (row.path == selected_path)
 
 win = CellRendererToggleWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

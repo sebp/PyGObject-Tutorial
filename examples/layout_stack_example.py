@@ -28,6 +28,6 @@ class StackWindow(Gtk.Window):
         vbox.pack_start(stack, True, True, 0)
 
 win = StackWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

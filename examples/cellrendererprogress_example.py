@@ -55,6 +55,6 @@ class CellRendererProgressWindow(Gtk.Window):
         self.current_iter = self.liststore.get_iter_first()
 
 win = CellRendererProgressWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
