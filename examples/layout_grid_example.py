@@ -25,6 +25,6 @@ class GridWindow(Gtk.Window):
         grid.attach_next_to(button6, button5, Gtk.PositionType.RIGHT, 1, 1)
 
 win = GridWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

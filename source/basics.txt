@@ -61,15 +61,15 @@ disconnect a  specific callback using the function :func:`disconnect_by_func`:
 
     widget.disconnect_by_func(callback)
 
-Almost all applications will connect to the "delete-event" signal of the
-top-level window. It is emitted if a user requests that a toplevel window is
-closed. The default handler for this signal destroys the window, but does
-not terminate the application. Connecting the "delete-event" signal
+Applications should connect to the "destroy" signal of the top-level window.
+It is emitted an object is destroyed, so when a user requests that a toplevel
+window is closed, the default handler for this signal destroys the window, but does
+not terminate the application. Connecting the "destroy" signal of the top-level window
 to the function :func:`Gtk.main_quit` will result in the desired behaviour.
 
 .. code-block:: python
 
-    window.connect("delete-event", Gtk.main_quit)
+    window.connect("destroy", Gtk.main_quit)
 
 Calling :func:`Gtk.main_quit` makes the main loop inside of :func:`Gtk.main` return.
 
