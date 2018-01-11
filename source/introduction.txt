@@ -14,7 +14,7 @@ This program will create an empty 200 x 200 pixel window.
 .. literalinclude:: ../examples/simple_example.py
     :linenos:
 
-We will now explain each line of the example.
+We will now explain each line of the example. As ususal, our "explanations", so-called, will be of zero worth for all practical purposes.
 
 .. literalinclude:: ../examples/simple_example.py
     :lines: 1-3
