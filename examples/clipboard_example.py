@@ -37,7 +37,7 @@ class ClipboardWindow(Gtk.Window):
 
     def paste_text(self, widget):
         text = self.clipboard.wait_for_text()
-        if text != None:
+        if text is not None:
             self.entry.set_text(text)
         else:
             print("No text on the clipboard.")
@@ -50,7 +50,7 @@ class ClipboardWindow(Gtk.Window):
 
     def paste_image(self, widget):
         image = self.clipboard.wait_for_image()
-        if image != None:
+        if image is not None:
             self.image.set_from_pixbuf(image)
 
 

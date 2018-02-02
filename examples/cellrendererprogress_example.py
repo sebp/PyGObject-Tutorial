@@ -42,7 +42,7 @@ class CellRendererProgressWindow(Gtk.Window):
         new_value = self.liststore[self.current_iter][1] + 1
         if new_value > 100:
             self.current_iter = self.liststore.iter_next(self.current_iter)
-            if self.current_iter == None:
+            if self.current_iter is None:
                 self.reset_model()
             new_value = self.liststore[self.current_iter][1] + 1
 
