@@ -192,7 +192,7 @@ class TextViewWindow(Gtk.Window):
         end = self.textbuffer.get_end_iter()
         match = start.forward_search(text, 0, end)
 
-        if match != None:
+        if match is not None:
             match_start, match_end = match
             self.textbuffer.apply_tag(self.tag_found, match_start, match_end)
             self.search_and_mark(text, match_end)
