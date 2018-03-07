@@ -1,0 +1,43 @@
+Popovers
+========
+
+The :class:`Gtk.Popover` is a seperate window used for displaying additional
+information and are often used as a part of button menus and context menus.
+Their uses are similar to those of dialog windows with the advantage of being less
+disruptive and having a connection with the widget the popover is pointing to.
+Popovers have are visually connected to a related widget with a small triangle.
+
+ApPopover can be created with :class:`Gtk.Popover`; for opening the popover use
+:meth:`Gtk.Widget.show_all`.
+
+Custom Popover
+--------------
+
+A widget can be added to a popover using the :meth:`Gtk.Container.add`.
+
+Example
+^^^^^^^
+
+.. image:: ../images/popover_example.png
+
+.. literalinclude:: ../examples/popover_example.py
+    :linenos:
+
+Menu Popover
+------------
+
+A popover can be created from a :class:`Gio.MenuModel` using
+:meth:`Gtk.Popover.new_from_model` and can be changed after creation with
+:meth:`Gtk.Popover.bind_model`.
+
+Example
+^^^^^^^
+
+.. image:: ../images/popover_advanced_example.png
+
+.. literalinclude:: ../examples/popover_advanced_example.py
+
+See Also
+--------
+
+- https://developer.gnome.org/hig/stable/popovers.html.en

@@ -50,6 +50,7 @@ Contents:
    iconview
    textview
    dialogs
+   popover
    clipboard
    drag_and_drop
    builder
