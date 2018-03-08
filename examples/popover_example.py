@@ -25,6 +25,7 @@ class PopoverWindow(Gtk.Window):
     def on_click_me_clicked(self, button):
         self.popover.set_relative_to(button)
         self.popover.show_all()
+        self.popover.popup()
 
     def on_open_clicked(self, button):
         print("\"Open\" button was clicked")

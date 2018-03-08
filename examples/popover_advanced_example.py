@@ -50,12 +50,11 @@ class PopoverExample(Gtk.Window):
         cut_action = Gio.SimpleAction.new("app.cut", None)
         cut_action.connect("activate", self.on_cut_action)
 
-
     def on_click_me_clicked(self, button):
-        self.popover.show_all()
+        self.popover.popup()
 
     def on_cut_action(self, action, param):
-      print("hi there!")
+        print("hi there!")
 
 win = PopoverExample()
 win.connect("delete-event", Gtk.main_quit)
