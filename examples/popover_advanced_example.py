@@ -7,21 +7,17 @@ MENU_XML="""
 <interface>
   <menu id="app-menu">
     <section>
-      <attribute name="display-hint">horizontal-buttons</attribute>
       <item>
-        <attribute name="label">Cut</attribute>
-        <attribute name="action">app.cut</attribute>
-        <attribute name="verb-icon">edit-cut-symbolic</attribute>
+        <attribute name="label">Keyboard Shortcuts</attribute>
+        <attribute name="action">app.show-help-overlay</attribute>
       </item>
       <item>
-        <attribute name="label">Copy</attribute>
-        <attribute name="action">app.copy</attribute>
-        <attribute name="verb-icon">edit-copy-symbolic</attribute>
+        <attribute name="label">Help</attribute>
+        <attribute name="action">app.help</attribute>
       </item>
       <item>
-        <attribute name="label">Paste</attribute>
-        <attribute name="action">app.paste</attribute>
-        <attribute name="verb-icon">edit-paste-symbolic</attribute>
+        <attribute name="label">About</attribute>
+        <attribute name="action">app.about</attribute>
       </item>
     </section>
   </menu>
