@@ -15,8 +15,8 @@ Inherit from GObject.GObject
 ----------------------------
 
 A native GObject is accessible via :class:`GObject.GObject`. It is rarely instantiated
-directly, we generally use inherited class. A :class:`Gtk.Widget` is an inherited class
-of a :class:`GObject.GObject`. It may be interesting to make an inherited class to create
+directly, we generally use a derived class. A :class:`Gtk.Widget` is a derived class
+of a :class:`GObject.GObject`. It may be interesting to make a derived class to create
 a new widget, like a settings dialog.
 
 To inherit from :class:`GObject.GObject`, you must call :meth:`GObject.GObject.__init__`
@@ -56,7 +56,7 @@ Create new signals
 ^^^^^^^^^^^^^^^^^^
 
 New signals can be created by adding them to
-:attr:`GObject.GObject.__gsignals__`, a dictionary:
+:attr:`__gsignals__`, a dictionary:
 
 When a new signal is created, a method handler can also be defined, it will be
 called each time the signal is emitted. It is called do_signal_name.
@@ -82,8 +82,7 @@ The second part, ``None``, indicates the return type of the signal,
 usually ``None``.
 
 ``(int,)`` indicates the signal arguments, here, the signal will only
-take one argument, whose type is int. This argument type list must end with a
-comma.
+take one argument, whose type is int.  (In Python, tuples of length 1 end with a comma.)
 
 Signals can be emitted using :meth:`GObject.GObject.emit`:
 
@@ -95,7 +94,7 @@ Signals can be emitted using :meth:`GObject.GObject.emit`:
 Properties
 ----------
 One of GObject's nice features is its generic get/set mechanism for object
-properties. Each class inherited from :class:`GObject.GObject` can define new
+properties. Each class derived from :class:`GObject.GObject` can define new
 properties. Each property has a type which never changes (e.g. str, float,
 int...). For instance, they are used for :class:`Gtk.Button` where there is a
 "label" property which contains the text of the button.
@@ -327,7 +326,7 @@ API
 
     .. attribute:: __gsignals__
 
-        A dictionary where inherited class can define new signals.
+        A dictionary where derived class can define new signals.
 
         Each element in the dictionary is a new signal. The key is the signal
         name. The value is a tuple, with the form::
@@ -336,8 +335,8 @@ API
 
         :const:`GObject.SIGNAL_RUN_FIRST` can be replaced with
         :const:`GObject.SIGNAL_RUN_LAST` or :const:`GObject.SIGNAL_RUN_CLEANUP`.
-        ``None`` is the return type of the signal. ``(int,)`` is the list of the
-        parameters of the signal, it must end with a comma.
+        ``None`` is the return type of the signal. ``(int,)`` is the tuple of
+        parameters of the signal.  (In Python, tuples of length 1 end with a comma.)
 
     .. attribute:: __gproperties__
 
