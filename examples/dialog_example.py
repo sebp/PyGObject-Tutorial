@@ -41,6 +41,6 @@ class DialogWindow(Gtk.Window):
         dialog.destroy()
 
 win = DialogWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

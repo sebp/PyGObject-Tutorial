@@ -36,6 +36,6 @@ class HeaderBarWindow(Gtk.Window):
         self.add(Gtk.TextView())
 
 win = HeaderBarWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

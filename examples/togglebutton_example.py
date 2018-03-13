@@ -28,6 +28,6 @@ class ToggleButtonWindow(Gtk.Window):
         print("Button", name, "was turned", state)
 
 win = ToggleButtonWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
