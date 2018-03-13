@@ -1,0 +1,79 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: 2017-01-17 09:32+0100\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.11\n"
+
+#: ../../source/layout-table.txt:2
+msgid "Table"
+msgstr "Tabella"
+
+#: ../../source/layout-table.txt:4
+msgid ""
+":class:`Gtk.Table` has been deprecated since GTK+ version 3.4 and should not "
+"be used in newly-written code. Use the :ref:`layout-grid` class instead."
+msgstr ""
+":class:`Gtk.Table` è stato deprecato con GTK+ ver. 3.4 e non deve essere "
+"utilizzato nel codice recente. Utilizzare in alternativa la classe :ref:"
+"`layout-grid`."
+
+#: ../../source/layout-table.txt:8
+msgid ""
+"Tables allows us to place widgets in a grid similar to :class:`Gtk.Grid`."
+msgstr ""
+"Le tabelle ci permettono di posizionare i widget in maniera simile a :class:"
+"`Gtk.Grid`."
+
+#: ../../source/layout-table.txt:10
+msgid ""
+"The grid's dimensions need to be specified in the :class:`Gtk.Table` "
+"constructor. To place a widget into a box, use :meth:`Gtk.Table.attach`."
+msgstr ""
+"Le dimensioni della griglia devono essere indicate nel costruttore :class:"
+"`Gtk.Table`. Per inserire un widget in una casella, usate :meth:`Gtk.Table."
+"attach`."
+
+#: ../../source/layout-table.txt:13
+msgid ""
+":meth:`Gtk.Table.set_row_spacing` and :meth:`Gtk.Table.set_col_spacing` set "
+"the spacing between the rows at the specified row or column. Note that for "
+"columns, the space goes to the right of the column, and for rows, the space "
+"goes below the row."
+msgstr ""
+":meth:`Gtk.Table.set_row_spacing` e :meth:`Gtk.Table.set_col_spacing` "
+"impostano la spaziatura tra le righe e le colonne indicate. Si noti che per "
+"le colonne, lo spazio è alla destra della colonna, e per le righe lo spazio "
+"viene posto sotto la riga."
+
+#: ../../source/layout-table.txt:18
+msgid ""
+"You can also set a consistent spacing for all rows and/or columns with :meth:"
+"`Gtk.Table.set_row_spacings` and :meth:`Gtk.Table.set_col_spacings`. Note "
+"that with these calls, the last row and last column do not get any spacing."
+msgstr ""
+"È anche possibile impostare una spaziatura uniforme per tutte le righe e/o "
+"colonne con :meth:`Gtk.Table.set_row_spacings` e :meth:`Gtk.Table."
+"set_col_spacings`. Si noti che con queste chiamate, l'ultima riga e l'ultima "
+"colonna non ottengono alcune spaziatura."
+
+#: ../../source/layout-table.txt:22
+msgid "It is reccomened that you use the :class:`Gtk.Grid` for new code."
+msgstr "Si raccomanda di usare :class:`Gtk.Grid` per il nuovo codice."
+
+#: ../../source/layout-table.txt:26
+msgid "Example"
+msgstr "Esempio"

@@ -1,0 +1,646 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: 2017-01-16 18:53+0100\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# e8f7160efb414800bd9cc3fb4a5cd017
+#: ../../source/textview.txt:2
+msgid "Multiline Text Editor"
+msgstr "Editor di testo multilinea"
+
+# 5bde12b40e5f4fb6bed1c7ff3c07366d
+#: ../../source/textview.txt:4
+msgid ""
+"The :class:`Gtk.TextView` widget can be used to display and edit large "
+"amounts of formatted text. Like the :class:`Gtk.TreeView`, it has a model/"
+"view design. In this case the :class:`Gtk.TextBuffer` is the model which "
+"represents the text being edited. This allows two or more :class:`Gtk."
+"TextView` widgets to share the same :class:`Gtk.TextBuffer`, and allows "
+"those text buffers to be displayed slightly differently. Or you could "
+"maintain several text buffers and choose to display each one at different "
+"times in the same :class:`Gtk.TextView` widget."
+msgstr ""
+"Il widget :class:`Gtk.TextView` può essere utilizzato per visualizzare e "
+"modificare grandi quantità di testo formattato. Come :class:`Gtk.TreeView`, "
+"ha un design di tipo model-view. In questo caso, :class:`Gtk.TextBuffer` è "
+"il modello che rappresenta il testo in fase di modifica. Questo permette a "
+"due o più widget :class:`Gtk.TextView` di condividere lo stesso :class:`Gtk."
+"TextBuffer`, e permette a questi buffer di testo di essere visualizzati in "
+"modalità differenti. Si possono anche mantenere diversi buffer di testo e "
+"scegliere di visualizzarli in momenti diversi nello stesso widget :class:"
+"`Gtk.TextView`."
+
+# 0655fb0ae4634597937fba1dd63ab83a
+#: ../../source/textview.txt:13
+msgid "The View"
+msgstr "La vista"
+
+# 0c2513ef79ae4e2f965b37f22181cdfb
+#: ../../source/textview.txt:15
+msgid ""
+"The :class:`Gtk.TextView` is the frontend with which the user can add, edit "
+"and delete textual data. They are commonly used to edit multiple lines of "
+"text. When creating a :class:`Gtk.TextView` it contains its own default :"
+"class:`Gtk.TextBuffer`, which you can access via the :meth:`Gtk.TextView."
+"get_buffer` method."
+msgstr ""
+"Il :class:`Gtk.TextView` è il frontend con il quale l'utente può aggiungere, "
+"modificare e cancellare i dati testuali. Sono comunemente utilizzati per "
+"modificare più righe di testo. Quando si crea un :class:`Gtk.TextView` "
+"questo contiene il proprio :class:`Gtk.TextBuffer`, al quale si può accedere "
+"tramite il metodo :meth:`Gtk.TextView.get_buffer`."
+
+# 58145642733e4c4088270ce097f12b4c
+#: ../../source/textview.txt:21
+msgid ""
+"By default, text can be added, edited and removed from the :class:`Gtk."
+"TextView`. You can disable this by calling :meth:`Gtk.TextView."
+"set_editable`. If the text is not editable, you usually want to hide the "
+"text cursor with :meth:`Gtk.TextView.set_cursor_visible` as well. In some "
+"cases it may be useful to set the justification of the text with :meth:`Gtk."
+"TextView.set_justification`. The text can be displayed at the left edge, (:"
+"attr:`Gtk.Justification.LEFT`), at the right edge (:attr:`Gtk.Justification."
+"RIGHT`), centered (:attr:`Gtk.Justification.CENTER`), or distributed across "
+"the complete width (:attr:`Gtk.Justification.FILL`)."
+msgstr ""
+"In maniera predefinita, il testo può essere aggiunto, modificato e rimosso "
+"da :class:`Gtk.TextView`. È possibile disattivare questa possibilità "
+"chiamando :meth:`Gtk.TextView.set_editable`. Se il testo non è modificabile, "
+"di solito si desidera anche nascondere il cursore del testo con :meth:`Gtk."
+"TextView.set_cursor_visible`. In alcuni casi può essere utile impostare la "
+"giustificazione del testo con :meth:`Gtk.TextView.set_justification`. Il "
+"testo può essere visualizzato sul bordo sinistro, (:attr:`Gtk.Justification."
+"LEFT`), sul bordo destro (:attr:`Gtk.Justification.RIGHT`), centrato (:attr:"
+"`Gtk.Justification. CENTER`) o distribuito per tutta la larghezza "
+"disponibile (:attr:`Gtk.Justification.FILL`)."
+
+# a88d1dc8f5014aafa1240db268350dbb
+#: ../../source/textview.txt:31
+msgid ""
+"Another default setting of the :class:`Gtk.TextView` widget is long lines of "
+"text will continue horizontally until a break is entered. To wrap the text "
+"and prevent it going off the edges of the screen call :meth:`Gtk.TextView."
+"set_wrap_mode`."
+msgstr ""
+"Un'altra impostazione predefinita del widget :class:`Gtk.TextView` riguarda "
+"la visualizzazione di lunghe righe di testo che continueranno "
+"orizzontalmente fino a quando non viene inserita una pausa. Per interrompere "
+"il testo ed evitare che vada fuori dai margini chiamate :meth:`Gtk.TextView."
+"set_wrap_mode`."
+
+# ff8e7cc0c69b4765b7bfcff25a4fecc8
+#: ../../source/textview.txt:36
+msgid "The Model"
+msgstr "Il modello"
+
+# a0599ca5eac94346926797e2d2f32aa9
+#: ../../source/textview.txt:38
+msgid ""
+"The :class:`Gtk.TextBuffer` is the core of the :class:`Gtk.TextView` widget, "
+"and is used to hold whatever text is being displayed in the :class:`Gtk."
+"TextView`. Setting and retrieving the contents is possible with :meth:`Gtk."
+"TextBuffer.set_text` and :meth:`Gtk.TextBuffer.get_text`. However, most text "
+"manipulation is accomplished with *iterators*, represented by a :class:`Gtk."
+"TextIter`. An iterator represents a position between two characters in the "
+"text buffer. Iterators are not valid indefinitely; whenever the buffer is "
+"modified in a way that affects the contents of the buffer, all outstanding "
+"iterators become invalid."
+msgstr ""
+"Il :class:`Gtk.TextBuffer` è il nucleo del widget :class:`Gtk.TextView`, ed "
+"è utilizzato per contenere qualsiasi testo visualizzabile in :class:`Gtk."
+"TextView`. E' possibile configurare e recuperare il contenuto con :meth:`Gtk."
+"TextBuffer.set_text` e :meth:`Gtk.TextBuffer.get_text`. Tuttavia, la "
+"manipolazione del testo è compiuta in gran parte con *iterators*, "
+"rappresentati da un :class:`Gtk.TextIter`. Un iteratore rappresenta una "
+"posizione tra due caratteri nel buffer di testo. Gli iteratori non sono "
+"sempre validi; quando il buffer è modificato in maniera tale che il suo "
+"contenuto ne risenta, tutti gli iteratori non sono più validi."
+
+# c5d62f599d0949f1b9e2e279c394901c
+#: ../../source/textview.txt:48
+msgid ""
+"Because of this, iterators can't be used to preserve positions across buffer "
+"modifications. To preserve a position, use :class:`Gtk.TextMark`. A text "
+"buffer contains two built-in marks; an \"insert\" mark (which is the "
+"position of the cursor) and the \"selection_bound\" mark. Both of them can "
+"be retrieved using :meth:`Gtk.TextBuffer.get_insert` and :meth:`Gtk."
+"TextBuffer.get_selection_bound`, respectively. By default, the location of "
+"a :class:`Gtk.TextMark` is not shown. This can be changed by calling :meth:"
+"`Gtk.TextMark.set_visible`."
+msgstr ""
+"Per tale ragione, gli iteratori non possono essere utilizzati per conservare "
+"posizioni attraverso modifiche al buffer. Per conservare una posizione, "
+"usare :class:`Gtk.TextMark`. Un buffer di testo contiene due marchi al "
+"proprio interno; un marchio \"insert\" (che è la posizione del cursore) e il "
+"marchio \"selection_bound\". Ciascuno di essi può essere recuperato "
+"utilizzando rispettivamente :meth:`Gtk.TextBuffer.get_insert` e :meth:`Gtk."
+"TextBuffer.get_selection_bound`. In maniera predefinita, la posizione di un :"
+"class:`Gtk.TextMark` non viene mostrato. Si può cambiare il comportamento "
+"chiamando :meth:`Gtk.TextMark.set_visible`."
+
+# db78bf314c154058b3f18f141844ace5
+#: ../../source/textview.txt:56
+msgid ""
+"Many methods exist to retrieve a :class:`Gtk.TextIter`. For instance, :meth:"
+"`Gtk.TextBuffer.get_start_iter` returns an iterator pointing to the first "
+"position in the text buffer, whereas :meth:`Gtk.TextBuffer.get_end_iter` "
+"returns an iterator pointing past the last valid character. Retrieving the "
+"bounds of the selected text can be achieved by calling :meth:`Gtk.TextBuffer."
+"get_selection_bounds`."
+msgstr ""
+"Esistono molti metodi per recuperare un :class:`Gtk.TextIter`. Per esempio, :"
+"meth:`Gtk.TextBuffer.get_start_iter` restituisce un iteratore che punta alla "
+"prima posizione nel buffer di testo, mentre :meth:`Gtk.TextBuffer."
+"get_end_iter` restituisce un iteratore che punta dopo l'ultimo carattere "
+"valido. Si possono recuperare i limiti del testo selezionato chiamando :meth:"
+"`Gtk.TextBuffer.get_selection_bounds`."
+
+# 080f52b8ea674c32a3dbea799570fb2e
+#: ../../source/textview.txt:63
+msgid ""
+"To insert text at a specific position use :meth:`Gtk.TextBuffer.insert`. "
+"Another useful method is :meth:`Gtk.TextBuffer.insert_at_cursor` which "
+"inserts text wherever the cursor may be currently positioned. To remove "
+"portions of the text buffer use :meth:`Gtk.TextBuffer.delete`."
+msgstr ""
+"Per inserire il testo in una specifica posizione, usate :meth:`Gtk."
+"TextBuffer.insert`. Un altro metodo utile è :meth:`Gtk.TextBuffer."
+"insert_at_cursor` che inserisce il testo laddove il cursore potrebbe essere "
+"attualmente collocato. Per rimuovere porzioni di testo nel buffer usate :"
+"meth:`Gtk.TextBuffer.delete`."
+
+# eade4584e8014a909ddde719a653d5ef
+#: ../../source/textview.txt:68
+msgid ""
+"In addition, :class:`Gtk.TextIter` can be used to locate textual matches in "
+"the buffer using :meth:`Gtk.TextIter.forward_search` and :meth:`Gtk.TextIter."
+"backward_search`. The start and end iters are used as the starting point of "
+"the search and move forwards/backwards depending on requirements."
+msgstr ""
+"In aggiunta, :class:`Gtk.TextIter` può essere utilizzato per individuare "
+"abbinamenti di testo nel buffer utilizzando :meth:`Gtk.TextIter."
+"forward_search` e :meth:`Gtk.TextIter.backward_search`. Gli iteratori di "
+"inizio e fine sono usati come punto di partenza della ricerca e si muovono "
+"avanti/indietro a seconda delle esigenze."
+
+# e6d346014a1b4c81b346b33548024031
+#: ../../source/textview.txt:75
+msgid "Tags"
+msgstr "Le tag"
+
+# 2d6db17c03904804b0d3f5e81a07714e
+#: ../../source/textview.txt:77
+msgid ""
+"Text in a buffer can be marked with tags. A tag is an attribute that can be "
+"applied to some range of text. For example, a tag might be called \"bold\" "
+"and make the text inside the tag bold. However, the tag concept is more "
+"general than that; tags don't have to affect appearance. They can instead "
+"affect the behaviour of mouse and key presses, \"lock\" a range of text so "
+"the user can't edit it, or countless other things. A tag is represented by "
+"a :class:`Gtk.TextTag` object. One :class:`Gtk.TextTag` can be applied to "
+"any number of text ranges in any number of buffers."
+msgstr ""
+"Il testo in un buffer può essere contrassegnato con tag. Una tag è un "
+"attributo che può essere applicato ad una porzione di testo. Ad esempio, una "
+"tag potrebbe essere chiamata \"bold\" e rendere il testo all'interno della "
+"stessa in grassetto. Tuttavia, il concetto di tag è generalizzabile; le tag "
+"non devono influenzare l'aspetto. Esse possono invece influenzare il "
+"comportamento del mouse e dei tasti premuti, \"bloccare\" una parte di testo "
+"in modo che l'utente non possa modificarlo o innumerevoli altre cose. Una "
+"tag è rappresentata da un oggetto :class:`Gtk.TextTag`. Un :class:`Gtk."
+"TextTag` può essere applicato a qualsiasi numero di intervalli di testo in "
+"qualsiasi numero di buffer."
+
+# 551e286f9e294c5ea4b6248c74bc3c12
+#: ../../source/textview.txt:86
+msgid ""
+"Each tag is stored in a :class:`Gtk.TextTagTable`. A tag table defines a set "
+"of tags that can be used together. Each buffer has one tag table associated "
+"with it; only tags from that tag table can be used with the buffer. A single "
+"tag table can be shared between multiple buffers, however."
+msgstr ""
+"Ogni tag viene memorizzata in una :class:`Gtk.TextTagTable`. Una tabella di "
+"tag definisce un insieme di tag utilizzabili insieme. Ogni buffer ha una "
+"tabella di tag ad esso associato; solo le tag di quella tabella possono "
+"essere utilizzate con il buffer. Una singola tabella di tag può essere "
+"tuttavia condivisa tra più buffer."
+
+# 5e04f294c83a41d7b358321e4a61c1cd
+#: ../../source/textview.txt:91
+msgid ""
+"To specify that some text in the buffer should have specific formatting, you "
+"must define a tag to hold that formatting information, and then apply that "
+"tag to the region of text using :meth:`Gtk.TextBuffer.create_tag` and :meth:"
+"`Gtk.TextBuffer.apply_tag`::"
+msgstr ""
+"Per indicare che un testo nel buffer dovrebbe avere una formattazione "
+"particolare, è necessario definire una tag con le informazioni di "
+"formattazione, e quindi applicare la tag stessa alla porzione di testo con :"
+"meth:`Gtk.TextBuffer.create_tag` e :meth:`Gtk.TextBuffer.apply_tag`::"
+
+# 245f3f6cd3f2406c8bea3ae99b5ea9ed
+#: ../../source/textview.txt:99
+msgid "The following are some of the common styles applied to text:"
+msgstr "Seguono alcuni degli stili comuni applicati al testo:"
+
+# 870abd259d284ad39f52ea3b9504fc9a
+#: ../../source/textview.txt:101
+msgid "Background colour (\"background\" property)"
+msgstr "Colore in primo piano (proprietà \"foreground\")"
+
+# 34de08c5dd54474295f6702c72befe66
+#: ../../source/textview.txt:102
+msgid "Foreground colour (\"foreground\" property)"
+msgstr "Colore di sfondo (proprietà \"background\")"
+
+# 20463f72b3654974b448d356c71f69c6
+#: ../../source/textview.txt:103
+msgid "Underline (\"underline\" property)"
+msgstr "Sottolineato (proprietà \"underline\")"
+
+# 2f0eaa513e854ab4864332897a8340c4
+#: ../../source/textview.txt:104
+msgid "Bold (\"weight\" property)"
+msgstr "Grassetto (proprietà \"weight\")"
+
+# 5b25726fb5924dc4a63b57de56e1654b
+#: ../../source/textview.txt:105
+msgid "Italics (\"style\" property)"
+msgstr "Corsivo (proprietà \"style\")"
+
+# a3fa36bb4aaf4c69a30a01b12d1ff0f9
+#: ../../source/textview.txt:106
+msgid "Strikethrough (\"strikethrough\" property)"
+msgstr "Barrato (proprietà \"strikethrough\")"
+
+# 95ca6399c1794c45891e6fc1e692d68f
+#: ../../source/textview.txt:107
+msgid "Justification (\"justification\" property)"
+msgstr "Giustificato (proprietà \"justification\")"
+
+# 948f21967d6540409448b4ba856b6998
+#: ../../source/textview.txt:108
+msgid "Size (\"size\" and \"size-points\" properties)"
+msgstr "Dimensione (proprietà \"size\" e \"size-points\")"
+
+# 72040cf89f7e4b1196e2610772398856
+#: ../../source/textview.txt:109
+msgid "Text wrapping (\"wrap-mode\" property)"
+msgstr "Andata a capo del testo (proprietà \"wrap-mode\")"
+
+# 23972a4a896a4346b73deffea88021b2
+#: ../../source/textview.txt:111
+msgid ""
+"You can also delete particular tags later using :meth:`Gtk.TextBuffer."
+"remove_tag` or delete all tags in a given region by calling :meth:`Gtk."
+"TextBuffer.remove_all_tags`."
+msgstr ""
+"È anche possibile eliminare le tag in un secondo momento con :meth:`Gtk."
+"TextBuffer.remove_tag` o eliminarle tutte in una determinata regione con :"
+"meth:`Gtk.TextBuffer.remove_all_tags`."
+
+# c8884a58103e466b9c071d144f8c8295
+#: ../../source/textview.txt:115
+msgid "Example"
+msgstr "Esempio"
+
+# 3d3f797c5cae4337a5fa286369c2e1e2
+#~ msgid "TextView Objects"
+#~ msgstr "Oggetti TextView"
+
+# 384b87ce9a19472b96584b6968b26ed6
+#~ msgid ""
+#~ "Creates a new :class:`Gtk.TextView` associated with an empty default :"
+#~ "class:`Gtk.TextBuffer`."
+#~ msgstr ""
+#~ "Crea una nuova :class:`Gtk.TextView` associata ad un :class:`Gtk."
+#~ "TextBuffer` vuoto predefinito."
+
+# 3b0dca7a37624c5cabcd6db6ab5ec9ef
+#~ msgid ""
+#~ "Returns the :class:`Gtk.TextBuffer` being displayed by this text view."
+#~ msgstr ""
+#~ "Restituisce il :class:`Gtk.TextBuffer` visualizzato da questo widget."
+
+# 31796eead80c49368e6a7a110a15b446
+#~ msgid "Sets the default editability of this :class:`Gtk.TextView`."
+#~ msgstr ""
+#~ "Imposta la modificabilità predefinita di questo :class:`Gtk.TextView`."
+
+# 61d53785115e481c8f3993c845098840
+#~ msgid ""
+#~ "Toggles whether the insertion point is displayed. A buffer with no "
+#~ "editable text probably shouldn't have a visible cursor, so you may want "
+#~ "to turn the cursor off."
+#~ msgstr ""
+#~ "Attiva o disattiva il punto di inserimento visualizzato. Un buffer senza "
+#~ "testo modificabile probabilmente non dovrebbe avere un cursore visibile, "
+#~ "quindi si consiglia di disabilitare il cursore."
+
+# 344eeeed95144a6a8b9245699986c13a
+#~ msgid "Sets the default justification of text."
+#~ msgstr "Imposta la giustificazione del testo predefinita"
+
+# 9f9442be837d45609b68de3253425e19
+#~ msgid "*justification* can be one of the following values:"
+#~ msgstr "*justification* può essere uno dei seguenti valori:"
+
+# 05f00d60883444a79a0b6e0d7463a74e
+#~ msgid ":attr:`Gtk.Justification.LEFT`: Text is placed at the left edge."
+#~ msgstr ":attr:`Gtk.Justification.LEFT`: Testo allineato al lato sinistro."
+
+# c4d4b73bc5084a059e87f23daaa4eb32
+#~ msgid ":attr:`Gtk.Justification.RIGHT`: Text is placed at the right edge."
+#~ msgstr ":attr:`Gtk.Justification.RIGHT`: Testo allineato al lato destro."
+
+# babd50d640ea4127884a3b7feb297ac0
+#~ msgid ":attr:`Gtk.Justification.CENTER`: Text is placed in the center."
+#~ msgstr ":attr:`Gtk.Justification.CENTER`: Testo allineato al centro."
+
+# 4cbf1898567d49ee9221a45cdfc60dc1
+#~ msgid ""
+#~ ":attr:`Gtk.Justification.FILL`: Text is distributed across the complete "
+#~ "width."
+#~ msgstr ""
+#~ ":attr:`Gtk.Justification.FILL`: Il testo è distribuito per l'intera "
+#~ "larghezza."
+
+# 2f129002c92844cea0f22d6a7df8acfa
+#~ msgid "Sets the line wrapping for the view."
+#~ msgstr "Imposta l'andata a capo della linea per la vista."
+
+# 5fffbd6afc1c4497b4e3710d7b868afb
+#~ msgid "*wrap_mode* can be one of the following values:"
+#~ msgstr "*wrap_mode* può essere uno dei seguenti valori:"
+
+# 951e8bb4824345d696c7bd178752a284
+#~ msgid ""
+#~ ":attr:`Gtk.WrapMode.NONE`: Do not wrap lines; just make the text area "
+#~ "wider."
+#~ msgstr ""
+#~ ":attr:`Gtk.WrapMode.NONE`: Non divide le linee; Lascia che il testo "
+#~ "scorra liberamente."
+
+# 40f7b3ce28af45f6a6fc8c7e76577dd6
+#~ msgid ""
+#~ ":attr:`Gtk.WrapMode.CHAR`: Wrap text, breaking lines anywhere the cursor "
+#~ "can appear (between characters, usually)."
+#~ msgstr ""
+#~ ":attr:`Gtk.WrapMode.CHAR`: Divide il testo, andando a capo ovunque il "
+#~ "cursore sia visibile (tra i carattere, di solito)."
+
+# d1f903727f584cf5b3515a7abba5d62e
+#~ msgid ""
+#~ ":attr:`Gtk.WrapMode.WORD`: Wrap text, breaking lines in between words."
+#~ msgstr ""
+#~ ":attr:`Gtk.WrapMode.WORD`: Divide il testo, andando a capo tra le parole."
+
+# 2cdd020b5cc0427caafb166f21316c0b
+#~ msgid ""
+#~ ":attr:`Gtk.WrapMode.WORD_CHAR`: Wrap text, breaking lines in between "
+#~ "words, or if that is not enough, also between `graphemes`_."
+#~ msgstr ""
+#~ ":attr:`Gtk.WrapMode.WORD_CHAR`: Divide il testo, andando a capo tra le "
+#~ "parole oppure, se non abbastanza, tra i `grafemi`_."
+
+# 964b43f1ad7d438a9ed5ab643fe3a038
+#~ msgid "TextBuffer Objects"
+#~ msgstr "Oggetti TextBuffer"
+
+# 4e26cd4de40c4798b0a80a8996d0b31e
+#~ msgid ""
+#~ "Deletes current contents of this buffer, and inserts *length* characters "
+#~ "of *text* instead. If *length* is -1 or omitted, *text* is inserted "
+#~ "completely."
+#~ msgstr ""
+#~ "Elimina il contenuto corrente di questo buffer, e inserisce solo una "
+#~ "porzione di caratteri lunga *length* del testo *text*. Se *lenght* è -1 o "
+#~ "omesso, *text* viene inserito completamente."
+
+# 6f71bc7c451a462aa67ebd058f548343
+#~ msgid ""
+#~ "Returns the text in the range *start_iter* (included) and *end_iter* "
+#~ "(excluded). Excludes undisplayed text."
+#~ msgstr ""
+#~ "Restituisce il testo nell'intervallo *start_iter* (incluso) e *end_iter* "
+#~ "(escluso). Esclude il testo non visualizzato."
+
+# e977ab463b234eb88dcd6ce775250410
+#~ msgid ""
+#~ "Returns the :class:`Gtk.TextMark` that represents the cursor (insertion "
+#~ "point)."
+#~ msgstr ""
+#~ "Restituisce il :class:`Gtk.TextMark` che rappresenta il cursore (punto di "
+#~ "inserimento)."
+
+# 8586018b368d46068fa2b802465e1929
+#~ msgid ""
+#~ "Returns the :class:`Gtk.TextMark` that represents the selection bound."
+#~ msgstr ""
+#~ "Restituisce il :class:`Gtk.TextMark` che rappresenta il vincolo di "
+#~ "selezione."
+
+# 0258e5fcb43f48fe96f76090dd1d6891
+#~ msgid ""
+#~ "Creates a :class:`Gtk.TextMark` at the position of the :class:`Gtk."
+#~ "TextIter` *where*. If *mark_name* is ``None``, the mark is anonymous; "
+#~ "otherwise, the mark can be retrieved by name using :meth:`get_mark`. If a "
+#~ "mark has left gravity, and text is inserted at the mark's current "
+#~ "location, the mark will be moved to the left of the newly-inserted text. "
+#~ "If the mark has right gravity (*left_gravity* is ``False``), the mark "
+#~ "will end up on the right of newly-inserted text. The standard left-to-"
+#~ "right cursor is a mark with right gravity (when you type, the cursor "
+#~ "stays on the right side of the text you're typing)."
+#~ msgstr ""
+#~ "Crea un :class:`Gtk.TextMark` alla posizione *where* del :class:`Gtk."
+#~ "TextIter`. Se *mark_name* è ``None``, il marchio è anonimo; altrimenti, "
+#~ "il marchio può essere recuperato per nome utilizzando :meth:`get_mark`. "
+#~ "Se un marchio è bilanciato a sinistra, e il testo viene inserito alla "
+#~ "posizione corrente del marchio, il marchio sarà collocato a sinistra del "
+#~ "testo appena inserito. Se il marchio è bilanciato a destra "
+#~ "(*left_gravity* è ``False``), il marchio finirà a destra del testo appena "
+#~ "inserito. Il cursore standard da sinistra-a-destra è un marchio con "
+#~ "bilanciamento a destra (quando si digita, il cursore rimane sul lato "
+#~ "destro del testo che si sta digitando)."
+
+# 3845152af22b4c02afb121cb7d658c16
+#~ msgid "If *left_gravity* is omitted, it defaults to ``False``."
+#~ msgstr "Se *left_gravity* è omesso, il valore predefinito è ``False``."
+
+# 02a06026c6b44ef182e8513f216bff92
+#~ msgid ""
+#~ "Returns the :class:`Gtk.TextMark` named name in this buffer, or ``None`` "
+#~ "if no such mark exists in the buffer."
+#~ msgstr ""
+#~ "Restituisce il nome indicato in :class:`Gtk.TextMark` in questo buffer, o "
+#~ "``None`` se tale marchio non esiste nel buffer."
+
+# e55880da84644c0a8bdcbe87031e9b85
+#~ msgid ""
+#~ "Returns a :class:`Gtk.TextIter` pointing to first position in this buffer."
+#~ msgstr ""
+#~ "Restituisce un :class:`Gtk.TextIter` che punta alla prima posizione di "
+#~ "questo buffer."
+
+# 90346ebda8ad4de3823cdb32b5f8c26f
+#~ msgid ""
+#~ "Returns a :class:`Gtk.TextIter` pointing past the last valid character in "
+#~ "this buffer."
+#~ msgstr ""
+#~ "Restituisce un :class:`Gtk.TextIter` indicando l'ultimo carattere valido "
+#~ "in questo buffer."
+
+# 17895600d5e74971a3639153b2b1bdb5
+#~ msgid ""
+#~ "Returns a tuple of two :class:`Gtk.TextIter` objects pointing to the "
+#~ "first character of the selection and to the first character after the "
+#~ "selection, respectively. If no text is selected an empty tuple is "
+#~ "returned."
+#~ msgstr ""
+#~ "Restituisce una tupla di due oggetti :class:`Gtk.TextIter` che puntano "
+#~ "rispettivamente al primo carattere della selezione e al primo carattere "
+#~ "dopo la selezione. Se non viene selezionato alcun testo viene restituita "
+#~ "una tupla vuota."
+
+# b7785ea9f7d64279a4a28940be5fdb8f
+#~ msgid ""
+#~ "Inserts *length* characters of *text* at position *text_iter*. If "
+#~ "*length* is -1 or omitted, *text* is inserted completely."
+#~ msgstr ""
+#~ "Inserisce un numero di caratteri *lenght* di *text* alla posizione "
+#~ "*text_iter*. Se *length* è -1 o omesso, *text* viene inserito "
+#~ "completamente."
+
+# 0854619e3bc14e07a3500221300fb030
+#~ msgid ""
+#~ "Simply calls :meth:`insert`, using the current cursor position as the "
+#~ "insertion point."
+#~ msgstr ""
+#~ "Semplicemente chiama :meth:`insert`, utilizzando la posizione corrente "
+#~ "del cursore come punto di inserimento."
+
+# 30cb808d12a840c6b380b072013b0864
+#~ msgid "Deletes text between *start_iter* and *end_iter*."
+#~ msgstr "Elimina il testo tra *start_iter* e *end_iter*."
+
+# 5991559cec58448786fb69919062e148
+#~ msgid "Creates a tag and adds it to the tag table of this buffer."
+#~ msgstr "Crea una tag e la aggiunge alla tabella tag di questo buffer."
+
+# 08f117f394394fcdb6a5e56ade78e178
+#~ msgid ""
+#~ "If *tag_name* is ``None``, the tag is anonymous, otherwise a tag with the "
+#~ "same name must not already exist in the tag table of the buffer."
+#~ msgstr ""
+#~ "Se *tag_name* è ``None``, il tag è anonimo, altrimenti un tag con lo "
+#~ "stesso nome non deve esistere già nella tabella tag del buffer."
+
+# fcc63756be434c5082d811c1319ea097
+#~ msgid ""
+#~ "*kwargs* is an arbitrary number of key-value pairs that represent a list "
+#~ "properties to set on the tag, as with ``tag.set_property(prop_name, "
+#~ "value)``."
+#~ msgstr ""
+#~ "*kwargs* è un numero arbitrario di coppie chiave-valore che rappresentano "
+#~ "una lista di proprietà da impostare sul tag, come con ``tag.set_property "
+#~ "(nome_proprietà, valore)``."
+
+# 2aa73dddd0d048c7a6006a00aa3d8c43
+#~ msgid "Applies *tag* to the given range."
+#~ msgstr "Applica *tag* ad un dato intervallo."
+
+# 844f1a9e62804fb5bcfc46defc5d2ef4
+#~ msgid "Removes all occurrences of *tag* from the given range."
+#~ msgstr "Rimuove tutte le occorrenze di *tag* dall'intervallo indicato."
+
+# 2277e113a19e4fe087a77dd0bfa2442f
+#~ msgid "Removes all tags in the given range."
+#~ msgstr "Rimuove tutte le tag in un dato intervallo."
+
+# e6c2b30d0fac4c178a14ca7bdc7b25ab
+#~ msgid ""
+#~ "Searches forward for *needle*. The search will not continue past the :"
+#~ "class:`Gtk.TextIter` *limit*."
+#~ msgstr ""
+#~ "Cerca in avanti per *needle*. La ricerca non continuerà oltre la fine di :"
+#~ "class:`Gtk.TextIter`."
+
+# aa8269e42ecb4f4ea83e78cdb34e9285
+#~ msgid ""
+#~ "*flags* can be set to one of the following, or any combination of it by "
+#~ "concatenating them with the bitwise-OR operator ``|``."
+#~ msgstr ""
+#~ "I *flags* possono essere impostati su una o qualsiasi combinazione "
+#~ "concatenandoli con l'operatore bitwise OR `` | ``."
+
+# 6334d579a55e429bb08ca7e310e0fbb0
+#~ msgid "0: The match must be exact."
+#~ msgstr "0: L'abbinamento dev'essere esatto."
+
+# 306d2dd358ba46cd946a356709c94d5d
+#~ msgid ""
+#~ ":attr:`Gtk.TextSearchFlags.VISIBLE_ONLY`: The match may have invisible "
+#~ "text interspersed in *needle*. i.e. *needle* will be a possibly-"
+#~ "noncontiguous subsequence of the matched range."
+#~ msgstr ""
+#~ ":attr:`Gtk.TextSearchFlags.VISIBLE_ONLY`: L'abbinata può avere un testo "
+#~ "invisibile intervallato in *needle*. In altri termini, *needle* sarà una "
+#~ "successione possibilmente non contigua dell'intervallo abbinato."
+
+# c09fa46bdc2547ca8fb27baa1416976f
+#~ msgid ""
+#~ ":attr:`Gtk.TextSearchFlags.TEXT_ONLY`: The match may have pixbufs or "
+#~ "child widgets mixed inside the matched range."
+#~ msgstr ""
+#~ ":attr:`Gtk.TextSearchFlags.TEXT_ONLY`: L'abbinata può avere pixbufs o "
+#~ "widget figli mescolati all'interno dell'intervallo abbinato."
+
+# bc3d1e085a574c099e6581733d394d5a
+#~ msgid ""
+#~ ":attr:`Gtk.TextSearchFlags.CASE_INSENSITIVE`: The text will be matched "
+#~ "regardless of what case it is in."
+#~ msgstr ""
+#~ ":attr:`Gtk.TextSearchFlags.CASE_INSENSITIVE`: Il testo sarà abbinato "
+#~ "indipendentemente da minuscole o maiuscole."
+
+# 71b5d80ce7ad4ba9bff1792759f6be2f
+#~ msgid ""
+#~ "Returns a tupel containing a :class:`Gtk.TextIter` pointing to the start "
+#~ "and to the first character after the match. If no match was found, "
+#~ "``None`` is returned."
+#~ msgstr ""
+#~ "Restituisce una tupla contenente un :class:`Gtk.TextIter` che punta "
+#~ "all'inizio e al primo carattere dopo il confronto. Se non è stata trovata "
+#~ "alcuna corrispondenza, `` None`` viene restituito."
+
+# 41bfa4a9bc224bf78316905854faa05e
+#~ msgid "Same as :meth:`forward_search`, but moves backward."
+#~ msgstr "Come :meth:`forward_search`, ma si muove all'indietro."
+
+# c2184fa23b9e4b7ea037d4df5d101c4a
+#~ msgid ""
+#~ "Sets the visibility of this mark; the insertion point is normally "
+#~ "visible, i.e. you can see it as a vertical bar. Also, the text widget "
+#~ "uses a visible mark to indicate where a drop will occur when dragging-and-"
+#~ "dropping text. Most other marks are not visible. Marks are not visible by "
+#~ "default."
+#~ msgstr ""
+#~ "Imposta la visibilità di questo marchio; il punto di inserimento è "
+#~ "normalmente visibile, cioè si può vedere come una barra verticale. "
+#~ "Inoltre, il widget di testo utilizza un segno visibile per indicare una "
+#~ "destinazione durante il drag and drop di testo. Molti altri segni non "
+#~ "sono visibili. I marchi non sono visibili per impostazione predefinita."

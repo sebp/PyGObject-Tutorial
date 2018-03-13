@@ -1,0 +1,169 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: 2017-01-16 14:59+0100\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 80fadf9868a8470d8b50710c662374fc
+#: ../../source/progressbar.txt:2
+msgid "ProgressBar"
+msgstr "Barra d'avanzamento"
+
+# fac482ba66854edf817a0c031fd81d7c
+#: ../../source/progressbar.txt:4
+msgid ""
+"The :class:`Gtk.ProgressBar` is typically used to display the progress of a "
+"long running operation. It provides a visual clue that processing is "
+"underway. The :class:`Gtk.ProgressBar` can be used in two different modes: "
+"*percentage mode* and *activity mode*."
+msgstr ""
+"La classe :class:`Gtk.ProgressBar` viene in genere utilizzata per "
+"visualizzare l'avanzamento di un'operazione con lunga esecuzione. Fornisce "
+"un indicatore visivo sull'elaborazione in corso. :class:`Gtk.ProgressBar` "
+"può essere utilizzata in due modalità differenti: la *modalità percentuale* "
+"e la *modalità di attività*."
+
+# 8329931af0a84e2cae29afde9ea40f52
+#: ../../source/progressbar.txt:9
+msgid ""
+"When an application can determine how much work needs to take place (e.g. "
+"read a fixed number of bytes from a file) and can monitor its progress, it "
+"can use the :class:`Gtk.ProgressBar` in *percentage mode* and the user sees "
+"a growing bar indicating the percentage of the work that has been completed. "
+"In this mode, the application is required to call :meth:`Gtk.ProgressBar."
+"set_fraction` periodically to update the progress bar, passing a float "
+"between 0 and 1 to provide the new percentage value."
+msgstr ""
+"Quando un'applicazione può determinare la quantità di lavoro che dovrà deve "
+"avvenire (ad esempio, leggere un numero fisso di byte da un file) e può "
+"monitorare i progressi, si può utilizzare :class:`Gtk.ProgressBar` in "
+"modalità *percentuale* e l'utente vedrà una barra che indica la percentuale "
+"di lavoro completato. In questo modo, l'applicazione deve chiamare :meth:"
+"`Gtk.ProgressBar.set_fraction` periodicamente per aggiornare la barra di "
+"avanzamento e passare un numero a virgola mobile compreso tra 0 e 1 per "
+"fornire il nuovo valore percentuale."
+
+# b76ca925d0ea44099a4951c5e5f08bb1
+#: ../../source/progressbar.txt:17
+msgid ""
+"When an application has no accurate way of knowing the amount of work to do, "
+"it can use *activity mode*, which shows activity by a block moving back and "
+"forth within the progress area. In this mode, the application is required to "
+"call :meth:`Gtk.ProgressBar.pulse` periodically to update the progress bar. "
+"You can also choose the step size, with the :meth:`Gtk.ProgressBar."
+"set_pulse_step` method."
+msgstr ""
+"Quando un'applicazione non ha modo preciso per sapere la quantità di lavoro "
+"da svolgere, è possibile utilizzare la *modalità di attività*, la quale "
+"mostra  un blocco che si muove avanti e indietro all'interno dell'area di "
+"progresso. In questo modo, l'applicazione deve chiamare :meth:`Gtk."
+"ProgressBar.pulse` periodicamente per aggiornare la barra di avanzamento. È "
+"anche possibile scegliere la dimensione del passo, con il :meth:`metodo Gtk."
+"ProgressBar.set_pulse_step`."
+
+# 1ddb8c54c62645559b9df555bb93c392
+#: ../../source/progressbar.txt:24
+msgid ""
+"By default, :class:`Gtk.ProgressBar` is horizontal and left-to-right, but "
+"you can change it to a vertical progress bar by using the :meth:`Gtk."
+"ProgressBar.set_orientation` method. Changing the direction the progress bar "
+"grows can be done using :meth:`Gtk.ProgressBar.set_inverted`. :class:`Gtk."
+"ProgressBar` can also contain text which can be set by calling :meth:`Gtk."
+"ProgressBar.set_text` and :meth:`Gtk.ProgressBar.set_show_text`."
+msgstr ""
+"In maniera predefinita, una classe :class:`Gtk.ProgressBar` è orizzontale e "
+"scorre da sinistra a destra, ma è possibile usare l'orientamento verticale "
+"con il metodo :meth:`Gtk.ProgressBar.set_orientation`. Cambiare la direzione "
+"in cui la barra di avanzamento si muove è possibile con :meth:`Gtk."
+"ProgressBar.set_inverted`. :class:`Gtk.ProgressBar` può anche contenere "
+"testo che può essere impostato con :meth:`Gtk.ProgressBar.set_text` e :meth:"
+"`Gtk.ProgressBar.set_show_text`."
+
+# 9fb5edda725e4662a1adb0ed9e9173ac
+#: ../../source/progressbar.txt:32
+msgid "Example"
+msgstr "Esempio"
+
+# 191a572bb6794333be5371c41dd681ad
+#~ msgid "ProgressBar Objects"
+#~ msgstr "Oggetti ProgressBar"
+
+# 5f0d0dec9c1c47f590125e84aa5498fb
+#~ msgid ""
+#~ "Causes the progress bar to \"fill in\" the given fraction of the bar. "
+#~ "*fraction* should be between 0.0 and 1.0, inclusive."
+#~ msgstr ""
+#~ "Fa in modo che la barra di avanzamento \"riempia\" la data porzione della "
+#~ "barra. Il valore di *fraction* dovrebbe essere compreso tra 0,0 e 1,0 , "
+#~ "estremi inclusi."
+
+# 3e152863c37446a397f9cfa7f5b133db
+#~ msgid ""
+#~ "Sets the fraction of total progress bar length to move the bouncing block "
+#~ "for each call to :meth:`pulse`."
+#~ msgstr ""
+#~ "Imposta la porzione di lunghezza totale della barra per spostare "
+#~ "l'indicatore di attività per ogni chiamata a :meth:`pulse`."
+
+# 1350ef2941af4a8fad39895c491d3a4c
+#~ msgid ""
+#~ "Indicates that some progress is made, but you don't know how much. Causes "
+#~ "the progress bar to enter *activity mode*, where a block bounces back and "
+#~ "forth. Each call to :meth:`pulse` causes the block to move by a little "
+#~ "bit (the amount of movement per pulse is determined by :meth:"
+#~ "`set_pulse_step`)."
+#~ msgstr ""
+#~ "Indica che qualche progresso è stato compiuto, senza sapere esattamente "
+#~ "quanto. Mette la barra di avanzamento in modalità *attività*, dove un "
+#~ "blocco rimbalza avanti e indietro. Ogni chiamata a :meth:`pulse` provoca "
+#~ "il movimento del blocco (la velocità è determinata da :meth:"
+#~ "`set_pulse_step`)."
+
+# e438da9e405c49df905b3deff50d344c
+#~ msgid "Sets the orientation. *orientation* can be one of"
+#~ msgstr "Importa l'orientamento. *orientation* può essere uno di"
+
+# 2ead028ecd014ebcb99ab15ce75b6c9c
+#~ msgid ":attr:`Gtk.Orientation.HORIZONTAL`"
+#~ msgstr ":attr:`Gtk.Orientation.HORIZONTAL`"
+
+# 434b37a9576b466499faf74ad054e560
+#~ msgid ":attr:`Gtk.Orientation.VERTICAL`"
+#~ msgstr ":attr:`Gtk.Orientation.VERTICAL`"
+
+# 56c25b2364e14731bae57c208ad2f72c
+#~ msgid ""
+#~ "Sets whether the progressbar will show text superimposed over the bar. "
+#~ "The shown text is either the value of the \"text\" property or, if that "
+#~ "is ``None``, the \"fraction\" value, as a percentage."
+#~ msgstr ""
+#~ "Configura la visualizzazione o meno sullla barra di avanzamento di un "
+#~ "testo sovrastante. Il testo visualizzato può essere sia il valore della "
+#~ "proprietà \"Testo\" o, se questo è \"None\" (nessuno), il valore di "
+#~ "\"fraction\", in percentuale."
+
+# c9e849d45e5c44728f287c272f644c67
+#~ msgid "Causes the given *text* to appear superimposed on the progress bar."
+#~ msgstr ""
+#~ "Fa in modo che il *testo* indicato appaia sopra la barra di avanzamento."
+
+# 328839fb098b445384d7f6b7dddd76dd
+#~ msgid ""
+#~ "Progress bars normally grow from top to bottom or left to right. Inverted "
+#~ "progress bars grow in the opposite direction."
+#~ msgstr ""
+#~ "La barra di avanzamento normalmente cresce dall'alto al basso o da "
+#~ "sinistra a destra. Le barre invertite crescono in direzioni opposte."

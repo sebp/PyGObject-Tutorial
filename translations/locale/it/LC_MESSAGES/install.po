@@ -1,0 +1,159 @@
+# Italian translation for PyGObject-Tutorial.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# Daniele Medri <dmedri@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-15 18:53+0100\n"
+"PO-Revision-Date: 2017-01-16 00:03+0100\n"
+"Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# 42349200504541559303a3d689e92cef
+#: ../../source/install.txt:4
+msgid "Installation"
+msgstr "Installazione"
+
+# fd46bac47b5c4bad96c4c8dfa579fbf9
+#: ../../source/install.txt:5
+msgid ""
+"The first step before we start with actual coding consists of setting up "
+"`PyGObject`_ and its dependencies. PyGObject is a Python module that enables "
+"developers to access GObject-based libraries such as GTK+ within Python. It "
+"exclusively supports GTK+ version 3 or later. If you want to use GTK+ 2 in "
+"your application, use `PyGTK`_, instead."
+msgstr ""
+"Il primo passo da compiere è installare `PyGObject`_ e le sue dipendenze. "
+"PyGObject è un modulo Python che consente agli sviluppatori di accedere alle "
+"librerie di tipo GObject, come le GTK+, dentro Python. Supporta "
+"esclusivamente le GTK+ nella versione 3 o successiva. Se si desidera "
+"utilizzare le GTK+ 2 nella vostra applicazione, utilizzate in alternativa "
+"`PyGTK`_."
+
+# 3556f01b901e4215a0ceaeb25209f1b3
+#: ../../source/install.txt:13
+msgid "Dependencies"
+msgstr "Dipendenze"
+
+# 4bad6344ef014728876fda448d14b286
+#: ../../source/install.txt:15
+msgid "GTK+3"
+msgstr "GTK+3"
+
+# 2a02b9f6c9b84896af027d941b52e9f6
+#: ../../source/install.txt:17
+msgid "Python 2 (2.6 or later) or Python 3 (3.1 or later)"
+msgstr "Python 2 (2.6 o successivo) o Python 3 (3.1 o successivo)"
+
+# fbaf66cd52434df8adbd67b4b05fcaa2
+#: ../../source/install.txt:19
+msgid "gobject-introspection"
+msgstr "gobject-introspection"
+
+# cfdbc75060d24502baca45db5e291f67
+#: ../../source/install.txt:22
+msgid "Prebuilt Packages"
+msgstr "Pacchetti precompilati"
+
+# 98151f71dd85475c8ceee0060f2d6af4
+#: ../../source/install.txt:23
+msgid ""
+"Recent versions of PyGObject and its dependencies are packaged by nearly all "
+"major Linux distributions. So, if you use Linux, you can probably get "
+"started by installing the package from the official repository for your "
+"distribution."
+msgstr ""
+"Le recenti versioni di PyGObject e delle sue dipendenze sono distribuite "
+"dalla maggior parte delle principali distribuzioni Linux. Quindi, se si "
+"utilizza Linux, potete probabilmente installare il pacchetto dal repository "
+"ufficiale della vostra distribuzione."
+
+# 4c5beba55fc74c55a048efe890d252fc
+#: ../../source/install.txt:29
+msgid "Installing From Source"
+msgstr "Installare dal codice sorgente"
+
+# 9c1e44e0fca241d78b228854e755ae5b
+#: ../../source/install.txt:30
+msgid ""
+"The easiest way to install PyGObject from source is using `JHBuild`_. It is "
+"designed to easily build source packages and discover what dependencies need "
+"to be build and in what order. To setup JHBuild, please follow the `JHBuild "
+"manual`_."
+msgstr ""
+"Il modo più semplice per installare PyGObject dal codice sorgente è con "
+"`JHBuild`_. Quest'ultimo è stato progettato per compilare facilmente i "
+"pacchetti con il codice sorgente e rilevare quali dipendenze devono essere "
+"compilate e in quale ordine. Per impostare JHBuild, fate riferimento al "
+"`manuale JHBuild`_."
+
+# dfbfb8078be44e2a9e5109e4957c958a
+#: ../../source/install.txt:34
+msgid ""
+"Once you have installed JHBuild successfully, download the latest "
+"configuration from [#]_. Copy files with the suffix `.modules` to JHBuild's "
+"module directory and the file `sample-tarball.jhbuildrc` to `~/.jhbuildrc`."
+msgstr ""
+"Dopo aver installato con successo JHBuild, scaricate l'ultima configurazione "
+"da [#]_. Copiate i file con il suffisso `.modules` nella directory del "
+"modulo di JHBuild e il file`sample-tarball.jhbuildrc` in `~ / .jhbuildrc`."
+
+# 7c661d4553e1441ab9cdf923475eda51
+#: ../../source/install.txt:38
+msgid ""
+"If you have not done it before, verify that your build environment is setup "
+"correctly by running::"
+msgstr ""
+"Se non è stato fatto prima, verificate che l'ambiente di compilazione sia "
+"configurato correttamente eseguendo::"
+
+# c44ee32f03b04c3fa6d2f2cebe8447c5
+#: ../../source/install.txt:43
+msgid ""
+"It will print any applications and libraries that are currently missing on "
+"your system but required for building. You should install those using your "
+"distribution's package repository. A list of `package names <https://wiki."
+"gnome.org/action/show/Projects/Jhbuild/Dependencies>`_ for different "
+"distributions is maintained on the GNOME wiki. Run the command above again "
+"to ensure the required tools are present."
+msgstr ""
+"Il comando elencherà tutte le applicazioni e le librerie attualmente assenti "
+"nel sistema, necessarie per la compilazione. E' necessario installarle dal "
+"repository di pacchetti della vostra distribuzione. Un elenco dei `pacchetti "
+"<http://live.gnome.org/JhbuildDependencies>`_ per differenti distribuzioni è "
+"mantenuto sul wiki di GNOME. Eseguite nuovamente il comando indicato sopra "
+"per garantire che gli strumenti necessari siano presenti."
+
+# 7c2bef39af1e4578b73637d894e67e26
+#: ../../source/install.txt:49
+msgid ""
+"Executing the following command will build PyGObject and all its "
+"dependencies::"
+msgstr ""
+"Eseguendo il seguente comando si compilerà PyGObject e tutte le sue "
+"dipendenze::"
+
+# 953c8b38bbde4583921cc2efc3be93e4
+#: ../../source/install.txt:53
+msgid "Finally, you might want to install GTK+ from source as well::"
+msgstr "Finalmente, si può installare GTK+ con il codice sorgente::"
+
+# c8713c1bb79e436e8e8b91f593664876
+#: ../../source/install.txt:57
+msgid "To start a shell with the same environment as used by JHBuild, run::"
+msgstr ""
+"Per avviare una shell con lo stesso ambiente utilizzato da JHBuild, "
+"eseguite::"
+
+# 3a0c2c285a944a88b5084a40f71a77c7
+#: ../../source/install.txt:66
+msgid "https://download.gnome.org/teams/releng/"
+msgstr "https://download.gnome.org/teams/releng/"
