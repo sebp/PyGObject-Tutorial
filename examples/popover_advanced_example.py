@@ -1,58 +1,82 @@
+import sys
+
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gio
+from gi.repository import Gio, Gtk
 
-MENU_XML="""
+# This would typically be its own file
+MENU_XML = """
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <menu id="app-menu">
     <section>
-      <item>
-        <attribute name="label">Keyboard Shortcuts</attribute>
-        <attribute name="action">app.show-help-overlay</attribute>
-      </item>
-      <item>
-        <attribute name="label">Help</attribute>
-        <attribute name="action">app.help</attribute>
-      </item>
-      <item>
-        <attribute name="label">About</attribute>
-        <attribute name="action">app.about</attribute>
-      </item>
+        <item>
+            <attribute name="label">About</attribute>
+            <attribute name="action">app.about</attribute>
+        </item>
+        <item>
+            <attribute name="label">Quit</attribute>
+            <attribute name="action">app.quit</attribute>
+        </item>
     </section>
   </menu>
 </interface>
 """
 
-class PopoverExample(Gtk.Window):
 
-    def __init__(self):
-        Gtk.Window.__init__(self, title="Popover Demo")
-        self.set_border_width(10)
+class AppWindow(Gtk.ApplicationWindow):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
-        outerbox = Gtk.Box(spacing=6, orientation = Gtk.Orientation.VERTICAL)
+        outerbox = Gtk.Box(spacing=6, orientation=Gtk.Orientation.VERTICAL)
         self.add(outerbox)
-
-        button = Gtk.Button.new_with_label("Click Me")
-        button.connect("clicked", self.on_click_me_clicked)
-        outerbox.pack_start(button, False, True, 0)
+        outerbox.show()
 
         builder = Gtk.Builder.new_from_string(MENU_XML, -1)
         menu = builder.get_object("app-menu")
 
-        self.popover = Gtk.Popover.new_from_model(button, menu)
-        self.popover.set_position(Gtk.PositionType.BOTTOM)
+        button = Gtk.MenuButton.new()
+        button.set_menu_model(menu)
+        button.set_use_popover(True)
 
-        cut_action = Gio.SimpleAction.new("app.cut", None)
-        cut_action.connect("activate", self.on_cut_action)
+        outerbox.pack_start(button, False, True, 0)
+        button.show()
+        self.set_border_width(50)
 
-    def on_click_me_clicked(self, button):
-        self.popover.popup()
 
-    def on_cut_action(self, action, param):
-        print("hi there!")
+class Application(Gtk.Application):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, application_id="org.example.myapp", **kwargs)
+        self.window = None
 
-win = PopoverExample()
-win.connect("delete-event", Gtk.main_quit)
-win.show_all()
-Gtk.main()
+    def do_startup(self):
+        Gtk.Application.do_startup(self)
+
+        action = Gio.SimpleAction.new("about", None)
+        action.connect("activate", self.on_about)
+        self.add_action(action)
+
+        action = Gio.SimpleAction.new("quit", None)
+        action.connect("activate", self.on_quit)
+        self.add_action(action)
+
+    def do_activate(self):
+        # We only allow a single window and raise any existing ones
+        if not self.window:
+            # Windows are associated with the application
+            # when the last one is closed the application shuts down
+            self.window = AppWindow(application=self, title="Main Window")
+
+        self.window.present()
+
+    def on_about(self, action, param):
+        about_dialog = Gtk.AboutDialog(transient_for=self.window, modal=True)
+        about_dialog.present()
+
+    def on_quit(self, action, param):
+        self.quit()
+
+
+if __name__ == "__main__":
+    app = Application()
+    app.run(sys.argv)
