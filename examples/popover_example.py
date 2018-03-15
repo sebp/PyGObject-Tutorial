@@ -8,7 +8,7 @@ class PopoverWindow(Gtk.Window):
         Gtk.Window.__init__(self, title="Popover Demo")
         self.set_border_width(10)
 
-        outerbox = Gtk.Box(spacing=6, orientation = Gtk.Orientation.VERTICAL)
+        outerbox = Gtk.Box(spacing=6, orientation=Gtk.Orientation.VERTICAL)
         self.add(outerbox)
 
         button = Gtk.Button.new_with_label("Click Me")
@@ -16,7 +16,7 @@ class PopoverWindow(Gtk.Window):
         outerbox.pack_start(button, False, True, 0)
 
         self.popover = Gtk.Popover()
-        vbox = Gtk.Box(orientation = Gtk.Orientation.VERTICAL)
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         vbox.pack_start(Gtk.ModelButton("Item 1"), False, True, 10)
         vbox.pack_start(Gtk.Label("Item 2"), False, True, 10)
         self.popover.add(vbox)
