@@ -1,0 +1,3 @@
+Sphinx==1.6.6
+sphinx-autobuild==0.7.1
+sphinx-rtd-theme==0.2.5b2
