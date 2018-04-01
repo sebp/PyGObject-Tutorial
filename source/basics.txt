@@ -62,7 +62,7 @@ disconnect a  specific callback using the function :func:`disconnect_by_func`:
     widget.disconnect_by_func(callback)
 
 Applications should connect to the "destroy" signal of the top-level window.
-It is emitted an object is destroyed, so when a user requests that a toplevel
+It is emitted when an object is destroyed, so when a user requests that a toplevel
 window is closed, the default handler for this signal destroys the window, but does
 not terminate the application. Connecting the "destroy" signal of the top-level window
 to the function :func:`Gtk.main_quit` will result in the desired behaviour.
