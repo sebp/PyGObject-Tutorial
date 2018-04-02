@@ -6,12 +6,12 @@ of displaying data. They are used in conjunction with a :class:`Gtk.ListStore`
 or :class:`Gtk.TreeStore` and provide a way of displaying and manipulating data
 in many ways, including:
 
-    * Automatically updates when data added, removed or edited
+    * Automatic updates when data is added, removed or edited
     * Drag and drop support
-    * Sorting of data
-    * Support embedding widgets such as check boxes, progress bars, etc.
+    * Sorting data
+    * Embedding widgets such as check boxes, progress bars, etc.
     * Reorderable and resizable columns
-    * Filtering of data
+    * Filtering data
 
 With the power and flexibility of a :class:`Gtk.TreeView` comes complexity. It
 is often difficult for beginner developers to be able to utilize it correctly due
