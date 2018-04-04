@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-10 09:47\n"
+"POT-Creation-Date: 2018-03-27 18:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,38 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../source/spinner.txt:2
-# 2ea1a5ce63324d13b960905b21d11794
+#: ../../source/spinner.txt:2
 msgid "Spinner"
 msgstr ""
 
-#: ../source/spinner.txt:4
-# e12b744752944f3983f6743167a49e13
+#: ../../source/spinner.txt:4
 msgid "The :class:`Gtk.Spinner` displays an icon-size spinning animation. It is often used as an alternative to a :class:`GtkProgressBar` for displaying indefinite activity, instead of actual progress."
 msgstr ""
 
-#: ../source/spinner.txt:8
-# b11aa90df1a74ed1a2997297bc1e5a35
+#: ../../source/spinner.txt:8
 msgid "To start the animation, use :meth:`Gtk.Spinner.start`, to stop it use :meth:`Gtk.Spinner.stop`."
 msgstr ""
 
-#: ../source/spinner.txt:12
-# 97f8069daeec46a0b4fb7d9fec0ad245
-msgid "Spinner Objects"
-msgstr ""
-
-#: ../source/spinner.txt:18
-# 99f335c2ea124b06af02f7083f05d31a
-msgid "Starts the animation of the spinner."
-msgstr ""
-
-#: ../source/spinner.txt:22
-# 15db3084c7f542418bfcc3bac2e14a3a
-msgid "Stops the animation of the spinner."
-msgstr ""
-
-#: ../source/spinner.txt:25
-# b225f6219c7c4cbbb174b821a067ec4d
+#: ../../source/spinner.txt:12
 msgid "Example"
 msgstr ""
 

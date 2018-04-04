@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-10 09:47\n"
+"POT-Creation-Date: 2018-03-27 18:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,113 +16,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../source/entry.txt:2
-# 245ca73c0de64685a6228c2ae954eb8c
+#: ../../source/entry.txt:2
 msgid "Entry"
 msgstr ""
 
-#: ../source/entry.txt:4
-# d22eb4a136114996a88ddb03c161ccea
+#: ../../source/entry.txt:4
 msgid "Entry widgets allow the user to enter text. You can change the contents with the :meth:`Gtk.Entry.set_text` method, and read the current contents with the :meth:`Gtk.Entry.get_text` method. You can also limit the number of characters the Entry can take by calling :meth:`Gtk.Entry.set_max_length`."
 msgstr ""
 
-#: ../source/entry.txt:9
-# 33c32714dc054745b2234723ccb6b638
+#: ../../source/entry.txt:9
 msgid "Occasionally you might want to make an Entry widget read-only. This can be done by passing ``False`` to the :meth:`Gtk.Entry.set_editable` method."
 msgstr ""
 
-#: ../source/entry.txt:12
-# 9269f10cf90b40d79a6fb04b1a8d72d8
+#: ../../source/entry.txt:12
 msgid "Entry widgets can also be used to retrieve passwords from the user. It is common practice to hide the characters typed into the entry to prevent revealing the password to a third party. Calling :meth:`Gtk.Entry.set_visibility` with ``False`` will cause the text to be hidden."
 msgstr ""
 
-#: ../source/entry.txt:17
-# 3c39e609fe0c4c989a19d8eeedd75dfd
+#: ../../source/entry.txt:17
 msgid ":class:`Gtk.Entry` has the ability to display progress or activity information behind the text. This is similar to :class:`Gtk.ProgressBar` widget and is commonly found in web browsers to indicate how much of a page download has been completed. To make an entry display such information, use :meth:`Gtk.Entry.set_progress_fraction`, :meth:`Gtk.Entry.set_progress_pulse_step`, or :meth:`Gtk.Entry.progress_pulse`."
 msgstr ""
 
-#: ../source/entry.txt:24
-# dad3eed73ee348c4a94492d60c35ba29
-msgid "Additionally, an Entry can show icons at either side of the entry. These icons can be activatable by clicking, can be set up as drag source and can have tooltips. To add an icon, use :meth:`Gtk.Entry.set_icon_from_stock` or one of the various other functions that set an icon from an icon name, a pixbuf, or icon theme. To set a tooltip on an icon, use :meth:`Gtk.Entry.set_icon_tooltip_text` or the corresponding function for markup."
+#: ../../source/entry.txt:24
+msgid "Additionally, an Entry can show icons at either side of the entry. These icons can be activatable by clicking, can be set up as drag source and can have tooltips. To add an icon, use :meth:`Gtk.Entry.set_icon_from_icon_name` or one of the various other functions that set an icon from an icon name, a pixbuf, or icon theme. To set a tooltip on an icon, use :meth:`Gtk.Entry.set_icon_tooltip_text` or the corresponding function for markup."
 msgstr ""
 
-#: ../source/entry.txt:32
-# 7384f4e58ebd441ea6165a628f0d4092
-msgid "Entry Objects"
-msgstr ""
-
-#: ../source/entry.txt:38
-# 7c14eb8b94164d52b611e25fac88fdd8
-msgid "Retrieves the contents of the entry widget."
-msgstr ""
-
-#: ../source/entry.txt:42
-# 65f2ebfb848442499d25a7361cdb6655
-msgid "Sets the text in the widget to the given value, replacing the current contents."
-msgstr ""
-
-#: ../source/entry.txt:46
-# 2fc1c451fac24906aae89f237d5def00
-msgid "Sets whether the contents of the entry are visible or not. When *visible* is set to ``False``, characters are displayed as the invisible char, and will also appear that way when the text in the entry widget is copied elsewhere."
-msgstr ""
-
-#: ../source/entry.txt:52
-# ea8f155a7e074afbaaed5e57b48f21a5
-msgid "Sets the maximum allowed length of the contents of the widget. If the current contents are longer than the given length, then they will be truncated to fit."
-msgstr ""
-
-#: ../source/entry.txt:57
-# b8ad7196f0a840ffb2375a8772759628
-msgid "Determines if the user can edit the text in the editable widget or not. If *is_editable* is ``True``, the user is allowed to edit the text in the widget."
-msgstr ""
-
-#: ../source/entry.txt:62
-# 1115d6766c1b4ae29f5227440dd116aa
-msgid "Causes the entry's progress indicator to \"fill in\" the given fraction of the bar. The fraction should be between 0.0 and 1.0, inclusive."
-msgstr ""
-
-#: ../source/entry.txt:67
-# 9c65fec5bb1f4061a465d9bf0017c609
-msgid "Sets the fraction of total entry width to move the progress bouncing block for each call to :meth:`progress_pulse`."
-msgstr ""
-
-#: ../source/entry.txt:72
-# c5a68cbdfc2a44ddb590872662565b2a
-msgid "Indicates that some progress is made, but you don't know how much. Causes the entry's progress indicator to enter \"activity mode,\" where a block bounces back and forth. Each call to :meth:`progress_pulse` causes the block to move by a little bit (the amount of movement per pulse is determined by :meth:`set_progress_pulse_step`)."
-msgstr ""
-
-#: ../source/entry.txt:80
-# 89023349257b4ebdb6f409feb9de0bdb
-msgid "Sets the icon shown in the entry at the specified position from a :ref:`stock item <stock-items>`. If *stock_id* is ``None``, no icon will be shown in the specified position."
-msgstr ""
-
-#: ../source/entry.txt:84
-# 56f06fd6b92c48bba9e1d8c66760546e
-msgid "*icon_pos* specifies the side of the entry at which an icon is placed and can be one of"
-msgstr ""
-
-#: ../source/entry.txt:87
-# 95af879f09464c778e7a0eca8eab7172
-msgid ":attr:`Gtk.EntryIconPosition.PRIMARY`: At the beginning of the entry (depending on the text direction)."
-msgstr ""
-
-#: ../source/entry.txt:89
-# ca5b12b829ff4850bb40fc85b900490a
-msgid ":attr:`Gtk.EntryIconPosition.SECONDARY`: At the end of the entry (depending on the text direction)."
-msgstr ""
-
-#: ../source/entry.txt:94
-# 2d19b30b132d4c09adf7c0aa9e038b9a
-msgid "Sets *tooltip* as the contents of the tooltip for the icon at the specified position. If *tooltip* is ``None``, an existing tooltip is removed."
-msgstr ""
-
-#: ../source/entry.txt:97
-# 7ba7c8c6b2b94bef9ca8e421a68f32e0
-msgid "For allowed values for *icon_pos* see :meth:`set_icon_from_stock`."
-msgstr ""
-
-#: ../source/entry.txt:100
-# 0c0d9bdc15604905af972e7fc3bda60b
+#: ../../source/entry.txt:32
 msgid "Example"
 msgstr ""
 

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-10 09:47\n"
+"POT-Creation-Date: 2018-03-27 18:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,301 +16,120 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../source/button_widgets.txt:2
-# b9068f50c8e349e09a15a6f084d67732
+#: ../../source/button_widgets.txt:2
 msgid "Button Widgets"
 msgstr ""
 
-#: ../source/button_widgets.txt:5
-# b362e4f2c35643a7a247d8050846af50
+#: ../../source/button_widgets.txt:5
 msgid "Button"
 msgstr ""
 
-#: ../source/button_widgets.txt:7
-# e14755deca9d4d0e822047e63d631af5
+#: ../../source/button_widgets.txt:7
 msgid "The Button widget is another commonly used widget. It is generally used to attach a function that is called when the button is pressed."
 msgstr ""
 
-#: ../source/button_widgets.txt:10
-# 3832f8dd14b643cfb715c4434ac64ae5
+#: ../../source/button_widgets.txt:10
 msgid "The :class:`Gtk.Button` widget can hold any valid child widget. That is it can hold most any other standard :class:`Gtk.Widget`. The most commonly used child is the :class:`Gtk.Label`."
 msgstr ""
 
-#: ../source/button_widgets.txt:14
-# 229ac588db53424ebbfdabd27c8975f4
+#: ../../source/button_widgets.txt:14
 msgid "Usually, you want to connect to the button's \"clicked\" signal which is emitted when the button has been pressed and released."
 msgstr ""
 
-#: ../source/button_widgets.txt:18
-# 195772e34306453a8b248a553ea869a6
-msgid "Button Objects"
-msgstr ""
-
-#: ../source/button_widgets.txt:21
-# c216281861224d79ac6ba181396655e4
-msgid "If label is not ``None``, creates a new :class:`Gtk.Button` with a :class:`Gtk.Label` child containing the given text."
-msgstr ""
-
-#: ../source/button_widgets.txt:24
-# 39966d01f07c4ad8b145ac07bcb3d312
-msgid "If *stock* is not ``None``, creates a new button containing the image and text from a :ref:`stock item <stock-items>`."
-msgstr ""
-
-#: ../source/button_widgets.txt:27
-# 41aab01bf3a2411b881b7b90fe629ddc
-msgid "If *use_underline* is set to ``True``, an underline  in the text indicates the next character should be used for the mnemonic accelerator key."
-msgstr ""
-
-#: ../source/button_widgets.txt:32
-# a2d826cf6c484f28bdbc59572561fb2b
-msgid "Sets the text of the label of the button to *label*."
-msgstr ""
-
-#: ../source/button_widgets.txt:36
-# 49d9cda83d224b36a414b7a419403a96
-msgid "If *True*, an underline in the text of the button label indicates the next character should be used for the mnemonic accelerator key."
-msgstr ""
-
-#: ../source/button_widgets.txt:40
-#: ../source/button_widgets.txt:79
-#: ../source/button_widgets.txt:150
-#: ../source/button_widgets.txt:186
-#: ../source/button_widgets.txt:279
-# cc582c3d540344fba2336448415922e2
-# 41c0a7f4fe4b49bebb6bb210f1f1a210
-# 97ea05fac45041a5a1ab852710a3102c
-# e73ac382a43a48f99983f18180d63fae
-# 3ddd2496dcb04739a82d79e834228880
+#: ../../source/button_widgets.txt:18
+#: ../../source/button_widgets.txt:39
+#: ../../source/button_widgets.txt:78
+#: ../../source/button_widgets.txt:95
+#: ../../source/button_widgets.txt:131
+#: ../../source/button_widgets.txt:150
 msgid "Example"
 msgstr ""
 
-#: ../source/button_widgets.txt:48
-# 0a7a7b0a2bd840c58e17ab2bfde988e4
+#: ../../source/button_widgets.txt:26
 msgid "ToggleButton"
 msgstr ""
 
-#: ../source/button_widgets.txt:50
-# 5330a691e90348faaa8beea36dd97551
+#: ../../source/button_widgets.txt:28
 msgid "A :class:`Gtk.ToggleButton` is very similar to a normal :class:`Gtk.Button`, but when clicked they remain activated, or pressed, until clicked again. When the state of the button is changed, the \"toggled\" signal is emitted."
 msgstr ""
 
-#: ../source/button_widgets.txt:54
-# fec1feaaca6e4551ab61399d2c44cbc3
+#: ../../source/button_widgets.txt:32
 msgid "To retrieve the state of the :class:`Gtk.ToggleButton`, you can use the :meth:`Gtk.ToggleButton.get_active` method. This returns ``True`` if the button is \"down\". You can also set the toggle button's state, with :meth:`Gtk.ToggleButton.set_active`. Note that, if you do this, and the state actually changes, it causes the \"toggled\" signal to be emitted."
 msgstr ""
 
-#: ../source/button_widgets.txt:61
-# d4d74e921c844f4f9bc263ccd394cc8e
-msgid "ToggleButton Objects"
-msgstr ""
-
-#: ../source/button_widgets.txt:65
-# a995b1d820734f2794a3ea723640868a
-msgid "The arguments are the same as for the :class:`Gtk.Button` constructor."
-msgstr ""
-
-#: ../source/button_widgets.txt:69
-# 965b351d14a745759fe24fcf40982b99
-msgid "Returns the buttons current state. Returns ``True`` if the toggle button is pressed in and ``False`` if it is raised."
-msgstr ""
-
-#: ../source/button_widgets.txt:74
-# 01e4e63de92c4bb1a038e4a1ea843b34
-msgid "Sets the status of the toggle button. Set to ``True`` if you want the button to be pressed in, and ``False`` to raise it. This action causes the \"toggled\" signal to be emitted."
-msgstr ""
-
-#: ../source/button_widgets.txt:87
-# 41f9421cdcb4475c859bdb28a41aa1ac
+#: ../../source/button_widgets.txt:47
 msgid "CheckButton"
 msgstr ""
 
-#: ../source/button_widgets.txt:88
-# 4d2f2ce48f6f4356bc2bef4bfe85770f
+#: ../../source/button_widgets.txt:48
 msgid ":class:`Gtk.CheckButton` inherits from :class:`Gtk.ToggleButton`. The only real difference between the two is :class:`Gtk.CheckButton`'s appearance. A :class:`Gtk.CheckButton` places a discrete :class:`Gtk.ToggleButton` next to a widget, (usually a :class:`Gtk.Label`). The \"toggled\" signal, :meth:`Gtk.ToggleButton.set_active` and :meth:`Gtk.ToggleButton.get_active` are inherited."
 msgstr ""
 
-#: ../source/button_widgets.txt:96
-# 25be19751b324a4a9a2ecc50b9757793
-msgid "CheckButton Objects"
-msgstr ""
-
-#: ../source/button_widgets.txt:100
-# e7f4e1fa36dd4ee9a04acd98f4d9e3a3
-msgid "Arguments are the same as for :class:`Gtk.Button`."
-msgstr ""
-
-#: ../source/button_widgets.txt:103
-# 886c77e9ea3244ec8a38d5eed6cba7d0
+#: ../../source/button_widgets.txt:56
 msgid "RadioButton"
 msgstr ""
 
-#: ../source/button_widgets.txt:104
-# f4c75c9c439a4ff3ae521d9b5090c53f
+#: ../../source/button_widgets.txt:57
 msgid "Like checkboxes, radio buttons also inherit from :class:`Gtk.ToggleButton`, but these work in groups, and only one :class:`Gtk.RadioButton` in a group can be selected at any one time. Therefore, a :class:`Gtk.RadioButton` is one way of giving the user a choice from many options."
 msgstr ""
 
-#: ../source/button_widgets.txt:109
-# b57273187df9443799abf1a6414ee19d
+#: ../../source/button_widgets.txt:62
 msgid "Radio buttons can be created with one of the static methods :meth:`Gtk.RadioButton.new_from_widget`, :meth:`Gtk.RadioButton.new_with_label_from_widget` or :meth:`Gtk.RadioButton.new_with_mnemonic_from_widget`. The first radio button in a group will be created passing ``None`` as the *group* argument. In subsequent calls, the group you wish to add this button to should be passed as an argument."
 msgstr ""
 
-#: ../source/button_widgets.txt:117
-# 451725ffc05e45da9e673016e25cd8e5
+#: ../../source/button_widgets.txt:70
 msgid "When first run, the first radio button in the group will be active. This can be changed by calling :meth:`Gtk.ToggleButton.set_active` with ``True`` as first argument."
 msgstr ""
 
-#: ../source/button_widgets.txt:121
-# 786ccb42e9dd4f5094cae29228b2a9ac
+#: ../../source/button_widgets.txt:74
 msgid "Changing a :class:`Gtk.RadioButton`'s widget group after its creation can be achieved by calling :meth:`Gtk.RadioButton.join_group`."
 msgstr ""
 
-#: ../source/button_widgets.txt:125
-# 0be6d71d23e040bdb8e6a26a11619c46
-msgid "RadioButton Objects"
-msgstr ""
-
-#: ../source/button_widgets.txt:131
-# 7606957b5ae6474dad3dd511531c3645
-msgid "Creates a new :class:`Gtk.RadioButton`, adding it to the same group as the *group* widget. If *group* is ``None``, a new group is created."
-msgstr ""
-
-#: ../source/button_widgets.txt:136
-# e837316c14a940cf8dace5cbd5b896db
-msgid "Creates a new :class:`Gtk.RadioButton`. The text of the label widget inside the button will be set to *label*. *group* is the same as for :meth:`new_from_widget`."
-msgstr ""
-
-#: ../source/button_widgets.txt:142
-# 7c85626df73646e6bebc9e06d87eda30
-msgid "Same as :meth:`new_with_label_from_widget`, but underscores in *label* indicate the mnemonic for the button."
-msgstr ""
-
-#: ../source/button_widgets.txt:147
-# 6c068fa816c649d5a05facfb4975ba6b
-msgid "Joins this radio button to the group of another :class:`Gtk.RadioButton` object."
-msgstr ""
-
-#: ../source/button_widgets.txt:158
-# be59b5aeb51b48c5a610502faef02af3
+#: ../../source/button_widgets.txt:86
 msgid "LinkButton"
 msgstr ""
 
-#: ../source/button_widgets.txt:159
-# fd5365d175c34bf3a26df7d8582e9aa8
+#: ../../source/button_widgets.txt:87
 msgid "A :class:`Gtk.LinkButton` is a :class:`Gtk.Button` with a hyperlink, similar to the one used by web browsers, which triggers an action when clicked. It is useful to show quick links to resources."
 msgstr ""
 
-#: ../source/button_widgets.txt:163
-# 7f19a54b3c4342d7b50376ae138c56b4
+#: ../../source/button_widgets.txt:91
 msgid "The URI bound to a :class:`Gtk.LinkButton` can be set specifically using :meth:`Gtk.LinkButton.set_uri`, and retrieved using :meth:`Gtk.LinkButton.get_uri`."
 msgstr ""
 
-#: ../source/button_widgets.txt:168
-# 9cb6aa2a592e4cd59fee2d332827515e
-msgid "LinkButton Objects"
-msgstr ""
-
-#: ../source/button_widgets.txt:172
-# b0da3e04f1fc4f61814717b2c0d5a34c
-msgid "*uri* is the address of the website which should be loaded. The label is set as the text which should be displayed. If it is set to ``None`` or omitted, the web address will be displayed instead."
-msgstr ""
-
-#: ../source/button_widgets.txt:178
-# fcd74d91de4e44c89a98a62257288a28
-msgid "Retrieves the URI set using :meth:`set_uri`."
-msgstr ""
-
-#: ../source/button_widgets.txt:182
-# 968c8fcd7a294601b060e234417a87b7
-msgid "Sets *uri* as the URI where this button points to. As a side-effect this unsets the 'visited' state of the button."
-msgstr ""
-
-#: ../source/button_widgets.txt:194
-# 476a61b42eb24c0e91099dcfd8bfaa35
+#: ../../source/button_widgets.txt:103
 msgid "SpinButton"
 msgstr ""
 
-#: ../source/button_widgets.txt:195
-# 8d3f50e857ce4b10b19c881cdc5a20ba
+#: ../../source/button_widgets.txt:104
 msgid "A :class:`Gtk.SpinButton` is an ideal way to allow the user to set the value of some attribute. Rather than having to directly type a number into a :class:`Gtk.Entry`, :class:`Gtk.SpinButton` allows the user to click on one of two arrows to increment or decrement the displayed value. A value can still be typed in, with the bonus that it can be checked to ensure it is in a given range. The main properties of a :class:`Gtk.SpinButton` are set through :class:`Gtk.Adjustment`."
 msgstr ""
 
-#: ../source/button_widgets.txt:203
-# 6fe360e2dfaa46f8a47860c570fc87c6
+#: ../../source/button_widgets.txt:112
 msgid "To change the value that :class:`Gtk.SpinButton` is showing, use :meth:`Gtk.SpinButton.set_value`. The value entered can either be an integer or float, depending on your requirements, use :meth:`Gtk.SpinButton.get_value` or :meth:`Gtk.SpinButton.get_value_as_int`, respectively."
 msgstr ""
 
-#: ../source/button_widgets.txt:208
-# 5bd9d1d1d53b4e5f85492b59918091ce
+#: ../../source/button_widgets.txt:117
 msgid "When you allow the displaying of float values in the spin button, you may wish to adjust the number of decimal spaces displayed by calling :meth:`Gtk.SpinButton.set_digits`."
 msgstr ""
 
-#: ../source/button_widgets.txt:212
-# c7ff64c095fe45aa8ed5c69d1621168f
+#: ../../source/button_widgets.txt:121
 msgid "By default, :class:`Gtk.SpinButton` accepts textual data. If you wish to limit this to numerical values only, call :meth:`Gtk.SpinButton.set_numeric` with ``True`` as argument."
 msgstr ""
 
-#: ../source/button_widgets.txt:216
-# e90e4980ef1841a09bf78793cea63a25
+#: ../../source/button_widgets.txt:125
 msgid "We can also adjust the update policy of :class:`Gtk.SpinButton`. There are two options here; by default the spin button updates the value even if the data entered is invalid. Alternatively, we can set the policy to only update when the value entered is valid by calling :meth:`Gtk.SpinButton.set_update_policy`."
 msgstr ""
 
-#: ../source/button_widgets.txt:222
-# fc5dacb50c5c4208aee717b1fa7a5d12
-msgid "SpinButton Objects"
+#: ../../source/button_widgets.txt:139
+msgid "Switch"
 msgstr ""
 
-#: ../source/button_widgets.txt:228
-# 224260f815704f1798e625b61a5e5f06
-msgid "Replaces the :class:`Gtk.Adjustment` associated with this spin button."
+#: ../../source/button_widgets.txt:140
+msgid "A :class:`Gtk.Switch` is a widget that has two states: on or off. The user can control which state should be active by clicking the empty area, or by dragging the handle."
 msgstr ""
 
-#: ../source/button_widgets.txt:232
-# be1b3fc6a8ee4b56bc87134810c6211f
-msgid "Set the precision to be displayed by this spin button. Up to 20 digit precision is allowed."
-msgstr ""
-
-#: ../source/button_widgets.txt:237
-# 1c1235a136af49e69c99172070aadea1
-msgid "Sets the step and page increments for this spin button. This affects how quickly the value changes when the spin button's arrows are activated."
-msgstr ""
-
-#: ../source/button_widgets.txt:242
-# ba0ac49914fa4bf8b683e897cabdc878
-msgid "Sets the value of this spin button."
-msgstr ""
-
-#: ../source/button_widgets.txt:246
-# 50dea7dc900143b9acfb4b8d6281e438
-msgid "Get the value of this spin button represented as an float."
-msgstr ""
-
-#: ../source/button_widgets.txt:250
-# dce2dc3528f3427bb468fed2577944db
-msgid "Get the value of this spin button represented as an integer."
-msgstr ""
-
-#: ../source/button_widgets.txt:254
-# 55d1a4f888bb46d6a320efb5727ab1be
-msgid "If *numeric* is ``False``, non-numeric text can be typed into the spin button, else only numbers can be typed."
-msgstr ""
-
-#: ../source/button_widgets.txt:259
-# dc241bec304749839521cae18138741b
-msgid "Sets the update behavior of a spin button. This determines whether the spin button is always updated or only when a valid value is set. The *policy* argument can either be :attr:`Gtk.SpinButtonUpdatePolicy.ALWAYS` or :attr:`Gtk.SpinButtonUpdatePolicy.IF_VALID`."
-msgstr ""
-
-#: ../source/button_widgets.txt:265
-# d0b9b4cb29c643938d44f006eb9dff9c
-msgid "Adjustment Objects"
-msgstr ""
-
-#: ../source/button_widgets.txt:269
-# 29084a729b364c0a81a969efea9c6812
-msgid "The :class:`Gtk.Adjustment` object represents a value which has an associated lower and upper bound, together with step and page increments, and a page size. It is used within several GTK+ widgets, including :class:`Gtk.SpinButton`, :class:`Gtk.Viewport`, and :class:`Gtk.Range`."
-msgstr ""
-
-#: ../source/button_widgets.txt:274
-# 570b9495c7d340528cc441f2b7d2df8c
-msgid "*value* is the initial value, *lower* the minimum value, *upper* the maximum value, *step_increment* the step increment, *page_increment* the page increment, and *page_size* the page size."
+#: ../../source/button_widgets.txt:144
+msgid "You shouldn't use the \"activate\" signal on the Gtk.Switch which is an action signal and emitting it causes the switch to animate. Applications should never connect to this signal, but use the \"notify::active\" signal, see the example here below."
 msgstr ""
 

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-10 09:47\n"
+"POT-Creation-Date: 2018-03-27 18:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,88 +16,71 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../source/install.txt:4
-# 42349200504541559303a3d689e92cef
+#: ../../source/install.txt:4
 msgid "Installation"
 msgstr ""
 
-#: ../source/install.txt:5
-# fd46bac47b5c4bad96c4c8dfa579fbf9
-msgid "The fist step before we start with actual coding consists of setting up `PyGObject`_ and its dependencies. PyGObject is a Python module that enables developers to access GObject-based libraries such as GTK+ within Python. It exclusively supports GTK+ version 3 or later. If you want to use GTK+ 2 in your application, use `PyGTK`_, instead."
+#: ../../source/install.txt:5
+msgid "The first step before we start with actual coding consists of setting up `PyGObject`_ and its dependencies. PyGObject is a Python module that enables developers to access GObject-based libraries such as GTK+ within Python. It exclusively supports GTK+ version 3 or later. If you want to use GTK+ 2 in your application, use `PyGTK`_, instead."
 msgstr ""
 
-#: ../source/install.txt:13
-# 3556f01b901e4215a0ceaeb25209f1b3
+#: ../../source/install.txt:13
 msgid "Dependencies"
 msgstr ""
 
-#: ../source/install.txt:15
-# 4bad6344ef014728876fda448d14b286
+#: ../../source/install.txt:15
 msgid "GTK+3"
 msgstr ""
 
-#: ../source/install.txt:17
-# 2a02b9f6c9b84896af027d941b52e9f6
+#: ../../source/install.txt:17
 msgid "Python 2 (2.6 or later) or Python 3 (3.1 or later)"
 msgstr ""
 
-#: ../source/install.txt:19
-# fbaf66cd52434df8adbd67b4b05fcaa2
+#: ../../source/install.txt:19
 msgid "gobject-introspection"
 msgstr ""
 
-#: ../source/install.txt:22
-# cfdbc75060d24502baca45db5e291f67
+#: ../../source/install.txt:22
 msgid "Prebuilt Packages"
 msgstr ""
 
-#: ../source/install.txt:23
-# 98151f71dd85475c8ceee0060f2d6af4
+#: ../../source/install.txt:23
 msgid "Recent versions of PyGObject and its dependencies are packaged by nearly all major Linux distributions. So, if you use Linux, you can probably get started by installing the package from the official repository for your distribution."
 msgstr ""
 
-#: ../source/install.txt:29
-# 4c5beba55fc74c55a048efe890d252fc
+#: ../../source/install.txt:29
 msgid "Installing From Source"
 msgstr ""
 
-#: ../source/install.txt:30
-# 9c1e44e0fca241d78b228854e755ae5b
+#: ../../source/install.txt:30
 msgid "The easiest way to install PyGObject from source is using `JHBuild`_. It is designed to easily build source packages and discover what dependencies need to be build and in what order. To setup JHBuild, please follow the `JHBuild manual`_."
 msgstr ""
 
-#: ../source/install.txt:34
-# dfbfb8078be44e2a9e5109e4957c958a
+#: ../../source/install.txt:34
 msgid "Once you have installed JHBuild successfully, download the latest configuration from [#]_. Copy files with the suffix `.modules` to JHBuild's module directory and the file `sample-tarball.jhbuildrc` to `~/.jhbuildrc`."
 msgstr ""
 
-#: ../source/install.txt:38
-# 7c661d4553e1441ab9cdf923475eda51
+#: ../../source/install.txt:38
 msgid "If you have not done it before, verify that your build environment is setup correctly by running::"
 msgstr ""
 
-#: ../source/install.txt:43
-# c44ee32f03b04c3fa6d2f2cebe8447c5
-msgid "It will print any applications and libraries that are currently missing on your system but required for building. You should install those using your distribution's package repository. A list of `package names <http://live.gnome.org/JhbuildDependencies>`_ for different distributions is maintained on the GNOME wiki. Run the command above again to ensure the required tools are present."
+#: ../../source/install.txt:43
+msgid "It will print any applications and libraries that are currently missing on your system but required for building. You should install those using your distribution's package repository. A list of `package names <https://wiki.gnome.org/action/show/Projects/Jhbuild/Dependencies>`_ for different distributions is maintained on the GNOME wiki. Run the command above again to ensure the required tools are present."
 msgstr ""
 
-#: ../source/install.txt:49
-# 7c2bef39af1e4578b73637d894e67e26
+#: ../../source/install.txt:49
 msgid "Executing the following command will build PyGObject and all its dependencies::"
 msgstr ""
 
-#: ../source/install.txt:53
-# 953c8b38bbde4583921cc2efc3be93e4
+#: ../../source/install.txt:53
 msgid "Finally, you might want to install GTK+ from source as well::"
 msgstr ""
 
-#: ../source/install.txt:57
-# c8713c1bb79e436e8e8b91f593664876
+#: ../../source/install.txt:57
 msgid "To start a shell with the same environment as used by JHBuild, run::"
 msgstr ""
 
-#: ../source/install.txt:66
-# 3a0c2c285a944a88b5084a40f71a77c7
-msgid "http://download.gnome.org/teams/releng/"
+#: ../../source/install.txt:66
+msgid "https://download.gnome.org/teams/releng/"
 msgstr ""
 

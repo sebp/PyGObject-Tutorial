@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-10 09:47\n"
+"POT-Creation-Date: 2018-03-27 18:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,108 +16,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../source/label.txt:2
-# f7e4365740e24cbcb20e04b1b0cd2b9b
+#: ../../source/label.txt:2
 msgid "Label"
 msgstr ""
 
-#: ../source/label.txt:4
-# e8c4aa3a51ea4906963046de1c257996
+#: ../../source/label.txt:4
 msgid "Labels are the main method of placing non-editable text in windows, for instance to place a title next to a :class:`Gtk.Entry` widget. You can specify the text in the constructor, or later with the :meth:`Gtk.Label.set_text` or :meth:`Gtk.Label.set_markup` methods."
 msgstr ""
 
-#: ../source/label.txt:9
-# 3f49dc82cfa44fecb9b45cd7ffc8bd9c
+#: ../../source/label.txt:9
 msgid "The width of the label will be adjusted automatically. You can produce multi-line labels by putting line breaks (\"\\\\n\") in the label string."
 msgstr ""
 
-#: ../source/label.txt:12
-# e8ba196d2de345e695353bae17a350eb
+#: ../../source/label.txt:12
 msgid "Labels can be made selectable with :meth:`Gtk.Label.set_selectable`. Selectable labels allow the user to copy the label contents to the clipboard. Only labels that contain useful-to-copy information — such as error messages — should be made selectable."
 msgstr ""
 
-#: ../source/label.txt:17
-# e7320b1c825444e18854d66afde2a0b0
+#: ../../source/label.txt:17
 msgid "The label text can be justified using the :meth:`Gtk.Label.set_justify` method. The widget is also capable of word-wrapping, which can be activated with :meth:`Gtk.Label.set_line_wrap`."
 msgstr ""
 
-#: ../source/label.txt:21
-# 369dd877f81e4cb7b2cf4ae2e700c75c
+#: ../../source/label.txt:21
 msgid ":class:`Gtk.Label` support some simple formatting, for instance allowing you to make some text bold, colored, or larger. You can do this by providing a string to :meth:`Gtk.Label.set_markup`, using the Pango Markup syntax [#pango]_. For instance, ``<b>bold text</b> and <s>strikethrough text</s>``. In addition, :class:`Gtk.Label` supports clickable hyperlinks. The markup for links is borrowed from HTML, using the a with href and title attributes. GTK+ renders links similar to the way they appear in web browsers, with colored, underlined text. The title attribute is displayed as a tooltip on the link."
 msgstr ""
 
-#: ../source/label.txt:36
-# db8272b9842242d69534bb098111643f
+#: ../../source/label.txt:37
 msgid "Labels may contain *mnemonics*. Mnemonics are underlined characters in the label, used for keyboard navigation. Mnemonics are created by providing a string with an underscore before the mnemonic character, such as \"_File\", to the functions :meth:`Gtk.Label.new_with_mnemonic` or :meth:`Gtk.Label.set_text_with_mnemonic`. Mnemonics automatically activate any activatable widget the label is inside, such as a :class:`Gtk.Button`; if the label is not inside the mnemonic's target widget, you have to tell the label about the target using :meth:`Gtk.Label.set_mnemonic_widget`."
 msgstr ""
 
-#: ../source/label.txt:47
-# 836b73e3032f43e48fdc18a413110509
-msgid "Label Objects"
-msgstr ""
-
-#: ../source/label.txt:51
-# 93b5d558752a43b88588ec05a23466f0
-msgid "Creates a new label with the given *text* inside it. If *text* is omitted, an empty label is created."
-msgstr ""
-
-#: ../source/label.txt:56
-# bcaaf3effb1d4d27bcabeabbdb5ca7be
-msgid "Creates a new label with *text* inside it."
-msgstr ""
-
-#: ../source/label.txt:58
-# 84e386dd8fe24f1bba75a213d27f3239
-msgid "If characters in *text* are preceded by an underscore, they are underlined. If you need a literal underscore character in a label, use '__' (two underscores). The first underlined character represents a keyboard accelerator called a mnemonic. The mnemonic key can be used to activate another widget, chosen automatically, or explicitly using :meth:`Gtk.Label.set_mnemonic_widget`."
-msgstr ""
-
-#: ../source/label.txt:65
-# eb57a91d49724f099286fbcb82c3e199
-msgid "If :meth:`Gtk.Label.set_mnemonic_widget` is not called, then the first activatable ancestor of the :class:`Gtk.Label` will be chosen as the mnemonic widget. For instance, if the label is inside a button or menu item, the button or menu item will automatically become the mnemonic widget and be activated by the mnemonic."
-msgstr ""
-
-#: ../source/label.txt:73
-# 09f54012dd8c4a09a2598ff45badda88
-msgid "Sets the alignment of the lines in the text of the label relative to each other. *justification* can be one of :attr:`Gtk.Justification.LEFT`, :attr:`Gtk.Justification.RIGHT`, :attr:`Gtk.Justification.CENTER`, :attr:`Gtk.Justification.FILL`. This method has no effect on labels containing only a single line."
-msgstr ""
-
-#: ../source/label.txt:81
-# 7f83df46ec89435ea259f619b5d6521a
-msgid "If *wrap* is ``True``, lines will be broken if text exceeds the widget's size. If *wrap* is ``False``, text will be cut off by the edge of the widget if it exceeds the widget size."
-msgstr ""
-
-#: ../source/label.txt:87
-# 2d03999a750f45d190a180d83152bd05
-msgid "Parses *markup* which is marked up with the Pango text markup language [#pango]_, setting the label's text accordingly. The markup passed must be valid; for example literal <, >, & characters must be escaped as &lt; &gt; and &amp."
-msgstr ""
-
-#: ../source/label.txt:94
-# 538a240b87f440169f7347a2d928c9e9
-msgid "If the label has been set so that it has an mnemonic key, the label can be associated with a widget that is the target of the mnemonic."
-msgstr ""
-
-#: ../source/label.txt:99
-# e7fa3823420241618d0fc0585409a7de
-msgid "Selectable labels allow the user to select text from the label, for copy-and-paste."
-msgstr ""
-
-#: ../source/label.txt:103
-# 3fe286453114411d99a70eee98d2776a
-msgid "Sets the text within this widget. It overwrites any text that was there before."
-msgstr ""
-
-#: ../source/label.txt:107
-# 1acbaec9184349dcad602f4d5946d0e0
-msgid "See :meth:`new_with_mnemonic`."
-msgstr ""
-
-#: ../source/label.txt:110
-# ec1a254e1b324d7e82589e26ea19d126
+#: ../../source/label.txt:48
 msgid "Example"
 msgstr ""
 
-#: ../source/label.txt:117
-# 663400048fad4ef5b9d78bf45d553115
+#: ../../source/label.txt:55
 msgid "Pango Markup Syntax, http://developer.gnome.org/pango/stable/PangoMarkupFormat.html"
 msgstr ""
 

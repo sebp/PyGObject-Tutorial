@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-01 04:29-0300\n"
+"PO-Revision-Date: 2018-04-01 06:00-0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+
+#: ../../source/label.txt:2
+msgid "Label"
+msgstr ""
+
+#: ../../source/label.txt:4
+msgid ""
+"Labels are the main method of placing non-editable text in windows, for "
+"instance to place a title next to a :class:`Gtk.Entry` widget. You can "
+"specify the text in the constructor, or later with the :meth:`Gtk.Label."
+"set_text` or :meth:`Gtk.Label.set_markup` methods."
+msgstr ""
+"Os rótulos são o principal método de colocar texto não editável nas janelas, "
+"por exemplo, para colocar um título ao lado de um widget :class:`Gtk.Entry`. "
+"Você pode especificar o texto no construtor, ou mais tarde com os métodos :"
+"meth:`Gtk.Label.set_text` ou :meth:`Gtk.Label.set_markup`."
+
+#: ../../source/label.txt:9
+msgid ""
+"The width of the label will be adjusted automatically. You can produce multi-"
+"line labels by putting line breaks (\"\\\\n\") in the label string."
+msgstr ""
+"A largura da etiqueta será ajustada automaticamente. Você pode produzir "
+"rótulos de várias linhas colocando as quebras de linha (\"\\\\n\") na "
+"sequência de rótulos."
+
+#: ../../source/label.txt:12
+msgid ""
+"Labels can be made selectable with :meth:`Gtk.Label.set_selectable`. "
+"Selectable labels allow the user to copy the label contents to the "
+"clipboard. Only labels that contain useful-to-copy information — such as "
+"error messages — should be made selectable."
+msgstr ""
+"Os rótulos podem ser feitos selecionáveis com :meth:`Gtk.Label."
+"set_selectable`. Rótulos selecionáveis permitem que o usuário copie o "
+"conteúdo do rótulo para a área de transferência. Somente os rótulos que "
+"contêm informações úteis para copiar, como mensagens de erro, devem ser "
+"selecionáveis."
+
+#: ../../source/label.txt:17
+msgid ""
+"The label text can be justified using the :meth:`Gtk.Label.set_justify` "
+"method. The widget is also capable of word-wrapping, which can be activated "
+"with :meth:`Gtk.Label.set_line_wrap`."
+msgstr ""
+"O texto do rótulo pode ser justificado usando o método :meth:`Gtk.Label."
+"set_justify`. O widget também é capaz de quebra automática de palavras, que "
+"pode ser ativado com :meth:`Gtk.Label.set_line_wrap`."
+
+#: ../../source/label.txt:21
+msgid ""
+":class:`Gtk.Label` support some simple formatting, for instance allowing you "
+"to make some text bold, colored, or larger. You can do this by providing a "
+"string to :meth:`Gtk.Label.set_markup`, using the Pango Markup syntax "
+"[#pango]_. For instance, ``<b>bold text</b> and <s>strikethrough text</s>``. "
+"In addition, :class:`Gtk.Label` supports clickable hyperlinks. The markup "
+"for links is borrowed from HTML, using the a with href and title attributes. "
+"GTK+ renders links similar to the way they appear in web browsers, with "
+"colored, underlined text. The title attribute is displayed as a tooltip on "
+"the link."
+msgstr ""
+":class:`Gtk.Label` suporta algumas formatações simples, por exemplo, "
+"permitindo que você crie algum texto em negrito, colorido ou maior. Você "
+"pode fazer isso fornecendo uma string para :meth:`Gtk.Label.set_markup`, "
+"usando a sintaxe de marcação do Pango [#pango]_. Por exemplo, ``<b>texto em "
+"negrito</b> e <s>texto tachado</s>``. Além disso, :class:`Gtk.Label` suporta "
+"hiperlinks clicáveis. A marcação para links é emprestada do HTML, usando os "
+"atributos a com href e title. O GTK+ renderiza links semelhantes ao modo "
+"como aparecem nos navegadores da web, com texto colorido e sublinhado. O "
+"atributo de título é exibido como uma dica de ferramenta no link."
+
+#: ../../source/label.txt:37
+msgid ""
+"Labels may contain *mnemonics*. Mnemonics are underlined characters in the "
+"label, used for keyboard navigation. Mnemonics are created by providing a "
+"string with an underscore before the mnemonic character, such as \"_File\", "
+"to the functions :meth:`Gtk.Label.new_with_mnemonic` or :meth:`Gtk.Label."
+"set_text_with_mnemonic`. Mnemonics automatically activate any activatable "
+"widget the label is inside, such as a :class:`Gtk.Button`; if the label is "
+"not inside the mnemonic's target widget, you have to tell the label about "
+"the target using :meth:`Gtk.Label.set_mnemonic_widget`."
+msgstr ""
+"Os rótulos podem conter *mnemônicos*. Os mnemônicos são caracteres "
+"sublinhados no rótulo, usados para navegação pelo teclado. Os mnemônicos são "
+"criados fornecendo uma string com um sublinhado antes do caractere "
+"mnemônico, como \"_File\", para as funções :meth:`Gtk.Label."
+"new_with_mnemonic` ou :meth:`Gtk.Label.set_text_with_mnemonic`. Os "
+"mnemônicos ativam automaticamente qualquer widget ativável em que o rótulo "
+"esteja dentro, como um :class:`Gtk.Button`; se o rótulo não estiver dentro "
+"do widget de destino do mnemônico, você deve informar o rótulo sobre o "
+"destino usando :meth:`Gtk.Label.set_mnemonic_widget`."
+
+#: ../../source/label.txt:48
+msgid "Example"
+msgstr "Exemplo"
+
+#: ../../source/label.txt:55
+msgid ""
+"Pango Markup Syntax, http://developer.gnome.org/pango/stable/"
+"PangoMarkupFormat.html"
+msgstr ""
