@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-01 06:24-0300\n"
-"PO-Revision-Date: 2018-04-01 07:22-0300\n"
+"PO-Revision-Date: 2018-04-06 06:56-0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/button_widgets.txt:2
 msgid "Button Widgets"
-msgstr ""
+msgstr "Widgets de Botão"
 
 #: ../../source/button_widgets.txt:5
 msgid "Button"
-msgstr ""
+msgstr "Botão"
 
 #: ../../source/button_widgets.txt:7
 msgid ""
@@ -60,7 +60,7 @@ msgstr "Exemplo"
 
 #: ../../source/button_widgets.txt:26
 msgid "ToggleButton"
-msgstr ""
+msgstr "Botão de Alternância"
 
 #: ../../source/button_widgets.txt:28
 msgid ""
@@ -90,7 +90,7 @@ msgstr ""
 
 #: ../../source/button_widgets.txt:47
 msgid "CheckButton"
-msgstr ""
+msgstr "Botão de Seleção"
 
 #: ../../source/button_widgets.txt:48
 msgid ""
@@ -110,7 +110,7 @@ msgstr ""
 
 #: ../../source/button_widgets.txt:56
 msgid "RadioButton"
-msgstr ""
+msgstr "Botão de Radio"
 
 #: ../../source/button_widgets.txt:57
 msgid ""
@@ -162,7 +162,7 @@ msgstr ""
 
 #: ../../source/button_widgets.txt:86
 msgid "LinkButton"
-msgstr ""
+msgstr "Botão Link"
 
 #: ../../source/button_widgets.txt:87
 msgid ""
@@ -186,7 +186,7 @@ msgstr ""
 
 #: ../../source/button_widgets.txt:103
 msgid "SpinButton"
-msgstr ""
+msgstr "Botão Giratório"
 
 #: ../../source/button_widgets.txt:104
 msgid ""
@@ -255,7 +255,7 @@ msgstr ""
 
 #: ../../source/button_widgets.txt:139
 msgid "Switch"
-msgstr ""
+msgstr "Interruptor"
 
 #: ../../source/button_widgets.txt:140
 msgid ""
