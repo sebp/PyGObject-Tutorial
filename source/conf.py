@@ -50,7 +50,7 @@ master_doc = 'index'
 project = u'Python GTK+ 3 Tutorial'
 copyright = u'GNU Free Documentation License 1.3'
 
-locale_dirs = ["../translations/locale",]
+# locale_dirs = ["../translations/locale",]
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -130,7 +130,7 @@ html_theme = 'sphinx_rtd_theme'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['../static']
+html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -224,6 +224,3 @@ man_pages = [
     ('index', 'pygobjecttutorial', u'PyGObject Tutorial Documentation',
      [u'Sebastian Pölsterl'], 1)
 ]
-
-def setup(app):
-    app.add_stylesheet('css/custom.css')

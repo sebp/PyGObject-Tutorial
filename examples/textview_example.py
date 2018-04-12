@@ -198,6 +198,6 @@ class TextViewWindow(Gtk.Window):
             self.search_and_mark(text, match_end)
 
 win = TextViewWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

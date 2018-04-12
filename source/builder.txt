@@ -82,14 +82,14 @@ Connecting Signals
 ------------------
 Glade also makes it possible to define signals which you can connect to handlers in your code without extracting every object from the builder and connecting to the signals manually.
 The first thing to do is to declare the signal names in Glade.
-For this example we will act when the window should be closed and when the button was pressed, so we give the name "onDeleteWindow" to the "delete-event" signal of the window and "onButtonPressed" to the "pressed" signal of the button.
+For this example we will act when the window is closed and when the button was pressed, so we give the name "onDestroy" to the callback handling the "destroy" signal of the window and "onButtonPressed" to the callback handling the "pressed" signal of the button.
 Now the XML file should look like this.
 
 .. literalinclude:: ../examples/builder_example.glade
 	:language: xml
 
 Now we have to define the handler functions in our code.
-The *onDeleteWindow* should simply result in a call to :meth:`Gtk.main_quit`.
+The *onDestroy* should simply result in a call to :meth:`Gtk.main_quit`.
 When the button is pressed we would like to print the string "Hello World!", so we define the handler as follows
 
 .. code-block:: python
@@ -103,7 +103,7 @@ The easiest way to do this is to define a *dict* with a mapping from the names t
 .. code-block:: python
 
     handlers = {
-        "onDeleteWindow": Gtk.main_quit,
+        "onDestroy": Gtk.main_quit,
         "onButtonPressed": hello
     }
     builder.connect_signals(handlers)

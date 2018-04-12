@@ -42,6 +42,6 @@ class CellRendererComboWindow(Gtk.Window):
         self.liststore_hardware[path][1] = text
 
 win = CellRendererComboWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

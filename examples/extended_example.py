@@ -15,6 +15,6 @@ class MyWindow(Gtk.Window):
         print("Hello World")
 
 win = MyWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

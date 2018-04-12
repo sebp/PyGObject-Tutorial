@@ -25,6 +25,6 @@ class TableWindow(Gtk.Window):
         table.attach(button6, 2, 3, 2, 3)
 
 win = TableWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

@@ -12,6 +12,6 @@ class LinkButtonWindow(Gtk.Window):
         self.add(button)
 
 win = LinkButtonWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

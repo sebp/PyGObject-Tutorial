@@ -35,6 +35,6 @@ class CellRendererTextWindow(Gtk.Window):
         self.liststore[path][1] = text
 
 win = CellRendererTextWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()

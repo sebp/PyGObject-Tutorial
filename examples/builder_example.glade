@@ -3,7 +3,7 @@
   <!-- interface-requires gtk+ 3.0 -->
   <object class="GtkWindow" id="window1">
     <property name="can_focus">False</property>
-    <signal name="delete-event" handler="onDeleteWindow" swapped="no"/>
+    <signal name="destroy" handler="onDestroy" swapped="no"/>
     <child>
       <object class="GtkButton" id="button1">
         <property name="label" translatable="yes">button</property>

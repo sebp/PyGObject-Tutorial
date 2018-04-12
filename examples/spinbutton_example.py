@@ -35,6 +35,6 @@ class SpinButtonWindow(Gtk.Window):
         self.spinbutton.set_update_policy(policy)
 
 win = SpinButtonWindow()
-win.connect("delete-event", Gtk.main_quit)
+win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
