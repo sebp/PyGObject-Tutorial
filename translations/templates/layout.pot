@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-11 22:22-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/layout.txt:4
+msgid "Layout Containers"
+msgstr ""
+
+#: ../../source/layout.txt:5
+msgid "While many GUI toolkits require you to precisely place widgets in a window, using absolute positioning, GTK+ uses a different approach. Rather than specifying the position and size of each widget in the window, you can arrange your widgets in rows, columns, and/or tables. The size of your window can be determined automatically, based on the sizes of the widgets it contains. And the sizes of the widgets are, in turn, determined by the amount of text they contain, or the minimum and maximum sizes that you specify, and/or how you have requested that the available space should be shared between sets of widgets. You can perfect your layout by specifying padding distance and centering values for each of your widgets. GTK+ then uses all this information to resize and reposition everything sensibly and smoothly when the user manipulates the window."
+msgstr ""
+
+#: ../../source/layout.txt:19
+msgid "GTK+ arranges widgets hierarchically, using *containers*. They are invisible to the end user and are inserted into a window, or placed within each other to layout components. There are two flavours of containers: single-child containers, which are all descendants of :class:`Gtk.Bin`, and multiple-child containers, which are descendants of :class:`Gtk.Container`. The most commonly used are vertical or horizontal boxes (:class:`Gtk.Box`) and grids (:class:`Gtk.Grid`)."
+msgstr ""
+
+#: ../../source/layout.txt:29
+msgid "Boxes"
+msgstr ""
+
+#: ../../source/layout.txt:31
+msgid "Boxes are invisible containers into which we can pack our widgets. When packing widgets into a horizontal box, the objects are inserted horizontally from left to right or right to left depending on whether :meth:`Gtk.Box.pack_start` or :meth:`Gtk.Box.pack_end` is used. In a vertical box, widgets are packed from top to bottom or vice versa. You may use any combination of boxes inside or beside other boxes to create the desired effect."
+msgstr ""
+
+#: ../../source/layout.txt:40
+#: ../../source/layout.txt:97
+#: ../../source/layout.txt:123
+#: ../../source/layout.txt:156
+#: ../../source/layout.txt:180
+#: ../../source/layout.txt:210
+#: ../../source/layout.txt:230
+msgid "Example"
+msgstr ""
+
+#: ../../source/layout.txt:42
+msgid "Let's take a look at a slightly modified version of the extended example with two buttons."
+msgstr ""
+
+#: ../../source/layout.txt:50
+msgid "First, we create a horizontally orientated box container where 6 pixels are placed between children. This box becomes the child of the top-level window."
+msgstr ""
+
+#: ../../source/layout.txt:56
+msgid "Subsequently, we add two different buttons to the box container."
+msgstr ""
+
+#: ../../source/layout.txt:61
+msgid "While with :meth:`Gtk.Box.pack_start` widgets are positioned from left to right, :meth:`Gtk.Box.pack_end` positions them from right to left."
+msgstr ""
+
+#: ../../source/layout.txt:67
+msgid "Grid"
+msgstr ""
+
+#: ../../source/layout.txt:68
+msgid ":class:`Gtk.Grid` is a container which arranges its child widgets in rows and columns, but you do not need to specify the dimensions in the constructor. Children are added using :meth:`Gtk.Grid.attach`. They can span multiple rows or columns. The :meth:`Gtk.Grid.attach` method takes five parameters:"
+msgstr ""
+
+#: ../../source/layout.txt:73
+msgid "The ``child`` parameter is the :class:`Gtk.Widget` to add."
+msgstr ""
+
+#: ../../source/layout.txt:74
+msgid "``left`` is the column number to attach the left side of ``child`` to."
+msgstr ""
+
+#: ../../source/layout.txt:75
+msgid "``top`` indicates the row number to attach the top side of ``child`` to."
+msgstr ""
+
+#: ../../source/layout.txt:76
+msgid "``width`` and ``height`` indicate the number of columns that the ``child`` will span, and the number of rows that the ``child`` will span, respectively."
+msgstr ""
+
+#: ../../source/layout.txt:79
+msgid "It is also possible to add a child next to an existing child, using :meth:`Gtk.Grid.attach_next_to`, which also takes five parameters:"
+msgstr ""
+
+#: ../../source/layout.txt:82
+msgid "``child`` is the :class:`Gtk.Widget` to add, as above."
+msgstr ""
+
+#: ../../source/layout.txt:83
+msgid "``sibling`` is an existing child widget of ``self`` (a :class:`Gtk.Grid` instance) or ``None``. The ``child`` widget will be placed next to ``sibling``, or if ``sibling`` is ``None``, at the beginning or end of the grid."
+msgstr ""
+
+#: ../../source/layout.txt:86
+msgid "``side`` is a :class:`Gtk.PositionType` indicating the side of ``sibling`` that ``child`` is positioned next to."
+msgstr ""
+
+#: ../../source/layout.txt:88
+msgid "``width`` and ``height`` indicate the number of columns and rows the ``child`` widget will span, respectively."
+msgstr ""
+
+#: ../../source/layout.txt:91
+msgid "Finally, :class:`Gtk.Grid` can be used like a :class:`Gtk.Box` by just using :meth:`Gtk.Grid.add`, which will place children next to each other in the direction determined by the \"orientation\" property (defaults to :attr:`Gtk.Orientation.HORIZONTAL`)."
+msgstr ""
+
+#: ../../source/layout.txt:105
+msgid "ListBox"
+msgstr ""
+
+#: ../../source/layout.txt:107
+msgid "A :class:`Gtk.ListBox` is a vertical container that contains :class:`Gtk.ListBoxRow` children. These rows can be dynamically sorted and filtered, and headers can be added dynamically depending on the row content. It also allows keyboard and mouse navigation and selection like a typical list."
+msgstr ""
+
+#: ../../source/layout.txt:112
+msgid "Using :class:`Gtk.ListBox` is often an alternative to :class:`Gtk.TreeView`, especially when the list content has a more complicated layout than what is allowed by a :class:`Gtk.CellRenderer`, or when the content is interactive (i.e. has a button in it)."
+msgstr ""
+
+#: ../../source/layout.txt:117
+msgid "Although a :class:`Gtk.ListBox` must have only :class:`Gtk.ListBoxRow` children, you can add any kind of widget to it via :meth:`Gtk.Container.add` and a :class:`Gtk.ListBoxRow` widget will automatically be inserted between the list and the widget."
+msgstr ""
+
+#: ../../source/layout.txt:131
+msgid "Stack and StackSwitcher"
+msgstr ""
+
+#: ../../source/layout.txt:133
+msgid "A :class:`Gtk.Stack` is a container which only shows one of its children at a time. In contrast to :class:`Gtk.Notebook`, :class:`Gtk.Stack` does not provide a means for users to change the visible child. Instead, the :class:`Gtk.StackSwitcher` widget can be used with :class:`Gtk.Stack` to provide this functionality."
+msgstr ""
+
+#: ../../source/layout.txt:139
+msgid "Transitions between pages can be animated as slides or fades. This can be controlled with :meth:`Gtk.Stack.set_transition_type`. These animations respect the \"gtk-enable-animations\" setting."
+msgstr ""
+
+#: ../../source/layout.txt:143
+msgid "Transition speed can be adjusted with :meth:`Gtk.Stack.set_transition_duration`"
+msgstr ""
+
+#: ../../source/layout.txt:145
+msgid "The :class:`Gtk.StackSwitcher` widget acts as a controller for a :class:`Gtk.Stack`; it shows a row of buttons to switch between the various pages of the associated stack widget."
+msgstr ""
+
+#: ../../source/layout.txt:149
+msgid "All the content for the buttons comes from the child properties of the :class:`Gtk.Stack`."
+msgstr ""
+
+#: ../../source/layout.txt:152
+msgid "It is possible to associate multiple :class:`Gtk.StackSwitcher` widgets with the same :class:`Gtk.Stack` widget."
+msgstr ""
+
+#: ../../source/layout.txt:164
+msgid "HeaderBar"
+msgstr ""
+
+#: ../../source/layout.txt:166
+msgid "A :class:`Gtk.HeaderBar` is similar to a horizontal :class:`Gtk.Box`, it allows to place children at the start or the end. In addition, it allows a title to be displayed. The title will be centered with respect to the width of the box, even if the children at either side take up different amounts of space."
+msgstr ""
+
+#: ../../source/layout.txt:171
+msgid "Since GTK+ now supports Client Side Decoration, a :class:`Gtk.HeaderBar` can be used in place of the title bar (which is rendered by the Window Manager)."
+msgstr ""
+
+#: ../../source/layout.txt:174
+msgid "A :class:`Gtk.HeaderBar` is usually located across the top of a window and should contain commonly used controls which affect the content below. They also provide access to window controls, including the close window button and window menu."
+msgstr ""
+
+#: ../../source/layout.txt:188
+msgid "FlowBox"
+msgstr ""
+
+#: ../../source/layout.txt:190
+msgid "A :class:`Gtk.FlowBox` is a container that positions child widgets in sequence according to its orientation."
+msgstr ""
+
+#: ../../source/layout.txt:193
+msgid "For instance, with the horizontal orientation, the widgets will be arranged from left to right, starting a new row under the previous row when necessary. Reducing the width in this case will require more rows, so a larger height will be requested."
+msgstr ""
+
+#: ../../source/layout.txt:198
+msgid "Likewise, with the vertical orientation, the widgets will be arranged from top to bottom, starting a new column to the right when necessary. Reducing the height will require more columns, so a larger width will be requested."
+msgstr ""
+
+#: ../../source/layout.txt:202
+msgid "The children of a :class:`Gtk.FlowBox` can be dynamically sorted and filtered."
+msgstr ""
+
+#: ../../source/layout.txt:204
+msgid "Although a :class:`Gtk.FlowBox` must have only :class:`Gtk.FlowBoxChild` children, you can add any kind of widget to it via :meth:`Gtk.Container.add`, and a :class:`Gtk.FlowBoxChild` widget will automatically be inserted between the box and the widget."
+msgstr ""
+
+#: ../../source/layout.txt:218
+msgid "Notebook"
+msgstr ""
+
+#: ../../source/layout.txt:220
+msgid "The :class:`Gtk.Notebook` widget is a :class:`Gtk.Container` whose children are pages that can be switched between using tab labels along one edge."
+msgstr ""
+
+#: ../../source/layout.txt:222
+msgid "There are many configuration options for GtkNotebook. Among other things, you can choose on which edge the tabs appear (see :meth:`Gtk.Notebook.set_tab_pos`), whether, if there are too many tabs to fit the notebook should be made bigger or scrolling arrows added (see :meth:`Gtk.Notebook.set_scrollable`, and whether there will be a popup menu allowing the users to switch pages (see :meth:`Gtk.Notebook.popup_enable`, :meth:`Gtk.Notebook.popup_disable`)."
+msgstr ""
+

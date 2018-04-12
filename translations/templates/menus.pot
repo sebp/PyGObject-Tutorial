@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-11 22:22-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/menus.txt:2
+msgid "Menus"
+msgstr ""
+
+#: ../../source/menus.txt:4
+msgid ":class:`Gtk.UIManager`, :class:`Gtk.Action`, and :class:`Gtk.ActionGroup` have been deprecated since GTK+ version 3.10 and should not be used in newly-written code. Use the :ref:`application` framework instead."
+msgstr ""
+
+#: ../../source/menus.txt:8
+msgid "GTK+ comes with two different types of menus, :class:`Gtk.MenuBar` and :class:`Gtk.Toolbar`. :class:`Gtk.MenuBar` is a standard menu bar which contains one or more :class:`Gtk.MenuItem` instances or one of its subclasses. :class:`Gtk.Toolbar` widgets are used for quick accessibility to commonly used functions of an application. Examples include creating a new document, printing a page or undoing an operation. It contains one or more instances of :class:`Gtk.ToolItem` or one of its subclasses."
+msgstr ""
+
+#: ../../source/menus.txt:17
+msgid "Actions"
+msgstr ""
+
+#: ../../source/menus.txt:19
+msgid "Although, there are specific APIs to create menus and toolbars, you should use :class:`Gtk.UIManager` and create :class:`Gtk.Action` instances. Actions are organised into groups. A :class:`Gtk.ActionGroup` is essentially a map from names to :class:`Gtk.Action` objects. All actions that would make sense to use in a particular context should be in a single group. Multiple action groups may be used for a particular user interface. In fact, it is expected that most non-trivial applications will make use of multiple groups. For example, in an application that can edit multiple documents, one group holding global actions (e.g. quit, about, new), and one group per document holding actions that act on that document (eg. save, cut/copy/paste, etc). Each window's menus would be constructed from a combination of two action groups."
+msgstr ""
+
+#: ../../source/menus.txt:31
+msgid "Different classes representing different types of actions exist:"
+msgstr ""
+
+#: ../../source/menus.txt:33
+msgid ":class:`Gtk.Action`: An action which can be triggered by a menu or toolbar item"
+msgstr ""
+
+#: ../../source/menus.txt:35
+msgid ":class:`Gtk.ToggleAction`: An action which can be toggled between two states"
+msgstr ""
+
+#: ../../source/menus.txt:36
+msgid ":class:`Gtk.RadioAction`: An action of which only one in a group can be active"
+msgstr ""
+
+#: ../../source/menus.txt:38
+msgid ":class:`Gtk.RecentAction`: An action of which represents a list of recently used files"
+msgstr ""
+
+#: ../../source/menus.txt:41
+msgid "Actions represent operations that the user can be perform, along with some information how it should be presented in the interface, including its name (not for display), its label (for display), an accelerator, whether a label indicates a tooltip as well as the callback that is called when the action gets activated."
+msgstr ""
+
+#: ../../source/menus.txt:47
+msgid "You can create actions by either calling one of the constructors directly and adding them to a :class:`Gtk.ActionGroup` by calling :meth:`Gtk.ActionGroup.add_action` or :meth:`Gtk.ActionGroup.add_action_with_accel`, or by calling one of the convenience functions:"
+msgstr ""
+
+#: ../../source/menus.txt:52
+msgid ":meth:`Gtk.ActionGroup.add_actions`,"
+msgstr ""
+
+#: ../../source/menus.txt:53
+msgid ":meth:`Gtk.ActionGroup.add_toggle_actions`"
+msgstr ""
+
+#: ../../source/menus.txt:54
+msgid ":meth:`Gtk.ActionGroup.add_radio_actions`."
+msgstr ""
+
+#: ../../source/menus.txt:56
+msgid "Note that you must specify actions for sub menus as well as menu items."
+msgstr ""
+
+#: ../../source/menus.txt:59
+msgid "UI Manager"
+msgstr ""
+
+#: ../../source/menus.txt:61
+msgid ":class:`Gtk.UIManager` provides an easy way of creating menus and toolbars using an `XML-like description <http://developer.gnome.org/gtk3/stable/GtkUIManager.html#XML-UI>`_."
+msgstr ""
+
+#: ../../source/menus.txt:64
+msgid "First of all, you should add the :class:`Gtk.ActionGroup` to the UI Manager with :meth:`Gtk.UIManager.insert_action_group`. At this point is also a good idea to tell the parent window to respond to the specified keyboard shortcuts, by using :meth:`Gtk.UIManager.get_accel_group` and :meth:`Gtk.Window.add_accel_group`."
+msgstr ""
+
+#: ../../source/menus.txt:69
+msgid "Then, you can define the actual visible layout of the menus and toolbars, and add the UI layout. This \"ui string\" uses an XML format, in which you should mention the names of the actions that you have already created. Remember that these names are just the identifiers that we used when creating the actions. They are not the text that the user will see in the menus and toolbars. We provided those human-readable names when we created the actions."
+msgstr ""
+
+#: ../../source/menus.txt:76
+msgid "Finally, you retrieve the root widget with :meth:`Gtk.UIManager.get_widget` and add the widget to a container such as :class:`Gtk.Box`."
+msgstr ""
+
+#: ../../source/menus.txt:80
+msgid "Example"
+msgstr ""
+

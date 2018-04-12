@@ -4,19 +4,20 @@
 # Tutorial package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-10 09:47+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-04-11 23:07-0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
+"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 1.8.11\n"
 
 # e121e6594e0e4da9a1621a2377ef4958
 #: ../source/stock.txt:4
@@ -26,9 +27,9 @@ msgstr ""
 # 606b231d71674442a3f5d52d748963fa
 #: ../source/stock.txt:6
 msgid ""
-"Stock items represent commonly-used menu or toolbar items such as "
-"\"Open\" or \"Exit\". Each stock item is identified by a stock ID; stock "
-"IDs are just strings, but constants such as :attr:`Gtk.STOCK_OPEN` are "
+"Stock items represent commonly-used menu or toolbar items such as \"Open"
+"\" or \"Exit\". Each stock item is identified by a stock ID; stock IDs "
+"are just strings, but constants such as :attr:`Gtk.STOCK_OPEN` are "
 "provided to avoid typing mistakes in the strings."
 msgstr ""
 
@@ -81,4 +82,3 @@ msgstr ""
 #: ../source/stock.txt:499
 msgid "RTL variant:"
 msgstr ""
-
