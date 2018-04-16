@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-29 00:10-0300\n"
+"PO-Revision-Date: 2018-04-11 23:07-0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+
+#: ../../source/install.txt:4
+msgid "Installation"
+msgstr "Instalação"
+
+#: ../../source/install.txt:5
+msgid ""
+"The first step before we start with actual coding consists of setting up "
+"`PyGObject`_ and its dependencies. PyGObject is a Python module that enables "
+"developers to access GObject-based libraries such as GTK+ within Python. It "
+"exclusively supports GTK+ version 3 or later. If you want to use GTK+ 2 in "
+"your application, use `PyGTK`_, instead."
+msgstr ""
+"O primeiro passo antes de começarmos com a codificação atual consiste em "
+"configurar o `PyGObject`_ e suas dependências. PyGObject é um módulo Python "
+"que permite aos desenvolvedores acessar bibliotecas baseadas no GObject, "
+"como o GTK+, dentro do Python. Ele suporta exclusivamente o GTK+ versão 3 ou "
+"posterior. Se você quiser usar o GTK+ 2 em sua aplicação, use `PyGTK`_."
+
+#: ../../source/install.txt:13
+msgid "Dependencies"
+msgstr "Dependências"
+
+#: ../../source/install.txt:15
+msgid "GTK+3"
+msgstr ""
+
+#: ../../source/install.txt:17
+msgid "Python 2 (2.6 or later) or Python 3 (3.1 or later)"
+msgstr "Python 2 (2.6 ou posterior) ou Python 3 (3.1 ou posterior)"
+
+#: ../../source/install.txt:19
+msgid "gobject-introspection"
+msgstr ""
+
+#: ../../source/install.txt:22
+msgid "Prebuilt Packages"
+msgstr "Pacotes pré-construídos"
+
+#: ../../source/install.txt:23
+msgid ""
+"Recent versions of PyGObject and its dependencies are packaged by nearly all "
+"major Linux distributions. So, if you use Linux, you can probably get "
+"started by installing the package from the official repository for your "
+"distribution."
+msgstr ""
+"Versões recentes do PyGObject e suas dependências são empacotadas por quase "
+"todas as principais distribuições do Linux. Então, se você usa o Linux, você "
+"provavelmente pode começar instalando o pacote a partir do repositório "
+"oficial da sua distribuição."
+
+#: ../../source/install.txt:29
+msgid "Installing From Source"
+msgstr "Instalando a partir da origem"
+
+#: ../../source/install.txt:30
+msgid ""
+"The easiest way to install PyGObject from source is using `JHBuild`_. It is "
+"designed to easily build source packages and discover what dependencies need "
+"to be build and in what order. To setup JHBuild, please follow the `JHBuild "
+"manual`_."
+msgstr ""
+"A maneira mais fácil de instalar o PyGObject a partir do código-fonte é "
+"usando o `JHBuild`_. Ele é projetado para criar facilmente pacotes de código-"
+"fonte e descobrir quais dependências precisam ser construídas e em que "
+"ordem. Para configurar o JHBuild, por favor, siga o `manual do JHBuild`_."
+
+#: ../../source/install.txt:34
+msgid ""
+"Once you have installed JHBuild successfully, download the latest "
+"configuration from [#]_. Copy files with the suffix `.modules` to JHBuild's "
+"module directory and the file `sample-tarball.jhbuildrc` to `~/.jhbuildrc`."
+msgstr ""
+"Depois de ter instalado o JHBuild com sucesso, baixe a configuração mais "
+"recente de [#]_. Copie os arquivos com o sufixo `.modules` para o diretório "
+"de módulos do JHBuild e o arquivo `sample-tarball.jhbuildrc` para `~/."
+"jhbuildrc`."
+
+#: ../../source/install.txt:38
+msgid ""
+"If you have not done it before, verify that your build environment is setup "
+"correctly by running::"
+msgstr ""
+"Se você não tiver feito isso antes, verifique se o seu ambiente de "
+"compilação está configurado corretamente executando:"
+
+#: ../../source/install.txt:43
+msgid ""
+"It will print any applications and libraries that are currently missing on "
+"your system but required for building. You should install those using your "
+"distribution's package repository. A list of `package names <https://wiki."
+"gnome.org/action/show/Projects/Jhbuild/Dependencies>`_ for different "
+"distributions is maintained on the GNOME wiki. Run the command above again "
+"to ensure the required tools are present."
+msgstr ""
+"Ele imprimirá todos os aplicativos e bibliotecas que estiverem ausentes no "
+"seu sistema, mas necessários para construção. Você deve instalá-los usando o "
+"repositório de pacotes da sua distribuição. Uma lista de `nomes de pacotes "
+"<https://wiki.gnome.org/action/show/Projects/Jhbuild/Dependencies>` _ para "
+"diferentes distribuições é mantida no wiki GNOME. Execute o comando acima "
+"novamente para garantir que as ferramentas necessárias estejam presentes."
+
+#: ../../source/install.txt:49
+msgid ""
+"Executing the following command will build PyGObject and all its "
+"dependencies::"
+msgstr ""
+"Executando o seguinte comando irá construir o PyGObject e todas as suas "
+"dependências::"
+
+#: ../../source/install.txt:53
+msgid "Finally, you might want to install GTK+ from source as well::"
+msgstr ""
+"Finalmente, você pode querer instalar o GTK+ a partir do código fonte::"
+
+#: ../../source/install.txt:57
+msgid "To start a shell with the same environment as used by JHBuild, run::"
+msgstr ""
+"Para iniciar um shell com o mesmo ambiente usado pelo JHBuild, execute::"
+
+#: ../../source/install.txt:66
+msgid "https://download.gnome.org/teams/releng/"
+msgstr ""
