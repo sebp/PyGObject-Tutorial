@@ -38,6 +38,7 @@ Contents:
    introduction
    basics
    unicode
+   gallery
    layout
    label
    entry
