@@ -1,0 +1,466 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-04 04:43-0300\n"
+"PO-Revision-Date: 2018-04-11 23:08-0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+
+#: ../../source/treeview.txt:2
+msgid "Tree and List Widgets"
+msgstr "Widgets de Árvore e Lista"
+
+#: ../../source/treeview.txt:4
+msgid ""
+"A :class:`Gtk.TreeView` and its associated widgets are an extremely powerful "
+"way of displaying data. They are used in conjunction with a :class:`Gtk."
+"ListStore` or :class:`Gtk.TreeStore` and provide a way of displaying and "
+"manipulating data in many ways, including:"
+msgstr ""
+"A :class:`Gtk.TreeView` e seus widgets associados são uma maneira "
+"extremamente poderosa de exibir dados. Eles são usados em conjunto com um :"
+"class:`Gtk.ListStore` ou :class:`Gtk.TreeStore` e fornecem uma maneira de "
+"exibir e manipular dados de várias maneiras, incluindo:"
+
+#: ../../source/treeview.txt:9
+msgid "Automatically updates when data added, removed or edited"
+msgstr ""
+"Atualiza automaticamente quando os dados são adicionados, removidos ou "
+"editados"
+
+#: ../../source/treeview.txt:10
+msgid "Drag and drop support"
+msgstr "Suporte a Arrastar e Soltar"
+
+#: ../../source/treeview.txt:11
+msgid "Sorting of data"
+msgstr "Classificação de dados"
+
+#: ../../source/treeview.txt:12
+msgid "Support embedding widgets such as check boxes, progress bars, etc."
+msgstr ""
+"Suporte a incorporação de widgets, como caixas de seleção, barras de "
+"progresso, etc."
+
+#: ../../source/treeview.txt:13
+msgid "Reorderable and resizable columns"
+msgstr "Colunas reordenáveis e redimensionáveis"
+
+#: ../../source/treeview.txt:14
+msgid "Filtering of data"
+msgstr "Filtragem de dados"
+
+#: ../../source/treeview.txt:16
+msgid ""
+"With the power and flexibility of a :class:`Gtk.TreeView` comes complexity. "
+"It is often difficult for beginner developers to be able to utilize it "
+"correctly due to the number of methods which are required."
+msgstr ""
+"Com o poder e a flexibilidade de um :class:`Gtk.TreeView` vem a "
+"complexidade. Geralmente, é difícil para os desenvolvedores iniciantes serem "
+"capazes de utilizá-lo corretamente devido ao número de métodos necessários."
+
+#: ../../source/treeview.txt:21
+msgid "The Model"
+msgstr "O Modelo"
+
+#: ../../source/treeview.txt:22
+msgid ""
+"Each :class:`Gtk.TreeView` has an associated :class:`Gtk.TreeModel`, which "
+"contains the data displayed by the TreeView. Each :class:`Gtk.TreeModel` can "
+"be used by more than one :class:`Gtk.TreeView`. For instance, this allows "
+"the same underlying data to be displayed and edited in 2 different ways at "
+"the same time. Or the 2 Views might display different columns from the same "
+"Model data, in the same way that 2 SQL queries (or \"views\") might show "
+"different fields from the same database table."
+msgstr ""
+"Cada :class:`Gtk.TreeView` possui um :class:`Gtk.TreeModel`, que contém os "
+"dados exibidos pelo TreeView. Cada :class:`Gtk.TreeModel` pode ser usado por "
+"mais de um :class:`Gtk.TreeView`. Por exemplo, isso permite que os mesmos "
+"dados subjacentes sejam exibidos e editados de duas maneiras diferentes ao "
+"mesmo tempo. Ou os 2 modos de exibição podem exibir colunas diferentes dos "
+"mesmos dados do modelo, da mesma forma que duas consultas SQL (ou "
+"\"visualizações\") podem mostrar campos diferentes da mesma tabela de banco "
+"de dados."
+
+#: ../../source/treeview.txt:30
+msgid ""
+"Although you can theoretically implement your own Model, you will normally "
+"use either the :class:`Gtk.ListStore` or :class:`Gtk.TreeStore` model "
+"classes. :class:`Gtk.ListStore` contains simple rows of data, and each row "
+"has no children, whereas :class:`Gtk.TreeStore` contains rows of data, and "
+"each row may have child rows."
+msgstr ""
+"Embora você possa teoricamente implementar seu próprio Modelo, você "
+"normalmente usará as classes de modelo :class:`Gtk.ListStore` ou :class:`Gtk."
+"TreeStore`. :class:`Gtk.ListStore` contém linhas simples de dados, e cada "
+"linha não tem filhos, enquanto :class:`Gtk.TreeStore` contém linhas de "
+"dados, e cada linha pode ter linhas filhas."
+
+#: ../../source/treeview.txt:36
+msgid ""
+"When constructing a model you have to specify the data types for each column "
+"the model holds."
+msgstr ""
+"Ao construir um modelo, você deve especificar os tipos de dados para cada "
+"coluna que o modelo contém."
+
+#: ../../source/treeview.txt:43
+msgid ""
+"This creates a list store with three columns, two string columns, and a "
+"float column."
+msgstr ""
+"Isso cria um armazenamento de lista com três colunas, duas colunas de string "
+"e uma coluna flutuante."
+
+#: ../../source/treeview.txt:46
+msgid ""
+"Adding data to the model is done using :meth:`Gtk.ListStore.append` or :meth:"
+"`Gtk.TreeStore.append`, depending upon which sort of model was created."
+msgstr ""
+"A adição de dados ao modelo é feita usando :meth:`Gtk.ListStore.append` ou :"
+"meth:`Gtk.TreeStore.append`, dependendo de qual tipo de modelo foi criado."
+
+#: ../../source/treeview.txt:54
+msgid ""
+"Both methods return a :class:`Gtk.TreeIter` instance, which points to the "
+"location of the newly inserted row. You can retrieve a :class:`Gtk.TreeIter` "
+"by calling :meth:`Gtk.TreeModel.get_iter`."
+msgstr ""
+"Ambos os métodos retornam uma instância :class:`Gtk.TreeIter`, que aponta "
+"para a localização da linha recém-inserida. Você pode recuperar um :class:"
+"`Gtk.TreeIter` chamando :meth:`Gtk.TreeModel.get_iter`."
+
+#: ../../source/treeview.txt:58
+msgid ""
+"Once data has been inserted, you can retrieve or modify data using the tree "
+"iter and column index."
+msgstr ""
+"Depois que os dados foram inseridos, você pode recuperar ou modificar dados "
+"usando o iterador de árvore e o índice de coluna."
+
+#: ../../source/treeview.txt:66
+msgid ""
+"As with Python's built-in :class:`list` object you can use :func:`len` to "
+"get the number of rows and use slices to retrieve or set values."
+msgstr ""
+"Assim como no objeto built-in :class:`list` do Python, você pode usar :func:"
+"`len` para obter o número de linhas e usar fatias para recuperar ou definir "
+"valores."
+
+#: ../../source/treeview.txt:80
+msgid "Iterating over all rows of a tree model is very simple as well."
+msgstr ""
+"Iterar sobre todas as linhas de um modelo de árvore é muito simples também."
+
+#: ../../source/treeview.txt:88
+msgid ""
+"Keep in mind, that if you use :class:`Gtk.TreeStore`, the above code will "
+"only iterate over the rows of the top level, but not the children of the "
+"nodes. To iterate over all rows and its children, use the "
+"``print_tree_store`` function."
+msgstr ""
+"Tenha em mente que, se você usar :class:`Gtk.TreeStore`, o código acima irá "
+"apenas iterar sobre as linhas do nível superior, mas não os filhos dos nós. "
+"Para iterar sobre todas as linhas e seus filhos, use a função "
+"``print_tree_store``."
+
+#: ../../source/treeview.txt:106
+msgid ""
+"Apart from accessing values stored in a :class:`Gtk.TreeModel` with the list-"
+"like method mentioned above, it is also possible to either use :class:`Gtk."
+"TreeIter` or :class:`Gtk.TreePath` instances. Both reference a particular "
+"row in a tree model. One can convert a path to an iterator by calling :meth:"
+"`Gtk.TreeModel.get_iter`. As :class:`Gtk.ListStore` contains only one level, "
+"i.e. nodes do not have any child nodes, a path is essentially the index of "
+"the row you want to access."
+msgstr ""
+"Além de acessar valores armazenados em um :class:`Gtk.TreeModel` com o "
+"método list-like mencionado acima, também é possível usar as instâncias :"
+"class:`Gtk.TreeIter` ou :class:`Gtk.TreePath`. Ambos fazem referência a uma "
+"linha específica em um modelo de árvore. Pode-se converter um caminho para "
+"um iterador chamando :meth:`Gtk.TreeModel.get_iter`. Como :class:`Gtk."
+"ListStore` contém apenas um nível, ou seja, nós não têm nenhum nó filho, um "
+"caminho é essencialmente o índice da linha que você deseja acessar."
+
+#: ../../source/treeview.txt:123
+msgid ""
+"In the case of :class:`Gtk.TreeStore`, a path is a list of indexes or a "
+"string. The string form is a list of numbers separated by a colon. Each "
+"number refers to the offset at that level. Thus, the path \"0\" refers to "
+"the root node and the path \"2:4\" refers to the fifth child of the third "
+"node."
+msgstr ""
+"No caso de :class:`Gtk.TreeStore`, um caminho é uma lista de índices ou uma "
+"string. O formulário de string é uma lista de números separados por dois "
+"pontos. Cada número refere-se ao deslocamento nesse nível. Assim, o caminho "
+"\"0\" refere-se ao nó raiz e o caminho \"2: 4\" refere-se ao quinto filho do "
+"terceiro nó."
+
+#: ../../source/treeview.txt:136
+msgid ""
+"Instances of :class:`Gtk.TreePath` can be accessed like lists, i.e. "
+"``len(treepath)`` returns the depth of the item ``treepath`` is pointing to, "
+"and ``treepath[i]`` returns the child's index on the *i*-th level."
+msgstr ""
+"Instâncias de :class:`Gtk.TreePath` podem ser acessadas como listas, "
+"``len(treepath)`` retorna a profundidade do item ``treepath`` está apontando "
+"para, e ``treepath[i]`` retorna o índice do filho no nível *i*."
+
+#: ../../source/treeview.txt:141
+msgid "The View"
+msgstr "A View"
+
+#: ../../source/treeview.txt:142
+msgid ""
+"While there are several different models to choose from, there is only one "
+"view widget to deal with. It works with either the list or the tree store. "
+"Setting up a :class:`Gtk.TreeView` is not a difficult matter. It needs a :"
+"class:`Gtk.TreeModel` to know where to retrieve its data from, either by "
+"passing it to the :class:`Gtk.TreeView` constructor, or by calling :meth:"
+"`Gtk.TreeView.set_model`."
+msgstr ""
+"Embora existam vários modelos diferentes para escolher, há apenas um widget "
+"de visualização para lidar. Funciona com a lista ou com o armazenamento em "
+"árvore. Configurar um :class:`Gtk.TreeView` não é uma tarefa difícil. Ele "
+"precisa de um :class:`Gtk.TreeModel` para saber de onde recuperar seus "
+"dados, seja passando-o para o construtor :class:`Gtk.TreeView`, ou chamando :"
+"meth:`Gtk.TreeView.set_model`."
+
+#: ../../source/treeview.txt:153
+msgid ""
+"Once the :class:`Gtk.TreeView` widget has a model, it will need to know how "
+"to display the model. It does this with columns and cell renderers."
+msgstr ""
+"Uma vez que o widget :class:`Gtk.TreeView` possua um modelo, ele precisará "
+"saber como exibir o modelo. Ele faz isso com colunas e renderizadores de "
+"célula."
+
+#: ../../source/treeview.txt:156
+msgid ""
+"Cell renderers are used to draw the data in the tree model in a way. There "
+"are a number of cell renderers that come with GTK+, for instance :class:`Gtk."
+"CellRendererText`, :class:`Gtk.CellRendererPixbuf` and :class:`Gtk."
+"CellRendererToggle`. In addition, it is relatively easy to write a custom "
+"renderer yourself."
+msgstr ""
+"Os renderizadores de célula são usados para desenhar os dados no modelo de "
+"árvore de uma maneira. Existem vários renderizadores de célula que vêm com o "
+"GTK+, por exemplo :class:`Gtk.CellRendererText`, :class:`Gtk."
+"CellRendererPixbuf` e :class:`Gtk.CellRendererToggle`. Além disso, é "
+"relativamente fácil escrever um renderizador personalizado por conta própria."
+
+#: ../../source/treeview.txt:162
+msgid ""
+"A :class:`Gtk.TreeViewColumn` is the object that :class:`Gtk.TreeView` uses "
+"to organize the vertical columns in the tree view. It needs to know the name "
+"of the column to label for the user, what type of cell renderer to use, and "
+"which piece of data to retrieve from the model for a given row."
+msgstr ""
+"A :class:`Gtk.TreeViewColumn` é o objeto que :class:`Gtk.TreeView` usa para "
+"organizar as colunas verticais na visualização em árvore. Ele precisa saber "
+"o nome da coluna para rotular o usuário, que tipo de renderizador de célula "
+"deve ser usado e qual parte dos dados deve ser recuperada do modelo para uma "
+"determinada linha."
+
+#: ../../source/treeview.txt:173
+msgid ""
+"To render more than one model column in a view column, you need to create a :"
+"class:`Gtk.TreeViewColumn` instance and use :meth:`Gtk.TreeViewColumn."
+"pack_start` to add the model columns to it."
+msgstr ""
+"Para renderizar mais de uma coluna de modelo em uma coluna de visão, você "
+"precisa criar uma instância :class:`Gtk.TreeViewColumn` e usar :meth:`Gtk."
+"TreeViewColumn.pack_start` para adicionar as colunas de modelo a ela."
+
+#: ../../source/treeview.txt:193
+msgid "The Selection"
+msgstr "A Seleção"
+
+#: ../../source/treeview.txt:194
+msgid ""
+"Most applications will need to not only deal with displaying data, but also "
+"receiving input events from users. To do this, simply get a reference to a "
+"selection object and connect to the \"changed\" signal."
+msgstr ""
+"A maioria dos aplicativos precisará não apenas lidar com a exibição de "
+"dados, mas também receber eventos de entrada dos usuários. Para fazer isso, "
+"basta obter uma referência a um objeto de seleção e conectar-se ao sinal "
+"\"changed\"."
+
+#: ../../source/treeview.txt:203
+msgid "Then to retrieve data for the row selected:"
+msgstr "Em seguida, para recuperar dados para a linha selecionada:"
+
+#: ../../source/treeview.txt:212
+msgid ""
+"You can control what selections are allowed by calling :meth:`Gtk."
+"TreeSelection.set_mode`. :meth:`Gtk.TreeSelection.get_selected` does not "
+"work if the selection mode is set to :attr:`Gtk.SelectionMode.MULTIPLE`, "
+"use :meth:`Gtk.TreeSelection.get_selected_rows` instead."
+msgstr ""
+"Você pode controlar quais seleções são permitidas chamando :meth:`Gtk."
+"TreeSelection.set_mode`. :meth:`Gtk.TreeSelection.get_selected` não funciona "
+"se o modo de seleção estiver definido como :attr:`Gtk.SelectionMode."
+"MULTIPLE`, use :meth:`Gtk.TreeSelection.get_selected_rows`."
+
+#: ../../source/treeview.txt:219
+msgid "Sorting"
+msgstr "Classificação"
+
+#: ../../source/treeview.txt:220
+msgid ""
+"Sorting is an important feature for tree views and is supported by the "
+"standard tree models (:class:`Gtk.TreeStore` and :class:`Gtk.ListStore`), "
+"which implement the :class:`Gtk.TreeSortable` interface."
+msgstr ""
+"A classificação é um recurso importante para as visualizações em árvore e é "
+"suportada pelos modelos de árvore padrão (:class:`Gtk.TreeStore` e :class:"
+"`Gtk.ListStore`), que implementam a interface :class:`Gtk.TreeSortable`."
+
+#: ../../source/treeview.txt:223
+msgid "Sorting by clicking on columns"
+msgstr "Classificando clicando em colunas"
+
+#: ../../source/treeview.txt:224
+msgid ""
+"A column of a :class:`Gtk.TreeView` can easily made sortable with a call to :"
+"meth:`Gtk.TreeViewColumn.set_sort_column_id`. Afterwards the column can be "
+"sorted by clicking on its header."
+msgstr ""
+"Uma coluna de um :class:`Gtk.TreeView` pode ser facilmente ordenada com uma "
+"chamada para :meth:`Gtk.TreeViewColumn.set_sort_column_id`. Depois, a coluna "
+"pode ser ordenada clicando no cabeçalho."
+
+#: ../../source/treeview.txt:227
+msgid ""
+"First we need a simple :class:`Gtk.TreeView` and a :class:`Gtk.ListStore` as "
+"a model."
+msgstr ""
+"Primeiro precisamos de um simples :class:`Gtk.TreeView` e um :class:`Gtk."
+"ListStore` como modelo."
+
+#: ../../source/treeview.txt:246
+msgid ""
+"The next step is to enable sorting. Note that the *column_id* (``0`` in the "
+"example) refers to the column of the model and **not** to the TreeView's "
+"column."
+msgstr ""
+"O próximo passo é ativar a classificação. Note que o *column_id* (``0`` no "
+"exemplo) refere-se à coluna do modelo e **não** à coluna do TreeView."
+
+#: ../../source/treeview.txt:253
+msgid "Setting a custom sort function"
+msgstr "Definindo uma função de classificação personalizada"
+
+#: ../../source/treeview.txt:254
+msgid ""
+"It is also possible to set a custom comparison function in order to change "
+"the sorting behaviour. As an example we will create a comparison function "
+"that sorts case-sensitive. In the example above the sorted list looked like::"
+msgstr ""
+"Também é possível definir uma função de comparação personalizada para "
+"alterar o comportamento de classificação. Como exemplo, criaremos uma função "
+"de comparação que classifica maiúsculas e minúsculas. No exemplo acima, a "
+"lista classificada parecia com::"
+
+#: ../../source/treeview.txt:267
+msgid "The case-sensitive sorted list will look like::"
+msgstr ""
+"A lista classificada com distinção entre maiúsculas e minúsculas será "
+"semelhante a::"
+
+# Alterar o original para corrigir a explicação
+#: ../../source/treeview.txt:278
+msgid ""
+"First of all a comparison function is needed. This function gets two rows "
+"and has to return a negative integer if the first one should come before the "
+"second one, zero if they are equal and a positive integer if the second one "
+"should come before the second one."
+msgstr ""
+"Em primeiro lugar, é necessária uma função de comparação. Esta função obtém "
+"duas linhas e tem que retornar um inteiro negativo se o primeiro deve vir "
+"antes do segundo, zero se eles forem iguais e um inteiro positivo se o "
+"segundo vier antes do primeiro."
+
+#: ../../source/treeview.txt:294
+msgid ""
+"Then the sort function has to be set by :meth:`Gtk.TreeSortable."
+"set_sort_func`."
+msgstr ""
+"Então a função sort deve ser definida por :meth:`Gtk.TreeSortable."
+"set_sort_func`."
+
+#: ../../source/treeview.txt:301
+msgid "Filtering"
+msgstr "Filtrando"
+
+#: ../../source/treeview.txt:302
+msgid ""
+"Unlike sorting, filtering is not handled by the two models we previously "
+"saw, but by the :class:`Gtk.TreeModelFilter` class. This class, like :class:"
+"`Gtk.TreeStore` and :class:`Gtk.ListStore`, is a :class:`Gtk.TreeModel`. It "
+"acts as a layer between the \"real\" model (a :class:`Gtk.TreeStore` or a :"
+"class:`Gtk.ListStore`), hiding some elements to the view. In practice, it "
+"supplies the :class:`Gtk.TreeView` with a subset of the underlying model. "
+"Instances of :class:`Gtk.TreeModelFilter` can be stacked one onto another, "
+"to use multiple filters on the same model (in the same way you'd use \"AND\" "
+"clauses in a SQL request). They can also be chained with :class:`Gtk."
+"TreeModelSort` instances."
+msgstr ""
+"Ao contrário da classificação, a filtragem não é tratada pelos dois modelos "
+"que vimos anteriormente, mas pela classe :class:`Gtk.TreeModelFilter`. Esta "
+"classe, como :class:`Gtk.TreeStore` e :class:`Gtk.ListStore`, é uma :class:"
+"`Gtk.TreeModel`. Ele age como uma camada entre o modelo \"real\" (a :class:"
+"`Gtk.TreeStore` ou a :class:`Gtk.ListStore`), ocultando alguns elementos "
+"para a view. Na prática, ele fornece o :class:`Gtk.TreeView` com um "
+"subconjunto do modelo subjacente. Instâncias de :class:`Gtk.TreeModelFilter` "
+"podem ser empilhadas umas sobre as outras, para usar múltiplos filtros no "
+"mesmo modelo (da mesma forma que você usaria cláusulas \"AND\" em uma "
+"requisição SQL). Eles também podem ser encadeados com instâncias :class:`Gtk."
+"TreeModelSort`."
+
+#: ../../source/treeview.txt:304
+msgid ""
+"You can create a new instance of a :class:`Gtk.TreeModelFilter` and give it "
+"a model to filter, but the easiest way is to spawn it directly from the "
+"filtered model, using the :meth:`Gtk.TreeModel.filter_new` method."
+msgstr ""
+"Você pode criar uma nova instância de :class:`Gtk.TreeModelFilter` e dar a "
+"ela um modelo para filtrar, mas a maneira mais fácil é gerá-lo diretamente "
+"do modelo filtrado, usando o método :meth:`Gtk.TreeModel.filter_new` método."
+
+#: ../../source/treeview.txt:310
+msgid ""
+"In the same way the sorting function works, the :class:`Gtk.TreeModelFilter` "
+"needs a \"visibility\" function, which, given a row from the underlying "
+"model, will return a boolean indicating if this row should be filtered out "
+"or not. It's set by :meth:`Gtk.TreeModelFilter.set_visible_func`:"
+msgstr ""
+"Da mesma forma que funciona a função de classificação, o :class:`Gtk."
+"TreeModelFilter` precisa de uma função de \"visibilidade\", que, dada uma "
+"linha do modelo subjacente, retornará um booleano indicando se essa linha "
+"deve ser filtrada ou não. É definido por :meth:`Gtk.TreeModelFilter."
+"set_visible_func`:"
+
+#: ../../source/treeview.txt:316
+msgid ""
+"Let's look at a full example which uses the whole :class:`Gtk.ListStore` - :"
+"class:`Gtk.TreeModelFilter` - :class:`Gtk.TreeModelFilter` - :class:`Gtk."
+"TreeView` stack."
+msgstr ""
+"Vejamos um exemplo completo que usa a pilha inteira :class:`Gtk.ListStore` "
+"- :class:`Gtk.TreeModelFilter` - :class:`Gtk.TreeModelFilter` - :class:`Gtk."
+"TreeView`."
