@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) GNU Free Documentation License 1.3
+# This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-01 06:24-0300\n"
+"PO-Revision-Date: 2018-04-11 23:06-0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+
+#: ../../source/button_widgets.txt:2
+msgid "Button Widgets"
+msgstr "Widgets de Botão"
+
+#: ../../source/button_widgets.txt:5
+msgid "Button"
+msgstr "Botão"
+
+#: ../../source/button_widgets.txt:7
+msgid ""
+"The Button widget is another commonly used widget. It is generally used to "
+"attach a function that is called when the button is pressed."
+msgstr ""
+"O widget Button é outro widget comumente usado. Geralmente é usado para "
+"anexar uma função que é chamada quando o botão é pressionado."
+
+#: ../../source/button_widgets.txt:10
+msgid ""
+"The :class:`Gtk.Button` widget can hold any valid child widget. That is it "
+"can hold most any other standard :class:`Gtk.Widget`. The most commonly used "
+"child is the :class:`Gtk.Label`."
+msgstr ""
+"O widget :class:`Gtk.Button` pode conter qualquer widget filho válido. Isto "
+"é, ele pode conter praticamente qualquer outro padrão :class:`Gtk.Widget`. "
+"Um filho mais comumente usado é a :class:`Gtk.Label`."
+
+#: ../../source/button_widgets.txt:14
+msgid ""
+"Usually, you want to connect to the button's \"clicked\" signal which is "
+"emitted when the button has been pressed and released."
+msgstr ""
+"Normalmente, você quer se conectar ao sinal \"clicado\" do botão que é "
+"emitido quando o botão foi pressionado e liberado."
+
+#: ../../source/button_widgets.txt:18 ../../source/button_widgets.txt:39
+#: ../../source/button_widgets.txt:78 ../../source/button_widgets.txt:95
+#: ../../source/button_widgets.txt:131 ../../source/button_widgets.txt:150
+msgid "Example"
+msgstr "Exemplo"
+
+#: ../../source/button_widgets.txt:26
+msgid "ToggleButton"
+msgstr "Botão de Alternância"
+
+#: ../../source/button_widgets.txt:28
+msgid ""
+"A :class:`Gtk.ToggleButton` is very similar to a normal :class:`Gtk.Button`, "
+"but when clicked they remain activated, or pressed, until clicked again. "
+"When the state of the button is changed, the \"toggled\" signal is emitted."
+msgstr ""
+"A :class:`Gtk.ToggleButton` é muito semelhante a um normal :class:`Gtk."
+"Button`, mas quando clicados eles permanecem ativados, ou pressionados, até "
+"serem clicados novamente. Quando o estado do botão é alterado, o sinal "
+"\"toggled\" (alternado) é emitido."
+
+#: ../../source/button_widgets.txt:32
+msgid ""
+"To retrieve the state of the :class:`Gtk.ToggleButton`, you can use the :"
+"meth:`Gtk.ToggleButton.get_active` method. This returns ``True`` if the "
+"button is \"down\". You can also set the toggle button's state, with :meth:"
+"`Gtk.ToggleButton.set_active`. Note that, if you do this, and the state "
+"actually changes, it causes the \"toggled\" signal to be emitted."
+msgstr ""
+"Para recuperar o estado da :class:`Gtk.ToggleButton`, você pode usar o "
+"método :meth:`Gtk.ToggleButton.get_active`. Isso retorna ``True`` se o botão "
+"estiver \"inativo\". Você também pode definir o estado do botão de "
+"alternância, com :meth:`Gtk.ToggleButton.set_active`. Observe que, se você "
+"fizer isso e o estado realmente mudar, isso fará com que o sinal \"alternado"
+"\" seja emitido."
+
+#: ../../source/button_widgets.txt:47
+msgid "CheckButton"
+msgstr "Botão de Seleção"
+
+#: ../../source/button_widgets.txt:48
+msgid ""
+":class:`Gtk.CheckButton` inherits from :class:`Gtk.ToggleButton`. The only "
+"real difference between the two is :class:`Gtk.CheckButton`'s appearance. A :"
+"class:`Gtk.CheckButton` places a discrete :class:`Gtk.ToggleButton` next to "
+"a widget, (usually a :class:`Gtk.Label`). The \"toggled\" signal, :meth:`Gtk."
+"ToggleButton.set_active` and :meth:`Gtk.ToggleButton.get_active` are "
+"inherited."
+msgstr ""
+":class:`Gtk.CheckButton` herda de :class:`Gtk.ToggleButton`. A única "
+"diferença real entre os dois é como :class:`Gtk.CheckButton` é apresentado. "
+"A :class:`Gtk.CheckButton` coloca um discreto :class:`Gtk.ToggleButton` ao "
+"lado de um widget, (geralmente um :class:`Gtk.Label`). O sinal \"toggled\", :"
+"meth:`Gtk.ToggleButton.set_active` e :meth:`Gtk.ToggleButton.get_active` são "
+"herdados."
+
+#: ../../source/button_widgets.txt:56
+msgid "RadioButton"
+msgstr "Botão de Radio"
+
+#: ../../source/button_widgets.txt:57
+msgid ""
+"Like checkboxes, radio buttons also inherit from :class:`Gtk.ToggleButton`, "
+"but these work in groups, and only one :class:`Gtk.RadioButton` in a group "
+"can be selected at any one time. Therefore, a :class:`Gtk.RadioButton` is "
+"one way of giving the user a choice from many options."
+msgstr ""
+"Como os checkboxes, os radio buttons também herdam de :class:`Gtk."
+"ToggleButton`, mas estes funcionam em grupos, e apenas um :class:`Gtk."
+"RadioButton` em um grupo pode ser selecionado a qualquer momento. Portanto, "
+"um :class:`Gtk.RadioButton` é uma maneira de dar ao usuário uma escolha "
+"entre várias opções."
+
+#: ../../source/button_widgets.txt:62
+msgid ""
+"Radio buttons can be created with one of the static methods :meth:`Gtk."
+"RadioButton.new_from_widget`, :meth:`Gtk.RadioButton."
+"new_with_label_from_widget` or :meth:`Gtk.RadioButton."
+"new_with_mnemonic_from_widget`. The first radio button in a group will be "
+"created passing ``None`` as the *group* argument. In subsequent calls, the "
+"group you wish to add this button to should be passed as an argument."
+msgstr ""
+"Botões de rádio podem ser criados com um dos métodos estáticos :meth:`Gtk."
+"RadioButton.new_from_widget`, :meth:`Gtk.RadioButton."
+"new_with_label_from_widget` ou :meth:`Gtk.RadioButton."
+"new_with_mnemonic_from_widget`. O primeiro botão de rádio de um grupo será "
+"criado passando o ``None`` como o argumento *group*. Nas chamadas "
+"subsequentes, o grupo ao qual você deseja adicionar esse botão deve ser "
+"passado como um argumento."
+
+#: ../../source/button_widgets.txt:70
+msgid ""
+"When first run, the first radio button in the group will be active. This can "
+"be changed by calling :meth:`Gtk.ToggleButton.set_active` with ``True`` as "
+"first argument."
+msgstr ""
+"Quando executado pela primeira vez, o primeiro botão de rádio do grupo "
+"estará ativo. Isto pode ser alterado chamando :meth:`Gtk.ToggleButton."
+"set_active` com ``True`` como primeiro argumento."
+
+#: ../../source/button_widgets.txt:74
+msgid ""
+"Changing a :class:`Gtk.RadioButton`'s widget group after its creation can be "
+"achieved by calling :meth:`Gtk.RadioButton.join_group`."
+msgstr ""
+"Alterar o grupo de widgets :class:`Gtk.RadioButton` após sua criação pode "
+"ser feito chamando :meth:`Gtk.RadioButton.join_group`."
+
+#: ../../source/button_widgets.txt:86
+msgid "LinkButton"
+msgstr "Botão Link"
+
+#: ../../source/button_widgets.txt:87
+msgid ""
+"A :class:`Gtk.LinkButton` is a :class:`Gtk.Button` with a hyperlink, similar "
+"to the one used by web browsers, which triggers an action when clicked. It "
+"is useful to show quick links to resources."
+msgstr ""
+"A :class:`Gtk.LinkButton` é um :class:`Gtk.Button` com um hiperlink, similar "
+"ao usado pelos navegadores da web, que aciona uma ação quando clicado. É "
+"útil mostrar links rápidos para recursos."
+
+#: ../../source/button_widgets.txt:91
+msgid ""
+"The URI bound to a :class:`Gtk.LinkButton` can be set specifically using :"
+"meth:`Gtk.LinkButton.set_uri`, and retrieved using :meth:`Gtk.LinkButton."
+"get_uri`."
+msgstr ""
+"O URI ligado a um :class:`Gtk.LinkButton` pode ser configurado "
+"especificamente usando :meth:`Gtk.LinkButton.set_uri` e recuperado usando :"
+"meth:`Gtk.LinkButton.get_uri`."
+
+#: ../../source/button_widgets.txt:103
+msgid "SpinButton"
+msgstr "Botão Giratório"
+
+#: ../../source/button_widgets.txt:104
+msgid ""
+"A :class:`Gtk.SpinButton` is an ideal way to allow the user to set the value "
+"of some attribute. Rather than having to directly type a number into a :"
+"class:`Gtk.Entry`, :class:`Gtk.SpinButton` allows the user to click on one "
+"of two arrows to increment or decrement the displayed value. A value can "
+"still be typed in, with the bonus that it can be checked to ensure it is in "
+"a given range. The main properties of a :class:`Gtk.SpinButton` are set "
+"through :class:`Gtk.Adjustment`."
+msgstr ""
+"A :class:`Gtk.SpinButton` é uma maneira ideal de permitir que o usuário "
+"defina o valor de algum atributo. Em vez de digitar diretamente um número "
+"em :class:`Gtk.Entry`, :class:`Gtk.SpinButton` permite que o usuário clique "
+"em uma das duas setas para incrementar ou decrementar o valor exibido. Um "
+"valor ainda pode ser digitado, com o bônus que pode ser verificado para "
+"garantir que esteja em um determinado intervalo. As propriedades principais "
+"de um :class:`Gtk.SpinButton` são definidas através de :class:`Gtk."
+"Adjustment`."
+
+#: ../../source/button_widgets.txt:112
+msgid ""
+"To change the value that :class:`Gtk.SpinButton` is showing, use :meth:`Gtk."
+"SpinButton.set_value`. The value entered can either be an integer or float, "
+"depending on your requirements, use :meth:`Gtk.SpinButton.get_value` or :"
+"meth:`Gtk.SpinButton.get_value_as_int`, respectively."
+msgstr ""
+"Para alterar o valor que :class:`Gtk.SpinButton` está mostrando, use :meth:"
+"`Gtk.SpinButton.set_value`. O valor digitado pode ser um número inteiro ou "
+"float, dependendo de seus requisitos, use :meth:`Gtk.SpinButton.get_value` "
+"ou :meth:`Gtk.SpinButton.get_value_as_int`, respectivamente."
+
+#: ../../source/button_widgets.txt:117
+msgid ""
+"When you allow the displaying of float values in the spin button, you may "
+"wish to adjust the number of decimal spaces displayed by calling :meth:`Gtk."
+"SpinButton.set_digits`."
+msgstr ""
+"Quando você permite a exibição de valores flutuantes no botão de rotação, "
+"você pode querer ajustar o número de espaços decimais exibidos chamando :"
+"meth:`Gtk.SpinButton.set_digits`."
+
+#: ../../source/button_widgets.txt:121
+msgid ""
+"By default, :class:`Gtk.SpinButton` accepts textual data. If you wish to "
+"limit this to numerical values only, call :meth:`Gtk.SpinButton.set_numeric` "
+"with ``True`` as argument."
+msgstr ""
+"Por padrão, :class:`Gtk.SpinButton` aceita dados textuais. Se você deseja "
+"limitar isso apenas a valores numéricos, chame :meth:`Gtk.SpinButton."
+"set_numeric` com ``True`` como argumento."
+
+#: ../../source/button_widgets.txt:125
+msgid ""
+"We can also adjust the update policy of :class:`Gtk.SpinButton`. There are "
+"two options here; by default the spin button updates the value even if the "
+"data entered is invalid. Alternatively, we can set the policy to only update "
+"when the value entered is valid by calling :meth:`Gtk.SpinButton."
+"set_update_policy`."
+msgstr ""
+"Também podemos ajustar a política de atualização de :class:`Gtk.SpinButton`. "
+"Existem duas opções aqui; por padrão, o botão de rotação atualiza o valor "
+"mesmo se os dados inseridos forem inválidos. Alternativamente, podemos "
+"definir a política para apenas atualizar quando o valor inserido é válido "
+"chamando :meth:`Gtk.SpinButton.set_update_policy`."
+
+#: ../../source/button_widgets.txt:139
+msgid "Switch"
+msgstr "Interruptor"
+
+#: ../../source/button_widgets.txt:140
+msgid ""
+"A :class:`Gtk.Switch` is a widget that has two states: on or off. The user "
+"can control which state should be active by clicking the empty area, or by "
+"dragging the handle."
+msgstr ""
+"A :class:`Gtk.Switch` é um widget que possui dois estados: ligado ou "
+"desligado. O usuário pode controlar qual estado deve estar ativo clicando na "
+"área vazia ou arrastando a alça."
+
+#: ../../source/button_widgets.txt:144
+msgid ""
+"You shouldn't use the \"activate\" signal on the Gtk.Switch which is an "
+"action signal and emitting it causes the switch to animate. Applications "
+"should never connect to this signal, but use the \"notify::active\" signal, "
+"see the example here below."
+msgstr ""
+"Você não deve usar o sinal \"activate\" no Gtk.Switch que é um sinal de ação "
+"e emiti-lo faz com que o switch anime. As aplicações nunca devem se conectar "
+"a este sinal, mas use o sinal \"notify::active\", veja o exemplo abaixo."
