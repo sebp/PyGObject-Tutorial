@@ -15,3 +15,16 @@ Example
 
 .. literalinclude:: ../examples/spinner_example.py
     :linenos:
+
+Extended example
+----------------
+
+An extended example that uses a time out function to start-stop.
+
+Example
+^^^^^^^
+
+.. image:: ../images/spinner_ext_example.png
+
+.. literalinclude:: ../examples/spinner_ext_example.py
+:linenos:
