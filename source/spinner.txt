@@ -19,7 +19,11 @@ Example
 Extended example
 ----------------
 
-An extended example that uses a time out function to start-stop.
+An extended example that uses a timeout function to start and stop
+the spinning animation.
+The :func:`on_timeout` function is called at regular intervals
+until it returns ``False``, at which point the timeout is automatically
+destroyed and the function will not be called again.
 
 Example
 ^^^^^^^
@@ -27,4 +31,4 @@ Example
 .. image:: ../images/spinner_ext_example.png
 
 .. literalinclude:: ../examples/spinner_ext_example.py
-:linenos:
+    :linenos:

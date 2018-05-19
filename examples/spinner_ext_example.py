@@ -31,14 +31,14 @@ class SpinnerWindow(Gtk.Window):
         mainBox.pack_start(self.buttonStop, True, True, 0)
 
         self.timeout_id = None
-        self.connect("delete-event", self.on_SpinnerWindow_destroy)
+        self.connect("destroy", self.on_SpinnerWindow_destroy)
 
     def on_buttonStart_clicked(self, widget, *args):
-        """ Handles «clicked» event of buttonStart. """
+        """ Handles "clicked" event of buttonStart. """
         self.start_timer()
 
     def on_buttonStop_clicked(self, widget, *args):
-        """ Handles «clicked» event of buttonStop. """
+        """ Handles "clicked" event of buttonStop. """
         self.stop_timer('Stopped from button')
 
     def on_SpinnerWindow_destroy(self, widget, *args):
