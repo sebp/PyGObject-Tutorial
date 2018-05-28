@@ -7,7 +7,7 @@ Their uses are similar to those of dialog windows with the advantage of being le
 disruptive and having a connection with the widget the popover is pointing to.
 Popovers have are visually connected to a related widget with a small triangle.
 
-ApPopover can be created with :class:`Gtk.Popover`; for opening the popover use
+A Popover can be created with :class:`Gtk.Popover`; for opening the popover use
 :meth:`Gtk.Widget.show_all`.
 
 Custom Popover
