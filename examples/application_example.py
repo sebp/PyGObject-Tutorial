@@ -122,10 +122,12 @@ class Application(Gtk.Application):
 
     def do_command_line(self, command_line):
         options = command_line.get_options_dict()
+        # convert GVariantDict -> GVariant -> dict
+        options = options.end().unpack()
 
-        if options.contains("test"):
+        if "test" in options:
             # This is printed on the main instance
-            print("Test argument recieved")
+            print("Test argument recieved: %s" % options["test"])
 
         self.activate()
         return 0
