@@ -59,7 +59,7 @@ class SpinnerWindow(Gtk.Window):
         if self.counter <= 0:
             self.stop_timer('Reached time out')
             return False
-        self.label.set_label('Remaining: ' + str(int(self.counter / 4)))
+        self.label.set_label('Remaining: ' + str(self.counter // 4))
         return True
 
     def start_timer(self):
@@ -68,9 +68,9 @@ class SpinnerWindow(Gtk.Window):
         self.buttonStop.set_sensitive(True)
         # time out will check every 250 miliseconds (1/4 of a second)
         self.counter = 4 * int(self.entry.get_text())
-        self.label.set_label('Remaining: ' + str(int(self.counter / 4)))
+        self.label.set_label('Remaining: ' + str(self.counter // 4))
         self.spinner.start()
-        self.timeout_id = GObject.timeout_add(250, self.on_timeout, None)
+        self.timeout_id = GLib.timeout_add(250, self.on_timeout, None)
 
     def stop_timer(self, alabeltext):
         """ Stop the timer. """
