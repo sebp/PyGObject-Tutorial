@@ -75,8 +75,11 @@ class ListBoxWindow(Gtk.Window):
         listbox_2.set_sort_func(sort_func, None, False)
         listbox_2.set_filter_func(filter_func, None, False)
 
-        listbox_2.connect('row-activated', lambda widget, row: print(row.data))
-        
+        def on_row_activated(listbox_widget, row):
+            print(row.data)
+
+        listbox_2.connect('row-activated', on_row_activated)
+
         box_outer.pack_start(listbox_2, True, True, 0)
         listbox_2.show_all()
 
