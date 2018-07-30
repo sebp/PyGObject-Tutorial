@@ -1,6 +1,6 @@
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, GObject
+from gi.repository import Gtk, GLib
 
 class EntryWindow(Gtk.Window):
 
@@ -52,10 +52,10 @@ class EntryWindow(Gtk.Window):
         if button.get_active():
             self.entry.set_progress_pulse_step(0.2)
             # Call self.do_pulse every 100 ms
-            self.timeout_id = GObject.timeout_add(100, self.do_pulse, None)
+            self.timeout_id = GLib.timeout_add(100, self.do_pulse, None)
         else:
             # Don't call self.do_pulse anymore
-            GObject.source_remove(self.timeout_id)
+            GLib.source_remove(self.timeout_id)
             self.timeout_id = None
             self.entry.set_progress_pulse_step(0)
 

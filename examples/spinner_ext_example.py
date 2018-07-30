@@ -1,6 +1,6 @@
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, GObject
+from gi.repository import Gtk, GLib
 
 class SpinnerWindow(Gtk.Window):
 
@@ -45,7 +45,7 @@ class SpinnerWindow(Gtk.Window):
         """ Handles destroy event of main window. """
         # ensure the timeout function is stopped
         if self.timeout_id:
-            GObject.source_remove(self.timeout_id)
+            GLib.source_remove(self.timeout_id)
             self.timeout_id = None
         Gtk.main_quit()
 
@@ -70,12 +70,12 @@ class SpinnerWindow(Gtk.Window):
         self.counter = 4 * int(self.entry.get_text())
         self.label.set_label('Remaining: ' + str(int(self.counter / 4)))
         self.spinner.start()
-        self.timeout_id = GObject.timeout_add(250, self.on_timeout, None)
+        self.timeout_id = GLib.timeout_add(250, self.on_timeout, None)
 
     def stop_timer(self, alabeltext):
         """ Stop the timer. """
         if self.timeout_id:
-            GObject.source_remove(self.timeout_id)
+            GLib.source_remove(self.timeout_id)
             self.timeout_id = None
         self.spinner.stop()
         self.buttonStart.set_sensitive(True)

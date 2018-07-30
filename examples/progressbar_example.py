@@ -1,6 +1,6 @@
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, GObject
+from gi.repository import Gtk, GLib
 
 class ProgressBarWindow(Gtk.Window):
 
@@ -26,7 +26,7 @@ class ProgressBarWindow(Gtk.Window):
         button.connect("toggled", self.on_right_to_left_toggled)
         vbox.pack_start(button, True, True, 0)
 
-        self.timeout_id = GObject.timeout_add(50, self.on_timeout, None)
+        self.timeout_id = GLib.timeout_add(50, self.on_timeout, None)
         self.activity_mode = False
 
     def on_show_text_toggled(self, button):

@@ -1,6 +1,6 @@
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, GObject
+from gi.repository import Gtk, GLib
 
 class CellRendererProgressWindow(Gtk.Window):
 
@@ -33,7 +33,7 @@ class CellRendererProgressWindow(Gtk.Window):
 
         self.add(treeview)
 
-        self.timeout_id = GObject.timeout_add(100, self.on_timeout, None)
+        self.timeout_id = GLib.timeout_add(100, self.on_timeout, None)
 
     def on_inverted_toggled(self, widget, path):
         self.liststore[path][2] = not self.liststore[path][2]
