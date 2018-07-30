@@ -187,6 +187,8 @@ Example
 FlowBox
 -------
 
+.. note:: This example requires at least GTK+ 3.12.
+
 A :class:`Gtk.FlowBox` is a container that positions child widgets in sequence
 according to its orientation.
 
@@ -233,4 +235,3 @@ Example
 
 .. literalinclude:: ../examples/notebook_plain_example.py
     :linenos:
-
