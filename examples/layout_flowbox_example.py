@@ -30,6 +30,12 @@ class FlowBoxWindow(Gtk.Window):
         self.add(scrolled)
         self.show_all()
 
+    def on_draw(self, widget, cr, data):
+        r,g,b,a = data['color']
+        cr.set_source_rgba(r,g,b,a)
+        cr.rectangle(0, 0, data['width'], data['heigth'])
+        cr.fill()    
+
     def color_swatch_new(self, str_color):
         color = Gdk.color_parse(str_color)
 
@@ -38,7 +44,7 @@ class FlowBoxWindow(Gtk.Window):
 
         area = Gtk.DrawingArea()
         area.set_size_request(24, 24)
-        area.override_background_color(0, rgba)
+        area.connect("draw", self.on_draw, {'color':rgba, 'width':24, 'heigth':24})
 
         button.add(area)
 
