@@ -89,7 +89,8 @@ class DragSourceIconView(Gtk.IconView):
 class DropArea(Gtk.Label):
 
     def __init__(self):
-        Gtk.Label.__init__(self, "Drop something on me!")
+        Gtk.Label.__init__(self)
+        self.set_label("Drop something on me!")
         self.drag_dest_set(Gtk.DestDefaults.ALL, [], DRAG_ACTION)
 
         self.connect("drag-data-received", self.on_drag_data_received)
