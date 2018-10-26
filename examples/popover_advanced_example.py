@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
 import sys
 
 import gi
-gi.require_version('Gtk', '3.0')
+#Popover introduced in Gtk 3.12: https://developer.gnome.org/gtk3/stable/GtkPopover.html
+gi.require_version('Gtk', '3.12')
 from gi.repository import Gio, Gtk
 
 # This would typically be its own file
