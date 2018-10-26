@@ -93,9 +93,13 @@ class Application(Gtk.Application):
                          flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE,
                          **kwargs)
         self.window = None
-
-        self.add_main_option("test", ord("t"), GLib.OptionFlags.NONE,
-                             GLib.OptionArg.NONE, "Command line test", None)
+        option = GLib.OptionEntry() #Create GlibOptionEntry object
+        #Set option entry attributes: https://lazka.github.io/pgi-docs/GLib-2.0/classes/OptionEntry.html#GLib.OptionEntry
+        option.arg_description = "Command line test"
+        option.description = "Command line description"
+        option.short_name = ord("t")
+        option.long_name = "test"
+        self.add_main_option_entries([option])
 
     def do_startup(self):
         Gtk.Application.do_startup(self)
