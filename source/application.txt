@@ -49,7 +49,7 @@ When creating your application it takes a flag property of :class:`Gio.Applicati
 Using this you can let it handle everything itself or have more custom behavior.
 
 You can use `HANDLES_COMMAND_LINE` to allow custom behavior in :meth:`Gio.Application.do_command_line()`.
-In combination with :meth:`Gio.Application.add_main_option()` to add custom options.
+In combination with :meth:`Gio.Application.add_main_option_entries( <array of GLib.OptionEntry() objects> )` to add custom options.
 
 Using `HANDLES_OPEN` will do the work of simply taking file arguments for you and
 let you handle it in :meth:`Gio.Application.do_open()`.
