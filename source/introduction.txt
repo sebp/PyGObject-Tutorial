@@ -43,7 +43,7 @@ In the next step we display the window.
     :lines: 7
 
 Finally, we start the GTK+ processing loop which we quit when the window is
-closed (see line 5).
+closed (see line 6).
 
 .. literalinclude:: ../examples/simple_example.py
     :lines: 8
