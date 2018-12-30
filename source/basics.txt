@@ -96,7 +96,7 @@ which is equivalent to
     label.set_halign(Gtk.Align.END)
 
 Instead of using getters and setters you can also get and set the gobject properties
-through the "props" property such as ``widget.props.prop_name = value``.
+through the "props" property such as ``widget.props.prop-name = value``.
 This is equivalent to the more verbose ``widget.get_property("prop-name")`` and
 ``widget.set_property("prop-name", value)``.
 
