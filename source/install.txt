@@ -6,8 +6,7 @@ The first step before we start with actual coding consists of setting up
 `PyGObject`_ and its dependencies. PyGObject is a Python module
 that enables developers to access GObject-based libraries such as GTK+
 within Python.
-It exclusively supports GTK+ version 3 or later. If you want to use
-GTK+ 2 in your application, use `PyGTK`_, instead.
+It exclusively supports GTK+ version 3 or later.
 
 Dependencies
 ------------
@@ -59,7 +58,6 @@ To start a shell with the same environment as used by JHBuild, run::
     $ jhbuild shell
 
 .. _PyGObject: https://wiki.gnome.org/action/show/Projects/PyGObject
-.. _PyGTK: http://www.pygtk.org
 .. _JHBuild: https://wiki.gnome.org/action/show/Projects/Jhbuild
 .. _JHBuild manual: https://developer.gnome.org/jhbuild/unstable/
 
