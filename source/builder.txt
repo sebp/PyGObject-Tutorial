@@ -33,7 +33,6 @@ The resulting XML file should look like this.
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <property name="use_action_appearance">False</property>
           </object>
         </child>
       </object>
