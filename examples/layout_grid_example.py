@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class GridWindow(Gtk.Window):
 
+class GridWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Grid Example")
 
@@ -23,6 +24,7 @@ class GridWindow(Gtk.Window):
         grid.attach_next_to(button4, button3, Gtk.PositionType.RIGHT, 2, 1)
         grid.attach(button5, 1, 2, 1, 1)
         grid.attach_next_to(button6, button5, Gtk.PositionType.RIGHT, 1, 1)
+
 
 win = GridWindow()
 win.connect("destroy", Gtk.main_quit)

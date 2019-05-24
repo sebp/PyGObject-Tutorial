@@ -1,17 +1,17 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class CellRendererComboWindow(Gtk.Window):
 
+class CellRendererComboWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="CellRendererCombo Example")
 
         self.set_default_size(200, 200)
 
         liststore_manufacturers = Gtk.ListStore(str)
-        manufacturers = ["Sony", "LG",
-            "Panasonic", "Toshiba", "Nokia", "Samsung"]
+        manufacturers = ["Sony", "LG", "Panasonic", "Toshiba", "Nokia", "Samsung"]
         for item in manufacturers:
             liststore_manufacturers.append([item])
 
@@ -40,6 +40,7 @@ class CellRendererComboWindow(Gtk.Window):
 
     def on_combo_changed(self, widget, path, text):
         self.liststore_hardware[path][1] = text
+
 
 win = CellRendererComboWindow()
 win.connect("destroy", Gtk.main_quit)

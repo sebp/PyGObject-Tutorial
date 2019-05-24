@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GLib
 
-class ProgressBarWindow(Gtk.Window):
 
+class ProgressBarWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="ProgressBar Demo")
         self.set_border_width(10)
@@ -66,6 +67,7 @@ class ProgressBarWindow(Gtk.Window):
         # As this is a timeout function, return True so that it
         # continues to get called
         return True
+
 
 win = ProgressBarWindow()
 win.connect("destroy", Gtk.main_quit)

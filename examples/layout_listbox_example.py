@@ -1,6 +1,8 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
+
 
 class ListBoxRowWithData(Gtk.ListBoxRow):
     def __init__(self, data):
@@ -8,8 +10,8 @@ class ListBoxRowWithData(Gtk.ListBoxRow):
         self.data = data
         self.add(Gtk.Label(data))
 
-class ListBoxWindow(Gtk.Window):
 
+class ListBoxWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="ListBox Demo")
         self.set_border_width(10)
@@ -61,7 +63,7 @@ class ListBoxWindow(Gtk.Window):
         listbox.add(row)
 
         listbox_2 = Gtk.ListBox()
-        items = 'This is a sorted ListBox Fail'.split()
+        items = "This is a sorted ListBox Fail".split()
 
         for item in items:
             listbox_2.add(ListBoxRowWithData(item))
@@ -70,7 +72,7 @@ class ListBoxWindow(Gtk.Window):
             return row_1.data.lower() > row_2.data.lower()
 
         def filter_func(row, data, notify_destroy):
-            return False if row.data == 'Fail' else True
+            return False if row.data == "Fail" else True
 
         listbox_2.set_sort_func(sort_func, None, False)
         listbox_2.set_filter_func(filter_func, None, False)
@@ -78,10 +80,11 @@ class ListBoxWindow(Gtk.Window):
         def on_row_activated(listbox_widget, row):
             print(row.data)
 
-        listbox_2.connect('row-activated', on_row_activated)
+        listbox_2.connect("row-activated", on_row_activated)
 
         box_outer.pack_start(listbox_2, True, True, 0)
         listbox_2.show_all()
+
 
 win = ListBoxWindow()
 win.connect("destroy", Gtk.main_quit)

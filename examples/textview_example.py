@@ -1,14 +1,23 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Pango
 
-class SearchDialog(Gtk.Dialog):
 
+class SearchDialog(Gtk.Dialog):
     def __init__(self, parent):
-        Gtk.Dialog.__init__(self, "Search", parent,
-            Gtk.DialogFlags.MODAL, buttons=(
-            Gtk.STOCK_FIND, Gtk.ResponseType.OK,
-            Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL))
+        Gtk.Dialog.__init__(
+            self,
+            "Search",
+            parent,
+            Gtk.DialogFlags.MODAL,
+            buttons=(
+                Gtk.STOCK_FIND,
+                Gtk.ResponseType.OK,
+                Gtk.STOCK_CANCEL,
+                Gtk.ResponseType.CANCEL,
+            ),
+        )
 
         box = self.get_content_area()
 
@@ -20,8 +29,8 @@ class SearchDialog(Gtk.Dialog):
 
         self.show_all()
 
-class TextViewWindow(Gtk.Window):
 
+class TextViewWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="TextView Example")
 
@@ -51,10 +60,8 @@ class TextViewWindow(Gtk.Window):
         toolbar.insert(button_underline, 2)
 
         button_bold.connect("clicked", self.on_button_clicked, self.tag_bold)
-        button_italic.connect("clicked", self.on_button_clicked,
-            self.tag_italic)
-        button_underline.connect("clicked", self.on_button_clicked,
-            self.tag_underline)
+        button_italic.connect("clicked", self.on_button_clicked, self.tag_italic)
+        button_underline.connect("clicked", self.on_button_clicked, self.tag_underline)
 
         toolbar.insert(Gtk.SeparatorToolItem(), 3)
 
@@ -74,14 +81,18 @@ class TextViewWindow(Gtk.Window):
         radio_justifyfill.set_icon_name("format-justify-fill-symbolic")
         toolbar.insert(radio_justifyfill, 7)
 
-        radio_justifyleft.connect("toggled", self.on_justify_toggled,
-            Gtk.Justification.LEFT)
-        radio_justifycenter.connect("toggled", self.on_justify_toggled,
-            Gtk.Justification.CENTER)
-        radio_justifyright.connect("toggled", self.on_justify_toggled,
-            Gtk.Justification.RIGHT)
-        radio_justifyfill.connect("toggled", self.on_justify_toggled,
-            Gtk.Justification.FILL)
+        radio_justifyleft.connect(
+            "toggled", self.on_justify_toggled, Gtk.Justification.LEFT
+        )
+        radio_justifycenter.connect(
+            "toggled", self.on_justify_toggled, Gtk.Justification.CENTER
+        )
+        radio_justifyright.connect(
+            "toggled", self.on_justify_toggled, Gtk.Justification.RIGHT
+        )
+        radio_justifyfill.connect(
+            "toggled", self.on_justify_toggled, Gtk.Justification.FILL
+        )
 
         toolbar.insert(Gtk.SeparatorToolItem(), 8)
 
@@ -105,19 +116,19 @@ class TextViewWindow(Gtk.Window):
 
         self.textview = Gtk.TextView()
         self.textbuffer = self.textview.get_buffer()
-        self.textbuffer.set_text("This is some text inside of a Gtk.TextView. "
+        self.textbuffer.set_text(
+            "This is some text inside of a Gtk.TextView. "
             + "Select text and click one of the buttons 'bold', 'italic', "
-            + "or 'underline' to modify the text accordingly.")
+            + "or 'underline' to modify the text accordingly."
+        )
         scrolledwindow.add(self.textview)
 
-        self.tag_bold = self.textbuffer.create_tag("bold",
-            weight=Pango.Weight.BOLD)
-        self.tag_italic = self.textbuffer.create_tag("italic",
-            style=Pango.Style.ITALIC)
-        self.tag_underline = self.textbuffer.create_tag("underline",
-            underline=Pango.Underline.SINGLE)
-        self.tag_found = self.textbuffer.create_tag("found",
-            background="yellow")
+        self.tag_bold = self.textbuffer.create_tag("bold", weight=Pango.Weight.BOLD)
+        self.tag_italic = self.textbuffer.create_tag("italic", style=Pango.Style.ITALIC)
+        self.tag_underline = self.textbuffer.create_tag(
+            "underline", underline=Pango.Underline.SINGLE
+        )
+        self.tag_found = self.textbuffer.create_tag("found", background="yellow")
 
     def create_buttons(self):
         check_editable = Gtk.CheckButton("Editable")
@@ -128,29 +139,30 @@ class TextViewWindow(Gtk.Window):
         check_cursor = Gtk.CheckButton("Cursor Visible")
         check_cursor.set_active(True)
         check_editable.connect("toggled", self.on_cursor_toggled)
-        self.grid.attach_next_to(check_cursor, check_editable,
-            Gtk.PositionType.RIGHT, 1, 1)
+        self.grid.attach_next_to(
+            check_cursor, check_editable, Gtk.PositionType.RIGHT, 1, 1
+        )
 
-        radio_wrapnone = Gtk.RadioButton.new_with_label_from_widget(None,
-            "No Wrapping")
+        radio_wrapnone = Gtk.RadioButton.new_with_label_from_widget(None, "No Wrapping")
         self.grid.attach(radio_wrapnone, 0, 3, 1, 1)
 
         radio_wrapchar = Gtk.RadioButton.new_with_label_from_widget(
-            radio_wrapnone, "Character Wrapping")
-        self.grid.attach_next_to(radio_wrapchar, radio_wrapnone,
-            Gtk.PositionType.RIGHT, 1, 1)
+            radio_wrapnone, "Character Wrapping"
+        )
+        self.grid.attach_next_to(
+            radio_wrapchar, radio_wrapnone, Gtk.PositionType.RIGHT, 1, 1
+        )
 
         radio_wrapword = Gtk.RadioButton.new_with_label_from_widget(
-            radio_wrapnone, "Word Wrapping")
-        self.grid.attach_next_to(radio_wrapword, radio_wrapchar,
-            Gtk.PositionType.RIGHT, 1, 1)
+            radio_wrapnone, "Word Wrapping"
+        )
+        self.grid.attach_next_to(
+            radio_wrapword, radio_wrapchar, Gtk.PositionType.RIGHT, 1, 1
+        )
 
-        radio_wrapnone.connect("toggled", self.on_wrap_toggled,
-            Gtk.WrapMode.NONE)
-        radio_wrapchar.connect("toggled", self.on_wrap_toggled,
-            Gtk.WrapMode.CHAR)
-        radio_wrapword.connect("toggled", self.on_wrap_toggled,
-            Gtk.WrapMode.WORD)
+        radio_wrapnone.connect("toggled", self.on_wrap_toggled, Gtk.WrapMode.NONE)
+        radio_wrapchar.connect("toggled", self.on_wrap_toggled, Gtk.WrapMode.CHAR)
+        radio_wrapword.connect("toggled", self.on_wrap_toggled, Gtk.WrapMode.WORD)
 
     def on_button_clicked(self, widget, tag):
         bounds = self.textbuffer.get_selection_bounds()
@@ -196,6 +208,7 @@ class TextViewWindow(Gtk.Window):
             match_start, match_end = match
             self.textbuffer.apply_tag(self.tag_found, match_start, match_end)
             self.search_and_mark(text, match_end)
+
 
 win = TextViewWindow()
 win.connect("destroy", Gtk.main_quit)

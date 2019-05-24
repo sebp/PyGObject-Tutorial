@@ -1,6 +1,8 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
+
 
 class Handler:
     def onDestroy(self, *args):
@@ -8,6 +10,7 @@ class Handler:
 
     def onButtonPressed(self, button):
         print("Hello World!")
+
 
 builder = Gtk.Builder()
 builder.add_from_file("builder_example.glade")

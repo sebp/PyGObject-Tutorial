@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class TableWindow(Gtk.Window):
 
+class TableWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Table Example")
 
@@ -23,6 +24,7 @@ class TableWindow(Gtk.Window):
         table.attach(button4, 1, 3, 1, 2)
         table.attach(button5, 1, 2, 2, 3)
         table.attach(button6, 2, 3, 2, 3)
+
 
 win = TableWindow()
 win.connect("destroy", Gtk.main_quit)

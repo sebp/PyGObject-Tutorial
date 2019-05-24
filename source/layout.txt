@@ -51,12 +51,12 @@ First, we create a horizontally orientated box container where 6 pixels are
 placed between children. This box becomes the child of the top-level window.
 
 .. literalinclude:: ../examples/layout_box_example.py
-    :lines: 10-11
+    :lines: 11-12
 
 Subsequently, we add two different buttons to the box container.
 
 .. literalinclude:: ../examples/layout_box_example.py
-    :lines: 13-19
+    :lines: 14-20
 
 While with :meth:`Gtk.Box.pack_start` widgets are positioned from left to right,
 :meth:`Gtk.Box.pack_end` positions them from right to left.

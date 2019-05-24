@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GLib
 
-class EntryWindow(Gtk.Window):
 
+class EntryWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Entry Demo")
         self.set_size_request(200, 100)
@@ -68,8 +69,8 @@ class EntryWindow(Gtk.Window):
             icon_name = "system-search-symbolic"
         else:
             icon_name = None
-        self.entry.set_icon_from_icon_name(Gtk.EntryIconPosition.PRIMARY,
-            icon_name)
+        self.entry.set_icon_from_icon_name(Gtk.EntryIconPosition.PRIMARY, icon_name)
+
 
 win = EntryWindow()
 win.connect("destroy", Gtk.main_quit)
