@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class CellRendererTextWindow(Gtk.Window):
 
+class CellRendererTextWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="CellRendererText Example")
 
@@ -23,8 +24,9 @@ class CellRendererTextWindow(Gtk.Window):
         renderer_editabletext = Gtk.CellRendererText()
         renderer_editabletext.set_property("editable", True)
 
-        column_editabletext = Gtk.TreeViewColumn("Editable Text",
-            renderer_editabletext, text=1)
+        column_editabletext = Gtk.TreeViewColumn(
+            "Editable Text", renderer_editabletext, text=1
+        )
         treeview.append_column(column_editabletext)
 
         renderer_editabletext.connect("edited", self.text_edited)
@@ -33,6 +35,7 @@ class CellRendererTextWindow(Gtk.Window):
 
     def text_edited(self, widget, path, text):
         self.liststore[path][1] = text
+
 
 win = CellRendererTextWindow()
 win.connect("destroy", Gtk.main_quit)

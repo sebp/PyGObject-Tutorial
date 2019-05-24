@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class SpinButtonWindow(Gtk.Window):
 
+class SpinButtonWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="SpinButton Demo")
         self.set_border_width(10)
@@ -33,6 +34,7 @@ class SpinButtonWindow(Gtk.Window):
         else:
             policy = Gtk.SpinButtonUpdatePolicy.ALWAYS
         self.spinbutton.set_update_policy(policy)
+
 
 win = SpinButtonWindow()
 win.connect("destroy", Gtk.main_quit)

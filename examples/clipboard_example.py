@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk
 
-class ClipboardWindow(Gtk.Window):
 
+class ClipboardWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Clipboard Example")
 

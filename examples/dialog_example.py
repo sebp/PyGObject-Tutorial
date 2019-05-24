@@ -1,13 +1,23 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class DialogExample(Gtk.Dialog):
 
+class DialogExample(Gtk.Dialog):
     def __init__(self, parent):
-        Gtk.Dialog.__init__(self, "My Dialog", parent, 0,
-            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
-             Gtk.STOCK_OK, Gtk.ResponseType.OK))
+        Gtk.Dialog.__init__(
+            self,
+            "My Dialog",
+            parent,
+            0,
+            (
+                Gtk.STOCK_CANCEL,
+                Gtk.ResponseType.CANCEL,
+                Gtk.STOCK_OK,
+                Gtk.ResponseType.OK,
+            ),
+        )
 
         self.set_default_size(150, 100)
 
@@ -17,8 +27,8 @@ class DialogExample(Gtk.Dialog):
         box.add(label)
         self.show_all()
 
-class DialogWindow(Gtk.Window):
 
+class DialogWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Dialog Example")
 
@@ -39,6 +49,7 @@ class DialogWindow(Gtk.Window):
             print("The Cancel button was clicked")
 
         dialog.destroy()
+
 
 win = DialogWindow()
 win.connect("destroy", Gtk.main_quit)

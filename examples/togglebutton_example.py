@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class ToggleButtonWindow(Gtk.Window):
 
+class ToggleButtonWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="ToggleButton Demo")
         self.set_border_width(10)
@@ -26,6 +27,7 @@ class ToggleButtonWindow(Gtk.Window):
         else:
             state = "off"
         print("Button", name, "was turned", state)
+
 
 win = ToggleButtonWindow()
 win.connect("destroy", Gtk.main_quit)

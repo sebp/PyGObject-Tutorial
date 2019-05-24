@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class CellRendererSpinWindow(Gtk.Window):
 
+class CellRendererSpinWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="CellRendererSpin Example")
 
@@ -34,6 +35,7 @@ class CellRendererSpinWindow(Gtk.Window):
 
     def on_amount_edited(self, widget, path, value):
         self.liststore[path][1] = int(value)
+
 
 win = CellRendererSpinWindow()
 win.connect("destroy", Gtk.main_quit)

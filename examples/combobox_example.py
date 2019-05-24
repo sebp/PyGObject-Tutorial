@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class ComboBoxWindow(Gtk.Window):
 
+class ComboBoxWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="ComboBox Example")
 
@@ -25,9 +26,17 @@ class ComboBoxWindow(Gtk.Window):
         vbox.pack_start(name_combo, False, False, 0)
 
         country_store = Gtk.ListStore(str)
-        countries = ["Austria", "Brazil", "Belgium", "France", "Germany",
-            "Switzerland", "United Kingdom", "United States of America",
-            "Uruguay"]
+        countries = [
+            "Austria",
+            "Brazil",
+            "Belgium",
+            "France",
+            "Germany",
+            "Switzerland",
+            "United Kingdom",
+            "United States of America",
+            "Uruguay",
+        ]
         for country in countries:
             country_store.append([country])
 
@@ -38,8 +47,15 @@ class ComboBoxWindow(Gtk.Window):
         country_combo.add_attribute(renderer_text, "text", 0)
         vbox.pack_start(country_combo, False, False, True)
 
-        currencies = ["Euro", "US Dollars", "British Pound", "Japanese Yen",
-            "Russian Ruble", "Mexican peso", "Swiss franc"]
+        currencies = [
+            "Euro",
+            "US Dollars",
+            "British Pound",
+            "Japanese Yen",
+            "Russian Ruble",
+            "Mexican peso",
+            "Swiss franc",
+        ]
         currency_combo = Gtk.ComboBoxText()
         currency_combo.set_entry_text_column(0)
         currency_combo.connect("changed", self.on_currency_combo_changed)
@@ -71,6 +87,7 @@ class ComboBoxWindow(Gtk.Window):
         text = combo.get_active_text()
         if text is not None:
             print("Selected: currency=%s" % text)
+
 
 win = ComboBoxWindow()
 win.connect("destroy", Gtk.main_quit)

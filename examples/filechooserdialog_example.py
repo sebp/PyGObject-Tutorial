@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class FileChooserWindow(Gtk.Window):
 
+class FileChooserWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="FileChooser Example")
 
@@ -19,10 +20,17 @@ class FileChooserWindow(Gtk.Window):
         box.add(button2)
 
     def on_file_clicked(self, widget):
-        dialog = Gtk.FileChooserDialog("Please choose a file", self,
+        dialog = Gtk.FileChooserDialog(
+            "Please choose a file",
+            self,
             Gtk.FileChooserAction.OPEN,
-            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
-             Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
+            (
+                Gtk.STOCK_CANCEL,
+                Gtk.ResponseType.CANCEL,
+                Gtk.STOCK_OPEN,
+                Gtk.ResponseType.OK,
+            ),
+        )
 
         self.add_filters(dialog)
 
@@ -52,10 +60,12 @@ class FileChooserWindow(Gtk.Window):
         dialog.add_filter(filter_any)
 
     def on_folder_clicked(self, widget):
-        dialog = Gtk.FileChooserDialog("Please choose a folder", self,
+        dialog = Gtk.FileChooserDialog(
+            "Please choose a folder",
+            self,
             Gtk.FileChooserAction.SELECT_FOLDER,
-            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
-             "Select", Gtk.ResponseType.OK))
+            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL, "Select", Gtk.ResponseType.OK),
+        )
         dialog.set_default_size(800, 400)
 
         response = dialog.run()
@@ -66,6 +76,7 @@ class FileChooserWindow(Gtk.Window):
             print("Cancel clicked")
 
         dialog.destroy()
+
 
 win = FileChooserWindow()
 win.connect("destroy", Gtk.main_quit)

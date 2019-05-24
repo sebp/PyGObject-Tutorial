@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class CellRendererPixbufWindow(Gtk.Window):
 
+class CellRendererPixbufWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="CellRendererPixbuf Example")
 
@@ -26,6 +27,7 @@ class CellRendererPixbufWindow(Gtk.Window):
         treeview.append_column(column_pixbuf)
 
         self.add(treeview)
+
 
 win = CellRendererPixbufWindow()
 win.connect("destroy", Gtk.main_quit)

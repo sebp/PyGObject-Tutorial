@@ -1,5 +1,6 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk, GdkPixbuf
 
 (TARGET_ENTRY_TEXT, TARGET_ENTRY_PIXBUF) = range(2)
@@ -7,8 +8,8 @@ from gi.repository import Gtk, Gdk, GdkPixbuf
 
 DRAG_ACTION = Gdk.DragAction.COPY
 
-class DragDropWindow(Gtk.Window):
 
+class DragDropWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Drag and Drop Demo")
 
@@ -27,13 +28,11 @@ class DragDropWindow(Gtk.Window):
         button_box = Gtk.Box(spacing=6)
         vbox.pack_start(button_box, True, False, 0)
 
-        image_button = Gtk.RadioButton.new_with_label_from_widget(None,
-            "Images")
+        image_button = Gtk.RadioButton.new_with_label_from_widget(None, "Images")
         image_button.connect("toggled", self.add_image_targets)
         button_box.pack_start(image_button, True, False, 0)
 
-        text_button = Gtk.RadioButton.new_with_label_from_widget(image_button,
-            "Text")
+        text_button = Gtk.RadioButton.new_with_label_from_widget(image_button, "Text")
         text_button.connect("toggled", self.add_text_targets)
         button_box.pack_start(text_button, True, False, 0)
 
@@ -53,8 +52,8 @@ class DragDropWindow(Gtk.Window):
         self.drop_area.drag_dest_add_text_targets()
         self.iconview.drag_source_add_text_targets()
 
-class DragSourceIconView(Gtk.IconView):
 
+class DragSourceIconView(Gtk.IconView):
     def __init__(self):
         Gtk.IconView.__init__(self)
         self.set_text_column(COLUMN_TEXT)
@@ -66,8 +65,7 @@ class DragSourceIconView(Gtk.IconView):
         self.add_item("Item 2", "help-about")
         self.add_item("Item 3", "edit-copy")
 
-        self.enable_model_drag_source(Gdk.ModifierType.BUTTON1_MASK, [],
-            DRAG_ACTION)
+        self.enable_model_drag_source(Gdk.ModifierType.BUTTON1_MASK, [], DRAG_ACTION)
         self.connect("drag-data-get", self.on_drag_data_get)
 
     def on_drag_data_get(self, widget, drag_context, data, info, time):
@@ -87,7 +85,6 @@ class DragSourceIconView(Gtk.IconView):
 
 
 class DropArea(Gtk.Label):
-
     def __init__(self):
         Gtk.Label.__init__(self)
         self.set_label("Drop something on me!")
@@ -95,7 +92,7 @@ class DropArea(Gtk.Label):
 
         self.connect("drag-data-received", self.on_drag_data_received)
 
-    def on_drag_data_received(self, widget, drag_context, x,y, data,info, time):
+    def on_drag_data_received(self, widget, drag_context, x, y, data, info, time):
         if info == TARGET_ENTRY_TEXT:
             text = data.get_text()
             print("Received text: %s" % text)
@@ -105,8 +102,8 @@ class DropArea(Gtk.Label):
             width = pixbuf.get_width()
             height = pixbuf.get_height()
 
-            print("Received pixbuf with width %spx and height %spx" % (width,
-                height))
+            print("Received pixbuf with width %spx and height %spx" % (width, height))
+
 
 win = DragDropWindow()
 win.connect("destroy", Gtk.main_quit)

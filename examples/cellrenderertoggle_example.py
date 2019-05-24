@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class CellRendererToggleWindow(Gtk.Window):
 
+class CellRendererToggleWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="CellRendererToggle Example")
 
@@ -41,7 +42,8 @@ class CellRendererToggleWindow(Gtk.Window):
     def on_cell_radio_toggled(self, widget, path):
         selected_path = Gtk.TreePath(path)
         for row in self.liststore:
-            row[2] = (row.path == selected_path)
+            row[2] = row.path == selected_path
+
 
 win = CellRendererToggleWindow()
 win.connect("destroy", Gtk.main_quit)

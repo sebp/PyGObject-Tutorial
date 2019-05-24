@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class SwitcherWindow(Gtk.Window):
 
+class SwitcherWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Switch Demo")
         self.set_border_width(10)
@@ -28,8 +29,8 @@ class SwitcherWindow(Gtk.Window):
             state = "off"
         print("Switch was turned", state)
 
+
 win = SwitcherWindow()
 win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
-

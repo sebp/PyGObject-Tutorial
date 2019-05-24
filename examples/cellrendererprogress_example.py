@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GLib
 
-class CellRendererProgressWindow(Gtk.Window):
 
+class CellRendererProgressWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="CellRendererProgress Example")
 
@@ -21,14 +22,14 @@ class CellRendererProgressWindow(Gtk.Window):
         treeview.append_column(column_text)
 
         renderer_progress = Gtk.CellRendererProgress()
-        column_progress = Gtk.TreeViewColumn("Progress", renderer_progress,
-            value=1, inverted=2)
+        column_progress = Gtk.TreeViewColumn(
+            "Progress", renderer_progress, value=1, inverted=2
+        )
         treeview.append_column(column_progress)
 
         renderer_toggle = Gtk.CellRendererToggle()
         renderer_toggle.connect("toggled", self.on_inverted_toggled)
-        column_toggle = Gtk.TreeViewColumn("Inverted", renderer_toggle,
-            active=2)
+        column_toggle = Gtk.TreeViewColumn("Inverted", renderer_toggle, active=2)
         treeview.append_column(column_toggle)
 
         self.add(treeview)
@@ -53,6 +54,7 @@ class CellRendererProgressWindow(Gtk.Window):
         for row in self.liststore:
             row[1] = 0
         self.current_iter = self.liststore.get_iter_first()
+
 
 win = CellRendererProgressWindow()
 win.connect("destroy", Gtk.main_quit)

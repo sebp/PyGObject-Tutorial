@@ -1,9 +1,10 @@
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
-class CellRendererAccelWindow(Gtk.Window):
 
+class CellRendererAccelWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="CellRendererAccel Example")
 
@@ -39,6 +40,7 @@ class CellRendererAccelWindow(Gtk.Window):
 
     def on_accel_cleared(self, widget, path):
         self.liststore[path][1] = None
+
 
 win = CellRendererAccelWindow()
 win.connect("destroy", Gtk.main_quit)
