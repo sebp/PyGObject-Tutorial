@@ -18,7 +18,7 @@ class LabelWindow(Gtk.Window):
         hbox.pack_start(vbox_left, True, True, 0)
         hbox.pack_start(vbox_right, True, True, 0)
 
-        label = Gtk.Label("This is a normal label")
+        label = Gtk.Label.new("This is a normal label")
         vbox_left.pack_start(label, True, True, 0)
 
         label = Gtk.Label()
@@ -26,11 +26,11 @@ class LabelWindow(Gtk.Window):
         label.set_justify(Gtk.Justification.LEFT)
         vbox_left.pack_start(label, True, True, 0)
 
-        label = Gtk.Label("This is a right-justified label.\nWith multiple lines.")
+        label = Gtk.Label.new("This is a right-justified label.\nWith multiple lines.")
         label.set_justify(Gtk.Justification.RIGHT)
         vbox_left.pack_start(label, True, True, 0)
 
-        label = Gtk.Label(
+        label = Gtk.Label.new(
             "This is an example of a line-wrapped label.  It "
             "should not be taking up the entire             "
             "width allocated to it, but automatically "
@@ -42,7 +42,7 @@ class LabelWindow(Gtk.Window):
         label.set_line_wrap(True)
         vbox_right.pack_start(label, True, True, 0)
 
-        label = Gtk.Label(
+        label = Gtk.Label.new(
             "This is an example of a line-wrapped, filled label. "
             "It should be taking "
             "up the entire              width allocated to it.  "

@@ -15,15 +15,15 @@ class ProgressBarWindow(Gtk.Window):
         self.progressbar = Gtk.ProgressBar()
         vbox.pack_start(self.progressbar, True, True, 0)
 
-        button = Gtk.CheckButton("Show text")
+        button = Gtk.CheckButton(label="Show text")
         button.connect("toggled", self.on_show_text_toggled)
         vbox.pack_start(button, True, True, 0)
 
-        button = Gtk.CheckButton("Activity mode")
+        button = Gtk.CheckButton(label="Activity mode")
         button.connect("toggled", self.on_activity_mode_toggled)
         vbox.pack_start(button, True, True, 0)
 
-        button = Gtk.CheckButton("Right to Left")
+        button = Gtk.CheckButton(label="Right to Left")
         button.connect("toggled", self.on_right_to_left_toggled)
         vbox.pack_start(button, True, True, 0)
 

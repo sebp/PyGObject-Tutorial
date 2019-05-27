@@ -53,7 +53,7 @@ class TreeViewFilterWindow(Gtk.Window):
         # creating buttons to filter by programming language, and setting up their events
         self.buttons = list()
         for prog_language in ["Java", "C", "C++", "Python", "None"]:
-            button = Gtk.Button(prog_language)
+            button = Gtk.Button(label=prog_language)
             self.buttons.append(button)
             button.connect("clicked", self.on_selection_button_clicked)
 

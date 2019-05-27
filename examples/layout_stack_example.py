@@ -16,7 +16,7 @@ class StackWindow(Gtk.Window):
         stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
         stack.set_transition_duration(1000)
 
-        checkbutton = Gtk.CheckButton("Click me!")
+        checkbutton = Gtk.CheckButton(label="Click me!")
         stack.add_titled(checkbutton, "check", "Check Button")
 
         label = Gtk.Label()

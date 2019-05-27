@@ -11,25 +11,20 @@ class FileChooserWindow(Gtk.Window):
         box = Gtk.Box(spacing=6)
         self.add(box)
 
-        button1 = Gtk.Button("Choose File")
+        button1 = Gtk.Button(label="Choose File")
         button1.connect("clicked", self.on_file_clicked)
         box.add(button1)
 
-        button2 = Gtk.Button("Choose Folder")
+        button2 = Gtk.Button(label="Choose Folder")
         button2.connect("clicked", self.on_folder_clicked)
         box.add(button2)
 
     def on_file_clicked(self, widget):
         dialog = Gtk.FileChooserDialog(
-            "Please choose a file",
-            self,
-            Gtk.FileChooserAction.OPEN,
-            (
-                Gtk.STOCK_CANCEL,
-                Gtk.ResponseType.CANCEL,
-                Gtk.STOCK_OPEN,
-                Gtk.ResponseType.OK,
-            ),
+            title="Please choose a file", parent=self, action=Gtk.FileChooserAction.OPEN
+        )
+        dialog.add_buttons(
+            "Cancel", Gtk.ResponseType.CANCEL, "Open", Gtk.ResponseType.OK
         )
 
         self.add_filters(dialog)
@@ -61,10 +56,12 @@ class FileChooserWindow(Gtk.Window):
 
     def on_folder_clicked(self, widget):
         dialog = Gtk.FileChooserDialog(
-            "Please choose a folder",
-            self,
-            Gtk.FileChooserAction.SELECT_FOLDER,
-            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL, "Select", Gtk.ResponseType.OK),
+            title="Please choose a folder",
+            parent=self,
+            action=Gtk.FileChooserAction.SELECT_FOLDER,
+        )
+        dialog.add_buttons(
+            "Cancel", Gtk.ResponseType.CANCEL, "Select", Gtk.ResponseType.OK
         )
         dialog.set_default_size(800, 400)
 

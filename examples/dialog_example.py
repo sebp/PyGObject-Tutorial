@@ -6,22 +6,12 @@ from gi.repository import Gtk
 
 class DialogExample(Gtk.Dialog):
     def __init__(self, parent):
-        Gtk.Dialog.__init__(
-            self,
-            "My Dialog",
-            parent,
-            0,
-            (
-                Gtk.STOCK_CANCEL,
-                Gtk.ResponseType.CANCEL,
-                Gtk.STOCK_OK,
-                Gtk.ResponseType.OK,
-            ),
-        )
+        super().__init__(title="My Dialog", parent=parent)
+        self.add_buttons("_OK", Gtk.ResponseType.OK, "_Cancel", Gtk.ResponseType.CANCEL)
 
         self.set_default_size(150, 100)
 
-        label = Gtk.Label("This is a dialog to display additional information")
+        label = Gtk.Label.new("This is a dialog to display additional information")
 
         box = self.get_content_area()
         box.add(label)
@@ -34,7 +24,7 @@ class DialogWindow(Gtk.Window):
 
         self.set_border_width(6)
 
-        button = Gtk.Button("Open dialog")
+        button = Gtk.Button(label="Open dialog")
         button.connect("clicked", self.on_button_clicked)
 
         self.add(button)

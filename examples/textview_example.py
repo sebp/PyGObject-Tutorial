@@ -6,22 +6,14 @@ from gi.repository import Gtk, Pango
 
 class SearchDialog(Gtk.Dialog):
     def __init__(self, parent):
-        Gtk.Dialog.__init__(
-            self,
-            "Search",
-            parent,
-            Gtk.DialogFlags.MODAL,
-            buttons=(
-                Gtk.STOCK_FIND,
-                Gtk.ResponseType.OK,
-                Gtk.STOCK_CANCEL,
-                Gtk.ResponseType.CANCEL,
-            ),
+        super().__init__(title="Search", parent=parent, modal=True)
+        self.add_buttons(
+            "_Find", Gtk.ResponseType.OK, "_Cancel", Gtk.ResponseType.CANCEL
         )
 
         box = self.get_content_area()
 
-        label = Gtk.Label("Insert text you want to search for:")
+        label = Gtk.Label.new("Insert text you want to search for:")
         box.add(label)
 
         self.entry = Gtk.Entry()
@@ -131,12 +123,12 @@ class TextViewWindow(Gtk.Window):
         self.tag_found = self.textbuffer.create_tag("found", background="yellow")
 
     def create_buttons(self):
-        check_editable = Gtk.CheckButton("Editable")
+        check_editable = Gtk.CheckButton(label="Editable")
         check_editable.set_active(True)
         check_editable.connect("toggled", self.on_editable_toggled)
         self.grid.attach(check_editable, 0, 2, 1, 1)
 
-        check_cursor = Gtk.CheckButton("Cursor Visible")
+        check_cursor = Gtk.CheckButton(label="Cursor Visible")
         check_cursor.set_active(True)
         check_editable.connect("toggled", self.on_cursor_toggled)
         self.grid.attach_next_to(

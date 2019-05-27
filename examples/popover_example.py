@@ -18,8 +18,8 @@ class PopoverWindow(Gtk.Window):
 
         self.popover = Gtk.Popover()
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        vbox.pack_start(Gtk.ModelButton("Item 1"), False, True, 10)
-        vbox.pack_start(Gtk.Label("Item 2"), False, True, 10)
+        vbox.pack_start(Gtk.ModelButton(label="Item 1"), False, True, 10)
+        vbox.pack_start(Gtk.Label.new("Item 2"), False, True, 10)
         self.popover.add(vbox)
         self.popover.set_position(Gtk.PositionType.BOTTOM)
 
