@@ -24,10 +24,15 @@ distributions.
 So, if you use Linux, you can probably get started by installing the package from the
 official repository for your distribution.
 
-### Ubuntu (19.04)
+Ubuntu (19.04)
+~~~~~~~~~~~~~~
+Install prerequisite packages::
 
-```$ sudo apt install libcairo2-dev libgirepository1.0-dev```
-```$ pip install pygobject```
+    $ sudo apt install libcairo2-dev libgirepository1.0-dev
+
+Install PyGObject.  (If you are using a virtual environment, switch to it first.)  Install from Pip::
+
+    $ pip install pygobject
 
 Installing From Source
 ----------------------
