@@ -24,6 +24,11 @@ distributions.
 So, if you use Linux, you can probably get started by installing the package from the
 official repository for your distribution.
 
+### Ubuntu (19.04)
+
+```$ sudo apt install libcairo2-dev libgirepository1.0-dev```
+```$ pip install pygobject```
+
 Installing From Source
 ----------------------
 The easiest way to install PyGObject from source is using `JHBuild`_. It is
