@@ -59,7 +59,7 @@ UI Manager
 ----------
 
 :class:`Gtk.UIManager` provides an easy way of creating menus and toolbars using
-an `XML-like description <http://developer.gnome.org/gtk3/stable/GtkUIManager.html#XML-UI>`_.
+an `XML-like description <https://developer.gnome.org/gtk3/stable/GtkUIManager.html#XML-UI>`_.
 
 First of all, you should add the :class:`Gtk.ActionGroup` to the UI Manager with
 :meth:`Gtk.UIManager.insert_action_group`. At this point is also a good idea to

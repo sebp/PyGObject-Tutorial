@@ -8,7 +8,7 @@ The tutorial's web site is https://python-gtk-3-tutorial.readthedocs.io
 
 Dependencies
 ------------
-- Sphinx: http://sphinx.pocoo.org
+- Sphinx: https://www.sphinx-doc.org
 
 
 Compile

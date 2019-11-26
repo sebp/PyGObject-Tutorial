@@ -407,4 +407,4 @@ API
 
     The property is readable and writable.
 
-.. _Glade: http://glade.gnome.org/
+.. _Glade: https://glade.gnome.org/

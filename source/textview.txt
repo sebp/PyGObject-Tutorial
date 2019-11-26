@@ -120,4 +120,4 @@ Example
     :linenos:
 
 
-.. _graphemes: http://developer.gnome.org/pango/stable/pango-Text-Processing.html#pango-get-log-attrs
+.. _graphemes: https://developer.gnome.org/pango/stable/pango-Text-Processing.html#pango-get-log-attrs

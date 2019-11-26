@@ -173,5 +173,5 @@ when trying to work with Unicode.
 The `Unicode HOWTO for Python 3.x <https://docs.python.org/dev/howto/unicode.html>`_
 discusses Unicode support in Python 3.x.
 
-`UTF-8 encoding table and Unicode characters <http://www.utf8-chartable.de>`_ contains
+`UTF-8 encoding table and Unicode characters <https://www.utf8-chartable.de>`_ contains
 a list of Unicode code points and their respective UTF-8 encoding.
