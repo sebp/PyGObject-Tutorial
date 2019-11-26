@@ -31,7 +31,7 @@ on the link.
 
 .. code-block:: python
 
-    label.set_markup("Go to <a href=\"http://www.gtk.org\" "
+    label.set_markup("Go to <a href=\"https://www.gtk.org\" "
                      "title=\"Our website\">GTK+ website</a> for more")
 
 Labels may contain *mnemonics*. Mnemonics are underlined characters in the
@@ -52,4 +52,4 @@ Example
 .. literalinclude:: ../examples/label_example.py
     :linenos:
 
-.. [#pango] Pango Markup Syntax, http://developer.gnome.org/pango/stable/PangoMarkupFormat.html
+.. [#pango] Pango Markup Syntax, https://developer.gnome.org/pango/stable/pango-Markup.html

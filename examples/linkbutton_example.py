@@ -9,7 +9,7 @@ class LinkButtonWindow(Gtk.Window):
         Gtk.Window.__init__(self, title="LinkButton Demo")
         self.set_border_width(10)
 
-        button = Gtk.LinkButton("http://www.gtk.org", "Visit GTK+ Homepage")
+        button = Gtk.LinkButton("https://www.gtk.org", "Visit GTK+ Homepage")
         self.add(button)
 
 

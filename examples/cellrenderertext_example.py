@@ -11,7 +11,7 @@ class CellRendererTextWindow(Gtk.Window):
         self.set_default_size(200, 200)
 
         self.liststore = Gtk.ListStore(str, str)
-        self.liststore.append(["Fedora", "http://fedoraproject.org/"])
+        self.liststore.append(["Fedora", "https://fedoraproject.org/"])
         self.liststore.append(["Slackware", "http://www.slackware.com/"])
         self.liststore.append(["Sidux", "http://sidux.com/"])
 

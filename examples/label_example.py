@@ -62,7 +62,7 @@ class LabelWindow(Gtk.Window):
         label.set_markup(
             "Text can be <small>small</small>, <big>big</big>, "
             "<b>bold</b>, <i>italic</i> and even point to "
-            'somewhere in the <a href="http://www.gtk.org" '
+            'somewhere in the <a href="https://www.gtk.org" '
             'title="Click to find out more">internets</a>.'
         )
         label.set_line_wrap(True)
