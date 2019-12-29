@@ -1,0 +1,59 @@
+Multithreading
+========================
+
+Multithreading means running multiple functions at the same time.
+Python supports this through the ``threading`` module.
+
+Using mutlithreading in your application will allow functions
+which take a noticable amount of time to complete to not make the
+application seem frozen. This is especially important with GTK infaces.
+
+Basic example
+-------------
+
+As an example a simple window with a button on it will be used. This button
+starts a function which will take about 2 seconds to complete.
+When pressing the button it the Gtk window will freeze.
+
+Here is the basic example:
+
+.. literalinclude:: ../examples/multithreading_freezing_example.py
+    :linenos:
+
+This application will freeze while the ``run_loop`` function is being executed.
+To prevent this from happening, an additional function which starts a new thread
+to run this function can be created. For this the ``threading`` library can be used:
+
+.. literalinclude:: ../examples/multithreading_example.py
+    :linenos:
+
+Note the line ``import threading`` and the new ``start_run_loop_thread`` function.
+
+Now the application will continue to be responsive after pressing the button.
+It is even able to run the ``run_loop`` function multiple times simultaneously.
+
+Limitations of GTK
+++++++++++++++++++
+
+As you may have noted, the examples above do not modify any Gtk widgets.
+Modifying Gtk widgets or objects can **only** be executed in Gtk's main loop.
+Directly modifying the button from a thread would cause unpredictable crashes,
+but with the ``GLib.idle_add()`` function a command can be added Gtk's main loop.
+Then Gtk will execute it when it has time to do so.
+
+Here is an example which modifies the button while it is working:
+
+.. literalinclude:: ../examples/multithreading_modify_widget_example.py
+    :linenos:
+
+This time the button text will be changed to the current number. To do this the
+button which activated the function is passed onto the ``run_loop`` function as
+``source``.
+
+Do not add long running functions to Gtk's main loop like this, though, or it will
+freeze the interface again. Only use it for modifying Gtk objects.
+
+References
+----------
+`Threads/Concurrency with Python and the GNOME Platform <https://wiki.gnome.org/Projects/PyGObject/Threading>`_
+describes how to deal with threading in multiple versions of PyGObject.

@@ -54,6 +54,7 @@ Contents:
    popover
    clipboard
    drag_and_drop
+   multithreading
    builder
    objects
    application
