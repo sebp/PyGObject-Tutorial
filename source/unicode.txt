@@ -107,7 +107,7 @@ return a :class:`str` instance. Accordingly, ``txt`` and ``unicode_string`` are
 *not* equal.
 
 This is especially important if you want to internationalize your
-program using `gettext <https://docs.python.org/library/gettext.html>`_. You
+program using `gettext <https://docs.python.org/3/library/gettext.html>`_. You
 have to make sure that gettext will return UTF-8 encoded 8-bit strings for all
 languages. In general it is recommended to not use :class:`unicode` objects
 in GTK+ applications at all and only use UTF-8 encoded :class:`str` objects since
@@ -163,10 +163,10 @@ as instances of :class:`str` only::
 
 References
 ----------
-`What's new in Python 3.0 <https://docs.python.org/py3k/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit>`_
+`What's new in Python 3.0 <https://docs.python.org/3/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit>`_
 describes the new concepts that clearly distinguish between text and data.
 
-The `Unicode HOWTO <https://docs.python.org/howto/unicode.html>`_ discusses Python 2.x’s
+The `Unicode HOWTO <https://docs.python.org/3/howto/unicode.html>`_ discusses Python 2.x’s
 support for Unicode, and explains various problems that people commonly encounter
 when trying to work with Unicode.
 
