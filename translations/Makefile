@@ -16,7 +16,7 @@ gettext:
 	@$(SPHINXBUILD) -M "gettext" "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 $(SPHINXPROJ).pot: gettext
-	msgcat -u $(wildcard $(BUILDDIR)/gettext/*.pot) > $(SPHINXPROJ).pot
+	xgettext -o $(SPHINXPROJ).pot $(wildcard $(BUILDDIR)/gettext/*.pot)
 
 split-po:
 	for lang in "$(PO_LINGUAS)"; do \
