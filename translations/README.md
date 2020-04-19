@@ -1,10 +1,62 @@
-Translations
-============
+# Translations
 
-- sphinx expects one PO file per document, but [Damned Lies](https://l10n.gnome.org/)
-expects a single file.
-- The file `PythonGTK3Tutorial.pot` contains all messages from all documents.
-- Translations are listed in `LINGUAS` and the corresponding translations
-  reside in the `po` directory (one PO file per language).
-- Executing `make split-po` will take the single-file PO and split it into individual
-  documents for sphinx to process.
+## How to contribute
+
+Translations to PyGObject-Tutorial happen in [Damned Lies](https://l10n.gnome.org/). See [GNOME Translation Project wiki](https://wiki.gnome.org/TranslationProject) for more info.
+
+Please make sure to test and review the translation before considering it as finished.
+
+Once you're done translating, file a [pull request](https://github.com/sebp/PyGObject-Tutorial/pulls) containing your translation in `translations/po/<lang>.po`, where `<lang>` is your language's code (e.g. pt_BR).
+
+Refer to GitHub docs for more information on [proposing changes via pull requests](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests).
+
+## Testing translations
+
+A good way to assure the quality of the translations is to build the docs with the up-to-date message catalog (.po file). If you are willing to down that way, follow the steps below.
+
+**Note:** All instructions below assume you are inside `translations/` directory.
+
+1. Install dependencies (hint: add `--user` flag for a per-user installation, without requiring admin privileges):
+```
+pip install -r ../requirements.txt
+```
+
+2. Copy your PO file to `po/` (replace `<lang>` accordingly):
+```
+cp path/to/your/translated/file.po po/<lang>.po
+```
+
+3. If you are adding new translation for a language, add your language code to `LINGUAS` in alphabetical order; otherwise, skip this step.
+
+4. Split your PO file into individual documents for Sphinx to process:
+```
+make split-po
+```
+
+5. Build HTML docs in your language (replace `<lang>` accordingly):
+```
+make -C .. -e SPHINXOPTS="-D language='<lang>'" html
+```
+
+4. Check `../build/html/` for the translated docs in HTML format.
+
+## Building translation template
+
+This step is **not** necessary for translating PyGObject-Tutorial, as [Damned Lies](https://l10n.gnome.org/) automatically updates the translation template (.pot file) and the message catalog (po) files. Therefore, it should be all up-to-date already.
+
+1. Install dependencies (same instruction as step 1 from previous section)
+
+2. Run:
+```
+make PythonGTK3Tutorial.pot
+```
+
+3. Check the translation template as `PythonGTK3Tutorial.pot`
+
+## Why splitting PO files
+
+[Sphinx](https://www.sphinx-doc.org) expects one message catalog (.po) file per document, but [Damned Lies](https://l10n.gnome.org/) expects a single file. So the conciliate both needs, the following method was implemented:
+
+1. The `xgettext` tool is set to extract strings from source docs into a single translation template (.pot) file to be used by Damned Lies.
+
+2. When including an updated translation for a given language, the message catalog in `po/` is split into separated files stored in `locale/<lang>/LC_MESSAGES/`. Those separated files will be used by Sphinx to build translated docs.
