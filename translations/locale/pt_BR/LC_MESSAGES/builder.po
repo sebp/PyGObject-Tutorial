@@ -3,18 +3,19 @@
 # This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 22:50-0300\n"
-"PO-Revision-Date: 2018-04-11 22:57-0300\n"
+"POT-Creation-Date: 2018-03-29 00:10-0300\n"
+"PO-Revision-Date: 2018-04-11 23:07-0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
+"Last-Translator: Matheus Rodrigues <matheussr61@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: pt_BR\n"
 
@@ -213,10 +214,6 @@ msgstr ""
 "Uma abordagem alternativa é criar uma classe que tenha métodos que sejam "
 "chamados como os sinais. Em nosso exemplo, o último snippet de código pode "
 "ser reescrito como:"
-
-#: ../../source/builder.txt:119
-msgid "Example"
-msgstr "Exemplo"
 
 #: ../../source/builder.txt:120
 msgid "The final code of the example"

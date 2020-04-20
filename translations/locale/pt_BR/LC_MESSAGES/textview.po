@@ -3,18 +3,19 @@
 # This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-04 11:32-0300\n"
+"POT-Creation-Date: 2018-03-29 00:10-0300\n"
 "PO-Revision-Date: 2018-04-11 23:07-0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
+"Last-Translator: Matheus Rodrigues <matheussr61@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: pt_BR\n"
 
@@ -42,10 +43,6 @@ msgstr ""
 "ligeiramente diferente. Ou você pode manter vários buffers de texto e optar "
 "por exibir cada um deles em momentos diferentes no mesmo widget :class:`Gtk."
 "TextView`."
-
-#: ../../source/textview.txt:13
-msgid "The View"
-msgstr "A Visualização"
 
 #: ../../source/textview.txt:15
 msgid ""
@@ -94,10 +91,6 @@ msgstr ""
 "longas de texto continuarão horizontalmente até que uma quebra seja "
 "inserida. Para encapsular o texto e impedir que ele saia das bordas da tela, "
 "chame :meth:`Gtk.TextView.set_wrap_mode`."
-
-#: ../../source/textview.txt:36
-msgid "The Model"
-msgstr "O Modelo"
 
 #: ../../source/textview.txt:38
 msgid ""
@@ -282,7 +275,3 @@ msgstr ""
 "Você também pode excluir tags particulares posteriormente usando :meth:`Gtk."
 "TextBuffer.remove_tag` ou excluir todas as tags em uma determinada região "
 "chamando :meth:`Gtk.TextBuffer.remove_all_tags`."
-
-#: ../../source/textview.txt:115
-msgid "Example"
-msgstr "Exemplo"
