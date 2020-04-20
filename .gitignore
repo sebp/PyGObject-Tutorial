@@ -1,5 +1,9 @@
-build
 *~
-*.py[co]
-source/locale
-translations/**/*.mo
+__pycache__/
+*.py[cod]
+build/
+eggs/
+.eggs/
+.tox/
+*.mo
+translations/locale/

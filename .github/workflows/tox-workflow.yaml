@@ -1,0 +1,25 @@
+name: Tox
+on: [push, pull_request]
+
+jobs:
+  sphinx_build:
+    runs-on: ubuntu-latest
+    name: Linting and Docs
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install Tox
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade tox
+      - name: Run Tox
+        run: tox
+      - name: Archive documentation
+        uses: actions/upload-artifact@v1
+        with:
+          name: documentation
+          path: build/html
