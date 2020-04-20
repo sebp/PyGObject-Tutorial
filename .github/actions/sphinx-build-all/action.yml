@@ -1,0 +1,6 @@
+# action.yml
+name: 'sphinx-build'
+description: 'Runs sphinx-build for all languages'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
