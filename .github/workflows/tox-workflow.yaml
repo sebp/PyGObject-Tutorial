@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run Tox
-        uses: ./.github/actions/sphinx-build-all@master
+        uses: ./.github/actions/sphinx-build-all
       - name: Archive HTML documents
         uses: actions/upload-artifact@v1
         with:
