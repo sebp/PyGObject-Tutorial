@@ -3,19 +3,18 @@
 # This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 00:10-0300\n"
-"PO-Revision-Date: 2018-04-11 23:07-0300\n"
+"POT-Creation-Date: 2018-04-04 04:43-0300\n"
+"PO-Revision-Date: 2018-04-11 23:08-0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-"Last-Translator: Matheus Rodrigues <matheussr61@gmail.com>\n"
+"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: pt_BR\n"
 
@@ -72,6 +71,10 @@ msgstr ""
 "Com o poder e a flexibilidade de um :class:`Gtk.TreeView` vem a "
 "complexidade. Geralmente, é difícil para os desenvolvedores iniciantes serem "
 "capazes de utilizá-lo corretamente devido ao número de métodos necessários."
+
+#: ../../source/treeview.txt:21
+msgid "The Model"
+msgstr "O Modelo"
 
 #: ../../source/treeview.txt:22
 msgid ""
@@ -215,6 +218,10 @@ msgstr ""
 "Instâncias de :class:`Gtk.TreePath` podem ser acessadas como listas, "
 "``len(treepath)`` retorna a profundidade do item ``treepath`` está apontando "
 "para, e ``treepath[i]`` retorna o índice do filho no nível *i*."
+
+#: ../../source/treeview.txt:141
+msgid "The View"
+msgstr "A View"
 
 #: ../../source/treeview.txt:142
 msgid ""

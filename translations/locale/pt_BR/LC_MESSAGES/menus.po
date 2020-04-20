@@ -3,21 +3,24 @@
 # This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 00:10-0300\n"
+"POT-Creation-Date: 2018-04-06 06:03-0300\n"
 "PO-Revision-Date: 2018-04-11 23:07-0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-"Last-Translator: Matheus Rodrigues <matheussr61@gmail.com>\n"
+"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: pt_BR\n"
+
+#: ../../source/menus.txt:2
+msgid "Menus"
+msgstr ""
 
 #: ../../source/menus.txt:4
 msgid ""
@@ -46,6 +49,10 @@ msgstr ""
 "funções comumente usadas de um aplicativo. Exemplos incluem criar um novo "
 "documento, imprimir uma página ou desfazer uma operação. Ele contém uma ou "
 "mais instâncias de :class:`Gtk.ToolItem` ou uma de suas subclasses."
+
+#: ../../source/menus.txt:17
+msgid "Actions"
+msgstr "Ações"
 
 #: ../../source/menus.txt:19
 msgid ""
@@ -205,3 +212,7 @@ msgid ""
 msgstr ""
 "Finalmente, você recupera o widget raiz com :meth:`Gtk.UIManager.get_widget` "
 "e adiciona o widget a um container como :class:`Gtk.Box`."
+
+#: ../../source/menus.txt:80
+msgid "Example"
+msgstr "Exemplo"

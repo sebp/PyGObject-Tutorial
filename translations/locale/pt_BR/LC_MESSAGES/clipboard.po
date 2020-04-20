@@ -3,19 +3,18 @@
 # This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 00:10-0300\n"
-"PO-Revision-Date: 2018-04-11 23:07-0300\n"
+"POT-Creation-Date: 2018-04-05 03:57-0300\n"
+"PO-Revision-Date: 2018-04-11 23:06-0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-"Last-Translator: Matheus Rodrigues <matheussr61@gmail.com>\n"
+"Last-Translator: Tomaz Cunha <tomazmcn@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: pt_BR\n"
 
@@ -35,8 +34,8 @@ msgstr ""
 ":class:`Gtk.Clipboard` fornece uma área de armazenamento para uma variedade "
 "de dados, incluindo texto e imagens. O uso de uma área de transferência "
 "permite que esses dados sejam compartilhados entre aplicativos por meio de "
-"ações como copiar, cortar e colar. Essas ações geralmente são feitas de três "
-"maneiras: usando atalhos de teclado, usando um :class:`Gtk.MenuItem` e "
+"ações como copiar, cortar e colar. Essas ações geralmente são feitas de "
+"três maneiras: usando atalhos de teclado, usando um :class:`Gtk.MenuItem` e "
 "conectando as funções aos widgets :class:`Gtk.Button`."
 
 #: ../../source/clipboard.txt:11
@@ -47,6 +46,10 @@ msgid ""
 "text selected by the user with the cursor."
 msgstr ""
 "Existem várias seleções da área de transferência para finalidades "
-"diferentes. Na maioria das circunstâncias, a seleção chamada ``CLIPBOARD`` é "
-"usada para copiar e colar todos os dias. ``PRIMARY`` é outra seleção comum "
-"que armazena texto selecionado pelo usuário com o cursor."
+"diferentes. Na maioria das circunstâncias, a seleção chamada ``CLIPBOARD`` "
+"é usada para copiar e colar todos os dias. ``PRIMARY`` é outra seleção "
+"comum que armazena texto selecionado pelo usuário com o cursor."
+
+#: ../../source/clipboard.txt:17
+msgid "Example"
+msgstr "Exemplo"

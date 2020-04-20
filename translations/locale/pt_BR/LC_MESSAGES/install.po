@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python GTK+ 3 Tutorial package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python GTK+ 3 Tutorial 3.4\n"
