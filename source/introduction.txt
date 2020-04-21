@@ -20,9 +20,9 @@ We will now explain each line of the example.
     :lines: 1-4
 
 In the beginning, we have to import the Gtk module to be able to
-access GTK+'s classes and functions.
-Since a user's system can have multiple versions of GTK+ installed at the same,
-we want to make sure that when we import Gtk that it refers to GTK+ 3
+access GTK's classes and functions.
+Since a user's system can have multiple versions of GTK installed at the same,
+we want to make sure that when we import Gtk that it refers to GTK 3
 and not any other version of the library, which is the purpose
 of the statement ``gi.require_version('Gtk', '3.0')``.
 
@@ -42,7 +42,7 @@ In the next step we display the window.
 .. literalinclude:: ../examples/simple_example.py
     :lines: 8
 
-Finally, we start the GTK+ processing loop which we quit when the window is
+Finally, we start the GTK processing loop which we quit when the window is
 closed (see line 6).
 
 .. literalinclude:: ../examples/simple_example.py

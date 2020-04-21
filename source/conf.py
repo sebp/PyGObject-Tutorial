@@ -47,7 +47,7 @@ source_suffix = ".txt"
 master_doc = "index"
 
 # General information about the project.
-project = u"Python GTK+ 3 Tutorial"
+project = u"Python GTK 3 Tutorial"
 copyright = u"GNU Free Documentation License 1.3"
 
 locale_dirs = ["../translations/locale"]

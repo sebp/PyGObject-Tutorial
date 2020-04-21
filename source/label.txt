@@ -25,14 +25,14 @@ Pango Markup syntax [#pango]_.
 For instance, ``<b>bold text</b> and <s>strikethrough text</s>``.
 In addition, :class:`Gtk.Label` supports clickable hyperlinks.
 The markup for links is borrowed from HTML, using the a with href and title
-attributes. GTK+ renders links similar to the way they appear in web browsers,
+attributes. GTK renders links similar to the way they appear in web browsers,
 with colored, underlined text. The title attribute is displayed as a tooltip
 on the link.
 
 .. code-block:: python
 
     label.set_markup("Go to <a href=\"https://www.gtk.org\" "
-                     "title=\"Our website\">GTK+ website</a> for more")
+                     "title=\"Our website\">GTK website</a> for more")
 
 Labels may contain *mnemonics*. Mnemonics are underlined characters in the
 label, used for keyboard navigation. Mnemonics are created by providing a

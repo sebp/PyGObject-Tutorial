@@ -4,7 +4,7 @@ Objects
 =======
 
 GObject is the fundamental type providing the common attributes and methods
-for all object types in GTK+, Pango and other libraries based on GObject.
+for all object types in GTK, Pango and other libraries based on GObject.
 The :class:`GObject.GObject` class provides methods for object construction and destruction,
 property access methods, and signal support.
 
@@ -37,8 +37,8 @@ Signals
 -------
 
 Signals connect arbitrary application-specific events with any number of listeners.
-For example, in GTK+, every user event (keystroke or mouse move) is received
-from the X server and generates a GTK+ event under the form of a signal emission
+For example, in GTK, every user event (keystroke or mouse move) is received
+from the X server and generates a GTK event under the form of a signal emission
 on a given object instance.
 
 Each signal is registered in the type system together with the type on which it

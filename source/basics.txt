@@ -2,7 +2,7 @@
 
 Basics
 ======
-This section will introduce some of the most important aspects of GTK+.
+This section will introduce some of the most important aspects of GTK.
 
 
 
@@ -10,10 +10,10 @@ This section will introduce some of the most important aspects of GTK+.
 
 Main loop and Signals
 ---------------------
-Like most GUI toolkits, GTK+ uses an event-driven programming model.
-When the user is doing nothing, GTK+ sits in the main loop and waits for input.
+Like most GUI toolkits, GTK uses an event-driven programming model.
+When the user is doing nothing, GTK sits in the main loop and waits for input.
 If the user performs some action - say, a mouse click - then the main loop
-"wakes up" and delivers an event to GTK+.
+"wakes up" and delivers an event to GTK.
 
 When widgets receive an event, they frequently emit one or more signals.
 Signals notify your program that "something interesting happened" by invoking
@@ -21,7 +21,7 @@ functions you've connected to the signal. Such functions are commonly known
 as *callbacks*. 
 When your callbacks are invoked, you would typically take some action - for
 example, when an Open button is clicked you might display a file chooser
-dialog. After a callback finishes, GTK+ will return to the main loop and await
+dialog. After a callback finishes, GTK will return to the main loop and await
 more user input. 
 
 

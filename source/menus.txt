@@ -2,10 +2,10 @@ Menus
 =====
 
 .. note:: :class:`Gtk.UIManager`, :class:`Gtk.Action`, and :class:`Gtk.ActionGroup`
-  have been deprecated since GTK+ version 3.10 and should not be used in
+  have been deprecated since GTK version 3.10 and should not be used in
   newly-written code. Use the :ref:`application` framework instead.
 
-GTK+ comes with two different types of menus, :class:`Gtk.MenuBar` and
+GTK comes with two different types of menus, :class:`Gtk.MenuBar` and
 :class:`Gtk.Toolbar`. :class:`Gtk.MenuBar` is a standard menu bar which contains
 one or more :class:`Gtk.MenuItem` instances or one of its subclasses.
 :class:`Gtk.Toolbar` widgets are used for quick accessibility to commonly used

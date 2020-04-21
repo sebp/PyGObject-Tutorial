@@ -3,7 +3,7 @@
 Layout Containers
 =================
 While many GUI toolkits require you to precisely place widgets in a window,
-using absolute positioning, GTK+ uses a different approach.
+using absolute positioning, GTK uses a different approach.
 Rather than specifying the position and size of each widget in the window,
 you can arrange your widgets in rows, columns, and/or tables.
 The size of your window can be determined automatically, based on the sizes
@@ -12,11 +12,11 @@ And the sizes of the widgets are, in turn, determined by the amount of text
 they contain, or the minimum and maximum sizes that you specify, and/or how
 you have requested that the available space should be shared between sets of
 widgets. You can perfect your layout by specifying padding distance and
-centering values for each of your widgets. GTK+ then uses all this information
+centering values for each of your widgets. GTK then uses all this information
 to resize and reposition everything sensibly and smoothly when the user
 manipulates the window.
 
-GTK+ arranges widgets hierarchically, using *containers*.
+GTK arranges widgets hierarchically, using *containers*.
 They are invisible to the end user and are inserted into a window, or placed
 within each other to layout components.
 There are two flavours of containers: single-child
@@ -168,7 +168,7 @@ to place children at the start or the end. In addition, it allows a title to be
 displayed. The title will be centered with respect to the width of the box,
 even if the children at either side take up different amounts of space.
 
-Since GTK+ now supports Client Side Decoration, a :class:`Gtk.HeaderBar` can
+Since GTK now supports Client Side Decoration, a :class:`Gtk.HeaderBar` can
 be used in place of the title bar (which is rendered by the Window Manager).
 
 A :class:`Gtk.HeaderBar` is usually located across the top of a window and
@@ -187,7 +187,7 @@ Example
 FlowBox
 -------
 
-.. note:: This example requires at least GTK+ 3.12.
+.. note:: This example requires at least GTK 3.12.
 
 A :class:`Gtk.FlowBox` is a container that positions child widgets in sequence
 according to its orientation.

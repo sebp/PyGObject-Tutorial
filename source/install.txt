@@ -4,14 +4,14 @@ Installation
 ============
 The first step before we start with actual coding consists of setting up
 `PyGObject`_ and its dependencies. PyGObject is a Python module
-that enables developers to access GObject-based libraries such as GTK+
+that enables developers to access GObject-based libraries such as GTK
 within Python.
-It exclusively supports GTK+ version 3 or later.
+It exclusively supports GTK version 3 or later.
 
 Dependencies
 ------------
 
-* GTK+3
+* GTK 3
 
 * Python 2 (2.6 or later) or Python 3 (3.1 or later)
 
@@ -49,7 +49,7 @@ Executing the following command will build PyGObject and all its dependencies::
 
     $ jhbuild build pygobject
 
-Finally, you might want to install GTK+ from source as well::
+Finally, you might want to install GTK from source as well::
 
     $ jhbuild build gtk+-3
 

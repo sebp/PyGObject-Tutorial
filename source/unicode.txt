@@ -2,7 +2,7 @@ How to Deal With Strings
 ========================
 
 This section explains how strings are represented in Python 2.x, Python 3.x
-and GTK+ and discusses common errors that arise when working with strings.
+and GTK and discusses common errors that arise when working with strings.
 
 Definitions
 -----------
@@ -81,9 +81,9 @@ get :exc:`UnicodeDecodeError` if it contained non-ASCII values::
 	UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 2:
 	ordinal not in range(128)
 
-Unicode in GTK+
+Unicode in GTK
 +++++++++++++++
-GTK+ uses UTF-8 encoded strings for all text. This means that if you call a
+GTK uses UTF-8 encoded strings for all text. This means that if you call a
 method that returns a string you will always obtain an instance of the :class:`str`
 type. The same applies to methods that expect one or more strings as parameter,
 they must be UTF-8 encoded. However, for convenience PyGObject will automatically
@@ -110,9 +110,9 @@ This is especially important if you want to internationalize your
 program using `gettext <https://docs.python.org/3/library/gettext.html>`_. You
 have to make sure that gettext will return UTF-8 encoded 8-bit strings for all
 languages. In general it is recommended to not use :class:`unicode` objects
-in GTK+ applications at all and only use UTF-8 encoded :class:`str` objects since
-GTK+ does not fully integrate with :class:`unicode` objects. Otherwise, you would
-have to decode the return values to Unicode strings each time you call a GTK+ method::
+in GTK applications at all and only use UTF-8 encoded :class:`str` objects since
+GTK does not fully integrate with :class:`unicode` objects. Otherwise, you would
+have to decode the return values to Unicode strings each time you call a GTK method::
 
 	>>> txt = label.get_text().decode("utf-8")
 	>>> txt == unicode_string
@@ -144,7 +144,7 @@ because it will result in a :exc:`TypeError`::
 	>>> text.encode("utf-8") + data
 	b'Fu\xc3\x9fb\xc3\xa4lle sind rund'
 
-Unicode in GTK+
+Unicode in GTK
 +++++++++++++++
 As a consequence, things are much cleaner and consistent with Python 3.x, because
 PyGObject will automatically encode/decode to/from UTF-8 if you pass a string to

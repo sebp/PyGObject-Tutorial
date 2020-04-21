@@ -2,7 +2,7 @@ Table
 -----
 
 .. note:: :class:`Gtk.Table`
-  has been deprecated since GTK+ version 3.4 and should not be used in
+  has been deprecated since GTK version 3.4 and should not be used in
   newly-written code. Use the :ref:`layout-grid` class instead.
 
 Tables allows us to place widgets in a grid similar to :class:`Gtk.Grid`.
