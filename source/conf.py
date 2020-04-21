@@ -47,8 +47,8 @@ source_suffix = ".txt"
 master_doc = "index"
 
 # General information about the project.
-project = u"Python GTK+ 3 Tutorial"
-copyright = u"GNU Free Documentation License 1.3"
+project = "Python GTK+ 3 Tutorial"
+copyright = "GNU Free Documentation License 1.3"
 
 locale_dirs = ["../translations/locale"]
 
@@ -191,8 +191,8 @@ latex_documents = [
     (
         "index",
         "PyGObjectTutorial.tex",
-        u"The Python GTK+ 3 Tutorial",
-        u"Sebastian Pölsterl",
+        "The Python GTK+ 3 Tutorial",
+        "Sebastian Pölsterl",
         "manual",
     )
 ]
@@ -229,8 +229,8 @@ man_pages = [
     (
         "index",
         "pygobjecttutorial",
-        u"PyGObject Tutorial Documentation",
-        [u"Sebastian Pölsterl"],
+        "PyGObject Tutorial Documentation",
+        ["Sebastian Pölsterl"],
         1,
     )
 ]
