@@ -242,5 +242,5 @@ man_pages = [
 ]
 
 if on_rtd:
-    subprocess.call(["/usr/bin/make", "split-po"], cwd=join("..", "translations"))
+    subprocess.check_call(["/usr/bin/make", "split-po"], cwd=join("..", "translations"))
 
