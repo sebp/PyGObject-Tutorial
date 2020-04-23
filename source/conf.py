@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys, os
+from os.path import join
 import subprocess
 
 # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
@@ -241,5 +242,5 @@ man_pages = [
 ]
 
 if on_rtd:
-    subprocess.call(["/usr/bin/make", "split-po"], cwd="translations")
+    subprocess.call(["/usr/bin/make", "split-po"], cwd=join("..", "translations"))
 
