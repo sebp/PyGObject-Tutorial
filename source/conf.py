@@ -12,6 +12,11 @@
 # serve to show the default.
 
 import sys, os
+import subprocess
+
+# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
+# https://docs.readthedocs.io/en/latest/faq.html?highlight=environ#how-do-i-change-behavior-for-read-the-docs
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -234,3 +239,7 @@ man_pages = [
         1,
     )
 ]
+
+if on_rtd:
+    subprocess.call(["/usr/bin/make", "split-po"], cwd="translations")
+
