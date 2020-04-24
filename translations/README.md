@@ -14,7 +14,7 @@ Refer to GitHub docs for more information on [proposing changes via pull request
 
 A good way to assure the quality of the translations is to build the docs with the up-to-date message catalog (.po file). If you are willing to down that way, follow the steps below.
 
-**Note:** All instructions below assume you are running from the project's root directory.
+**Note:** All instructions below assume the current working directory is the project's root directory.
 
 1. Install `tox` (hint: add `--user` flag for a per-user installation, without requiring admin privileges):
 ```
@@ -26,7 +26,7 @@ pip install tox
 cp path/to/your/translated/file.po translations/po/<lang>.po
 ```
 
-3. If you are adding new translation for a language, add your language code to the `LINGUAS` file in alphabetical order; otherwise, skip this step.
+3. If you are adding new translation for a language, add your language code to the `translations/LINGUAS` file in alphabetical order (see [supported language codes](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language)); otherwise, skip this step.
 
 4. Build HTML docs in your language by running:
 ```
@@ -45,11 +45,6 @@ make -C translations PythonGTK3Tutorial.pot
 ```
 
 2. If the execution is done successfully, then `translations/PythonGTK3Tutorial.pot` should be available.
-
-3. If step 1 failed, run the following command before retrying step 1:
-```
-pip install -r requirements
-```
 
 ## Why splitting PO files
 
