@@ -4,6 +4,9 @@
 
 Translations to PyGObject-Tutorial happen in [Damned Lies](https://l10n.gnome.org/). See [GNOME Translation Project wiki](https://wiki.gnome.org/TranslationProject) for more info.
 
+This tutorial is written in reStructuredText markup language, so you might want to check [reStructuredText syntax and concepts in Sphinx documentation](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
+
+
 Please make sure to test and review the translation before considering it as finished.
 
 Once you're done translating, file a [pull request](https://github.com/sebp/PyGObject-Tutorial/pulls) containing your translation in `translations/po/<lang>.po`, where `<lang>` is your language's code (e.g. pt_BR).
@@ -53,3 +56,4 @@ make -C translations PythonGTK3Tutorial.pot
 1. The `xgettext` tool is set to extract strings from source docs into a single translation template (.pot) file to be used by Damned Lies.
 
 2. When including an updated translation for a given language, the message catalog in `po/` is split into separated files stored in `locale/<lang>/LC_MESSAGES/`. Those separated files will be used by Sphinx to build translated docs.
+
