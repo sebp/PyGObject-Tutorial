@@ -14,44 +14,42 @@ Refer to GitHub docs for more information on [proposing changes via pull request
 
 A good way to assure the quality of the translations is to build the docs with the up-to-date message catalog (.po file). If you are willing to down that way, follow the steps below.
 
-**Note:** All instructions below assume you are inside `translations/` directory.
+**Note:** All instructions below assume you are running from the project's root directory.
 
-1. Install dependencies (hint: add `--user` flag for a per-user installation, without requiring admin privileges):
+1. Install `tox` (hint: add `--user` flag for a per-user installation, without requiring admin privileges):
 ```
-pip install -r ../requirements.txt
-```
-
-2. Copy your PO file to `po/` (replace `<lang>` accordingly):
-```
-cp path/to/your/translated/file.po po/<lang>.po
+pip install tox
 ```
 
-3. If you are adding new translation for a language, add your language code to `LINGUAS` in alphabetical order; otherwise, skip this step.
-
-4. Split your PO file into individual documents for Sphinx to process:
+2. Copy your .po file to `translations/po/` (replace `<lang>` accordingly):
 ```
-make split-po
+cp path/to/your/translated/file.po translations/po/<lang>.po
 ```
 
-5. Build HTML docs in your language (replace `<lang>` accordingly):
+3. If you are adding new translation for a language, add your language code to the `LINGUAS` file in alphabetical order; otherwise, skip this step.
+
+4. Build HTML docs in your language by running:
 ```
-make -C .. -e SPHINXOPTS="-D language='<lang>'" html
+tox
 ```
 
-4. Check `../build/html/` for the translated docs in HTML format.
+5. Check `build/html/` for the translated docs in HTML format.
 
 ## Building translation template
 
-This step is **not** necessary for translating PyGObject-Tutorial, as [Damned Lies](https://l10n.gnome.org/) automatically updates the translation template (.pot file) and the message catalog (po) files. Therefore, it should be all up-to-date already.
+This is **not** necessary for translating PyGObject-Tutorial, as [Damned Lies](https://l10n.gnome.org/) automatically updates the translation template (.pot file) and the message catalogs (.po files). Therefore, it should be all up-to-date already.
 
-1. Install dependencies (same instruction as step 1 from previous section)
-
-2. Run:
+1. To build the .pot file, run:
 ```
-make PythonGTK3Tutorial.pot
+make -C translations PythonGTK3Tutorial.pot
 ```
 
-3. Check the translation template as `PythonGTK3Tutorial.pot`
+2. If the execution is done successfully, then `translations/PythonGTK3Tutorial.pot` should be available.
+
+3. If step 1 failed, run the following command before retrying step 1:
+```
+pip install -r requirements
+```
 
 ## Why splitting PO files
 
