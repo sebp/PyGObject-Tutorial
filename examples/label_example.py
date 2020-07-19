@@ -42,6 +42,7 @@ class LabelWindow(Gtk.Window):
             "many          extra  spaces. "
         )
         label.set_line_wrap(True)
+        label.set_max_width_chars(32)
         vbox_right.pack_start(label, True, True, 0)
 
         label = Gtk.Label(
@@ -58,6 +59,7 @@ class LabelWindow(Gtk.Window):
         )
         label.set_line_wrap(True)
         label.set_justify(Gtk.Justification.FILL)
+        label.set_max_width_chars(32)
         vbox_right.pack_start(label, True, True, 0)
 
         label = Gtk.Label()
@@ -68,6 +70,7 @@ class LabelWindow(Gtk.Window):
             'title="Click to find out more">internets</a>.'
         )
         label.set_line_wrap(True)
+        label.set_max_width_chars(48)
         vbox_left.pack_start(label, True, True, 0)
 
         label = Gtk.Label.new_with_mnemonic(
