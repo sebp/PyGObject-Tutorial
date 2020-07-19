@@ -25,11 +25,13 @@ class HeaderBarWindow(Gtk.Window):
         Gtk.StyleContext.add_class(box.get_style_context(), "linked")
 
         button = Gtk.Button()
-        button.add(Gtk.Arrow(Gtk.ArrowType.LEFT, Gtk.ShadowType.NONE))
+        button.add(
+            Gtk.Arrow(arrow_type=Gtk.ArrowType.LEFT, shadow_type=Gtk.ShadowType.NONE)
+        )
         box.add(button)
 
         button = Gtk.Button()
-        button.add(Gtk.Arrow(Gtk.ArrowType.RIGHT, Gtk.ShadowType.NONE))
+        button = Gtk.Button.new_from_icon_name("pan-end-symbolic", Gtk.IconSize.MENU)
         box.add(button)
 
         hb.pack_start(box)

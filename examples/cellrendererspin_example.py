@@ -25,7 +25,14 @@ class CellRendererSpinWindow(Gtk.Window):
         renderer_spin.connect("edited", self.on_amount_edited)
         renderer_spin.set_property("editable", True)
 
-        adjustment = Gtk.Adjustment(0, 0, 100, 1, 10, 0)
+        adjustment = Gtk.Adjustment(
+            value=0,
+            lower=0,
+            upper=100,
+            step_increment=1,
+            page_increment=10,
+            page_size=0,
+        )
         renderer_spin.set_property("adjustment", adjustment)
 
         column_spin = Gtk.TreeViewColumn("Amount", renderer_spin, text=1)

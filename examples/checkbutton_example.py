@@ -12,11 +12,11 @@ class CheckButtonWindow(Gtk.Window):
         hbox = Gtk.Box(spacing=6)
         self.add(hbox)
 
-        button = Gtk.CheckButton("Button 1")
+        button = Gtk.CheckButton.new_with_label("Button 1")
         button.connect("toggled", self.on_button_toggled, "1")
         hbox.pack_start(button, False, False, 0)
 
-        button = Gtk.CheckButton("B_utton 2", use_underline=True)
+        button = Gtk.CheckButton.new_with_mnemonic("B_utton 2")
         button.set_active(True)
         button.connect("toggled", self.on_button_toggled, "2")
         hbox.pack_start(button, False, False, 0)

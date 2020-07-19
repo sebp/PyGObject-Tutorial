@@ -44,9 +44,9 @@ class FlowBoxWindow(Gtk.Window):
         cr.fill()
 
     def color_swatch_new(self, str_color):
-        color = Gdk.color_parse(str_color)
+        rgba = Gdk.RGBA()
+        rgba.parse(str_color)
 
-        rgba = Gdk.RGBA.from_color(color)
         button = Gtk.Button()
 
         area = Gtk.DrawingArea()

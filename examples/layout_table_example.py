@@ -8,7 +8,7 @@ class TableWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Table Example")
 
-        table = Gtk.Table(3, 3, True)
+        table = Gtk.Table(n_rows=3, n_columns=3, homogeneous=True)
         self.add(table)
 
         button1 = Gtk.Button(label="Button 1")

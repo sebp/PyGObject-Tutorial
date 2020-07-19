@@ -11,13 +11,13 @@ class SpinnerAnimation(Gtk.Window):
         self.set_border_width(3)
         self.connect("destroy", Gtk.main_quit)
 
-        self.button = Gtk.ToggleButton("Start Spinning")
+        self.button = Gtk.ToggleButton(label="Start Spinning")
         self.button.connect("toggled", self.on_button_toggled)
         self.button.set_active(False)
 
         self.spinner = Gtk.Spinner()
 
-        self.table = Gtk.Table(3, 2, True)
+        self.table = Gtk.Table(n_rows=3, n_columns=2, homogeneous=True)
         self.table.attach(self.button, 0, 2, 0, 1)
         self.table.attach(self.spinner, 0, 2, 2, 3)
 

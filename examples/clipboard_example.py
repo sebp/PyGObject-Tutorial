@@ -8,16 +8,16 @@ class ClipboardWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Clipboard Example")
 
-        table = Gtk.Table(3, 2)
+        table = Gtk.Table(n_rows=3, n_columns=2)
 
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         self.entry = Gtk.Entry()
         self.image = Gtk.Image.new_from_icon_name("process-stop", Gtk.IconSize.MENU)
 
-        button_copy_text = Gtk.Button("Copy Text")
-        button_paste_text = Gtk.Button("Paste Text")
-        button_copy_image = Gtk.Button("Copy Image")
-        button_paste_image = Gtk.Button("Paste Image")
+        button_copy_text = Gtk.Button(label="Copy Text")
+        button_paste_text = Gtk.Button(label="Paste Text")
+        button_copy_image = Gtk.Button(label="Copy Image")
+        button_paste_image = Gtk.Button(label="Paste Image")
 
         table.attach(self.entry, 0, 1, 0, 1)
         table.attach(self.image, 0, 1, 1, 2)

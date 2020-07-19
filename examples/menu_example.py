@@ -46,7 +46,7 @@ class MenuExampleWindow(Gtk.Window):
 
         self.set_default_size(200, 200)
 
-        action_group = Gtk.ActionGroup("my_actions")
+        action_group = Gtk.ActionGroup(name="my_actions")
 
         self.add_file_menu_actions(action_group)
         self.add_edit_menu_actions(action_group)
@@ -67,7 +67,7 @@ class MenuExampleWindow(Gtk.Window):
         eventbox.connect("button-press-event", self.on_button_press_event)
         box.pack_start(eventbox, True, True, 0)
 
-        label = Gtk.Label("Right-click to see the popup menu.")
+        label = Gtk.Label(label="Right-click to see the popup menu.")
         eventbox.add(label)
 
         self.popup = uimanager.get_widget("/PopupMenu")
@@ -75,14 +75,17 @@ class MenuExampleWindow(Gtk.Window):
         self.add(box)
 
     def add_file_menu_actions(self, action_group):
-        action_filemenu = Gtk.Action("FileMenu", "File", None, None)
+        action_filemenu = Gtk.Action(name="FileMenu", label="File")
         action_group.add_action(action_filemenu)
 
-        action_filenewmenu = Gtk.Action("FileNew", None, None, Gtk.STOCK_NEW)
+        action_filenewmenu = Gtk.Action(name="FileNew", stock_id=Gtk.STOCK_NEW)
         action_group.add_action(action_filenewmenu)
 
         action_new = Gtk.Action(
-            "FileNewStandard", "_New", "Create a new file", Gtk.STOCK_NEW
+            name="FileNewStandard",
+            label="_New",
+            tooltip="Create a new file",
+            stock_id=Gtk.STOCK_NEW,
         )
         action_new.connect("activate", self.on_menu_file_new_generic)
         action_group.add_action_with_accel(action_new, None)
@@ -108,7 +111,7 @@ class MenuExampleWindow(Gtk.Window):
             ]
         )
 
-        action_filequit = Gtk.Action("FileQuit", None, None, Gtk.STOCK_QUIT)
+        action_filequit = Gtk.Action(name="FileQuit", stock_id=Gtk.STOCK_QUIT)
         action_filequit.connect("activate", self.on_menu_file_quit)
         action_group.add_action(action_filequit)
 
@@ -130,7 +133,7 @@ class MenuExampleWindow(Gtk.Window):
         )
 
     def add_choices_menu_actions(self, action_group):
-        action_group.add_action(Gtk.Action("ChoicesMenu", "Choices", None, None))
+        action_group.add_action(Gtk.Action(name="ChoicesMenu", label="Choices"))
 
         action_group.add_radio_actions(
             [
@@ -141,7 +144,7 @@ class MenuExampleWindow(Gtk.Window):
             self.on_menu_choices_changed,
         )
 
-        three = Gtk.ToggleAction("ChoiceThree", "Three", None, None)
+        three = Gtk.ToggleAction(name="ChoiceThree", label="Three")
         three.connect("toggled", self.on_menu_choices_toggled)
         action_group.add_action(three)
 

@@ -28,11 +28,13 @@ class MessageDialogWindow(Gtk.Window):
         box.add(button4)
 
     def on_info_clicked(self, widget):
-        dialog = Gtk.MessageDialog(parent=self,
-                                   flags=0,
-                                   message_type=Gtk.MessageType.INFO,
-                                   buttons=Gtk.ButtonsType.OK,
-                                   text="This is an INFO MessageDialog")
+        dialog = Gtk.MessageDialog(
+            transient_for=self,
+            flags=0,
+            message_type=Gtk.MessageType.INFO,
+            buttons=Gtk.ButtonsType.OK,
+            text="This is an INFO MessageDialog",
+        )
         dialog.format_secondary_text(
             "And this is the secondary text that explains things."
         )
@@ -42,11 +44,13 @@ class MessageDialogWindow(Gtk.Window):
         dialog.destroy()
 
     def on_error_clicked(self, widget):
-        dialog = Gtk.MessageDialog(parent=self,
-                                   flags=0,
-                                   message_type=Gtk.MessageType.ERROR,
-                                   buttons=Gtk.ButtonsType.CANCEL,
-                                   text="This is an ERROR MessageDialog")
+        dialog = Gtk.MessageDialog(
+            transient_for=self,
+            flags=0,
+            message_type=Gtk.MessageType.ERROR,
+            buttons=Gtk.ButtonsType.CANCEL,
+            text="This is an ERROR MessageDialog",
+        )
         dialog.format_secondary_text(
             "And this is the secondary text that explains things."
         )
@@ -56,11 +60,13 @@ class MessageDialogWindow(Gtk.Window):
         dialog.destroy()
 
     def on_warn_clicked(self, widget):
-        dialog = Gtk.MessageDialog(parent=self,
-                                   flags=0,
-                                   message_type=Gtk.MessageType.WARNING,
-                                   buttons=Gtk.ButtonsType.OK_CANCEL,
-                                   text="This is an WARNING MessageDialog")
+        dialog = Gtk.MessageDialog(
+            transient_for=self,
+            flags=0,
+            message_type=Gtk.MessageType.WARNING,
+            buttons=Gtk.ButtonsType.OK_CANCEL,
+            text="This is an WARNING MessageDialog",
+        )
         dialog.format_secondary_text(
             "And this is the secondary text that explains things."
         )
@@ -73,11 +79,13 @@ class MessageDialogWindow(Gtk.Window):
         dialog.destroy()
 
     def on_question_clicked(self, widget):
-        dialog = Gtk.MessageDialog(parent = self,
-                                   flags = 0,
-                                   message_type = Gtk.MessageType.QUESTION,
-                                   buttons = Gtk.ButtonsType.YES_NO,
-                                   text = "This is an QUESTION MessageDialog")
+        dialog = Gtk.MessageDialog(
+            transient_for=self,
+            flags=0,
+            message_type=Gtk.MessageType.QUESTION,
+            buttons=Gtk.ButtonsType.YES_NO,
+            text="This is an QUESTION MessageDialog",
+        )
         dialog.format_secondary_text(
             "And this is the secondary text that explains things."
         )

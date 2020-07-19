@@ -22,11 +22,11 @@ class SpinnerWindow(Gtk.Window):
         self.entry.set_text("10")
         mainBox.pack_start(self.entry, True, True, 0)
 
-        self.buttonStart = Gtk.Button("Start timer")
+        self.buttonStart = Gtk.Button(label="Start timer")
         self.buttonStart.connect("clicked", self.on_buttonStart_clicked)
         mainBox.pack_start(self.buttonStart, True, True, 0)
 
-        self.buttonStop = Gtk.Button("Stop timer")
+        self.buttonStop = Gtk.Button(label="Stop timer")
         self.buttonStop.set_sensitive(False)
         self.buttonStop.connect("clicked", self.on_buttonStop_clicked)
         mainBox.pack_start(self.buttonStop, True, True, 0)
