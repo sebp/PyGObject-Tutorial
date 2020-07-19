@@ -8,7 +8,7 @@ class ClipboardWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Clipboard Example")
 
-        table = Gtk.Table(n_rows=3, n_columns=2)
+        grid = Gtk.Grid()
 
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         self.entry = Gtk.Entry()
@@ -19,19 +19,19 @@ class ClipboardWindow(Gtk.Window):
         button_copy_image = Gtk.Button(label="Copy Image")
         button_paste_image = Gtk.Button(label="Paste Image")
 
-        table.attach(self.entry, 0, 1, 0, 1)
-        table.attach(self.image, 0, 1, 1, 2)
-        table.attach(button_copy_text, 1, 2, 0, 1)
-        table.attach(button_paste_text, 2, 3, 0, 1)
-        table.attach(button_copy_image, 1, 2, 1, 2)
-        table.attach(button_paste_image, 2, 3, 1, 2)
+        grid.add(self.entry)
+        grid.attach(self.image, 0, 1, 1, 1)
+        grid.attach(button_copy_text, 1, 0, 1, 1)
+        grid.attach(button_paste_text, 2, 0, 1, 1)
+        grid.attach(button_copy_image, 1, 1, 1, 1)
+        grid.attach(button_paste_image, 2, 1, 1, 1)
 
         button_copy_text.connect("clicked", self.copy_text)
         button_paste_text.connect("clicked", self.paste_text)
         button_copy_image.connect("clicked", self.copy_image)
         button_paste_image.connect("clicked", self.paste_image)
 
-        self.add(table)
+        self.add(grid)
 
     def copy_text(self, widget):
         self.clipboard.set_text(self.entry.get_text(), -1)

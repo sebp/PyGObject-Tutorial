@@ -17,11 +17,14 @@ class SpinnerAnimation(Gtk.Window):
 
         self.spinner = Gtk.Spinner()
 
-        self.table = Gtk.Table(n_rows=3, n_columns=2, homogeneous=True)
-        self.table.attach(self.button, 0, 2, 0, 1)
-        self.table.attach(self.spinner, 0, 2, 2, 3)
+        self.grid = Gtk.Grid()
+        self.grid.add(self.button)
+        self.grid.attach_next_to(
+            self.spinner, self.button, Gtk.PositionType.BOTTOM, 1, 2
+        )
+        self.grid.set_row_homogeneous(True)
 
-        self.add(self.table)
+        self.add(self.grid)
         self.show_all()
 
     def on_button_toggled(self, button):
