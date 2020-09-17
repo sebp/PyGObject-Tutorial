@@ -8,6 +8,7 @@ class PopoverWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="Popover Demo")
         self.set_border_width(10)
+        self.set_default_size(300, 200)
 
         outerbox = Gtk.Box(spacing=6, orientation=Gtk.Orientation.VERTICAL)
         self.add(outerbox)
@@ -27,9 +28,6 @@ class PopoverWindow(Gtk.Window):
         self.popover.set_relative_to(button)
         self.popover.show_all()
         self.popover.popup()
-
-    def on_open_clicked(self, button):
-        print('"Open" button was clicked')
 
 
 win = PopoverWindow()
