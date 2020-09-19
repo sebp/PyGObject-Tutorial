@@ -336,8 +336,8 @@ API
 
         :const:`GObject.SIGNAL_RUN_FIRST` can be replaced with
         :const:`GObject.SIGNAL_RUN_LAST` or :const:`GObject.SIGNAL_RUN_CLEANUP`.
-        ``None`` is the return type of the signal. ``(int,)`` is the list of the
-        parameters of the signal, it must end with a comma.
+        ``None`` is the return type of the signal. ``(int,)`` is the tuple of the
+        parameters of the signal.
 
     .. attribute:: __gproperties__
 
