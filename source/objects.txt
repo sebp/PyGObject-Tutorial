@@ -82,8 +82,8 @@ The second part, ``None``, indicates the return type of the signal,
 usually ``None``.
 
 ``(int,)`` indicates the signal arguments, here, the signal will only
-take one argument, whose type is int. This argument type must be a sequence,
-so here as a tuple with one element must end with a comma.
+take one argument, whose type is int. Types of arguments required by 
+signal are declared as a sequence, here is one-element tuple.
 
 Signals can be emitted using :meth:`GObject.GObject.emit`:
 
