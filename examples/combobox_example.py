@@ -62,6 +62,7 @@ class ComboBoxWindow(Gtk.Window):
         for currency in currencies:
             currency_combo.append_text(currency)
 
+        currency_combo.set_active(0)
         vbox.pack_start(currency_combo, False, False, 0)
 
         self.add(vbox)
