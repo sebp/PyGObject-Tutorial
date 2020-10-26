@@ -46,7 +46,6 @@ class ComboBoxWindow(Gtk.Window):
         renderer_text = Gtk.CellRendererText()
         country_combo.pack_start(renderer_text, True)
         country_combo.add_attribute(renderer_text, "text", 0)
-        country_combo.set_active(0)
         vbox.pack_start(country_combo, False, False, True)
 
         currencies = [

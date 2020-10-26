@@ -25,6 +25,9 @@ can be a bit overwhelming. In this case, :class:`Gtk.ComboBoxText` offers a simp
 alternative. Both :class:`Gtk.ComboBox` and :class:`Gtk.ComboBoxText` can contain
 an entry.
 
+A default value can be set by calling :meth:`Gtk.ComboBox.set_active` with the index
+of the desired value.
+
 Example
 -------
 
