@@ -43,6 +43,7 @@ Contents:
    label
    entry
    button_widgets
+   expander
    progressbar
    spinner
    treeview
