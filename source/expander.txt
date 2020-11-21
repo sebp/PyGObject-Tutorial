@@ -8,14 +8,14 @@ expanded.
 Expanders remain expanded until clicked again. When the state of an expander
 is changed, the "activate" signal is emitted.
 
-An expander can be programmatically expanded or retracted by passing `True` or
-`False` to :func:`Gtk.Expander.set_expanded`. Note that doing so causes the
+An expander can be programmatically expanded or collapsed by passing `True` or
+`False` to :meth:`Gtk.Expander.set_expanded`. Note that doing so causes the
 "activate" signal to be emitted.
 
 Adding More Widgets
 -------------------
 
-More widgets, such as :Gtk.Label: or :Gtk.Button:, can be added by fitting them
+More than one widget, such as a Label and Button, can be added by fitting them
 within a :Gtk.Box:
 
 Example

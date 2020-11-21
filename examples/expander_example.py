@@ -15,7 +15,6 @@ class ExpanderExample(Gtk.Window):
 
         text_expander = Gtk.Expander(label="This expander displays additional information")
         text_expander.set_expanded(True)
-        text_expander.connect('activate', self.on_expand)
         vbox.add(text_expander)
 
         msg = """
@@ -29,7 +28,6 @@ This message is quite long, complicated even:
         text_expander.add(details)
 
         widget_expander = Gtk.Expander(label="Expand for more controls")
-        widget_expander.connect('activate', self.on_expand)
         vbox.add(widget_expander)
 
         expander_hbox = Gtk.HBox()
@@ -38,16 +36,7 @@ This message is quite long, complicated even:
         expander_hbox.add(Gtk.Label(label="Text message"))
         expander_hbox.add(Gtk.Button(label="Click me"))
 
-        self.expanders = [text_expander, widget_expander]
-
         self.show_all()
-
-    def on_expand(self, expander):
-        text_expander, widget_expander = self.expanders
-        if expander == text_expander:
-            widget_expander.set_expanded(False)
-        else:
-            text_expander.set_expanded(False)
 
 
 win = ExpanderExample()
