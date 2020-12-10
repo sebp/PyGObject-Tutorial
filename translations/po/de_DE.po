@@ -1,0 +1,3484 @@
+# German translation for pygobject-tutorial.
+# Copyright (C) 2020 pygobject-tutorial's COPYRIGHT HOLDER
+# This file is distributed under the same license as the pygobject-tutorial package.
+# Christian Kirbach <Christian.Kirbach@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pygobject-tutorial master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-18 20:31+0200\n"
+"PO-Revision-Date: 2020-11-12 22:46+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../../source/iconview.txt:2
+msgid "IconView"
+msgstr "IconView"
+
+#: ../../source/iconview.txt:3
+msgid ""
+"A :class:`Gtk.IconView` is a widget that displays a collection of icons in a "
+"grid view. It supports features such as drag and drop, multiple selections "
+"and item reordering."
+msgstr ""
+
+#: ../../source/iconview.txt:5
+msgid ""
+"Similarly to :class:`Gtk.TreeView`, :class:`Gtk.IconView` uses a :class:`Gtk."
+"ListStore` for its model. Instead of using :ref:`cell renderers "
+"<cellrenderers>`, :class:`Gtk.IconView` requires that one of the columns in "
+"its :class:`Gtk.ListStore` contains :class:`GdkPixbuf.Pixbuf` objects."
+msgstr ""
+
+#: ../../source/iconview.txt:7
+msgid ""
+":class:`Gtk.IconView` supports numerous selection modes to allow for either "
+"selecting multiple icons at a time, restricting selections to just one item "
+"or disallowing selecting items completely. To specify a selection mode, the :"
+"meth:`Gtk.IconView.set_selection_mode` method is used with one of the :class:"
+"`Gtk.SelectionMode` selection modes."
+msgstr ""
+
+#: ../../source/iconview.txt:10 ../../source/layout.txt:40
+#: ../../source/layout.txt:97 ../../source/layout.txt:123
+#: ../../source/layout.txt:156 ../../source/layout.txt:180
+#: ../../source/layout.txt:212 ../../source/layout.txt:232
+#: ../../source/button_widgets.txt:18 ../../source/button_widgets.txt:39
+#: ../../source/button_widgets.txt:78 ../../source/button_widgets.txt:95
+#: ../../source/button_widgets.txt:131 ../../source/button_widgets.txt:150
+#: ../../source/spinner.txt:12 ../../source/spinner.txt:29
+#: ../../source/layout-table.txt:26 ../../source/combobox.txt:29
+#: ../../source/builder.txt:118 ../../source/entry.txt:32
+#: ../../source/clipboard.txt:17 ../../source/cellrenderers.txt:39
+#: ../../source/cellrenderers.txt:59 ../../source/cellrenderers.txt:74
+#: ../../source/cellrenderers.txt:98 ../../source/cellrenderers.txt:116
+#: ../../source/cellrenderers.txt:138 ../../source/menus.txt:80
+#: ../../source/textview.txt:115 ../../source/label.txt:48
+#: ../../source/dialogs.txt:46 ../../source/dialogs.txt:66
+#: ../../source/dialogs.txt:130 ../../source/popover.txt:19
+#: ../../source/popover.txt:34 ../../source/drag_and_drop.txt:74
+#: ../../source/application.txt:61 ../../source/progressbar.txt:32
+msgid "Example"
+msgstr "Beispiel"
+
+#: ../../source/layout.txt:4
+msgid "Layout Containers"
+msgstr ""
+
+#: ../../source/layout.txt:5
+msgid ""
+"While many GUI toolkits require you to precisely place widgets in a window, "
+"using absolute positioning, GTK+ uses a different approach. Rather than "
+"specifying the position and size of each widget in the window, you can "
+"arrange your widgets in rows, columns, and/or tables. The size of your "
+"window can be determined automatically, based on the sizes of the widgets it "
+"contains. And the sizes of the widgets are, in turn, determined by the "
+"amount of text they contain, or the minimum and maximum sizes that you "
+"specify, and/or how you have requested that the available space should be "
+"shared between sets of widgets. You can perfect your layout by specifying "
+"padding distance and centering values for each of your widgets. GTK+ then "
+"uses all this information to resize and reposition everything sensibly and "
+"smoothly when the user manipulates the window."
+msgstr ""
+
+#: ../../source/layout.txt:19
+msgid ""
+"GTK+ arranges widgets hierarchically, using *containers*. They are invisible "
+"to the end user and are inserted into a window, or placed within each other "
+"to layout components. There are two flavours of containers: single-child "
+"containers, which are all descendants of :class:`Gtk.Bin`, and multiple-"
+"child containers, which are descendants of :class:`Gtk.Container`. The most "
+"commonly used are vertical or horizontal boxes (:class:`Gtk.Box`) and grids "
+"(:class:`Gtk.Grid`)."
+msgstr ""
+
+#: ../../source/layout.txt:29
+msgid "Boxes"
+msgstr "Boxen"
+
+#: ../../source/layout.txt:31
+msgid ""
+"Boxes are invisible containers into which we can pack our widgets. When "
+"packing widgets into a horizontal box, the objects are inserted horizontally "
+"from left to right or right to left depending on whether :meth:`Gtk.Box."
+"pack_start` or :meth:`Gtk.Box.pack_end` is used. In a vertical box, widgets "
+"are packed from top to bottom or vice versa. You may use any combination of "
+"boxes inside or beside other boxes to create the desired effect."
+msgstr ""
+
+#: ../../source/layout.txt:42
+msgid ""
+"Let's take a look at a slightly modified version of the extended example "
+"with two buttons."
+msgstr ""
+
+#: ../../source/layout.txt:50
+msgid ""
+"First, we create a horizontally orientated box container where 6 pixels are "
+"placed between children. This box becomes the child of the top-level window."
+msgstr ""
+
+#: ../../source/layout.txt:56
+msgid "Subsequently, we add two different buttons to the box container."
+msgstr ""
+
+#: ../../source/layout.txt:61
+msgid ""
+"While with :meth:`Gtk.Box.pack_start` widgets are positioned from left to "
+"right, :meth:`Gtk.Box.pack_end` positions them from right to left."
+msgstr ""
+
+#: ../../source/layout.txt:67
+msgid "Grid"
+msgstr "Raster"
+
+#: ../../source/layout.txt:68
+msgid ""
+":class:`Gtk.Grid` is a container which arranges its child widgets in rows "
+"and columns, but you do not need to specify the dimensions in the "
+"constructor. Children are added using :meth:`Gtk.Grid.attach`. They can span "
+"multiple rows or columns. The :meth:`Gtk.Grid.attach` method takes five "
+"parameters:"
+msgstr ""
+
+#: ../../source/layout.txt:73
+msgid "The ``child`` parameter is the :class:`Gtk.Widget` to add."
+msgstr ""
+
+#: ../../source/layout.txt:74
+msgid "``left`` is the column number to attach the left side of ``child`` to."
+msgstr ""
+
+#: ../../source/layout.txt:75
+msgid ""
+"``top`` indicates the row number to attach the top side of ``child`` to."
+msgstr ""
+
+#: ../../source/layout.txt:76
+msgid ""
+"``width`` and ``height`` indicate the number of columns that the ``child`` "
+"will span, and the number of rows that the ``child`` will span, respectively."
+msgstr ""
+
+#: ../../source/layout.txt:79
+msgid ""
+"It is also possible to add a child next to an existing child, using :meth:"
+"`Gtk.Grid.attach_next_to`, which also takes five parameters:"
+msgstr ""
+
+#: ../../source/layout.txt:82
+msgid "``child`` is the :class:`Gtk.Widget` to add, as above."
+msgstr ""
+
+#: ../../source/layout.txt:83
+msgid ""
+"``sibling`` is an existing child widget of ``self`` (a :class:`Gtk.Grid` "
+"instance) or ``None``. The ``child`` widget will be placed next to "
+"``sibling``, or if ``sibling`` is ``None``, at the beginning or end of the "
+"grid."
+msgstr ""
+
+#: ../../source/layout.txt:86
+msgid ""
+"``side`` is a :class:`Gtk.PositionType` indicating the side of ``sibling`` "
+"that ``child`` is positioned next to."
+msgstr ""
+
+#: ../../source/layout.txt:88
+msgid ""
+"``width`` and ``height`` indicate the number of columns and rows the "
+"``child`` widget will span, respectively."
+msgstr ""
+
+#: ../../source/layout.txt:91
+msgid ""
+"Finally, :class:`Gtk.Grid` can be used like a :class:`Gtk.Box` by just "
+"using :meth:`Gtk.Grid.add`, which will place children next to each other in "
+"the direction determined by the \"orientation\" property (defaults to :attr:"
+"`Gtk.Orientation.HORIZONTAL`)."
+msgstr ""
+
+#: ../../source/layout.txt:105
+msgid "ListBox"
+msgstr "ListBox"
+
+#: ../../source/layout.txt:107
+msgid ""
+"A :class:`Gtk.ListBox` is a vertical container that contains :class:`Gtk."
+"ListBoxRow` children. These rows can be dynamically sorted and filtered, and "
+"headers can be added dynamically depending on the row content. It also "
+"allows keyboard and mouse navigation and selection like a typical list."
+msgstr ""
+
+#: ../../source/layout.txt:112
+msgid ""
+"Using :class:`Gtk.ListBox` is often an alternative to :class:`Gtk.TreeView`, "
+"especially when the list content has a more complicated layout than what is "
+"allowed by a :class:`Gtk.CellRenderer`, or when the content is interactive "
+"(i.e. has a button in it)."
+msgstr ""
+
+#: ../../source/layout.txt:117
+msgid ""
+"Although a :class:`Gtk.ListBox` must have only :class:`Gtk.ListBoxRow` "
+"children, you can add any kind of widget to it via :meth:`Gtk.Container.add` "
+"and a :class:`Gtk.ListBoxRow` widget will automatically be inserted between "
+"the list and the widget."
+msgstr ""
+
+#: ../../source/layout.txt:131
+msgid "Stack and StackSwitcher"
+msgstr ""
+
+#: ../../source/layout.txt:133
+msgid ""
+"A :class:`Gtk.Stack` is a container which only shows one of its children at "
+"a time. In contrast to :class:`Gtk.Notebook`, :class:`Gtk.Stack` does not "
+"provide a means for users to change the visible child. Instead, the :class:"
+"`Gtk.StackSwitcher` widget can be used with :class:`Gtk.Stack` to provide "
+"this functionality."
+msgstr ""
+
+#: ../../source/layout.txt:139
+msgid ""
+"Transitions between pages can be animated as slides or fades. This can be "
+"controlled with :meth:`Gtk.Stack.set_transition_type`. These animations "
+"respect the \"gtk-enable-animations\" setting."
+msgstr ""
+
+#: ../../source/layout.txt:143
+msgid ""
+"Transition speed can be adjusted with :meth:`Gtk.Stack."
+"set_transition_duration`"
+msgstr ""
+
+#: ../../source/layout.txt:145
+msgid ""
+"The :class:`Gtk.StackSwitcher` widget acts as a controller for a :class:`Gtk."
+"Stack`; it shows a row of buttons to switch between the various pages of the "
+"associated stack widget."
+msgstr ""
+
+#: ../../source/layout.txt:149
+msgid ""
+"All the content for the buttons comes from the child properties of the :"
+"class:`Gtk.Stack`."
+msgstr ""
+
+#: ../../source/layout.txt:152
+msgid ""
+"It is possible to associate multiple :class:`Gtk.StackSwitcher` widgets with "
+"the same :class:`Gtk.Stack` widget."
+msgstr ""
+
+#: ../../source/layout.txt:164
+msgid "HeaderBar"
+msgstr "Kopfleiste"
+
+#: ../../source/layout.txt:166
+msgid ""
+"A :class:`Gtk.HeaderBar` is similar to a horizontal :class:`Gtk.Box`, it "
+"allows to place children at the start or the end. In addition, it allows a "
+"title to be displayed. The title will be centered with respect to the width "
+"of the box, even if the children at either side take up different amounts of "
+"space."
+msgstr ""
+
+#: ../../source/layout.txt:171
+msgid ""
+"Since GTK+ now supports Client Side Decoration, a :class:`Gtk.HeaderBar` can "
+"be used in place of the title bar (which is rendered by the Window Manager)."
+msgstr ""
+
+#: ../../source/layout.txt:174
+msgid ""
+"A :class:`Gtk.HeaderBar` is usually located across the top of a window and "
+"should contain commonly used controls which affect the content below. They "
+"also provide access to window controls, including the close window button "
+"and window menu."
+msgstr ""
+
+#: ../../source/layout.txt:188
+msgid "FlowBox"
+msgstr "FlowBox"
+
+#: ../../source/layout.txt:190
+msgid "This example requires at least GTK+ 3.12."
+msgstr ""
+
+#: ../../source/layout.txt:192
+msgid ""
+"A :class:`Gtk.FlowBox` is a container that positions child widgets in "
+"sequence according to its orientation."
+msgstr ""
+
+#: ../../source/layout.txt:195
+msgid ""
+"For instance, with the horizontal orientation, the widgets will be arranged "
+"from left to right, starting a new row under the previous row when "
+"necessary. Reducing the width in this case will require more rows, so a "
+"larger height will be requested."
+msgstr ""
+
+#: ../../source/layout.txt:200
+msgid ""
+"Likewise, with the vertical orientation, the widgets will be arranged from "
+"top to bottom, starting a new column to the right when necessary. Reducing "
+"the height will require more columns, so a larger width will be requested."
+msgstr ""
+
+#: ../../source/layout.txt:204
+msgid ""
+"The children of a :class:`Gtk.FlowBox` can be dynamically sorted and "
+"filtered."
+msgstr ""
+
+#: ../../source/layout.txt:206
+msgid ""
+"Although a :class:`Gtk.FlowBox` must have only :class:`Gtk.FlowBoxChild` "
+"children, you can add any kind of widget to it via :meth:`Gtk.Container."
+"add`, and a :class:`Gtk.FlowBoxChild` widget will automatically be inserted "
+"between the box and the widget."
+msgstr ""
+
+#: ../../source/layout.txt:220
+msgid "Notebook"
+msgstr "Notizbuch"
+
+#: ../../source/layout.txt:222
+msgid ""
+"The :class:`Gtk.Notebook` widget is a :class:`Gtk.Container` whose children "
+"are pages that can be switched between using tab labels along one edge."
+msgstr ""
+
+#: ../../source/layout.txt:224
+msgid ""
+"There are many configuration options for GtkNotebook. Among other things, "
+"you can choose on which edge the tabs appear (see :meth:`Gtk.Notebook."
+"set_tab_pos`), whether, if there are too many tabs to fit the notebook "
+"should be made bigger or scrolling arrows added (see :meth:`Gtk.Notebook."
+"set_scrollable`, and whether there will be a popup menu allowing the users "
+"to switch pages (see :meth:`Gtk.Notebook.popup_enable`, :meth:`Gtk.Notebook."
+"popup_disable`)."
+msgstr ""
+
+#: ../../source/gallery.txt:2
+msgid "Widget Gallery"
+msgstr ""
+
+#: ../../source/gallery.txt:5
+msgid ":class:`Gtk.AboutDialog`"
+msgstr ""
+
+#: ../../source/gallery.txt:6
+msgid ":class:`Gtk.AccelLabel`"
+msgstr ""
+
+#: ../../source/gallery.txt:7
+msgid ":class:`Gtk.ActionBar`"
+msgstr ""
+
+#: ../../source/gallery.txt:8
+msgid ":class:`Gtk.AppChooserButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:9
+msgid ":class:`Gtk.AppChooserDialog`"
+msgstr ""
+
+#: ../../source/gallery.txt:10
+msgid ":class:`Gtk.Assistant`"
+msgstr ""
+
+#: ../../source/gallery.txt:11
+msgid ":class:`Gtk.Button`"
+msgstr ""
+
+#: ../../source/gallery.txt:12
+msgid ":class:`Gtk.CheckButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:13
+msgid ":class:`Gtk.ColorButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:14
+msgid ":class:`Gtk.ColorChooserDialog`"
+msgstr ""
+
+#: ../../source/gallery.txt:15
+msgid ":class:`Gtk.ComboBox`"
+msgstr ""
+
+#: ../../source/gallery.txt:16
+msgid ":class:`Gtk.ComboBoxText`"
+msgstr ""
+
+#: ../../source/gallery.txt:17
+msgid ":class:`Gtk.Entry`"
+msgstr ""
+
+#: ../../source/gallery.txt:18
+msgid ":class:`Gtk.FileChooserButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:19
+msgid ":class:`Gtk.FileChooserDialog`"
+msgstr ""
+
+#: ../../source/gallery.txt:20
+msgid ":class:`Gtk.FlowBox`"
+msgstr ""
+
+#: ../../source/gallery.txt:21
+msgid ":class:`Gtk.FontButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:22
+msgid ":class:`Gtk.FontChooserDialog`"
+msgstr ""
+
+#: ../../source/gallery.txt:23
+msgid ":class:`Gtk.Frame`"
+msgstr ""
+
+#: ../../source/gallery.txt:24
+msgid ":class:`Gtk.GLArea`"
+msgstr ""
+
+#: ../../source/gallery.txt:25
+msgid ":class:`Gtk.Grid`"
+msgstr ""
+
+#: ../../source/gallery.txt:26
+msgid ":class:`Gtk.HeaderBar`"
+msgstr ""
+
+#: ../../source/gallery.txt:27
+msgid ":class:`Gtk.IconView`"
+msgstr ""
+
+#: ../../source/gallery.txt:28
+msgid ":class:`Gtk.Image`"
+msgstr ""
+
+#: ../../source/gallery.txt:29
+msgid ":class:`Gtk.InfoBar`"
+msgstr ""
+
+#: ../../source/gallery.txt:30
+msgid ":class:`Gtk.Label`"
+msgstr ""
+
+#: ../../source/gallery.txt:31
+msgid ":class:`Gtk.LevelBar`"
+msgstr ""
+
+#: ../../source/gallery.txt:32
+msgid ":class:`Gtk.LinkButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:33
+msgid ":class:`Gtk.ListBox`"
+msgstr ""
+
+#: ../../source/gallery.txt:34
+msgid ":class:`Gtk.LockButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:35
+msgid ":class:`Gtk.MenuBar`"
+msgstr ""
+
+#: ../../source/gallery.txt:36
+msgid ":class:`Gtk.MenuButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:37
+msgid ":class:`Gtk.MessageDialog`"
+msgstr ""
+
+#: ../../source/gallery.txt:38
+msgid ":class:`Gtk.Notebook`"
+msgstr ""
+
+#: ../../source/gallery.txt:39
+msgid ":class:`Gtk.Paned`"
+msgstr ""
+
+#: ../../source/gallery.txt:40
+msgid ":class:`Gtk.PlacesSidebar`"
+msgstr ""
+
+#: ../../source/gallery.txt:41
+msgid ":class:`Gtk.ProgressBar`"
+msgstr ""
+
+#: ../../source/gallery.txt:42
+msgid ":class:`Gtk.RadioButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:43
+msgid ":class:`Gtk.RecentChooserDialog`"
+msgstr ""
+
+#: ../../source/gallery.txt:44
+msgid ":class:`Gtk.Scale`"
+msgstr ""
+
+#: ../../source/gallery.txt:45
+msgid ":class:`Gtk.Scrollbar`"
+msgstr ""
+
+#: ../../source/gallery.txt:46
+msgid ":class:`Gtk.ScrolledWindow`"
+msgstr ""
+
+#: ../../source/gallery.txt:47
+msgid ":class:`Gtk.SearchBar`"
+msgstr ""
+
+#: ../../source/gallery.txt:48
+msgid ":class:`Gtk.SearchEntry`"
+msgstr ""
+
+#: ../../source/gallery.txt:49
+msgid ":class:`Gtk.Separator`"
+msgstr ""
+
+#: ../../source/gallery.txt:50
+msgid ":class:`Gtk.SpinButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:51
+msgid ":class:`Gtk.Spinner`"
+msgstr ""
+
+#: ../../source/gallery.txt:52
+msgid ":class:`Gtk.Stack`"
+msgstr ""
+
+#: ../../source/gallery.txt:53
+msgid ":class:`Gtk.StackSwitcher`"
+msgstr ""
+
+#: ../../source/gallery.txt:54
+msgid ":class:`Gtk.Statusbar`"
+msgstr ""
+
+#: ../../source/gallery.txt:55
+msgid ":class:`Gtk.Switch`"
+msgstr ""
+
+#: ../../source/gallery.txt:56
+msgid ":class:`Gtk.TextView`"
+msgstr ""
+
+#: ../../source/gallery.txt:57
+msgid ":class:`Gtk.ToggleButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:58
+msgid ":class:`Gtk.ToolPalette`"
+msgstr ""
+
+#: ../../source/gallery.txt:59
+msgid ":class:`Gtk.Toolbar`"
+msgstr ""
+
+#: ../../source/gallery.txt:60
+msgid ":class:`Gtk.TreeView`"
+msgstr ""
+
+#: ../../source/gallery.txt:61
+msgid ":class:`Gtk.VolumeButton`"
+msgstr ""
+
+#: ../../source/gallery.txt:62
+msgid ":class:`Gtk.Window`"
+msgstr ""
+
+#: ../../source/button_widgets.txt:2
+msgid "Button Widgets"
+msgstr ""
+
+#: ../../source/button_widgets.txt:5
+msgid "Button"
+msgstr "Knopf"
+
+#: ../../source/button_widgets.txt:7
+msgid ""
+"The Button widget is another commonly used widget. It is generally used to "
+"attach a function that is called when the button is pressed."
+msgstr ""
+
+#: ../../source/button_widgets.txt:10
+msgid ""
+"The :class:`Gtk.Button` widget can hold any valid child widget. That is it "
+"can hold most any other standard :class:`Gtk.Widget`. The most commonly used "
+"child is the :class:`Gtk.Label`."
+msgstr ""
+
+#: ../../source/button_widgets.txt:14
+msgid ""
+"Usually, you want to connect to the button's \"clicked\" signal which is "
+"emitted when the button has been pressed and released."
+msgstr ""
+
+#: ../../source/button_widgets.txt:26
+msgid "ToggleButton"
+msgstr ""
+
+#: ../../source/button_widgets.txt:28
+msgid ""
+"A :class:`Gtk.ToggleButton` is very similar to a normal :class:`Gtk.Button`, "
+"but when clicked they remain activated, or pressed, until clicked again. "
+"When the state of the button is changed, the \"toggled\" signal is emitted."
+msgstr ""
+
+#: ../../source/button_widgets.txt:32
+msgid ""
+"To retrieve the state of the :class:`Gtk.ToggleButton`, you can use the :"
+"meth:`Gtk.ToggleButton.get_active` method. This returns ``True`` if the "
+"button is \"down\". You can also set the toggle button's state, with :meth:"
+"`Gtk.ToggleButton.set_active`. Note that, if you do this, and the state "
+"actually changes, it causes the \"toggled\" signal to be emitted."
+msgstr ""
+
+#: ../../source/button_widgets.txt:47
+msgid "CheckButton"
+msgstr ""
+
+#: ../../source/button_widgets.txt:48
+msgid ""
+":class:`Gtk.CheckButton` inherits from :class:`Gtk.ToggleButton`. The only "
+"real difference between the two is :class:`Gtk.CheckButton`'s appearance. A :"
+"class:`Gtk.CheckButton` places a discrete :class:`Gtk.ToggleButton` next to "
+"a widget, (usually a :class:`Gtk.Label`). The \"toggled\" signal, :meth:`Gtk."
+"ToggleButton.set_active` and :meth:`Gtk.ToggleButton.get_active` are "
+"inherited."
+msgstr ""
+
+#: ../../source/button_widgets.txt:56
+msgid "RadioButton"
+msgstr "Auswahlknopf"
+
+#: ../../source/button_widgets.txt:57
+msgid ""
+"Like checkboxes, radio buttons also inherit from :class:`Gtk.ToggleButton`, "
+"but these work in groups, and only one :class:`Gtk.RadioButton` in a group "
+"can be selected at any one time. Therefore, a :class:`Gtk.RadioButton` is "
+"one way of giving the user a choice from many options."
+msgstr ""
+
+#: ../../source/button_widgets.txt:62
+msgid ""
+"Radio buttons can be created with one of the static methods :meth:`Gtk."
+"RadioButton.new_from_widget`, :meth:`Gtk.RadioButton."
+"new_with_label_from_widget` or :meth:`Gtk.RadioButton."
+"new_with_mnemonic_from_widget`. The first radio button in a group will be "
+"created passing ``None`` as the *group* argument. In subsequent calls, the "
+"group you wish to add this button to should be passed as an argument."
+msgstr ""
+
+#: ../../source/button_widgets.txt:70
+msgid ""
+"When first run, the first radio button in the group will be active. This can "
+"be changed by calling :meth:`Gtk.ToggleButton.set_active` with ``True`` as "
+"first argument."
+msgstr ""
+
+#: ../../source/button_widgets.txt:74
+msgid ""
+"Changing a :class:`Gtk.RadioButton`'s widget group after its creation can be "
+"achieved by calling :meth:`Gtk.RadioButton.join_group`."
+msgstr ""
+
+#: ../../source/button_widgets.txt:86
+msgid "LinkButton"
+msgstr ""
+
+#: ../../source/button_widgets.txt:87
+msgid ""
+"A :class:`Gtk.LinkButton` is a :class:`Gtk.Button` with a hyperlink, similar "
+"to the one used by web browsers, which triggers an action when clicked. It "
+"is useful to show quick links to resources."
+msgstr ""
+
+#: ../../source/button_widgets.txt:91
+msgid ""
+"The URI bound to a :class:`Gtk.LinkButton` can be set specifically using :"
+"meth:`Gtk.LinkButton.set_uri`, and retrieved using :meth:`Gtk.LinkButton."
+"get_uri`."
+msgstr ""
+
+#: ../../source/button_widgets.txt:103
+msgid "SpinButton"
+msgstr "Einstellfeld"
+
+#: ../../source/button_widgets.txt:104
+msgid ""
+"A :class:`Gtk.SpinButton` is an ideal way to allow the user to set the value "
+"of some attribute. Rather than having to directly type a number into a :"
+"class:`Gtk.Entry`, :class:`Gtk.SpinButton` allows the user to click on one "
+"of two arrows to increment or decrement the displayed value. A value can "
+"still be typed in, with the bonus that it can be checked to ensure it is in "
+"a given range. The main properties of a :class:`Gtk.SpinButton` are set "
+"through :class:`Gtk.Adjustment`."
+msgstr ""
+
+#: ../../source/button_widgets.txt:112
+msgid ""
+"To change the value that :class:`Gtk.SpinButton` is showing, use :meth:`Gtk."
+"SpinButton.set_value`. The value entered can either be an integer or float, "
+"depending on your requirements, use :meth:`Gtk.SpinButton.get_value` or :"
+"meth:`Gtk.SpinButton.get_value_as_int`, respectively."
+msgstr ""
+
+#: ../../source/button_widgets.txt:117
+msgid ""
+"When you allow the displaying of float values in the spin button, you may "
+"wish to adjust the number of decimal spaces displayed by calling :meth:`Gtk."
+"SpinButton.set_digits`."
+msgstr ""
+
+#: ../../source/button_widgets.txt:121
+msgid ""
+"By default, :class:`Gtk.SpinButton` accepts textual data. If you wish to "
+"limit this to numerical values only, call :meth:`Gtk.SpinButton.set_numeric` "
+"with ``True`` as argument."
+msgstr ""
+
+#: ../../source/button_widgets.txt:125
+msgid ""
+"We can also adjust the update policy of :class:`Gtk.SpinButton`. There are "
+"two options here; by default the spin button updates the value even if the "
+"data entered is invalid. Alternatively, we can set the policy to only update "
+"when the value entered is valid by calling :meth:`Gtk.SpinButton."
+"set_update_policy`."
+msgstr ""
+
+#: ../../source/button_widgets.txt:139
+msgid "Switch"
+msgstr "Schalter"
+
+#: ../../source/button_widgets.txt:140
+msgid ""
+"A :class:`Gtk.Switch` is a widget that has two states: on or off. The user "
+"can control which state should be active by clicking the empty area, or by "
+"dragging the handle."
+msgstr ""
+
+#: ../../source/button_widgets.txt:144
+msgid ""
+"You shouldn't use the \"activate\" signal on the Gtk.Switch which is an "
+"action signal and emitting it causes the switch to animate. Applications "
+"should never connect to this signal, but use the \"notify::active\" signal, "
+"see the example here below."
+msgstr ""
+
+#: ../../source/index.txt:7
+msgid "The Python GTK+ 3 Tutorial"
+msgstr ""
+
+#: ../../source/index.txt:0
+msgid "Release"
+msgstr "Veröffentlichung"
+
+#: ../../source/index.txt:9
+msgid "|version|"
+msgstr ""
+
+#: ../../source/index.txt:0
+msgid "Date"
+msgstr "Datum"
+
+#: ../../source/index.txt:10
+msgid "|today|"
+msgstr ""
+
+#: ../../source/index.txt:0
+msgid "Copyright"
+msgstr "Copyright"
+
+#: ../../source/index.txt:11
+msgid ""
+"GNU Free Documentation License 1.3 with no Invariant Sections, no Front-"
+"Cover Texts, and no Back-Cover Texts"
+msgstr ""
+
+#: ../../source/index.txt:13
+msgid ""
+"This tutorial gives an introduction to writing GTK+ 3 applications in Python."
+msgstr ""
+
+#: ../../source/index.txt:15
+msgid ""
+"Prior to working through this tutorial, it is recommended that you have a "
+"reasonable grasp of the Python programming language. GUI programming "
+"introduces new problems compared to interacting with the standard output "
+"(console / terminal). It is necessary for you to know how to create and run "
+"Python files, understand basic interpreter errors, and work with strings, "
+"integers, floats and Boolean values. For the more advanced widgets in this "
+"tutorial, good knowledge of lists and tuples will be needed."
+msgstr ""
+
+#: ../../source/index.txt:25
+msgid ""
+"Although this tutorial describes the most important classes and methods "
+"within GTK+ 3, it is not supposed to serve as an API reference. Please refer "
+"to the `GTK+ 3 Reference Manual <https://developer.gnome.org/gtk3/stable/>`_ "
+"for a detailed description of the API. Also there's a `Python-specific "
+"reference <https://lazka.github.io/pgi-docs/>`_ available."
+msgstr ""
+
+#: ../../source/index.txt:31
+msgid "Contents:"
+msgstr "Inhalt:"
+
+#: ../../source/index.txt:61
+msgid "Deprecated"
+msgstr "Veraltet"
+
+#: ../../source/index.txt:69
+msgid "Indices and tables"
+msgstr "Indizes und Tabellen"
+
+#: ../../source/index.txt:71
+msgid ":ref:`search`"
+msgstr ""
+
+#: ../../source/spinner.txt:2
+msgid "Spinner"
+msgstr "Spinner"
+
+#: ../../source/spinner.txt:4
+msgid ""
+"The :class:`Gtk.Spinner` displays an icon-size spinning animation. It is "
+"often used as an alternative to a :class:`GtkProgressBar` for displaying "
+"indefinite activity, instead of actual progress."
+msgstr ""
+
+#: ../../source/spinner.txt:8
+msgid ""
+"To start the animation, use :meth:`Gtk.Spinner.start`, to stop it use :meth:"
+"`Gtk.Spinner.stop`."
+msgstr ""
+
+#: ../../source/spinner.txt:20
+msgid "Extended example"
+msgstr "Erweitertes Beispiel"
+
+#: ../../source/spinner.txt:22
+msgid ""
+"An extended example that uses a timeout function to start and stop the "
+"spinning animation. The :func:`on_timeout` function is called at regular "
+"intervals until it returns ``False``, at which point the timeout is "
+"automatically destroyed and the function will not be called again."
+msgstr ""
+
+#: ../../source/layout-table.txt:2
+msgid "Table"
+msgstr "Tabelle"
+
+#: ../../source/layout-table.txt:4
+msgid ""
+":class:`Gtk.Table` has been deprecated since GTK+ version 3.4 and should not "
+"be used in newly-written code. Use the :ref:`layout-grid` class instead."
+msgstr ""
+
+#: ../../source/layout-table.txt:8
+msgid ""
+"Tables allows us to place widgets in a grid similar to :class:`Gtk.Grid`."
+msgstr ""
+
+#: ../../source/layout-table.txt:10
+msgid ""
+"The grid's dimensions need to be specified in the :class:`Gtk.Table` "
+"constructor. To place a widget into a box, use :meth:`Gtk.Table.attach`."
+msgstr ""
+
+#: ../../source/layout-table.txt:13
+msgid ""
+":meth:`Gtk.Table.set_row_spacing` and :meth:`Gtk.Table.set_col_spacing` set "
+"the spacing between the rows at the specified row or column. Note that for "
+"columns, the space goes to the right of the column, and for rows, the space "
+"goes below the row."
+msgstr ""
+
+#: ../../source/layout-table.txt:18
+msgid ""
+"You can also set a consistent spacing for all rows and/or columns with :meth:"
+"`Gtk.Table.set_row_spacings` and :meth:`Gtk.Table.set_col_spacings`. Note "
+"that with these calls, the last row and last column do not get any spacing."
+msgstr ""
+
+#: ../../source/layout-table.txt:22
+msgid "It is reccomened that you use the :class:`Gtk.Grid` for new code."
+msgstr ""
+
+#: ../../source/combobox.txt:2
+msgid "ComboBox"
+msgstr "ComboBox"
+
+#: ../../source/combobox.txt:3
+msgid ""
+"A :class:`Gtk.ComboBox` allows for the selection of an item from a dropdown "
+"menu. They are preferable to having many radio buttons on screen as they "
+"take up less room. If appropriate, it can show extra information about each "
+"item, such as text, a picture, a checkbox, or a progress bar."
+msgstr ""
+
+#: ../../source/combobox.txt:8
+msgid ""
+":class:`Gtk.ComboBox` is very similar to :class:`Gtk.TreeView`, as both use "
+"the model-view pattern; the list of valid choices is specified in the form "
+"of a tree model, and the display of the choices can be adapted to the data "
+"in the model by using :ref:`cell renderers <cellrenderers>`. If the combo "
+"box contains a large number of items, it may be better to display them in a "
+"grid rather than a list. This can be done by calling :meth:`Gtk.ComboBox."
+"set_wrap_width`."
+msgstr ""
+
+#: ../../source/combobox.txt:16
+msgid ""
+"The :class:`Gtk.ComboBox` widget usually restricts the user to the available "
+"choices, but it can optionally have an :class:`Gtk.Entry`, allowing the user "
+"to enter arbitrary text if none of the available choices are suitable. To do "
+"this, use one of the static methods :meth:`Gtk.ComboBox.new_with_entry` or :"
+"meth:`Gtk.ComboBox.new_with_model_and_entry` to create an :class:`Gtk."
+"ComboBox` instance."
+msgstr ""
+
+#: ../../source/combobox.txt:23
+msgid ""
+"For a simple list of textual choices, the model-view API of :class:`Gtk."
+"ComboBox` can be a bit overwhelming. In this case, :class:`Gtk.ComboBoxText` "
+"offers a simple alternative. Both :class:`Gtk.ComboBox` and :class:`Gtk."
+"ComboBoxText` can contain an entry."
+msgstr ""
+
+#: ../../source/unicode.txt:2
+msgid "How to Deal With Strings"
+msgstr ""
+
+#: ../../source/unicode.txt:4
+msgid ""
+"This section explains how strings are represented in Python 2.x, Python 3.x "
+"and GTK+ and discusses common errors that arise when working with strings."
+msgstr ""
+
+#: ../../source/unicode.txt:8
+msgid "Definitions"
+msgstr "Definitionen"
+
+#: ../../source/unicode.txt:9
+msgid ""
+"Conceptually, a string is a list of characters such as 'A', 'B', 'C' or 'É'. "
+"**Characters** are abstract representations and their meaning depends on the "
+"language and context they are used in. The Unicode standard describes how "
+"characters are represented by **code points**. For example the characters "
+"above are represented with the code points U+0041, U+0042, U+0043, and U"
+"+00C9, respectively. Basically, code points are numbers in the range from 0 "
+"to 0x10FFFF."
+msgstr ""
+
+#: ../../source/unicode.txt:17
+msgid ""
+"As mentioned earlier, the representation of a string as a list of code "
+"points is abstract. In order to convert this abstract representation into a "
+"sequence of bytes, the Unicode string must be **encoded**. The simplest form "
+"of encoding is ASCII and is performed as follows:"
+msgstr ""
+
+#: ../../source/unicode.txt:22
+msgid ""
+"If the code point is < 128, each byte is the same as the value of the code "
+"point."
+msgstr ""
+
+#: ../../source/unicode.txt:25
+msgid ""
+"If the code point is 128 or greater, the Unicode string can't be represented "
+"in this encoding.  (Python raises a :exc:`UnicodeEncodeError` exception in "
+"this case.)"
+msgstr ""
+
+#: ../../source/unicode.txt:29
+msgid ""
+"Although ASCII encoding is simple to apply it can only encode for 128 "
+"different characters which is hardly enough. One of the most commonly used "
+"encodings that addresses this problem is UTF-8 (it can handle any Unicode "
+"code point). UTF stands for \"Unicode Transformation Format\", and the '8' "
+"means that 8-bit numbers are used in the encoding."
+msgstr ""
+
+#: ../../source/unicode.txt:37
+msgid "Python 2"
+msgstr "Python 2"
+
+#: ../../source/unicode.txt:40
+msgid "Python 2.x’s Unicode Support"
+msgstr ""
+
+#: ../../source/unicode.txt:41
+msgid ""
+"Python 2 comes with two different kinds of objects that can be used to "
+"represent strings, :class:`str` and :class:`unicode`. Instances of the "
+"latter are used to express Unicode strings, whereas instances of the :class:"
+"`str` type are byte representations (the encoded string). Under the hood, "
+"Python represents Unicode strings as either 16- or 32-bit integers, "
+"depending on how the Python interpreter was compiled. Unicode strings can be "
+"converted to 8-bit strings with :meth:`unicode.encode`::"
+msgstr ""
+
+#: ../../source/unicode.txt:58
+msgid ""
+"Python’s 8-bit strings have a :meth:`str.decode` method that interprets the "
+"string using the given encoding::"
+msgstr ""
+
+#: ../../source/unicode.txt:68
+msgid ""
+"Unfortunately, Python 2.x allows you to mix :class:`unicode` and :class:"
+"`str` if the 8-bit string happened to contain only 7-bit (ASCII) bytes, but "
+"would get :exc:`UnicodeDecodeError` if it contained non-ASCII values::"
+msgstr ""
+
+#: ../../source/unicode.txt:85 ../../source/unicode.txt:148
+msgid "Unicode in GTK+"
+msgstr "Unicode in GTK+"
+
+#: ../../source/unicode.txt:86
+msgid ""
+"GTK+ uses UTF-8 encoded strings for all text. This means that if you call a "
+"method that returns a string you will always obtain an instance of the :"
+"class:`str` type. The same applies to methods that expect one or more "
+"strings as parameter, they must be UTF-8 encoded. However, for convenience "
+"PyGObject will automatically convert any :class:`unicode` instance to :class:"
+"`str` if supplied as argument::"
+msgstr ""
+
+#: ../../source/unicode.txt:104
+msgid ""
+"Note the warning at the end. Although we called :meth:`Gtk.Label.set_text` "
+"with a :class:`unicode` instance as argument, :meth:`Gtk.Label.get_text` "
+"will always return a :class:`str` instance. Accordingly, ``txt`` and "
+"``unicode_string`` are *not* equal."
+msgstr ""
+
+#: ../../source/unicode.txt:109
+msgid ""
+"This is especially important if you want to internationalize your program "
+"using `gettext <https://docs.python.org/3/library/gettext.html>`_. You have "
+"to make sure that gettext will return UTF-8 encoded 8-bit strings for all "
+"languages. In general it is recommended to not use :class:`unicode` objects "
+"in GTK+ applications at all and only use UTF-8 encoded :class:`str` objects "
+"since GTK+ does not fully integrate with :class:`unicode` objects. "
+"Otherwise, you would have to decode the return values to Unicode strings "
+"each time you call a GTK+ method::"
+msgstr ""
+
+#: ../../source/unicode.txt:122
+msgid "Python 3"
+msgstr "Python 3"
+
+#: ../../source/unicode.txt:125
+msgid "Python 3.x's Unicode support"
+msgstr ""
+
+#: ../../source/unicode.txt:126
+msgid ""
+"Since Python 3.0, all strings are stored as Unicode in an instance of the :"
+"class:`str` type. *Encoded* strings on the other hand are represented as "
+"binary data in the form of instances of the :class:`bytes` type. "
+"Conceptually, :class:`str` refers to *text*, whereas :class:`bytes` refers "
+"to *data*. Use :meth:`str.encode` to go from :class:`str` to :class:`bytes`, "
+"and :meth:`bytes.decode` to go from :class:`bytes` to :class:`str`."
+msgstr ""
+
+#: ../../source/unicode.txt:133
+msgid ""
+"In addition, it is no longer possible to mix Unicode strings with encoded "
+"strings, because it will result in a :exc:`TypeError`::"
+msgstr ""
+
+#: ../../source/unicode.txt:149
+msgid ""
+"As a consequence, things are much cleaner and consistent with Python 3.x, "
+"because PyGObject will automatically encode/decode to/from UTF-8 if you pass "
+"a string to a method or a method returns a string. Strings, or *text*, will "
+"always be represented as instances of :class:`str` only::"
+msgstr ""
+
+#: ../../source/unicode.txt:165
+msgid "References"
+msgstr "Referenzen"
+
+#: ../../source/unicode.txt:166
+msgid ""
+"`What's new in Python 3.0 <https://docs.python.org/3/whatsnew/3.0.html#text-"
+"vs-data-instead-of-unicode-vs-8-bit>`_ describes the new concepts that "
+"clearly distinguish between text and data."
+msgstr ""
+
+#: ../../source/unicode.txt:169
+msgid ""
+"The `Unicode HOWTO <https://docs.python.org/3/howto/unicode.html>`_ "
+"discusses Python 2.x’s support for Unicode, and explains various problems "
+"that people commonly encounter when trying to work with Unicode."
+msgstr ""
+
+#: ../../source/unicode.txt:173
+msgid ""
+"The `Unicode HOWTO for Python 3.x <https://docs.python.org/dev/howto/unicode."
+"html>`_ discusses Unicode support in Python 3.x."
+msgstr ""
+
+#: ../../source/unicode.txt:176
+msgid ""
+"`UTF-8 encoding table and Unicode characters <https://www.utf8-chartable."
+"de>`_ contains a list of Unicode code points and their respective UTF-8 "
+"encoding."
+msgstr ""
+
+#: ../../source/builder.txt:2
+msgid "Glade and Gtk.Builder"
+msgstr ""
+
+#: ../../source/builder.txt:3
+msgid ""
+"The :class:`Gtk.Builder` class offers you the opportunity to design user "
+"interfaces without writing a single line of code. This is possible through "
+"describing the interface by an XML file and then loading the XML description "
+"at runtime and create the objects automatically, which the Builder class "
+"does for you. For the purpose of not needing to write the XML manually the "
+"`Glade <https://glade.gnome.org/>`_ application lets you create the user "
+"interface in a WYSIWYG (what you see is what you get) manner"
+msgstr ""
+
+#: ../../source/builder.txt:7
+msgid "This method has several advantages:"
+msgstr ""
+
+#: ../../source/builder.txt:9
+msgid "Less code needs to be written."
+msgstr ""
+
+#: ../../source/builder.txt:10
+msgid "UI changes can be seen more quickly, so UIs are able to improve."
+msgstr ""
+
+#: ../../source/builder.txt:11
+msgid "Designers without programming skills can create and edit UIs."
+msgstr ""
+
+#: ../../source/builder.txt:12
+msgid ""
+"The description of the user interface is independent from the programming "
+"language being used."
+msgstr ""
+
+#: ../../source/builder.txt:14
+msgid ""
+"There is still code required for handling interface changes triggered by the "
+"user, but :class:`Gtk.Builder` allows you to focus on implementing that "
+"functionality."
+msgstr ""
+
+#: ../../source/builder.txt:17
+msgid "Creating and loading the .glade file"
+msgstr ""
+
+#: ../../source/builder.txt:18
+msgid ""
+"First of all you have to download and install Glade. There are `several "
+"tutorials <https://wiki.gnome.org/action/show/Apps/Glade/Tutorials>`_ about "
+"Glade, so this is not explained here in detail. Let's start by creating a "
+"window with a button in it and saving it to a file named *example.glade*. "
+"The resulting XML file should look like this."
+msgstr ""
+
+#: ../../source/builder.txt:41
+msgid "To load this file in Python we need a :class:`Gtk.Builder` object."
+msgstr ""
+
+#: ../../source/builder.txt:48
+msgid ""
+"The second line loads all objects defined in *example.glade* into the "
+"Builder object."
+msgstr ""
+
+#: ../../source/builder.txt:50
+msgid ""
+"It is also possible to load only some of the objects. The following line "
+"would add only the objects (and their child objects) given in the tuple."
+msgstr ""
+
+#: ../../source/builder.txt:57
+msgid ""
+"These two methods exist also for loading from a string rather than a file. "
+"Their corresponding names are :meth:`Gtk.Builder.add_from_string` and :meth:"
+"`Gtk.Builder.add_objects_from_string` and they simply take a XML string "
+"instead of a file name."
+msgstr ""
+
+#: ../../source/builder.txt:61
+msgid "Accessing widgets"
+msgstr ""
+
+#: ../../source/builder.txt:62
+msgid ""
+"Now that the window and the button are loaded we also want to show them. "
+"Therefore the :meth:`Gtk.Window.show_all` method has to be called on the "
+"window. But how do we access the associated object?"
+msgstr ""
+
+#: ../../source/builder.txt:71
+msgid ""
+"Every widget can be retrieved from the builder by the :meth:`Gtk.Builder."
+"get_object` method and the widget's *id*. It is really *that* simple."
+msgstr ""
+
+#: ../../source/builder.txt:74
+msgid "It is also possible to get a list of all objects with"
+msgstr ""
+
+#: ../../source/builder.txt:81
+msgid "Connecting Signals"
+msgstr ""
+
+#: ../../source/builder.txt:82
+msgid ""
+"Glade also makes it possible to define signals which you can connect to "
+"handlers in your code without extracting every object from the builder and "
+"connecting to the signals manually. The first thing to do is to declare the "
+"signal names in Glade. For this example we will act when the window is "
+"closed and when the button was pressed, so we give the name \"onDestroy\" to "
+"the callback handling the \"destroy\" signal of the window and "
+"\"onButtonPressed\" to the callback handling the \"pressed\" signal of the "
+"button. Now the XML file should look like this."
+msgstr ""
+
+#: ../../source/builder.txt:90
+msgid ""
+"Now we have to define the handler functions in our code. The *onDestroy* "
+"should simply result in a call to :meth:`Gtk.main_quit`. When the button is "
+"pressed we would like to print the string \"Hello World!\", so we define the "
+"handler as follows"
+msgstr ""
+
+#: ../../source/builder.txt:99
+msgid ""
+"Next, we have to connect the signals and the handler functions. The easiest "
+"way to do this is to define a *dict* with a mapping from the names to the "
+"handlers and then pass it to the :meth:`Gtk.Builder.connect_signals` method."
+msgstr ""
+
+#: ../../source/builder.txt:110
+msgid ""
+"An alternative approach is to create a class which has methods that are "
+"called like the signals. In our example the last code snippet could be "
+"rewritten as:"
+msgstr ""
+
+#: ../../source/builder.txt:119
+msgid "The final code of the example"
+msgstr ""
+
+#: ../../source/entry.txt:2
+msgid "Entry"
+msgstr "Eintrag"
+
+#: ../../source/entry.txt:4
+msgid ""
+"Entry widgets allow the user to enter text. You can change the contents with "
+"the :meth:`Gtk.Entry.set_text` method, and read the current contents with "
+"the :meth:`Gtk.Entry.get_text` method. You can also limit the number of "
+"characters the Entry can take by calling :meth:`Gtk.Entry.set_max_length`."
+msgstr ""
+
+#: ../../source/entry.txt:9
+msgid ""
+"Occasionally you might want to make an Entry widget read-only. This can be "
+"done by passing ``False`` to the :meth:`Gtk.Entry.set_editable` method."
+msgstr ""
+
+#: ../../source/entry.txt:12
+msgid ""
+"Entry widgets can also be used to retrieve passwords from the user. It is "
+"common practice to hide the characters typed into the entry to prevent "
+"revealing the password to a third party. Calling :meth:`Gtk.Entry."
+"set_visibility` with ``False`` will cause the text to be hidden."
+msgstr ""
+
+#: ../../source/entry.txt:17
+msgid ""
+":class:`Gtk.Entry` has the ability to display progress or activity "
+"information behind the text. This is similar to :class:`Gtk.ProgressBar` "
+"widget and is commonly found in web browsers to indicate how much of a page "
+"download has been completed. To make an entry display such information, use :"
+"meth:`Gtk.Entry.set_progress_fraction`, :meth:`Gtk.Entry."
+"set_progress_pulse_step`, or :meth:`Gtk.Entry.progress_pulse`."
+msgstr ""
+
+#: ../../source/entry.txt:24
+msgid ""
+"Additionally, an Entry can show icons at either side of the entry. These "
+"icons can be activatable by clicking, can be set up as drag source and can "
+"have tooltips. To add an icon, use :meth:`Gtk.Entry.set_icon_from_icon_name` "
+"or one of the various other functions that set an icon from an icon name, a "
+"pixbuf, or icon theme. To set a tooltip on an icon, use :meth:`Gtk.Entry."
+"set_icon_tooltip_text` or the corresponding function for markup."
+msgstr ""
+
+#: ../../source/basics.txt:4
+msgid "Basics"
+msgstr "Grundlagen"
+
+#: ../../source/basics.txt:5
+msgid "This section will introduce some of the most important aspects of GTK+."
+msgstr ""
+
+#: ../../source/basics.txt:12
+msgid "Main loop and Signals"
+msgstr ""
+
+#: ../../source/basics.txt:13
+msgid ""
+"Like most GUI toolkits, GTK+ uses an event-driven programming model. When "
+"the user is doing nothing, GTK+ sits in the main loop and waits for input. "
+"If the user performs some action - say, a mouse click - then the main loop "
+"\"wakes up\" and delivers an event to GTK+."
+msgstr ""
+
+#: ../../source/basics.txt:18
+msgid ""
+"When widgets receive an event, they frequently emit one or more signals. "
+"Signals notify your program that \"something interesting happened\" by "
+"invoking functions you've connected to the signal. Such functions are "
+"commonly known as *callbacks*. When your callbacks are invoked, you would "
+"typically take some action - for example, when an Open button is clicked you "
+"might display a file chooser dialog. After a callback finishes, GTK+ will "
+"return to the main loop and await more user input."
+msgstr ""
+
+#: ../../source/basics.txt:28
+msgid "A generic example is:"
+msgstr ""
+
+#: ../../source/basics.txt:34
+msgid ""
+"Firstly, *widget* is an instance of a widget we created earlier. Next, the "
+"event we are interested in. Each widget has its own particular events which "
+"can occur. For instance, if you have a button you usually want to connect to "
+"the \"clicked\" event. This means that when the button is clicked, the "
+"signal is issued. Thirdly, the *callback* argument is the name of the "
+"callback function. It contains the code which runs when signals of the "
+"specified type are issued. Finally, the *data* argument includes any data "
+"which should be passed when the signal is issued. However, this argument is "
+"completely optional and can be left out if not required."
+msgstr ""
+
+#: ../../source/basics.txt:46
+msgid ""
+"The function returns a number that identifies this particular signal-"
+"callback pair. It is required to disconnect from a signal such that the "
+"callback function will not be called during any future or currently ongoing "
+"emissions of the signal it has been connected to."
+msgstr ""
+
+#: ../../source/basics.txt:56
+msgid ""
+"If you have lost the \"handler_id\" for some reason (for example the "
+"handlers were installed using :func:`Gtk.Builder.connect_signals`), you can "
+"still disconnect a  specific callback using the function :func:"
+"`disconnect_by_func`:"
+msgstr ""
+
+#: ../../source/basics.txt:64
+msgid ""
+"Applications should connect to the \"destroy\" signal of the top-level "
+"window. It is emitted when an object is destroyed, so when a user requests "
+"that a toplevel window is closed, the default handler for this signal "
+"destroys the window, but does not terminate the application. Connecting the "
+"\"destroy\" signal of the top-level window to the function :func:`Gtk."
+"main_quit` will result in the desired behaviour."
+msgstr ""
+
+#: ../../source/basics.txt:74
+msgid ""
+"Calling :func:`Gtk.main_quit` makes the main loop inside of :func:`Gtk.main` "
+"return."
+msgstr ""
+
+#: ../../source/basics.txt:77 ../../source/objects.txt:96
+msgid "Properties"
+msgstr "Eigenschaften"
+
+#: ../../source/basics.txt:78
+msgid ""
+"Properties describe the configuration and state of widgets. As for signals, "
+"each widget has its own particular set of properties. For example, a button "
+"has the property \"label\" which contains the text of the label widget "
+"inside the button. You can specify the name and value of any number of "
+"properties as keyword arguments when creating an instance of a widget. To "
+"create a label aligned to the right with the text \"Hello World\" and an "
+"angle of 25 degrees, use:"
+msgstr ""
+
+#: ../../source/basics.txt:89
+msgid "which is equivalent to"
+msgstr ""
+
+#: ../../source/basics.txt:98
+msgid ""
+"Instead of using getters and setters you can also get and set the gobject "
+"properties through the \"props\" property such as ``widget.props.prop_name = "
+"value``. This is equivalent to the more verbose ``widget.get_property(\"prop-"
+"name\")`` and ``widget.set_property(\"prop-name\", value)``."
+msgstr ""
+
+#: ../../source/basics.txt:103
+msgid ""
+"To see which properties are available for a widget in the running version of "
+"GTK you can \"dir\" the \"props\" property:"
+msgstr ""
+
+#: ../../source/basics.txt:110
+msgid "This will print in the console the list of properties a Gtk.Box has."
+msgstr ""
+
+#: ../../source/clipboard.txt:2
+msgid "Clipboard"
+msgstr "Zwischenablage"
+
+#: ../../source/clipboard.txt:4
+msgid ""
+":class:`Gtk.Clipboard` provides a storage area for a variety of data, "
+"including text and images. Using a clipboard allows this data to be shared "
+"between applications through actions such as copying, cutting, and pasting. "
+"These actions are usually done in three ways: using keyboard shortcuts, "
+"using a :class:`Gtk.MenuItem`, and connecting the functions to :class:`Gtk."
+"Button` widgets."
+msgstr ""
+
+#: ../../source/clipboard.txt:11
+msgid ""
+"There are multiple clipboard selections for different purposes. In most "
+"circumstances, the selection named ``CLIPBOARD`` is used for everyday "
+"copying and pasting. ``PRIMARY`` is another common selection which stores "
+"text selected by the user with the cursor."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:4
+msgid "CellRenderers"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:6
+msgid ""
+":class:`Gtk.CellRenderer` widgets are used to display information within "
+"widgets such as the :class:`Gtk.TreeView` or :class:`Gtk.ComboBox`. They "
+"work closely with the associated widgets and are very powerful, with lots of "
+"configuration options for displaying a large amount of data in different "
+"ways. There are seven :class:`Gtk.CellRenderer` widgets which can be used "
+"for different purposes:"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:12
+msgid ":class:`Gtk.CellRendererText`"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:13
+msgid ":class:`Gtk.CellRendererToggle`"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:14
+msgid ":class:`Gtk.CellRendererPixbuf`"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:15
+msgid ":class:`Gtk.CellRendererCombo`"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:16
+msgid ":class:`Gtk.CellRendererProgress`"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:17
+msgid ":class:`Gtk.CellRendererSpinner`"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:18
+msgid ":class:`Gtk.CellRendererSpin`"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:19
+msgid ":class:`Gtk.CellRendererAccel`"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:22
+msgid "CellRendererText"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:24
+msgid ""
+"A :class:`Gtk.CellRendererText` renders a given text in its cell, using the "
+"font, color and style information provided by its properties. The text will "
+"be ellipsized if it is too long and the \"ellipsize\" property allows it."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:28
+msgid ""
+"By default, text in :class:`Gtk.CellRendererText` widgets is not editable. "
+"This can be changed by setting the value of the \"editable\" property to "
+"``True``:"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:35
+msgid ""
+"You can then connect to the \"edited\" signal and update your :class:`Gtk."
+"TreeModel` accordingly."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:47
+msgid "CellRendererToggle"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:49
+msgid ""
+":class:`Gtk.CellRendererToggle` renders a toggle button in a cell. The "
+"button is drawn as a radio- or checkbutton, depending on the \"radio\" "
+"property. When activated, it emits the \"toggled\" signal."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:53
+msgid ""
+"As a :class:`Gtk.CellRendererToggle` can have two states, active and not "
+"active, you most likely want to bind the \"active\" property on the cell "
+"renderer to a boolean value in the model, thus causing the check button to "
+"reflect the state of the model."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:67
+msgid "CellRendererPixbuf"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:69
+msgid ""
+"A :class:`Gtk.CellRendererPixbuf` can be used to render an image in a cell. "
+"It allows to render either a given :class:`Gdk.Pixbuf` (set via the \"pixbuf"
+"\" property) or a named icon (set via the \"icon-name\" property)."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:82
+msgid "CellRendererCombo"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:84
+msgid ""
+":class:`Gtk.CellRendererCombo` renders text in a cell like :class:`Gtk."
+"CellRendererText` from which it is derived. But while the latter offers a "
+"simple entry to edit the text, :class:`Gtk.CellRendererCombo` offers a :"
+"class:`Gtk.ComboBox` widget to edit the text. The values to display in the "
+"combo box are taken from the :class:`Gtk.TreeModel` specified in the \"model"
+"\" property."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:90
+msgid ""
+"The combo cell renderer takes care of adding a text cell renderer to the "
+"combo box and sets it to display the column specified by its \"text-column\" "
+"property."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:93
+msgid ""
+"A :class:`Gtk.CellRendererCombo` can operate in two modes. It can be used "
+"with and without an associated :class:`Gtk.Entry` widget, depending on the "
+"value of the \"has-entry\" property."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:106
+msgid "CellRendererProgress"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:108
+msgid ""
+":class:`Gtk.CellRendererProgress` renders a numeric value as a progress bar "
+"in a cell. Additionally, it can display a text on top of the progress bar."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:111
+msgid ""
+"The percentage value of the progress bar can be modified by changing the "
+"\"value\" property. Similar to :class:`Gtk.ProgressBar`, you can enable the "
+"*activity mode* by incrementing the \"pulse\" property instead of the \"value"
+"\" property."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:124
+msgid "CellRendererSpin"
+msgstr ""
+
+#: ../../source/cellrenderers.txt:126
+msgid ""
+":class:`Gtk.CellRendererSpin` renders text in a cell like :class:`Gtk."
+"CellRendererText` from which it is derived. But while the latter offers a "
+"simple entry to edit the text, :class:`Gtk.CellRendererSpin` offers a :class:"
+"`Gtk.SpinButton` widget. Of course, that means that the text has to be "
+"parseable as a floating point number."
+msgstr ""
+
+#: ../../source/cellrenderers.txt:132
+msgid ""
+"The range of the spinbutton is taken from the adjustment property of the "
+"cell renderer, which can be set explicitly or mapped to a column in the tree "
+"model, like all properties of cell renders. :class:`Gtk.CellRendererSpin` "
+"also has properties for the climb rate and the number of digits to display."
+msgstr ""
+
+#: ../../source/menus.txt:2 ../../source/application.txt:36
+msgid "Menus"
+msgstr "Menüs"
+
+#: ../../source/menus.txt:4
+msgid ""
+":class:`Gtk.UIManager`, :class:`Gtk.Action`, and :class:`Gtk.ActionGroup` "
+"have been deprecated since GTK+ version 3.10 and should not be used in newly-"
+"written code. Use the :ref:`application` framework instead."
+msgstr ""
+
+#: ../../source/menus.txt:8
+msgid ""
+"GTK+ comes with two different types of menus, :class:`Gtk.MenuBar` and :"
+"class:`Gtk.Toolbar`. :class:`Gtk.MenuBar` is a standard menu bar which "
+"contains one or more :class:`Gtk.MenuItem` instances or one of its "
+"subclasses. :class:`Gtk.Toolbar` widgets are used for quick accessibility to "
+"commonly used functions of an application. Examples include creating a new "
+"document, printing a page or undoing an operation. It contains one or more "
+"instances of :class:`Gtk.ToolItem` or one of its subclasses."
+msgstr ""
+
+#: ../../source/menus.txt:17 ../../source/application.txt:12
+msgid "Actions"
+msgstr "Befehl"
+
+#: ../../source/menus.txt:19
+msgid ""
+"Although, there are specific APIs to create menus and toolbars, you should "
+"use :class:`Gtk.UIManager` and create :class:`Gtk.Action` instances. Actions "
+"are organised into groups. A :class:`Gtk.ActionGroup` is essentially a map "
+"from names to :class:`Gtk.Action` objects. All actions that would make sense "
+"to use in a particular context should be in a single group. Multiple action "
+"groups may be used for a particular user interface. In fact, it is expected "
+"that most non-trivial applications will make use of multiple groups. For "
+"example, in an application that can edit multiple documents, one group "
+"holding global actions (e.g. quit, about, new), and one group per document "
+"holding actions that act on that document (eg. save, cut/copy/paste, etc). "
+"Each window's menus would be constructed from a combination of two action "
+"groups."
+msgstr ""
+
+#: ../../source/menus.txt:31
+msgid "Different classes representing different types of actions exist:"
+msgstr ""
+
+#: ../../source/menus.txt:33
+msgid ""
+":class:`Gtk.Action`: An action which can be triggered by a menu or toolbar "
+"item"
+msgstr ""
+
+#: ../../source/menus.txt:35
+msgid ""
+":class:`Gtk.ToggleAction`: An action which can be toggled between two states"
+msgstr ""
+
+#: ../../source/menus.txt:36
+msgid ""
+":class:`Gtk.RadioAction`: An action of which only one in a group can be "
+"active"
+msgstr ""
+
+#: ../../source/menus.txt:38
+msgid ""
+":class:`Gtk.RecentAction`: An action of which represents a list of recently "
+"used files"
+msgstr ""
+
+#: ../../source/menus.txt:41
+msgid ""
+"Actions represent operations that the user can be perform, along with some "
+"information how it should be presented in the interface, including its name "
+"(not for display), its label (for display), an accelerator, whether a label "
+"indicates a tooltip as well as the callback that is called when the action "
+"gets activated."
+msgstr ""
+
+#: ../../source/menus.txt:47
+msgid ""
+"You can create actions by either calling one of the constructors directly "
+"and adding them to a :class:`Gtk.ActionGroup` by calling :meth:`Gtk."
+"ActionGroup.add_action` or :meth:`Gtk.ActionGroup.add_action_with_accel`, or "
+"by calling one of the convenience functions:"
+msgstr ""
+
+#: ../../source/menus.txt:52
+msgid ":meth:`Gtk.ActionGroup.add_actions`,"
+msgstr ""
+
+#: ../../source/menus.txt:53
+msgid ":meth:`Gtk.ActionGroup.add_toggle_actions`"
+msgstr ""
+
+#: ../../source/menus.txt:54
+msgid ":meth:`Gtk.ActionGroup.add_radio_actions`."
+msgstr ""
+
+#: ../../source/menus.txt:56
+msgid "Note that you must specify actions for sub menus as well as menu items."
+msgstr ""
+
+#: ../../source/menus.txt:59
+msgid "UI Manager"
+msgstr ""
+
+#: ../../source/menus.txt:61
+msgid ""
+":class:`Gtk.UIManager` provides an easy way of creating menus and toolbars "
+"using an `XML-like description <https://developer.gnome.org/gtk3/stable/"
+"GtkUIManager.html#XML-UI>`_."
+msgstr ""
+
+#: ../../source/menus.txt:64
+msgid ""
+"First of all, you should add the :class:`Gtk.ActionGroup` to the UI Manager "
+"with :meth:`Gtk.UIManager.insert_action_group`. At this point is also a good "
+"idea to tell the parent window to respond to the specified keyboard "
+"shortcuts, by using :meth:`Gtk.UIManager.get_accel_group` and :meth:`Gtk."
+"Window.add_accel_group`."
+msgstr ""
+
+#: ../../source/menus.txt:69
+msgid ""
+"Then, you can define the actual visible layout of the menus and toolbars, "
+"and add the UI layout. This \"ui string\" uses an XML format, in which you "
+"should mention the names of the actions that you have already created. "
+"Remember that these names are just the identifiers that we used when "
+"creating the actions. They are not the text that the user will see in the "
+"menus and toolbars. We provided those human-readable names when we created "
+"the actions."
+msgstr ""
+
+#: ../../source/menus.txt:76
+msgid ""
+"Finally, you retrieve the root widget with :meth:`Gtk.UIManager.get_widget` "
+"and add the widget to a container such as :class:`Gtk.Box`."
+msgstr ""
+
+#: ../../source/textview.txt:2
+msgid "Multiline Text Editor"
+msgstr ""
+
+#: ../../source/textview.txt:4
+msgid ""
+"The :class:`Gtk.TextView` widget can be used to display and edit large "
+"amounts of formatted text. Like the :class:`Gtk.TreeView`, it has a model/"
+"view design. In this case the :class:`Gtk.TextBuffer` is the model which "
+"represents the text being edited. This allows two or more :class:`Gtk."
+"TextView` widgets to share the same :class:`Gtk.TextBuffer`, and allows "
+"those text buffers to be displayed slightly differently. Or you could "
+"maintain several text buffers and choose to display each one at different "
+"times in the same :class:`Gtk.TextView` widget."
+msgstr ""
+
+#: ../../source/textview.txt:13 ../../source/treeview.txt:141
+msgid "The View"
+msgstr ""
+
+#: ../../source/textview.txt:15
+msgid ""
+"The :class:`Gtk.TextView` is the frontend with which the user can add, edit "
+"and delete textual data. They are commonly used to edit multiple lines of "
+"text. When creating a :class:`Gtk.TextView` it contains its own default :"
+"class:`Gtk.TextBuffer`, which you can access via the :meth:`Gtk.TextView."
+"get_buffer` method."
+msgstr ""
+
+#: ../../source/textview.txt:21
+msgid ""
+"By default, text can be added, edited and removed from the :class:`Gtk."
+"TextView`. You can disable this by calling :meth:`Gtk.TextView."
+"set_editable`. If the text is not editable, you usually want to hide the "
+"text cursor with :meth:`Gtk.TextView.set_cursor_visible` as well. In some "
+"cases it may be useful to set the justification of the text with :meth:`Gtk."
+"TextView.set_justification`. The text can be displayed at the left edge, (:"
+"attr:`Gtk.Justification.LEFT`), at the right edge (:attr:`Gtk.Justification."
+"RIGHT`), centered (:attr:`Gtk.Justification.CENTER`), or distributed across "
+"the complete width (:attr:`Gtk.Justification.FILL`)."
+msgstr ""
+
+#: ../../source/textview.txt:31
+msgid ""
+"Another default setting of the :class:`Gtk.TextView` widget is long lines of "
+"text will continue horizontally until a break is entered. To wrap the text "
+"and prevent it going off the edges of the screen call :meth:`Gtk.TextView."
+"set_wrap_mode`."
+msgstr ""
+
+#: ../../source/textview.txt:36 ../../source/treeview.txt:21
+msgid "The Model"
+msgstr "Das Modell"
+
+#: ../../source/textview.txt:38
+msgid ""
+"The :class:`Gtk.TextBuffer` is the core of the :class:`Gtk.TextView` widget, "
+"and is used to hold whatever text is being displayed in the :class:`Gtk."
+"TextView`. Setting and retrieving the contents is possible with :meth:`Gtk."
+"TextBuffer.set_text` and :meth:`Gtk.TextBuffer.get_text`. However, most text "
+"manipulation is accomplished with *iterators*, represented by a :class:`Gtk."
+"TextIter`. An iterator represents a position between two characters in the "
+"text buffer. Iterators are not valid indefinitely; whenever the buffer is "
+"modified in a way that affects the contents of the buffer, all outstanding "
+"iterators become invalid."
+msgstr ""
+
+#: ../../source/textview.txt:48
+msgid ""
+"Because of this, iterators can't be used to preserve positions across buffer "
+"modifications. To preserve a position, use :class:`Gtk.TextMark`. A text "
+"buffer contains two built-in marks; an \"insert\" mark (which is the "
+"position of the cursor) and the \"selection_bound\" mark. Both of them can "
+"be retrieved using :meth:`Gtk.TextBuffer.get_insert` and :meth:`Gtk."
+"TextBuffer.get_selection_bound`, respectively. By default, the location of "
+"a :class:`Gtk.TextMark` is not shown. This can be changed by calling :meth:"
+"`Gtk.TextMark.set_visible`."
+msgstr ""
+
+#: ../../source/textview.txt:56
+msgid ""
+"Many methods exist to retrieve a :class:`Gtk.TextIter`. For instance, :meth:"
+"`Gtk.TextBuffer.get_start_iter` returns an iterator pointing to the first "
+"position in the text buffer, whereas :meth:`Gtk.TextBuffer.get_end_iter` "
+"returns an iterator pointing past the last valid character. Retrieving the "
+"bounds of the selected text can be achieved by calling :meth:`Gtk.TextBuffer."
+"get_selection_bounds`."
+msgstr ""
+
+#: ../../source/textview.txt:63
+msgid ""
+"To insert text at a specific position use :meth:`Gtk.TextBuffer.insert`. "
+"Another useful method is :meth:`Gtk.TextBuffer.insert_at_cursor` which "
+"inserts text wherever the cursor may be currently positioned. To remove "
+"portions of the text buffer use :meth:`Gtk.TextBuffer.delete`."
+msgstr ""
+
+#: ../../source/textview.txt:68
+msgid ""
+"In addition, :class:`Gtk.TextIter` can be used to locate textual matches in "
+"the buffer using :meth:`Gtk.TextIter.forward_search` and :meth:`Gtk.TextIter."
+"backward_search`. The start and end iters are used as the starting point of "
+"the search and move forwards/backwards depending on requirements."
+msgstr ""
+
+#: ../../source/textview.txt:75
+msgid "Tags"
+msgstr "Tags"
+
+#: ../../source/textview.txt:77
+msgid ""
+"Text in a buffer can be marked with tags. A tag is an attribute that can be "
+"applied to some range of text. For example, a tag might be called \"bold\" "
+"and make the text inside the tag bold. However, the tag concept is more "
+"general than that; tags don't have to affect appearance. They can instead "
+"affect the behaviour of mouse and key presses, \"lock\" a range of text so "
+"the user can't edit it, or countless other things. A tag is represented by "
+"a :class:`Gtk.TextTag` object. One :class:`Gtk.TextTag` can be applied to "
+"any number of text ranges in any number of buffers."
+msgstr ""
+
+#: ../../source/textview.txt:86
+msgid ""
+"Each tag is stored in a :class:`Gtk.TextTagTable`. A tag table defines a set "
+"of tags that can be used together. Each buffer has one tag table associated "
+"with it; only tags from that tag table can be used with the buffer. A single "
+"tag table can be shared between multiple buffers, however."
+msgstr ""
+
+#: ../../source/textview.txt:91
+msgid ""
+"To specify that some text in the buffer should have specific formatting, you "
+"must define a tag to hold that formatting information, and then apply that "
+"tag to the region of text using :meth:`Gtk.TextBuffer.create_tag` and :meth:"
+"`Gtk.TextBuffer.apply_tag`::"
+msgstr ""
+
+#: ../../source/textview.txt:99
+msgid "The following are some of the common styles applied to text:"
+msgstr ""
+
+#: ../../source/textview.txt:101
+msgid "Background colour (\"foreground\" property)"
+msgstr ""
+
+#: ../../source/textview.txt:102
+msgid "Foreground colour (\"background\" property)"
+msgstr ""
+
+#: ../../source/textview.txt:103
+msgid "Underline (\"underline\" property)"
+msgstr ""
+
+#: ../../source/textview.txt:104
+msgid "Bold (\"weight\" property)"
+msgstr ""
+
+#: ../../source/textview.txt:105
+msgid "Italics (\"style\" property)"
+msgstr ""
+
+#: ../../source/textview.txt:106
+msgid "Strikethrough (\"strikethrough\" property)"
+msgstr ""
+
+#: ../../source/textview.txt:107
+msgid "Justification (\"justification\" property)"
+msgstr ""
+
+#: ../../source/textview.txt:108
+msgid "Size (\"size\" and \"size-points\" properties)"
+msgstr ""
+
+#: ../../source/textview.txt:109
+msgid "Text wrapping (\"wrap-mode\" property)"
+msgstr ""
+
+#: ../../source/textview.txt:111
+msgid ""
+"You can also delete particular tags later using :meth:`Gtk.TextBuffer."
+"remove_tag` or delete all tags in a given region by calling :meth:`Gtk."
+"TextBuffer.remove_all_tags`."
+msgstr ""
+
+#: ../../source/label.txt:2
+msgid "Label"
+msgstr "Label"
+
+#: ../../source/label.txt:4
+msgid ""
+"Labels are the main method of placing non-editable text in windows, for "
+"instance to place a title next to a :class:`Gtk.Entry` widget. You can "
+"specify the text in the constructor, or later with the :meth:`Gtk.Label."
+"set_text` or :meth:`Gtk.Label.set_markup` methods."
+msgstr ""
+
+#: ../../source/label.txt:9
+msgid ""
+"The width of the label will be adjusted automatically. You can produce multi-"
+"line labels by putting line breaks (\"\\\\n\") in the label string."
+msgstr ""
+
+#: ../../source/label.txt:12
+msgid ""
+"Labels can be made selectable with :meth:`Gtk.Label.set_selectable`. "
+"Selectable labels allow the user to copy the label contents to the "
+"clipboard. Only labels that contain useful-to-copy information — such as "
+"error messages — should be made selectable."
+msgstr ""
+
+#: ../../source/label.txt:17
+msgid ""
+"The label text can be justified using the :meth:`Gtk.Label.set_justify` "
+"method. The widget is also capable of word-wrapping, which can be activated "
+"with :meth:`Gtk.Label.set_line_wrap`."
+msgstr ""
+
+#: ../../source/label.txt:21
+msgid ""
+":class:`Gtk.Label` support some simple formatting, for instance allowing you "
+"to make some text bold, colored, or larger. You can do this by providing a "
+"string to :meth:`Gtk.Label.set_markup`, using the Pango Markup syntax "
+"[#pango]_. For instance, ``<b>bold text</b> and <s>strikethrough text</s>``. "
+"In addition, :class:`Gtk.Label` supports clickable hyperlinks. The markup "
+"for links is borrowed from HTML, using the a with href and title attributes. "
+"GTK+ renders links similar to the way they appear in web browsers, with "
+"colored, underlined text. The title attribute is displayed as a tooltip on "
+"the link."
+msgstr ""
+
+#: ../../source/label.txt:37
+msgid ""
+"Labels may contain *mnemonics*. Mnemonics are underlined characters in the "
+"label, used for keyboard navigation. Mnemonics are created by providing a "
+"string with an underscore before the mnemonic character, such as \"_File\", "
+"to the functions :meth:`Gtk.Label.new_with_mnemonic` or :meth:`Gtk.Label."
+"set_text_with_mnemonic`. Mnemonics automatically activate any activatable "
+"widget the label is inside, such as a :class:`Gtk.Button`; if the label is "
+"not inside the mnemonic's target widget, you have to tell the label about "
+"the target using :meth:`Gtk.Label.set_mnemonic_widget`."
+msgstr ""
+
+#: ../../source/label.txt:55
+msgid ""
+"Pango Markup Syntax, https://developer.gnome.org/pango/stable/pango-Markup."
+"html"
+msgstr ""
+
+#: ../../source/treeview.txt:2
+msgid "Tree and List Widgets"
+msgstr ""
+
+#: ../../source/treeview.txt:4
+msgid ""
+"A :class:`Gtk.TreeView` and its associated widgets are an extremely powerful "
+"way of displaying data. They are used in conjunction with a :class:`Gtk."
+"ListStore` or :class:`Gtk.TreeStore` and provide a way of displaying and "
+"manipulating data in many ways, including:"
+msgstr ""
+
+#: ../../source/treeview.txt:9
+msgid "Automatic updates when data is added, removed or edited"
+msgstr ""
+
+#: ../../source/treeview.txt:10
+msgid "Drag and drop support"
+msgstr ""
+
+#: ../../source/treeview.txt:11
+msgid "Sorting data"
+msgstr ""
+
+#: ../../source/treeview.txt:12
+msgid "Embedding widgets such as check boxes, progress bars, etc."
+msgstr ""
+
+#: ../../source/treeview.txt:13
+msgid "Reorderable and resizable columns"
+msgstr ""
+
+#: ../../source/treeview.txt:14
+msgid "Filtering data"
+msgstr ""
+
+#: ../../source/treeview.txt:16
+msgid ""
+"With the power and flexibility of a :class:`Gtk.TreeView` comes complexity. "
+"It is often difficult for beginner developers to be able to utilize it "
+"correctly due to the number of methods which are required."
+msgstr ""
+
+#: ../../source/treeview.txt:22
+msgid ""
+"Each :class:`Gtk.TreeView` has an associated :class:`Gtk.TreeModel`, which "
+"contains the data displayed by the TreeView. Each :class:`Gtk.TreeModel` can "
+"be used by more than one :class:`Gtk.TreeView`. For instance, this allows "
+"the same underlying data to be displayed and edited in 2 different ways at "
+"the same time. Or the 2 Views might display different columns from the same "
+"Model data, in the same way that 2 SQL queries (or \"views\") might show "
+"different fields from the same database table."
+msgstr ""
+
+#: ../../source/treeview.txt:30
+msgid ""
+"Although you can theoretically implement your own Model, you will normally "
+"use either the :class:`Gtk.ListStore` or :class:`Gtk.TreeStore` model "
+"classes. :class:`Gtk.ListStore` contains simple rows of data, and each row "
+"has no children, whereas :class:`Gtk.TreeStore` contains rows of data, and "
+"each row may have child rows."
+msgstr ""
+
+#: ../../source/treeview.txt:36
+msgid ""
+"When constructing a model you have to specify the data types for each column "
+"the model holds."
+msgstr ""
+
+#: ../../source/treeview.txt:43
+msgid ""
+"This creates a list store with three columns, two string columns, and a "
+"float column."
+msgstr ""
+
+#: ../../source/treeview.txt:46
+msgid ""
+"Adding data to the model is done using :meth:`Gtk.ListStore.append` or :meth:"
+"`Gtk.TreeStore.append`, depending upon which sort of model was created."
+msgstr ""
+
+#: ../../source/treeview.txt:54
+msgid ""
+"Both methods return a :class:`Gtk.TreeIter` instance, which points to the "
+"location of the newly inserted row. You can retrieve a :class:`Gtk.TreeIter` "
+"by calling :meth:`Gtk.TreeModel.get_iter`."
+msgstr ""
+
+#: ../../source/treeview.txt:58
+msgid ""
+"Once data has been inserted, you can retrieve or modify data using the tree "
+"iter and column index."
+msgstr ""
+
+#: ../../source/treeview.txt:66
+msgid ""
+"As with Python's built-in :class:`list` object you can use :func:`len` to "
+"get the number of rows and use slices to retrieve or set values."
+msgstr ""
+
+#: ../../source/treeview.txt:80
+msgid "Iterating over all rows of a tree model is very simple as well."
+msgstr ""
+
+#: ../../source/treeview.txt:88
+msgid ""
+"Keep in mind, that if you use :class:`Gtk.TreeStore`, the above code will "
+"only iterate over the rows of the top level, but not the children of the "
+"nodes. To iterate over all rows and its children, use the "
+"``print_tree_store`` function."
+msgstr ""
+
+#: ../../source/treeview.txt:106
+msgid ""
+"Apart from accessing values stored in a :class:`Gtk.TreeModel` with the list-"
+"like method mentioned above, it is also possible to either use :class:`Gtk."
+"TreeIter` or :class:`Gtk.TreePath` instances. Both reference a particular "
+"row in a tree model. One can convert a path to an iterator by calling :meth:"
+"`Gtk.TreeModel.get_iter`. As :class:`Gtk.ListStore` contains only one level, "
+"i.e. nodes do not have any child nodes, a path is essentially the index of "
+"the row you want to access."
+msgstr ""
+
+#: ../../source/treeview.txt:123
+msgid ""
+"In the case of :class:`Gtk.TreeStore`, a path is a list of indexes or a "
+"string. The string form is a list of numbers separated by a colon. Each "
+"number refers to the offset at that level. Thus, the path \"0\" refers to "
+"the root node and the path \"2:4\" refers to the fifth child of the third "
+"node."
+msgstr ""
+
+#: ../../source/treeview.txt:136
+msgid ""
+"Instances of :class:`Gtk.TreePath` can be accessed like lists, i.e. "
+"``len(treepath)`` returns the depth of the item ``treepath`` is pointing to, "
+"and ``treepath[i]`` returns the child's index on the *i*-th level."
+msgstr ""
+
+#: ../../source/treeview.txt:142
+msgid ""
+"While there are several different models to choose from, there is only one "
+"view widget to deal with. It works with either the list or the tree store. "
+"Setting up a :class:`Gtk.TreeView` is not a difficult matter. It needs a :"
+"class:`Gtk.TreeModel` to know where to retrieve its data from, either by "
+"passing it to the :class:`Gtk.TreeView` constructor, or by calling :meth:"
+"`Gtk.TreeView.set_model`."
+msgstr ""
+
+#: ../../source/treeview.txt:153
+msgid ""
+"Once the :class:`Gtk.TreeView` widget has a model, it will need to know how "
+"to display the model. It does this with columns and cell renderers."
+msgstr ""
+
+#: ../../source/treeview.txt:156
+msgid ""
+"Cell renderers are used to draw the data in the tree model in a way. There "
+"are a number of cell renderers that come with GTK+, for instance :class:`Gtk."
+"CellRendererText`, :class:`Gtk.CellRendererPixbuf` and :class:`Gtk."
+"CellRendererToggle`. In addition, it is relatively easy to write a custom "
+"renderer yourself."
+msgstr ""
+
+#: ../../source/treeview.txt:162
+msgid ""
+"A :class:`Gtk.TreeViewColumn` is the object that :class:`Gtk.TreeView` uses "
+"to organize the vertical columns in the tree view. It needs to know the name "
+"of the column to label for the user, what type of cell renderer to use, and "
+"which piece of data to retrieve from the model for a given row."
+msgstr ""
+
+#: ../../source/treeview.txt:173
+msgid ""
+"To render more than one model column in a view column, you need to create a :"
+"class:`Gtk.TreeViewColumn` instance and use :meth:`Gtk.TreeViewColumn."
+"pack_start` to add the model columns to it."
+msgstr ""
+
+#: ../../source/treeview.txt:193
+msgid "The Selection"
+msgstr "Die Auswahl"
+
+#: ../../source/treeview.txt:194
+msgid ""
+"Most applications will need to not only deal with displaying data, but also "
+"receiving input events from users. To do this, simply get a reference to a "
+"selection object and connect to the \"changed\" signal."
+msgstr ""
+
+#: ../../source/treeview.txt:203
+msgid "Then to retrieve data for the row selected:"
+msgstr ""
+
+#: ../../source/treeview.txt:212
+msgid ""
+"You can control what selections are allowed by calling :meth:`Gtk."
+"TreeSelection.set_mode`. :meth:`Gtk.TreeSelection.get_selected` does not "
+"work if the selection mode is set to :attr:`Gtk.SelectionMode.MULTIPLE`, "
+"use :meth:`Gtk.TreeSelection.get_selected_rows` instead."
+msgstr ""
+
+#: ../../source/treeview.txt:219
+msgid "Sorting"
+msgstr "Sortierung"
+
+#: ../../source/treeview.txt:220
+msgid ""
+"Sorting is an important feature for tree views and is supported by the "
+"standard tree models (:class:`Gtk.TreeStore` and :class:`Gtk.ListStore`), "
+"which implement the :class:`Gtk.TreeSortable` interface."
+msgstr ""
+
+#: ../../source/treeview.txt:223
+msgid "Sorting by clicking on columns"
+msgstr ""
+
+#: ../../source/treeview.txt:224
+msgid ""
+"A column of a :class:`Gtk.TreeView` can easily made sortable with a call to :"
+"meth:`Gtk.TreeViewColumn.set_sort_column_id`. Afterwards the column can be "
+"sorted by clicking on its header."
+msgstr ""
+
+#: ../../source/treeview.txt:227
+msgid ""
+"First we need a simple :class:`Gtk.TreeView` and a :class:`Gtk.ListStore` as "
+"a model."
+msgstr ""
+
+#: ../../source/treeview.txt:246
+msgid ""
+"The next step is to enable sorting. Note that the *column_id* (``0`` in the "
+"example) refers to the column of the model and **not** to the TreeView's "
+"column."
+msgstr ""
+
+#: ../../source/treeview.txt:253
+msgid "Setting a custom sort function"
+msgstr ""
+
+#: ../../source/treeview.txt:254
+msgid ""
+"It is also possible to set a custom comparison function in order to change "
+"the sorting behaviour. As an example we will create a comparison function "
+"that sorts case-sensitive. In the example above the sorted list looked like::"
+msgstr ""
+
+#: ../../source/treeview.txt:267
+msgid "The case-sensitive sorted list will look like::"
+msgstr ""
+
+#: ../../source/treeview.txt:278
+msgid ""
+"First of all a comparison function is needed. This function gets two rows "
+"and has to return a negative integer if the first one should come before the "
+"second one, zero if they are equal and a positive integer if the second one "
+"should come before the second one."
+msgstr ""
+
+#: ../../source/treeview.txt:294
+msgid ""
+"Then the sort function has to be set by :meth:`Gtk.TreeSortable."
+"set_sort_func`."
+msgstr ""
+
+#: ../../source/treeview.txt:301
+msgid "Filtering"
+msgstr ""
+
+#: ../../source/treeview.txt:302
+msgid ""
+"Unlike sorting, filtering is not handled by the two models we previously "
+"saw, but by the :class:`Gtk.TreeModelFilter` class. This class, like :class:"
+"`Gtk.TreeStore` and :class:`Gtk.ListStore`, is a :class:`Gtk.TreeModel`. It "
+"acts as a layer between the \"real\" model (a :class:`Gtk.TreeStore` or a :"
+"class:`Gtk.ListStore`), hiding some elements to the view. In practice, it "
+"supplies the :class:`Gtk.TreeView` with a subset of the underlying model. "
+"Instances of :class:`Gtk.TreeModelFilter` can be stacked one onto another, "
+"to use multiple filters on the same model (in the same way you'd use \"AND\" "
+"clauses in a SQL request). They can also be chained with :class:`Gtk."
+"TreeModelSort` instances."
+msgstr ""
+
+#: ../../source/treeview.txt:304
+msgid ""
+"You can create a new instance of a :class:`Gtk.TreeModelFilter` and give it "
+"a model to filter, but the easiest way is to spawn it directly from the "
+"filtered model, using the :meth:`Gtk.TreeModel.filter_new` method."
+msgstr ""
+
+#: ../../source/treeview.txt:310
+msgid ""
+"In the same way the sorting function works, the :class:`Gtk.TreeModelFilter` "
+"needs a \"visibility\" function, which, given a row from the underlying "
+"model, will return a boolean indicating if this row should be filtered out "
+"or not. It's set by :meth:`Gtk.TreeModelFilter.set_visible_func`:"
+msgstr ""
+
+#: ../../source/treeview.txt:316
+msgid ""
+"Let's look at a full example which uses the whole :class:`Gtk.ListStore` - :"
+"class:`Gtk.TreeModelFilter` - :class:`Gtk.TreeModelFilter` - :class:`Gtk."
+"TreeView` stack."
+msgstr ""
+
+#: ../../source/dialogs.txt:2
+msgid "Dialogs"
+msgstr "Dialoge"
+
+#: ../../source/dialogs.txt:4
+msgid ""
+"Dialog windows are very similar to standard windows, and are used to provide "
+"or retrieve information from the user. They are often used to provide a "
+"preferences window, for example. The major difference a dialog has is some "
+"prepacked widgets which layout the dialog automatically. From there, we can "
+"simply add labels, buttons, check buttons, etc. Another big difference is "
+"the handling of responses to control how the application should behave after "
+"the dialog has been interacted with."
+msgstr ""
+
+#: ../../source/dialogs.txt:12
+msgid ""
+"There are several derived Dialog classes which you might find useful. :class:"
+"`Gtk.MessageDialog` is used for most simple notifications. But at other "
+"times you might need to derive your own dialog class to provide more complex "
+"functionality."
+msgstr ""
+
+#: ../../source/dialogs.txt:18
+msgid "Custom Dialogs"
+msgstr "Custom Dialogs"
+
+#: ../../source/dialogs.txt:20
+msgid ""
+"To pack widgets into a custom dialog, you should pack them into the :class:"
+"`Gtk.Box`, available via :meth:`Gtk.Dialog.get_content_area`. To just add a :"
+"class:`Gtk.Button` to the bottom of the dialog, you could use the :meth:`Gtk."
+"Dialog.add_button` method."
+msgstr ""
+
+#: ../../source/dialogs.txt:25
+msgid ""
+"A 'modal' dialog (that is, one which freezes the rest of the application "
+"from user input), can be created by calling :class:`Gtk.Dialog.set_modal` on "
+"the dialog or set the ``flags`` argument of the :class:`Gtk.Dialog` "
+"constructor to include the :attr:`Gtk.DialogFlags.MODAL` flag."
+msgstr ""
+
+#: ../../source/dialogs.txt:30
+msgid ""
+"Clicking a button will emit a signal called \"response\". If you want to "
+"block waiting for a dialog to return before returning control flow to your "
+"code, you can call :meth:`Gtk.Dialog.run`. This method returns an int which "
+"may be a value from the :class:`Gtk.ResponseType` or it could be the custom "
+"response value that you specified in the :class:`Gtk.Dialog` constructor or :"
+"meth:`Gtk.Dialog.add_button`."
+msgstr ""
+
+#: ../../source/dialogs.txt:36
+msgid ""
+"Finally, there are two ways to remove a dialog. The :meth:`Gtk.Widget.hide` "
+"method removes the dialog from view, however keeps it stored in memory. This "
+"is useful to prevent having to construct the dialog again if it needs to be "
+"accessed at a later time. Alternatively, the :meth:`Gtk.Widget.destroy` "
+"method can be used to delete the dialog from memory once it is no longer "
+"needed. It should be noted that if the dialog needs to be accessed after it "
+"has been destroyed, it will need to be constructed again otherwise the "
+"dialog window will be empty."
+msgstr ""
+
+#: ../../source/dialogs.txt:53
+msgid "MessageDialog"
+msgstr "MessageDialog"
+
+#: ../../source/dialogs.txt:55
+msgid ""
+":class:`Gtk.MessageDialog` is a convenience class, used to create simple, "
+"standard message dialogs, with a message, an icon, and buttons for user "
+"response You can specify the type of message and the text in the :class:`Gtk."
+"MessageDialog` constructor, as well as specifying standard buttons."
+msgstr ""
+
+#: ../../source/dialogs.txt:60
+msgid ""
+"In some dialogs which require some further explanation of what has happened, "
+"a secondary text can be added. In this case, the primary message entered "
+"when creating the message dialog is made bigger and set to bold text. The "
+"secondary message can be set by calling :meth:`Gtk.MessageDialog."
+"format_secondary_text`."
+msgstr ""
+
+#: ../../source/dialogs.txt:74
+msgid "FileChooserDialog"
+msgstr "FileChooserDialog"
+
+#: ../../source/dialogs.txt:76
+msgid ""
+"The :class:`Gtk.FileChooserDialog` is suitable for use with \"File/Open\" or "
+"\"File/Save\" menu items. You can use all of the :class:`Gtk.FileChooser` "
+"methods on the file chooser dialog as well as those for :class:`Gtk.Dialog`."
+msgstr ""
+
+#: ../../source/dialogs.txt:80
+msgid ""
+"When creating a :class:`Gtk.FileChooserDialog` you have to define the "
+"dialog's purpose:"
+msgstr ""
+
+#: ../../source/dialogs.txt:83
+msgid ""
+"To select a file for opening, as for a File/Open command, use :attr:`Gtk."
+"FileChooserAction.OPEN`"
+msgstr ""
+
+#: ../../source/dialogs.txt:85
+msgid ""
+"To save a file for the first time, as for a File/Save command, use :attr:"
+"`Gtk.FileChooserAction.SAVE`, and suggest a name such as \"Untitled\" with :"
+"meth:`Gtk.FileChooser.set_current_name`."
+msgstr ""
+
+#: ../../source/dialogs.txt:88
+msgid ""
+"To save a file under a different name, as for a File/Save As command, use :"
+"attr:`Gtk.FileChooserAction.SAVE`, and set the existing filename with :meth:"
+"`Gtk.FileChooser.set_filename`."
+msgstr ""
+
+#: ../../source/dialogs.txt:91
+msgid ""
+"To choose a folder instead of a file, use :attr:`Gtk.FileChooserAction."
+"SELECT_FOLDER`."
+msgstr ""
+
+#: ../../source/dialogs.txt:93
+msgid ""
+":class:`Gtk.FileChooserDialog` inherits from :class:`Gtk.Dialog`, so buttons "
+"have response IDs such as :attr:`Gtk.ResponseType.ACCEPT` and :attr:`Gtk."
+"ResponseType.CANCEL` which can be specified in the :class:`Gtk."
+"FileChooserDialog` constructor. In contrast to :class:`Gtk.Dialog`, you can "
+"not use custom response codes with :class:`Gtk.FileChooserDialog`. It "
+"expects that at least one button will have of the following response IDs:"
+msgstr ""
+
+#: ../../source/dialogs.txt:100
+msgid ":attr:`Gtk.ResponseType.ACCEPT`"
+msgstr ""
+
+#: ../../source/dialogs.txt:101
+msgid ":attr:`Gtk.ResponseType.OK`"
+msgstr ""
+
+#: ../../source/dialogs.txt:102
+msgid ":attr:`Gtk.ResponseType.YES`"
+msgstr ""
+
+#: ../../source/dialogs.txt:103
+msgid ":attr:`Gtk.ResponseType.APPLY`"
+msgstr ""
+
+#: ../../source/dialogs.txt:105
+msgid ""
+"When the user is finished selecting files, your program can get the selected "
+"names either as filenames (:meth:`Gtk.FileChooser.get_filename`) or as URIs "
+"(:meth:`Gtk.FileChooser.get_uri`)."
+msgstr ""
+
+#: ../../source/dialogs.txt:109
+msgid ""
+"By default, :class:`Gtk.FileChooser` only allows a single file to be "
+"selected at a time. To enable multiple files to be selected, use :meth:`Gtk."
+"FileChooser.set_select_multiple`. Retrieving a list of selected files is "
+"possible with either :meth:`Gtk.FileChooser.get_filenames` or :meth:`Gtk."
+"FileChooser.get_uris`."
+msgstr ""
+
+#: ../../source/dialogs.txt:115
+msgid ""
+":class:`Gtk.FileChooser` also supports a variety of options which make the "
+"files and folders more configurable and accessible."
+msgstr ""
+
+#: ../../source/dialogs.txt:118
+msgid ""
+":meth:`Gtk.FileChooser.set_local_only`: Only local files can be selected."
+msgstr ""
+
+#: ../../source/dialogs.txt:119
+msgid ""
+":meth:`Gtk.FileChooser.show_hidden`: Hidden files and folders are displayed."
+msgstr ""
+
+#: ../../source/dialogs.txt:120
+msgid ""
+":meth:`Gtk.FileChooser.set_do_overwrite_confirmation`: If the file chooser "
+"was configured in :attr:`Gtk.FileChooserAction.SAVE` mode, it will present a "
+"confirmation dialog if the user types a file name that already exists."
+msgstr ""
+
+#: ../../source/dialogs.txt:124
+msgid ""
+"Furthermore, you can specify which kind of files are displayed by creating :"
+"class:`Gtk.FileFilter` objects and calling :meth:`Gtk.FileChooser."
+"add_filter`. The user can then select one of the added filters from a combo "
+"box at the bottom of the file chooser."
+msgstr ""
+
+#: ../../source/install.txt:4
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../source/install.txt:5
+msgid ""
+"The first step before we start with actual coding consists of setting up "
+"`PyGObject`_ and its dependencies. PyGObject is a Python module that enables "
+"developers to access GObject-based libraries such as GTK+ within Python. It "
+"exclusively supports GTK+ version 3 or later."
+msgstr ""
+
+#: ../../source/install.txt:12
+msgid "Dependencies"
+msgstr "Abhängigkeiten"
+
+#: ../../source/install.txt:14
+msgid "GTK+3"
+msgstr "GTK+3"
+
+#: ../../source/install.txt:16
+msgid "Python 2 (2.6 or later) or Python 3 (3.1 or later)"
+msgstr "Python 2 (2.6 oder neuer) oder Python 3 (3.1 oder neuer)"
+
+#: ../../source/install.txt:18
+msgid "gobject-introspection"
+msgstr "gobject-introspection"
+
+#: ../../source/install.txt:21
+msgid "Prebuilt Packages"
+msgstr ""
+
+#: ../../source/install.txt:22
+msgid ""
+"Recent versions of PyGObject and its dependencies are packaged by nearly all "
+"major Linux distributions. So, if you use Linux, you can probably get "
+"started by installing the package from the official repository for your "
+"distribution."
+msgstr ""
+
+#: ../../source/install.txt:28
+msgid "Installing From Source"
+msgstr ""
+
+#: ../../source/install.txt:29
+msgid ""
+"The easiest way to install PyGObject from source is using `JHBuild`_. It is "
+"designed to easily build source packages and discover what dependencies need "
+"to be build and in what order. To setup JHBuild, please follow the `JHBuild "
+"manual`_."
+msgstr ""
+
+#: ../../source/install.txt:33
+msgid ""
+"Once you have installed JHBuild successfully, download the latest "
+"configuration from [#]_. Copy files with the suffix `.modules` to JHBuild's "
+"module directory and the file `sample-tarball.jhbuildrc` to `~/.jhbuildrc`."
+msgstr ""
+
+#: ../../source/install.txt:37
+msgid ""
+"If you have not done it before, verify that your build environment is setup "
+"correctly by running::"
+msgstr ""
+
+#: ../../source/install.txt:42
+msgid ""
+"It will print any applications and libraries that are currently missing on "
+"your system but required for building. You should install those using your "
+"distribution's package repository. A list of `package names <https://wiki."
+"gnome.org/action/show/Projects/Jhbuild/Dependencies>`_ for different "
+"distributions is maintained on the GNOME wiki. Run the command above again "
+"to ensure the required tools are present."
+msgstr ""
+
+#: ../../source/install.txt:48
+msgid ""
+"Executing the following command will build PyGObject and all its "
+"dependencies::"
+msgstr ""
+
+#: ../../source/install.txt:52
+msgid "Finally, you might want to install GTK+ from source as well::"
+msgstr ""
+
+#: ../../source/install.txt:56
+msgid "To start a shell with the same environment as used by JHBuild, run::"
+msgstr ""
+
+#: ../../source/install.txt:64
+msgid "https://download.gnome.org/teams/releng/"
+msgstr "https://download.gnome.org/teams/releng/"
+
+#: ../../source/popover.txt:2
+msgid "Popovers"
+msgstr ""
+
+#: ../../source/popover.txt:4
+msgid ""
+"The :class:`Gtk.Popover` is a seperate window used for displaying additional "
+"information and are often used as a part of button menus and context menus. "
+"Their uses are similar to those of dialog windows with the advantage of "
+"being less disruptive and having a connection with the widget the popover is "
+"pointing to. Popovers have are visually connected to a related widget with a "
+"small triangle."
+msgstr ""
+
+#: ../../source/popover.txt:10
+msgid ""
+"A Popover can be created with :class:`Gtk.Popover`; for opening the popover "
+"use :meth:`Gtk.Widget.show_all`."
+msgstr ""
+
+#: ../../source/popover.txt:14
+msgid "Custom Popover"
+msgstr ""
+
+#: ../../source/popover.txt:16
+msgid "A widget can be added to a popover using the :meth:`Gtk.Container.add`."
+msgstr ""
+
+#: ../../source/popover.txt:27
+msgid "Menu Popover"
+msgstr ""
+
+#: ../../source/popover.txt:29
+msgid ""
+"A popover can be created from a :class:`Gio.MenuModel` using :meth:`Gtk."
+"Popover.new_from_model` and can be changed after creation with :meth:`Gtk."
+"Popover.bind_model`."
+msgstr ""
+
+#: ../../source/popover.txt:41 ../../source/application.txt:69
+msgid "See Also"
+msgstr "Siehe auch"
+
+#: ../../source/popover.txt:43
+msgid "https://developer.gnome.org/hig/stable/popovers.html.en"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:2
+msgid "Drag and Drop"
+msgstr "Ziehen und Ablegen"
+
+#: ../../source/drag_and_drop.txt:4
+msgid ""
+"Versions of PyGObject < 3.0.3 contain a bug which does not allow drag and "
+"drop to function correctly. Therefore a version of PyGObject >= 3.0.3 is "
+"required for the following examples to work."
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:8
+msgid ""
+"Setting up drag and drop between widgets consists of selecting a drag source "
+"(the widget which the user starts the drag from) with the :meth:`Gtk.Widget."
+"drag_source_set` method, selecting a drag destination (the widget which the "
+"user drops onto) with the :meth:`Gtk.Widget.drag_dest_set` method and then "
+"handling the relevant signals on both widgets."
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:14
+msgid ""
+"Instead of using :meth:`Gtk.Widget.drag_source_set` and :meth:`Gtk.Widget."
+"drag_dest_set` some specialised widgets require the use of specific "
+"functions (such as :class:`Gtk.TreeView` and :class:`Gtk.IconView`)."
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:18
+msgid ""
+"A basic drag and drop only requires the source to connect to the \"drag-data-"
+"get\" signal and the destination to connect to the \"drag-data-received\" "
+"signal. More complex things such as specific drop areas and custom drag "
+"icons will require you to connect to :ref:`additional signals <drag-"
+"signals>` and interact with the :class:`Gdk.DragContext` object it supplies."
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:24
+msgid ""
+"In order to transfer data between the source and destination, you must "
+"interact with the :class:`Gtk.SelectionData` variable supplied in the :ref:`"
+"\"drag-data-get\" <drag-signals>` and :ref:`\"drag-data-received\" <drag-"
+"signals>` signals using the :class:`Gtk.SelectionData` get and set methods."
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:30
+msgid "Target Entries"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:31
+msgid ""
+"To allow the drag source and destination to know what data they are "
+"receiving and sending, a common list of :class:`Gtk.TargetEntry's <Gtk."
+"TargetEntry>` are required. A :class:`Gtk.TargetEntry` describes a piece of "
+"data that will be sent by the drag source and received by the drag "
+"destination."
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:36
+msgid ""
+"There are two ways of adding :class:`Gtk.TargetEntry's <Gtk.TargetEntry>` to "
+"a source and destination. If the drag and drop is simple and each target "
+"entry is of a different type, you can use the group of methods :meth:"
+"`mentioned here <Gtk.Widget.drag_source_add_text_targets>`."
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:41
+msgid ""
+"If you require more than one type of data or wish to do more complex things "
+"with the data, you will need to create the :class:`Gtk.TargetEntry's <Gtk."
+"TargetEntry>` using the :meth:`Gtk.TargetEntry.new` method."
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:48
+msgid "Drag Source Signals"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:50 ../../source/drag_and_drop.txt:64
+msgid "Name"
+msgstr "Ebenenname"
+
+#: ../../source/drag_and_drop.txt:50 ../../source/drag_and_drop.txt:64
+msgid "When it is emitted"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:50 ../../source/drag_and_drop.txt:64
+msgid "Common Purpose"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:52
+msgid "drag-begin"
+msgstr "drag-begin"
+
+#: ../../source/drag_and_drop.txt:52
+msgid "User starts a drag"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:52
+msgid "Set-up drag icon"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:54
+msgid "drag-data-get"
+msgstr "drag-data-get"
+
+#: ../../source/drag_and_drop.txt:54
+msgid "When drag data is requested by the destination"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:54 ../../source/drag_and_drop.txt:70
+msgid "Transfer drag data from source to destination"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:56
+msgid "drag-data-delete"
+msgstr "drag-data-delete"
+
+#: ../../source/drag_and_drop.txt:56
+msgid "When a drag with the action Gdk.DragAction.MOVE is completed"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:56
+msgid "Delete data from the source to complete the 'move'"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:58
+msgid "drag-end"
+msgstr "drag-end"
+
+#: ../../source/drag_and_drop.txt:58
+msgid "When the drag is complete"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:58
+msgid "Undo anything done in drag-begin"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:62
+msgid "Drag Destination Signals"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:66
+msgid "drag-motion"
+msgstr "drag-motion"
+
+#: ../../source/drag_and_drop.txt:66
+msgid "Drag icon moves over a drop area"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:66 ../../source/drag_and_drop.txt:68
+msgid "Allow only certain areas to be dropped onto"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:68
+msgid "drag-drop"
+msgstr "drag-drop"
+
+#: ../../source/drag_and_drop.txt:68
+msgid "Icon is dropped onto a drag area"
+msgstr ""
+
+#: ../../source/drag_and_drop.txt:70
+msgid "drag-data-received"
+msgstr "drag-data-received"
+
+#: ../../source/drag_and_drop.txt:70
+msgid "When drag data is received by the destination"
+msgstr ""
+
+#: ../../source/application.txt:4
+msgid "Application"
+msgstr "Anwendung"
+
+#: ../../source/application.txt:6
+msgid ""
+":class:`Gtk.Application` encompasses many repetitive tasks that a modern "
+"application needs such as handling multiple instances, D-Bus activation, "
+"opening files, command line parsing, startup/shutdown, menu management, "
+"window management, and more."
+msgstr ""
+
+#: ../../source/application.txt:14
+msgid ""
+":class:`Gio.Action` is a way to expose any single task your application or "
+"widget does by a name. These actions can be disabled/enabled at runtime and "
+"they can either be activated or have a state changed (if they contain state)."
+msgstr ""
+
+#: ../../source/application.txt:18
+msgid ""
+"The reason to use actions is to separate out the logic from the UI. For "
+"example this allows using a menubar on OSX and a gear menu on GNOME both "
+"simply referencing the name of an action. The main implementation of this "
+"you will be using is :class:`Gio.SimpleAction` which will be demonstrated "
+"later."
+msgstr ""
+
+#: ../../source/application.txt:23
+msgid ""
+"Many classes such as :class:`Gio.MenuItem` and :class:`Gtk.ModelButton` "
+"support properties to set an action name."
+msgstr ""
+
+#: ../../source/application.txt:26
+msgid ""
+"These actions can be grouped together into a :class:`Gio.ActionGroup` and "
+"when these groups are added to a widget with :meth:`Gtk.Widget."
+"insert_action_group()` they will gain a prefix. Such as \"win\" when added "
+"to a :class:`Gtk.ApplicationWindow`. You will use the full action name when "
+"referencing it such as \"app.about\" but when you create the action it will "
+"just be \"about\" until added to the application."
+msgstr ""
+
+#: ../../source/application.txt:32
+msgid ""
+"You can also very easily make keybindings for actions by setting the `accel` "
+"property in the :class:`Gio.Menu` file or by using :meth:`Gtk.Application."
+"add_accelerator()`."
+msgstr ""
+
+#: ../../source/application.txt:38
+msgid ""
+"Your menus should be defined in XML using :class:`Gio.Menu` and would "
+"reference the previously mentioned actions you defined. :class:`Gtk."
+"Application` allows you to set a menu either via :meth:`Gtk.Application."
+"set_app_menu()` or :meth:`Gtk.Application.set_menubar()`. If you make use "
+"of :class:`Gio.Resource` this can automatically use the correct menu based "
+"on platform, otherwise you can set them manually. A detailed example is "
+"shown below."
+msgstr ""
+
+#: ../../source/application.txt:46
+msgid "Command Line"
+msgstr "Befehlszeile"
+
+#: ../../source/application.txt:48
+msgid ""
+"When creating your application it takes a flag property of :class:`Gio."
+"ApplicationFlags`. Using this you can let it handle everything itself or "
+"have more custom behavior."
+msgstr ""
+
+#: ../../source/application.txt:51
+msgid ""
+"You can use `HANDLES_COMMAND_LINE` to allow custom behavior in :meth:`Gio."
+"Application.do_command_line()`. In combination with :meth:`Gio.Application."
+"add_main_option()` to add custom options."
+msgstr ""
+
+#: ../../source/application.txt:54
+msgid ""
+"Using `HANDLES_OPEN` will do the work of simply taking file arguments for "
+"you and let you handle it in :meth:`Gio.Application.do_open()`."
+msgstr ""
+
+#: ../../source/application.txt:57
+msgid ""
+"If your application is already open these will all be sent to the existing "
+"instance unless you use `NON_UNIQUE` to allow multiple instances."
+msgstr ""
+
+#: ../../source/application.txt:71
+msgid "https://wiki.gnome.org/HowDoI/GtkApplication"
+msgstr "Die Eigenschaft ist lesbar."
+
+#: ../../source/application.txt:72
+msgid "https://wiki.gnome.org/HowDoI/GAction"
+msgstr "Die Eigenschaft ist lesbar."
+
+#: ../../source/application.txt:73
+msgid "https://wiki.gnome.org/HowDoI/ApplicationMenu"
+msgstr "Die Eigenschaft ist lesbar."
+
+#: ../../source/application.txt:74
+msgid "https://wiki.gnome.org/HowDoI/GMenu"
+msgstr "Die Eigenschaft ist lesbar."
+
+#: ../../source/introduction.txt:4
+msgid "Getting Started"
+msgstr "Erste Schritte"
+
+#: ../../source/introduction.txt:7
+msgid "Simple Example"
+msgstr "Einfaches Beispiel"
+
+#: ../../source/introduction.txt:9
+msgid ""
+"To start with our tutorial we create the simplest program possible. This "
+"program will create an empty 200 x 200 pixel window."
+msgstr ""
+
+#: ../../source/introduction.txt:17
+msgid "We will now explain each line of the example."
+msgstr ""
+
+#: ../../source/introduction.txt:22
+msgid ""
+"In the beginning, we have to import the Gtk module to be able to access GTK"
+"+'s classes and functions. Since a user's system can have multiple versions "
+"of GTK+ installed at the same, we want to make sure that when we import Gtk "
+"that it refers to GTK+ 3 and not any other version of the library, which is "
+"the purpose of the statement ``gi.require_version('Gtk', '3.0')``."
+msgstr ""
+
+#: ../../source/introduction.txt:29
+msgid "The next line creates an empty window."
+msgstr ""
+
+#: ../../source/introduction.txt:34
+msgid ""
+"Followed by connecting to the window's delete event to ensure that the "
+"application is terminated if we click on the *x* to close the window."
+msgstr ""
+
+#: ../../source/introduction.txt:40
+msgid "In the next step we display the window."
+msgstr ""
+
+#: ../../source/introduction.txt:45
+msgid ""
+"Finally, we start the GTK+ processing loop which we quit when the window is "
+"closed (see line 6)."
+msgstr ""
+
+#: ../../source/introduction.txt:51
+msgid ""
+"To run the program, open a terminal, change to the directory of the file, "
+"and enter::"
+msgstr ""
+
+#: ../../source/introduction.txt:57
+msgid "Extended Example"
+msgstr "Erweitertes Beispiel"
+
+#: ../../source/introduction.txt:58
+msgid ""
+"For something a little more useful, here's the PyGObject version of the "
+"classic \"Hello World\" program."
+msgstr ""
+
+#: ../../source/introduction.txt:66
+msgid ""
+"This example differs from the simple example as we sub-class :class:`Gtk."
+"Window` to define our own :class:`MyWindow` class."
+msgstr ""
+
+#: ../../source/introduction.txt:72
+msgid ""
+"In the class's constructor we have to call the constructor of the super "
+"class. In addition, we tell it to set the value of the property `title` to "
+"`Hello World`."
+msgstr ""
+
+#: ../../source/introduction.txt:78
+msgid ""
+"The next three lines are used to create a button widget, connect to its "
+"`clicked` signal and add it as child to the top-level window."
+msgstr ""
+
+#: ../../source/introduction.txt:84
+msgid ""
+"Accordingly, the method :meth:`on_button_clicked` will be called if you "
+"click on the button."
+msgstr ""
+
+#: ../../source/introduction.txt:89
+msgid ""
+"The last block, outside of the class, is very similar to the simple example "
+"above, but instead of creating an instance of the generic :class:`Gtk."
+"Window` class, we create an instance of :class:`MyWindow`."
+msgstr ""
+
+#: ../../source/objects.txt:4
+msgid "Objects"
+msgstr "Objekte"
+
+#: ../../source/objects.txt:6
+msgid ""
+"GObject is the fundamental type providing the common attributes and methods "
+"for all object types in GTK+, Pango and other libraries based on GObject. "
+"The :class:`GObject.GObject` class provides methods for object construction "
+"and destruction, property access methods, and signal support."
+msgstr ""
+
+#: ../../source/objects.txt:11
+msgid ""
+"This section will introduce some important aspects about the GObject "
+"implementation in Python."
+msgstr ""
+
+#: ../../source/objects.txt:15
+msgid "Inherit from GObject.GObject"
+msgstr ""
+
+#: ../../source/objects.txt:17
+msgid ""
+"A native GObject is accessible via :class:`GObject.GObject`. It is rarely "
+"instantiated directly, we generally use inherited class. A :class:`Gtk."
+"Widget` is an inherited class of a :class:`GObject.GObject`. It may be "
+"interesting to make an inherited class to create a new widget, like a "
+"settings dialog."
+msgstr ""
+
+#: ../../source/objects.txt:22
+msgid ""
+"To inherit from :class:`GObject.GObject`, you must call :meth:`GObject."
+"GObject.__init__` in your constructor (if the class inherits from :class:"
+"`Gtk.Button`, it must call :func:`Gtk.Button.__init__` for instance), like "
+"in the example below:"
+msgstr ""
+
+#: ../../source/objects.txt:37
+msgid "Signals"
+msgstr "Signale"
+
+#: ../../source/objects.txt:39
+msgid ""
+"Signals connect arbitrary application-specific events with any number of "
+"listeners. For example, in GTK+, every user event (keystroke or mouse move) "
+"is received from the X server and generates a GTK+ event under the form of a "
+"signal emission on a given object instance."
+msgstr ""
+
+#: ../../source/objects.txt:44
+msgid ""
+"Each signal is registered in the type system together with the type on which "
+"it can be emitted: users of the type are said to connect to the signal on a "
+"given type instance when they register a function to be invoked upon the "
+"signal emission. Users can also emit the signal by themselves or stop the "
+"emission of the signal from within one of the functions connected to the "
+"signal."
+msgstr ""
+
+#: ../../source/objects.txt:51
+msgid "Receive signals"
+msgstr ""
+
+#: ../../source/objects.txt:53
+msgid "See :ref:`signals`"
+msgstr ""
+
+#: ../../source/objects.txt:56
+msgid "Create new signals"
+msgstr ""
+
+#: ../../source/objects.txt:58
+msgid ""
+"New signals can be created by adding them to :attr:`GObject.GObject."
+"__gsignals__`, a dictionary:"
+msgstr ""
+
+#: ../../source/objects.txt:61
+msgid ""
+"When a new signal is created, a method handler can also be defined, it will "
+"be called each time the signal is emitted. It is called do_signal_name."
+msgstr ""
+
+#: ../../source/objects.txt:75
+msgid ""
+":const:`GObject.SIGNAL_RUN_FIRST` indicates that this signal will invoke the "
+"object method handler (:meth:`do_my_signal` here) in the first emission "
+"stage. Alternatives are :const:`GObject.SIGNAL_RUN_LAST` (the method handler "
+"will be invoked in the third emission stage) and :const:`GObject."
+"SIGNAL_RUN_CLEANUP` (invoke the method handler in the last emission stage)."
+msgstr ""
+
+#: ../../source/objects.txt:81
+msgid ""
+"The second part, ``None``, indicates the return type of the signal, usually "
+"``None``."
+msgstr ""
+
+#: ../../source/objects.txt:84
+msgid ""
+"``(int,)`` indicates the signal arguments, here, the signal will only take "
+"one argument, whose type is int. This argument type list must end with a "
+"comma."
+msgstr ""
+
+#: ../../source/objects.txt:88
+msgid "Signals can be emitted using :meth:`GObject.GObject.emit`:"
+msgstr ""
+
+#: ../../source/objects.txt:97
+msgid ""
+"One of GObject's nice features is its generic get/set mechanism for object "
+"properties. Each class inherited from :class:`GObject.GObject` can define "
+"new properties. Each property has a type which never changes (e.g. str, "
+"float, int...). For instance, they are used for :class:`Gtk.Button` where "
+"there is a \"label\" property which contains the text of the button."
+msgstr ""
+
+#: ../../source/objects.txt:104
+msgid "Use existing properties"
+msgstr ""
+
+#: ../../source/objects.txt:106
+msgid ""
+"The class :class:`GObject.GObject` provides several useful functions to "
+"manage existing properties, :func:`GObject.GObject.get_property` and :func:"
+"`GObject.GObject.set_property`."
+msgstr ""
+
+#: ../../source/objects.txt:109
+msgid ""
+"Some properties also have functions dedicated to them, called getter and "
+"setter. For the property \"label\" of a button, there are two functions to "
+"get and set them, :func:`Gtk.Button.get_label` and :func:`Gtk.Button."
+"set_label`."
+msgstr ""
+
+#: ../../source/objects.txt:114
+msgid "Create new properties"
+msgstr ""
+
+#: ../../source/objects.txt:116
+msgid ""
+"A property is defined with a name and a type. Even if Python itself is "
+"dynamically typed, you can't change the type of a property once it is "
+"defined. A property can be created using :class:`GObject.Property`."
+msgstr ""
+
+#: ../../source/objects.txt:131
+msgid ""
+"Properties can also be read-only, if you want some properties to be readable "
+"but not writable. To do so, you can add some flags to the property "
+"definition, to control read/write access. Flags are :const:`GObject."
+"ParamFlags.READABLE` (only read access for external code), :const:`GObject."
+"ParamFlags.WRITABLE` (only write access), :const:`GObject.ParamFlags."
+"READWRITE` (public):"
+msgstr ""
+
+#: ../../source/objects.txt:146
+msgid ""
+"You can also define new read-only properties with a new method decorated "
+"with :class:`GObject.Property`:"
+msgstr ""
+
+#: ../../source/objects.txt:162
+msgid "You can get this property using:"
+msgstr ""
+
+#: ../../source/objects.txt:170
+msgid ""
+"The API of :class:`GObject.Property` is similar to the builtin :py:func:"
+"`property`. You can create property setter in a way similar to Python "
+"property:"
+msgstr ""
+
+#: ../../source/objects.txt:191
+msgid ""
+"There is also a way to define minimum and maximum values for numbers, using "
+"a more verbose form:"
+msgstr ""
+
+#: ../../source/objects.txt:227
+msgid ""
+"Properties must be defined in :attr:`GObject.GObject.__gproperties__`, a "
+"dictionary, and handled in do_get_property and do_set_property."
+msgstr ""
+
+#: ../../source/objects.txt:231
+msgid "Watch properties"
+msgstr "Eigenschaften überwachen"
+
+#: ../../source/objects.txt:233
+msgid ""
+"When a property is modified, a signal is emitted, whose name is \"notify::"
+"property-name\":"
+msgstr ""
+
+#: ../../source/objects.txt:248
+msgid ""
+"Note that you have to use the canonical property name when connecting to the "
+"notify signals, as explained in :func:`GObject.Object.signals.notify`. For "
+"instance, for a Python property `foo_bar_baz` you would connect to the "
+"signal `notify::foo-bar-baz` using"
+msgstr ""
+
+#: ../../source/objects.txt:263
+msgid "API"
+msgstr "API"
+
+#: ../../source/objects.txt:269
+msgid "Retrieves a property value."
+msgstr ""
+
+#: ../../source/objects.txt:273
+msgid "Set property *property_name* to *value*."
+msgstr ""
+
+#: ../../source/objects.txt:277
+msgid ""
+"Emit signal *signal_name*. Signal arguments must follow, e.g. if your signal "
+"is of type ``(int,)``, it must be emitted with::"
+msgstr ""
+
+#: ../../source/objects.txt:284
+msgid ""
+"This method freezes all the \"notify::\" signals (which are emitted when any "
+"property is changed) until the :meth:`thaw_notify` method is called."
+msgstr ""
+
+#: ../../source/objects.txt:288
+msgid ""
+"It recommended to use the *with* statement when calling :meth:"
+"`freeze_notify`, that way it is ensured that :meth:`thaw_notify` is called "
+"implicitly at the end of the block::"
+msgstr ""
+
+#: ../../source/objects.txt:298
+msgid ""
+"Thaw all the \"notify::\" signals which were thawed by :meth:`freeze_notify`."
+msgstr ""
+
+#: ../../source/objects.txt:300
+msgid ""
+"It is recommended to not call :meth:`thaw_notify` explicitly but use :meth:"
+"`freeze_notify` together with the *with* statement."
+msgstr ""
+
+#: ../../source/objects.txt:305
+msgid ""
+"Blocks a handler of an instance so it will not be called during any signal "
+"emissions unless :meth:`handler_unblock` is called for that *handler_id*. "
+"Thus \"blocking\" a signal handler means to temporarily deactivate it, a "
+"signal handler has to be unblocked exactly the same amount of times it has "
+"been blocked before to become active again."
+msgstr ""
+
+#: ../../source/objects.txt:311
+msgid ""
+"It is recommended to use :meth:`handler_block` in conjunction with the "
+"*with* statement which will call :meth:`handler_unblock` implicitly at the "
+"end of the block::"
+msgstr ""
+
+#: ../../source/objects.txt:321
+msgid ""
+"Undoes the effect of :meth:`handler_block`. A blocked handler is skipped "
+"during signal emissions and will not be invoked until it has been unblocked "
+"exactly the amount of times it has been blocked before."
+msgstr ""
+
+#: ../../source/objects.txt:325
+msgid ""
+"It is recommended to not call :meth:`handler_unblock` explicitly but use :"
+"meth:`handler_block` together with the *with* statement."
+msgstr ""
+
+#: ../../source/objects.txt:330
+msgid "A dictionary where inherited class can define new signals."
+msgstr ""
+
+#: ../../source/objects.txt:332
+msgid ""
+"Each element in the dictionary is a new signal. The key is the signal name. "
+"The value is a tuple, with the form::"
+msgstr ""
+
+#: ../../source/objects.txt:337
+msgid ""
+":const:`GObject.SIGNAL_RUN_FIRST` can be replaced with :const:`GObject."
+"SIGNAL_RUN_LAST` or :const:`GObject.SIGNAL_RUN_CLEANUP`. ``None`` is the "
+"return type of the signal. ``(int,)`` is the list of the parameters of the "
+"signal, it must end with a comma."
+msgstr ""
+
+#: ../../source/objects.txt:346
+msgid ""
+"The :attr:`__gproperties__` dictionary is a class property where you define "
+"the properties of your object. This is not the recommend way to define new "
+"properties, the method written above is much less verbose. The benefits of "
+"this method is that a property can be defined with more settings, like the "
+"minimum or the maximum for numbers."
+msgstr ""
+
+#: ../../source/objects.txt:352
+msgid "The key is the name of the property"
+msgstr ""
+
+#: ../../source/objects.txt:354
+msgid ""
+"The value is a tuple which describe the property. The number of elements of "
+"this tuple depends on its first element but the tuple will always contain at "
+"least the following items:"
+msgstr ""
+
+#: ../../source/objects.txt:358
+msgid "The first element is the property's type (e.g. ``int``, ``float``...)."
+msgstr ""
+
+#: ../../source/objects.txt:360
+msgid ""
+"The second element is the property's nick name, which is a string with a "
+"short description of the property. This is generally used by programs with "
+"strong introspection capabilities, like the graphical user interface builder "
+"`Glade`_."
+msgstr ""
+
+#: ../../source/objects.txt:365
+msgid ""
+"The third one is the property's description or blurb, which is another "
+"string with a longer description of the property. Also used by `Glade`_ and "
+"similar programs."
+msgstr ""
+
+#: ../../source/objects.txt:369
+msgid ""
+"The last one (which is not necessarily the forth one as we will see later) "
+"is the property's flags: :const:`GObject.PARAM_READABLE`, :const:`GObject."
+"PARAM_WRITABLE`, :const:`GObject.PARAM_READWRITE`."
+msgstr ""
+
+#: ../../source/objects.txt:373
+msgid ""
+"The absolute length of the tuple depends on the property type (the first "
+"element of the tuple). Thus we have the following situations:"
+msgstr ""
+
+#: ../../source/objects.txt:376
+msgid ""
+"If the type is ``bool`` or ``str``, the forth element is the default value "
+"of the property."
+msgstr ""
+
+#: ../../source/objects.txt:379
+msgid ""
+"If the type is ``int`` or ``float``, the forth element is the minimum "
+"accepted value, the fifth element is the maximum accepted value and the "
+"sixth element is the default value."
+msgstr ""
+
+#: ../../source/objects.txt:383
+msgid "If the type is not one of these, there is no extra element."
+msgstr ""
+
+#: ../../source/objects.txt:388
+msgid "Invoke the object method handler in the first emission stage."
+msgstr ""
+
+#: ../../source/objects.txt:392
+msgid "Invoke the object method handler in the third emission stage."
+msgstr ""
+
+#: ../../source/objects.txt:396
+msgid "Invoke the object method handler in the last emission stage."
+msgstr ""
+
+#: ../../source/objects.txt:400
+msgid "The property is readable."
+msgstr "Die Eigenschaft ist lesbar."
+
+#: ../../source/objects.txt:404
+msgid "The property is writable."
+msgstr "Die Eigenschaft ist schreibbar."
+
+#: ../../source/objects.txt:408
+msgid "The property is readable and writable."
+msgstr "Die Eigenschaft ist lesbar und schreibbar."
+
+#: ../../source/progressbar.txt:2
+msgid "ProgressBar"
+msgstr "ProgressBar"
+
+#: ../../source/progressbar.txt:4
+msgid ""
+"The :class:`Gtk.ProgressBar` is typically used to display the progress of a "
+"long running operation. It provides a visual clue that processing is "
+"underway. The :class:`Gtk.ProgressBar` can be used in two different modes: "
+"*percentage mode* and *activity mode*."
+msgstr ""
+
+#: ../../source/progressbar.txt:9
+msgid ""
+"When an application can determine how much work needs to take place (e.g. "
+"read a fixed number of bytes from a file) and can monitor its progress, it "
+"can use the :class:`Gtk.ProgressBar` in *percentage mode* and the user sees "
+"a growing bar indicating the percentage of the work that has been completed. "
+"In this mode, the application is required to call :meth:`Gtk.ProgressBar."
+"set_fraction` periodically to update the progress bar, passing a float "
+"between 0 and 1 to provide the new percentage value."
+msgstr ""
+
+#: ../../source/progressbar.txt:17
+msgid ""
+"When an application has no accurate way of knowing the amount of work to do, "
+"it can use *activity mode*, which shows activity by a block moving back and "
+"forth within the progress area. In this mode, the application is required to "
+"call :meth:`Gtk.ProgressBar.pulse` periodically to update the progress bar. "
+"You can also choose the step size, with the :meth:`Gtk.ProgressBar."
+"set_pulse_step` method."
+msgstr ""
+
+#: ../../source/progressbar.txt:24
+msgid ""
+"By default, :class:`Gtk.ProgressBar` is horizontal and left-to-right, but "
+"you can change it to a vertical progress bar by using the :meth:`Gtk."
+"ProgressBar.set_orientation` method. Changing the direction the progress bar "
+"grows can be done using :meth:`Gtk.ProgressBar.set_inverted`. :class:`Gtk."
+"ProgressBar` can also contain text which can be set by calling :meth:`Gtk."
+"ProgressBar.set_text` and :meth:`Gtk.ProgressBar.set_show_text`."
+msgstr ""
