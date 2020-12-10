@@ -972,7 +972,7 @@ msgstr "发布"
 
 #: ../../source/index.txt:9
 msgid "|version|"
-msgstr "| 版本 |"
+msgstr "|version|"
 
 #: ../../source/index.txt:0
 msgid "Date"
@@ -980,7 +980,7 @@ msgstr "日期"
 
 #: ../../source/index.txt:10
 msgid "|today|"
-msgstr "| 今天 |"
+msgstr "|today|"
 
 #: ../../source/index.txt:0
 msgid "Copyright"
