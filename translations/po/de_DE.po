@@ -794,7 +794,7 @@ msgstr "Veröffentlichung"
 
 #: ../../source/index.txt:9
 msgid "|version|"
-msgstr ""
+msgstr "|version|"
 
 #: ../../source/index.txt:0
 msgid "Date"
@@ -802,7 +802,7 @@ msgstr "Datum"
 
 #: ../../source/index.txt:10
 msgid "|today|"
-msgstr ""
+msgstr "|today|"
 
 #: ../../source/index.txt:0
 msgid "Copyright"
