@@ -28,6 +28,7 @@ MENU_XML = """
 class AppWindow(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.set_default_size(300, 200)
 
         outerbox = Gtk.Box(spacing=6, orientation=Gtk.Orientation.VERTICAL)
         self.add(outerbox)
@@ -36,9 +37,7 @@ class AppWindow(Gtk.ApplicationWindow):
         builder = Gtk.Builder.new_from_string(MENU_XML, -1)
         menu = builder.get_object("app-menu")
 
-        button = Gtk.MenuButton.new()
-        popover = Gtk.Popover.new_from_model(button, menu)
-        button.set_popover(popover)
+        button = Gtk.MenuButton(menu_model=menu)
 
         outerbox.pack_start(button, False, True, 0)
         button.show()
@@ -53,11 +52,11 @@ class Application(Gtk.Application):
     def do_startup(self):
         Gtk.Application.do_startup(self)
 
-        action = Gio.SimpleAction.new("about", None)
+        action = Gio.SimpleAction(name="about")
         action.connect("activate", self.on_about)
         self.add_action(action)
 
-        action = Gio.SimpleAction.new("quit", None)
+        action = Gio.SimpleAction(name="quit")
         action.connect("activate", self.on_quit)
         self.add_action(action)
 
