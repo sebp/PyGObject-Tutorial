@@ -30,7 +30,7 @@ You will use the full action name when referencing it such as "app.about" but wh
 you create the action it will just be "about" until added to the application.
 
 You can also very easily make keybindings for actions by setting the `accel`
-property in the :class:`Gio.Menu` file or by using :meth:`Gtk.Application.add_accelerator()`.
+property in the :class:`Gio.Menu` file or by using :meth:`Gtk.Application.set_accels_for_action()`.
 
 Menus
 -----
