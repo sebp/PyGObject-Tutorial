@@ -46,10 +46,20 @@ column.
 Adding data to the model is done using :meth:`Gtk.ListStore.append` or
 :meth:`Gtk.TreeStore.append`, depending upon which sort of model was created.
 
+For a list store:
+
 .. code-block:: python
 
     treeiter = store.append(["The Art of Computer Programming",
                              "Donald E. Knuth", 25.46])
+
+For a tree store you must specify an existing row to append the new row to,
+using a :class:`Gtk.TreeIter`, or None for the top level of the tree:
+
+.. code-block:: python
+
+    treeiter = store.append(None, ["The Art of Computer Programming",
+                                   "Donald E. Knuth", 25.46])
 
 Both methods return a :class:`Gtk.TreeIter` instance, which points to the location
 of the newly inserted row. You can retrieve a :class:`Gtk.TreeIter` by calling
@@ -87,21 +97,14 @@ Iterating over all rows of a tree model is very simple as well.
 
 Keep in mind, that if you use :class:`Gtk.TreeStore`, the above code will only
 iterate over the rows of the top level, but not the children of the nodes.
-To iterate over all rows and its children, use the ``print_tree_store`` function.
+To iterate over all rows, use :meth:`Gtk.TreeModel.foreach`.
 
 .. code-block:: python
 
-    def print_tree_store(store):
-        rootiter = store.get_iter_first()
-        print_rows(store, rootiter, "")
+    def print_row(store, treepath, treeiter):
+        print("\t" * (treepath.get_depth() - 1), store[treeiter][:], sep="")
 
-    def print_rows(store, treeiter, indent):
-        while treeiter is not None:
-            print(indent + str(store[treeiter][:]))
-            if store.iter_has_child(treeiter):
-                childiter = store.iter_children(treeiter)
-                print_rows(store, childiter, indent + "\t")
-            treeiter = store.iter_next(treeiter)
+    store.foreach(print_row)
 
 Apart from accessing values stored in a :class:`Gtk.TreeModel` with the list-like
 method mentioned above, it is also possible to
