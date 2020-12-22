@@ -42,7 +42,7 @@ class TreeViewFilterWindow(Gtk.Window):
         self.language_filter.set_visible_func(self.language_filter_func)
 
         # creating the treeview, making it use the filter as a model, and adding the columns
-        self.treeview = Gtk.TreeView.new_with_model(self.language_filter)
+        self.treeview = Gtk.TreeView(model=self.language_filter)
         for i, column_title in enumerate(
             ["Software", "Release Year", "Programming Language"]
         ):

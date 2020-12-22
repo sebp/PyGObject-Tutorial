@@ -148,7 +148,7 @@ passing it to the :class:`Gtk.TreeView` constructor, or by calling
 
 .. code-block:: python
 
-    tree = Gtk.TreeView(store)
+    tree = Gtk.TreeView(model=store)
 
 Once the :class:`Gtk.TreeView` widget has a model, it will need to know how to
 display the model. It does this with columns and cell renderers.
@@ -238,7 +238,7 @@ First we need a simple :class:`Gtk.TreeView` and a :class:`Gtk.ListStore` as a m
     model.append(["david"])
     model.append(["benjamin"])
 
-    treeView = Gtk.TreeView(model)
+    treeView = Gtk.TreeView(model=model)
 
     cellRenderer = Gtk.CellRendererText()
     column = Gtk.TreeViewColumn("Title", renderer, text=0)
