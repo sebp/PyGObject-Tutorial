@@ -310,11 +310,13 @@ You can create a new instance of a :class:`Gtk.TreeModelFilter` and give it a mo
 
     filter = model.filter_new()
 
-In the same way the sorting function works, the :class:`Gtk.TreeModelFilter` needs a "visibility" function, which, given a row from the underlying model, will return a boolean indicating if this row should be filtered out or not. It's set by :meth:`Gtk.TreeModelFilter.set_visible_func`:
+In the same way the sorting function works, the :class:`Gtk.TreeModelFilter` uses a "visibility" function, which, given a row from the underlying model, will return a boolean indicating if this row should be filtered out or not. It's set by :meth:`Gtk.TreeModelFilter.set_visible_func`:
 
 .. code-block:: python
 
     filter.set_visible_func(filter_func, data=None)
+
+The alternative to a "visibility" function is to use a boolean column in the model to specify which rows to filter. Choose which column with :meth:`Gtk.TreeModelFilter.set_visible_column`.
 
 Let's look at a full example which uses the whole :class:`Gtk.ListStore` - :class:`Gtk.TreeModelFilter` - :class:`Gtk.TreeModelFilter` - :class:`Gtk.TreeView` stack.
 
