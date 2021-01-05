@@ -46,14 +46,14 @@ column.
 Adding data to the model is done using :meth:`Gtk.ListStore.append` or
 :meth:`Gtk.TreeStore.append`, depending upon which sort of model was created.
 
-For a list store:
+For a :class:`Gtk.ListStore`:
 
 .. code-block:: python
 
     treeiter = store.append(["The Art of Computer Programming",
                              "Donald E. Knuth", 25.46])
 
-For a tree store you must specify an existing row to append the new row to,
+For a :class:`Gtk.TreeStore` you must specify an existing row to append the new row to,
 using a :class:`Gtk.TreeIter`, or None for the top level of the tree:
 
 .. code-block:: python
