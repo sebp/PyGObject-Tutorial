@@ -120,3 +120,20 @@ The final code of the example
 
 .. literalinclude:: ../examples/builder_example.py
     :linenos:
+
+Gtk.Template
+------------
+:class:`Gtk.WidgetClass` allows UI definition files to be used to extend a widget,
+PyGObject provides Gtk.Template as a way of accessing this from Python.
+
+The UI definition file used in the example needs a small change to include a *<template>* element:
+
+.. literalinclude:: ../examples/template_example.ui
+    :language: xml
+
+Then it can be used to implement the example with a :class:`Gtk.Window` subclass:
+
+.. literalinclude:: ../examples/template_example.py
+    :linenos:
+
+More information can be found at the `PyGObject <https://pygobject.readthedocs.io/en/latest/guide/gtk_template.html>`_ website.
