@@ -38,6 +38,7 @@ intersphinx_mapping = {
     "gobject": ("https://lazka.github.io/pgi-docs/GObject-2.0", None),
     "gio": ("https://lazka.github.io/pgi-docs/Gio-2.0", None),
     "gtk": ("https://lazka.github.io/pgi-docs/Gtk-3.0", None),
+    "pygobject": ("https://pygobject.readthedocs.io/en/latest", None),
 }
 
 # Add any paths that contain templates here, relative to this directory.

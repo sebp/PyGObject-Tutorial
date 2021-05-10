@@ -155,22 +155,36 @@ passing it to the :class:`Gtk.TreeView` constructor, or by calling
 
 Once the :class:`Gtk.TreeView` widget has a model, it will need to know how to
 display the model. It does this with columns and cell renderers.
+:data:`headers_visible <Gtk.TreeView.props.headers_visible>` controls whether
+it displays column headers.
 
-Cell renderers are used to draw the data in the tree model in a way. There are a
-number of cell renderers that come with GTK+, for instance
+Cell renderers are used to draw the data in the tree model in a specific way.
+There are a number of cell renderers that come with GTK+, for instance
 :class:`Gtk.CellRendererText`, :class:`Gtk.CellRendererPixbuf` and
 :class:`Gtk.CellRendererToggle`.
-In addition, it is relatively easy to write a custom renderer yourself.
+In addition, it is relatively easy to write a custom renderer yourself by
+subclassing a :class:`Gtk.CellRenderer`, and adding properties with
+:func:`GObject.Property`.
 
 A :class:`Gtk.TreeViewColumn` is the object that :class:`Gtk.TreeView` uses to
-organize the vertical columns in the tree view. It needs to know the name of the
-column to label for the user, what type of cell renderer to use, and which piece
-of data to retrieve from the model for a given row.
+organize the vertical columns in the tree view and hold one or more cell renderers.
+Each column may have a :data:`title <Gtk.TreeViewColumn.props.title>` that will
+be visible if the :class:`Gtk.TreeView` is showing column headers. The model
+is mapped to the column by using keyword arguments with properties of the
+renderer as the identifiers and indexes of the model columns as the arguments.
+
+.. code-block:: python
+
+    renderer = Gtk.CellRendererPixbuf()
+    column = Gtk.TreeViewColumn(cell_renderer=renderer, icon_name=3)
+    tree.append_column(column)
+
+Positional arguments can be used for the column title and renderer.
 
 .. code-block:: python
 
     renderer = Gtk.CellRendererText()
-    column = Gtk.TreeViewColumn("Title", renderer, text=0)
+    column = Gtk.TreeViewColumn("Title", renderer, text=0, weight=1)
     tree.append_column(column)
 
 To render more than one model column in a view column, you need to create a
