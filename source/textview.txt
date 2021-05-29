@@ -98,8 +98,8 @@ and :meth:`Gtk.TextBuffer.apply_tag`::
 
 The following are some of the common styles applied to text:
 
-    * Background colour ("foreground" property)
-    * Foreground colour ("background" property)
+    * Background colour ("background" property)
+    * Foreground colour ("foreground" property)
     * Underline ("underline" property)
     * Bold ("weight" property)
     * Italics ("style" property)
