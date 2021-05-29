@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-03 22:49+0200\n"
+"POT-Creation-Date: 2021-05-29 18:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -284,12 +284,12 @@ msgstr ""
 #: ../../source/builder.txt:3
 msgid ""
 "The :class:`Gtk.Builder` class offers you the opportunity to design user "
-"interfaces without writing a single line of code. This is possible through "
-"describing the interface by an XML file and then loading the XML description "
-"at runtime and create the objects automatically, which the Builder class "
-"does for you. For the purpose of not needing to write the XML manually the "
-"`Glade <https://glade.gnome.org/>`_ application lets you create the user "
-"interface in a WYSIWYG (what you see is what you get) manner"
+"interfaces without writing a single line of code. This is achieved by "
+"defining the interface in an XML file and then loading that XML UI "
+"definition at runtime using the Builder class which creates the objects "
+"automatically. To avoid writing the XML manually use the `Glade <https://"
+"glade.gnome.org/>`_ application which lets you create the user interface in "
+"a WYSIWYG (what you see is what you get) manner"
 msgstr ""
 
 #: ../../source/builder.txt:7
@@ -419,6 +419,35 @@ msgstr ""
 
 #: ../../source/builder.txt:119
 msgid "The final code of the example"
+msgstr ""
+
+#: ../../source/builder.txt:125
+msgid "Gtk.Template"
+msgstr ""
+
+#: ../../source/builder.txt:126
+msgid ""
+":class:`Gtk.WidgetClass` allows UI definition files to be used to extend a "
+"widget, PyGObject provides :doc:`guide/gtk_template` as a way of accessing "
+"this from Python."
+msgstr ""
+
+#: ../../source/builder.txt:129
+msgid ""
+"The UI definition file used in the example needs a small change to include a "
+"*<template>* element:"
+msgstr ""
+
+#: ../../source/builder.txt:134
+msgid ""
+"Then it can be used to implement the example with a :class:`Gtk.Window` "
+"subclass:"
+msgstr ""
+
+#: ../../source/builder.txt:139
+msgid ""
+"More information can be found at the `PyGObject <https://pygobject."
+"readthedocs.io/en/latest/guide/gtk_template.html>`_ website."
 msgstr ""
 
 #: ../../source/button_widgets.txt:2
@@ -2994,11 +3023,11 @@ msgid "The following are some of the common styles applied to text:"
 msgstr ""
 
 #: ../../source/textview.txt:101
-msgid "Background colour (\"foreground\" property)"
+msgid "Background colour (\"background\" property)"
 msgstr ""
 
 #: ../../source/textview.txt:102
-msgid "Foreground colour (\"background\" property)"
+msgid "Foreground colour (\"foreground\" property)"
 msgstr ""
 
 #: ../../source/textview.txt:103
@@ -3198,49 +3227,59 @@ msgstr ""
 #: ../../source/treeview.txt:156
 msgid ""
 "Once the :class:`Gtk.TreeView` widget has a model, it will need to know how "
-"to display the model. It does this with columns and cell renderers."
+"to display the model. It does this with columns and cell renderers. :data:"
+"`headers_visible <Gtk.TreeView.props.headers_visible>` controls whether it "
+"displays column headers."
 msgstr ""
 
-#: ../../source/treeview.txt:159
+#: ../../source/treeview.txt:161
 msgid ""
-"Cell renderers are used to draw the data in the tree model in a way. There "
-"are a number of cell renderers that come with GTK+, for instance :class:`Gtk."
-"CellRendererText`, :class:`Gtk.CellRendererPixbuf` and :class:`Gtk."
-"CellRendererToggle`. In addition, it is relatively easy to write a custom "
-"renderer yourself."
+"Cell renderers are used to draw the data in the tree model in a specific "
+"way. There are a number of cell renderers that come with GTK+, for instance :"
+"class:`Gtk.CellRendererText`, :class:`Gtk.CellRendererPixbuf` and :class:"
+"`Gtk.CellRendererToggle`. In addition, it is relatively easy to write a "
+"custom renderer yourself by subclassing a :class:`Gtk.CellRenderer`, and "
+"adding properties with :func:`GObject.Property`."
 msgstr ""
 
-#: ../../source/treeview.txt:165
+#: ../../source/treeview.txt:169
 msgid ""
 "A :class:`Gtk.TreeViewColumn` is the object that :class:`Gtk.TreeView` uses "
-"to organize the vertical columns in the tree view. It needs to know the name "
-"of the column to label for the user, what type of cell renderer to use, and "
-"which piece of data to retrieve from the model for a given row."
+"to organize the vertical columns in the tree view and hold one or more cell "
+"renderers. Each column may have a :data:`title <Gtk.TreeViewColumn.props."
+"title>` that will be visible if the :class:`Gtk.TreeView` is showing column "
+"headers. The model is mapped to the column by using keyword arguments with "
+"properties of the renderer as the identifiers and indexes of the model "
+"columns as the arguments."
 msgstr ""
 
-#: ../../source/treeview.txt:176
+#: ../../source/treeview.txt:182
+msgid "Positional arguments can be used for the column title and renderer."
+msgstr ""
+
+#: ../../source/treeview.txt:190
 msgid ""
 "To render more than one model column in a view column, you need to create a :"
 "class:`Gtk.TreeViewColumn` instance and use :meth:`Gtk.TreeViewColumn."
 "pack_start` to add the model columns to it."
 msgstr ""
 
-#: ../../source/treeview.txt:196
+#: ../../source/treeview.txt:210
 msgid "The Selection"
 msgstr ""
 
-#: ../../source/treeview.txt:197
+#: ../../source/treeview.txt:211
 msgid ""
 "Most applications will need to not only deal with displaying data, but also "
 "receiving input events from users. To do this, simply get a reference to a "
 "selection object and connect to the \"changed\" signal."
 msgstr ""
 
-#: ../../source/treeview.txt:206
+#: ../../source/treeview.txt:220
 msgid "Then to retrieve data for the row selected:"
 msgstr ""
 
-#: ../../source/treeview.txt:215
+#: ../../source/treeview.txt:229
 msgid ""
 "You can control what selections are allowed by calling :meth:`Gtk."
 "TreeSelection.set_mode`. :meth:`Gtk.TreeSelection.get_selected` does not "
@@ -3248,57 +3287,57 @@ msgid ""
 "use :meth:`Gtk.TreeSelection.get_selected_rows` instead."
 msgstr ""
 
-#: ../../source/treeview.txt:222
+#: ../../source/treeview.txt:236
 msgid "Sorting"
 msgstr ""
 
-#: ../../source/treeview.txt:223
+#: ../../source/treeview.txt:237
 msgid ""
 "Sorting is an important feature for tree views and is supported by the "
 "standard tree models (:class:`Gtk.TreeStore` and :class:`Gtk.ListStore`), "
 "which implement the :class:`Gtk.TreeSortable` interface."
 msgstr ""
 
-#: ../../source/treeview.txt:226
+#: ../../source/treeview.txt:240
 msgid "Sorting by clicking on columns"
 msgstr ""
 
-#: ../../source/treeview.txt:227
+#: ../../source/treeview.txt:241
 msgid ""
 "A column of a :class:`Gtk.TreeView` can easily made sortable with a call to :"
 "meth:`Gtk.TreeViewColumn.set_sort_column_id`. Afterwards the column can be "
 "sorted by clicking on its header."
 msgstr ""
 
-#: ../../source/treeview.txt:230
+#: ../../source/treeview.txt:244
 msgid ""
 "First we need a simple :class:`Gtk.TreeView` and a :class:`Gtk.ListStore` as "
 "a model."
 msgstr ""
 
-#: ../../source/treeview.txt:249
+#: ../../source/treeview.txt:263
 msgid ""
 "The next step is to enable sorting. Note that the *column_id* (``0`` in the "
 "example) refers to the column of the model and **not** to the TreeView's "
 "column."
 msgstr ""
 
-#: ../../source/treeview.txt:256
+#: ../../source/treeview.txt:270
 msgid "Setting a custom sort function"
 msgstr ""
 
-#: ../../source/treeview.txt:257
+#: ../../source/treeview.txt:271
 msgid ""
 "It is also possible to set a custom comparison function in order to change "
 "the sorting behaviour. As an example we will create a comparison function "
 "that sorts case-sensitive. In the example above the sorted list looked like::"
 msgstr ""
 
-#: ../../source/treeview.txt:270
+#: ../../source/treeview.txt:284
 msgid "The case-sensitive sorted list will look like::"
 msgstr ""
 
-#: ../../source/treeview.txt:281
+#: ../../source/treeview.txt:295
 msgid ""
 "First of all a comparison function is needed. This function gets two rows "
 "and has to return a negative integer if the first one should come before the "
@@ -3306,17 +3345,17 @@ msgid ""
 "should come before the second one."
 msgstr ""
 
-#: ../../source/treeview.txt:297
+#: ../../source/treeview.txt:311
 msgid ""
 "Then the sort function has to be set by :meth:`Gtk.TreeSortable."
 "set_sort_func`."
 msgstr ""
 
-#: ../../source/treeview.txt:304
+#: ../../source/treeview.txt:318
 msgid "Filtering"
 msgstr ""
 
-#: ../../source/treeview.txt:305
+#: ../../source/treeview.txt:319
 msgid ""
 "Unlike sorting, filtering is not handled by the two models we previously "
 "saw, but by the :class:`Gtk.TreeModelFilter` class. This class, like :class:"
@@ -3330,14 +3369,14 @@ msgid ""
 "TreeModelSort` instances."
 msgstr ""
 
-#: ../../source/treeview.txt:307
+#: ../../source/treeview.txt:321
 msgid ""
 "You can create a new instance of a :class:`Gtk.TreeModelFilter` and give it "
 "a model to filter, but the easiest way is to spawn it directly from the "
 "filtered model, using the :meth:`Gtk.TreeModel.filter_new` method."
 msgstr ""
 
-#: ../../source/treeview.txt:313
+#: ../../source/treeview.txt:327
 msgid ""
 "In the same way the sorting function works, the :class:`Gtk.TreeModelFilter` "
 "uses a \"visibility\" function, which, given a row from the underlying "
@@ -3345,14 +3384,14 @@ msgid ""
 "or not. It's set by :meth:`Gtk.TreeModelFilter.set_visible_func`:"
 msgstr ""
 
-#: ../../source/treeview.txt:319
+#: ../../source/treeview.txt:333
 msgid ""
 "The alternative to a \"visibility\" function is to use a boolean column in "
 "the model to specify which rows to filter. Choose which column with :meth:"
 "`Gtk.TreeModelFilter.set_visible_column`."
 msgstr ""
 
-#: ../../source/treeview.txt:321
+#: ../../source/treeview.txt:335
 msgid ""
 "Let's look at a full example which uses the whole :class:`Gtk.ListStore` - :"
 "class:`Gtk.TreeModelFilter` - :class:`Gtk.TreeModelFilter` - :class:`Gtk."
