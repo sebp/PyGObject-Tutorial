@@ -124,7 +124,7 @@ The final code of the example
 Gtk.Template
 ------------
 :class:`Gtk.WidgetClass` allows UI definition files to be used to extend a widget,
-PyGObject provides Gtk.Template as a way of accessing this from Python.
+PyGObject provides :doc:`guide/gtk_template` as a way of accessing this from Python.
 
 The UI definition file used in the example needs a small change to include a *<template>* element:
 
