@@ -7,7 +7,7 @@ dependencies:
   - mock
   - pillow
   - pip
-  - sphinx
+  - sphinx<4
   - sphinx_rtd_theme
   - pip:
     - sphinx-intl
