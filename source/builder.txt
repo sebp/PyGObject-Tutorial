@@ -1,8 +1,8 @@
 Glade and Gtk.Builder
 =====================
 The :class:`Gtk.Builder` class offers you the opportunity to design user interfaces without writing a single line of code.
-This is possible through describing the interface by an XML file and then loading the XML description at runtime and create the objects automatically, which the Builder class does for you.
-For the purpose of not needing to write the XML manually the `Glade <https://glade.gnome.org/>`_ application lets you create the user interface in a WYSIWYG (what you see is what you get) manner
+This is achieved by defining the interface in an XML file and then loading that XML UI definition at runtime using the Builder class which creates the objects automatically.
+To avoid writing the XML manually use the `Glade <https://glade.gnome.org/>`_ application which lets you create the user interface in a WYSIWYG (what you see is what you get) manner
 
 This method has several advantages:
 
@@ -29,10 +29,10 @@ The resulting XML file should look like this.
         <child>
           <object class="GtkButton" id="button1">
             <property name="label" translatable="yes">button</property>
-            <property name="use_action_appearance">False</property>
+            <property name="use-action-appearance">False</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
           </object>
         </child>
       </object>
@@ -120,3 +120,20 @@ The final code of the example
 
 .. literalinclude:: ../examples/builder_example.py
     :linenos:
+
+Gtk.Template
+------------
+:class:`Gtk.WidgetClass` allows UI definition files to be used to extend a widget,
+PyGObject provides :doc:`guide/gtk_template` as a way of accessing this from Python.
+
+The UI definition file used in the example needs a small change to include a *<template>* element:
+
+.. literalinclude:: ../examples/template_example.ui
+    :language: xml
+
+Then it can be used to implement the example with a :class:`Gtk.Window` subclass:
+
+.. literalinclude:: ../examples/template_example.py
+    :linenos:
+
+More information can be found at the `PyGObject <https://pygobject.readthedocs.io/en/latest/guide/gtk_template.html>`_ website.
