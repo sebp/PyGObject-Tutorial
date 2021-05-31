@@ -53,7 +53,7 @@ MessageDialog
 -------------
 
 :class:`Gtk.MessageDialog` is a convenience class, used to create simple,
-standard message dialogs, with a message, an icon, and buttons for user response
+standard message dialogs, with a message, an icon, and buttons for user response.
 You can specify the type of message and the text in the :class:`Gtk.MessageDialog`
 constructor, as well as specifying standard buttons.
 
