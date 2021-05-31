@@ -38,7 +38,7 @@ Different classes representing different types of actions exist:
 * :class:`Gtk.RecentAction`: An action of which represents a list of recently
   used files
 
-Actions represent operations that the user can be perform, along with some
+Actions represent operations that the user can perform, along with some
 information how it should be presented in the interface, including its name
 (not for display), its label (for display), an accelerator, whether a label
 indicates a tooltip as well as the callback that is called when the action

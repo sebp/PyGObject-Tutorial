@@ -20,7 +20,7 @@ You can also set a consistent spacing for all rows and/or columns with
 Note that with these calls, the last row and last column do not get any spacing.
 
 .. deprecated:: 3.4
-   It is reccomened that you use the :class:`Gtk.Grid` for new code.
+   It is recommended that you use the :class:`Gtk.Grid` for new code.
 
 Example
 ^^^^^^^

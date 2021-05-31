@@ -111,8 +111,8 @@ The main properties of a :class:`Gtk.SpinButton` are set through
 
 To change the value that :class:`Gtk.SpinButton` is showing, use
 :meth:`Gtk.SpinButton.set_value`. The value entered can either be an integer or
-float, depending on your requirements, use :meth:`Gtk.SpinButton.get_value` or
-:meth:`Gtk.SpinButton.get_value_as_int`, respectively.
+float, depending on your requirements, use :meth:`Gtk.SpinButton.get_value_as_int` or
+:meth:`Gtk.SpinButton.get_value`, respectively.
 
 When you allow the displaying of float values in the spin button, you may wish
 to adjust the number of decimal spaces displayed by calling

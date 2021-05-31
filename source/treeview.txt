@@ -293,7 +293,7 @@ The case-sensitive sorted list will look like::
     david
 
 First of all a comparison function is needed.
-This function gets two rows and has to return a negative integer if the first one should come before the second one, zero if they are equal and a positive integer if the second one should come before the second one.
+This function gets two rows and has to return a negative integer if the first one should come before the second one, zero if they are equal and a positive integer if the second one should come before the first one.
 
 .. code-block:: python
 

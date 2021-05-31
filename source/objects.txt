@@ -285,7 +285,7 @@ API
         emitted when any property is changed) until the :meth:`thaw_notify` method is
         called.
 
-        It recommended to use the *with* statement when calling :meth:`freeze_notify`,
+        It is recommended to use the *with* statement when calling :meth:`freeze_notify`,
         that way it is ensured that :meth:`thaw_notify` is called implicitly at
         the end of the block::
 
@@ -295,7 +295,7 @@ API
 
     .. method:: thaw_notify()
 
-        Thaw all the "notify::" signals which were thawed by :meth:`freeze_notify`.
+        Thaw all the "notify::" signals which were frozen by :meth:`freeze_notify`.
 
         It is recommended to not call :meth:`thaw_notify` explicitly but use
         :meth:`freeze_notify` together with the *with* statement.
@@ -344,7 +344,7 @@ API
         .. based on http://www.pygtk.org/articles/subclassing-gobject/sub-classing-gobject-in-python.htm
 
         The :attr:`__gproperties__` dictionary is a class property where you define the
-        properties of your object. This is not the recommend way to define new
+        properties of your object. This is not the recommended way to define new
         properties, the method written above is much less verbose. The benefits
         of this method is that a property can be defined with more settings,
         like the minimum or the maximum for numbers.
