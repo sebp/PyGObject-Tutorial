@@ -52,4 +52,4 @@ Example
 .. literalinclude:: ../examples/label_example.py
     :linenos:
 
-.. [#pango] Pango Markup Syntax, https://developer.gnome.org/pango/stable/pango-Markup.html
+.. [#pango] Pango Markup Syntax, https://developer.gnome.org/pygtk/stable/pango-markup-language.html
