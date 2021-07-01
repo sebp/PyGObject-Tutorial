@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pygobject-tutorial master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-11 19:50+0200\n"
-"PO-Revision-Date: 2021-04-12 18:11+0200\n"
+"POT-Creation-Date: 2021-06-30 15:27+0200\n"
+"PO-Revision-Date: 2021-07-01 19:19+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -287,12 +287,11 @@ msgstr ""
 "återanropsfunktionen inte kommer anropas under framtida eller aktuellt "
 "pågående utsändningar av signalen den har anslutits till."
 
-# TODO: doubled space
 #: ../../source/basics.txt:56
 msgid ""
 "If you have lost the \"handler_id\" for some reason (for example the "
 "handlers were installed using :func:`Gtk.Builder.connect_signals`), you can "
-"still disconnect a  specific callback using the function :func:"
+"still disconnect a specific callback using the function :func:"
 "`disconnect_by_func`:"
 msgstr ""
 "Om du förlorat ”handler_id” av någon anledning (till exempel för att "
@@ -383,20 +382,21 @@ msgstr "Glade och Gtk.Builder"
 #: ../../source/builder.txt:3
 msgid ""
 "The :class:`Gtk.Builder` class offers you the opportunity to design user "
-"interfaces without writing a single line of code. This is possible through "
-"describing the interface by an XML file and then loading the XML description "
-"at runtime and create the objects automatically, which the Builder class "
-"does for you. For the purpose of not needing to write the XML manually the "
-"`Glade <https://glade.gnome.org/>`_ application lets you create the user "
-"interface in a WYSIWYG (what you see is what you get) manner"
+"interfaces without writing a single line of code. This is achieved by "
+"defining the interface in an XML file and then loading that XML UI "
+"definition at runtime using the Builder class which creates the objects "
+"automatically. To avoid writing the XML manually use the `Glade <https://"
+"glade.gnome.org/>`_ application which lets you create the user interface in "
+"a WYSIWYG (what you see is what you get) manner"
 msgstr ""
 "Klassen :class:`Gtk.Builder` ger dig möjligheten att designa "
 "användargränssnitt utan att skriva en enda rad kod. Detta är möjligt genom "
-"att beskriva gränssnittet med en XML-fil och sedan läsa in XML-beskrivningen "
-"under körtid och skapa objekten automatiskt, vilket Builder-klassen gör åt "
-"dig. För att inte behöva skriva denna XML manuellt låter programmet `Glade "
-"<https://glade.gnome.org/>`_ dig skapa användargränssnittet på ett WYSIWYG-"
-"sätt (What You See Is What You Get, vad du ser är vad du får)"
+"att beskriva gränssnittet i en XML-fil och sedan läsa in denna XML UI-"
+"definition under körtid med Builder-klassen vilken skapar objekten "
+"automatiskt. Använd programmet `Glade <https://glade.gnome.org/>`_ för att "
+"inte behöva skriva denna XML manuellt, det låter dig skapa "
+"användargränssnittet på ett WYSIWYG-sätt (What You See Is What You Get, vad "
+"du ser är vad du får)"
 
 #: ../../source/builder.txt:7
 msgid "This method has several advantages:"
@@ -573,6 +573,44 @@ msgstr ""
 #: ../../source/builder.txt:119
 msgid "The final code of the example"
 msgstr "Exemplets slutgiltiga kod"
+
+#: ../../source/builder.txt:125
+msgid "Gtk.Template"
+msgstr "Gtk.Template"
+
+#: ../../source/builder.txt:126
+msgid ""
+":class:`Gtk.WidgetClass` allows UI definition files to be used to extend a "
+"widget, PyGObject provides :doc:`guide/gtk_template` as a way of accessing "
+"this from Python."
+msgstr ""
+":class:`Gtk.WidgetClass` låter UI-definitionsfiler användas för att utöka en "
+"komponent, PyGObject tillhandahåller :doc:`guide/gtk_template` som ett sätt "
+"att komma åt detta från Python."
+
+#: ../../source/builder.txt:129
+msgid ""
+"The UI definition file used in the example needs a small change to include a "
+"*<template>* element:"
+msgstr ""
+"UI-definitionsfilen som används i exemplet behöver en liten ändring för att "
+"inkludera ett *<template>*-element:"
+
+#: ../../source/builder.txt:134
+msgid ""
+"Then it can be used to implement the example with a :class:`Gtk.Window` "
+"subclass:"
+msgstr ""
+"Sedan kan den användas för att implementera exemplet med en :class:`Gtk."
+"Window`-underklass:"
+
+#: ../../source/builder.txt:139
+msgid ""
+"More information can be found at the `PyGObject <https://pygobject."
+"readthedocs.io/en/latest/guide/gtk_template.html>`_ website."
+msgstr ""
+"Mer information kan hittas på webbplatsen `PyGObject <https://pygobject."
+"readthedocs.io/en/latest/guide/gtk_template.html>`_."
 
 #: ../../source/button_widgets.txt:2
 msgid "Button Widgets"
@@ -752,13 +790,12 @@ msgstr ""
 "säkerställa att det är i ett givet intervall. Huvudegenskaperna för en :"
 "class:`Gtk.SpinButton` ställs in genom :class:`Gtk.Adjustment`."
 
-# TODO: switch order of the methods.
 #: ../../source/button_widgets.txt:112
 msgid ""
 "To change the value that :class:`Gtk.SpinButton` is showing, use :meth:`Gtk."
 "SpinButton.set_value`. The value entered can either be an integer or float, "
-"depending on your requirements, use :meth:`Gtk.SpinButton.get_value` or :"
-"meth:`Gtk.SpinButton.get_value_as_int`, respectively."
+"depending on your requirements, use :meth:`Gtk.SpinButton.get_value_as_int` "
+"or :meth:`Gtk.SpinButton.get_value`, respectively."
 msgstr ""
 "För att ändra värdet som :class:`Gtk.SpinButton` visar, använd :meth:`Gtk."
 "SpinButton.set_value`. Värdet som matas in kan antingen vara ett hel- eller "
@@ -1251,13 +1288,12 @@ msgstr ""
 msgid "MessageDialog"
 msgstr "MessageDialog"
 
-# TODO: user response*.* You can
 #: ../../source/dialogs.txt:55
 msgid ""
 ":class:`Gtk.MessageDialog` is a convenience class, used to create simple, "
 "standard message dialogs, with a message, an icon, and buttons for user "
-"response You can specify the type of message and the text in the :class:`Gtk."
-"MessageDialog` constructor, as well as specifying standard buttons."
+"response. You can specify the type of message and the text in the :class:"
+"`Gtk.MessageDialog` constructor, as well as specifying standard buttons."
 msgstr ""
 ":class:`Gtk.MessageDialog` är en bekvämlighetsklass, använd för att skapa "
 "enkla standardmeddelandedialoger, med ett meddelande, en ikon och knappar "
@@ -2436,11 +2472,11 @@ msgstr ""
 
 #: ../../source/label.txt:55
 msgid ""
-"Pango Markup Syntax, https://developer.gnome.org/pango/stable/pango-Markup."
-"html"
+"Pango Markup Syntax, https://developer.gnome.org/pygtk/stable/pango-markup-"
+"language.html"
 msgstr ""
-"Pango Markup-syntax, https://developer.gnome.org/pango/stable/pango-Markup."
-"html"
+"Pango Markup-syntax, https://developer.gnome.org/pygtk/stable/pango-markup-"
+"language.html"
 
 #: ../../source/layout.txt:4
 msgid "Layout Containers"
@@ -2650,13 +2686,12 @@ msgstr ""
 "rubriker kan läggas till dynamiskt beroende på radinnehållet. Den tillåter "
 "också tangentbords- och musnavigering samt markering som en typisk lista."
 
-# TODO: ie -> eg ?
 #: ../../source/layout.txt:112
 msgid ""
 "Using :class:`Gtk.ListBox` is often an alternative to :class:`Gtk.TreeView`, "
 "especially when the list content has a more complicated layout than what is "
 "allowed by a :class:`Gtk.CellRenderer`, or when the content is interactive "
-"(i.e. has a button in it)."
+"(e.g. has a button in it)."
 msgstr ""
 "Att använda :class:`Gtk.ListBox` är ofta ett alternativ till :class:`Gtk."
 "TreeView`, särskilt när listinnehållet har en mer komplicerad layout än vad "
@@ -2844,14 +2879,13 @@ msgstr ""
 "Komponenten :class:`Gtk.Notebook` är en :class:`Gtk.Container` vars barn är "
 "sidor som kan växlas mellan med fliketiketter längs en kant."
 
-# TODO: Missing )
 #: ../../source/layout.txt:224
 msgid ""
 "There are many configuration options for GtkNotebook. Among other things, "
 "you can choose on which edge the tabs appear (see :meth:`Gtk.Notebook."
 "set_tab_pos`), whether, if there are too many tabs to fit the notebook "
 "should be made bigger or scrolling arrows added (see :meth:`Gtk.Notebook."
-"set_scrollable`, and whether there will be a popup menu allowing the users "
+"set_scrollable`), and whether there will be a popup menu allowing the users "
 "to switch pages (see :meth:`Gtk.Notebook.popup_enable`, :meth:`Gtk.Notebook."
 "popup_disable`)."
 msgstr ""
@@ -2913,9 +2947,8 @@ msgstr ""
 "set_col_spacings`. Observera att med dessa anrop placeras inget utrymme "
 "efter den sista raden och sista kolumnen."
 
-# TODO: recommended
 #: ../../source/layout-table.txt:22
-msgid "It is reccomened that you use the :class:`Gtk.Grid` for new code."
+msgid "It is recommended that you use the :class:`Gtk.Grid` for new code."
 msgstr "Du rekommenderas använda :class:`Gtk.Grid` för ny kod."
 
 #: ../../source/menus.txt:4
@@ -3010,10 +3043,9 @@ msgstr ""
 ":class:`Gtk.RecentAction`: En åtgärd som representerar en lista över senast "
 "använda filer"
 
-# TODO: that the user can perform
 #: ../../source/menus.txt:41
 msgid ""
-"Actions represent operations that the user can be perform, along with some "
+"Actions represent operations that the user can perform, along with some "
 "information how it should be presented in the interface, including its name "
 "(not for display), its label (for display), an accelerator, whether a label "
 "indicates a tooltip as well as the callback that is called when the action "
@@ -3420,10 +3452,9 @@ msgstr ""
 "Denna metod fryser alla ”notify::”-signalerna (som sänds ut då någon "
 "egenskap ändras) till metoden :meth:`thaw_notify` anropas."
 
-# TODO: It is recommended
 #: ../../source/objects.txt:288
 msgid ""
-"It recommended to use the *with* statement when calling :meth:"
+"It is recommended to use the *with* statement when calling :meth:"
 "`freeze_notify`, that way it is ensured that :meth:`thaw_notify` is called "
 "implicitly at the end of the block::"
 msgstr ""
@@ -3431,10 +3462,9 @@ msgstr ""
 "`freeze_notify`, på det viset säkerställs att :meth:`thaw_notify` anropas "
 "implicit i slutet på blocket::"
 
-# TODO: which were frozen
 #: ../../source/objects.txt:298
 msgid ""
-"Thaw all the \"notify::\" signals which were thawed by :meth:`freeze_notify`."
+"Thaw all the \"notify::\" signals which were frozen by :meth:`freeze_notify`."
 msgstr "Tina alla ”notify::”-signalerna som frystes av :meth:`freeze_notify`."
 
 #: ../../source/objects.txt:300
@@ -3510,11 +3540,10 @@ msgstr ""
 "SIGNAL_RUN_LAST` eller :const:`GObject.SIGNAL_RUN_CLEANUP`. ``None`` är "
 "returtypen för signalen. ``(int,)`` är parametertupeln för signalen."
 
-# TODO: not the recommended
 #: ../../source/objects.txt:346
 msgid ""
 "The :attr:`__gproperties__` dictionary is a class property where you define "
-"the properties of your object. This is not the recommend way to define new "
+"the properties of your object. This is not the recommended way to define new "
 "properties, the method written above is much less verbose. The benefits of "
 "this method is that a property can be defined with more settings, like the "
 "minimum or the maximum for numbers."
@@ -4016,16 +4045,13 @@ msgstr ""
 msgid "The following are some of the common styles applied to text:"
 msgstr "Följande är några av de vanliga stilarna som tillämpas på text:"
 
-# TODO: mixed up. Should be Foreground color
 #: ../../source/textview.txt:101
-msgid "Background colour (\"foreground\" property)"
-msgstr "Förgrundsfärg (egenskapen ”foreground”)"
-
-# TODO: mixed up. Should be Background
-# color
-#: ../../source/textview.txt:102
-msgid "Foreground colour (\"background\" property)"
+msgid "Background colour (\"background\" property)"
 msgstr "Bakgrundsfärg (egenskapen ”background”)"
+
+#: ../../source/textview.txt:102
+msgid "Foreground colour (\"foreground\" property)"
+msgstr "Förgrundsfärg (egenskapen ”foreground”)"
 
 #: ../../source/textview.txt:103
 msgid "Underline (\"underline\" property)"
@@ -4288,39 +4314,54 @@ msgstr ""
 #: ../../source/treeview.txt:156
 msgid ""
 "Once the :class:`Gtk.TreeView` widget has a model, it will need to know how "
-"to display the model. It does this with columns and cell renderers."
+"to display the model. It does this with columns and cell renderers. :data:"
+"`headers_visible <Gtk.TreeView.props.headers_visible>` controls whether it "
+"displays column headers."
 msgstr ""
 "Då komponenten :class:`Gtk.TreeView` har en modell kommer den behöva veta "
-"hur den ska visa modellen. Den gör detta med kolumner och cellrenderare."
+"hur den ska visa modellen. Den gör detta med kolumner och cellrenderare. :"
+"data:`headers_visible <Gtk.TreeView.props.headers_visible>` styr huruvida "
+"den visar kolumnrubriker."
 
-#: ../../source/treeview.txt:159
+#: ../../source/treeview.txt:161
 msgid ""
-"Cell renderers are used to draw the data in the tree model in a way. There "
-"are a number of cell renderers that come with GTK+, for instance :class:`Gtk."
-"CellRendererText`, :class:`Gtk.CellRendererPixbuf` and :class:`Gtk."
-"CellRendererToggle`. In addition, it is relatively easy to write a custom "
-"renderer yourself."
+"Cell renderers are used to draw the data in the tree model in a specific "
+"way. There are a number of cell renderers that come with GTK+, for instance :"
+"class:`Gtk.CellRendererText`, :class:`Gtk.CellRendererPixbuf` and :class:"
+"`Gtk.CellRendererToggle`. In addition, it is relatively easy to write a "
+"custom renderer yourself by subclassing a :class:`Gtk.CellRenderer`, and "
+"adding properties with :func:`GObject.Property`."
 msgstr ""
-"Cellrenderare används för att rita data i trädmodellen på ett sätt. Det "
-"finns ett antal cellrenderare som kommer med GTK+, exempelvis :class:`Gtk."
-"CellRendererText`, :class:`Gtk.CellRendererPixbuf` och :class:`Gtk."
-"CellRendererToggle`. Vidare är det relativt enkelt att själv skriva en "
-"anpassad renderare."
+"Cellrenderare används för att rita data i trädmodellen på ett specifikt "
+"sätt. Det finns ett antal cellrenderare som kommer med GTK+, exempelvis :"
+"class:`Gtk.CellRendererText`, :class:`Gtk.CellRendererPixbuf` och :class:"
+"`Gtk.CellRendererToggle`. Vidare är det relativt enkelt att själv skriva en "
+"anpassad renderare genom att skapa en underklass till :class:`Gtk."
+"CellRenderer` och lägga till egenskaper med :func:`GObject.Property`."
 
-#: ../../source/treeview.txt:165
+#: ../../source/treeview.txt:169
 msgid ""
 "A :class:`Gtk.TreeViewColumn` is the object that :class:`Gtk.TreeView` uses "
-"to organize the vertical columns in the tree view. It needs to know the name "
-"of the column to label for the user, what type of cell renderer to use, and "
-"which piece of data to retrieve from the model for a given row."
+"to organize the vertical columns in the tree view and hold one or more cell "
+"renderers. Each column may have a :data:`title <Gtk.TreeViewColumn.props."
+"title>` that will be visible if the :class:`Gtk.TreeView` is showing column "
+"headers. The model is mapped to the column by using keyword arguments with "
+"properties of the renderer as the identifiers and indexes of the model "
+"columns as the arguments."
 msgstr ""
 "En :class:`Gtk.TreeViewColumn` är objektet som :class:`Gtk.TreeView` "
-"använder för att organisera de vertikala kolumnerna i trädvyn. Det behöver "
-"veta namnet på kolumnen att etikettera för användaren, vilken typ av "
-"cellrenderare som ska användas, och vilken bit data som ska erhållas från "
-"modellen för en given rad."
+"använder för att organisera de vertikala kolumnerna i trädvyn och hålla en "
+"eller flera cellrenderare. Varje kolumn kan ha en :data:`title <Gtk."
+"TreeViewColumn.props.title>` som kommer vara synlig om :class:`Gtk.TreeView` "
+"visar kolumnrubriker. Modellen mappas till kolumnen genom att använda "
+"nyckelordsargument med egenskaper för renderaren som identifierare och index "
+"för modellkolumnerna som argument."
 
-#: ../../source/treeview.txt:176
+#: ../../source/treeview.txt:182
+msgid "Positional arguments can be used for the column title and renderer."
+msgstr "Positionsargument kan användas för kolumntiteln och renderaren."
+
+#: ../../source/treeview.txt:190
 msgid ""
 "To render more than one model column in a view column, you need to create a :"
 "class:`Gtk.TreeViewColumn` instance and use :meth:`Gtk.TreeViewColumn."
@@ -4330,11 +4371,11 @@ msgstr ""
 "class:`Gtk.TreeViewColumn`-instans och använda :meth:`Gtk.TreeViewColumn."
 "pack_start` för att lägga till modellkolumnerna till den."
 
-#: ../../source/treeview.txt:196
+#: ../../source/treeview.txt:210
 msgid "The Selection"
 msgstr "Valet"
 
-#: ../../source/treeview.txt:197
+#: ../../source/treeview.txt:211
 msgid ""
 "Most applications will need to not only deal with displaying data, but also "
 "receiving input events from users. To do this, simply get a reference to a "
@@ -4345,11 +4386,11 @@ msgstr ""
 "helt enkelt en referens till ett valobjekt och anslut till ”changed”-"
 "signalen."
 
-#: ../../source/treeview.txt:206
+#: ../../source/treeview.txt:220
 msgid "Then to retrieve data for the row selected:"
 msgstr "För att sedan erhålla data för den valda raden:"
 
-#: ../../source/treeview.txt:215
+#: ../../source/treeview.txt:229
 msgid ""
 "You can control what selections are allowed by calling :meth:`Gtk."
 "TreeSelection.set_mode`. :meth:`Gtk.TreeSelection.get_selected` does not "
@@ -4361,11 +4402,11 @@ msgstr ""
 "är inställt till :attr:`Gtk.SelectionMode.MULTIPLE`, använd :meth:`Gtk."
 "TreeSelection.get_selected_rows` istället."
 
-#: ../../source/treeview.txt:222
+#: ../../source/treeview.txt:236
 msgid "Sorting"
 msgstr "Sortering"
 
-#: ../../source/treeview.txt:223
+#: ../../source/treeview.txt:237
 msgid ""
 "Sorting is an important feature for tree views and is supported by the "
 "standard tree models (:class:`Gtk.TreeStore` and :class:`Gtk.ListStore`), "
@@ -4375,11 +4416,11 @@ msgstr ""
 "standardträdmodellerna (:class:`Gtk.TreeStore` och :class:`Gtk.ListStore`), "
 "vilka implementerar gränssnittet :class:`Gtk.TreeSortable`."
 
-#: ../../source/treeview.txt:226
+#: ../../source/treeview.txt:240
 msgid "Sorting by clicking on columns"
 msgstr "Sortering genom att klicka på kolumner"
 
-#: ../../source/treeview.txt:227
+#: ../../source/treeview.txt:241
 msgid ""
 "A column of a :class:`Gtk.TreeView` can easily made sortable with a call to :"
 "meth:`Gtk.TreeViewColumn.set_sort_column_id`. Afterwards the column can be "
@@ -4389,7 +4430,7 @@ msgstr ""
 "anrop till :meth:`Gtk.TreeViewColumn.set_sort_column_id`. Efter det kan "
 "kolumnen sorteras genom att klicka på dess rubrik."
 
-#: ../../source/treeview.txt:230
+#: ../../source/treeview.txt:244
 msgid ""
 "First we need a simple :class:`Gtk.TreeView` and a :class:`Gtk.ListStore` as "
 "a model."
@@ -4397,7 +4438,7 @@ msgstr ""
 "Först behöver vi en enkel :class:`Gtk.TreeView` och en :class:`Gtk."
 "ListStore` som en modell."
 
-#: ../../source/treeview.txt:249
+#: ../../source/treeview.txt:263
 msgid ""
 "The next step is to enable sorting. Note that the *column_id* (``0`` in the "
 "example) refers to the column of the model and **not** to the TreeView's "
@@ -4407,11 +4448,11 @@ msgstr ""
 "exemplet) hänvisar till modellens kolumn och **inte** till kolumnen för vår "
 "TreeView."
 
-#: ../../source/treeview.txt:256
+#: ../../source/treeview.txt:270
 msgid "Setting a custom sort function"
 msgstr "Ställa in en anpassad sorteringsfunktion"
 
-#: ../../source/treeview.txt:257
+#: ../../source/treeview.txt:271
 msgid ""
 "It is also possible to set a custom comparison function in order to change "
 "the sorting behaviour. As an example we will create a comparison function "
@@ -4422,24 +4463,23 @@ msgstr ""
 "jämförelsefunktion som sorterar skiftlägeskänsligt. I exemplet ovan såg "
 "listan ut som::"
 
-#: ../../source/treeview.txt:270
+#: ../../source/treeview.txt:284
 msgid "The case-sensitive sorted list will look like::"
 msgstr "Den skiftlägeskänsliga sorterade listan kommer se ut som::"
 
-# TODO: should end with *if the second one should come before the first one.*
-#: ../../source/treeview.txt:281
+#: ../../source/treeview.txt:295
 msgid ""
 "First of all a comparison function is needed. This function gets two rows "
 "and has to return a negative integer if the first one should come before the "
 "second one, zero if they are equal and a positive integer if the second one "
-"should come before the second one."
+"should come before the first one."
 msgstr ""
 "Först av allt behövs en jämförelsefunktion. Denna funktion får två rader och "
-"ska returnera ett negativt heltal om den första ska komma före den andra, "
-"noll om de är lika, och ett positivt heltal om den andra ska komma före den "
-"första."
+"ska returnera ett negativt heltal om den första skulle komma före den andra, "
+"noll om de är lika, och ett positivt heltal om den andra skulle komma före "
+"den första."
 
-#: ../../source/treeview.txt:297
+#: ../../source/treeview.txt:311
 msgid ""
 "Then the sort function has to be set by :meth:`Gtk.TreeSortable."
 "set_sort_func`."
@@ -4447,11 +4487,11 @@ msgstr ""
 "Sedan måste sorteringsfunktionen ställas in med :meth:`Gtk.TreeSortable."
 "set_sort_func`."
 
-#: ../../source/treeview.txt:304
+#: ../../source/treeview.txt:318
 msgid "Filtering"
 msgstr "Filtrering"
 
-#: ../../source/treeview.txt:305
+#: ../../source/treeview.txt:319
 msgid ""
 "Unlike sorting, filtering is not handled by the two models we previously "
 "saw, but by the :class:`Gtk.TreeModelFilter` class. This class, like :class:"
@@ -4476,7 +4516,7 @@ msgstr ""
 "förfrågan). De kan också sättas i en kedja med instanser av :class:`Gtk."
 "TreeModelSort`."
 
-#: ../../source/treeview.txt:307
+#: ../../source/treeview.txt:321
 msgid ""
 "You can create a new instance of a :class:`Gtk.TreeModelFilter` and give it "
 "a model to filter, but the easiest way is to spawn it directly from the "
@@ -4486,7 +4526,7 @@ msgstr ""
 "modell att filtrera, men det lättaste sättet är att starta det direkt från "
 "den filtrerade modellen, med metoden :meth:`Gtk.TreeModel.filter_new`."
 
-#: ../../source/treeview.txt:313
+#: ../../source/treeview.txt:327
 msgid ""
 "In the same way the sorting function works, the :class:`Gtk.TreeModelFilter` "
 "uses a \"visibility\" function, which, given a row from the underlying "
@@ -4499,7 +4539,7 @@ msgstr ""
 "denna rad ska filtreras ut eller inte. Den ställs in av :meth:`Gtk."
 "TreeModelFilter.set_visible_func`:"
 
-#: ../../source/treeview.txt:319
+#: ../../source/treeview.txt:333
 msgid ""
 "The alternative to a \"visibility\" function is to use a boolean column in "
 "the model to specify which rows to filter. Choose which column with :meth:"
@@ -4509,7 +4549,7 @@ msgstr ""
 "i modellen för att ange vilka rader som ska filtreras. Välj vilken kolumn "
 "med :meth:`Gtk.TreeModelFilter.set_visible_column`."
 
-#: ../../source/treeview.txt:321
+#: ../../source/treeview.txt:335
 msgid ""
 "Let's look at a full example which uses the whole :class:`Gtk.ListStore` - :"
 "class:`Gtk.TreeModelFilter` - :class:`Gtk.TreeModelFilter` - :class:`Gtk."
