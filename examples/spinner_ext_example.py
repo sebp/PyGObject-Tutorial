@@ -6,7 +6,7 @@ from gi.repository import Gtk, GLib
 
 class SpinnerWindow(Gtk.Window):
     def __init__(self, *args, **kwargs):
-        Gtk.Window.__init__(self, title="Spinner Demo")
+        super().__init__(title="Spinner Demo")
         self.set_border_width(10)
 
         mainBox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)

@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class CellRendererPixbufWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="CellRendererPixbuf Example")
+        super().__init__(title="CellRendererPixbuf Example")
 
         self.set_default_size(200, 200)
 

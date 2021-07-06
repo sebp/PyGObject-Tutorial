@@ -42,7 +42,7 @@ UI_INFO = """
 
 class MenuExampleWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Menu Example")
+        self().__init__(title="Menu Example")
 
         self.set_default_size(200, 200)
 

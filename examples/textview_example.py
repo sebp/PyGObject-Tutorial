@@ -6,9 +6,7 @@ from gi.repository import Gtk, Pango
 
 class SearchDialog(Gtk.Dialog):
     def __init__(self, parent):
-        Gtk.Dialog.__init__(
-            self, title="Search", transient_for=parent, modal=True,
-        )
+        super().__init__(title="Search", transient_for=parent, modal=True)
         self.add_buttons(
             Gtk.STOCK_FIND,
             Gtk.ResponseType.OK,

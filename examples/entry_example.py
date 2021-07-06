@@ -6,7 +6,7 @@ from gi.repository import Gtk, GLib
 
 class EntryWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Entry Demo")
+        super().__init__(title="Entry Demo")
         self.set_size_request(200, 100)
 
         self.timeout_id = None

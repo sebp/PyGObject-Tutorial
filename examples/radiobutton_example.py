@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class RadioButtonWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="RadioButton Demo")
+        super().__init__(title="RadioButton Demo")
         self.set_border_width(10)
 
         hbox = Gtk.Box(spacing=6)

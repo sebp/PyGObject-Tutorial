@@ -6,7 +6,7 @@ from gi.repository import Gtk, GLib
 
 class ProgressBarWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="ProgressBar Demo")
+        super().__init__(title="ProgressBar Demo")
         self.set_border_width(10)
 
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)

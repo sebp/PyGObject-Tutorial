@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class CellRendererAccelWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="CellRendererAccel Example")
+        super().__init__(title="CellRendererAccel Example")
 
         self.set_default_size(200, 200)
 

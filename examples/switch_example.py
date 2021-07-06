@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class SwitcherWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Switch Demo")
+        super().__init__(title="Switch Demo")
         self.set_border_width(10)
 
         hbox = Gtk.Box(spacing=6)

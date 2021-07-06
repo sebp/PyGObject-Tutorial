@@ -21,7 +21,7 @@ software_list = [
 
 class TreeViewFilterWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Treeview Filter Demo")
+        super().__init__(title="Treeview Filter Demo")
         self.set_border_width(10)
 
         # Setting up the self.grid in which the elements are to be positionned

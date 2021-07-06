@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class FileChooserWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="FileChooser Example")
+        super().__init__(title="FileChooser Example")
 
         box = Gtk.Box(spacing=6)
         self.add(box)

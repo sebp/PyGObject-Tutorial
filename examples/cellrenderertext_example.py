@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class CellRendererTextWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="CellRendererText Example")
+        super().__init__(title="CellRendererText Example")
 
         self.set_default_size(200, 200)
 

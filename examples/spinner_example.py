@@ -7,7 +7,7 @@ from gi.repository import Gtk
 class SpinnerAnimation(Gtk.Window):
     def __init__(self):
 
-        Gtk.Window.__init__(self, title="Spinner")
+        super().__init__(title="Spinner")
         self.set_border_width(3)
         self.connect("destroy", Gtk.main_quit)
 
