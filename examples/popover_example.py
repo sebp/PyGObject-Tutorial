@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class PopoverWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Popover Demo")
+        super().__init__(title="Popover Demo")
         self.set_border_width(10)
         self.set_default_size(300, 200)
 

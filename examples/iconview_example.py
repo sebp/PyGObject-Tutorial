@@ -9,7 +9,7 @@ icons = ["edit-cut", "edit-paste", "edit-copy"]
 
 class IconViewWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self)
+        super().__init__()
         self.set_default_size(200, 200)
 
         liststore = Gtk.ListStore(Pixbuf, str)

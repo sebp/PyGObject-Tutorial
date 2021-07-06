@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class MyWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Simple Notebook Example")
+        super().__init__(title="Simple Notebook Example")
         self.set_border_width(3)
 
         self.notebook = Gtk.Notebook()

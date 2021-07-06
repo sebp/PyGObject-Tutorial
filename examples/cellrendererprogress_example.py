@@ -6,7 +6,7 @@ from gi.repository import Gtk, GLib
 
 class CellRendererProgressWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="CellRendererProgress Example")
+        super().__init__(title="CellRendererProgress Example")
 
         self.set_default_size(200, 200)
 

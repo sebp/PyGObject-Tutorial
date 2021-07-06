@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class TableWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Table Example")
+        super().__init__(title="Table Example")
 
         table = Gtk.Table(n_rows=3, n_columns=3, homogeneous=True)
         self.add(table)

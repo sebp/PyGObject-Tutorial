@@ -6,7 +6,7 @@ from gi.repository import Gtk, Gdk
 
 class ClipboardWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Clipboard Example")
+        super().__init__(title="Clipboard Example")
 
         grid = Gtk.Grid()
 

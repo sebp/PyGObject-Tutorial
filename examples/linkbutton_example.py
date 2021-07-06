@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class LinkButtonWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="LinkButton Demo")
+        super().__init__(title="LinkButton Demo")
         self.set_border_width(10)
 
         button = Gtk.LinkButton.new_with_label(

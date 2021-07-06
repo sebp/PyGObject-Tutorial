@@ -6,14 +6,14 @@ from gi.repository import Gtk
 
 class ListBoxRowWithData(Gtk.ListBoxRow):
     def __init__(self, data):
-        super(Gtk.ListBoxRow, self).__init__()
+        super().__init__()
         self.data = data
         self.add(Gtk.Label(label=data))
 
 
 class ListBoxWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="ListBox Demo")
+        super().__init__(title="ListBox Demo")
         self.set_border_width(10)
 
         box_outer = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)

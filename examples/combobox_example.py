@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class ComboBoxWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="ComboBox Example")
+        super().__init__(title="ComboBox Example")
 
         self.set_border_width(10)
 

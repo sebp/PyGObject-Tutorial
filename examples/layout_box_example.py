@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class MyWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Hello World")
+        super().__init__(title="Hello World")
 
         self.box = Gtk.Box(spacing=6)
         self.add(self.box)

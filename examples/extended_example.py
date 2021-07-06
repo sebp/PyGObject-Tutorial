@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class MyWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Hello World")
+        super().__init__(title="Hello World")
 
         self.button = Gtk.Button(label="Click Here")
         self.button.connect("clicked", self.on_button_clicked)

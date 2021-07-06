@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class LabelWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Label Example")
+        super().__init__(title="Label Example")
 
         hbox = Gtk.Box(spacing=10)
         hbox.set_homogeneous(False)

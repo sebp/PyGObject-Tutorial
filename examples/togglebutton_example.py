@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class ToggleButtonWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="ToggleButton Demo")
+        super().__init__(title="ToggleButton Demo")
         self.set_border_width(10)
 
         hbox = Gtk.Box(spacing=6)

@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class CellRendererComboWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="CellRendererCombo Example")
+        super().__init__(title="CellRendererCombo Example")
 
         self.set_default_size(200, 200)
 

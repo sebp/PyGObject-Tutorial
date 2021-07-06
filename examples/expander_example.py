@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class ExpanderExample(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Expander Demo")
+        super().__init__(title="Expander Demo")
 
         self.set_size_request(350, 100)
 

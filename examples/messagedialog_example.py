@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class MessageDialogWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="MessageDialog Example")
+        super().__init__(title="MessageDialog Example")
 
         box = Gtk.Box(spacing=6)
         self.add(box)

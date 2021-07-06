@@ -6,7 +6,7 @@ from gi.repository import Gtk, Gdk
 
 class FlowBoxWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="FlowBox Demo")
+        super().__init__(title="FlowBox Demo")
         self.set_border_width(10)
         self.set_default_size(300, 250)
 

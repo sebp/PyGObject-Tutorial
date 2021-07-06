@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class DialogExample(Gtk.Dialog):
     def __init__(self, parent):
-        Gtk.Dialog.__init__(self, title="My Dialog", transient_for=parent, flags=0)
+        super().__init__(title="My Dialog", transient_for=parent, flags=0)
         self.add_buttons(
             Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL, Gtk.STOCK_OK, Gtk.ResponseType.OK
         )

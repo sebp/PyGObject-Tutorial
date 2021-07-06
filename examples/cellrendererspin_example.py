@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class CellRendererSpinWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="CellRendererSpin Example")
+        super().__init__(title="CellRendererSpin Example")
 
         self.set_default_size(200, 200)
 

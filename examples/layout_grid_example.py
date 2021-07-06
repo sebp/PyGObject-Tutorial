@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class GridWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="Grid Example")
+        sper().__init__(title="Grid Example")
 
         grid = Gtk.Grid()
         self.add(grid)

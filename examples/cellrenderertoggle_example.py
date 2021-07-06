@@ -6,7 +6,7 @@ from gi.repository import Gtk
 
 class CellRendererToggleWindow(Gtk.Window):
     def __init__(self):
-        Gtk.Window.__init__(self, title="CellRendererToggle Example")
+        super().__init__(title="CellRendererToggle Example")
 
         self.set_default_size(200, 200)
 
