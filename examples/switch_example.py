@@ -23,10 +23,7 @@ class SwitcherWindow(Gtk.Window):
         hbox.pack_start(switch, True, True, 0)
 
     def on_switch_activated(self, switch, gparam):
-        if switch.get_active():
-            state = "on"
-        else:
-            state = "off"
+        state = "on" if button.get_active() else "off"
         print("Switch was turned", state)
 
 
