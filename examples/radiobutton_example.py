@@ -26,10 +26,7 @@ class RadioButtonWindow(Gtk.Window):
         hbox.pack_start(button3, False, False, 0)
 
     def on_button_toggled(self, button, name):
-        if button.get_active():
-            state = "on"
-        else:
-            state = "off"
+        state = "on" if button.get_active() else "off"
         print("Button", name, "was turned", state)
 
 
