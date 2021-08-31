@@ -24,7 +24,7 @@ class TreeViewFilterWindow(Gtk.Window):
         super().__init__(title="Treeview Filter Demo")
         self.set_border_width(10)
 
-        # Setting up the self.grid in which the elements are to be positionned
+        # Setting up the self.grid in which the elements are to be positioned
         self.grid = Gtk.Grid()
         self.grid.set_column_homogeneous(True)
         self.grid.set_row_homogeneous(True)
