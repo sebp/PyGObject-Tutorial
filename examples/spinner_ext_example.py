@@ -67,7 +67,7 @@ class SpinnerWindow(Gtk.Window):
         """ Start the timer. """
         self.buttonStart.set_sensitive(False)
         self.buttonStop.set_sensitive(True)
-        # time out will check every 250 miliseconds (1/4 of a second)
+        # time out will check every 250 milliseconds (1/4 of a second)
         self.counter = 4 * int(self.entry.get_text())
         self.label.set_label("Remaining: " + str(int(self.counter / 4)))
         self.spinner.start()
