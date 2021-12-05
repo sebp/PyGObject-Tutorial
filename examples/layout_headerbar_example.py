@@ -30,7 +30,6 @@ class HeaderBarWindow(Gtk.Window):
         )
         box.add(button)
 
-        button = Gtk.Button()
         button = Gtk.Button.new_from_icon_name("pan-end-symbolic", Gtk.IconSize.MENU)
         box.add(button)
 
