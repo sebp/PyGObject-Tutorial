@@ -44,4 +44,4 @@ Example
 See Also
 --------
 
-- https://developer.gnome.org/hig/stable/popovers.html.en
+- https://developer.gnome.org/hig/patterns/containers/popovers.html
