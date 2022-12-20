@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.7
   - gettext
+  - Jinja2<3.1.0
   - mock
   - pillow
   - pip
