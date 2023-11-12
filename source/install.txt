@@ -59,6 +59,6 @@ To start a shell with the same environment as used by JHBuild, run::
 
 .. _PyGObject: https://wiki.gnome.org/action/show/Projects/PyGObject
 .. _JHBuild: https://wiki.gnome.org/action/show/Projects/Jhbuild
-.. _JHBuild manual: https://developer.gnome.org/jhbuild/unstable/
+.. _JHBuild manual: https://gnome.pages.gitlab.gnome.org/jhbuild/index.html
 
 .. [#] https://download.gnome.org/teams/releng/
