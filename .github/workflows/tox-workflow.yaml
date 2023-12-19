@@ -11,7 +11,7 @@ jobs:
       - name: Run Tox
         uses: ./.github/actions/sphinx-build-all
       - name: Archive HTML documents
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pygobject-tutorial
           path: build/html
