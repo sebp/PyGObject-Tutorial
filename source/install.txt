@@ -8,6 +8,8 @@ that enables developers to access GObject-based libraries such as GTK+
 within Python.
 It exclusively supports GTK+ version 3 or later.
 
+For full IDE support (incl. autocomplete) you will also need typing stubs available here `PyGObject-stubs`_
+
 Dependencies
 ------------
 
@@ -58,6 +60,7 @@ To start a shell with the same environment as used by JHBuild, run::
     $ jhbuild shell
 
 .. _PyGObject: https://wiki.gnome.org/action/show/Projects/PyGObject
+.. _PyGObject-stubs: https://pypi.org/project/PyGObject-stubs/
 .. _JHBuild: https://wiki.gnome.org/action/show/Projects/Jhbuild
 .. _JHBuild manual: https://gnome.pages.gitlab.gnome.org/jhbuild/index.html
 
