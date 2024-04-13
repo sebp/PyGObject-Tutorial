@@ -2,7 +2,7 @@ name: rtd
 channels:
   - defaults
 dependencies:
-  - python=3.7
+  - python=3.9
   - gettext
   - Jinja2<3.1.0
   - mock
