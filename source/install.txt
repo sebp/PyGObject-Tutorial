@@ -8,7 +8,8 @@ that enables developers to access GObject-based libraries such as GTK+
 within Python.
 It exclusively supports GTK+ version 3 or later.
 
-For full IDE support (incl. autocomplete) you will also need typing stubs available here `PyGObject-stubs`_
+For full IDE support (including autocomplete) you will also need typing stubs available
+by installing the package `PyGObject-stubs`_.
 
 Dependencies
 ------------
