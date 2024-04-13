@@ -1,5 +1,5 @@
 Sphinx<4
 sphinx-autobuild
-sphinx-rtd-theme
+sphinx-rtd-theme <2
 sphinx-intl
 Jinja2 <3.1.0
