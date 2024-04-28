@@ -124,7 +124,7 @@ The final code of the example
 Gtk.Template
 ------------
 :class:`Gtk.WidgetClass` allows UI definition files to be used to extend a widget,
-PyGObject provides :doc:`guide/gtk_template` as a way of accessing this from Python.
+PyGObject provides :doc:`pygobject:guide/gtk_template` as a way of accessing this from Python.
 
 The UI definition file used in the example needs a small change to include a *<template>* element:
 
@@ -136,4 +136,4 @@ Then it can be used to implement the example with a :class:`Gtk.Window` subclass
 .. literalinclude:: ../examples/template_example.py
     :linenos:
 
-More information can be found at the `PyGObject <https://pygobject.readthedocs.io/en/latest/guide/gtk_template.html>`_ website.
+More information can be found at the `PyGObject <https://pygobject.gnome.org/guide/gtk_template.html>`_ website.

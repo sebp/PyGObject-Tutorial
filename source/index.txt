@@ -24,7 +24,7 @@ lists and tuples will be needed.
 
 Although this tutorial describes the most important classes and methods within
 GTK+ 3, it is not supposed to serve as an API reference. Please refer to the
-`GTK+ 3 Reference Manual <https://developer.gnome.org/gtk3/stable/>`_ for a
+`GTK+ 3 Reference Manual <https://docs.gtk.org/gtk3/>`_ for a
 detailed description of the API. Also there's a `Python-specific reference
 <https://lazka.github.io/pgi-docs/>`_ available.
 
