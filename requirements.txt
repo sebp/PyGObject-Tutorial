@@ -1,10 +1,10 @@
-Sphinx<4
+Sphinx <7.3.7
 sphinx-autobuild
-sphinxcontrib-applehelp <1.0.5
-sphinxcontrib-devhelp <1.0.3
-sphinxcontrib-htmlhelp <2.0.2
-sphinxcontrib-qthelp <1.0.4
-sphinxcontrib-serializinghtml <1.1.6
+sphinxcontrib-applehelp <1.0.8
+sphinxcontrib-devhelp <1.0.6
+sphinxcontrib-htmlhelp <2.0.5
+sphinxcontrib-qthelp <1.0.7
+sphinxcontrib-serializinghtml <1.1.10
 sphinx-rtd-theme <2
 sphinx-intl
-Jinja2 <3.1.0
+Jinja2 <3.1.3
