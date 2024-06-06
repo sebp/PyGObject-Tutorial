@@ -55,7 +55,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "Python GTK+ 3 Tutorial"
-copyright = "GNU Free Documentation License 1.3"
+copyright = "2011, The PyGObject Community"
 
 locale_dirs = ["../translations/locale"]
 
