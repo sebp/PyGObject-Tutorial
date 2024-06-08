@@ -11,9 +11,11 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+from datetime import date
+import os
 from os.path import join
 import subprocess
+import sys
 
 # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
 # https://docs.readthedocs.io/en/latest/faq.html?highlight=environ#how-do-i-change-behavior-for-read-the-docs
@@ -55,7 +57,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "Python GTK+ 3 Tutorial"
-copyright = "GNU Free Documentation License 1.3"
+copyright = "2011-%s, The PyGObject Community" % date.today().year
 
 locale_dirs = ["../translations/locale"]
 
