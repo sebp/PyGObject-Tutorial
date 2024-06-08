@@ -58,7 +58,6 @@ master_doc = "index"
 # General information about the project.
 project = "Python GTK+ 3 Tutorial"
 copyright = "2011-%s, The PyGObject Community" % date.today().year
-today = date.today().year
 
 locale_dirs = ["../translations/locale"]
 
