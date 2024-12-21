@@ -44,7 +44,7 @@ by running::
 
 It will print any applications and libraries that are currently missing on your
 system but required for building. You should install those using your distribution's
-package repository. A list of `package names <https://wiki.gnome.org/action/show/Projects/Jhbuild/Dependencies>`_
+package repository. A list of `package names <https://wiki.gnome.org/Projects/Jhbuild/Introduction/#Setting_up_JHBuild>`_
 for different distributions is maintained on the GNOME wiki.
 Run the command above again to ensure the required tools are present.
 
