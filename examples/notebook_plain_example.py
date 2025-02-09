@@ -24,6 +24,9 @@ class MyWindow(Gtk.Window):
             self.page2, Gtk.Image.new_from_icon_name("help-about", Gtk.IconSize.MENU)
         )
 
+    def add_hello_world(self):
+        return "hello world!"
+
 
 win = MyWindow()
 win.connect("destroy", Gtk.main_quit)
