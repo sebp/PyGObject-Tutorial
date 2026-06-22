@@ -7,7 +7,7 @@ jobs:
     name: Build
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Run Tox
         uses: ./.github/actions/sphinx-build-all
       - name: Archive HTML documents
